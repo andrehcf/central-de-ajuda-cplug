@@ -951,7 +951,7 @@ Clique em **Finalizar**.
     [Imagem: Aviso Nota fiscal já importada com o botão Sim, importar novamente destacado]
 
 ??? question "Não consigo finalizar: \"O preenchimento é obrigatório\" na conta bancária"
-    Escolha uma **Conta bancária** no pagamento. Se a lista estiver vazia, cadastre uma conta bancária primeiro em **Finanças**.
+    Escolha uma **Conta bancária** no pagamento. Se a lista estiver vazia, cadastre uma conta primeiro: veja [Como cadastrar uma conta bancária](../financas/conta-bancaria.md).
 
 ??? question "O produto ficou duplicado no cadastro"
     Isso acontece quando o produto já existia e foi escolhido **Criar novo produto**. Nas próximas notas, use **Vincular produto existente**.
@@ -965,6 +965,170 @@ Clique em **Finalizar**.
 **Relacionados:** [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md) · [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md)
 
 Palavras-chave: importar xml nota fiscal de compra nf-e de entrada nota de entrada entrada de estoque entrada de mercadoria compra fornecedor danfe arquivo xml preço de custo fator de conversão vincular produto criar produto conta a pagar estoque saldo nota já importada cfop icms pis cofins ncm
+
+---
+Código: 07.01 | Módulo: Finanças | Tela no sistema: /dashboard/finance/bank-accounts
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/conta-bancaria/
+
+# Como cadastrar uma conta bancária
+
+3 minutos · 5 passos · Atualizado em 30/10/2026
+
+As **contas bancárias** são os lugares por onde o dinheiro da empresa entra e sai: a conta do banco, a gaveta do caixa ou uma "caixinha". Todo pagamento e recebimento do sistema fica ligado a uma delas. Assim você acompanha o **saldo** de cada uma.
+
+Elas também são **obrigatórias** em outras telas. Por exemplo, ao [importar a nota fiscal de compra](../estoque/importar-nota-de-compra.md), o sistema pede de qual conta sai o pagamento.
+
+!!! info "O sistema já vem com duas contas"
+    Toda loja começa com a **Conta Padrão** e a **Conta PDV Padrão** (a do caixa). Nenhuma das duas é de banco. Cadastre as contas reais da empresa, uma para cada banco.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra a tela de contas bancárias
+
+No menu do lado esquerdo, clique em **Finanças** e depois em **Contas bancárias**. A lista mostra cada conta, o banco e o saldo atual.
+
+Clique em **Nova Conta Bancária**, no canto de cima, à direita.
+
+[Imagem: Lista de contas bancárias com as duas contas padrão e o botão Nova Conta Bancária destacados]
+
+## Preencha os dados da conta
+
+- **Banco:** clique e escolha o banco. Digite parte do nome para achar mais rápido. Para dinheiro em espécie ou caixinha, escolha **Não é um Banco (Ex: Conta Dinheiro, Caixinha)**.
+- **Nome da Conta Bancária:** vem com o nome do banco. Troque por um nome fácil de reconhecer. Exemplo: "Banco do Brasil - Conta da loja".
+- **Saldo Inicial:** quanto havia na conta no dia da abertura. Confira no extrato do banco.
+- **Data de Abertura:** a partir de que dia o sistema passa a controlar o saldo. Vem com a data de hoje.
+
+[Imagem: Formulário Nova Conta Bancária com Banco, Nome, Saldo Inicial, Data de Abertura, Selecionar unidades e Salvar destacados]
+
+## Escolha as lojas que usam a conta
+
+Se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que usam essa conta. A loja em que você está já vem marcada. Para todas, marque **Selecionar todas as lojas**.
+
+Depois, clique em **Salvar** dentro dessa janela.
+
+[Imagem: Janela Selecionar unidades com Selecionar todas as lojas e a loja atual marcada destacados (um nome coberto de propósito)]
+
+## Salve a conta
+
+Clique em **Salvar**, no canto de baixo, à direita. Aparece a mensagem **Conta bancária criada com sucesso**, e a conta entra na lista com o saldo inicial.
+
+[Imagem: Mensagem Conta bancária criada com sucesso e a nova conta na lista destacadas]
+
+## Conheça as opções da conta
+
+Nos **três pontinhos** no fim da linha da conta você tem:
+
+- **Ver Transações:** os lançamentos que passaram pela conta.
+- **Ver Histórico:** o histórico da conta.
+- **Editar:** muda os dados da conta.
+- **Excluir:** apaga a conta.
+
+[Imagem: Menu da conta aberto com Ver Transações, Ver Histórico, Editar e Excluir destacados]
+
+
+
+## Deu algum problema?
+
+??? question "Não encontrei os campos de agência e número da conta"
+    O cadastro pede só o banco e o nome. Se você tem mais de uma conta no mesmo banco, coloque algo no nome para diferenciar. Exemplo: "Itaú - final 1234".
+
+??? question "A conta não aparece em outra loja"
+    A conta só aparece nas lojas marcadas em **Selecionar unidades**. Abra a conta pelos três pontinhos, clique em **Editar** e marque a outra loja.
+
+??? question "Na importação da nota de compra, a conta bancária é obrigatória"
+    É isso mesmo: o pagamento da compra precisa sair de alguma conta. Escolha a conta na lista ou cadastre uma seguindo este manual.
+
+**Relacionados:** [Como cadastrar formas de pagamento](formas-de-pagamento.md) · [Como importar a nota fiscal de compra (XML)](../estoque/importar-nota-de-compra.md)
+
+Palavras-chave: conta bancária banco caixa caixinha dinheiro saldo saldo inicial data de abertura conta padrão conta pdv nova conta finanças transações histórico unidades lojas
+
+---
+Código: 07.03 | Módulo: Finanças | Tela no sistema: /dashboard/payments
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/formas-de-pagamento/
+
+# Como cadastrar formas de pagamento
+
+3 minutos · 4 passos · Atualizado em 30/10/2026
+
+As **formas de pagamento** são as opções que o cliente usa para pagar: dinheiro, Pix, cartão, vale-refeição... O sistema **já vem com as mais comuns**. Só crie uma nova se precisar de uma opção que não está na lista.
+
+!!! warning "A forma de pagamento vai para a nota fiscal"
+    Toda forma de pagamento tem um **código** que sai na nota fiscal (NFC-e e NF-e) e informa à Sefaz **como o cliente pagou**. Escolha sempre o código que corresponde ao pagamento de verdade. Exemplo: uma forma "Pix na maquininha" usa o código **17 - Pix**, e não **01 - Dinheiro**.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Veja as formas que já existem
+
+No menu do lado esquerdo, clique em **Configurações** e depois em **Formas de pagamento**.
+
+A lista mostra as formas que já vêm prontas: **PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito, Pagseguro, Débito em Conta, Vale Alimentação, Vale Refeição, Vale Presente, Crédito em Loja, Cartão de Crédito, Pontos de Fidelidade** e **Cartão de Débito**.
+
+Se a forma que você precisa já está na lista, não precisa criar nada.
+
+[Imagem: Tela Pagamentos com a lista de formas padrão e o botão Nova forma de pagamento destacados]
+
+## Crie uma nova forma
+
+Clique em **Nova forma de pagamento**, no canto de cima, à direita, e preencha:
+
+- **Nome:** como a forma vai aparecer no caixa. Exemplo: "Pix na maquininha". Até 40 letras.
+- **Código do método de pagamento na nota fiscal:** o tipo de pagamento que vai na nota. Veja a tabela abaixo.
+- **Permissão de parcelamento:** **Permitir** se o cliente pode dividir o pagamento em parcelas (como no cartão de crédito). **Não permitir** para pagamentos à vista, como Pix e dinheiro.
+
+[Imagem: Formulário Nova forma de pagamento com Nome, Código na nota fiscal, Permissão de parcelamento e Salvar destacados]
+
+## Escolha o código da nota fiscal
+
+Clique no campo **Código do método de pagamento na nota fiscal** e escolha o código. Para achar mais rápido, digite o número.
+
+[Imagem: Lista de códigos do método de pagamento na nota fiscal aberta]
+
+Os códigos mais usados:
+
+| Código | Use para |
+| --- | --- |
+| **01 - Dinheiro** | Dinheiro em espécie. |
+| **03 - Cartão De Crédito** | Cartão de crédito, na maquininha ou no TEF. |
+| **04 - Cartão De Débito** | Cartão de débito. |
+| **05 - Crédito Em Loja** | Crédito que o cliente tem na sua loja. |
+| **10 - Vale Alimentação** / **11 - Vale Refeição** | Vales e tíquetes de alimentação e refeição. |
+| **12 - Vale Presente** | Vale-presente e gift card. |
+| **15 - Boleto** | Boleto bancário. |
+| **17 - Pix** | Pix com QR Code gerado na hora (maquininha ou sistema). |
+| **20 - Pix Estático** | Pix por QR Code fixo ou chave Pix, sem valor gerado na hora. |
+| **99 - Outros** | Só quando **nenhum** outro código serve. |
+
+!!! tip "Na dúvida sobre o código, pergunte ao contador"
+    O código errado pode fazer a nota ser recusada ou ficar com a informação de pagamento incorreta.
+
+## Salve e confira
+
+Clique em **Salvar**. Aparece a mensagem **Método de pagamento adicionado com sucesso**.
+
+Role a tela até o fim: a nova forma aparece em **Formas de pagamentos criadas por você**. Os **três pontinhos** ao lado dela abrem as opções da forma.
+
+[Imagem: Fim da lista com a nova forma em Formas de pagamentos criadas por você destacada]
+
+
+
+!!! info "Bandeiras e taxas dos cartões"
+    As bandeiras aceitas (Visa, Mastercard...) e as taxas cobradas pela maquininha são cadastradas em **Finanças → Contrato de cartões e outros**. Esse manual está a caminho.
+
+## Deu algum problema?
+
+??? question "Não consigo alterar uma forma padrão (PIX, Dinheiro...)"
+    As formas que já vêm no sistema aparecem só para consulta nesta tela. As formas criadas por você podem ser alteradas pelos três pontinhos.
+
+??? question "A nota saiu com a forma de pagamento errada"
+    Confira o **código na nota fiscal** da forma usada na venda. Se estiver errado, altere a forma criada por você pelos três pontinhos, para as próximas vendas.
+
+**Relacionados:** [Como cadastrar uma conta bancária](conta-bancaria.md) · [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md)
+
+Palavras-chave: forma de pagamento meio de pagamento pix dinheiro cartão de crédito cartão de débito boleto vale refeição vale alimentação parcelamento parcelas código tpag nota fiscal nfc-e nf-e sefaz nova forma maquininha pix estático outros
 
 ---
 Código: 10.04 | Módulo: Configurações | Tela no sistema: /dashboard/settings/fiscal-settings/general
