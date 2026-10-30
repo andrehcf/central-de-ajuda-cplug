@@ -84,6 +84,11 @@ nav:
   - 04. Estoque:
       - estoque/index.md
       - estoque/importar-nota-de-compra.md
+  - 05. Vendas:
+      - vendas/index.md
+      - vendas/emitir-nfe.md
+      - vendas/nota-rejeitada.md
+      - vendas/cancelar-nota.md
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
