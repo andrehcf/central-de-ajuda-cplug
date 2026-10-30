@@ -1,0 +1,1437 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tudo o que a empresa precisa ter configurado para emitir NFC-e e NF-e - dados do emitente, regime tributário, certificado digital, CSC, série e grupos de ICMS e PIS/COFINS.">
+      
+      
+      
+        <link rel="canonical" href="https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/emissao-de-notas/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Como configurar a emissão de notas fiscais - Central de Ajuda CPlug</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/cplug.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#como-configurar-a-emissao-de-notas-fiscais" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Central de Ajuda CPlug" class="md-header__button md-logo" aria-label="Central de Ajuda CPlug" data-md-component="logo">
+      
+  <img src="../../assets/logo-cplug.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Central de Ajuda CPlug
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Como configurar a emissão de notas fiscais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/andrehcf/central-de-ajuda-cplug" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    central-de-ajuda-cplug
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Central de Ajuda CPlug" class="md-nav__button md-logo" aria-label="Central de Ajuda CPlug" data-md-component="logo">
+      
+  <img src="../../assets/logo-cplug.png" alt="logo">
+
+    </a>
+    Central de Ajuda CPlug
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/andrehcf/central-de-ajuda-cplug" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    central-de-ajuda-cplug
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../clientes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    02. Clientes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            02. Clientes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clientes/cadastrar-cliente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../produtos/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    03. Produtos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            03. Produtos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-categoria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar uma categoria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-unidade-de-medida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar uma unidade de medida
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-variacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar variações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-produto-com-variacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um produto com variações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/parametros-fiscais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar os dados fiscais de um produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../estoque/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    04. Estoque
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            04. Estoque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estoque/importar-nota-de-compra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como importar a nota fiscal de compra (XML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    10. Configurações
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            10. Configurações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Como configurar a emissão de notas fiscais
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar a emissão de notas fiscais
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Nesta página">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-o-que-e-obrigatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist: o que é obrigatório
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-dados-da-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1 · Dados da empresa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-regime-tributario-e-inscricao-estadual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2 · Regime tributário e Inscrição estadual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-3-certificado-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 3 · Certificado digital
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-4-csc-e-id-token-para-a-nfc-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 4 · CSC e ID Token (para a NFC-e)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-5-serie-e-numeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 5 · Série e numeração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-6-grupos-de-icms-e-de-piscofins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 6 · Grupos de ICMS e de PIS/COFINS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 6 · Grupos de ICMS e de PIS/COFINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-por-regime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos por regime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-grupo-de-icms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar um grupo de ICMS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-grupo-de-piscofins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar um grupo de PIS/COFINS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ligar-os-grupos-aos-produtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ligar os grupos aos produtos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Nesta página">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-o-que-e-obrigatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist: o que é obrigatório
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-dados-da-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1 · Dados da empresa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-regime-tributario-e-inscricao-estadual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2 · Regime tributário e Inscrição estadual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-3-certificado-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 3 · Certificado digital
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-4-csc-e-id-token-para-a-nfc-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 4 · CSC e ID Token (para a NFC-e)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-5-serie-e-numeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 5 · Série e numeração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-6-grupos-de-icms-e-de-piscofins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 6 · Grupos de ICMS e de PIS/COFINS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 6 · Grupos de ICMS e de PIS/COFINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-por-regime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos por regime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-grupo-de-icms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar um grupo de ICMS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-grupo-de-piscofins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar um grupo de PIS/COFINS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ligar-os-grupos-aos-produtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ligar os grupos aos produtos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    <span class="cplug-selo">10.04</span>
+  
+  
+                  
+
+  
+    <a href="https://github.com/andrehcf/central-de-ajuda-cplug/edit/main/docs/configuracoes/emissao-de-notas.md" title="Editar esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="como-configurar-a-emissao-de-notas-fiscais">Como configurar a emissão de notas fiscais</h1>
+<div class="cplug-meta">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 30 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 6 etapas · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 30/10/2026</p>
+</div>
+<p>Antes da primeira nota fiscal, a empresa precisa ter <strong>seis coisas</strong> configuradas no sistema. Se faltar qualquer uma, a nota não é emitida ou é recusada pela Sefaz.</p>
+<h2 id="checklist-o-que-e-obrigatorio">Checklist: o que é obrigatório</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>O que</th>
+<th>Para que serve</th>
+<th>Obrigatório para</th>
+<th>Onde fica no sistema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Dados da empresa:</strong> razão social, CNPJ, CNAE e endereço completo</td>
+<td>Aparecem na nota como quem está vendendo (emitente)</td>
+<td>NFC-e e NF-e</td>
+<td>Configurações → Dados do negócio</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Regime tributário (CRT) e Inscrição estadual</strong></td>
+<td>Definem quais códigos de imposto a empresa pode usar</td>
+<td>NFC-e e NF-e</td>
+<td>Configurações → Fiscal → Configurações gerais</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Certificado digital A1</strong> (arquivo e senha), dentro da validade</td>
+<td>Assina a nota, como uma assinatura digital da empresa</td>
+<td>NFC-e e NF-e</td>
+<td>Configurações → Fiscal → Certificado digital</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>CSC e ID Token</strong></td>
+<td>Geram o QR Code que vai impresso no cupom</td>
+<td>NFC-e</td>
+<td>Configurações → Fiscal → Configurações gerais</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Série e numeração</strong></td>
+<td>Numeram as notas em sequência</td>
+<td>NFC-e e NF-e</td>
+<td>Configurações → Fiscal → Série de NF</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Grupos de ICMS e de PIS/COFINS</strong>, ligados aos produtos</td>
+<td>Calculam os impostos de cada item</td>
+<td>NFC-e e NF-e</td>
+<td>Configurações → Fiscal → Grupo do ICMS / Grupo do PIS/COFINS</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">A empresa também precisa estar autorizada na Sefaz</p>
+<p>Para emitir NFC-e e NF-e, a empresa precisa estar <strong>credenciada na Sefaz do seu estado</strong>. Normalmente é o contador quem faz esse credenciamento. Sem ele, nenhuma configuração no sistema resolve.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">O que pedir ao contador antes de começar</p>
+<ul>
+<li>O <strong>regime tributário</strong> da empresa: Simples Nacional, MEI, Lucro Presumido ou Lucro Real.</li>
+<li>A <strong>Inscrição estadual</strong> da empresa.</li>
+<li>O <strong>CSC e o ID Token</strong> da NFC-e (etapa 4).</li>
+<li>Quais <strong>códigos de ICMS e de PIS/COFINS</strong> usar nos produtos (etapa 6).</li>
+</ul>
+</div>
+<p>Todas as telas fiscais ficam em <strong>Configurações → Fiscal</strong>, no menu do lado esquerdo:</p>
+<p><img alt="Menu Configurações com o grupo Fiscal aberto e as telas Certificado digital, Configurações Gerais, Padrões Fiscais, grupos e Série de NF destacados" loading="lazy" src="../../imagens/10.04/02-menu-fiscal.png" /></p>
+<p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
+<h2 id="etapa-1-dados-da-empresa">Etapa 1 · Dados da empresa</h2>
+<p>Clique em <strong>Configurações → Dados do negócio</strong>. Na aba <strong>Cadastro</strong>, confira:</p>
+<ul>
+<li><strong>Razão social:</strong> igual ao cartão CNPJ. É o nome que sai na nota.</li>
+<li><strong>CNPJ:</strong> da empresa que vai emitir as notas.</li>
+<li><strong>CNAE principal:</strong> a atividade principal da empresa, também no cartão CNPJ.</li>
+<li><strong>Endereço da empresa:</strong> completo, com CEP, número, bairro, cidade e estado. Precisa ser igual ao cadastro da Sefaz.</li>
+</ul>
+<p><img alt="Dados da empresa com Dados do negócio, Razão social, CNPJ e CNAE principal destacados" loading="lazy" src="../../imagens/10.04/01-dados-empresa.png" /></p>
+<p>Depois de conferir, clique em <strong>Salvar</strong>, no canto de baixo, à direita.</p>
+<h2 id="etapa-2-regime-tributario-e-inscricao-estadual">Etapa 2 · Regime tributário e Inscrição estadual</h2>
+<p>Clique em <strong>Configurações → Fiscal → Configurações gerais</strong>. Na parte <strong>Informações tributárias</strong>:</p>
+<ul>
+<li><strong>Código de Regime Tributário - CRT:</strong> escolha o regime da empresa (veja a tabela abaixo).</li>
+<li><strong>Inscrição Estadual:</strong> só os números. Se a empresa não tem IE, marque <strong>Isento IE</strong>.</li>
+<li><strong>Inscrição Municipal:</strong> preencha se a empresa tiver (é usada para nota de serviço).</li>
+</ul>
+<p>Na parte <strong>Informações fiscais</strong>, confira o <strong>Ambiente de Geração (NFe)</strong>:</p>
+<ul>
+<li><strong>Homologação:</strong> ambiente de <strong>teste</strong>. As notas não têm valor fiscal.</li>
+<li><strong>Produção:</strong> ambiente <strong>real</strong>. Use este para vender de verdade.</li>
+</ul>
+<p><img alt="Configurações gerais com CRT, Inscrição Estadual, Isento IE e Ambiente de Geração destacados (a IE aparece borrada de propósito)" loading="lazy" src="../../imagens/10.04/03-configuracoes-gerais.png" /></p>
+<table>
+<thead>
+<tr>
+<th>CRT</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 - Simples Nacional</strong></td>
+<td>Empresa do Simples Nacional, dentro do limite de faturamento. É o caso mais comum.</td>
+</tr>
+<tr>
+<td><strong>2 - Simples Nacional - Excesso Sublimite</strong></td>
+<td>Empresa do Simples que passou do sublimite de receita do estado. O contador avisa quando for o caso.</td>
+</tr>
+<tr>
+<td><strong>3 - Regime Normal</strong></td>
+<td>Empresa do Lucro Presumido ou do Lucro Real.</td>
+</tr>
+<tr>
+<td><strong>4 - Simples Nacional - MEI</strong></td>
+<td>Microempreendedor individual.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Lista do Código de Regime Tributário aberta com as opções 1, 2, 3 e 4" loading="lazy" src="../../imagens/10.04/04-crt.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">O regime e os códigos de imposto precisam combinar</p>
+<p>Simples Nacional (CRT 1, 2 e 4) usa os códigos de ICMS de <strong>3 números</strong> (CSOSN, ex.: 102). Regime Normal (CRT 3) usa os de <strong>2 números</strong> (CST, ex.: 00). Se não combinarem, a Sefaz recusa a nota.</p>
+</div>
+<p>Depois, clique em <strong>Salvar</strong>.</p>
+<h2 id="etapa-3-certificado-digital">Etapa 3 · Certificado digital</h2>
+<p>O certificado digital é a "assinatura" da empresa na nota. Sem ele, nenhuma nota é emitida.</p>
+<ul>
+<li><strong>Tipo:</strong> <strong>A1</strong>, que é um <strong>arquivo</strong> (termina em <code>.pfx</code> ou <code>.p12</code>) com uma <strong>senha</strong>. Ele é comprado em uma certificadora e emitido para o CNPJ da empresa (e-CNPJ).</li>
+<li><strong>Validade:</strong> normalmente <strong>1 ano</strong>. Quando vence, as notas param de sair. Renove antes do vencimento.</li>
+<li><strong>Senha:</strong> é definida na compra. Guarde em local seguro.</li>
+</ul>
+<p>Para enviar ou trocar o certificado:</p>
+<ol>
+<li>Clique em <strong>Configurações → Fiscal → Certificado digital</strong>. A tela mostra o certificado atual e <strong>até quando ele vale</strong>.</li>
+<li>
+<p>Clique em <strong>Alterar certificado</strong> (ou no botão de envio, se ainda não houver certificado).</p>
+<p><img alt="Tela Certificado Digital com o certificado A1, a validade e o botão Alterar certificado destacados" loading="lazy" src="../../imagens/10.04/05-certificado.png" /></p>
+</li>
+<li>
+<p>Clique em <strong>Escolha os arquivos</strong> (ou arraste o arquivo para a área tracejada) e selecione o arquivo do certificado.</p>
+</li>
+<li>Em <strong>Senha do certificado</strong>, digite a senha.</li>
+<li>
+<p>Clique em <strong>Alterar</strong>.</p>
+<p><img alt="Janela Alterar certificado com a área de envio do arquivo, a senha e o botão Alterar destacados" loading="lazy" src="../../imagens/10.04/06-certificado-enviar.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Ainda não tem certificado?</p>
+<p>Na mesma tela, a parte <strong>Comprar Certificado</strong> permite comprar um novo e acompanhar o pedido em <strong>Ver solicitações</strong>.</p>
+</div>
+<h2 id="etapa-4-csc-e-id-token-para-a-nfc-e">Etapa 4 · CSC e ID Token (para a NFC-e)</h2>
+<p>O <strong>CSC</strong> (Código de Segurança do Contribuinte) e o <strong>ID Token</strong> são gerados no <strong>site da Sefaz do seu estado</strong>, na área da NFC-e. É com eles que o sistema monta o <strong>QR Code</strong> do cupom. Normalmente o contador gera para você.</p>
+<ol>
+<li>Clique em <strong>Configurações → Fiscal → Configurações gerais</strong> e role até <strong>Autenticação e QR Code</strong>.</li>
+<li>Em <strong>CSC / Token</strong>, digite o código exatamente como a Sefaz forneceu, com letras e números.</li>
+<li>Em <strong>ID Token</strong>, digite o identificador do CSC. Exemplo: 000001.</li>
+<li>Clique em <strong>Salvar</strong>.</li>
+</ol>
+<p><img alt="Autenticação e QR Code com os campos CSC / Token e ID Token destacados (o código aparece borrado de propósito)" loading="lazy" src="../../imagens/10.04/07-csc.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">O CSC é um código sigiloso</p>
+<p>Não envie o CSC para pessoas de fora da empresa e não poste em lugar público.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">O contador precisa dos XML?</p>
+<p>Nessa mesma tela, em <strong>Autorizados a acessar XML</strong>, clique em <strong>+ Adicionar CPF / CNPJ</strong> e informe o CPF ou CNPJ do contador. Assim ele consegue baixar os XML das notas direto na Sefaz.</p>
+</div>
+<h2 id="etapa-5-serie-e-numeracao">Etapa 5 · Série e numeração</h2>
+<p>Cada tipo de nota tem uma <strong>série</strong>, que é como um "talão", e um <strong>número atual</strong>, o da última nota emitida.</p>
+<ol>
+<li>Clique em <strong>Configurações → Fiscal → Série de NF</strong>.</li>
+<li>Confira se existe uma série para <strong>NFC-e</strong> (venda no caixa) e outra para <strong>NF-e</strong>. Se não existir, clique em <strong>Adicionar série</strong>.</li>
+<li>Se a empresa já emitia notas em outro sistema, ajuste o <strong>número atual</strong> para o <strong>último número usado lá</strong>, na mesma série. Assim a próxima nota não repete um número já usado.</li>
+</ol>
+<p><img alt="Série de nota fiscal com o botão Adicionar série e as séries de NFC-e e NF-e destacados" loading="lazy" src="../../imagens/10.04/08-serie.png" /></p>
+<h2 id="etapa-6-grupos-de-icms-e-de-piscofins">Etapa 6 · Grupos de ICMS e de PIS/COFINS</h2>
+<p>Os <strong>grupos</strong> guardam as regras de cada imposto. Você cria os grupos uma vez e depois liga cada produto ao grupo certo.</p>
+<h3 id="exemplos-por-regime">Exemplos por regime</h3>
+<p>Os exemplos abaixo são os casos mais comuns, <strong>só para referência</strong>. Quem define os códigos da sua empresa é o contador.</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>ICMS (venda comum)</th>
+<th>ICMS (produto com substituição tributária, ex.: bebidas)</th>
+<th>PIS e COFINS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simples Nacional</strong></td>
+<td>CSOSN <strong>102</strong> - Tributada pelo Simples Nacional sem permissão de crédito</td>
+<td>CSOSN <strong>500</strong> - ICMS cobrado anteriormente por substituição tributária</td>
+<td>CST <strong>49</strong> ou <strong>99</strong> - Outras operações, sem alíquota (os impostos já são pagos no DAS)</td>
+</tr>
+<tr>
+<td><strong>Lucro Presumido</strong></td>
+<td>CST <strong>00</strong> - Tributada integralmente, com a alíquota do estado</td>
+<td>CST <strong>60</strong> - ICMS cobrado anteriormente por substituição tributária</td>
+<td>CST <strong>01</strong> - PIS 0,65% e COFINS 3%</td>
+</tr>
+<tr>
+<td><strong>Lucro Real</strong></td>
+<td>CST <strong>00</strong> - Tributada integralmente, com a alíquota do estado</td>
+<td>CST <strong>60</strong> - ICMS cobrado anteriormente por substituição tributária</td>
+<td>CST <strong>01</strong> - PIS 1,65% e COFINS 7,6%</td>
+</tr>
+</tbody>
+</table>
+<p>Alguns produtos, como bebidas frias, têm regras especiais de PIS e COFINS (monofásico). O contador indica quando for o caso.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dê nomes que digam a regra</p>
+<p>Exemplos: "Simples - 102", "Simples - ST 500", "Presumido - Tributado 00", "PIS/COFINS Simples - 49". Assim, na hora de configurar o produto, fica fácil escolher o grupo certo.</p>
+</div>
+<h3 id="criar-um-grupo-de-icms">Criar um grupo de ICMS</h3>
+<ol>
+<li>Clique em <strong>Configurações → Fiscal → Grupo do ICMS</strong>. A lista mostra os grupos que já existem.</li>
+<li>
+<p>Clique em <strong>Novo grupo ICMS</strong>.</p>
+<p><img alt="Lista de grupos de ICMS com o botão Novo grupo ICMS e os grupos existentes destacados" loading="lazy" src="../../imagens/10.04/09-grupo-icms.png" /></p>
+</li>
+<li>
+<p>Em <strong>Nome</strong>, digite o nome do grupo. Exemplo: "Simples - 102".</p>
+</li>
+<li>Em <strong>Situação do ICMS</strong>, escolha o código indicado pelo contador.</li>
+<li>As <strong>alíquotas por estado</strong> já vêm preenchidas. Só altere com orientação do contador.</li>
+<li>
+<p>Clique em <strong>Salvar</strong>.</p>
+<p><img alt="Formulário Novo grupo do ICMS com Nome e Situação do ICMS destacados" loading="lazy" src="../../imagens/03.08/05-novo-grupo.png" /></p>
+</li>
+</ol>
+<h3 id="criar-um-grupo-de-piscofins">Criar um grupo de PIS/COFINS</h3>
+<ol>
+<li>
+<p>Clique em <strong>Configurações → Fiscal → Grupo do PIS/COFINS</strong> e depois em <strong>Novo Grupo PIS/COFINS</strong>.</p>
+<p><img alt="Lista de grupos de PIS/COFINS com o botão Novo Grupo PIS/COFINS e os grupos existentes destacados" loading="lazy" src="../../imagens/10.04/10-grupo-pis-cofins.png" /></p>
+</li>
+<li>
+<p>Preencha:</p>
+<ul>
+<li><strong>Nome:</strong> exemplo, "PIS/COFINS Simples - 49".</li>
+<li><strong>Situação do PIS</strong> e <strong>Situação do COFINS:</strong> os códigos indicados pelo contador. Quando o código exigir, o sistema pede também a alíquota.</li>
+</ul>
+</li>
+<li>
+<p>Clique em <strong>Salvar</strong>.</p>
+<p><img alt="Formulário Novo grupo de PIS/COFINS com Nome, Situação do PIS e Situação do COFINS destacados" loading="lazy" src="../../imagens/10.04/11-novo-pis-cofins.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Grupo padrão</p>
+<p>Em <strong>Configurações → Fiscal → Padrões Fiscais</strong>, você escolhe um grupo <strong>padrão</strong> para cada imposto (ICMS, IPI, PIS/COFINS, ISSQN e CFOP). Ele é usado automaticamente nas notas quando o produto não tiver outro grupo definido.</p>
+</div>
+<h3 id="ligar-os-grupos-aos-produtos">Ligar os grupos aos produtos</h3>
+<p>Depois de criar os grupos, configure cada produto: veja <a href="../../produtos/parametros-fiscais/">Como configurar os dados fiscais de um produto</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Como saber que deu certo</p>
+<p>Com o <strong>Ambiente de Geração</strong> em <strong>Produção</strong>, faça uma <strong>venda de teste</strong> de valor baixo com nota. Se a nota for <strong>autorizada</strong>, a configuração está completa. Se for recusada, a mensagem da Sefaz diz o motivo. Veja os casos mais comuns abaixo.</p>
+</div>
+<h2 id="deu-algum-problema">Deu algum problema?</h2>
+<details class="question">
+<summary>Certificado vencido ou inválido</summary>
+<p>Veja a validade em <strong>Configurações → Fiscal → Certificado digital</strong>. Se venceu, renove com a certificadora e envie o arquivo novo, com a senha (etapa 3).</p>
+</details>
+<details class="question">
+<summary>As notas não têm valor fiscal</summary>
+<p>Confira o <strong>Ambiente de Geração (NFe)</strong> em <strong>Configurações gerais</strong>. Em <strong>Homologação</strong> as notas são só de teste. Para vender de verdade, use <strong>Produção</strong>.</p>
+</details>
+<details class="question">
+<summary>Rejeição de QR Code ou CSC inválido (NFC-e)</summary>
+<p>Confira se o <strong>CSC</strong> e o <strong>ID Token</strong> foram digitados exatamente como a Sefaz forneceu, sem espaços a mais. Se o CSC foi trocado na Sefaz, atualize também no sistema.</p>
+</details>
+<details class="question">
+<summary>Rejeição de duplicidade de numeração</summary>
+<p>O número da nota já foi usado. Isso acontece quando a empresa veio de outro sistema. Ajuste o <strong>número atual</strong> da série para o último número já emitido (etapa 5).</p>
+</details>
+<details class="question">
+<summary>Rejeição de CSOSN ou CST incompatível com o regime</summary>
+<p>O <strong>CRT</strong> da empresa não combina com o código do grupo de ICMS. Simples Nacional usa CSOSN (3 números); Regime Normal usa CST (2 números). Confira com o contador.</p>
+</details>
+<details class="question">
+<summary>Rejeição por dados do emitente</summary>
+<p>Confira a razão social, o CNPJ e o endereço (etapa 1) e a Inscrição estadual (etapa 2). Eles precisam ser iguais ao cadastro na Sefaz.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../../produtos/parametros-fiscais/">Como configurar os dados fiscais de um produto</a> · <a href="../../clientes/cadastrar-cliente/">Como cadastrar um cliente</a></p>
+<p><span class="palavras-chave">emitir nota fiscal nfc-e nf-e cupom fiscal certificado digital a1 pfx senha validade csc token id token qr code série numeração emitente inscrição estadual isento ie crt regime tributário simples nacional mei lucro presumido lucro real regime normal csosn cst icms pis cofins grupo fiscal padrões fiscais homologação produção ambiente sefaz rejeição credenciamento contador xml</span></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Configurações">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Configurações
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 CPlug · Central de Ajuda
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
