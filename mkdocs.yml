@@ -77,6 +77,8 @@ nav:
       - produtos/cadastrar-variacoes.md
       - produtos/cadastrar-produto.md
       - produtos/cadastrar-produto-com-variacoes.md
+      - produtos/lista-de-precos.md
+      - produtos/ficha-tecnica.md
       - produtos/parametros-fiscais.md
   - 04. Estoque:
       - estoque/index.md

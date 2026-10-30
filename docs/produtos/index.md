@@ -14,5 +14,7 @@ Monte o seu cardápio ou catálogo. Siga nesta ordem: primeiro as categorias, de
 [<span class="cplug-codigo">03.03</span> Como cadastrar variações](cadastrar-variacoes.md)
 [<span class="cplug-codigo">03.04</span> Como cadastrar um produto](cadastrar-produto.md)
 [<span class="cplug-codigo">03.05</span> Como cadastrar um produto com variações](cadastrar-produto-com-variacoes.md)
+[<span class="cplug-codigo">03.06</span> Como criar uma lista de preços](lista-de-precos.md)
+[<span class="cplug-codigo">03.07</span> Como montar uma ficha técnica](ficha-tecnica.md)
 [<span class="cplug-codigo">03.08</span> Como configurar os dados fiscais de um produto](parametros-fiscais.md)
 </div>
