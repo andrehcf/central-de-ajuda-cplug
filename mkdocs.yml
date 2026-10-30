@@ -80,6 +80,7 @@ nav:
       - produtos/lista-de-precos.md
       - produtos/ficha-tecnica.md
       - produtos/parametros-fiscais.md
+      - produtos/adicionais-e-sugestoes.md
   - 04. Estoque:
       - estoque/index.md
       - estoque/importar-nota-de-compra.md
