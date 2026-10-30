@@ -61,6 +61,13 @@ body { -webkit-font-smoothing: antialiased; }
 }
 .md-search__form { border-radius: .6rem; background: var(--cplug-superficie); }
 
+/* Menu lateral: módulos (02. Clientes, 03. Produtos...) com o degradê da marca */
+.md-nav__item--section > .md-nav__link .md-ellipsis {
+  background: linear-gradient(90deg, #2f7fc4 0%, #0f9a9c 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 700;
+}
+[data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link .md-ellipsis { background-image: var(--cplug-gradiente); }
+
 /* Títulos */
 .md-typeset h1 { font-weight: 700; letter-spacing: -.02em; color: var(--md-default-fg-color); margin-bottom: .6em; }
 .md-typeset h2 { font-weight: 600; }
