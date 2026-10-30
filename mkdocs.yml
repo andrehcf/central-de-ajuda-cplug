@@ -63,6 +63,10 @@ markdown_extensions:
 
 nav:
   - Início: index.md
+  - 01. Primeiros passos:
+      - primeiros-passos/index.md
+      - primeiros-passos/trocar-de-empresa.md
+      - primeiros-passos/usar-o-menu.md
   - 02. Clientes:
       - clientes/index.md
       - clientes/cadastrar-cliente.md
