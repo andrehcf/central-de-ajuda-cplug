@@ -1,13 +1,13 @@
 ---
-title: Como cancelar ou inutilizar uma nota fiscal
-description: Cancele uma nota autorizada dentro do prazo ou inutilize o número de uma nota que não foi autorizada, informando o motivo exigido pela Sefaz.
+title: Como cancelar, inutilizar ou corrigir uma nota fiscal
+description: Cancele uma nota autorizada dentro do prazo, inutilize o número de uma nota que não foi autorizada ou corrija um erro de texto com a carta de correção.
 codigo: "05.08"
 modulo: Vendas
 tela: /dashboard/sale/outbound-invoices
 atualizado: 2026-10-30
 ---
 
-# Como cancelar ou inutilizar uma nota fiscal
+# Como cancelar, inutilizar ou corrigir uma nota fiscal
 
 <div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
 
@@ -68,8 +68,31 @@ A nota passa para o status **Inutilizado**.
 
 </div>
 
-!!! tip "Erro pequeno de texto? Use a carta de correção"
-    Se a nota foi autorizada com um erro **só de texto** (por exemplo, um endereço com letra trocada), não precisa cancelar: use **Carta de correção** nos três pontinhos. A carta **não** corrige valores, impostos, quantidades, nem quem vendeu e quem comprou.
+## Erro pequeno de texto? Use a carta de correção
+
+Se a nota foi **autorizada** com um erro **só de texto** (por exemplo, um endereço com letra trocada ou uma informação complementar), não precisa cancelar: emita uma **Carta de correção (CC-e)**.
+
+!!! warning "O que a carta de correção não corrige"
+    Valores, impostos, quantidades, datas, CFOP, e os dados de quem vendeu e de quem comprou (CNPJ, CPF, razão social). Nesses casos, cancele a nota e emita outra.
+
+1. Nos **três pontinhos** da nota autorizada, clique em **Carta de correção**.
+2. Em **Justificativa para correção**, escreva a correção completa, com **15 a 255 caracteres**. Exemplo: "Onde se lê X, leia-se Y".
+3. Clique em **Confirmar correção**.
+
+![Janela Carta de correção com o aviso de que a carta sobrescreve as outras, o texto da correção e Confirmar correção destacados](../imagens/05.08/07-carta-texto.png){ loading=lazy }
+
+!!! info "Cada carta nova substitui a anterior"
+    A Sefaz considera só a **última** carta de correção. Se precisar corrigir mais alguma coisa, a nova carta deve repetir **todas** as correções, inclusive as da carta anterior.
+
+Ao abrir de novo a **Carta de correção**, a lista **Cartas geradas** mostra a **sequência** e o **protocolo** da Sefaz, com botões para ver e baixar a carta.
+
+![Lista Cartas geradas com a sequência 1 e o protocolo destacados](../imagens/05.08/08-carta-gerada.png){ loading=lazy }
+
+## Arquivos da nota cancelada
+
+Uma nota cancelada continua com a **DANFE** e o **XML** disponíveis, e ganha a opção **Download XML cancelado**: é o comprovante do cancelamento na Sefaz. Envie esse arquivo ao contador junto com os XMLs do mês.
+
+![Menu da nota cancelada com Download XML cancelado e o status Cancelado destacados](../imagens/05.08/09-xml-cancelado.png){ loading=lazy }
 
 ## Deu algum problema?
 

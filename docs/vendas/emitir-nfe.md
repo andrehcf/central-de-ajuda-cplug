@@ -145,7 +145,7 @@ Nos **três pontinhos** da nota autorizada você tem:
 - **Visualizar DANFE** e **Download DANFE:** o documento impresso da nota, para entregar ao cliente.
 - **Download do XML NF-e:** o arquivo da nota. Envie ao cliente quando ele pedir (empresas precisam do XML).
 - **Carta de correção:** corrige pequenos erros de texto, sem mudar valores, impostos ou quem vendeu e comprou.
-- **Cancelar NF-e:** veja [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md).
+- **Cancelar NF-e:** veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md).
 
 ![Menu da nota autorizada com Carta de correção, DANFE, XML e Cancelar NF-e destacados](../imagens/05.06/16-opcoes-autorizada.png){ loading=lazy }
 
@@ -160,6 +160,6 @@ Nos **três pontinhos** da nota autorizada você tem:
 ??? question "Apareceu o aviso de Homologação"
     A empresa está no ambiente de **teste**: as notas não têm valor fiscal. Para emitir de verdade, o **Ambiente de Geração** precisa estar em **Produção**. Veja [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md).
 
-**Relacionados:** [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
+**Relacionados:** [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
 
 <span class="palavras-chave">emitir nf-e nota fiscal eletrônica modelo 55 emissão manual nota de venda transmitir sefaz pendente transmitido autorizada danfe xml natureza de operação cfop 5102 5405 frete sem frete forma de pagamento à vista à prazo fatura homologação produção</span>
