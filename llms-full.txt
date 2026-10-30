@@ -2077,124 +2077,184 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/ponto-de-venda/conf
 
 # Como configurar o terminal de vendas
 
-15 minutos · 10 passos · Atualizado em 30/10/2026
+20 minutos · 11 passos · Atualizado em 30/10/2026
 
-As **configurações do PDV** decidem como o caixa funciona no dia a dia. Por exemplo: se o operador pode mudar o preço de um produto na hora da venda, se a loja cobra 10% de taxa de serviço ou se o caixa precisa de aprovação para ser fechado.
+As **configurações do PDV** decidem como o caixa funciona no dia a dia. Por exemplo: se o operador pode mudar o preço do X-Burger na hora da venda, se a loja cobra 10% de taxa de serviço nas mesas, se a gaveta abre sozinha quando o cliente paga em dinheiro ou quanto custa a entrega em cada bairro.
 
-As opções ficam em duas telas: **Geral**, com as regras de venda, segurança, fechamento de caixa e cliente, e **Modos de pedidos**, com o delivery e o atendimento de mesas e comandas.
+As opções ficam em duas telas, as duas dentro de **Ponto de venda** → **Configurações**:
 
-!!! warning "Antes de começar"
-    Essas opções mudam o funcionamento do caixa. Mude uma coisa de cada vez. Na dúvida sobre uma opção, deixe como está e fale com o suporte.
+- **Geral**, com as abas **Geral**, **Segurança**, **Fechamento de caixa** e **Cliente**;
+- **Modos de pedidos**, com o **Delivery** e o atendimento **No estabelecimento** (mesas e comandas).
 
-!!! info "Como salvar"
-    Ao mudar qualquer opção, aparece no rodapé a mensagem **Você tem alterações não salvas**, com os botões **Descartar alterações** e **Salvar**. Clique em **Salvar** antes de sair da tela. Para desfazer o que mudou, clique em **Descartar alterações**.
+Elas valem para todos os caixas da loja.
+
+!!! info "Antes de começar"
+    - Mude uma coisa de cada vez e confira se o caixa funciona como você espera.
+    - Ao mudar qualquer opção, aparece no rodapé **Você tem alterações não salvas**, com os botões **Descartar alterações** e **Salvar**. Clique em **Salvar** antes de sair da tela. Ao salvar, aparece **Configurações do PDV atualizadas com sucesso**.
+    - Os campos de **%** e de **R$** preenchem da direita para a esquerda: para 10,00, digite **1000**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 
 
-## Abra as configurações do PDV
+## Abra as configurações e ajuste as regras de venda
 
-No menu do lado esquerdo, clique em **Ponto de venda**, depois em **Configurações** e em **Geral**. A tela **Configurações do PDV** tem quatro abas: **Geral**, **Segurança**, **Fechamento de caixa** e **Cliente**.
+No menu do lado esquerdo, clique em **Ponto de venda**, depois em **Configurações** e em **Geral**. A tela **Configurações do PDV** abre na aba **Geral**.
 
-Na aba **Geral**, o bloco **Venda** reúne as regras do dia a dia. Marque o que a loja precisa:
+O bloco **Venda** reúne as regras do dia a dia:
 
-- **Permitir edição do preço de venda dos produtos:** o operador pode mudar o preço na hora da venda.
-- **Permitir edição de quantidade de produtos na venda:** o operador pode mudar a quantidade do item.
-- **Selecionar vendedor sempre que iniciar uma nova venda:** o PDV pede para escolher o vendedor a cada venda nova.
-- **Permitir abrir comanda ao iniciar venda balcão.**
-- **Exigir nome do cliente ao finalizar a venda.**
-- **Exigir número de autorização da operação com cartão nas vendas:** o operador informa o número de autorização do pagamento com cartão.
-- **Habilitar exibição de últimas vendas do cliente?**
-- **Vincular cliente à venda atual ao adicionar o CPF na nota:** se o CPF já estiver cadastrado, o cliente entra na venda sozinho.
-- **Permitir cancelamento de venda após tempo legal?:** a venda é cancelada no sistema, mas a nota fiscal continua válida na SEFAZ. Use com cuidado. Só funciona no PDV a partir da versão 2.11.15.
-- **Numeração de venda aleatória.**
-- **Limitar exibição de vendas no histórico do PDV:** quantas vendas aparecem no histórico do caixa (até 200).
+- **Permitir edição do preço de venda dos produtos:** o operador pode mudar o preço de um item na hora da venda. Desmarcado, vale sempre o preço do cadastro.
+- **Permitir edição de quantidade de produtos na venda:** o operador pode mudar a quantidade de um item já lançado. Já vem marcado.
+- **Selecionar vendedor sempre que iniciar uma nova venda:** a cada venda nova, o PDV pede para escolher o vendedor. Use quando você quer saber quem fez cada venda.
+- **Permitir abrir comanda ao iniciar venda balcão:** deixa o operador abrir uma comanda ao começar uma venda no balcão.
+- **Exigir nome do cliente ao finalizar a venda:** a venda só fecha com o nome do cliente. Útil para chamar o pedido pelo nome.
+- **Exigir número de autorização da operação com cartão nas vendas:** em pagamento com cartão, o operador digita o número de autorização que aparece no comprovante da maquininha.
+- **Habilitar exibição de últimas vendas do cliente?:** mostra no PDV as compras anteriores do cliente escolhido.
+- **Vincular cliente à venda atual ao adicionar o CPF na nota:** se o CPF digitado para a nota já for de um cliente cadastrado, o sistema liga a venda a esse cliente sozinho.
+- **Permitir cancelamento de venda após tempo legal?:** deixa cancelar a venda no sistema mesmo depois do prazo da SEFAZ. **Atenção:** nesse caso a nota fiscal continua válida na SEFAZ. Use com cuidado. Só funciona no PDV a partir da versão 2.11.15.
+- **Numeração de venda aleatória:** as vendas recebem números aleatórios em vez de 1, 2, 3...
+- **Limitar exibição de vendas no histórico do PDV:** quantas vendas aparecem no histórico do caixa (até 200). Desmarcado, não há limite.
 
 [Imagem: Menu Configurações com Geral destacado e as abas Geral, Segurança, Fechamento de caixa e Cliente destacadas]
 
-## Configure a taxa de serviço e os outros blocos da aba Geral
+## Configure taxa de serviço, balança, sangria e desconto
 
-Role a aba **Geral** para baixo:
+Role a aba **Geral** para baixo.
 
-- **Taxa de serviço:** marque **Habilitar taxa de serviço** e digite o percentual. O campo preenche da direita para a esquerda: para 10%, digite **1000** e confira se aparece **10,00**. Depois escolha se a taxa vale também para vendas no balcão e, no botão **Produtos**, quais produtos têm taxa.
-- **Habilitar código de barras gerado por balança:** para produtos vendidos por peso com etiqueta da balança. O botão **Produtos** configura o código de cada produto.
-- **Registros de caixa:** permite depósitos e retiradas (sangria) no caixa, avisa quando a retirada chega a um valor e imprime o comprovante da retirada ou do depósito.
-- **Desconto:** liga os descontos no PDV e define o tipo (fixo, aberto para alteração, por categoria de cliente), o valor máximo e se o desconto é **Em %** ou **Em R$**.
+**Taxa de serviço** (os "10% do garçom"):
+
+- Marque **Habilitar taxa de serviço** e digite o percentual. Para 10%, digite **1000**.
+- **Utilizar taxa de serviço para vendas no balcão:** cobra a taxa também nas vendas de balcão, não só no atendimento de mesas e comandas.
+- No botão **Produtos**, escolha quais produtos entram na taxa. A tela mostra quantos estão marcados, por exemplo "20 de 20 produtos selecionados".
+- É a mesma taxa que aparece em **Modos de pedidos**: mudar em um lugar muda no outro.
+
+**Habilitar código de barras gerado por balança:** para produtos pesados na balança que imprime etiqueta com código de barras. No botão **Produtos**, configure o código de cada produto.
+
+**Registros de caixa** (depósitos e retiradas, também chamados de reforço e sangria):
+
+- **Permitir depósitos e retiradas no caixa:** deixa o operador colocar ou tirar dinheiro do caixa durante o dia. Desligado, as opções abaixo somem.
+- **Alertar sobre valor de retirada/sangria do caixa:** digite um valor em R$. Quando o dinheiro no caixa chegar nele, o PDV avisa que é hora da sangria.
+- **Bloquear o Ponto de Venda ao alcançar o valor estipulado:** aparece quando o alerta está marcado. O PDV fica bloqueado até alguém fazer a sangria.
+- **Imprimir comprovante ao realizar retiradas e depósitos no caixa.**
+
+**Desconto:**
+
+- **Habilitar descontos no Ponto de Venda:** liga ou desliga os descontos no caixa.
+- **Desconto por categoria de cliente:** cada categoria de cliente pode ter um desconto. Escolha **Desconto aberto para alteração** (o operador pode mudar o desconto da categoria) ou **Desconto fixo** (o operador não muda).
+- **Habilitar valor máximo de desconto aplicado:** aparecem os campos **Desconto máximo na venda** e **Desconto máximo no Produto**. Exemplo: até R$ 20,00 na venda e até R$ 5,00 em cada produto.
+- **Tipo de desconto:** **Em %** ou **Em R$**.
 
 Clique em **Salvar** no rodapé.
 
-[Imagem: Habilitar taxa de serviço marcado com 10,00 no campo de percentual e os botões Descartar alterações e Salvar destacados no rodapé]
+[Imagem: Taxa de serviço habilitada com 10,00 e os botões Descartar alterações e Salvar destacados no rodapé]
 
-## Proteja operações na aba Segurança
+## Proteja operações com senha (aba Segurança)
 
-Clique na aba **Segurança**:
+Clique na aba **Segurança**.
 
-- **Solicitar senha de segurança para determinadas operações:** pede uma senha para algumas ações no caixa.
-- **Abandono de Vendas:** grava no relatório as vendas abandonadas e, se quiser, exige o motivo.
-- **Abertura de Gaveta Automatica:** escolha quando a gaveta do dinheiro abre sozinha. Por exemplo, ao finalizar uma venda em dinheiro ou na sangria. A última opção mostra um botão para abrir a gaveta na mão.
+Ligue **Solicitar senha de segurança para determinadas operações** para pedir senha em algumas ações do caixa. Aparecem duas listas:
 
-[Imagem: Aba Segurança destacada, com as opções de senha, abandono de vendas e abertura de gaveta]
+- **Solicitar senha de segurança para:** **Abandono de venda**, **Alterar taxa de serviço** e **Abrir gaveta**. A senha é cadastrada no campo **Senha de segurança**, em **Alterar senha**.
+- **Solicitar senha de gerência para:** **Cancelamento de vendas e pedidos**, **Aplicar desconto na venda** e duas opções do crediário (venda acima do limite de crédito e venda com parcela em atraso). As opções do crediário ficam cinza enquanto o crediário não está ligado.
+
+**Abandono de Vendas** (quando o operador desiste de uma venda já começada):
+
+- **Gravar abandono de venda no relatório:** a venda abandonada fica registrada para consulta.
+- **Exigir motivo no abandono de venda:** o operador precisa dizer por que desistiu.
+
+**Abertura de Gaveta Automatica:** quando a gaveta do dinheiro abre sozinha.
+
+- **Ao finalizar uma venda (qualquer método de pagamento)** ou **Ao finalizar uma venda com forma de pagamento igual a dinheiro**. Escolha uma das duas: marcar uma desmarca a outra.
+- **Na Sangria/Reforço de caixa**, **Ao incluir/debitar Crédito de Clientes** e **Ao receber um faturamento de cliente** (quando o cliente paga uma conta que ficou em aberto).
+- **Exibir botão para abertura manual:** mostra no PDV um botão para abrir a gaveta.
+
+[Imagem: Aba Segurança com a chave de senha ligada e as listas de senha de segurança e de gerência destacadas]
 
 ## Defina o fechamento de caixa
 
-Clique na aba **Fechamento de caixa**:
+Clique na aba **Fechamento de caixa**.
 
-- **Exigir aprovação para fechar o caixa:** o responsável revisa e confirma o fechamento.
+- **Exigir aprovação para fechar o caixa:** o fechamento só vale depois que um responsável revisa e confirma.
 - **Modelo de fechamento:** como os valores aparecem na conferência.
-    - **Formato Simples:** só Dinheiro, Cartão de crédito, Cartão de débito, Voucher e Outros.
-    - **Dinâmico por método de pagamento:** mostra as formas de pagamento usadas no caixa. Já vem marcado.
-    - **Dinâmico por bandeira de cartão:** separa os cartões por bandeira.
-- **Transferir valores automaticamente no fechamento:** o dinheiro do caixa vai para a conta escolhida ao fechar.
-- **Segurança:** conferir os valores antes de confirmar, informar quem fechou o caixa, esconder os resultados do caixa e bloquear o fechamento se houver pedidos em aberto.
+    - **Formato Simples:** sempre Dinheiro, Cartão de crédito, Cartão de débito, Voucher e Outros.
+    - **Dinâmico por método de pagamento:** só as formas de pagamento usadas naquele caixa. Já vem marcado.
+    - **Dinâmico por bandeira de cartão:** como o anterior, mas separa os cartões por bandeira (Visa, Master...).
+- **Transferir valores automaticamente no fechamento:** ao fechar o caixa, o dinheiro passa sozinho para outra conta. Escolha a **Conta bancária de destino** e o **Valor a permanecer no caixa**, que é o troco do dia seguinte. Exemplo: deixar R$ 100,00 e transferir o resto para "Banco do Brasil - Conta da loja".
+- **Conferir os valores registrados antes de confirmar o fechamento.**
+- **Informar o usuário que realizou o fechamento.**
+- **Não mostrar informações de resultados operacionais:** o fechamento não mostra nem imprime o detalhamento do caixa. Use quando não quer que o operador veja os totais antes de contar o dinheiro.
+- **Bloquear fechamento se houver pedidos em aberto:** escolha os tipos de pedido que impedem o fechamento: **Delivery & Retirada**, **Na mesa**, **Balcão** e **Consumo TAP**.
 
-[Imagem: Aba Fechamento de caixa destacada, com os três modelos de fechamento]
+[Imagem: Aba Fechamento de caixa com o modelo de fechamento, a transferência automática com conta e valor e o bloqueio por pedidos em aberto destacados]
 
 ## Libere o crédito de clientes
 
-Na aba **Cliente**, ligue **Permitir Crédito de clientes no Ponto de Venda** se a loja trabalha com crédito para os clientes.
+Clique na aba **Cliente** e ligue **Permitir Crédito de clientes no Ponto de Venda** se a loja guarda saldo para os clientes. Aparecem mais duas opções:
 
-[Imagem: Aba Cliente destacada com a opção Permitir Crédito de clientes no Ponto de Venda]
+- **Permitir valores negativos de crédito:** o cliente pode ficar com saldo devedor, o famoso "fiado".
+- **Imprimir recibo automaticamente o adicionar ou remover crédito de cliente.**
 
-## Abra os modos de pedidos
+[Imagem: Aba Cliente com a chave de crédito de clientes ligada e as duas opções que aparecem destacadas]
+
+## Ligue o delivery em Modos de pedidos
 
 No menu, em **Ponto de venda** → **Configurações**, clique em **Modos de pedidos**. A primeira parte é o **Delivery**.
 
 Ligue **Configurações de delivery no Ponto de Venda** se a loja faz entregas. Depois marque o que precisar:
 
-- **Exigir seleção de entregador:** ao mudar o pedido para "Saiu para entrega", o operador precisa escolher o entregador.
-- **Preencher DDD automaticamente ao cadastrar cliente nos pedido delivery:** digite o DDD da cidade no campo ao lado.
-- **Finalizar venda após a entrega.**
-- **Habilitar observações para os clientes** e **Habilitar observações para Delivery antes de finalizar a venda.**
-- **Numeração de venda separada para delivery.**
-- **Impressão do pedido de integração delivery:** em **Selecionar**, escolha a impressora.
+- **Exigir seleção de entregador:** ao mudar o pedido para "Saiu para entrega", o operador precisa escolher quem vai entregar.
+- **Preencher DDD automaticamente ao cadastrar cliente nos pedido delivery:** digite o DDD da sua cidade no campo ao lado (exemplo: 41), para o PDV preencher o DDD sozinho ao cadastrar um cliente no delivery. Desmarcado, o DDD fica em branco.
+- **Finalizar venda após a entrega:** libera a opção de finalizar a venda só depois que o pedido foi entregue. Exemplo: o cliente paga para o entregador.
+- **Habilitar observações para os clientes** e **Habilitar observações para Delivery antes de finalizar a venda:** campos para anotar detalhes, como "sem cebola" ou "portão azul".
+- **Numeração de venda separada para delivery:** as vendas de delivery têm uma sequência de números própria.
+- **Impressão do pedido de integração delivery:** em **Selecionar**, escolha a impressora dos pedidos que chegam por aplicativos de delivery integrados. Só funciona se a integração estiver configurada para **aceitar os pedidos automaticamente**.
 
 [Imagem: Menu Modos de pedidos destacado e a chave Configurações de delivery no Ponto de Venda ligada]
 
-## Escolha a taxa de entrega e os tempos
+## Escolha como cobrar a entrega
 
-- **Taxa de Entrega:** escolha **Taxa por bairro**, com um valor para cada bairro, ou **Taxa fixa**, o mesmo valor para todos os pedidos. Na taxa fixa, digite o valor no campo **R$**. Exemplo: R$ 5,00.
-- **Painel delivery:** quantos dias de pedidos aparecem no painel e o aviso de impressão dos pedidos agendados.
-- **Limites de Tempo:** em quantos minutos a entrega deve começar e terminar, e em quantos minutos a venda de retirada deve ser finalizada. Servem para alertar atrasos.
+Em **Taxa de Entrega**, escolha uma das formas:
 
-[Imagem: Opções Taxa por bairro e Taxa fixa e o campo de valor da taxa fixa destacados]
+- **Taxa fixa:** o mesmo valor para todos os pedidos. Digite o valor no campo **R$**.
+- **Taxa por bairro:** um valor para cada bairro. Clique em **Configurar bairros** para cadastrar os bairros e as taxas. Em **Defina uma taxa de entrega padrão**, escolha o que cobrar quando o bairro do cliente não está na lista: **Maior valor** (a maior taxa cadastrada) ou **Personalizado** (um valor que você digita, maior que zero).
 
-## Organize os status do delivery
+!!! warning "Confira a taxa de entrega sempre que salvar esta tela"
+    Nos testes, a tela **Modos de pedidos** abriu mostrando **Taxa fixa** mesmo com a taxa por bairro configurada. Ao salvar qualquer outra mudança nessa tela, a cobrança passou para **taxa fixa de R$ 0,00**. Se a sua loja usa taxa por bairro, confira essa parte antes de clicar em **Salvar**. Se ela mudar, fale com o suporte.
 
-Em **Status de delivery** ficam as etapas do pedido: preparo, envio e entrega. As abas **Abertos**, **Fechados** e **Cancelados** separam os status de cada fase.
+[Imagem: Taxa por bairro selecionada, as opções Maior valor e Personalizado e o botão Configurar bairros destacados]
 
-- Cada status tem **Nome**, **Tempo Limite** e **Status Padrão**.
-- **Novo**, **Em preparo** e **Pronto** são do sistema: dá para mudar o nome e o tempo, mas não o status padrão.
-- Para criar uma etapa, clique em **Novo status**. Exemplo: "Saiu para Entrega".
-- As setas do lado esquerdo servem para mudar a ordem. O **x** do lado direito apaga o status; nos status do sistema ele fica cinza.
+## Ajuste o painel, os tempos e as etapas do delivery
+
+- **Painel delivery:** **Limite de dias para exibição do delivery** (quantos dias de pedidos aparecem no painel) e **Aviso de impressão pedidos agendados por hora** (com quantas horas de antecedência o PDV avisa para imprimir um pedido agendado).
+- **Limites de Tempo:** em quantos minutos a entrega deve **começar**, em quantos minutos a venda de **delivery** deve ser finalizada e em quantos minutos a venda de **retirada** deve ser finalizada. Servem para o PDV alertar os atrasos.
+
+Em **Status de delivery** ficam as etapas do pedido, separadas em três abas:
+
+- **Abertos:** **Novo**, **Em preparo** e **Pronto** são do sistema. Você pode mudar o nome e o tempo limite, mas não o **Status Padrão**. Também dá para criar etapas suas, como "Saiu para Entrega".
+- **Fechados:** **Entregue**, que conclui o pedido.
+- **Cancelados:** veja o próximo passo.
+
+Para criar uma etapa, clique em **Novo status**. Aparece uma linha em branco para preencher **Nome**, **Tempo Limite** e **Status Padrão**. As setas do lado esquerdo mudam a ordem, e o **x** apaga a etapa (nas etapas do sistema ele fica cinza).
 
 [Imagem: Abas Abertos, Fechados e Cancelados e o botão Novo status destacados]
+
+## Cadastre os motivos de cancelamento
+
+Na aba **Cancelados**, cada linha é um **motivo de cancelamento** do pedido. Exemplos: "Demora para Entregar", "Cancelado pelo cliente" e "Pedido Errado". Assim você sabe por que os pedidos foram cancelados.
+
+Para criar um motivo, clique em **Novo status**, digite o nome e escolha **Cancelado** em **Status Padrão**.
+
+[Imagem: Aba Cancelados destacada com os motivos Demora para Entregar, Cancelado pelo cliente e Pedido Errado]
 
 ## Configure o atendimento no estabelecimento
 
 Mais abaixo fica **No estabelecimento**, para pedidos feitos e consumidos na loja.
 
-Ligue **Ponto de Venda oferece atendimento de mesa e comandas** se a loja atende em mesas ou com comandas. Logo abaixo aparecem **Mesas**, **Comandas** e a **Taxa de serviço**. Em **Balança**, clique em **Selecionar** para escolher a balança.
+Ligue **Ponto de Venda oferece atendimento de mesa e comandas** se a loja atende em mesas ou com comandas. Logo abaixo aparecem:
+
+- **Mesas** e **Comandas:** as formas de atendimento.
+- **Taxa de serviço:** mostra o percentual configurado. O link leva para a aba **Geral** (passo 2), onde a taxa é ligada e alterada.
+- **Balança:** em **Selecionar**, escolha a balança usada no atendimento.
 
 [Imagem: Chave de atendimento de mesa e comandas ligada, os botões Mesas e Comandas e a Taxa de serviço destacados]
 
@@ -2202,12 +2262,17 @@ Ligue **Ponto de Venda oferece atendimento de mesa e comandas** se a loja atende
 
 Em **Configurações de atendimento no Ponto de Venda**:
 
-- **Tela padrão ao abrir um novo atendimento:** **Mesas** ou **Comanda**.
-- **Modo de seleção do atendente/vendedor:** **Busca e listagem** ou **Teclado para digitar senha**.
-- **Utilizar código de produto no atendimento?** e **Utilizar código de barras no atendimento?:** **Sim** ou **Não**.
-- **Pedir código ao garçom:** **Sim** ou **Não**.
-- **Obrigatório informar motivo de cancelamento de item na comanda:** **Sim** ou **Não**.
-- Marque também, se precisar: exigir o cliente ao iniciar o atendimento, o status "Mesa aguardando liberação", o motivo para cancelar a comanda, imprimir produtos com valor zerado e **Imprimir resumo ao fechar conta**. Em **Ponto de impressão do resumo da conta**, clique em **Selecionar** e escolha a impressora.
+- **Tela padrão ao abrir um novo atendimento:** o PDV abre direto na tela de **Mesas** ou de **Comanda**. Escolha a que a loja mais usa.
+- **Modo de seleção do atendente/vendedor:** **Busca e listagem** (o garçom é escolhido numa lista) ou **Teclado para digitar senha** (o garçom digita a senha dele).
+- **Utilizar código de produto no atendimento?:** **Sim** para lançar itens digitando o código do produto.
+- **Utilizar código de barras no atendimento?:** **Sim** para lançar itens pelo leitor de código de barras.
+- **Pedir código ao garçom:** **Sim** para o PDV pedir o código do garçom no atendimento.
+- **Obrigatório informar motivo de cancelamento de item na comanda:** **Sim** para exigir o motivo ao tirar um item.
+- **Obrigatório selecionar cliente ao iniciar atendimento:** a mesa ou comanda só abre com um cliente escolhido.
+- **Habilitar status de "Mesa aguardando liberação":** ativa esse status para as mesas.
+- **Obrigatório informar motivo de cancelamento de comanda.**
+- **Imprimir produtos com valor zerado:** itens de R$ 0,00 (como um adicional grátis) também saem na impressão. Já vem marcado.
+- **Imprimir resumo ao fechar conta:** imprime o resumo da conta para o cliente conferir. Em **Ponto de impressão do resumo da conta**, clique em **Selecionar** e escolha a impressora.
 
 Clique em **Salvar** no rodapé.
 
@@ -2222,18 +2287,24 @@ Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações
 ??? question "Digitei 10 na taxa de serviço e apareceu 0,10"
     O campo preenche da direita para a esquerda. Apague e digite **1000** para ter **10,00**.
 
+??? question "A taxa de entrega por bairro virou taxa fixa"
+    Isso aconteceu nos nossos testes ao salvar outras mudanças na tela **Modos de pedidos**. Fale com o suporte para corrigir e, enquanto isso, confira a **Taxa de Entrega** antes de clicar em **Salvar**.
+
+??? question "Apaguei um tempo limite e ele voltou"
+    Nos testes, apagar o número de **Limites de Tempo** ou do **Painel delivery** não limpou o valor salvo. Se precisar tirar um limite, fale com o suporte.
+
+??? question "As opções de crediário na aba Segurança estão cinza"
+    Elas só funcionam com o crediário ligado. Primeiro ligue o crediário em **Ponto de venda** → **Configurações** → **Crediário**.
+
 ??? question "Mudei uma opção e quero voltar atrás"
-    Se ainda não salvou, clique em **Descartar alterações** no rodapé. Se já salvou, desmarque a opção e clique em **Salvar** de novo.
+    Se ainda não salvou, clique em **Descartar alterações** no rodapé. Se já salvou, mude a opção de volta e clique em **Salvar** de novo.
 
 ??? question "A lista de impressoras está vazia"
     Nenhuma impressora foi cadastrada ainda. Cadastre a impressora em **Dispositivos** e volte a esta tela.
 
-??? question "Não sei qual modelo de fechamento escolher"
-    O **Dinâmico por método de pagamento** já vem marcado e mostra as formas de pagamento que o caixa usou. Na dúvida, mantenha esse.
+**Relacionados:** [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como cadastrar formas de pagamento](../financas/formas-de-pagamento.md) · [Como escolher o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
 
-**Relacionados:** [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como escolher o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md) · [Como cadastrar formas de pagamento](../financas/formas-de-pagamento.md)
-
-Palavras-chave: configurações do pdv terminal de vendas caixa taxa de serviço 10% garçom gorjeta desconto sangria retirada depósito gaveta senha abandono de venda fechamento de caixa crédito de cliente delivery entrega taxa de entrega taxa por bairro taxa fixa entregador status do pedido mesas comandas atendimento balança código de barras
+Palavras-chave: configurações do pdv terminal de vendas caixa editar preço quantidade vendedor nome do cliente autorização cartão cpf na nota cancelamento tempo legal numeração aleatória histórico taxa de serviço 10% garçom balança código de barras etiqueta sangria reforço retirada depósito alerta bloquear pdv desconto máximo categoria de cliente senha de segurança senha de gerência abandono de venda gaveta automática fechamento de caixa aprovação modelo de fechamento bandeira transferência automática troco fechamento às cegas crédito de cliente fiado saldo negativo delivery entregador ddd observações numeração separada integração ifood taxa de entrega taxa por bairro taxa fixa configurar bairros painel delivery agendado tempo limite status do pedido motivo de cancelamento mesas comandas atendimento tela padrão senha do garçom resumo da conta
 
 ---
 Código: 07.01 | Módulo: Finanças | Tela no sistema: /dashboard/finance/bank-accounts
