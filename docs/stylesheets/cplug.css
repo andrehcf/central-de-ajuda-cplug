@@ -1,0 +1,170 @@
+/* Identidade visual CPlug (Manual de Identidade): Poppins, azul claro #5AACE4,
+   apoio azul #3F8FD2 / verde #30F6A9 / cinza #858585, gradiente azul -> verde. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+:root {
+  --cplug-azul-claro: #5AACE4;
+  --cplug-azul: #3F8FD2;
+  --cplug-verde: #30F6A9;
+  --cplug-cinza: #858585;
+  --cplug-gradiente: linear-gradient(90deg, #3F8FD2 0%, #22c7c9 55%, #30F6A9 100%);
+  --md-text-font: "Poppins";
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #f5f8fb;
+  --md-primary-bg-color: #0b0f14;
+  --md-primary-bg-color--light: #5b6573;
+  --md-accent-fg-color: #1b68a6;
+  --md-default-fg-color: #0b0f14;
+  --md-typeset-color: #0b0f14;
+  --md-typeset-a-color: #1b68a6; /* azul escurecido: contraste 4.5:1 no branco */
+  --md-footer-bg-color: #000000;
+  --md-footer-bg-color--dark: #000000;
+  --cplug-superficie: #f5f8fb;
+  --cplug-borda: #e3e8ee;
+  --cplug-card: #ffffff;
+  --cplug-muted: #5b6573;
+}
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+  --md-default-bg-color: #07090c;
+  --md-primary-fg-color: #07090c;
+  --md-primary-fg-color--dark: #07090c;
+  --md-primary-bg-color: #f2f5f8;
+  --md-primary-bg-color--light: #9aa6b4;
+  --md-accent-fg-color: #7cc2f0;
+  --md-typeset-a-color: #7cc2f0;
+  --md-footer-bg-color: #000000;
+  --md-footer-bg-color--dark: #000000;
+  --cplug-superficie: #0e1319;
+  --cplug-borda: #1f2a36;
+  --cplug-card: #111821;
+  --cplug-muted: #9aa6b4;
+}
+
+body { -webkit-font-smoothing: antialiased; }
+.md-typeset { font-size: .8rem; line-height: 1.7; }
+
+/* Cabeçalho: branco com a logo positiva; escuro com a negativa */
+.md-header { border-bottom: 1px solid var(--cplug-borda); box-shadow: none; }
+.md-header__button.md-logo { padding: .3rem .4rem; }
+.md-header__button.md-logo img { height: 1.7rem; }
+[data-md-color-scheme="slate"] .md-header__button.md-logo img { content: url("../assets/logo-cplug-negativa.png"); }
+.md-header__title { font-weight: 500; }
+.md-header__topic:first-child { position: relative; padding-left: .9rem; }
+.md-header__topic:first-child::before {
+  content: ""; position: absolute; left: 0; top: 50%; translate: 0 -50%;
+  width: 2px; height: 1.3rem; border-radius: 2px; background: var(--cplug-gradiente);
+}
+.md-search__form { border-radius: .6rem; background: var(--cplug-superficie); }
+
+/* Títulos */
+.md-typeset h1 { font-weight: 700; letter-spacing: -.02em; color: var(--md-default-fg-color); margin-bottom: .6em; }
+.md-typeset h2 { font-weight: 600; }
+.md-typeset h3 { font-weight: 600; }
+
+/* Selo do código do manual (03.04) e linha de informações */
+.cplug-selo {
+  display: inline-flex; align-items: center; height: 1.3rem; padding: 0 .65rem;
+  border-radius: 999px; background: var(--cplug-gradiente); color: #000;
+  font-weight: 700; font-size: .6rem; letter-spacing: .04em;
+}
+.cplug-meta { display: flex; flex-wrap: wrap; gap: 1rem; color: var(--cplug-muted); font-size: .7rem; margin: -.6rem 0 1.4rem; }
+
+/* Passos numerados: cada h2 "Passo" vira um círculo com gradiente */
+.md-typeset .passos { counter-reset: passo; }
+.md-typeset .passos h2 { counter-increment: passo; display: flex; align-items: center; gap: .7rem; margin-top: 2.2em; }
+.md-typeset .passos h2::before {
+  content: counter(passo); flex: none; display: grid; place-items: center;
+  width: 2rem; height: 2rem; border-radius: 50%; background: var(--cplug-gradiente);
+  color: #000; font-size: .8rem; font-weight: 700;
+}
+.md-typeset img { border-radius: .6rem; border: 1px solid var(--cplug-borda); box-shadow: 0 4px 16px rgba(11,15,20,.06); }
+.md-typeset .md-logo img, .md-typeset .sem-borda img { border: 0; box-shadow: none; }
+
+/* Quadros (admonitions) nas cores da marca */
+.md-typeset .admonition, .md-typeset details { border-radius: .7rem; border-width: 1px; font-size: .75rem; box-shadow: none; }
+.md-typeset .admonition.info, .md-typeset details.info { border-color: var(--cplug-azul-claro); }
+.md-typeset .info > .admonition-title, .md-typeset .info > summary { background-color: rgba(90,172,228,.12); }
+.md-typeset .info > .admonition-title::before, .md-typeset .info > summary::before { background-color: var(--cplug-azul); }
+.md-typeset .admonition.success, .md-typeset details.success { border-color: #30d995; }
+.md-typeset .success > .admonition-title, .md-typeset .success > summary { background-color: rgba(48,246,169,.14); }
+.md-typeset .success > .admonition-title::before, .md-typeset .success > summary::before { background-color: #0f9d63; }
+.md-typeset details.question { border-color: var(--cplug-borda); }
+.md-typeset .question > summary { background-color: var(--cplug-superficie); }
+.md-typeset .question > summary::before { background-color: var(--cplug-cinza); }
+
+/* Palavras que o cliente usa: entram na busca mas não aparecem */
+.palavras-chave { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* Lista de manuais nas páginas de módulo */
+.md-typeset .cplug-lista { display: grid; gap: .5rem; margin: 1rem 0; }
+.md-typeset .cplug-lista a {
+  display: flex; align-items: center; gap: .8rem; padding: .7rem .9rem;
+  border: 1px solid var(--cplug-borda); border-radius: .6rem; background: var(--cplug-card);
+  color: var(--md-default-fg-color); font-weight: 500; margin-bottom: .5rem;
+}
+.md-typeset .cplug-lista a:hover { border-color: var(--cplug-azul-claro); }
+.md-typeset .cplug-codigo {
+  flex: none; border: 1px solid var(--cplug-borda); border-radius: 999px; padding: 0 .5rem;
+  font-size: .6rem; color: var(--cplug-muted);
+}
+
+/* Página inicial */
+.cplug-gradiente-texto { background: var(--cplug-gradiente); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cplug-hero {
+  position: relative; overflow: hidden; text-align: center; padding: 3.2rem .8rem 2.6rem;
+  background:
+    radial-gradient(60% 60% at 50% 120%, rgba(48,246,169,.18), transparent 70%),
+    radial-gradient(45% 50% at 15% 110%, rgba(63,143,210,.18), transparent 70%),
+    var(--cplug-superficie);
+  border-bottom: 1px solid var(--cplug-borda);
+}
+.cplug-hero .md-grid { max-width: 38rem; }
+.cplug-ola { color: var(--cplug-muted); font-weight: 500; margin: 0 0 .3rem; }
+.cplug-hero h1 { font-weight: 900; font-size: clamp(1.9rem, 6vw, 2.9rem); line-height: 1.08; letter-spacing: -.02em; margin: 0 0 .7rem; color: var(--md-default-fg-color); }
+.cplug-sub { color: var(--cplug-muted); margin: 0 auto 1.4rem; max-width: 27rem; font-size: .85rem; }
+.cplug-busca {
+  display: flex; align-items: center; gap: .6rem; cursor: text; text-align: left;
+  height: 3.2rem; padding: 0 1rem; border-radius: .9rem;
+  background: var(--cplug-card); border: 2px solid var(--cplug-borda);
+  color: var(--cplug-muted); font-size: .85rem;
+  box-shadow: 0 4px 16px rgba(11,15,20,.06); transition: border-color .15s, box-shadow .15s;
+}
+.cplug-busca:hover { border-color: var(--cplug-azul-claro); box-shadow: 0 0 0 4px rgba(90,172,228,.18); }
+.cplug-busca svg { width: 1.2rem; fill: currentColor; flex: none; }
+.cplug-bloco { margin-top: 1.6rem; }
+.md-typeset .cplug-bloco h2, .md-typeset .cplug-suporte h2 { margin: 0 0 .2rem; font-weight: 700; }
+.md-typeset .cplug-desc { color: var(--cplug-muted); margin: 0 0 1rem; }
+.cplug-trilha { display: grid; gap: .7rem; grid-template-columns: 1fr; }
+@media (min-width: 45em) { .cplug-trilha { grid-template-columns: repeat(4, 1fr); } }
+.md-typeset .cplug-etapa, .md-typeset .cplug-modulo {
+  display: flex; flex-direction: column; gap: .2rem; padding: 1rem;
+  border: 1px solid var(--cplug-borda); border-radius: .8rem; background: var(--cplug-card);
+  color: var(--md-default-fg-color); transition: transform .2s, box-shadow .2s;
+}
+.md-typeset a.cplug-etapa:hover, .md-typeset a.cplug-modulo:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(11,15,20,.10); }
+.md-typeset .cplug-etapa span:last-child, .md-typeset .cplug-modulo span span { color: var(--cplug-muted); font-size: .7rem; line-height: 1.5; }
+.cplug-num { font-weight: 900; font-size: 1.6rem; line-height: 1; }
+.cplug-breve { opacity: .6; }
+.cplug-modulos { display: grid; gap: .7rem; grid-template-columns: 1fr; }
+@media (min-width: 45em) { .cplug-modulos { grid-template-columns: repeat(2, 1fr); } }
+.md-typeset .cplug-modulo { flex-direction: row; align-items: flex-start; gap: .8rem; }
+.md-typeset .cplug-modulo > span:last-child { display: flex; flex-direction: column; gap: .1rem; }
+.md-typeset .cplug-modulo em { font-style: normal; font-size: .6rem; color: var(--cplug-muted); border: 1px solid var(--cplug-borda); border-radius: 999px; padding: 0 .5rem; align-self: flex-start; margin-top: .3rem; }
+.cplug-barra { width: 2px; align-self: stretch; border-radius: 2px; background: var(--cplug-gradiente); }
+.md-typeset .cplug-em-breve { margin-top: 1rem; font-size: .7rem; }
+.cplug-suporte {
+  margin-top: 2.4rem; padding: 1.6rem; border-radius: 1.1rem; background: #000; color: #fff;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.md-typeset .cplug-suporte h2 { color: #fff; }
+.md-typeset .cplug-suporte p { margin: 0; color: #c4ccd6; }
+.md-typeset .md-button--primary { background: var(--cplug-azul-claro); border-color: var(--cplug-azul-claro); color: #000; border-radius: 999px; }
+.md-typeset .md-button--primary:hover { background: #7bbdec; border-color: #7bbdec; color: #000; }
+
+/* Rodapé preto, como no manual de identidade */
+.md-footer-meta { background: #000; }

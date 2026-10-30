@@ -1,0 +1,82 @@
+site_name: Central de Ajuda CPlug
+site_description: Manuais passo a passo para usar o sistema CPlug.
+site_url: https://andrehcf.github.io/central-de-ajuda-cplug/
+repo_url: https://github.com/andrehcf/central-de-ajuda-cplug
+repo_name: central-de-ajuda-cplug
+edit_uri: edit/main/docs/
+copyright: © 2026 CPlug · Central de Ajuda
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: pt-BR
+  logo: assets/logo-cplug.png
+  favicon: assets/favicon.png
+  font: false
+  icon:
+    edit: material/pencil-outline
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Mudar para o modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para o modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+
+plugins:
+  - search:
+      lang: pt
+
+hooks:
+  - hooks/llms.py
+
+extra_css:
+  - stylesheets/cplug.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: false
+      title: Nesta página
+
+nav:
+  - Início: index.md
+  - 02. Clientes:
+      - clientes/index.md
+      - clientes/cadastrar-cliente.md
+  - 03. Produtos:
+      - produtos/index.md
+      - produtos/cadastrar-categoria.md
+      - produtos/cadastrar-unidade-de-medida.md
+      - produtos/cadastrar-variacoes.md
+      - produtos/cadastrar-produto.md
+      - produtos/cadastrar-produto-com-variacoes.md
+      - produtos/parametros-fiscais.md
+  - 04. Estoque:
+      - estoque/index.md
+      - estoque/importar-nota-de-compra.md
+  - 10. Configurações:
+      - configuracoes/index.md
+      - configuracoes/emissao-de-notas.md

@@ -1,0 +1,6 @@
+.venv/
+site/
+_arquivo/
+prototipo/
+__pycache__/
+.claude/

@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <section class="cplug-hero">
+    <div class="md-grid">
+      <p class="cplug-ola">Olá! Bem-vindo à ajuda da CPlug</p>
+      <h1>Como podemos <span class="cplug-gradiente-texto">ajudar?</span></h1>
+      <p class="cplug-sub">Passo a passo com imagens para usar o sistema, do primeiro cadastro ao fechamento do caixa.</p>
+      <label class="cplug-busca" for="__search">
+        {% include ".icons/material/magnify.svg" %}
+        <span>Digite sua dúvida. Ex.: cadastrar produto</span>
+      </label>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="cplug-bloco">
+    <h2>Comece aqui</h2>
+    <p class="cplug-desc">Cliente novo? Siga esta ordem e você já sai vendendo.</p>
+    <div class="cplug-trilha">
+      <a class="cplug-etapa" href="produtos/cadastrar-categoria/"><span class="cplug-num cplug-gradiente-texto">01.</span><strong>Crie as categorias</strong><span>Bebidas, Lanches, Sobremesas…</span></a>
+      <a class="cplug-etapa" href="produtos/cadastrar-produto/"><span class="cplug-num cplug-gradiente-texto">02.</span><strong>Cadastre os produtos</strong><span>Nome, preço e categoria.</span></a>
+      <a class="cplug-etapa" href="clientes/cadastrar-cliente/"><span class="cplug-num cplug-gradiente-texto">03.</span><strong>Cadastre os clientes</strong><span>Nome e celular já bastam.</span></a>
+      <span class="cplug-etapa cplug-breve"><span class="cplug-num cplug-gradiente-texto">04.</span><strong>Abra o caixa e venda</strong><span>Manual em breve.</span></span>
+    </div>
+  </section>
+
+  <section class="cplug-bloco">
+    <h2>Navegue pelo sistema</h2>
+    <p class="cplug-desc">Os temas seguem a mesma ordem do menu da CPlug.</p>
+    <div class="cplug-modulos">
+      <a class="cplug-modulo" href="clientes/">
+        <span class="cplug-num cplug-gradiente-texto">02.</span><span class="cplug-barra"></span>
+        <span><strong>Clientes</strong><span>Cadastro de clientes</span><em>1 manual</em></span>
+      </a>
+      <a class="cplug-modulo" href="produtos/">
+        <span class="cplug-num cplug-gradiente-texto">03.</span><span class="cplug-barra"></span>
+        <span><strong>Produtos</strong><span>Categorias, variações, produtos e dados fiscais</span><em>6 manuais</em></span>
+      </a>
+      <a class="cplug-modulo" href="estoque/">
+        <span class="cplug-num cplug-gradiente-texto">04.</span><span class="cplug-barra"></span>
+        <span><strong>Estoque</strong><span>Entrada de mercadorias pela nota fiscal de compra (XML)</span><em>1 manual</em></span>
+      </a>
+      <a class="cplug-modulo" href="configuracoes/">
+        <span class="cplug-num cplug-gradiente-texto">10.</span><span class="cplug-barra"></span>
+        <span><strong>Configurações</strong><span>Emissão de notas fiscais: certificado, CSC, série e impostos</span><em>1 manual</em></span>
+      </a>
+    </div>
+    <p class="cplug-desc cplug-em-breve">Em breve: Primeiros passos, Vendas, Ponto de venda, Finanças, Dispositivos e Relatórios.</p>
+  </section>
+
+  <section class="cplug-suporte">
+    <div>
+      <h2>Não achou o que procurava?</h2>
+      <p>Nosso time de suporte responde pelo chat, em horário comercial.</p>
+    </div>
+    <a class="md-button md-button--primary" href="#">Falar com o suporte</a>
+  </section>
+{% endblock %}
