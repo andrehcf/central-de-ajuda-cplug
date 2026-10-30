@@ -4,6 +4,8 @@
 
 ## Manuais
 
+- [01.02 Como trocar de empresa ou loja](https://andrehcf.github.io/central-de-ajuda-cplug/primeiros-passos/trocar-de-empresa/): Escolha em qual empresa, loja ou filial você está trabalhando no sistema - cada uma tem seus próprios dados.
+- [01.03 Como usar o menu do sistema](https://andrehcf.github.io/central-de-ajuda-cplug/primeiros-passos/usar-o-menu/): Conheça a tela inicial da CPlug - menu lateral, busca, troca de loja, ícones do topo, perfil e o tour de boas-vindas.
 - [02.01 Como cadastrar um cliente](https://andrehcf.github.io/central-de-ajuda-cplug/clientes/cadastrar-cliente/): Passo a passo para cadastrar um cliente pessoa física ou jurídica, com os dados que a nota fiscal exige.
 - [03.01 Como cadastrar uma categoria](https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-categoria/): Passo a passo para criar uma categoria de produtos, como Bebidas ou Lanches.
 - [03.02 Como cadastrar uma unidade de medida](https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-unidade-de-medida/): Passo a passo para criar uma unidade de medida nova, como Caixa ou Pacote.
