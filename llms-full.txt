@@ -2251,3 +2251,136 @@ Depois de criar os grupos, configure cada produto: veja [Como configurar os dado
 **Relacionados:** [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
 
 Palavras-chave: emitir nota fiscal nfc-e nf-e cupom fiscal certificado digital a1 pfx senha validade csc token id token qr code série numeração emitente inscrição estadual isento ie crt regime tributário simples nacional mei lucro presumido lucro real regime normal csosn cst icms pis cofins grupo fiscal padrões fiscais homologação produção ambiente sefaz rejeição credenciamento contador xml
+
+---
+Código: 10.08 | Módulo: Configurações | Tela no sistema: /dashboard/settings/fiscal-settings/nature-operations
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/natureza-de-operacao/
+
+# Como configurar a natureza de operação
+
+5 minutos · 5 passos · Atualizado em 30/10/2026
+
+A **natureza de operação** diz que tipo de operação a nota representa: venda, devolução, transferência, remessa... Cada operação pode exigir **outro CFOP** e **outros impostos** do que os do cadastro do produto.
+
+Aqui você cria **regras "De → Para"**: quando a operação é usada, o sistema troca o código do produto ("De") pelo código da operação ("Para").
+
+**Exemplo:** o produto está cadastrado com o CFOP **5102** (venda dentro do estado). Numa **venda para outro estado**, o CFOP certo é **6102**. A natureza "Venda para outro estado" faz essa troca sozinha.
+
+!!! warning "Configuração fiscal avançada"
+    Quais naturezas criar e quais códigos usar é decisão do **contador**. Este manual mostra **onde** e **como** cadastrar.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra a tela
+
+No menu do lado esquerdo, clique em **Configurações → Fiscal → Natureza de Operações**. Se ainda não houver nenhuma, clique em **Nova natureza de operações**.
+
+[Imagem: Tela Naturezas de operações vazia com o botão Nova natureza de operações destacado]
+
+## Preencha as informações gerais
+
+- **Nome:** o nome da operação. Exemplo: "Venda para outro estado".
+- **Descrição (Opcional):** uma explicação curta. Evite símbolos como parênteses: o sistema pode recusar.
+- **Manter Código de Benefício Fiscal na UF nos produtos?:** use **Sim** só se o contador orientar.
+
+## Crie as regras de CFOP
+
+Em **CFOP**:
+
+- **De:** o CFOP que está no cadastro do produto. Exemplo: **5102**.
+- **Para:** o CFOP que deve ir na nota desta operação. Exemplo: **6102**.
+- **ICMS Livre:** **Ambos**, **Sim** ou **Não**, conforme a orientação do contador. No exemplo, **Ambos**.
+
+Para mais uma troca, clique em **Adicionar campo**.
+
+[Imagem: Formulário com Nome, Descrição, a regra de CFOP De 5102 Para 6102, ICMS Livre e o Grupo de ICMS destacados]
+
+## Crie as regras de impostos (se precisar)
+
+Em **Grupo de ICMS** e **Grupo de PIS/COFINS**, faça o mesmo: **De** (o grupo do produto) e **Para** (o grupo desta operação). Deixe em branco se a operação não muda os impostos.
+
+## Salve e confira
+
+Clique em **Salvar**, no canto de baixo, à direita. A natureza aparece na lista com um **código** (001, 002...), o nome e a descrição. Nos **três pontinhos** você pode alterar a natureza depois.
+
+[Imagem: Lista de naturezas com a natureza 001 Venda para outro estado destacada]
+
+
+
+## Exemplos comuns
+
+Só para referência. Confirme os códigos com o contador.
+
+| Operação | CFOP De → Para |
+| --- | --- |
+| Venda para outro estado | 5102 → 6102 |
+| Venda de produto com ST para outro estado | 5405 → 6404 |
+| Devolução de compra ao fornecedor (mesmo estado) | 5102 → 5202 |
+
+## Deu algum problema?
+
+??? question "Apareceu \"Os dados enviados são inválidos\" na descrição"
+    Tire símbolos especiais do texto, como parênteses, e salve de novo.
+
+??? question "A nota saiu com o CFOP do cadastro, sem a troca"
+    Confira se a regra **De** está com o mesmo CFOP do cadastro do produto. Se o produto usa outro CFOP, crie mais uma regra com **Adicionar campo**.
+
+**Relacionados:** [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md) · [Como configurar a emissão de notas fiscais](emissao-de-notas.md)
+
+Palavras-chave: natureza de operação cfop de para troca de cfop venda interestadual 6102 devolução remessa transferência regra fiscal grupo de icms grupo de pis cofins benefício fiscal icms livre
+
+---
+Código: 10.09 | Módulo: Configurações | Tela no sistema: /dashboard/settings/fiscal-settings/type-invoice-pos
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/tipo-de-nota-no-pdv/
+
+# Como definir o tipo de nota emitida no PDV
+
+2 minutos · 3 passos · Atualizado em 30/10/2026
+
+Esta configuração diz ao **caixa (PDV)** qual nota fiscal emitir em cada venda. Pela **Lei 8.846**, a nota deve ser emitida **no momento da venda**, por isso o caixa precisa saber qual modelo usar.
+
+| Modelo | Quando usar |
+| --- | --- |
+| **Modelo 65 - NFC-e** | O cupom fiscal eletrônico, para vendas ao **consumidor final** no balcão. É o mais comum em lanchonetes, restaurantes e lojas. |
+| **Modelo 55 - NF-e** | A nota fiscal eletrônica completa, usada principalmente quando a loja vende para **empresas**. |
+
+!!! warning "Confirme com o contador"
+    O modelo depende do tipo de negócio e do estado. Antes de mudar, confirme com o contador. E lembre: para emitir, a configuração fiscal precisa estar completa. Veja [Como configurar a emissão de notas fiscais](emissao-de-notas.md).
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
+
+
+
+## Abra a tela
+
+No menu do lado esquerdo, clique em **Configurações → Fiscal → Tipo de NF emitida (PDV)**.
+
+A tela mostra o aviso da Lei 8.846, o campo **Tipo de NF emitida pelo PDV** e a opção **ICMS para Consumidor Final**.
+
+[Imagem: Tela Tipo de Nota Fiscal emitida pelo PDV com o aviso da Lei 8.846, o campo Tipo de NF e a opção ICMS para Consumidor Final destacados]
+
+## Escolha o modelo de nota
+
+Clique em **Tipo de NF emitida pelo PDV** e escolha **Modelo 65 - NFC-e** ou **Modelo 55 - NF-e**.
+
+[Imagem: Lista com Modelo 55 - NF-e e Modelo 65 - NFC-e destacada]
+
+## Confira o ICMS para Consumidor Final
+
+A opção **ICMS para Consumidor Final** ativa a tributação de ICMS nas vendas para consumidor final, incluindo o cálculo do **Difal** em vendas para outro estado. Ligue ou desligue conforme a orientação do contador.
+
+
+
+## Deu algum problema?
+
+??? question "O caixa não emite nota"
+    Confira se o **Tipo de NF emitida pelo PDV** está escolhido (não pode ficar em "Selecione...") e se a configuração fiscal da empresa está completa (certificado, CSC, série e grupos de impostos).
+
+??? question "Escolhi NFC-e e o cliente pediu nota com CNPJ"
+    Venda para empresa que precisa de nota completa: emita uma **NF-e**. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
+
+**Relacionados:** [Como configurar a emissão de notas fiscais](emissao-de-notas.md) · [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md)
+
+Palavras-chave: tipo de nota pdv caixa nfc-e modelo 65 nf-e modelo 55 cupom fiscal nota no caixa lei 8846 icms consumidor final difal configuração fiscal
