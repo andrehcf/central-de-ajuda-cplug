@@ -81,6 +81,10 @@ nav:
   - 04. Estoque:
       - estoque/index.md
       - estoque/importar-nota-de-compra.md
+  - 07. Finanças:
+      - financas/index.md
+      - financas/conta-bancaria.md
+      - financas/formas-de-pagamento.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/emissao-de-notas.md

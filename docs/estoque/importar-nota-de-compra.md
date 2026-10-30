@@ -155,7 +155,7 @@ Clique em **Finalizar**.
     ![Aviso Nota fiscal já importada com o botão Sim, importar novamente destacado](../imagens/04.07/04-ja-importada.png){ loading=lazy }
 
 ??? question "Não consigo finalizar: \"O preenchimento é obrigatório\" na conta bancária"
-    Escolha uma **Conta bancária** no pagamento. Se a lista estiver vazia, cadastre uma conta bancária primeiro em **Finanças**.
+    Escolha uma **Conta bancária** no pagamento. Se a lista estiver vazia, cadastre uma conta primeiro: veja [Como cadastrar uma conta bancária](../financas/conta-bancaria.md).
 
 ??? question "O produto ficou duplicado no cadastro"
     Isso acontece quando o produto já existia e foi escolhido **Criar novo produto**. Nas próximas notas, use **Vincular produto existente**.
