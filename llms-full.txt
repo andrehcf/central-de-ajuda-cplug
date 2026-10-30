@@ -1412,7 +1412,7 @@ Nos **três pontinhos** da nota autorizada você tem:
 - **Visualizar DANFE** e **Download DANFE:** o documento impresso da nota, para entregar ao cliente.
 - **Download do XML NF-e:** o arquivo da nota. Envie ao cliente quando ele pedir (empresas precisam do XML).
 - **Carta de correção:** corrige pequenos erros de texto, sem mudar valores, impostos ou quem vendeu e comprou.
-- **Cancelar NF-e:** veja [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md).
+- **Cancelar NF-e:** veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md).
 
 [Imagem: Menu da nota autorizada com Carta de correção, DANFE, XML e Cancelar NF-e destacados]
 
@@ -1427,7 +1427,7 @@ Nos **três pontinhos** da nota autorizada você tem:
 ??? question "Apareceu o aviso de Homologação"
     A empresa está no ambiente de **teste**: as notas não têm valor fiscal. Para emitir de verdade, o **Ambiente de Geração** precisa estar em **Produção**. Veja [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md).
 
-**Relacionados:** [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
+**Relacionados:** [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
 
 Palavras-chave: emitir nf-e nota fiscal eletrônica modelo 55 emissão manual nota de venda transmitir sefaz pendente transmitido autorizada danfe xml natureza de operação cfop 5102 5405 frete sem frete forma de pagamento à vista à prazo fatura homologação produção
 
@@ -1437,7 +1437,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/vendas/nota-rejeita
 
 # Como resolver uma nota fiscal rejeitada
 
-5 minutos · 3 passos · Atualizado em 30/10/2026
+5 minutos · 3 passos e um exemplo · Atualizado em 30/10/2026
 
 Quando a Sefaz **recusa** uma nota, ela aparece com o status **Falhou**. A nota **não foi autorizada**: não tem valor fiscal e precisa ser corrigida e transmitida de novo.
 
@@ -1466,24 +1466,46 @@ Use a tabela de rejeições comuns, mais abaixo, para entender o que corrigir. E
 
 Se o erro estava no cadastro (cliente, produto ou empresa), **corrija o cadastro primeiro**.
 
-Depois, nos **três pontinhos** da nota, clique em **Editar NF-e** para abrir a nota e acertar o que a mensagem indica. Salve.
+Depois, nos **três pontinhos** da nota, clique em **Editar NF-e**.
 
 [Imagem: Menu da nota com falha com Transmitir, Inutilizar, Editar e Refazer NF-e destacados]
 
+Abre a tela **Editar NFe manual**, com a nota preenchida e o **mesmo número**. Acerte o que a mensagem indica e clique em **Salvar**, no fim da tela. Aparece a mensagem de que a NF-e foi atualizada com sucesso.
+
+[Imagem: Tela Editar NFe manual com o título e o número da nota destacados]
+
 ## Transmita de novo
 
-Nos **três pontinhos**, clique em **Transmitir NF-e**. Se a correção resolveu, o status muda para **Transmitido**.
+Volte para **Vendas → NF-e**. Nos **três pontinhos** da nota, clique em **Transmitir NF-e**. Se a correção resolveu, o status muda para **Transmitido**.
+
+[Imagem: Nota corrigida com o status Transmitido destacado]
 
 
+
+## Exemplo completo: Rejeição 902
+
+1. A nota saiu com uma **fatura** de valor original R$ 10,00 e valor líquido R$ 5,00, sem desconto. A Sefaz recusou: **Rejeição 902 - Valor Líquido da Fatura difere do Valor Original menos o Valor do Desconto**.
+
+    [Imagem: Nota com status Falhou e a mensagem da Rejeição 902 destacadas]
+
+2. Em **Editar NF-e**, os **Dados da fatura** foram apagados (a fatura é opcional, e a venda era à vista). A nota foi salva.
+
+    [Imagem: Dados da fatura em branco depois da correção destacados]
+
+3. Em **Transmitir NF-e**, a nota foi **autorizada** (status Transmitido).
+
+!!! info "E o Refazer NF-e?"
+    A opção **Refazer NF-e** aparece em notas com falha ou pendentes. Para corrigir uma nota rejeitada, o caminho deste manual é **Editar NF-e** e depois **Transmitir NF-e**.
 
 !!! warning "Não vai corrigir? Inutilize o número"
-    Se você desistiu dessa nota (por exemplo, emitiu outra no lugar), **inutilize o número** dela. Assim a Sefaz sabe que esse número foi pulado de propósito. Veja [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md).
+    Se você desistiu dessa nota (por exemplo, emitiu outra no lugar), **inutilize o número** dela. Assim a Sefaz sabe que esse número foi pulado de propósito. Veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md).
 
 ## Rejeições mais comuns
 
 | Mensagem (resumida) | O que fazer |
 | --- | --- |
 | **Soma do valor das parcelas difere do Valor Líquido da Fatura** (851) | Acerte os **Dados da fatura** para bater com a soma das parcelas do pagamento, ou deixe a fatura em branco. |
+| **Valor Líquido da Fatura difere do Valor Original menos o Valor do Desconto** (902) | Na fatura, o **valor líquido** precisa ser o **valor original menos o desconto**. Corrija ou deixe a fatura em branco. |
 | **Duplicidade de NF-e** | O número já foi usado. Confira a **série e o número atual** em Configurações → Fiscal → Série de NF. |
 | **CSOSN incompatível com o regime** / **CST incompatível** | O **regime tributário** da empresa não combina com o código de ICMS do produto. Simples Nacional usa CSOSN (3 números); regime normal usa CST (2 números). |
 | **IE do destinatário inválida** ou **não informada** | Confira a **Inscrição estadual** e o **Indicador de IE** no cadastro do cliente. |
@@ -1502,7 +1524,7 @@ Quem define os códigos fiscais corretos (NCM, CFOP, CST/CSOSN) é o **contador*
 ??? question "A rejeição fala em certificado ou em serviço indisponível"
     No topo da tela **NF-e de Saída**, confira se os serviços da Sefaz estão **em operação** e se o **certificado** está válido. Se a Sefaz estiver fora do ar, tente de novo mais tarde.
 
-**Relacionados:** [Como emitir uma NF-e de venda](emitir-nfe.md) · [Como cancelar ou inutilizar uma nota fiscal](cancelar-nota.md) · [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md)
+**Relacionados:** [Como emitir uma NF-e de venda](emitir-nfe.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md) · [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md)
 
 Palavras-chave: nota rejeitada rejeição falhou nota recusada sefaz erro na nota 851 parcelas fatura duplicidade csosn cst incompatível ie inválida ncm inexistente cfop certificado vencido corrigir nota transmitir de novo editar nf-e
 
@@ -1510,7 +1532,7 @@ Palavras-chave: nota rejeitada rejeição falhou nota recusada sefaz erro na not
 Código: 05.08 | Módulo: Vendas | Tela no sistema: /dashboard/sale/outbound-invoices
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/vendas/cancelar-nota/
 
-# Como cancelar ou inutilizar uma nota fiscal
+# Como cancelar, inutilizar ou corrigir uma nota fiscal
 
 3 minutos · 6 passos · Atualizado em 30/10/2026
 
@@ -1571,8 +1593,31 @@ A nota passa para o status **Inutilizado**.
 
 
 
-!!! tip "Erro pequeno de texto? Use a carta de correção"
-    Se a nota foi autorizada com um erro **só de texto** (por exemplo, um endereço com letra trocada), não precisa cancelar: use **Carta de correção** nos três pontinhos. A carta **não** corrige valores, impostos, quantidades, nem quem vendeu e quem comprou.
+## Erro pequeno de texto? Use a carta de correção
+
+Se a nota foi **autorizada** com um erro **só de texto** (por exemplo, um endereço com letra trocada ou uma informação complementar), não precisa cancelar: emita uma **Carta de correção (CC-e)**.
+
+!!! warning "O que a carta de correção não corrige"
+    Valores, impostos, quantidades, datas, CFOP, e os dados de quem vendeu e de quem comprou (CNPJ, CPF, razão social). Nesses casos, cancele a nota e emita outra.
+
+1. Nos **três pontinhos** da nota autorizada, clique em **Carta de correção**.
+2. Em **Justificativa para correção**, escreva a correção completa, com **15 a 255 caracteres**. Exemplo: "Onde se lê X, leia-se Y".
+3. Clique em **Confirmar correção**.
+
+[Imagem: Janela Carta de correção com o aviso de que a carta sobrescreve as outras, o texto da correção e Confirmar correção destacados]
+
+!!! info "Cada carta nova substitui a anterior"
+    A Sefaz considera só a **última** carta de correção. Se precisar corrigir mais alguma coisa, a nova carta deve repetir **todas** as correções, inclusive as da carta anterior.
+
+Ao abrir de novo a **Carta de correção**, a lista **Cartas geradas** mostra a **sequência** e o **protocolo** da Sefaz, com botões para ver e baixar a carta.
+
+[Imagem: Lista Cartas geradas com a sequência 1 e o protocolo destacados]
+
+## Arquivos da nota cancelada
+
+Uma nota cancelada continua com a **DANFE** e o **XML** disponíveis, e ganha a opção **Download XML cancelado**: é o comprovante do cancelamento na Sefaz. Envie esse arquivo ao contador junto com os XMLs do mês.
+
+[Imagem: Menu da nota cancelada com Download XML cancelado e o status Cancelado destacados]
 
 ## Deu algum problema?
 
