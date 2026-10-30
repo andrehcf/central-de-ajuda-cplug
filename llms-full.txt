@@ -1104,6 +1104,189 @@ Clique em **Salvar**, no canto de baixo, à direita. Aparece a mensagem **Produt
 Palavras-chave: adicionais adicional extra queijo extra bacon extra complemento acréscimo sugestões sugestão venda cruzada recomendação levar junto quantidade mínima quantidade máxima cobrar a partir de
 
 ---
+Código: 04.01 | Módulo: Estoque | Tela no sistema: /dashboard/stock/stocks
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/entrada-de-estoque/
+
+# Como dar entrada no estoque
+
+5 minutos · 5 passos · Atualizado em 30/10/2026
+
+Use este manual para lançar mercadorias no estoque **sem nota fiscal de compra**. Exemplos:
+
+- o **estoque inicial**, quando a loja começa a usar o sistema;
+- um **ajuste** depois de achar mercadoria a mais;
+- uma **devolução** de cliente.
+
+!!! tip "Comprou com nota fiscal?"
+    Se a mercadoria veio com nota do fornecedor, não lance à mão: **importe o XML da nota**. Assim entram também o custo, o fornecedor e a conta a pagar. Veja [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md).
+
+Neste exemplo damos o **estoque inicial** dos ingredientes do X-Burger: 100 pães, 100 hambúrgueres, 200 fatias de queijo e 100 porções de molho.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra o registro de entrada
+
+No menu do lado esquerdo, clique em **Estoque** e depois em **Estoque**. Na linha do estoque (por exemplo, "Estoque 1"), clique nos **três pontinhos** e depois em **Registrar entrada**.
+
+[Imagem: Lista de estoques com o menu aberto e a opção Registrar entrada destacada]
+
+No mesmo menu ficam **Registrar saída**, **Balanço** (o saldo) e **Inventários** (a contagem).
+
+## Escolha o tipo, a categoria e a data
+
+- **Tipo de movimentação:** **Entrada de estoque**. (Para tirar mercadoria, use **Saída de estoque**.)
+- **Categoria de movimentação:** o motivo da entrada. As mais usadas:
+    - **Quant. Inicial:** o estoque inicial da loja;
+    - **Ajustes de Estoque:** correções do dia a dia;
+    - **Compra:** compra sem nota fiscal;
+    - **Devolução:** mercadoria que voltou de um cliente;
+    - **Produção:** produto feito na própria loja.
+- **Data da operação:** vem com a data de hoje.
+
+[Imagem: Tipo de movimentação, lista de categorias com Quant. Inicial e Data da operação destacados]
+
+## Adicione os produtos
+
+Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produto. Repita para cada produto. Para cada um, preencha:
+
+- **Quantidade:** quanto está entrando. A coluna **Saldo** mostra quanto havia antes.
+- **Preço de custo:** quanto custou cada unidade. Esse valor é usado no cálculo do custo e do lucro.
+
+[Imagem: Pesquisa de produtos e os quatro insumos com Quantidade e Preço de custo preenchidos, e o botão Salvar destacados]
+
+## Salve a entrada
+
+Clique em **Salvar**, no canto de baixo, à direita. O sistema volta para a lista de estoques.
+
+## Confira o saldo
+
+Nos **três pontinhos** do estoque, clique em **Balanço**. Os produtos aparecem com a nova quantidade.
+
+[Imagem: Balanço do estoque com os saldos dos insumos atualizados destacados]
+
+
+
+!!! warning "Estoque inicial é o primeiro passo do inventário"
+    O inventário só consegue ajustar produtos que **já tiveram alguma movimentação**. Por isso, ao começar a usar o sistema, dê sempre a **entrada inicial** (categoria **Quant. Inicial**) antes de fazer inventários. Veja [Como fazer um inventário](inventario.md).
+
+## Deu algum problema?
+
+??? question "O produto não aparece na pesquisa"
+    Confira se ele está cadastrado na **mesma loja** e com **Controlar quantidade em estoque** ligado no cadastro do produto.
+
+??? question "Lancei a quantidade errada"
+    Abra o histórico do produto (Balanço → três pontinhos → **Movimentações**) e cancele o lançamento errado. Depois, lance de novo. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+
+??? question "Quero tirar mercadoria (perda, quebra, consumo)"
+    Use **Registrar saída**, no mesmo menu do estoque, e escolha a categoria que explica o motivo.
+
+**Relacionados:** [Como fazer um inventário](inventario.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md) · [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md)
+
+Palavras-chave: entrada de estoque estoque inicial quantidade inicial registrar entrada registrar saída ajuste de estoque movimentação devolução produção preço de custo lançar estoque sem nota categoria de movimentação
+
+---
+Código: 04.02 | Módulo: Estoque | Tela no sistema: /dashboard/stock/stocks
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/inventario/
+
+# Como fazer um inventário
+
+10 minutos · 7 passos · Atualizado em 30/10/2026
+
+O **inventário** é a contagem do que existe de verdade na loja. Você informa a quantidade contada, o sistema mostra a **diferença** em relação ao saldo e, ao finalizar, **ajusta o estoque** para a quantidade contada.
+
+Faça inventários com frequência (por exemplo, no fim do mês) para manter o estoque certo.
+
+!!! danger "O inventário só ajusta produtos que já tiveram movimentação"
+    Se um produto **nunca teve entrada** no estoque, o inventário é finalizado, mas **o saldo dele não muda**. Antes do primeiro inventário, dê a **entrada inicial** desses produtos: veja [Como dar entrada no estoque](entrada-de-estoque.md).
+
+Neste exemplo contamos o **Pão de hambúrguer**: o sistema dizia 100, mas na prateleira havia 95.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra os inventários do estoque
+
+No menu do lado esquerdo, clique em **Estoque** e depois em **Estoque**. Na linha do estoque, clique nos **três pontinhos** e depois em **Inventários**.
+
+[Imagem: Menu do estoque com a opção Inventários destacada]
+
+A tela mostra os inventários **Em aberto** (em contagem) e os **Finalizados**. Clique em **Novo inventário**.
+
+[Imagem: Tela Inventário com as abas Em aberto e Finalizados e o botão Novo inventário destacados]
+
+## Dê um nome ao inventário
+
+Digite um nome que ajude a encontrar depois. Exemplo: "Contagem de insumos - outubro". Clique em **Confirmar**.
+
+[Imagem: Janela Criar novo inventário com o nome e o botão Confirmar destacados]
+
+## Abra o inventário
+
+Na lista **Em aberto**, clique nos **três pontinhos** do inventário e depois em **Produtos**.
+
+[Imagem: Menu do inventário com a opção Produtos destacada]
+
+Leia o aviso amarelo no topo e clique em **Adicionar produto**.
+
+[Imagem: Aviso sobre produtos com movimentação e o botão Adicionar produto destacados]
+
+## Escolha os produtos que vai contar
+
+Use a busca ou a categoria para filtrar, marque a caixinha de cada produto e clique em **Adicionar ao inventário**, no rodapé.
+
+[Imagem: Busca de produtos e a caixinha do Pão de hambúrguer destacadas]
+
+Se forem muitos produtos, use **Importar produtos** (planilha) ou **Exportar produtos** para imprimir a lista e contar no papel.
+
+## Informe a quantidade contada
+
+Para cada produto:
+
+- **Saldo:** quanto o sistema diz que tem.
+- **Novo saldo:** quanto você **contou**.
+- **Custo Unitário:** o custo de cada unidade.
+- **Diferença:** calculada sozinha. Negativa quando falta mercadoria; positiva quando sobra.
+- **Atualizar custo:** marque se quiser que o custo informado passe a valer para o produto.
+
+[Imagem: Linha do produto com Saldo 100, Novo saldo 95, Custo, Diferença -5 e os botões Salvar e Finalizar destacados]
+
+Para parar e continuar depois, clique em **Salvar**: o inventário fica em **Em aberto**.
+
+## Finalize o inventário
+
+Quando terminar a contagem, clique em **Finalizar** e confirme. Depois de finalizado, **não dá mais para editar** a contagem. Se ainda não terminou, use **Salvar e finalizar depois**.
+
+[Imagem: Janela Finalizar inventário com as opções Salvar e finalizar depois e Finalizar destacada]
+
+## Confira o resultado
+
+O inventário vai para a aba **Finalizados**, com a data de início e a data final.
+
+[Imagem: Aba Finalizados com o inventário finalizado destacado]
+
+No **Balanço** do estoque, o produto passa a ter o saldo contado (no exemplo, 95). No histórico do produto, o ajuste aparece como uma movimentação da categoria **Ajustes de Estoque**. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+
+
+
+## Deu algum problema?
+
+??? question "Finalizei e o saldo não mudou"
+    O produto provavelmente **nunca teve movimentação** de estoque. Dê a entrada inicial (categoria **Quant. Inicial**) e, se precisar, faça um novo inventário.
+
+??? question "O produto com variações (tamanho, sabor) não aparece para adicionar"
+    Produtos com variações só aparecem no inventário depois da **primeira entrada** no estoque.
+
+??? question "Errei a contagem e já finalizei"
+    O inventário finalizado não pode ser editado. Faça um ajuste com **Registrar entrada** ou **Registrar saída** (categoria Ajustes de Estoque), ou um novo inventário só com esse produto.
+
+**Relacionados:** [Como dar entrada no estoque](entrada-de-estoque.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md)
+
+Palavras-chave: inventário contagem de estoque balanço contar estoque ajuste de estoque novo saldo diferença finalizar inventário estoque físico perda sobra falta
+
+---
 Código: 04.07 | Módulo: Estoque | Tela no sistema: /dashboard/stock/invoices
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/importar-nota-de-compra/
 
@@ -1269,6 +1452,68 @@ Clique em **Finalizar**.
 **Relacionados:** [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md) · [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md)
 
 Palavras-chave: importar xml nota fiscal de compra nf-e de entrada nota de entrada entrada de estoque entrada de mercadoria compra fornecedor danfe arquivo xml preço de custo fator de conversão vincular produto criar produto conta a pagar estoque saldo nota já importada cfop icms pis cofins ncm
+
+---
+Código: 04.08 | Módulo: Estoque | Tela no sistema: /dashboard/stock/stocks
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/saldo-do-estoque/
+
+# Como consultar o saldo e o histórico do estoque
+
+3 minutos · 3 passos · Atualizado em 30/10/2026
+
+O **balanço** mostra quanto há de cada produto no estoque agora. O **histórico** (movimentações) mostra **de onde veio** esse número: cada entrada e cada saída do produto.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve olhar ou clicar.
+
+
+
+## Abra o balanço do estoque
+
+No menu do lado esquerdo, clique em **Estoque** e depois em **Estoque**. Na linha do estoque, clique nos **três pontinhos** e depois em **Balanço**.
+
+A lista mostra o **código**, o **nome** e o **Saldo** de cada produto. Para achar um produto, use a **busca** (nome, código ou SKU). Em **Saldo do estoque**, filtre os produtos pelo saldo.
+
+[Imagem: Balanço do estoque com o filtro de saldo, a busca, a coluna Saldo e os botões Zerar estoque e Nova movimentação destacados]
+
+!!! danger "Cuidado com Zerar estoque"
+    O botão vermelho **Zerar estoque** apaga o saldo de **todos** os produtos desse estoque. Só use com orientação do suporte ou do contador.
+
+## Abra o histórico de um produto
+
+Na linha do produto, clique nos **três pontinhos**. Aparecem **Registar entrada**, **Registar saída** e **Movimentações**. Clique em **Movimentações**.
+
+[Imagem: Menu do produto com Registar entrada, Registar saída e Movimentações destacados]
+
+## Leia as movimentações
+
+Cada linha é uma entrada (seta verde para cima) ou uma saída (seta vermelha para baixo), com:
+
+- **Lote**, **Custo unitário** e **Categoria** (Quant. Inicial, Ajustes de Estoque, Compra...);
+- **Usuário** que fez o lançamento e **Data**;
+- **Qtd.** movimentada e o saldo depois dela.
+
+No exemplo, o pão teve **entrada de 100** (Quant. Inicial) e **saída de 5** (Ajustes de Estoque, feita pelo inventário), ficando com **95**.
+
+[Imagem: Histórico do Pão de hambúrguer com o filtro de tipo, as abas Fechadas e Canceladas, a Categoria e a Qtd. destacados (nome do usuário coberto)]
+
+Use **Tipo de movimentação** para ver só entradas ou só saídas. A aba **Canceladas** mostra os lançamentos cancelados.
+
+
+
+## Deu algum problema?
+
+??? question "O saldo está diferente do que tenho na loja"
+    Confira o histórico para achar o lançamento que não bate. Depois, corrija com um **inventário** (veja [Como fazer um inventário](inventario.md)) ou com **Registrar entrada/saída** na categoria Ajustes de Estoque.
+
+??? question "O produto aparece com saldo negativo"
+    Saíram mais unidades do que entraram (por exemplo, vendas sem a entrada da compra). Lance as entradas que faltam ou faça um inventário.
+
+??? question "Lancei uma movimentação errada"
+    No histórico, o **ícone de lixeira** no fim da linha cancela a movimentação. Ela passa para a aba **Canceladas**. Confira o saldo depois.
+
+**Relacionados:** [Como dar entrada no estoque](entrada-de-estoque.md) · [Como fazer um inventário](inventario.md)
+
+Palavras-chave: saldo de estoque balanço quanto tem no estoque histórico movimentações entradas e saídas kardex consultar estoque saldo negativo zerar estoque cancelar movimentação lote custo
 
 ---
 Código: 05.06 | Módulo: Vendas | Tela no sistema: /dashboard/sale/outbound-invoices
