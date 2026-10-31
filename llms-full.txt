@@ -8,7 +8,9 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/primeiros-passos/tr
 
 1 minuto · 3 passos · Atualizado em 30/10/2026
 
-Se a sua empresa tem **mais de uma loja ou filial**, cada uma tem os seus próprios produtos, clientes, estoque, vendas e notas fiscais. Por isso, antes de cadastrar ou consultar qualquer coisa, confira **em qual loja você está**.
+Se a sua empresa tem **mais de uma loja ou filial**, cada uma tem o seu próprio estoque, os seus caixas, as suas vendas e as suas notas fiscais. Por isso, antes de lançar ou consultar qualquer coisa, confira **em qual loja você está**.
+
+Alguns cadastros, como **produtos**, **clientes** e **contas bancárias**, podem valer para mais de uma loja. No cadastro, o campo **Selecionar unidades** escolhe em quais lojas ele aparece. Por padrão, vem marcada só a loja em que você está.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
 
@@ -20,7 +22,7 @@ O nome da loja atual aparece **no topo do menu**, do lado esquerdo.
 
 ## Escolha a outra loja
 
-Clique no nome da loja. Abre a lista com todas as lojas que o seu usuário pode acessar. Clique na loja desejada.
+Clique no nome da loja. Abre a lista com todas as lojas que o seu usuário pode acessar. A loja principal aparece com a palavra **Matriz** ao lado do nome. Clique na loja desejada.
 
 Se a lista for grande, digite parte do nome no campo **Buscar...**, no topo da lista.
 
@@ -28,7 +30,7 @@ Se a lista for grande, digite parte do nome no campo **Buscar...**, no topo da l
 
 ## Confira a troca
 
-A tela recarrega e o nome da nova loja aparece no topo do menu. A partir daqui, **tudo o que você fizer vale para essa loja**.
+A tela recarrega e o nome da nova loja aparece no topo do menu. Os números do painel inicial passam a ser os da nova loja. A partir daqui, **tudo o que você fizer vale para essa loja**.
 
 [Imagem: Tela inicial com o nome da nova loja destacado no topo do menu]
 
@@ -43,11 +45,11 @@ A tela recarrega e o nome da nova loja aparece no topo do menu. A partir daqui, 
     O seu usuário não tem acesso a essa loja. Peça ao administrador da sua empresa para liberar.
 
 ??? question "Cadastrei um produto e ele não aparece na outra loja"
-    Os produtos, clientes e o estoque são separados por loja. Troque para a outra loja e confira lá.
+    O produto só aparece nas lojas marcadas no cadastro. Abra o produto, vá em **Unidades**, clique em **Selecionar unidades** e marque a outra loja. O mesmo vale para clientes e contas bancárias. Já o estoque é sempre de cada loja.
 
-**Relacionados:** [Como usar o menu do sistema](usar-o-menu.md)
+**Relacionados:** [Como usar o menu do sistema](usar-o-menu.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
 
-Palavras-chave: trocar loja trocar empresa filial unidade mudar de loja selecionar empresa outra loja matriz cnpj dados de outra loja
+Palavras-chave: trocar loja trocar empresa filial unidade mudar de loja selecionar empresa outra loja matriz cnpj dados de outra loja selecionar unidades compartilhar produto entre lojas
 
 ---
 Código: 01.03 | Módulo: Primeiros passos | Tela no sistema: /dashboard
@@ -95,9 +97,9 @@ O que fica em cada grupo:
 | **Finanças** | Contas a pagar e a receber, extratos, contas bancárias, conciliação, plano de contas e contabilidade. |
 | **Relatórios** | Relatórios de vendas, caixa, lucro, estoque, segurança e o relatório dinâmico. |
 | **Ponto de venda** | Pontos de venda, caixas, mesas, comandas, tela da cozinha (KDS) e as configurações do caixa. |
-| **Dispositivos** | Terminais, totens e o download dos aplicativos. |
+| **Dispositivos** | **Terminais & Dispositivos** (PDVs, totens, computador servidor, cardápio digital) e **Baixar aplicativos**. |
 | **Meu plano** | O plano contratado da sua empresa. |
-| **Configurações** | Dados da empresa, filiais, usuários, formas de pagamento, impressoras, integrações e a parte **Fiscal** (certificado, notas e impostos). |
+| **Configurações** | Dados do negócio, unidades e filiais, usuários, formas de pagamento, **Periféricos** (impressoras e balanças), integrações, modelos de etiqueta e a parte **Fiscal** (certificado, notas e impostos). |
 
 !!! warning "Versão anterior"
     O item **Versão anterior** abre o sistema antigo. Use só se o suporte pedir.
@@ -131,17 +133,20 @@ No canto inferior direito fica o **botão de atendimento** (o fone de ouvido), p
 
 Clique na **bolinha com a sua inicial**, no canto de baixo, à esquerda. Aparecem:
 
-- **Meu perfil:** seus dados de usuário.
+- **Meu perfil:** seu nome, e-mail e usuário de login. Ali você também troca a senha (**Alterar senha**), liga a **Autenticação de Dois Fatores** (mais segurança no login) e vê as **Sessões ativas**, ou seja, onde o seu usuário está conectado.
 - **Meu plano:** o plano da empresa.
-- **Minha empresa:** os dados do negócio.
-- **Informações:** detalhes do sistema.
+- **Minha empresa:** abre os **Dados da empresa** da loja em que você está.
+- **Informações:** mostra a **versão do sistema**. Útil quando o suporte perguntar.
 - **Sair:** encerra o acesso. Use sempre que usar um computador compartilhado.
 
 [Imagem: Menu do perfil aberto com Meu perfil, Meu plano, Minha empresa, Informações e Sair destacados (nome do usuário coberto)]
 
 ## Faça o tour de boas-vindas
 
-Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apresenta os menus. Clique em **Próximo** para seguir, ou em **Pular** para fechar.
+Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apresenta os menus Produtos, Estoque, Clientes, Finanças e Configurações.
+
+- **Próximo:** segue para a etapa seguinte. Na última, **Tudo pronto para começar!**, clique em **Concluir**. Depois disso, o tour não aparece mais.
+- **Pular:** fecha o tour só por agora. Ele volta a aparecer quando você abre outra tela. Para não ver mais, vá até o fim e clique em **Concluir**.
 
 [Imagem: Janela Bem-vindo(a) do tour com os botões Pular e Próximo destacados]
 
@@ -158,12 +163,15 @@ Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apres
 ??? question "Os dados que aparecem são de outra loja"
     Confira o nome da loja no topo do menu. Veja [Como trocar de empresa ou loja](trocar-de-empresa.md).
 
+??? question "O tour Bem-vindo(a)! aparece toda hora"
+    O **Pular** só fecha o tour por agora. Clique em **Próximo** até a última etapa e depois em **Concluir**. Assim ele não aparece mais.
+
 ??? question "A tela ficou escura"
     O **modo escuro** foi ligado. Clique no ícone do topo, à direita, para voltar ao modo claro.
 
 **Relacionados:** [Como trocar de empresa ou loja](trocar-de-empresa.md)
 
-Palavras-chave: menu tela inicial dashboard visão geral buscar no menu procurar tela recolher menu ícones ajuda central de ajuda chamados notificações modo escuro tema perfil sair logout trocar loja tour bem-vindo versão anterior
+Palavras-chave: menu tela inicial dashboard visão geral buscar no menu procurar tela recolher menu ícones ajuda central de ajuda chamados notificações modo escuro tema perfil sair logout trocar loja tour bem-vindo pular concluir versão anterior alterar senha dois fatores 2fa sessões ativas versão do sistema minha empresa periféricos
 
 ---
 Código: 02.01 | Módulo: Clientes | Tela no sistema: /dashboard/customers/new
@@ -2074,7 +2082,7 @@ Pronto! O novo ponto de venda já aparece na lista de pontos de venda.
 ??? question "Apareceu uma conta nova em Contas bancárias"
     É normal: cada PDV ganha uma conta com o mesmo nome, do tipo **Conta PDV**.
 
-**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como escolher o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
+**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como definir o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
 
 Palavras-chave: ponto de venda pdv caixa novo pdv cadastrar caixa caixa balcão impressora ponto de impressão balança periféricos aplicativo offline pdv 2.0 pdv móvel servidor padrão computador servidor conta pdv ativo inativo marcar como ativo editar excluir
 
@@ -2309,7 +2317,7 @@ Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações
 ??? question "A lista de impressoras está vazia"
     Nenhuma impressora foi cadastrada ainda. Cadastre a impressora em **Dispositivos** e volte a esta tela.
 
-**Relacionados:** [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como cadastrar formas de pagamento](../financas/formas-de-pagamento.md) · [Como escolher o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
+**Relacionados:** [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como cadastrar formas de pagamento](../financas/formas-de-pagamento.md) · [Como definir o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
 
 Palavras-chave: configurações do pdv terminal de vendas caixa editar preço quantidade vendedor nome do cliente autorização cartão cpf na nota cancelamento tempo legal numeração aleatória histórico taxa de serviço 10% garçom balança código de barras etiqueta sangria reforço retirada depósito alerta bloquear pdv desconto máximo categoria de cliente senha de segurança senha de gerência abandono de venda gaveta automática fechamento de caixa aprovação modelo de fechamento bandeira transferência automática troco fechamento às cegas crédito de cliente fiado saldo negativo delivery entregador ddd observações numeração separada integração ifood taxa de entrega taxa por bairro taxa fixa configurar bairros painel delivery agendado tempo limite status do pedido motivo de cancelamento mesas comandas atendimento tela padrão senha do garçom resumo da conta
 
