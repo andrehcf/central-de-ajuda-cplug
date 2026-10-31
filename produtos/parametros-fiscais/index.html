@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Onde preencher NCM, origem, CEST, ICMS, PIS/COFINS e CFOP de cada produto para a nota fiscal sair sem erro.">
+        <meta name="description" content="Entenda como a nota fiscal usa os dados do produto e veja onde preencher NCM, origem, CEST, ICMS, PIS/COFINS e CFOP para a nota sair sem erro.">
       
       
       
@@ -739,11 +739,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-grupo-fiscal" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é um grupo fiscal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#o-que-e-cada-campo" class="md-nav__link">
     <span class="md-ellipsis">
       O que é cada campo
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entendendo-o-cfop-de-venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entendendo o CFOP de venda
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1543,11 +1576,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-grupo-fiscal" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é um grupo fiscal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#o-que-e-cada-campo" class="md-nav__link">
     <span class="md-ellipsis">
       O que é cada campo
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entendendo-o-cfop-de-venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entendendo o CFOP de venda
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1652,15 +1718,28 @@
 
 <h1 id="como-configurar-os-dados-fiscais-de-um-produto">Como configurar os dados fiscais de um produto</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 5 minutos por produto · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 6 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 30/10/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 15 minutos (depois, 2 minutos por produto) · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 6 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 31/10/2026</p>
 </div>
 <p>Todo produto vendido com <strong>nota fiscal</strong> (o cupom do caixa, NFC-e, ou a NF-e) precisa dos dados fiscais preenchidos. Sem eles, o produto até aparece no caixa, mas a nota é <strong>recusada pela Sefaz</strong> ou nem chega a ser emitida.</p>
+<p>Esta é uma das principais causas de nota recusada. Vale a pena entender o conceito antes de preencher.</p>
 <div class="admonition warning">
 <p class="admonition-title">Quem define os códigos fiscais é o seu contador</p>
 <p>Este manual mostra <strong>onde</strong> e <strong>como</strong> preencher. <strong>Quais</strong> códigos usar (NCM, CFOP, situação do ICMS, PIS/COFINS) depende do produto, do estado e do regime da sua empresa, e quem decide é o contador.</p>
 <p>Antes de começar, peça ao contador uma lista com, para cada produto: <strong>NCM</strong>, <strong>CEST</strong> (se tiver), <strong>Origem</strong>, <strong>ICMS</strong>, <strong>PIS/COFINS</strong> e <strong>CFOP</strong>.</p>
 </div>
-<h2 id="o-que-e-cada-campo">O que é cada campo</h2>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>Quando você vende com nota, o sistema <strong>monta a nota fiscal</strong> juntando três fontes de informação:</p>
+<ol>
+<li><strong>Os dados da sua empresa:</strong> CNPJ, endereço e regime tributário (Simples Nacional ou regime normal).</li>
+<li><strong>Os dados do produto:</strong> o que ele é (NCM), de onde vem (Origem) e se tem substituição tributária (CEST). Ficam em <strong>Informações fiscais</strong>.</li>
+<li><strong>As regras de imposto:</strong> como o ICMS, o PIS/COFINS e o IPI aparecem na nota, e o tipo de operação (CFOP). Ficam em <strong>Configurações fiscais</strong>.</li>
+</ol>
+<p>A Sefaz confere tudo isso. Se um código estiver faltando ou não combinar com o outro, a nota é recusada.</p>
+<h3 id="o-que-e-um-grupo-fiscal">O que é um grupo fiscal</h3>
+<p>O ICMS, o PIS/COFINS e o IPI não são preenchidos produto por produto. Você cria um <strong>grupo fiscal</strong>, que guarda a regra do imposto, e escolhe esse grupo em cada produto.</p>
+<p>Exemplo: o contador diz que quase todos os seus produtos usam o ICMS "102". Você cria <strong>um</strong> grupo chamado "Simples Nacional - 102" e escolhe esse grupo em todos esses produtos. Os refrigerantes, que têm substituição tributária, usam outro grupo, por exemplo "Bebidas com ST - 500".</p>
+<p>É como uma etiqueta: o grupo diz "este produto segue a regra X". Por isso, cuidado ao alterar um grupo que já está em uso: confirme com o contador antes.</p>
+<h3 id="o-que-e-cada-campo">O que é cada campo</h3>
 <p>Os exemplos abaixo são só para você reconhecer os códigos. <strong>Não copie sem confirmar com o contador.</strong></p>
 <table>
 <thead>
@@ -1673,33 +1752,38 @@
 <tbody>
 <tr>
 <td><strong>NCM</strong></td>
-<td>Código de 8 números que diz o que o produto é. É o mesmo em todo o Brasil.</td>
+<td>Código de 8 números que diz o que o produto é. É o mesmo em todo o Brasil. Define a tributação e a classificação do produto.</td>
 <td>Refrigerante: 2202.10.00</td>
 </tr>
 <tr>
 <td><strong>CEST</strong></td>
-<td>Código usado quando o produto tem substituição tributária (ST). Nem todo produto tem.</td>
+<td>Código que identifica produtos com substituição tributária (ST). Só abre depois de escolher o NCM, e a lista mostra os CESTs ligados àquele NCM. Nem todo produto tem.</td>
 <td>Depende do produto</td>
 </tr>
 <tr>
 <td><strong>Origem</strong></td>
-<td>De onde vem a mercadoria.</td>
+<td>De onde vem a mercadoria: nacional (códigos 0, 3, 4, 5 e 8) ou estrangeira (1, 2, 6 e 7).</td>
 <td>0 - Nacional</td>
 </tr>
 <tr>
+<td><strong>Peso líquido</strong> e <strong>Peso bruto</strong></td>
+<td>O peso do produto, em quilos.</td>
+<td>Preencha se o contador pedir</td>
+</tr>
+<tr>
+<td><strong>FCP</strong></td>
+<td>Fundo de Combate à Pobreza: um adicional do ICMS cobrado em alguns estados e produtos. Há também o <strong>FCP por ST</strong> e o <strong>FCP por ST retido</strong>.</td>
+<td>Em geral, 0,00</td>
+</tr>
+<tr>
 <td><strong>ICMS</strong></td>
-<td>Como o ICMS aparece na nota. No Simples Nacional, os códigos têm 3 números (CSOSN); no regime normal, 2 números (CST).</td>
+<td>Grupo que diz como o ICMS aparece na nota. No Simples Nacional, os códigos têm 3 números (CSOSN); no regime normal, 2 números (CST).</td>
 <td>102 - Simples Nacional sem permissão de crédito</td>
 </tr>
 <tr>
-<td><strong>PIS &amp; COFINS</strong></td>
-<td>Como o PIS e a COFINS aparecem na nota.</td>
+<td><strong>Pis &amp; Cofins</strong></td>
+<td>Grupo que diz como o PIS e a COFINS aparecem na nota.</td>
 <td>Definido pelo contador</td>
-</tr>
-<tr>
-<td><strong>CFOP padrão</strong></td>
-<td>O tipo de operação da venda.</td>
-<td>5102 - venda de mercadoria comprada de terceiros · 5405 - a mesma venda, com substituição tributária</td>
 </tr>
 <tr>
 <td><strong>IPI</strong></td>
@@ -1707,45 +1791,70 @@
 <td>Em geral, fica vazio</td>
 </tr>
 <tr>
-<td><strong>CST do IBS/CBS</strong> e <strong>Classificação tributária</strong></td>
-<td>Campos novos da reforma tributária.</td>
+<td><strong>Cód. de Benef. Fiscal na UF</strong></td>
+<td>Código de benefício fiscal do seu estado. Tem 8 caracteres: a sigla do estado e mais 6 (exemplo do sistema: SP123456).</td>
+<td>Só se o contador informar</td>
+</tr>
+<tr>
+<td><strong>CFOP Padrão</strong></td>
+<td>O tipo de operação da venda.</td>
+<td>5101 · 5102 · 5405 (veja abaixo)</td>
+</tr>
+<tr>
+<td><strong>CST do IBS/CBS</strong> e <strong>Cód. Classificação Tributária</strong></td>
+<td>Campos novos da reforma tributária. A classificação só abre depois de escolher o CST, e as opções dependem dele.</td>
 <td>Preencha quando o contador orientar</td>
 </tr>
 </tbody>
 </table>
+<h3 id="entendendo-o-cfop-de-venda">Entendendo o CFOP de venda</h3>
+<p>O CFOP diz <strong>que tipo de venda</strong> está acontecendo. Os três mais comuns no comércio e na alimentação:</p>
+<ul>
+<li><strong>5101 - Venda de produção do estabelecimento:</strong> o produto é <strong>feito por você</strong>, como o X-Burger preparado na cozinha.</li>
+<li><strong>5102 - Venda de mercadoria adquirida de terceiros:</strong> o produto é <strong>comprado pronto e revendido</strong>, como um chocolate.</li>
+<li><strong>5405 - Venda de mercadoria com substituição tributária:</strong> revenda de produto em que o imposto já foi recolhido antes, na compra, como acontece com muitos refrigerantes.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Na NFC-e (cupom do caixa) só valem alguns CFOPs</p>
+<p>Segundo o próprio sistema, a NFC-e aceita apenas os CFOPs <strong>5101, 5102, 5103, 5104, 5115, 5405, 5656, 5667 e 5933</strong>. A lista do sistema também mostra o <strong>5910</strong> (bonificação, doação ou brinde) e o <strong>5949</strong> (outras saídas). Eles <strong>não</strong> servem para a NFC-e: use só com orientação do contador, em NF-e.</p>
+</div>
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
 <div class="passos">
 <h2 id="abra-a-tela-de-parametros-fiscais">Abra a tela de parâmetros fiscais</h2>
 <p>No menu do lado esquerdo, clique em <strong>Produtos</strong> e depois em <strong>Parâmetros fiscais</strong>.</p>
 <p>A lista mostra todos os produtos e a situação de cada imposto: <strong>Definido</strong> (já configurado) ou <strong>Pendente</strong> (falta configurar). Todo produto com <strong>Pendente</strong> em ICMS, PIS &amp; COFINS ou CFOP pode dar problema na nota.</p>
+<p>Para achar o que falta, clique no <strong>funil</strong> (Filtrar). Em <strong>Grupos fiscais</strong>, escolha <strong>Pendentes</strong> no ICMS, no Pis &amp; Cofins ou no IPI e clique em <strong>Aplicar filtros</strong>. A lista mostra só os produtos que ainda precisam de atenção.</p>
 <p><img alt="Lista de parâmetros fiscais com as colunas Definido e Pendente e o ícone de ajustes destacados" loading="lazy" src="../../imagens/03.08/01-lista.png" /></p>
 <h2 id="abra-o-produto">Abra o produto</h2>
 <p>No fim da linha do produto, clique no <strong>ícone de ajustes</strong> (o desenho de três tracinhos com bolinhas). Se não aparecer, role a tabela para a direita.</p>
-<p>Para encontrar um produto mais rápido, digite o nome na caixa de busca, no topo.</p>
+<p>Para encontrar um produto mais rápido, digite o nome na caixa de busca, no topo, ou escolha a categoria em <strong>Filtrar por categoria</strong>.</p>
 <h2 id="preencha-as-informacoes-fiscais-do-produto">Preencha as informações fiscais do produto</h2>
 <p>Na parte <strong>Informações fiscais</strong>:</p>
 <ul>
-<li><strong>NCM:</strong> clique, digite o código ou parte do nome (ex.: "bebidas") e escolha a opção certa na lista.</li>
+<li><strong>NCM:</strong> clique, digite o código ou parte do nome (ex.: "bebidas" ou "2202") e escolha a opção certa na lista.</li>
 <li><strong>Origem:</strong> escolha de onde vem o produto. Na maioria dos casos, <strong>0 - Nacional</strong>.</li>
-<li><strong>CEST:</strong> preencha só se o contador informar.</li>
+<li><strong>CEST:</strong> preencha só se o contador informar. O campo fica cinza até você escolher o NCM; depois, mostra só os CESTs que combinam com aquele NCM.</li>
 </ul>
 <p><strong>Peso líquido</strong>, <strong>Peso bruto</strong> e os campos de <strong>FCP</strong> só precisam ser preenchidos se o contador pedir.</p>
 <p><img alt="Informações fiscais com os campos NCM, Origem e CEST destacados" loading="lazy" src="../../imagens/03.08/02-informacoes.png" /></p>
+<p><img alt="NCM 22021000 escolhido e a lista do CEST aberta, com os códigos ligados a esse NCM, destacados" loading="lazy" src="../../imagens/03.08/08-cest-depois-do-ncm.png" /></p>
 <h2 id="escolha-os-grupos-fiscais-da-sua-loja">Escolha os grupos fiscais da sua loja</h2>
-<p>Role a tela até a parte <strong>Configurações fiscais</strong>. Ela tem uma seção com o <strong>nome de cada loja (filial)</strong>. Na seção da sua loja, escolha:</p>
+<p>Role a tela até a parte <strong>Configurações fiscais</strong> e escolha:</p>
 <ul>
 <li><strong>ICMS:</strong> o grupo de ICMS que o contador indicou.</li>
 <li><strong>Pis &amp; Cofins:</strong> o grupo de PIS e COFINS.</li>
-<li><strong>CFOP padrão:</strong> o tipo de operação, por exemplo 5102 ou 5405.</li>
+<li><strong>CFOP Padrão:</strong> o tipo de operação, por exemplo 5101, 5102 ou 5405.</li>
 <li><strong>IPI:</strong> só se a sua empresa usar.</li>
+<li><strong>Cód. de Benef. Fiscal na UF</strong>, <strong>CST do IBS/CBS</strong> e <strong>Cód. Classificação Tributária:</strong> só com orientação do contador. A classificação fica cinza até você escolher o CST do IBS/CBS.</li>
 </ul>
+<p>Se a empresa tem <strong>mais de uma loja (filial)</strong>, a tela mostra uma seção com o <strong>nome de cada loja</strong>. Escolha os grupos na seção da sua loja.</p>
 <p><img alt="Seção da loja com ICMS, Pis &amp; Cofins e CFOP padrão preenchidos e destacados" loading="lazy" src="../../imagens/03.08/03-grupos.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tem várias lojas com as mesmas regras?</p>
-<p>No topo de <strong>Configurações fiscais</strong> fica <strong>Definir grupos fiscais para todas as unidades</strong>. Ligue a chave ao lado do campo (por exemplo, ICMS) e escolha o grupo uma vez só: ele vale para todas as lojas. Desligue a chave quando uma loja precisar de um grupo diferente, por exemplo, uma loja em outro estado.</p>
+<p>Com mais de uma loja, aparece no topo de <strong>Configurações fiscais</strong> o quadro <strong>Definir grupos fiscais para todas as unidades</strong>. Ligue a chave ao lado do campo (por exemplo, ICMS) e escolha o grupo uma vez só: ele vale para todas as lojas. Desligue a chave quando uma loja precisar de um grupo diferente, por exemplo, uma loja em outro estado.</p>
 </div>
 <h2 id="se-o-grupo-ainda-nao-existe-crie">Se o grupo ainda não existe, crie</h2>
-<p>Os <strong>grupos</strong> guardam as regras de um imposto. Você cria o grupo uma vez e usa em vários produtos.</p>
+<p>Se a sua empresa ainda não tem grupos, as listas de ICMS, Pis &amp; Cofins e IPI aparecem <strong>vazias</strong>, com a mensagem "Nenhum resultado encontrado". É preciso criar os grupos uma primeira vez.</p>
 <ol>
 <li>
 <p>Clique na caixa do imposto (por exemplo, <strong>ICMS</strong>). No topo da lista, clique em <strong>+ Criar novo ICMS</strong>.</p>
@@ -1766,7 +1875,7 @@
 </ol>
 <p>O mesmo vale para <strong>Pis &amp; Cofins</strong> e <strong>IPI</strong>: clique na caixa e use a opção <strong>+ Criar novo</strong>, no topo da lista.</p>
 <h2 id="clique-em-salvar">Clique em "Salvar"</h2>
-<p>Depois de preencher tudo, clique no botão verde <strong>Salvar</strong>, no canto de baixo, à direita.</p>
+<p>Depois de preencher tudo, clique no botão verde <strong>Salvar</strong>, no canto de baixo, à direita. Para sair sem gravar, clique em <strong>Descartar alterações</strong>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Como saber que deu certo</p>
@@ -1775,17 +1884,41 @@
 <h2 id="configurar-varios-produtos-de-uma-vez">Configurar vários produtos de uma vez</h2>
 <p>Se vários produtos usam os mesmos códigos (por exemplo, todos os refrigerantes), não precisa abrir um por um:</p>
 <ol>
-<li>Na lista de <strong>Parâmetros fiscais</strong>, marque a caixinha do lado esquerdo de cada produto.</li>
+<li>Na lista de <strong>Parâmetros fiscais</strong>, marque a caixinha do lado esquerdo de cada produto. Dica: filtre pela categoria antes, e marque todos de uma vez.</li>
 <li>No rodapé, clique em <strong>Edição em lote</strong>.</li>
 <li>Em <strong>Informações fiscais</strong>, clique em <strong>Adicionar campo</strong>, escolha o campo (por exemplo, <strong>NCM</strong>) e o valor.</li>
 <li>Em <strong>Configuração fiscal</strong>, clique em <strong>Adicionar campo</strong>, escolha o grupo (por exemplo, <strong>ICMS</strong>) e a opção.</li>
 <li>Clique em <strong>Salvar</strong>. Todos os produtos marcados recebem os mesmos dados.</li>
 </ol>
 <p><img alt="Edição em lote com a lista de grupos fiscais aberta: CFOP, Cód. de Benef. Fiscal na UF, CST do IBS/CBS, ICMS, IPI e PIS &amp; COFINS" loading="lazy" src="../../imagens/03.08/07-lote.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Comece pela planilha do contador.</strong> Peça uma lista com os dados fiscais de cada produto, ou de cada categoria. Com ela em mãos, o trabalho é só copiar.</li>
+<li><strong>Crie os grupos primeiro, depois os produtos.</strong> Com os grupos prontos, preencher cada produto leva poucos segundos, e a <strong>Edição em lote</strong> resolve categorias inteiras.</li>
+<li><strong>Dê nomes que expliquem a regra.</strong> "Simples Nacional - 102" diz tudo; "Grupo 1" não diz nada e confunde quem vem depois.</li>
+<li><strong>Produto novo já nasce com fiscal.</strong> Sempre que cadastrar um produto, abra os parâmetros fiscais dele no mesmo dia. Assim ele nunca vai para o caixa com "Pendente".</li>
+<li><strong>Confira os pendentes toda semana.</strong> Use o filtro <strong>Pendentes</strong> para ver o que ficou para trás.</li>
+<li><strong>Teste antes de vender.</strong> Depois de configurar um tipo novo de produto, faça uma venda de teste com nota e confira se foi autorizada.</li>
+<li><strong>Mudou de regime ou de contador?</strong> Peça uma revisão dos grupos fiscais. Uma regra antiga num grupo afeta todos os produtos que usam esse grupo.</li>
+</ul>
+</div>
 <h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
 <summary>A nota foi recusada por causa do NCM</summary>
 <p>O NCM precisa ter 8 números e existir na tabela oficial. Confira o código com o contador, corrija no produto e emita a nota de novo.</p>
+</details>
+<details class="question">
+<summary>A nota foi recusada por causa do CFOP</summary>
+<p>Confira se o CFOP do produto é um dos aceitos na NFC-e: <strong>5101, 5102, 5103, 5104, 5115, 5405, 5656, 5667 ou 5933</strong>. O 5910 e o 5949, por exemplo, não são aceitos no cupom do caixa.</p>
+</details>
+<details class="question">
+<summary>O campo CEST está cinza e não abre</summary>
+<p>Escolha primeiro o <strong>NCM</strong>. O CEST só abre depois, e mostra apenas os códigos ligados ao NCM escolhido. Se a lista vier vazia, o NCM não tem CEST.</p>
+</details>
+<details class="question">
+<summary>O campo Cód. Classificação Tributária está cinza</summary>
+<p>Escolha primeiro o <strong>CST do IBS/CBS</strong>. A classificação depende dele.</p>
 </details>
 <details class="question">
 <summary>A lista de grupos (ICMS, Pis &amp; Cofins) está vazia</summary>
@@ -1804,7 +1937,7 @@
 <p>Quem define é o contador da sua empresa. O suporte da CPlug ajuda a encontrar <strong>onde</strong> preencher no sistema, mas não define a tributação dos produtos.</p>
 </details>
 <p><strong>Relacionados:</strong> <a href="../cadastrar-produto/">Como cadastrar um produto</a> · <a href="../../clientes/cadastrar-cliente/">Como cadastrar um cliente</a></p>
-<p><span class="palavras-chave">fiscal tributação imposto ncm cest cfop cst csosn icms pis cofins ipi origem nota fiscal nfc-e nf-e rejeição recusada sefaz parâmetros fiscais grupo fiscal ibs cbs reforma tributária substituição tributária st</span></p>
+<p><span class="palavras-chave">fiscal tributação imposto ncm cest cfop cst csosn icms pis cofins ipi origem nota fiscal nfc-e nf-e rejeição recusada sefaz parâmetros fiscais grupo fiscal ibs cbs reforma tributária substituição tributária st fcp fundo de combate à pobreza benefício fiscal classificação tributária 5101 5102 5405 pendente definido edição em lote</span></p>
 
 
 
