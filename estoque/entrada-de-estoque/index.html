@@ -1860,7 +1860,14 @@
 </details>
 <details class="question">
 <summary>Lancei a quantidade ou o custo errado</summary>
-<p>No <strong>Balanço</strong>, clique nos três pontinhos do produto e em <strong>Movimentações</strong>. Na linha do lançamento errado, clique na <strong>lixeira</strong> e confirme em <strong>Excluir</strong>. Atenção: a exclusão é <strong>permanente</strong> e muda o saldo. Depois, lance de novo do jeito certo. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
+<p>No <strong>Balanço</strong>, clique nos três pontinhos do produto e em <strong>Movimentações</strong>. Na linha do lançamento errado, clique na <strong>lixeira</strong> e confirme em <strong>Excluir</strong>. Depois, lance de novo do jeito certo.</p>
+<p>O que acontece ao excluir (testado):</p>
+<ul>
+<li>O lançamento <strong>sai do saldo</strong> e passa para a aba <strong>Canceladas</strong>, que fica ao lado de <strong>Fechadas</strong>. Ele não volta a contar no estoque.</li>
+<li>Excluir uma <strong>saída</strong> devolve as quantidades aos lotes de onde ela tirou.</li>
+<li>Excluir uma <strong>entrada</strong> tira o custo dela do <strong>custo médio</strong> e do <strong>Histórico de custo</strong>.</li>
+</ul>
+<p>Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Foi nessa ordem que o teste funcionou. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
 </details>
 <details class="question">
 <summary>Quero tirar mercadoria (perda, quebra, consumo)</summary>
