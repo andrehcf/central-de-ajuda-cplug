@@ -1681,6 +1681,47 @@
 <li><strong>Importar produtos:</strong> <strong>cria produtos novos</strong>. É o assunto deste manual.</li>
 <li><strong>Editar produtos:</strong> <strong>altera produtos que já existem</strong>, usando outra planilha modelo, a <strong>Planilha Modelo - Edição de Produtos</strong>. Use essa opção para mudar preços ou dados de muitos produtos de uma vez.</li>
 </ul>
+<p><strong>Como é a planilha de edição:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>O que é</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código *</strong></td>
+<td>A única obrigatória (marcada com *). É o SKU, a "identidade" do produto: use o mesmo código do cadastro para dizer qual produto vai mudar.</td>
+</tr>
+<tr>
+<td><strong>Nome</strong>, <strong>Categoria</strong>, <strong>Unidade de Medida</strong></td>
+<td>Os mesmos dados da tela do produto.</td>
+</tr>
+<tr>
+<td><strong>Valor de custo</strong>, <strong>Valor de venda</strong></td>
+<td>Custo e preço de venda. Só números e vírgula.</td>
+</tr>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Só aceita <strong>simples</strong>, <strong>insumo</strong> ou <strong>coleção</strong>. A célula tem uma setinha com essas três opções.</td>
+</tr>
+<tr>
+<td><strong>Ponto de Impressão</strong>, <strong>Perecível</strong></td>
+<td>Onde o pedido é impresso e se o produto é perecível.</td>
+</tr>
+<tr>
+<td><strong>Peso líquido KG</strong>, <strong>Peso Bruto KG</strong></td>
+<td>Os pesos, em quilos.</td>
+</tr>
+<tr>
+<td><strong>Estoque inicial</strong>, <strong>Estoque Mínimo</strong>, <strong>Estoque Máximo</strong></td>
+<td>Os dados de estoque do produto.</td>
+</tr>
+</tbody>
+</table>
+<p>Ela <strong>não tem colunas fiscais</strong> (NCM, CFOP, grupos de impostos). Para mudar esses dados em vários produtos, use a <strong>Edição em lote</strong> de <strong>Parâmetros fiscais</strong> (veja <a href="../parametros-fiscais/">Como configurar os dados fiscais de um produto</a>).</p>
+<p>A planilha de edição vem com <strong>duas abas</strong>: <strong>Produtos</strong>, onde você preenche, e <strong>Listas</strong>, que guarda as opções da coluna Tipo.</p>
 <p><strong>Como a importação acontece:</strong> em três etapas. Primeiro o sistema <strong>confere</strong> a planilha, depois mostra o resultado para você <strong>revisar</strong>, e só então <strong>importa</strong>, em segundo plano. Enquanto isso, você pode continuar usando o sistema. O sistema faz <strong>uma importação por vez</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Antes de começar</p>
