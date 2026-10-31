@@ -9,7 +9,7 @@ atualizado: 2026-10-31
 
 # Como montar uma ficha técnica
 
-<div class="cplug-meta" markdown>:material-clock-outline: 10 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 15 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
 
 A **ficha técnica** é a "receita" do produto: quais ingredientes ele leva e em que quantidade. Com ela, o sistema:
 
@@ -18,6 +18,38 @@ A **ficha técnica** é a "receita" do produto: quais ingredientes ele leva e em
 - sugere um **preço de venda** a partir da margem que você quer ter.
 
 Neste manual, montamos a ficha do **X-Burger** com quatro ingredientes.
+
+## Entenda o conceito
+
+Pense numa cozinha. Você **compra** pão, carne e queijo, mas **vende** X-Burger. Sem a ficha técnica, o sistema só sabe que saiu um X-Burger. Com ela, ele sabe que saíram também um pão, um hambúrguer e uma fatia de queijo, e quanto isso custou para você.
+
+**As palavras que você vai ver na tela:**
+
+| Termo | O que significa | Exemplo |
+| --- | --- | --- |
+| **Insumo** | O ingrediente, que você compra mas não vende sozinho. É cadastrado como produto do tipo Insumo. | Pão de hambúrguer |
+| **Componente** | Um insumo dentro de uma ficha técnica. | O pão, dentro da ficha do X-Burger |
+| **Quantidade** | Quanto do insumo vai em **um** produto vendido, na unidade de medida do insumo. | 1 pão |
+| **Custo** | O custo de **uma unidade** do insumo. | R$ 1,20 por pão |
+| **Custo total** | Quanto o produto custa para você: a soma de quantidade × custo de cada componente. | R$ 7,00 por X-Burger |
+| **Porcentagem** | Quanto você quer somar **em cima do custo** para chegar ao preço. | 250% |
+
+**Como tudo se liga:**
+
+1. No **cadastro do insumo** ficam a unidade de medida, o custo e o controle de estoque.
+2. Na **ficha técnica** você diz quanto de cada insumo vai no produto.
+3. Na **venda**, o sistema usa a ficha para tirar os insumos do estoque.
+4. No **estoque**, você acompanha o saldo dos insumos e sabe a hora de comprar.
+
+**Qual tipo de produção usar?**
+
+- **Produção automática:** para o que é preparado **na hora do pedido**, como lanches, pratos e sucos. Os insumos saem do estoque quando o produto é vendido.
+- **Processo produtivo:** para o que é feito **antes, em quantidade**, como um bolo inteiro que depois é vendido em fatias, um molho feito em panela ou pães de fabricação própria. Você registra a produção: os insumos saem e o produto pronto entra no estoque.
+
+**Quando não precisa de ficha:** um produto revendido do jeito que chega, como o Refrigerante Lata, não tem receita. Ele controla o próprio estoque.
+
+!!! note "Porcentagem sobre o custo não é o mesmo que margem de lucro"
+    A porcentagem da ficha é somada **em cima do custo**. Com custo de R$ 7,00 e 100%, o preço sugerido é R$ 14,00. O lucro bruto é R$ 7,00, que é **50% do preço de venda**, não 100%. Lembre-se também de que o custo da ficha é só o dos ingredientes: embalagem, taxa do cartão, impostos e mão de obra ficam de fora. Por isso, a porcentagem precisa cobrir tudo isso.
 
 !!! info "Antes de começar: cadastre os ingredientes como insumos"
     Cada ingrediente é cadastrado como um **produto** (veja [Como cadastrar um produto](cadastrar-produto.md)), com estas diferenças:
@@ -138,6 +170,14 @@ Isso ajuda antes de mudar o custo ou excluir um insumo: você vê quais produtos
 
 !!! warning "A ficha técnica só dá baixa se o insumo controlar estoque"
     No cadastro de cada insumo, deixe ligado **Controlar quantidade em estoque**. E lance o estoque inicial dos insumos, senão o saldo fica negativo a cada venda.
+
+!!! tip "Boas práticas"
+    - **Cadastre o insumo na unidade em que você conta o estoque.** Se você conta o queijo em fatias, cadastre em unidade; se pesa, em quilo. A quantidade da ficha usa sempre essa mesma unidade.
+    - **Inclua as perdas.** Se de cada 20 fatias uma se perde no preparo, coloque um pouco a mais na quantidade. Assim o estoque do sistema bate com o da prateleira.
+    - **Mantenha o custo dos insumos atualizado.** Quando o fornecedor aumentar o preço, atualize o insumo e use **Recalcular custo** nas fichas que usam esse insumo. A aba **Produções** do insumo mostra quais são.
+    - **Revise a porcentagem quando o custo mudar.** Se o custo subiu e o preço ficou igual, o seu lucro diminuiu.
+    - **Marque como Opcional só o que pode ser tirado de verdade.** O pão de um X-Burger não é opcional; o molho, sim.
+    - **Teste depois de montar.** Faça uma venda de teste e confira, no estoque, se os insumos saíram nas quantidades certas.
 
 ## Deu algum problema?
 
