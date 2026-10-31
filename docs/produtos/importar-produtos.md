@@ -41,6 +41,22 @@ A importação é o jeito mais rápido de colocar o cardápio ou o catálogo int
 - **Importar produtos:** **cria produtos novos**. É o assunto deste manual.
 - **Editar produtos:** **altera produtos que já existem**, usando outra planilha modelo, a **Planilha Modelo - Edição de Produtos**. Use essa opção para mudar preços ou dados de muitos produtos de uma vez.
 
+**Como é a planilha de edição:**
+
+| Coluna | O que é |
+| --- | --- |
+| **Código \*** | A única obrigatória (marcada com \*). É o SKU, a "identidade" do produto: use o mesmo código do cadastro para dizer qual produto vai mudar. |
+| **Nome**, **Categoria**, **Unidade de Medida** | Os mesmos dados da tela do produto. |
+| **Valor de custo**, **Valor de venda** | Custo e preço de venda. Só números e vírgula. |
+| **Tipo** | Só aceita **simples**, **insumo** ou **coleção**. A célula tem uma setinha com essas três opções. |
+| **Ponto de Impressão**, **Perecível** | Onde o pedido é impresso e se o produto é perecível. |
+| **Peso líquido KG**, **Peso Bruto KG** | Os pesos, em quilos. |
+| **Estoque inicial**, **Estoque Mínimo**, **Estoque Máximo** | Os dados de estoque do produto. |
+
+Ela **não tem colunas fiscais** (NCM, CFOP, grupos de impostos). Para mudar esses dados em vários produtos, use a **Edição em lote** de **Parâmetros fiscais** (veja [Como configurar os dados fiscais de um produto](parametros-fiscais.md)).
+
+A planilha de edição vem com **duas abas**: **Produtos**, onde você preenche, e **Listas**, que guarda as opções da coluna Tipo.
+
 **Como a importação acontece:** em três etapas. Primeiro o sistema **confere** a planilha, depois mostra o resultado para você **revisar**, e só então **importa**, em segundo plano. Enquanto isso, você pode continuar usando o sistema. O sistema faz **uma importação por vez**.
 
 !!! info "Antes de começar"
