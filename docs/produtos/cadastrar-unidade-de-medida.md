@@ -4,12 +4,12 @@ description: Passo a passo para criar uma unidade de medida nova, como Caixa ou 
 codigo: "03.02"
 modulo: Produtos
 tela: /dashboard/catalog/unit-of-measurement
-atualizado: 2026-10-29
+atualizado: 2026-10-30
 ---
 
 # Como cadastrar uma unidade de medida
 
-<div class="cplug-meta" markdown>:material-clock-outline: 2 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 29/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 2 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
 
 A unidade de medida diz como o produto é vendido: por unidade, por quilo, por litro, por caixa. O sistema já vem com as mais comuns, como Unidade, Kilograma, Grama, Litros e Metro.
 
@@ -36,10 +36,10 @@ Uma janela abre do lado direito.
 
 ## Escolha a precisão e salve
 
-A **Precisão de medida** diz se a quantidade pode ter vírgula.
+A **Precisão de medida** é quantos números aparecem depois da vírgula na quantidade. A lista tem **Sem casas decimais** e de **1 casa decimal** a **5 casas decimais**. Abaixo do campo, o **Exemplo** mostra como a quantidade vai aparecer.
 
 - **Sem casas decimais:** para o que é contado inteiro, como caixa, lata ou peça.
-- **Com casas decimais:** para o que é pesado ou medido, como 1,250 kg. Escolha quantos números depois da vírgula você usa.
+- **Com casas decimais:** para o que é pesado ou medido. Exemplo: com 3 casas decimais, 1,250 kg.
 
 Depois clique no botão verde **Salvar**.
 
@@ -54,7 +54,9 @@ Aparece a mensagem **Unidade de medida criada com sucesso** no canto de cima.
 </div>
 
 !!! success "Como saber que deu certo"
-    A unidade nova já pode ser escolhida no cadastro de produtos.
+    A unidade nova aparece na lista e já pode ser escolhida no cadastro de produtos.
+
+    Na lista, a coluna **Precisão medida** mostra um exemplo do formato (como "0,000gramas") e a coluna **Produtos** mostra quantos produtos usam cada unidade. Nos **três pontinhos** da linha você tem **Editar** (muda nome, abreviação e precisão) e **Excluir**.
 
 ## Deu algum problema?
 
@@ -64,9 +66,12 @@ Aparece a mensagem **Unidade de medida criada com sucesso** no canto de cima.
 ??? question "A unidade nova não aparece na lista"
     Ela entra no fim da lista. Role a tela até o final ou use a caixa **Buscar unidades de medida**.
 
+??? question "Quero excluir uma unidade"
+    Antes, confira na coluna **Produtos** se algum produto usa essa unidade. Se usar, troque a unidade desses produtos primeiro.
+
 ??? question "Errei e quero desistir"
     Clique em **Cancelar**, ao lado do Salvar. Nada é gravado.
 
 **Próximo passo:** [Como cadastrar um produto](cadastrar-produto.md).
 
-<span class="palavras-chave">kg quilo litro caixa pacote peso medida unidade</span>
+<span class="palavras-chave">kg quilo litro caixa pacote peso medida unidade abreviação precisão casas decimais vírgula editar excluir</span>
