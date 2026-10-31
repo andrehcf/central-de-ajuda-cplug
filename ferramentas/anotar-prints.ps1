@@ -11,6 +11,7 @@ param([string]$SrcDir, [string]$OutRoot)
 Add-Type -AssemblyName System.Drawing
 $p = 'mcp-Claude_Browser-blob-'
 $shots = @(
+  @('03.08', '08-cest-depois-do-ncm.png', '1793430438002-08tfim', @(@(344, 112, 212, 20), @(566, 172, 212, 150)), @()),
   @('03.07', '08-custo-por-linha.png', '1793429394194-f4xmnx', @(@(546, 265, 44, 22), @(600, 265, 72, 22), @(680, 267, 40, 18), @(186, 451, 142, 20)), @()),
   @('03.07', '09-aplicar-preco.png', '1793429467123-opqrgc', @(,@(243, 228, 314, 89)), @()),
   @('03.07', '10-aba-producao.png', '1793429523589-uhplbx', @(@(210, 105, 46, 17), @(566, 150, 102, 17), @(704, 42, 86, 22)), @()),
