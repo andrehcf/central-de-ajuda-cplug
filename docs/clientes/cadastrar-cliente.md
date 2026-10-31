@@ -4,12 +4,12 @@ description: Passo a passo para cadastrar um cliente pessoa física ou jurídica
 codigo: "02.01"
 modulo: Clientes
 tela: /dashboard/customers/new
-atualizado: 2026-10-29
+atualizado: 2026-10-30
 ---
 
 # Como cadastrar um cliente
 
-<div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 7 passos · :material-calendar-check: Atualizado em 29/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 4 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
 
 Para salvar um cliente, basta o **nome**. Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
 
@@ -54,7 +54,8 @@ O campo **Tipo** já vem como **Pessoa física**. Se o cliente for uma empresa, 
 - **Nome:** o nome completo, igual ao documento. Abreviações podem dar problema na nota.
 - **CPF:** só os números. O sistema coloca os pontos e o traço sozinho. **Obrigatório para emitir NF-e.**
 - **E-mail:** é para onde a nota fiscal e os recibos podem ser enviados.
-- **Celular:** só os números, com DDD. Exemplo: 11987650007.
+- **Celular:** só os números, com DDD. Exemplo: 11987650007. O sistema coloca os parênteses e o traço sozinho.
+- **Telefone:** um telefone fixo, se houver.
 
 **RG** e **Data de nascimento** são opcionais.
 
@@ -85,6 +86,17 @@ Clique em **Indicador de IE** e escolha a opção certa:
 !!! tip "Não sabe se a empresa tem Inscrição estadual?"
     Pergunte ao cliente ou consulte o Sintegra do estado dele. Indicador errado é uma das causas mais comuns de nota recusada.
 
+## Complete as informações extras
+
+Estes campos são opcionais, mas ajudam no dia a dia:
+
+- **Categoria de cliente:** um grupo de clientes, como Bronze, Prata e Ouro. Cada categoria pode ter uma **porcentagem de desconto**, cadastrada em **Clientes** → **Categoria de clientes**. No caixa, esse desconto segue a regra escolhida nas configurações do PDV (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)).
+- **+ Telefone adicional:** acrescenta mais um número (**Celular 2**). Para tirar, clique na lixeira ao lado.
+- **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão ver este cliente. Por padrão, vem marcada só a loja em que você está. Na janela, **Selecionar todas as lojas** marca todas.
+- **Observações do cliente:** anotações livres, com até 600 caracteres. Exemplo: "Prefere receber depois das 18h." A observação aparece na lista de clientes e no pedido de venda.
+
+![Categoria de cliente Ouro, Telefone adicional, Selecionar unidades e Observações do cliente destacados](../imagens/02.01/03d-extras.png){ loading=lazy }
+
 ## Coloque o endereço
 
 Role a tela até **Endereços** e clique em **+ Novo endereço**.
@@ -107,6 +119,16 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
     O sistema volta para a lista de clientes, e o cliente novo aparece com o nome, o e-mail e o telefone.
 
     ![Lista de clientes com o cliente novo destacado](../imagens/02.01/06-cliente-na-lista.png){ loading=lazy }
+
+    A lista mostra também quantas **Vendas** cada cliente já teve. Se o cliente tem observação, aparece um **balão** ao lado do nome: passe o mouse sobre ele para ler.
+
+    ![Cliente Teste Manual na lista com o balão de observação destacado](../imagens/02.01/07-observacao-na-lista.png){ loading=lazy }
+
+    Ao escolher o cliente num pedido de venda, a observação aparece no quadro **Cliente**:
+
+    ![Pedido de venda com o cliente escolhido e as Observações do cliente destacadas (nome do vendedor coberto)](../imagens/02.01/08-observacao-no-pedido.png){ loading=lazy }
+
+    Para mudar ou apagar um cliente, use os **três pontinhos** no fim da linha: **Editar** ou **Excluir**. Os clientes excluídos ficam na aba **Excluídos**.
 
 ## Deu algum problema?
 
@@ -134,4 +156,9 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 ??? question "Tenho mais de uma loja"
     O cliente aparece só na loja em que você está. Para usar em outras, clique em **Selecionar unidades** e marque as lojas antes de salvar.
 
-<span class="palavras-chave">consumidor comprador cadastro de cliente cpf cnpj inscrição estadual ie indicador de ie nota fiscal nf-e nfc-e rejeição recusada sefaz endereço cep empresa pessoa jurídica pessoa física</span>
+??? question "Não consigo mudar o Consumidor Final - Padrão"
+    É normal. Ele é um cliente fixo do sistema, usado nas vendas sem cliente identificado, e não pode ser alterado.
+
+**Relacionados:** [Como trocar de empresa ou loja](../primeiros-passos/trocar-de-empresa.md) · [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md) · [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md)
+
+<span class="palavras-chave">consumidor comprador cadastro de cliente cpf cnpj inscrição estadual ie indicador de ie nota fiscal nf-e nfc-e rejeição recusada sefaz endereço cep empresa pessoa jurídica pessoa física categoria de cliente bronze prata ouro desconto telefone adicional celular 2 observações do cliente unidades lojas consumidor final editar excluir excluídos</span>
