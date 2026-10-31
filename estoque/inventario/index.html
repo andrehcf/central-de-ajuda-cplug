@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Conte o estoque físico e ajuste o saldo do sistema, com a diferença calculada automaticamente para cada produto.">
+        <meta name="description" content="Conte o estoque físico e ajuste o saldo do sistema, entendendo o que acontece com a diferença, com os lotes e com o custo (opção Atualizar custo).">
       
       
       
@@ -894,6 +894,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-o-sistema-grava-ao-finalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que o sistema grava ao finalizar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-os-inventarios-do-estoque" class="md-nav__link">
     <span class="md-ellipsis">
       Abra os inventários do estoque
@@ -1557,6 +1581,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-o-sistema-grava-ao-finalizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que o sistema grava ao finalizar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-os-inventarios-do-estoque" class="md-nav__link">
     <span class="md-ellipsis">
       Abra os inventários do estoque
@@ -1657,13 +1705,79 @@
 
 <h1 id="como-fazer-um-inventario">Como fazer um inventário</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 10 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 7 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 30/10/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 15 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 7 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 31/10/2026</p>
 </div>
 <p>O <strong>inventário</strong> é a contagem do que existe de verdade na loja. Você informa a quantidade contada, o sistema mostra a <strong>diferença</strong> em relação ao saldo e, ao finalizar, <strong>ajusta o estoque</strong> para a quantidade contada.</p>
-<p>Faça inventários com frequência (por exemplo, no fim do mês) para manter o estoque certo.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>O saldo do sistema é uma <strong>conta</strong>: entradas menos saídas. Na prática, a prateleira sempre se afasta um pouco dessa conta, por quebra, consumo não lançado, erro de digitação ou furto. O inventário é o momento de <strong>acertar a conta com a realidade</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>O que é</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Saldo</strong></td>
+<td>Quanto o sistema acha que você tem.</td>
+</tr>
+<tr>
+<td><strong>Novo saldo</strong></td>
+<td>Quanto você <strong>contou</strong>. O campo começa em <strong>0</strong>.</td>
+</tr>
+<tr>
+<td><strong>Diferença</strong></td>
+<td>Novo saldo − Saldo. Negativa quando falta mercadoria; positiva quando sobra.</td>
+</tr>
+<tr>
+<td><strong>Custo Unitário</strong></td>
+<td>O custo de cada unidade. Só é usado se você marcar <strong>Atualizar custo</strong>.</td>
+</tr>
+<tr>
+<td><strong>Atualizar custo</strong></td>
+<td>Faz o estoque inteiro do produto passar a valer o custo informado.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="o-que-o-sistema-grava-ao-finalizar">O que o sistema grava ao finalizar</h3>
+<p>O inventário não "apaga e reescreve" o saldo. Ele cria <strong>movimentações</strong> da categoria <strong>Ajustes de Estoque</strong>, que ficam no histórico do produto. O jeito depende de <strong>Atualizar custo</strong>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Atualizar custo desmarcado</strong></th>
+<th><strong>Atualizar custo marcado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O que é lançado</strong></td>
+<td>Só a <strong>diferença</strong>.</td>
+<td>Uma <strong>saída de todo o saldo</strong> antigo e uma <strong>entrada da quantidade contada</strong>.</td>
+</tr>
+<tr>
+<td><strong>Exemplo testado</strong></td>
+<td>Hambúrguer: saldo 100, contado 99 → <strong>saída de 1</strong>, tirada do lote mais antigo (R$ 4,50). O custo digitado (R$ 9,99) foi <strong>ignorado</strong>.</td>
+<td>Pão: saldo 95, contado 97 → <strong>saída de 95</strong> e <strong>entrada de 97 a R$ 1,50</strong>.</td>
+</tr>
+<tr>
+<td><strong>Lotes e custo</strong></td>
+<td>Continuam os mesmos lotes, com os custos de antes.</td>
+<td>Os lotes antigos são zerados; fica <strong>um lote novo</strong> com o custo informado.</td>
+</tr>
+<tr>
+<td><strong>Quando usar</strong></td>
+<td>No inventário do dia a dia.</td>
+<td>Quando o custo cadastrado está errado ou desatualizado e você quer recomeçar o produto com o custo certo.</td>
+</tr>
+</tbody>
+</table>
+<p>Para entender lotes e custo médio, veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>.</p>
+<p><img alt="Histórico do Pão depois do inventário com Atualizar custo: saída 724 de 95 unidades e entrada 725 de 97 unidades a R$ 1,50 destacadas" loading="lazy" src="../../imagens/04.02/11-efeito-atualizar-custo.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">O inventário só ajusta produtos que já tiveram movimentação</p>
-<p>Se um produto <strong>nunca teve entrada</strong> no estoque, o inventário é finalizado, mas <strong>o saldo dele não muda</strong>. Antes do primeiro inventário, dê a <strong>entrada inicial</strong> desses produtos: veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>.</p>
+<p>No teste, a <strong>Água Mineral</strong> (que nunca teve entrada) foi contada com <strong>12</strong>, o inventário foi finalizado <strong>sem nenhum aviso</strong>, e o saldo <strong>continuou 0</strong>. Antes do primeiro inventário, dê a <strong>entrada inicial</strong> dos produtos: veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>.</p>
 </div>
 <p>Neste exemplo contamos o <strong>Pão de hambúrguer</strong>: o sistema dizia 100, mas na prateleira havia 95.</p>
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
@@ -1671,54 +1785,73 @@
 <h2 id="abra-os-inventarios-do-estoque">Abra os inventários do estoque</h2>
 <p>No menu do lado esquerdo, clique em <strong>Estoque</strong> e depois em <strong>Estoque</strong>. Na linha do estoque, clique nos <strong>três pontinhos</strong> e depois em <strong>Inventários</strong>.</p>
 <p><img alt="Menu do estoque com a opção Inventários destacada" loading="lazy" src="../../imagens/04.02/01-menu.png" /></p>
-<p>A tela mostra os inventários <strong>Em aberto</strong> (em contagem) e os <strong>Finalizados</strong>. Clique em <strong>Novo inventário</strong>.</p>
+<p>A tela mostra os inventários <strong>Em aberto</strong> (em contagem) e os <strong>Finalizados</strong>. O botão <strong>Exportar produtos</strong> gera a lista para contar no papel. Clique em <strong>Novo inventário</strong>.</p>
 <p><img alt="Tela Inventário com as abas Em aberto e Finalizados e o botão Novo inventário destacados" loading="lazy" src="../../imagens/04.02/02-inventario.png" /></p>
 <h2 id="de-um-nome-ao-inventario">Dê um nome ao inventário</h2>
 <p>Digite um nome que ajude a encontrar depois. Exemplo: "Contagem de insumos - outubro". Clique em <strong>Confirmar</strong>.</p>
 <p><img alt="Janela Criar novo inventário com o nome e o botão Confirmar destacados" loading="lazy" src="../../imagens/04.02/03-nome.png" /></p>
 <h2 id="abra-o-inventario">Abra o inventário</h2>
-<p>Na lista <strong>Em aberto</strong>, clique nos <strong>três pontinhos</strong> do inventário e depois em <strong>Produtos</strong>.</p>
+<p>Na lista <strong>Em aberto</strong>, clique nos <strong>três pontinhos</strong> do inventário e depois em <strong>Produtos</strong>. No mesmo menu ficam <strong>Editar</strong> (o nome) e <strong>Excluir</strong>.</p>
 <p><img alt="Menu do inventário com a opção Produtos destacada" loading="lazy" src="../../imagens/04.02/04-menu-produtos.png" /></p>
-<p>Leia o aviso amarelo no topo e clique em <strong>Adicionar produto</strong>.</p>
+<p>Leia o aviso amarelo no topo: o inventário <strong>salva sozinho</strong> cada produto que você adiciona ou altera. Clique em <strong>Adicionar produto</strong>.</p>
 <p><img alt="Aviso sobre produtos com movimentação e o botão Adicionar produto destacados" loading="lazy" src="../../imagens/04.02/05-aviso.png" /></p>
 <h2 id="escolha-os-produtos-que-vai-contar">Escolha os produtos que vai contar</h2>
-<p>Use a busca ou a categoria para filtrar, marque a caixinha de cada produto e clique em <strong>Adicionar ao inventário</strong>, no rodapé.</p>
+<p>Marque a caixinha de cada produto e clique em <strong>Adicionar ao inventário</strong>, no rodapé. Para achar mais rápido, use a busca, o <strong>Filtrar por categoria</strong> ou o filtro (funil), que separa por <strong>Categoria</strong>, <strong>Fornecedor</strong>, faixa de <strong>Valor</strong> e produtos <strong>com ou sem opções</strong>.</p>
 <p><img alt="Busca de produtos e a caixinha do Pão de hambúrguer destacadas" loading="lazy" src="../../imagens/04.02/06-adicionar.png" /></p>
-<p>Se forem muitos produtos, use <strong>Importar produtos</strong> (planilha) ou <strong>Exportar produtos</strong> para imprimir a lista e contar no papel.</p>
+<p>Se forem muitos produtos, use <strong>Importar produtos</strong> (planilha).</p>
 <h2 id="informe-a-quantidade-contada">Informe a quantidade contada</h2>
-<p>Para cada produto:</p>
+<p>Para cada produto, digite em <strong>Novo saldo</strong> a quantidade que você <strong>contou</strong>. A <strong>Diferença</strong> aparece na hora.</p>
 <ul>
-<li><strong>Saldo:</strong> quanto o sistema diz que tem.</li>
-<li><strong>Novo saldo:</strong> quanto você <strong>contou</strong>.</li>
-<li><strong>Custo Unitário:</strong> o custo de cada unidade.</li>
-<li><strong>Diferença:</strong> calculada sozinha. Negativa quando falta mercadoria; positiva quando sobra.</li>
-<li><strong>Atualizar custo:</strong> marque se quiser que o custo informado passe a valer para o produto.</li>
+<li>Deixe <strong>Atualizar custo desmarcado</strong> no inventário comum: o sistema ajusta só a diferença e mantém os custos dos lotes.</li>
+<li>Marque <strong>Atualizar custo</strong> só quando quiser trocar o custo do produto, e preencha o <strong>Custo Unitário</strong> certo.</li>
 </ul>
 <p><img alt="Linha do produto com Saldo 100, Novo saldo 95, Custo, Diferença -5 e os botões Salvar e Finalizar destacados" loading="lazy" src="../../imagens/04.02/07-contagem.png" /></p>
-<p>Para parar e continuar depois, clique em <strong>Salvar</strong>: o inventário fica em <strong>Em aberto</strong>.</p>
+<p>Exemplo com <strong>Atualizar custo</strong> marcado no Pão (Novo saldo 97, custo R$ 1,50):</p>
+<p><img alt="Novo saldo, Custo Unitário, Diferença e Atualizar custo marcado no Pão destacados" loading="lazy" src="../../imagens/04.02/10-atualizar-custo.png" /></p>
+<p>Nos <strong>três pontinhos</strong> da linha, <strong>Excluir</strong> tira o produto do inventário. Para parar e continuar depois, clique em <strong>Salvar</strong>: o inventário fica em <strong>Em aberto</strong>.</p>
 <h2 id="finalize-o-inventario">Finalize o inventário</h2>
-<p>Quando terminar a contagem, clique em <strong>Finalizar</strong> e confirme. Depois de finalizado, <strong>não dá mais para editar</strong> a contagem. Se ainda não terminou, use <strong>Salvar e finalizar depois</strong>.</p>
+<p>Antes, confira se <strong>todos</strong> os produtos da lista têm o <strong>Novo saldo</strong> preenchido e se a <strong>Diferença</strong> faz sentido. Clique em <strong>Finalizar</strong> e confirme. Depois de finalizado, <strong>não dá mais para editar</strong> a contagem. Se ainda não terminou, use <strong>Salvar e finalizar depois</strong>.</p>
 <p><img alt="Janela Finalizar inventário com as opções Salvar e finalizar depois e Finalizar destacada" loading="lazy" src="../../imagens/04.02/08-finalizar.png" /></p>
 <h2 id="confira-o-resultado">Confira o resultado</h2>
 <p>O inventário vai para a aba <strong>Finalizados</strong>, com a data de início e a data final.</p>
 <p><img alt="Aba Finalizados com o inventário finalizado destacado" loading="lazy" src="../../imagens/04.02/09-finalizados.png" /></p>
-<p>No <strong>Balanço</strong> do estoque, o produto passa a ter o saldo contado (no exemplo, 95). No histórico do produto, o ajuste aparece como uma movimentação da categoria <strong>Ajustes de Estoque</strong>. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
+<p>No <strong>Balanço</strong> do estoque, o produto passa a ter o saldo contado (no exemplo, 95). No histórico do produto, o ajuste aparece como movimentação da categoria <strong>Ajustes de Estoque</strong>. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Tenha uma rotina.</strong> Conte os itens mais caros ou que mais somem toda semana e o estoque inteiro uma vez por mês.</li>
+<li><strong>Conte com a loja parada</strong> ou fora do horário de vendas. Venda durante a contagem bagunça o resultado.</li>
+<li><strong>Conte por partes.</strong> Um inventário por categoria ou por fornecedor (use o filtro) é mais fácil de conferir.</li>
+<li><strong>Imprima a lista</strong> com <strong>Exportar produtos</strong> e conte no papel; depois só digite.</li>
+<li><strong>Investigue diferenças grandes</strong> antes de finalizar: pode ser uma nota de compra não lançada ou uma unidade de medida errada.</li>
+<li><strong>Use Atualizar custo com cuidado.</strong> Ele refaz o estoque do produto com o custo novo; no dia a dia, deixe desmarcado.</li>
+<li><strong>Dê a entrada inicial antes</strong> do primeiro inventário.</li>
+</ul>
 </div>
 <h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
 <summary>Finalizei e o saldo não mudou</summary>
-<p>O produto provavelmente <strong>nunca teve movimentação</strong> de estoque. Dê a entrada inicial (categoria <strong>Quant. Inicial</strong>) e, se precisar, faça um novo inventário.</p>
+<p>O produto provavelmente <strong>nunca teve movimentação</strong> de estoque. O sistema finaliza sem avisar. Dê a entrada inicial (categoria <strong>Quant. Inicial</strong>) e, se precisar, faça um novo inventário.</p>
 </details>
 <details class="question">
 <summary>O produto com variações (tamanho, sabor) não aparece para adicionar</summary>
-<p>Produtos com variações só aparecem no inventário depois da <strong>primeira entrada</strong> no estoque.</p>
+<p>Produtos com variações só podem entrar no inventário depois da <strong>primeira entrada</strong> no estoque, como diz o aviso amarelo da tela.</p>
 </details>
 <details class="question">
 <summary>Errei a contagem e já finalizei</summary>
-<p>O inventário finalizado não pode ser editado. Faça um ajuste com <strong>Registrar entrada</strong> ou <strong>Registrar saída</strong> (categoria Ajustes de Estoque), ou um novo inventário só com esse produto.</p>
+<p>O inventário finalizado não pode ser editado. No histórico do produto, exclua as movimentações de <strong>Ajustes de Estoque</strong> geradas pelo inventário e conte de novo, ou faça um novo inventário só com esse produto. Veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>, pergunta "Lancei a quantidade ou o custo errado".</p>
+</details>
+<details class="question">
+<summary>Marquei Atualizar custo e o histórico mostra uma saída e uma entrada grandes</summary>
+<p>É o esperado: com <strong>Atualizar custo</strong>, o sistema tira todo o saldo antigo e lança a quantidade contada de novo, com o custo informado. O saldo final é o que você contou.</p>
+</details>
+<details class="question">
+<summary>Digitei um custo, mas ele não mudou nada</summary>
+<p>Sem <strong>Atualizar custo</strong> marcado, o custo digitado no inventário é ignorado: o ajuste usa o custo dos lotes que já existem.</p>
 </details>
 <p><strong>Relacionados:</strong> <a href="../entrada-de-estoque/">Como dar entrada no estoque</a> · <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a></p>
-<p><span class="palavras-chave">inventário contagem de estoque balanço contar estoque ajuste de estoque novo saldo diferença finalizar inventário estoque físico perda sobra falta</span></p>
+<p><span class="palavras-chave">inventário contagem de estoque balanço contar estoque ajuste de estoque novo saldo diferença finalizar inventário estoque físico perda sobra falta atualizar custo custo unitário lote exportar produtos importar produtos filtro por fornecedor inventário não ajustou</span></p>
 
 
 
