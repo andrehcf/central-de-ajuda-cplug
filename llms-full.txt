@@ -1377,9 +1377,39 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/importar-p
 
 # Como importar produtos de uma planilha
 
-10 minutos · 7 passos · Atualizado em 30/10/2026
+15 minutos · 7 passos · Atualizado em 31/10/2026
 
 Tem muitos produtos para cadastrar? Em vez de criar um por um, preencha a **planilha modelo** do sistema e envie tudo de uma vez. Cada linha da planilha vira um produto.
+
+## Entenda o conceito
+
+A importação é o jeito mais rápido de colocar o cardápio ou o catálogo inteiro no sistema. Ela é mais útil quando você está **começando a usar a CPlug** ou **vindo de outro sistema** e já tem a lista de produtos numa planilha.
+
+**Como o sistema lê a planilha:**
+
+- Cada **coluna** é um campo do cadastro do produto (nome, preço, categoria...). Por isso a primeira linha, com os nomes das colunas, não pode ser mudada.
+- Cada **linha** é um produto novo.
+- A **Categoria** e a **Unidade de Medida** são procuradas **pelo nome**. Se você escrever "Bebida" e no sistema estiver "Bebidas", o sistema não encontra. É por isso que elas precisam existir antes e ser escritas igual.
+- O **Código** vira o **SKU** do produto: é a "identidade" dele. Por isso não pode se repetir.
+
+**O que a importação já faz por você:**
+
+- Cria os produtos com nome, categoria, preço e unidade.
+- Lança o **Estoque inicial** no estoque. No teste, as quantidades 24, 30 e 24 apareceram na lista de produtos como "24 em estoque", "30 em estoque" e "24 em estoque".
+- Coloca os produtos na **Lista Padrão** de preços.
+- Grava os dados fiscais que estiverem na planilha, como **NCM**, **Origem** e **CFOP**.
+
+**O que você completa depois:**
+
+- Os **grupos de ICMS e PIS/COFINS**, se não vieram na planilha. Sem eles, o produto fica **Pendente** em **Parâmetros fiscais**. Veja [Como configurar os dados fiscais de um produto](parametros-fiscais.md).
+- Foto, variações, adicionais e ficha técnica, pela tela do produto.
+
+**Importar ou editar?** O botão **Importar** tem duas opções:
+
+- **Importar produtos:** **cria produtos novos**. É o assunto deste manual.
+- **Editar produtos:** **altera produtos que já existem**, usando outra planilha modelo, a **Planilha Modelo - Edição de Produtos**. Use essa opção para mudar preços ou dados de muitos produtos de uma vez.
+
+**Como a importação acontece:** em três etapas. Primeiro o sistema **confere** a planilha, depois mostra o resultado para você **revisar**, e só então **importa**, em segundo plano. Enquanto isso, você pode continuar usando o sistema. O sistema faz **uma importação por vez**.
 
 !!! info "Antes de começar"
     - As **categorias** e as **unidades de medida** que você vai usar na planilha precisam **já estar cadastradas**. Veja [Como cadastrar uma categoria](cadastrar-categoria.md) e [Como cadastrar uma unidade de medida](cadastrar-unidade-de-medida.md).
@@ -1467,6 +1497,18 @@ Dica: para ver os mais novos primeiro, clique no botão de **ordenar** (as duas 
 
 Pronto! Abra um dos produtos para conferir os dados. Se precisar, complete o cadastro (foto, variações, adicionais) pela tela do produto.
 
+!!! warning "Depois de importar, confira os parâmetros fiscais"
+    Abra **Produtos → Parâmetros fiscais**. Os produtos importados sem os grupos de ICMS e PIS/COFINS aparecem como **Pendente**. Use a **Edição em lote** para completar todos de uma vez antes de vender com nota.
+
+!!! tip "Boas práticas"
+    - **Faça um teste pequeno primeiro.** Importe 3 a 5 produtos, confira se ficaram certos e só depois envie a planilha completa. Um erro em 500 linhas dá muito mais trabalho para corrigir.
+    - **Cadastre categorias e unidades antes** e copie os nomes exatamente como estão no sistema.
+    - **Use códigos simples:** letras maiúsculas, números e hífen, sem espaços. Exemplo: CHA-LATA. Fica fácil de digitar e de achar depois.
+    - **Escreva valores só com números e vírgula:** 7,00, e não "R$ 7,00".
+    - **Peça os dados fiscais ao contador antes**, e já preencha na planilha. Assim os produtos chegam prontos para a nota.
+    - **Guarde uma cópia da planilha.** Ela é o registro do que foi importado e ajuda se precisar refazer algo.
+    - **Não envie a mesma planilha de novo** para corrigir algo: a importação cria produtos novos. Para mudar produtos que já existem, use **Importar → Editar produtos** ou a tela do produto.
+
 ## Deu algum problema?
 
 ??? question "Apareceu \"O arquivo contém mais de uma planilha\""
@@ -1481,11 +1523,17 @@ Pronto! Abra um dos produtos para conferir os dados. Se precisar, complete o cad
     Confira se a **Categoria** e a **Unidade de Medida** estão escritas igual ao cadastro, se o **Código** não se repete e se os valores são números. Corrija e importe só essas linhas de novo.
 
 ??? question "Preciso mudar o preço de muitos produtos de uma vez"
-    Para isso existe a opção **Importar → Editar produtos**, que altera produtos que já existem. Não use a **Importar produtos** para isso: ela cria produtos novos.
+    Para isso existe a opção **Importar → Editar produtos**, que altera produtos que já existem, com a **Planilha Modelo - Edição de Produtos**. Não use a **Importar produtos** para isso: ela cria produtos novos. Para mudar o preço de uma lista de preços específica, use o **Atualizar em lote** da lista (veja [Como criar uma lista de preços](lista-de-precos.md)).
+
+??? question "Importei, mas o produto aparece como Pendente nos parâmetros fiscais"
+    A planilha não trouxe os grupos de **ICMS** e **PIS/COFINS**. Complete em **Produtos → Parâmetros fiscais**, de preferência com a **Edição em lote**.
+
+??? question "O aviso \"Importação concluída\" não some da tela de produtos"
+    É só um aviso: os produtos já foram importados e podem ser usados normalmente. Clique no **X**, à direita do aviso, para fechá-lo.
 
 **Relacionados:** [Como cadastrar um produto](cadastrar-produto.md) · [Como configurar os dados fiscais de um produto](parametros-fiscais.md) · [Como dar entrada no estoque](../estoque/entrada-de-estoque.md)
 
-Palavras-chave: importar produtos planilha excel xlsx importação em massa em lote cadastrar vários produtos de uma vez planilha modelo modelo de importação subir planilha upload estoque inicial ncm cfop código de origem abas mais de uma planilha erro importar apenas itens válidos
+Palavras-chave: importar produtos planilha excel xlsx importação em massa em lote cadastrar vários produtos de uma vez planilha modelo modelo de importação subir planilha upload estoque inicial ncm cfop código de origem abas mais de uma planilha erro importar apenas itens válidos editar produtos planilha de edição migrar de outro sistema sku pendente fiscal
 
 ---
 Código: 03.10 | Módulo: Produtos | Tela no sistema: /dashboard/catalog/products
