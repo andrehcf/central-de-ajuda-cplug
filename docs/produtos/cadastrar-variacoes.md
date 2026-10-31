@@ -4,12 +4,12 @@ description: Passo a passo para criar variações como Tamanho, Cor ou Sabor, qu
 codigo: "03.03"
 modulo: Produtos
 tela: /dashboard/catalog/variations-and-options
-atualizado: 2026-10-29
+atualizado: 2026-10-30
 ---
 
 # Como cadastrar variações
 
-<div class="cplug-meta" markdown>:material-clock-outline: 2 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 29/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 4 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
 
 Uma variação é uma escolha que o produto tem, como **Tamanho** (P, M, G), **Cor** (Azul, Preto) ou **Sabor** (Calabresa, Frango). Você cadastra a variação uma vez só e depois usa em vários produtos.
 
@@ -32,15 +32,35 @@ Uma janela abre do lado direito.
 3. Clique em **+ Adicionar opção** e digite a próxima. Exemplo: Médio. Repita até colocar todas.
 4. Clique em **Continuar**.
 
-O valor em R$ ao lado de cada opção só é usado em produtos montados, como pizza com sabores de preços diferentes. Para tamanho e cor, deixe R$ 0,00.
-
 ![Janela Nova variação com o nome, as opções Pequeno, Médio e Grande, o Adicionar opção e o Continuar destacados](../imagens/03.03/02-opcoes.png){ loading=lazy }
 
-## Clique em "Salvar"
+Cada opção tem mais campos, todos opcionais:
 
-A janela mostra as **Configurações de cálculo**. Para tamanho, cor e casos parecidos, não precisa mexer em nada. Clique no botão verde **Salvar**.
+- **Imagem:** o quadrado do lado esquerdo, para uma foto da opção.
+- **R$:** o preço da opção. Só é usado quando a variação compõe o preço do produto, como os sabores de uma pizza com preços diferentes. Para tamanho e cor, deixe **R$ 0,00**.
+- **Descrição (opcional)** e **Código (opcional)**.
+- A alça **≡**, à esquerda, muda a ordem das opções. A lixeira vermelha, à direita, apaga a opção.
+
+![Opção Calabresa com a imagem, o valor R$ 40,00, a Descrição, o Código e a alça de ordem destacados](../imagens/03.03/02b-campos-da-opcao.png){ loading=lazy }
+
+## Ajuste as configurações de cálculo e salve
+
+A aba **Configurações de cálculo** define quantas opções o cliente escolhe e como o preço é calculado. Para tamanho, cor e casos parecidos, deixe como vem (de 1 até 1, **Soma total**) e clique no botão verde **Salvar**.
 
 ![Tela de Configurações de cálculo com o botão Salvar destacado](../imagens/03.03/03-calculo.png){ loading=lazy }
+
+Para variações que formam o preço, como os sabores de uma pizza, ajuste:
+
+- **Quantidade – Cliente pode escolher de ... Até ...:** o mínimo e o máximo de opções. Com mínimo **1**, a tela avisa que "o cliente precisa selecionar uma opção". Com mínimo **0**, a escolha é opcional. Exemplo: pizza de até 2 sabores, de 1 até 2.
+- **Cobrar valor a partir de quantidade selecionada pelo cliente:** ao marcar, aparece o campo **Cobrar a partir de**, com a quantidade de escolhas a partir da qual a cobrança começa.
+- **Método de cálculo para o preço da variação:** a frase abaixo dos botões explica cada um. Exemplo com Calabresa a R$ 40,00 e Frango a R$ 50,00, escolhendo os dois:
+    - **Soma total:** preço do produto + a soma das opções (R$ 40 + R$ 50 = R$ 90).
+    - **Média:** preço do produto + a média das opções (R$ 45).
+    - **Maior preço:** preço do produto + a opção mais cara (R$ 50). É o jeito comum de cobrar pizza meio a meio.
+
+![Configurações de cálculo com a quantidade de 0 até 2, Cobrar a partir de 2 e o método Soma total destacados](../imagens/03.03/03b-calculo-detalhe.png){ loading=lazy }
+
+Clique em **Salvar**.
 
 ## Confira a mensagem
 
@@ -51,7 +71,7 @@ Aparece a mensagem **Variação criada com sucesso** no canto de cima.
 </div>
 
 !!! success "Como saber que deu certo"
-    A variação já pode ser usada nos produtos.
+    A variação aparece na lista, com as opções e a coluna **Produtos** (quantos produtos a usam), e já pode ser usada nos produtos. Nos **três pontinhos** da linha você tem **Editar**, **Duplicar** (cria uma cópia, útil para fazer uma variação parecida) e **Excluir**.
 
 ## Deu algum problema?
 
@@ -66,4 +86,4 @@ Aparece a mensagem **Variação criada com sucesso** no canto de cima.
 
 **Próximo passo:** [Como cadastrar um produto com variações](cadastrar-produto-com-variacoes.md).
 
-<span class="palavras-chave">grade tamanho cor sabor modelo atributo opção variação</span>
+<span class="palavras-chave">grade tamanho cor sabor modelo atributo opção variação pizza meio a meio dois sabores soma total média maior preço configurações de cálculo quantidade mínima máxima cobrar a partir de duplicar</span>
