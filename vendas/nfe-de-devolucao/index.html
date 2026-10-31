@@ -1,0 +1,2100 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Emita a nota fiscal de devolução de uma venda (o cliente devolveu) ou de uma compra (você devolve ao fornecedor), pelo atalho Devolver NF-e ou pela emissão manual, com a chave da nota original.">
+      
+      
+      
+        <link rel="canonical" href="https://andrehcf.github.io/central-de-ajuda-cplug/vendas/nfe-de-devolucao/">
+      
+      
+        <link rel="prev" href="../cancelar-nota/">
+      
+      
+        <link rel="next" href="../../ponto-de-venda/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Como emitir uma NF-e de devolução - Central de Ajuda CPlug</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/cplug.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#como-emitir-uma-nf-e-de-devolucao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Central de Ajuda CPlug" class="md-header__button md-logo" aria-label="Central de Ajuda CPlug" data-md-component="logo">
+      
+  <img src="../../assets/logo-cplug.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Central de Ajuda CPlug
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Como emitir uma NF-e de devolução
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/andrehcf/central-de-ajuda-cplug" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    central-de-ajuda-cplug
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Central de Ajuda CPlug" class="md-nav__button md-logo" aria-label="Central de Ajuda CPlug" data-md-component="logo">
+      
+  <img src="../../assets/logo-cplug.png" alt="logo">
+
+    </a>
+    Central de Ajuda CPlug
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/andrehcf/central-de-ajuda-cplug" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    central-de-ajuda-cplug
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../primeiros-passos/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    01. Primeiros passos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. Primeiros passos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primeiros-passos/trocar-de-empresa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como trocar de empresa ou loja
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primeiros-passos/usar-o-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como usar o menu do sistema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../clientes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    02. Clientes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. Clientes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clientes/cadastrar-cliente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um cliente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../produtos/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    03. Produtos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. Produtos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-categoria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar uma categoria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-unidade-de-medida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar uma unidade de medida
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-variacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar variações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/cadastrar-produto-com-variacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um produto com variações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/lista-de-precos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como criar uma lista de preços
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/ficha-tecnica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como montar uma ficha técnica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/parametros-fiscais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar os dados fiscais de um produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/importar-produtos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como importar produtos de uma planilha
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../produtos/adicionais-e-sugestoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar adicionais e sugestões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../estoque/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    04. Estoque
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            04. Estoque
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estoque/entrada-de-estoque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como dar entrada no estoque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estoque/inventario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como fazer um inventário
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estoque/importar-nota-de-compra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como importar a nota fiscal de compra (XML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estoque/saldo-do-estoque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como consultar o saldo e o histórico do estoque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    05. Vendas
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            05. Vendas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emitir-nfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como emitir uma NF-e de venda (dentro e fora do estado)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nota-rejeitada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como resolver uma nota fiscal rejeitada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancelar-nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cancelar, inutilizar ou corrigir uma nota fiscal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Como emitir uma NF-e de devolução
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Como emitir uma NF-e de devolução
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Nesta página">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os-dois-sentidos-da-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Os dois sentidos da devolução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-quatro-pecas-que-fazem-uma-nota-ser-de-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      As quatro peças que fazem uma nota ser de devolução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atalho-ou-emissao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atalho ou emissão manual?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encontre-a-nota-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontre a nota original
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escolha-o-cfop-e-as-quantidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escolha o CFOP e as quantidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-o-cabecalho-da-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira o cabeçalho da nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-os-itens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira os itens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-o-pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira o pagamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salve-a-nota-de-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salve a nota de devolução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmita-para-a-sefaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmita para a Sefaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucao-pela-emissao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolução pela emissão manual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ponto-de-venda/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    06. Ponto de venda
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            06. Ponto de venda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ponto-de-venda/cadastrar-ponto-de-venda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar um ponto de venda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ponto-de-venda/configurar-terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar o terminal de vendas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../financas/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    07. Finanças
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            07. Finanças
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financas/conta-bancaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar uma conta bancária
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financas/formas-de-pagamento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como cadastrar formas de pagamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuracoes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    10. Configurações
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            10. Configurações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuracoes/emissao-de-notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar a emissão de notas fiscais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuracoes/natureza-de-operacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar a natureza de operação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuracoes/tipo-de-nota-no-pdv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como definir o tipo de nota emitida no PDV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Nesta página">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Nesta página
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os-dois-sentidos-da-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Os dois sentidos da devolução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-quatro-pecas-que-fazem-uma-nota-ser-de-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      As quatro peças que fazem uma nota ser de devolução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atalho-ou-emissao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atalho ou emissão manual?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encontre-a-nota-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontre a nota original
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escolha-o-cfop-e-as-quantidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escolha o CFOP e as quantidades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-o-cabecalho-da-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira o cabeçalho da nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-os-itens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira os itens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-o-pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira o pagamento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salve-a-nota-de-devolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salve a nota de devolução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmita-para-a-sefaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmita para a Sefaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucao-pela-emissao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolução pela emissão manual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+    <span class="cplug-selo">05.12</span>
+  
+  
+                  
+
+  
+    <a href="https://github.com/andrehcf/central-de-ajuda-cplug/edit/main/docs/vendas/nfe-de-devolucao.md" title="Editar esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="como-emitir-uma-nf-e-de-devolucao">Como emitir uma NF-e de devolução</h1>
+<div class="cplug-meta">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 15 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 7 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 31/10/2026</p>
+</div>
+<p>Quando uma mercadoria <strong>volta</strong>, a operação fiscal precisa ser desfeita com uma nota própria: a <strong>NF-e de devolução</strong>. Ela "anula" a nota original, total ou parcialmente, e por isso sempre <strong>aponta para ela</strong> pela chave de acesso.</p>
+<p>Este manual mostra os dois caminhos: o atalho <strong>Devolver NF-e</strong>, que preenche quase tudo sozinho, e a <strong>emissão manual</strong>, para os casos em que o atalho não existe.</p>
+<div class="admonition danger">
+<p class="admonition-title">Devolução mexe com impostos: alinhe com o contador</p>
+<p>O CFOP, a situação do ICMS e quem deve emitir a nota mudam de empresa para empresa. Use os exemplos deste manual para entender o caminho no sistema, mas <strong>confirme os códigos com o seu contador</strong> antes de emitir de verdade.</p>
+</div>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<h3 id="os-dois-sentidos-da-devolucao">Os dois sentidos da devolução</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Devolução de <strong>venda</strong></th>
+<th>Devolução de <strong>compra</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O que aconteceu</strong></td>
+<td>O <strong>cliente</strong> devolveu algo que você vendeu.</td>
+<td><strong>Você</strong> devolve ao <strong>fornecedor</strong> algo que comprou.</td>
+</tr>
+<tr>
+<td><strong>Tipo de operação</strong></td>
+<td><strong>Entrada</strong> (a mercadoria volta para a loja).</td>
+<td><strong>Saída</strong> (a mercadoria sai da loja).</td>
+</tr>
+<tr>
+<td><strong>Nota referenciada</strong></td>
+<td>A sua NF-e de venda.</td>
+<td>A NF-e que o fornecedor emitiu para você.</td>
+</tr>
+<tr>
+<td><strong>Destinatário</strong></td>
+<td>O cliente.</td>
+<td>O fornecedor, <strong>o mesmo que emitiu a nota original</strong>.</td>
+</tr>
+<tr>
+<td><strong>Onde aparece no sistema</strong></td>
+<td>Aba <strong>Devoluções/Entradas</strong>.</td>
+<td>Aba <strong>Vendas/Saídas</strong>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Cliente com Inscrição Estadual</p>
+<p>Quando o cliente é uma <strong>empresa contribuinte do ICMS</strong>, em geral é <strong>ele</strong> quem emite a nota de devolução para você, e a sua loja só recebe essa nota. Confirme a regra com o contador.</p>
+</div>
+<h3 id="as-quatro-pecas-que-fazem-uma-nota-ser-de-devolucao">As quatro peças que fazem uma nota ser de devolução</h3>
+<ol>
+<li><strong>Finalidade de emissão: 4 - Devolução de mercadoria.</strong> É ela que diz à Sefaz que a nota é uma devolução.</li>
+<li><strong>Chave de acesso da NF-e referenciada.</strong> Os 44 números da nota original. É <strong>obrigatória</strong>: sem ela, não existe devolução.</li>
+<li>
+<p><strong>CFOP de devolução.</strong> Ele segue uma lógica simples:</p>
+<ul>
+<li>começa com <strong>1</strong> (entrada) ou <strong>5</strong> (saída) dentro do estado;</li>
+<li>começa com <strong>2</strong> (entrada) ou <strong>6</strong> (saída) para outro estado.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Dentro do estado</th>
+<th>Outro estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Devolução de venda comum</td>
+<td>1202</td>
+<td>2202</td>
+</tr>
+<tr>
+<td>Devolução de venda com substituição tributária (ICMS ST)</td>
+<td>1411</td>
+<td>2411</td>
+</tr>
+<tr>
+<td>Devolução de compra comum</td>
+<td>5202</td>
+<td>6202</td>
+</tr>
+<tr>
+<td>Devolução de compra com substituição tributária</td>
+<td>5411</td>
+<td>6411</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Pagamento: 90 - Sem pagamento</strong>, com valor <strong>0,00</strong>. A devolução não é uma venda nova; o dinheiro (troca, estorno) é resolvido fora da nota.</p>
+</li>
+</ol>
+<p>Os <strong>produtos, quantidades e valores</strong> são os mesmos da nota original. Na devolução <strong>parcial</strong>, só mudam as quantidades.</p>
+<h3 id="atalho-ou-emissao-manual">Atalho ou emissão manual?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Atalho <strong>Devolver NF-e</strong></th>
+<th><strong>Emissão manual</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quando aparece</strong></td>
+<td>Só nas notas <strong>geradas a partir de uma venda</strong> (com número na coluna <strong>Venda</strong>).</td>
+<td>Sempre, pelo botão <strong>Emitir NF-e</strong>.</td>
+</tr>
+<tr>
+<td><strong>O que preenche</strong></td>
+<td>Nota e chave referenciadas, cliente, produtos, finalidade, tipo, pagamento.</td>
+<td>Nada: você preenche tudo.</td>
+</tr>
+<tr>
+<td><strong>Use para</strong></td>
+<td>Devolução de venda feita pelo sistema.</td>
+<td>Notas avulsas, devolução de compra ao fornecedor e qualquer caso sem o atalho.</td>
+</tr>
+</tbody>
+</table>
+<p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar. Dados de clientes e CNPJs aparecem cobertos de cinza de propósito.</p>
+<div class="passos">
+<h2 id="encontre-a-nota-original">Encontre a nota original</h2>
+<p>No menu do lado esquerdo, clique em <strong>Vendas</strong> e depois em <strong>NF-e</strong>. Na aba <strong>Vendas/Saídas</strong>, ache a nota que vai ser devolvida. Ela precisa estar <strong>Transmitido</strong> (autorizada) e ter um número na coluna <strong>Venda</strong>.</p>
+<p>Clique nos <strong>três pontinhos</strong> da nota e em <strong>Devolver NF-e</strong>.</p>
+<p><img alt="Nota da venda 211 e a opção Devolver NF-e destacadas no menu" loading="lazy" src="../../imagens/05.12/01-devolver-menu.png" /></p>
+<h2 id="escolha-o-cfop-e-as-quantidades">Escolha o CFOP e as quantidades</h2>
+<p>Na janela <strong>Devolver NF-e</strong>:</p>
+<ul>
+<li><strong>CFOP:</strong> a lista mostra os CFOPs de entrada. Digite o número para filtrar. Exemplo: <strong>1202</strong> para a devolução de uma venda comum dentro do estado.</li>
+<li><strong>Quantidade:</strong> quanto de cada produto está voltando. A lista vai de <strong>0</strong> até a quantidade vendida. Para devolver só parte da nota, diminua a quantidade; para deixar um produto de fora, escolha <strong>0</strong>.</li>
+</ul>
+<p>Clique em <strong>Confirmar devolução</strong>. Sem o CFOP, o botão não faz nada.</p>
+<p><img alt="Janela Devolver NF-e com o CFOP 1202, a Quantidade e o botão Confirmar devolução destacados" loading="lazy" src="../../imagens/05.12/02-janela-devolver.png" /></p>
+<h2 id="confira-o-cabecalho-da-nota">Confira o cabeçalho da nota</h2>
+<p>Abre a tela <strong>Nota Fiscal Eletrônica de Devolução</strong>, já preenchida:</p>
+<ul>
+<li><strong>Número da NF-e referenciada</strong> e <strong>Chave de acesso da NF-e referenciada:</strong> a nota original. Ficam travados.</li>
+<li><strong>Natureza de operação:</strong> "Devolução de venda".</li>
+<li><strong>Finalidade de emissão da NF-e:</strong> <strong>4 - Devolução de mercadoria</strong>.</li>
+<li><strong>Tipo de operação:</strong> <strong>Entrada</strong>.</li>
+<li><strong>Cliente:</strong> o mesmo da venda, com os dados do cadastro.</li>
+</ul>
+<p>O <strong>Número</strong> da nova nota é o próximo da série: a devolução usa a mesma numeração das notas de venda.</p>
+<p><img alt="Nota e chave referenciadas, Natureza Devolução de venda, Finalidade 4 e Tipo Entrada destacados" loading="lazy" src="../../imagens/05.12/03-formulario-devolucao.png" /></p>
+<h2 id="confira-os-itens">Confira os itens</h2>
+<p>Os produtos vêm da nota original, com <strong>quantidade, valor, NCM e impostos travados</strong>, para garantir que a devolução seja igual à venda. O <strong>CFOP</strong> escolhido na janela já aparece em cada item.</p>
+<p><img alt="Quantidade e valores travados e o CFOP 1202 do item destacados" loading="lazy" src="../../imagens/05.12/04-itens-devolucao.png" /></p>
+<h2 id="confira-o-pagamento">Confira o pagamento</h2>
+<p>Em <strong>Dados do pagamento</strong>, o sistema já coloca <strong>90 - Sem pagamento</strong>, com valor <strong>0,00</strong>, e trava o campo. É o certo para devolução.</p>
+<p><img alt="Meio de Pagamento 90 - Sem pagamento com valor 0,00 destacado" loading="lazy" src="../../imagens/05.12/05-pagamento-devolucao.png" /></p>
+<h2 id="salve-a-nota-de-devolucao">Salve a nota de devolução</h2>
+<p>No fim da tela, clique em <strong>Salvar nota de devolução</strong>. Aparece <strong>NFE inserida com sucesso</strong> e a nota entra na aba <strong>Devoluções/Entradas</strong> como <strong>Pendente</strong>: salva, mas ainda não enviada à Sefaz.</p>
+<p><img alt="Botão Salvar nota de devolução destacado" loading="lazy" src="../../imagens/05.12/06-salvar-devolucao.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Esta tela vale uma vez só</p>
+<p>Se você sair da tela de devolução sem salvar, ou tentar abri-la de novo, aparece <strong>"A devolução expirou ou é inválida. Reinicie pela listagem."</strong> Volte para <strong>Vendas → NF-e</strong> e clique em <strong>Devolver NF-e</strong> de novo.</p>
+</div>
+<h2 id="transmita-para-a-sefaz">Transmita para a Sefaz</h2>
+<p>Em <strong>Vendas → NF-e</strong>, clique na aba <strong>Devoluções/Entradas</strong>. Nos <strong>três pontinhos</strong> da nota <strong>Pendente</strong>, clique em <strong>Transmitir NF-e</strong>.</p>
+<p><img alt="Aba Devoluções/Entradas, a nota Pendente e a opção Transmitir NF-e destacadas" loading="lazy" src="../../imagens/05.12/07-devolucao-transmitir.png" /></p>
+<p>Quando a Sefaz autoriza, o status muda para <strong>Transmitido</strong>. Pronto: a devolução está registrada.</p>
+<p><img alt="Notas de devolução com o status Transmitido destacado" loading="lazy" src="../../imagens/05.12/08-devolucao-transmitida.png" /></p>
+</div>
+<h2 id="devolucao-pela-emissao-manual">Devolução pela emissão manual</h2>
+<p>Use este caminho quando o atalho <strong>Devolver NF-e</strong> está apagado (nota avulsa, sem venda) ou para devolver mercadoria ao <strong>fornecedor</strong>. O formulário é o mesmo da venda (veja <a href="../emitir-nfe/">Como emitir uma NF-e de venda</a>); mudam estes campos:</p>
+<ol>
+<li>Em <strong>Vendas → NF-e</strong>, clique em <strong>Emitir NF-e</strong>.</li>
+<li>Em <strong>Chaves de acesso da NF-e referenciada</strong>, cole os <strong>44 números</strong> da nota original. Se a devolução juntar mais de uma nota, use <strong>Incluir outra chave</strong>.</li>
+<li>Em <strong>Cliente</strong>, escolha quem vai receber a nota:<ul>
+<li>devolução de venda: o <strong>cliente</strong> que comprou;</li>
+<li>devolução de compra: o <strong>fornecedor</strong> que emitiu a nota original.</li>
+</ul>
+</li>
+<li>Em <strong>Dados da operação</strong>:<ul>
+<li><strong>Natureza de operação:</strong> "Devolução de venda" ou "Devolução de compra".</li>
+<li><strong>Tipo de operação:</strong> <strong>Entrada</strong> (devolução de venda) ou <strong>Saída</strong> (devolução de compra).</li>
+<li><strong>Finalidade de emissão da NF-e:</strong> <strong>4 - Devolução de mercadoria</strong>.</li>
+</ul>
+</li>
+<li>Em <strong>Itens</strong>, coloque os mesmos produtos, quantidades e valores da nota original. Escolha o <strong>CFOP de devolução</strong>: na nota manual, ele vem <strong>vazio</strong>.</li>
+<li>Confira a <strong>Situação do PIS</strong> e a <strong>Situação do COFINS</strong>. O produto pode trazer um código de <strong>saída</strong>, como "49 - Outras Operações de Saída". Na devolução de venda, que é uma <strong>entrada</strong>, troque pelo código que o contador indicar. No teste, usamos "99 - Outras Operações".</li>
+<li>Em <strong>Dados do pagamento</strong>, escolha <strong>90 - Sem pagamento</strong> e deixe o valor em <strong>0,00</strong>.</li>
+<li>Clique em <strong>Salvar</strong> e depois transmita, como no último passo acima.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Prefira o atalho</strong> sempre que ele existir: ele copia os itens e os impostos da venda e evita erro de digitação.</li>
+<li><strong>Devolva exatamente o que voltou.</strong> Quantidade e valor iguais aos da nota original; na devolução parcial, só a parte devolvida.</li>
+<li><strong>Tenha a chave da nota original à mão</strong> antes de começar. Ela está no DANFE e no XML.</li>
+<li><strong>Na devolução de compra, o destinatário é o fornecedor</strong> que emitiu a nota original. Qualquer outro gera recusa.</li>
+<li><strong>Confira o estoque e o financeiro depois.</strong> A nota cuida da parte fiscal; a troca, o estorno ou o crédito do cliente são feitos à parte.</li>
+<li><strong>Guarde o DANFE da devolução</strong> junto com o da venda: um explica o outro numa fiscalização.</li>
+</ul>
+</div>
+<h2 id="deu-algum-problema">Deu algum problema?</h2>
+<details class="question">
+<summary>A opção Devolver NF-e está apagada</summary>
+<p>O atalho só funciona nas notas <strong>geradas a partir de uma venda</strong> (com número na coluna <strong>Venda</strong>). Para notas avulsas, use a <a href="#devolucao-pela-emissao-manual">emissão manual</a>.</p>
+</details>
+<details class="question">
+<summary>Cliquei em Confirmar devolução e nada aconteceu</summary>
+<p>Falta escolher o <strong>CFOP</strong>. Escolha na lista e confirme de novo.</p>
+</details>
+<details class="question">
+<summary>Apareceu \"A devolução expirou ou é inválida\"</summary>
+<p>A tela de devolução vale uma vez só. Volte para <strong>Vendas → NF-e</strong> e clique em <strong>Devolver NF-e</strong> de novo.</p>
+</details>
+<details class="question">
+<summary>Rejeição 1194: Destinatário da NF-e deve ser igual ao Emitente da NF referenciada</summary>
+<p>Na devolução de <strong>compra</strong>, o destinatário precisa ser <strong>o fornecedor que emitiu a nota original</strong>. Confira se o cliente escolhido é esse fornecedor e se a chave é mesmo da nota dele.</p>
+</details>
+<details class="question">
+<summary>Quero devolver só parte da nota</summary>
+<p>No atalho, diminua a <strong>Quantidade</strong> de cada produto na janela <strong>Devolver NF-e</strong> (ou escolha <strong>0</strong> para deixar o produto de fora). Na emissão manual, coloque só os itens e as quantidades devolvidas.</p>
+</details>
+<details class="question">
+<summary>Não acho a nota de devolução na lista</summary>
+<p>A devolução de <strong>venda</strong> é uma nota de <strong>entrada</strong>: ela fica na aba <strong>Devoluções/Entradas</strong>. A devolução de <strong>compra</strong> é de <strong>saída</strong> e fica em <strong>Vendas/Saídas</strong>.</p>
+</details>
+<details class="question">
+<summary>A Sefaz recusou a nota</summary>
+<p>Passe o mouse sobre o status <strong>Falhou</strong> para ver o motivo. Veja <a href="../nota-rejeitada/">Como resolver uma nota fiscal rejeitada</a>.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../emitir-nfe/">Como emitir uma NF-e de venda</a> · <a href="../nota-rejeitada/">Como resolver uma nota fiscal rejeitada</a> · <a href="../cancelar-nota/">Como cancelar, inutilizar ou corrigir uma nota fiscal</a></p>
+<p><span class="palavras-chave">nf-e de devolução nota de devolução devolver nf-e devolução de venda devolução de compra devolução ao fornecedor cliente devolveu troca finalidade 4 devolução de mercadoria chave de acesso referenciada nota referenciada cfop 1202 2202 1411 2411 5202 6202 5411 6411 sem pagamento 90 rejeição 1194 devolução parcial devoluções entradas nota de entrada</span></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../cancelar-nota/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Como cancelar, inutilizar ou corrigir uma nota fiscal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Como cancelar, inutilizar ou corrigir uma nota fiscal
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../ponto-de-venda/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Ponto de venda">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Ponto de venda
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 CPlug · Central de Ajuda
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
