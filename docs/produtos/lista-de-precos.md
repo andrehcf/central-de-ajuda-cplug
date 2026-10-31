@@ -4,12 +4,12 @@ description: Tenha preços diferentes para o mesmo produto conforme o horário, 
 codigo: "03.06"
 modulo: Produtos
 tela: /dashboard/catalog/price-lists
-atualizado: 2026-10-30
+atualizado: 2026-10-31
 ---
 
 # Como criar uma lista de preços
 
-<div class="cplug-meta" markdown>:material-clock-outline: 10 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 10 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
 
 A **lista de preços** permite cobrar **outro preço** pelo mesmo produto em situações específicas, sem mexer no preço normal. Exemplos:
 
@@ -26,7 +26,7 @@ Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 ## Abra as listas de preço
 
-No menu do lado esquerdo, clique em **Produtos** e depois em **Lista de preços**. A **Lista Padrão** é a dos preços normais dos produtos.
+No menu do lado esquerdo, clique em **Produtos** e depois em **Lista de preços**. A **Lista Padrão** é a dos preços normais dos produtos: todo produto novo entra nela. A tela mostra cada lista com a **Validade** (por exemplo, "Não expira" ou um período) e os **Canais de venda**. O botão **Exportar** gera um arquivo com as listas.
 
 Clique em **Nova lista**, no canto de cima, à direita.
 
@@ -88,7 +88,18 @@ No exemplo: Batata Frita R$ 11,90, Refrigerante Lata R$ 5,00 e X-Burger R$ 21,90
 
 ![Coluna Preço base, coluna Preço da lista com os novos preços e a mensagem Preço atualizado com sucesso destacadas](../imagens/03.06/09-precos.png){ loading=lazy }
 
-Nas outras colunas você também pode definir um **Preço atacado** e a **Quantidade mínima atacado**: a partir dessa quantidade, vale o preço de atacado.
+Nas outras colunas:
+
+- **Preço atacado** e **Quantidade mínima atacado:** a partir dessa quantidade, vale o preço de atacado. Exemplo: Refrigerante Lata a R$ 4,50 a partir de 12 latas. Como o Preço da lista, salva sozinho ao sair do campo, com a mensagem **Preço atualizado com sucesso**.
+- **Soma atacado:** a caixinha marca o produto como elegível ao atacado (é o nome do campo no sistema). Na dúvida sobre como usar, fale com o suporte.
+- **Opções:** em produtos com variações, quantas opções o produto tem.
+
+No topo da tela ficam também:
+
+- **Ativos** e **Inativos:** separam os produtos ativos e inativos da lista.
+- **Atualizar em lote:** muda os preços por planilha. Clique em **Baixar modelo (.XLSX)**, preencha a planilha e envie em **Importar produtos**. Ligue **Considerar novos produtos da planilha?** se a planilha trouxer produtos que ainda não estão na lista. Depois clique em **Importar**.
+- **Exportar produtos:** gera um arquivo com os produtos e preços da lista.
+- **Editar**, em **Informações Gerais:** volta ao cadastro da lista (nome, canais, modos e validade).
 
 ## Defina a prioridade entre as listas
 
@@ -114,4 +125,4 @@ Quando duas listas valem ao mesmo tempo, o sistema usa a ordem de prioridade. Na
 
 **Relacionados:** [Como cadastrar um produto](cadastrar-produto.md) · [Como cadastrar um produto com variações](cadastrar-produto-com-variacoes.md)
 
-<span class="palavras-chave">lista de preços tabela de preço preço diferente happy hour promoção delivery atacado preço atacado quantidade mínima canal de venda modo de pedido validade horário dias específicos período prioridade priorizar conflito categoria de cliente gerenciar produtos preço base preço da lista</span>
+<span class="palavras-chave">lista de preços tabela de preço preço diferente happy hour promoção delivery atacado preço atacado quantidade mínima canal de venda modo de pedido validade horário dias específicos período prioridade priorizar conflito categoria de cliente gerenciar produtos preço base preço da lista soma atacado atualizar em lote planilha importar exportar ativos inativos</span>
