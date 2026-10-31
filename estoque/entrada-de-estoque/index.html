@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Registre a entrada (ou a saída) de mercadorias no estoque sem nota fiscal - estoque inicial, ajustes, devoluções - com quantidade e custo.">
+        <meta name="description" content="Registre a entrada (ou a saída) de mercadorias no estoque sem nota fiscal - estoque inicial, ajustes, devoluções - e entenda como o custo de cada entrada vira lote e custo médio.">
       
       
       
@@ -873,6 +873,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cada-entrada-vira-um-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cada entrada vira um lote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-saida-consome-os-lotes-mais-antigos-primeiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      A saída consome os lotes mais antigos primeiro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-custo-da-entrada-alimenta-o-custo-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      O custo da entrada alimenta o custo médio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-categorias-de-movimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      As categorias de movimentação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-e-quando-nao-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar e quando não usar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-o-registro-de-entrada" class="md-nav__link">
     <span class="md-ellipsis">
       Abra o registro de entrada
@@ -1516,6 +1576,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cada-entrada-vira-um-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cada entrada vira um lote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-saida-consome-os-lotes-mais-antigos-primeiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      A saída consome os lotes mais antigos primeiro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-custo-da-entrada-alimenta-o-custo-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      O custo da entrada alimenta o custo médio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-categorias-de-movimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      As categorias de movimentação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-e-quando-nao-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar e quando não usar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-o-registro-de-entrada" class="md-nav__link">
     <span class="md-ellipsis">
       Abra o registro de entrada
@@ -1598,7 +1718,7 @@
 
 <h1 id="como-dar-entrada-no-estoque">Como dar entrada no estoque</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 5 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 5 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 30/10/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 10 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 5 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 31/10/2026</p>
 </div>
 <p>Use este manual para lançar mercadorias no estoque <strong>sem nota fiscal de compra</strong>. Exemplos:</p>
 <ul>
@@ -1610,59 +1730,156 @@
 <p class="admonition-title">Comprou com nota fiscal?</p>
 <p>Se a mercadoria veio com nota do fornecedor, não lance à mão: <strong>importe o XML da nota</strong>. Assim entram também o custo, o fornecedor e a conta a pagar. Veja <a href="../importar-nota-de-compra/">Como importar a nota fiscal de compra (XML)</a>.</p>
 </div>
-<p>Neste exemplo damos o <strong>estoque inicial</strong> dos ingredientes do X-Burger: 100 pães, 100 hambúrgueres, 200 fatias de queijo e 100 porções de molho.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>Pense no estoque como uma <strong>prateleira com etiquetas</strong>. Toda mercadoria que chega ganha uma etiqueta com a data e quanto custou. Toda mercadoria que sai leva junto a etiqueta de onde veio. É assim que o sistema sabe <strong>quanto você tem</strong> e <strong>quanto custou o que você vendeu ou perdeu</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>O que é</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movimentação</strong></td>
+<td>Cada lançamento no estoque: uma <strong>entrada</strong> (soma) ou uma <strong>saída</strong> (subtrai).</td>
+</tr>
+<tr>
+<td><strong>Categoria de movimentação</strong></td>
+<td>O <strong>motivo</strong> do lançamento: estoque inicial, compra, perda, devolução... Serve para você entender depois o que aconteceu.</td>
+</tr>
+<tr>
+<td><strong>Saldo</strong></td>
+<td>Quanto existe agora: a soma das entradas menos as saídas.</td>
+</tr>
+<tr>
+<td><strong>Lote</strong></td>
+<td>Cada entrada vira um lote, com quantidade e <strong>custo próprios</strong>. O número do lote é o número da entrada.</td>
+</tr>
+<tr>
+<td><strong>Custo médio</strong></td>
+<td>A média do custo de todas as entradas do produto, pesada pela quantidade.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cada-entrada-vira-um-lote">Cada entrada vira um lote</h3>
+<p>No exemplo, o pão de hambúrguer teve duas entradas:</p>
+<ul>
+<li><strong>Lote 714:</strong> 100 pães a <strong>R$ 1,20</strong> (estoque inicial);</li>
+<li><strong>Lote 722:</strong> 10 pães a <strong>R$ 2,00</strong> (o pão ficou mais caro).</li>
+</ul>
+<p>O sistema não mistura os dois: cada lote guarda o seu custo.</p>
+<h3 id="a-saida-consome-os-lotes-mais-antigos-primeiro">A saída consome os lotes mais antigos primeiro</h3>
+<p>Quando sai mercadoria, o sistema tira <strong>primeiro do lote mais antigo</strong>. Esse método se chama <strong>PEPS</strong>: o primeiro que entra é o primeiro que sai.</p>
+<p>No teste, uma saída de 97 pães levou os <strong>95</strong> que restavam do lote 714 (a R$ 1,20) e <strong>2</strong> do lote 722 (a R$ 2,00). O custo dessa saída foi <strong>R$ 118,00</strong>. Você vê essa conta clicando em <strong>Composição</strong>, no histórico do produto:</p>
+<p><img alt="Registro de composição de saída: 95 unidades do lote 714 a R$ 1,20 e 2 do lote 722 a R$ 2,00, total R$ 118,00, destacados" loading="lazy" src="../../imagens/04.01/06-composicao-saida.png" /></p>
+<p>Na tela de saída também dá para <strong>escolher o lote</strong> à mão: nos três pontinhos da linha do produto, clique em <strong>Editar</strong>. Aparece a lista dos lotes, com o custo e o saldo de cada um. Se você não escolher, vale o PEPS.</p>
+<p><img alt="Tela Selecionar lote com os lotes 714 (R$ 1,20, saldo 95) e 722 (R$ 2,00, saldo 10) destacados" loading="lazy" src="../../imagens/04.01/05-lotes.png" /></p>
+<h3 id="o-custo-da-entrada-alimenta-o-custo-medio">O custo da entrada alimenta o custo médio</h3>
+<p>O custo que você digita na entrada também entra no <strong>custo médio</strong> do produto. No exemplo: (100 × R$ 1,20 + 10 × R$ 2,00) ÷ 110 = <strong>R$ 1,27</strong>.</p>
+<p>Esse número aparece no cadastro do produto, em <strong>Cálculo de custo</strong>, junto com o <strong>Histórico de custo</strong> (cada entrada, com data e custo). É dele que o sistema parte para sugerir o preço de venda.</p>
+<p><img alt="Calcular custo do produto com o Custo médio R$ 1,27 e o Histórico de custo destacados" loading="lazy" src="../../imagens/04.01/07-custo-medio.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Custo errado na entrada = custo errado em tudo</p>
+<p>Se você deixar o custo em <strong>0</strong> ou digitar errado, o lote fica com esse custo. As saídas dele vão parecer de graça, e o custo médio e o lucro ficam errados. <strong>Sempre preencha o custo.</strong></p>
+</div>
+<h3 id="as-categorias-de-movimentacao">As categorias de movimentação</h3>
+<p>As categorias que aparecem dependem do tipo:</p>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>Saída</th>
+<th>Nas duas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quant. Inicial</strong>, <strong>Compra</strong></td>
+<td><strong>Venda</strong>, <strong>Perda</strong>, <strong>Consumo Interno</strong>, <strong>Reposição</strong></td>
+<td><strong>Ajustes de Estoque</strong>, <strong>Devolução</strong>, <strong>Produção</strong>, <strong>Transferência de Estoque</strong></td>
+</tr>
+</tbody>
+</table>
+<p>As categorias do sistema não podem ser editadas. Se precisar de outro motivo, crie uma categoria sua em <strong>Estoque → Categorias de Movimentação</strong>.</p>
+<h3 id="quando-usar-e-quando-nao-usar">Quando usar e quando não usar</h3>
+<ul>
+<li><strong>Use</strong> para o estoque inicial, compras sem nota, devoluções e correções.</li>
+<li><strong>Não use</strong> para compras com nota: importe o XML (veja o quadro acima).</li>
+<li><strong>Não use</strong> para levar mercadoria de um estoque para outro: use <strong>Transferências</strong>. O link fica logo abaixo do <strong>Tipo de movimentação</strong>.</li>
+<li><strong>Não use</strong> para corrigir a contagem inteira da loja: faça um <strong>inventário</strong> (veja <a href="../inventario/">Como fazer um inventário</a>).</li>
+</ul>
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
 <div class="passos">
 <h2 id="abra-o-registro-de-entrada">Abra o registro de entrada</h2>
 <p>No menu do lado esquerdo, clique em <strong>Estoque</strong> e depois em <strong>Estoque</strong>. Na linha do estoque (por exemplo, "Estoque 1"), clique nos <strong>três pontinhos</strong> e depois em <strong>Registrar entrada</strong>.</p>
 <p><img alt="Lista de estoques com o menu aberto e a opção Registrar entrada destacada" loading="lazy" src="../../imagens/04.01/01-menu-estoque.png" /></p>
-<p>No mesmo menu ficam <strong>Registrar saída</strong>, <strong>Balanço</strong> (o saldo) e <strong>Inventários</strong> (a contagem).</p>
+<p>No mesmo menu ficam <strong>Registrar saída</strong>, <strong>Balanço</strong> (o saldo de cada produto) e <strong>Inventários</strong> (a contagem).</p>
 <h2 id="escolha-o-tipo-a-categoria-e-a-data">Escolha o tipo, a categoria e a data</h2>
 <ul>
-<li><strong>Tipo de movimentação:</strong> <strong>Entrada de estoque</strong>. (Para tirar mercadoria, use <strong>Saída de estoque</strong>.)</li>
-<li><strong>Categoria de movimentação:</strong> o motivo da entrada. As mais usadas:<ul>
-<li><strong>Quant. Inicial:</strong> o estoque inicial da loja;</li>
-<li><strong>Ajustes de Estoque:</strong> correções do dia a dia;</li>
-<li><strong>Compra:</strong> compra sem nota fiscal;</li>
-<li><strong>Devolução:</strong> mercadoria que voltou de um cliente;</li>
-<li><strong>Produção:</strong> produto feito na própria loja.</li>
+<li><strong>Tipo de movimentação:</strong> <strong>Entrada de estoque</strong>. Para tirar mercadoria, use <strong>Saída de estoque</strong>.</li>
+<li><strong>Categoria de movimentação:</strong> o motivo. Para o estoque inicial, <strong>Quant. Inicial</strong>. A tela abre com <strong>Ajustes de Estoque</strong>: troque se o motivo for outro.</li>
+<li><strong>Data da operação:</strong> vem com a data de hoje. Mude se estiver lançando algo que aconteceu antes.</li>
 </ul>
-</li>
-<li><strong>Data da operação:</strong> vem com a data de hoje.</li>
-</ul>
+<p>Escolher a categoria certa não muda o saldo, mas é ela que conta a história do estoque depois. Uma perda lançada como "Ajustes" some no meio dos outros ajustes.</p>
 <p><img alt="Tipo de movimentação, lista de categorias com Quant. Inicial e Data da operação destacados" loading="lazy" src="../../imagens/04.01/02-categorias.png" /></p>
 <h2 id="adicione-os-produtos">Adicione os produtos</h2>
 <p>Em <strong>Produtos</strong>, clique em <strong>Pesquisar</strong>, digite parte do nome e clique no produto. Repita para cada produto. Para cada um, preencha:</p>
 <ul>
 <li><strong>Quantidade:</strong> quanto está entrando. A coluna <strong>Saldo</strong> mostra quanto havia antes.</li>
-<li><strong>Preço de custo:</strong> quanto custou cada unidade. Esse valor é usado no cálculo do custo e do lucro.</li>
+<li><strong>Preço de custo:</strong> quanto custou <strong>cada unidade</strong>. O campo começa em <strong>0</strong>: não esqueça de preencher. Esse valor vira o custo do lote e entra no custo médio.</li>
 </ul>
+<p>Para tirar um produto da lista antes de salvar, use os <strong>três pontinhos</strong> da linha e <strong>Excluir</strong>.</p>
 <p><img alt="Pesquisa de produtos e os quatro insumos com Quantidade e Preço de custo preenchidos, e o botão Salvar destacados" loading="lazy" src="../../imagens/04.01/03-produtos.png" /></p>
 <h2 id="salve-a-entrada">Salve a entrada</h2>
-<p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. O sistema volta para a lista de estoques.</p>
+<p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. Aparece a mensagem <strong>Movimentação criada com sucesso</strong> e o sistema volta para a lista de estoques.</p>
 <h2 id="confira-o-saldo">Confira o saldo</h2>
 <p>Nos <strong>três pontinhos</strong> do estoque, clique em <strong>Balanço</strong>. Os produtos aparecem com a nova quantidade.</p>
 <p><img alt="Balanço do estoque com os saldos dos insumos atualizados destacados" loading="lazy" src="../../imagens/04.01/04-saldo.png" /></p>
+<p>No <strong>Balanço</strong>, os três pontinhos de cada produto também têm <strong>Registrar entrada</strong>, <strong>Registrar saída</strong> e <strong>Movimentações</strong> (o histórico). É um atalho para lançar um produto só.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Estoque inicial é o primeiro passo do inventário</p>
 <p>O inventário só consegue ajustar produtos que <strong>já tiveram alguma movimentação</strong>. Por isso, ao começar a usar o sistema, dê sempre a <strong>entrada inicial</strong> (categoria <strong>Quant. Inicial</strong>) antes de fazer inventários. Veja <a href="../inventario/">Como fazer um inventário</a>.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Sempre preencha o custo.</strong> Use o custo real de cada unidade. Se não souber, peça a nota ou o recibo do fornecedor.</li>
+<li><strong>Escolha a categoria pelo motivo real.</strong> Perda é perda, consumo interno é consumo interno. Assim o relatório mostra para onde vai a sua mercadoria.</li>
+<li><strong>Lance no dia em que aconteceu.</strong> Se precisar lançar depois, ajuste a <strong>Data da operação</strong>.</li>
+<li><strong>Confira o Balanço depois de salvar.</strong> Um zero a mais (1000 em vez de 100) é fácil de digitar e difícil de achar depois.</li>
+<li><strong>Errou? Corrija o lançamento, não compense.</strong> Excluir o lançamento errado e lançar de novo deixa o histórico limpo. Uma "saída para compensar" deixa dois lançamentos errados no histórico.</li>
+<li><strong>Comprou com nota? Importe o XML.</strong> É mais rápido e já traz custo e fornecedor.</li>
+</ul>
+</div>
 <h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
 <summary>O produto não aparece na pesquisa</summary>
-<p>Confira se ele está cadastrado na <strong>mesma loja</strong> e com <strong>Controlar quantidade em estoque</strong> ligado no cadastro do produto.</p>
+<p>Confira se ele está cadastrado na <strong>mesma loja</strong> e se, no cadastro do produto, aba <strong>Estoque</strong>, a opção <strong>Controlar quantidade em estoque</strong> está ligada. Ela "define se o produto terá movimentações em estoque".</p>
 </details>
 <details class="question">
-<summary>Lancei a quantidade errada</summary>
-<p>Abra o histórico do produto (Balanço → três pontinhos → <strong>Movimentações</strong>) e cancele o lançamento errado. Depois, lance de novo. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
+<summary>Lancei a quantidade ou o custo errado</summary>
+<p>No <strong>Balanço</strong>, clique nos três pontinhos do produto e em <strong>Movimentações</strong>. Na linha do lançamento errado, clique na <strong>lixeira</strong> e confirme em <strong>Excluir</strong>. Atenção: a exclusão é <strong>permanente</strong> e muda o saldo. Depois, lance de novo do jeito certo. Veja <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a>.</p>
 </details>
 <details class="question">
 <summary>Quero tirar mercadoria (perda, quebra, consumo)</summary>
-<p>Use <strong>Registrar saída</strong>, no mesmo menu do estoque, e escolha a categoria que explica o motivo.</p>
+<p>Use <strong>Registrar saída</strong>, no mesmo menu do estoque, e escolha a categoria que explica o motivo: <strong>Perda</strong>, <strong>Consumo Interno</strong>... A saída não pede custo: ele vem dos lotes.</p>
+</details>
+<details class="question">
+<summary>Por que o custo da saída ficou diferente do custo do cadastro?</summary>
+<p>Porque a saída usa o custo dos <strong>lotes</strong> que ela consumiu, começando pelo mais antigo (PEPS). Clique em <strong>Composição</strong>, no histórico do produto, para ver de quais lotes saiu cada unidade.</p>
+</details>
+<details class="question">
+<summary>O custo médio do produto ficou estranho</summary>
+<p>Ele é a média de <strong>todas</strong> as entradas. Uma entrada lançada com custo 0 ou com um zero a mais puxa a média. Confira o <strong>Histórico de custo</strong>, em <strong>Cálculo de custo</strong> no cadastro do produto, e corrija a entrada errada.</p>
+</details>
+<details class="question">
+<summary>Quero passar mercadoria de um estoque para outro</summary>
+<p>Não lance uma saída e uma entrada: use <strong>Transferências</strong> (o link fica abaixo do <strong>Tipo de movimentação</strong>).</p>
 </details>
 <p><strong>Relacionados:</strong> <a href="../inventario/">Como fazer um inventário</a> · <a href="../saldo-do-estoque/">Como consultar o saldo e o histórico do estoque</a> · <a href="../importar-nota-de-compra/">Como importar a nota fiscal de compra (XML)</a></p>
-<p><span class="palavras-chave">entrada de estoque estoque inicial quantidade inicial registrar entrada registrar saída ajuste de estoque movimentação devolução produção preço de custo lançar estoque sem nota categoria de movimentação</span></p>
+<p><span class="palavras-chave">entrada de estoque estoque inicial quantidade inicial registrar entrada registrar saída ajuste de estoque movimentação devolução produção perda consumo interno preço de custo custo médio lote PEPS primeiro que entra primeiro que sai composição de saída selecionar lote lançar estoque sem nota categoria de movimentação excluir movimentação</span></p>
 
 
 
