@@ -11,7 +11,9 @@ atualizado: 2026-10-30
 
 <div class="cplug-meta" markdown>:material-clock-outline: 1 minuto · :material-format-list-numbered: 3 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
 
-Se a sua empresa tem **mais de uma loja ou filial**, cada uma tem os seus próprios produtos, clientes, estoque, vendas e notas fiscais. Por isso, antes de cadastrar ou consultar qualquer coisa, confira **em qual loja você está**.
+Se a sua empresa tem **mais de uma loja ou filial**, cada uma tem o seu próprio estoque, os seus caixas, as suas vendas e as suas notas fiscais. Por isso, antes de lançar ou consultar qualquer coisa, confira **em qual loja você está**.
+
+Alguns cadastros, como **produtos**, **clientes** e **contas bancárias**, podem valer para mais de uma loja. No cadastro, o campo **Selecionar unidades** escolhe em quais lojas ele aparece. Por padrão, vem marcada só a loja em que você está.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
 
@@ -23,7 +25,7 @@ O nome da loja atual aparece **no topo do menu**, do lado esquerdo.
 
 ## Escolha a outra loja
 
-Clique no nome da loja. Abre a lista com todas as lojas que o seu usuário pode acessar. Clique na loja desejada.
+Clique no nome da loja. Abre a lista com todas as lojas que o seu usuário pode acessar. A loja principal aparece com a palavra **Matriz** ao lado do nome. Clique na loja desejada.
 
 Se a lista for grande, digite parte do nome no campo **Buscar...**, no topo da lista.
 
@@ -31,7 +33,7 @@ Se a lista for grande, digite parte do nome no campo **Buscar...**, no topo da l
 
 ## Confira a troca
 
-A tela recarrega e o nome da nova loja aparece no topo do menu. A partir daqui, **tudo o que você fizer vale para essa loja**.
+A tela recarrega e o nome da nova loja aparece no topo do menu. Os números do painel inicial passam a ser os da nova loja. A partir daqui, **tudo o que você fizer vale para essa loja**.
 
 ![Tela inicial com o nome da nova loja destacado no topo do menu](../imagens/01.02/02-empresa-trocada.png){ loading=lazy }
 
@@ -46,8 +48,8 @@ A tela recarrega e o nome da nova loja aparece no topo do menu. A partir daqui, 
     O seu usuário não tem acesso a essa loja. Peça ao administrador da sua empresa para liberar.
 
 ??? question "Cadastrei um produto e ele não aparece na outra loja"
-    Os produtos, clientes e o estoque são separados por loja. Troque para a outra loja e confira lá.
+    O produto só aparece nas lojas marcadas no cadastro. Abra o produto, vá em **Unidades**, clique em **Selecionar unidades** e marque a outra loja. O mesmo vale para clientes e contas bancárias. Já o estoque é sempre de cada loja.
 
-**Relacionados:** [Como usar o menu do sistema](usar-o-menu.md)
+**Relacionados:** [Como usar o menu do sistema](usar-o-menu.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md)
 
-<span class="palavras-chave">trocar loja trocar empresa filial unidade mudar de loja selecionar empresa outra loja matriz cnpj dados de outra loja</span>
+<span class="palavras-chave">trocar loja trocar empresa filial unidade mudar de loja selecionar empresa outra loja matriz cnpj dados de outra loja selecionar unidades compartilhar produto entre lojas</span>

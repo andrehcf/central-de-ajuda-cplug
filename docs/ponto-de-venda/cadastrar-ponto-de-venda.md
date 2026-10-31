@@ -82,6 +82,6 @@ Pronto! O novo ponto de venda já aparece na lista de pontos de venda.
 ??? question "Apareceu uma conta nova em Contas bancárias"
     É normal: cada PDV ganha uma conta com o mesmo nome, do tipo **Conta PDV**.
 
-**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como escolher o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
+**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como definir o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
 
 <span class="palavras-chave">ponto de venda pdv caixa novo pdv cadastrar caixa caixa balcão impressora ponto de impressão balança periféricos aplicativo offline pdv 2.0 pdv móvel servidor padrão computador servidor conta pdv ativo inativo marcar como ativo editar excluir</span>

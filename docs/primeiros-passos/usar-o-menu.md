@@ -49,9 +49,9 @@ O que fica em cada grupo:
 | **Finanças** | Contas a pagar e a receber, extratos, contas bancárias, conciliação, plano de contas e contabilidade. |
 | **Relatórios** | Relatórios de vendas, caixa, lucro, estoque, segurança e o relatório dinâmico. |
 | **Ponto de venda** | Pontos de venda, caixas, mesas, comandas, tela da cozinha (KDS) e as configurações do caixa. |
-| **Dispositivos** | Terminais, totens e o download dos aplicativos. |
+| **Dispositivos** | **Terminais & Dispositivos** (PDVs, totens, computador servidor, cardápio digital) e **Baixar aplicativos**. |
 | **Meu plano** | O plano contratado da sua empresa. |
-| **Configurações** | Dados da empresa, filiais, usuários, formas de pagamento, impressoras, integrações e a parte **Fiscal** (certificado, notas e impostos). |
+| **Configurações** | Dados do negócio, unidades e filiais, usuários, formas de pagamento, **Periféricos** (impressoras e balanças), integrações, modelos de etiqueta e a parte **Fiscal** (certificado, notas e impostos). |
 
 !!! warning "Versão anterior"
     O item **Versão anterior** abre o sistema antigo. Use só se o suporte pedir.
@@ -85,17 +85,20 @@ No canto inferior direito fica o **botão de atendimento** (o fone de ouvido), p
 
 Clique na **bolinha com a sua inicial**, no canto de baixo, à esquerda. Aparecem:
 
-- **Meu perfil:** seus dados de usuário.
+- **Meu perfil:** seu nome, e-mail e usuário de login. Ali você também troca a senha (**Alterar senha**), liga a **Autenticação de Dois Fatores** (mais segurança no login) e vê as **Sessões ativas**, ou seja, onde o seu usuário está conectado.
 - **Meu plano:** o plano da empresa.
-- **Minha empresa:** os dados do negócio.
-- **Informações:** detalhes do sistema.
+- **Minha empresa:** abre os **Dados da empresa** da loja em que você está.
+- **Informações:** mostra a **versão do sistema**. Útil quando o suporte perguntar.
 - **Sair:** encerra o acesso. Use sempre que usar um computador compartilhado.
 
 ![Menu do perfil aberto com Meu perfil, Meu plano, Minha empresa, Informações e Sair destacados (nome do usuário coberto)](../imagens/01.03/06-perfil.png){ loading=lazy }
 
 ## Faça o tour de boas-vindas
 
-Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apresenta os menus. Clique em **Próximo** para seguir, ou em **Pular** para fechar.
+Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apresenta os menus Produtos, Estoque, Clientes, Finanças e Configurações.
+
+- **Próximo:** segue para a etapa seguinte. Na última, **Tudo pronto para começar!**, clique em **Concluir**. Depois disso, o tour não aparece mais.
+- **Pular:** fecha o tour só por agora. Ele volta a aparecer quando você abre outra tela. Para não ver mais, vá até o fim e clique em **Concluir**.
 
 ![Janela Bem-vindo(a) do tour com os botões Pular e Próximo destacados](../imagens/01.03/07-tour.png){ loading=lazy }
 
@@ -112,9 +115,12 @@ Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apres
 ??? question "Os dados que aparecem são de outra loja"
     Confira o nome da loja no topo do menu. Veja [Como trocar de empresa ou loja](trocar-de-empresa.md).
 
+??? question "O tour Bem-vindo(a)! aparece toda hora"
+    O **Pular** só fecha o tour por agora. Clique em **Próximo** até a última etapa e depois em **Concluir**. Assim ele não aparece mais.
+
 ??? question "A tela ficou escura"
     O **modo escuro** foi ligado. Clique no ícone do topo, à direita, para voltar ao modo claro.
 
 **Relacionados:** [Como trocar de empresa ou loja](trocar-de-empresa.md)
 
-<span class="palavras-chave">menu tela inicial dashboard visão geral buscar no menu procurar tela recolher menu ícones ajuda central de ajuda chamados notificações modo escuro tema perfil sair logout trocar loja tour bem-vindo versão anterior</span>
+<span class="palavras-chave">menu tela inicial dashboard visão geral buscar no menu procurar tela recolher menu ícones ajuda central de ajuda chamados notificações modo escuro tema perfil sair logout trocar loja tour bem-vindo pular concluir versão anterior alterar senha dois fatores 2fa sessões ativas versão do sistema minha empresa periféricos</span>
