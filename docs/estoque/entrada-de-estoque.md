@@ -145,7 +145,15 @@ No **Balanço**, os três pontinhos de cada produto também têm **Registrar ent
     Confira se ele está cadastrado na **mesma loja** e se, no cadastro do produto, aba **Estoque**, a opção **Controlar quantidade em estoque** está ligada. Ela "define se o produto terá movimentações em estoque".
 
 ??? question "Lancei a quantidade ou o custo errado"
-    No **Balanço**, clique nos três pontinhos do produto e em **Movimentações**. Na linha do lançamento errado, clique na **lixeira** e confirme em **Excluir**. Atenção: a exclusão é **permanente** e muda o saldo. Depois, lance de novo do jeito certo. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+    No **Balanço**, clique nos três pontinhos do produto e em **Movimentações**. Na linha do lançamento errado, clique na **lixeira** e confirme em **Excluir**. Depois, lance de novo do jeito certo.
+
+    O que acontece ao excluir (testado):
+
+    - O lançamento **sai do saldo** e passa para a aba **Canceladas**, que fica ao lado de **Fechadas**. Ele não volta a contar no estoque.
+    - Excluir uma **saída** devolve as quantidades aos lotes de onde ela tirou.
+    - Excluir uma **entrada** tira o custo dela do **custo médio** e do **Histórico de custo**.
+
+    Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Foi nessa ordem que o teste funcionou. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
 
 ??? question "Quero tirar mercadoria (perda, quebra, consumo)"
     Use **Registrar saída**, no mesmo menu do estoque, e escolha a categoria que explica o motivo: **Perda**, **Consumo Interno**... A saída não pede custo: ele vem dos lotes.
