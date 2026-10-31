@@ -11,6 +11,16 @@ param([string]$SrcDir, [string]$OutRoot)
 Add-Type -AssemblyName System.Drawing
 $p = 'mcp-Claude_Browser-blob-'
 $shots = @(
+  @('05.12', '01-devolver-menu.png', 'chrome:1793444462026-2mdfkj', @(@(538, 638, 26, 22), @(1090, 791, 166, 22)), @(), @(250, 50, 1038, 902)),
+  @('05.12', '02-janela-devolver.png', 'chrome:1793444488086-g9a5qw', @(@(334, 433, 620, 26), @(334, 501, 148, 28), @(821, 548, 134, 30)), @(), @(310, 350, 668, 250)),
+  @('05.12', '03-formulario-devolucao.png', 'chrome:1793444560775-nhhy8t', @(@(312, 312, 756, 50), @(312, 438, 678, 46)), @(@(671, 336, 90, 17), @(396, 626, 98, 16)), @(255, 60, 1000, 600)),
+  @('05.12', '04-itens-devolucao.png', 'chrome:1793444604713-xmrghj', @(@(470, 559, 750, 28), @(315, 508, 600, 28)), @(), @(255, 355, 1000, 440)),
+  @('05.12', '05-pagamento-devolucao.png', 'chrome:1793444618378-up12ac', @(,@(312, 388, 910, 30)), @(), @(255, 300, 1000, 210)),
+  @('05.12', '06-salvar-devolucao.png', 'chrome:1793444632055-iw9dhw', @(,@(325, 806, 182, 38)), @(), @(255, 440, 1000, 430)),
+  @('05.12', '07-devolucao-transmitir.png', 'chrome:1793444688862-0pegdb', @(@(359, 103, 127, 25), @(1089, 395, 60, 22), @(1090, 427, 166, 22)), @(), @(250, 50, 1038, 650)),
+  @('05.12', '08-devolucao-transmitida.png', 'chrome:1793444708796-x0g185', @(,@(1089, 394, 70, 72)), @(), @(250, 50, 1038, 450)),
+  @('05.06', '17-operacao-interestadual.png', 'chrome:1793444870062-widqqi', @(@(650, 143, 192, 26), @(863, 143, 192, 26), @(437, 232, 380, 24)), @(), @(205, 90, 870, 220)),
+  @('05.06', '18-difal.png', 'chrome:1793444870062-pe7d73', @(@(294, 264, 406, 28), @(221, 393, 836, 152)), @(), @(205, 240, 870, 320)),
   @('04.01', '05-lotes.png', '1793440641846-toei02', @(,@(380, 97, 411, 42)), @()),
   @('04.01', '06-composicao-saida.png', '1793440734223-d01umh', @(@(195, 254, 410, 42), @(486, 302, 116, 30)), @()),
   @('04.01', '07-custo-medio.png', '1793440803851-dx0isg', @(@(595, 124, 98, 22), @(497, 190, 295, 64)), @()),
@@ -47,7 +57,9 @@ $shots = @(
 )
 $pen = New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(230, 220, 38, 38)), 3
 foreach ($s in $shots) {
-  $src = Join-Path $SrcDir "$p$($s[2]).jpg"
+  # Prints do Chrome (Claude in Chrome) vêm com outro prefixo: id 'chrome:<id>'.
+  if ($s[2] -like 'chrome:*') { $src = Join-Path $SrcDir ('mcp-claude-in-chrome-blob-' + $s[2].Substring(7) + '.jpg') }
+  else { $src = Join-Path $SrcDir "$p$($s[2]).jpg" }
   if (-not (Test-Path $src)) { Write-Warning "Não achei $src"; continue }
   $outDir = Join-Path $OutRoot $s[0]; New-Item -ItemType Directory -Force $outDir | Out-Null
   $img = [System.Drawing.Image]::FromFile($src)
@@ -59,6 +71,10 @@ foreach ($s in $shots) {
   foreach ($r in $s[4]) { $g.FillRectangle($tarja, $r[0], $r[1], $r[2], $r[3]) }
   $tarja.Dispose()
   foreach ($b in $s[3]) { $g.DrawRectangle($pen, $b[0], $b[1], $b[2], $b[3]) }
-  $bmp.Save((Join-Path $outDir $s[1]), [System.Drawing.Imaging.ImageFormat]::Png)
+  # 6º item opcional: recorte @(x, y, l, a), nas mesmas coordenadas do print.
+  if ($s.Count -gt 5 -and $s[5]) {
+    $c = $s[5]; $crop = $bmp.Clone((New-Object System.Drawing.Rectangle $c[0], $c[1], $c[2], $c[3]), $bmp.PixelFormat)
+    $crop.Save((Join-Path $outDir $s[1]), [System.Drawing.Imaging.ImageFormat]::Png); $crop.Dispose()
+  } else { $bmp.Save((Join-Path $outDir $s[1]), [System.Drawing.Imaging.ImageFormat]::Png) }
   $g.Dispose(); $bmp.Dispose(); $img.Dispose(); $s[1]
 }

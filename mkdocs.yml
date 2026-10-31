@@ -93,6 +93,7 @@ nav:
       - vendas/emitir-nfe.md
       - vendas/nota-rejeitada.md
       - vendas/cancelar-nota.md
+      - vendas/nfe-de-devolucao.md
   - 06. Ponto de venda:
       - ponto-de-venda/index.md
       - ponto-de-venda/cadastrar-ponto-de-venda.md
