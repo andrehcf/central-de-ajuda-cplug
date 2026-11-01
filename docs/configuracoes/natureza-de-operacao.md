@@ -4,18 +4,32 @@ description: Crie regras que trocam automaticamente o CFOP e os grupos de ICMS e
 codigo: "10.08"
 modulo: Configurações
 tela: /dashboard/settings/fiscal-settings/nature-operations
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como configurar a natureza de operação
 
-<div class="cplug-meta" markdown>:material-clock-outline: 5 minutos · :material-format-list-numbered: 5 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 5 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 A **natureza de operação** diz que tipo de operação a nota representa: venda, devolução, transferência, remessa... Cada operação pode exigir **outro CFOP** e **outros impostos** do que os do cadastro do produto.
 
 Aqui você cria **regras "De → Para"**: quando a operação é usada, o sistema troca o código do produto ("De") pelo código da operação ("Para").
 
 **Exemplo:** o produto está cadastrado com o CFOP **5102** (venda dentro do estado). Numa **venda para outro estado**, o CFOP certo é **6102**. A natureza "Venda para outro estado" faz essa troca sozinha.
+
+## Entenda o conceito
+
+O cadastro do produto guarda os códigos fiscais da operação **mais comum** da loja, quase sempre a venda dentro do estado. Mas o mesmo produto pode sair em operações diferentes: venda para outro estado, devolução, remessa... Em vez de cadastrar o produto várias vezes, você cria **naturezas de operação**, que funcionam como uma **tabela de tradução**:
+
+| Peça | O que é |
+| --- | --- |
+| **Natureza** | O nome da operação ("Venda para outro estado"). Ganha um código: 001, 002... |
+| **Regra De → Para** | "Onde estiver **este** código no produto, use **aquele** na nota." |
+| **Tipos de regra** | CFOP, Grupo de ICMS e Grupo de PIS/COFINS. |
+
+Se o código do produto **não** estiver em nenhuma regra **De**, nada é trocado e vai o código do cadastro. Por isso, crie uma regra para **cada** CFOP ou grupo diferente que os seus produtos usam.
+
+Para entender CFOP, grupos e o que muda entre venda estadual e interestadual, veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md) e [Como configurar os dados fiscais de um produto](../produtos/parametros-fiscais.md).
 
 !!! warning "Configuração fiscal avançada"
     Quais naturezas criar e quais códigos usar é decisão do **contador**. Este manual mostra **onde** e **como** cadastrar.
@@ -69,6 +83,12 @@ Só para referência. Confirme os códigos com o contador.
 | Venda para outro estado | 5102 → 6102 |
 | Venda de produto com ST para outro estado | 5405 → 6404 |
 | Devolução de compra ao fornecedor (mesmo estado) | 5102 → 5202 |
+
+!!! tip "Boas práticas"
+    - **Peça ao contador a lista de operações** que a sua empresa faz e crie uma natureza para cada uma.
+    - **Nomes que dizem a operação**: "Venda para outro estado", "Devolução de compra".
+    - **Cubra todos os códigos dos seus produtos**: se uns usam 5102 e outros 5405, crie as duas regras.
+    - **Teste em Homologação** antes de usar uma natureza nova de verdade.
 
 ## Deu algum problema?
 
