@@ -2179,6 +2179,111 @@ No **Balanço** do estoque, o produto passa a ter o saldo contado (no exemplo, 9
 Palavras-chave: inventário contagem de estoque balanço contar estoque ajuste de estoque novo saldo diferença finalizar inventário estoque físico perda sobra falta atualizar custo custo unitário lote exportar produtos importar produtos filtro por fornecedor inventário não ajustou
 
 ---
+Código: 04.03 | Módulo: Estoque | Tela no sistema: /dashboard/stock/storage-locations/transfers
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/transferencia/
+
+# Como transferir mercadorias entre estoques
+
+8 minutos · 5 passos · Atualizado em 01/11/2026
+
+A **transferência** leva mercadoria de um estoque para outro: do depósito para a cozinha, do estoque principal para o freezer do salão. Em um único lançamento, a mercadoria **sai** de um lugar e **entra** no outro.
+
+## Entenda o conceito
+
+Uma empresa pode ter **vários estoques**. Cada um tem o seu próprio saldo, e a transferência é o jeito certo de mover mercadoria entre eles.
+
+**Por que não lançar uma saída e uma entrada?** Porque a transferência faz as duas coisas **ligadas** e **leva o custo junto**. No teste, ao transferir 10 pães do Estoque 1 para o Estoque Cozinha:
+
+- no Estoque 1 saíram 10 pães do lote mais antigo, a **R$ 1,20** cada;
+- no Estoque Cozinha entraram 10 pães, num **lote novo com o mesmo custo de R$ 1,20**.
+
+Ou seja, a mercadoria chega com o mesmo custo, **sem você digitar nada**. Se você lançasse uma saída e uma entrada separadas, teria de digitar o custo da entrada, com risco de errar. Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
+
+No histórico dos produtos, as duas movimentações aparecem com a categoria **Transferência** (na lista de categorias ela se chama **Transferência de Estoque**; veja [Como criar categorias de movimentação](categorias-de-movimentacao.md)).
+
+**Quando usar:** a mercadoria mudou de lugar, mas continua sendo sua (reposição da cozinha, do freezer, de outro depósito). **Quando não usar:** a mercadoria saiu de vez (venda, perda, consumo): aí é uma **saída** de estoque.
+
+!!! info "Antes de começar: os dois estoques precisam existir"
+    Em **Estoque → Estoque**, clique em **Novo estoque** para criar outro. O cadastro pede **Nome**, **Localização do estoque** (as opções são **Próprio**, **De Cliente** e **De Fornecedor**), **Propriedade do estoque** e as **Unidades** (lojas) que têm acesso. Para um estoque dentro da sua própria loja, como a cozinha, use **Próprio** na localização.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra as transferências
+
+No menu do lado esquerdo, clique em **Estoque** e depois em **Transferências**. A lista mostra cada transferência com o **Id**, a **Data**, o **Estoque Saída**, o **Estoque Entrada** e o **Responsável**. A aba **Ativas** mostra as transferências válidas; a aba **Canceladas** guarda as excluídas, só para consulta.
+
+Clique em **Nova transferência**.
+
+[Imagem: Tela Transferências de estoque com o botão Nova transferência e as abas Ativas e Canceladas destacados]
+
+!!! tip "Outro caminho"
+    Na tela **Registrar movimentação** (entrada ou saída de estoque), o link **Transferências**, logo abaixo do Tipo de movimentação, leva para esta mesma tela.
+
+## Escolha os estoques e os produtos
+
+Em **Informações básicas**:
+
+- **Estoque de saída:** de onde a mercadoria sai. No teste, veio preenchido com o **Estoque 1**, o estoque principal.
+- **Estoque de entrada:** para onde ela vai.
+- **Data da operação:** vem com a data de hoje.
+
+Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produto. Na linha, a coluna **Saldo** mostra quanto há no estoque de saída. Digite a **Quantidade** que vai ser transferida.
+
+A linha tem também a coluna **Lote** e os três pontinhos, como na saída de estoque. No teste, sem escolher lote, os pães saíram do lote mais antigo.
+
+## Preencha os dados da transferência
+
+Em **Dados para transferência**:
+
+- **Transportadora:** quem vai levar, se for o caso (as transportadoras ficam em **Estoque → Transportadoras**). É opcional: no teste, ficou em branco.
+- **Nome do responsável:** quem está fazendo a transferência. Aparece na lista.
+- **Observação:** um comentário, com até 120 caracteres. Exemplo: "Reposição da cozinha".
+
+Clique em **Salvar**.
+
+[Imagem: Nova Transferência com o produto e a quantidade, os estoques de saída e de entrada, os dados para transferência e Salvar destacados]
+
+## Confira na lista
+
+A transferência aparece na aba **Ativas**, com o número, a data, os dois estoques e o responsável.
+
+[Imagem: Transferência 16 do Estoque 1 para o Estoque Cozinha, com o responsável, destacada]
+
+## Imprima o documento, se precisar
+
+Nos **três pontinhos** da transferência ficam:
+
+- **Com custos unitários → Download PDF** e **Sem custos unitários → Download PDF:** baixam o documento da transferência, com ou sem os valores. A versão sem custos é a indicada para acompanhar a mercadoria, quando quem recebe não precisa ver quanto ela custou.
+- **Excluir:** desfaz a transferência (veja abaixo).
+
+[Imagem: Menu da transferência com Download PDF com e sem custos unitários e Excluir destacado]
+
+
+
+!!! tip "Boas práticas"
+    - **Transfira, não lance saída e entrada.** Só a transferência leva o custo junto, sem digitar.
+    - **Confira o saldo do estoque de saída** antes de transferir: a linha do produto mostra.
+    - **Preencha o responsável e a observação**: meses depois, explicam por que a mercadoria mudou de lugar.
+    - **Dê nomes claros aos estoques** ("Depósito", "Cozinha", "Freezer do salão").
+
+## Deu algum problema?
+
+??? question "O estoque de entrada que eu quero não aparece"
+    Confira se ele existe em **Estoque → Estoque**. Se existir, abra o cadastro dele e veja o campo **Unidades**: ele precisa estar liberado para a loja em que você está.
+
+??? question "Transferi errado (produto, quantidade ou estoque)"
+    Nos três pontinhos da transferência, clique em **Excluir** e confirme. O sistema avisa que a operação não pode ser desfeita. No teste, a transferência foi para a aba **Canceladas** e o saldo voltou para o estoque de saída. Depois, faça a transferência certa.
+
+??? question "Fiz uma saída e uma entrada em vez de transferir"
+    Funciona para o saldo, mas a entrada fica com o custo que você digitou. Se o custo ficou errado, exclua os dois lançamentos no histórico de cada produto e faça uma transferência. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+
+**Relacionados:** [Como dar entrada no estoque](entrada-de-estoque.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md) · [Como criar categorias de movimentação](categorias-de-movimentacao.md)
+
+Palavras-chave: transferência de estoque transferir mercadoria entre estoques depósito cozinha freezer novo estoque estoque de saída estoque de entrada custo lote romaneio pdf sem custos responsável transportadora canceladas excluir transferência
+
+---
 Código: 04.07 | Módulo: Estoque | Tela no sistema: /dashboard/stock/invoices
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/importar-nota-de-compra/
 
@@ -2487,6 +2592,98 @@ Use **Tipo de movimentação** para ver só entradas ou só saídas. A aba **Can
 **Relacionados:** [Como dar entrada no estoque](entrada-de-estoque.md) · [Como fazer um inventário](inventario.md) · [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md)
 
 Palavras-chave: saldo de estoque balanço quanto tem no estoque histórico movimentações entradas e saídas kardex consultar estoque saldo negativo sem movimentações zerar estoque zerar movimentações cancelar movimentação canceladas lote custo composição saldo atual de hoje data da operação
+
+---
+Código: 04.10 | Módulo: Estoque | Tela no sistema: /dashboard/stock/movements-category
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/categorias-de-movimentacao/
+
+# Como criar categorias de movimentação
+
+6 minutos · 4 passos · Atualizado em 01/11/2026
+
+Toda entrada ou saída de estoque tem uma **categoria**: o **motivo** do lançamento. O sistema já vem com as mais comuns (Compra, Perda, Venda...). Quando a sua loja tem um motivo que não está na lista, como **Degustação** ou **Doação**, você cria uma categoria própria.
+
+## Entenda o conceito
+
+A categoria não muda o saldo: quem soma ou subtrai é o **tipo** do lançamento (entrada ou saída). Ela serve para **contar a história** do estoque. Meses depois, é a categoria que mostra se a mercadoria saiu por venda, por perda ou por degustação.
+
+Cada categoria tem um **tipo**, que define em que lançamento ela aparece:
+
+| Tipo | Aparece em | Categorias do sistema |
+| --- | --- | --- |
+| **Entrada** | Só em Registrar entrada | Compra, Quant. Inicial |
+| **Saída** | Só em Registrar saída | Consumo Interno, Perda, Reposição, Venda |
+| **Todos** | Nas duas | Ajustes de Estoque, Devolução, Produção, Transferência de Estoque |
+
+**Categorias do sistema × criadas por você:** as do sistema não podem ser alteradas (não têm os três pontinhos). As que você cria têm os três pontinhos, com **Editar**, **Duplicar** e **Excluir**. Na empresa de teste, por exemplo, havia uma categoria própria chamada **Transferência de Consignado**, ao lado das do sistema.
+
+Uma observação sobre nomes: a categoria **Transferência de Estoque** aparece no histórico dos produtos só como **Transferência**. É ela que o sistema usa sozinho quando você faz uma [transferência entre estoques](transferencia.md).
+
+Para ver como as categorias são usadas no dia a dia, veja [Como dar entrada no estoque](entrada-de-estoque.md).
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra as categorias de movimentação
+
+No menu do lado esquerdo, clique em **Estoque** e depois em **Categorias de Movimentação**. A lista mostra o **Código**, o **Nome da categoria** e o **Tipo** de cada uma. Só as categorias criadas pela empresa têm os **três pontinhos**.
+
+Clique em **Nova categoria**, no canto de cima, à direita.
+
+[Imagem: Lista de categorias com o botão Nova categoria e uma categoria criada pela empresa, com os três pontinhos, destacados]
+
+## Preencha a categoria
+
+Na janela **Nova categoria de movimentação**:
+
+- **Nome:** o motivo, com até 60 caracteres. Exemplo: "Degustação".
+- **Tipo:** **Entrada**, **Saída** ou **Todos**. Degustação é algo que **sai** do estoque, então: **Saída**.
+- **Seleção de unidades:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão usar a categoria. No teste, a janela já mostrava **1 de 5 unidades selecionadas**.
+
+Clique em **Salvar**.
+
+[Imagem: Janela Nova categoria de movimentação com Nome Degustação, Tipo Saída, Seleção de unidades e Salvar destacados]
+
+## Confira na lista
+
+A categoria entra na lista com o **próximo código** (no exemplo, **012**), em ordem alfabética. Nos **três pontinhos** dela ficam **Editar**, **Duplicar** e **Excluir**. O **Editar** abre a mesma janela, já preenchida, com **Nome**, **Tipo** e **Seleção de unidades**.
+
+[Imagem: Categoria 012 Degustação na lista e o menu com Editar, Duplicar e Excluir destacados]
+
+## Use a categoria nos lançamentos
+
+Ao registrar uma **saída** de estoque, a nova categoria já aparece na lista de **Categoria de movimentação**. A lista tem um campo **Buscar** para achar mais rápido.
+
+Como ela é do tipo **Saída**, não aparece ao registrar uma entrada: no teste, a lista da entrada mostrou só as categorias de entrada e as do tipo Todos.
+
+!!! warning "A categoria já vem preenchida"
+    No teste, tanto na entrada quanto na saída, o campo já veio com **Ajustes de Estoque**. Confira e troque pela categoria certa antes de salvar: é ela que vai contar a história do lançamento.
+
+[Imagem: Registrar movimentação com Saída de estoque e a categoria Degustação na lista destacadas]
+
+
+
+!!! tip "Boas práticas"
+    - **Use primeiro as categorias do sistema.** Crie uma nova só quando o motivo for realmente diferente.
+    - **Nomes curtos e claros**, que qualquer funcionário entenda: "Degustação", "Doação", "Brinde".
+    - **Escolha o tipo certo.** Uma categoria só de saída evita que alguém a use por engano numa entrada.
+    - **Poucas categorias.** Muitas parecidas ("Perda", "Quebra", "Estragou") confundem o relatório; combine com a equipe quais usar.
+
+## Deu algum problema?
+
+??? question "Não consigo editar uma categoria (não tem os três pontinhos)"
+    É uma categoria do **sistema**. Elas não podem ser alteradas. Se precisar de um motivo diferente, crie uma categoria nova.
+
+??? question "A categoria nova não aparece no lançamento"
+    Confira o **Tipo**: uma categoria de **Saída** não aparece em Registrar entrada, e vice-versa. Confira também se a loja em que você está foi marcada em **Seleção de unidades**.
+
+??? question "Errei o nome ou o tipo"
+    Nos três pontinhos da categoria, clique em **Editar**. A janela abre com o nome, o tipo e as unidades: corrija e clique em **Salvar**.
+
+**Relacionados:** [Como dar entrada no estoque](entrada-de-estoque.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md) · [Como transferir mercadorias entre estoques](transferencia.md)
+
+Palavras-chave: categoria de movimentação motivo entrada saída estoque degustação doação brinde perda consumo interno ajuste de estoque nova categoria tipo entrada tipo saída todos editar duplicar excluir transferência de consignado
 
 ---
 Código: 05.06 | Módulo: Vendas | Tela no sistema: /dashboard/sale/outbound-invoices
