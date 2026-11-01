@@ -4,12 +4,12 @@ description: Entenda e ajuste cada opção do PDV, da venda no balcão ao fecham
 codigo: "06.06"
 modulo: Ponto de venda
 tela: /dashboard/fisical-operations/terminal/general
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como configurar o terminal de vendas
 
-<div class="cplug-meta" markdown>:material-clock-outline: 20 minutos · :material-format-list-numbered: 11 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 25 minutos · :material-format-list-numbered: 11 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 As **configurações do PDV** decidem como o caixa funciona no dia a dia. Por exemplo: se o operador pode mudar o preço do X-Burger na hora da venda, se a loja cobra 10% de taxa de serviço nas mesas, se a gaveta abre sozinha quando o cliente paga em dinheiro ou quanto custa a entrega em cada bairro.
 
@@ -19,6 +19,19 @@ As opções ficam em duas telas, as duas dentro de **Ponto de venda** → **Conf
 - **Modos de pedidos**, com o **Delivery** e o atendimento **No estabelecimento** (mesas e comandas).
 
 Elas valem para todos os caixas da loja.
+
+## Entenda o conceito
+
+Estas telas são o **regulamento do caixa**. Cada opção responde a uma de quatro perguntas:
+
+| Pergunta | Onde fica | Exemplos |
+| --- | --- | --- |
+| **O que o operador pode fazer sozinho?** | Geral e **Segurança** | Mudar preço, dar desconto, cancelar item. O que for sensível pede **senha de um responsável**. |
+| **Como o dinheiro é conferido?** | **Fechamento de caixa** | Esconder os totais do operador, aprovação do fechamento, para onde vai o dinheiro no fim do dia. |
+| **Como o cliente é tratado?** | **Cliente** | Crédito do cliente, desconto por categoria. |
+| **Como o pedido chega?** | **Modos de pedidos** | Balcão, mesas e comandas, delivery com taxa de entrega. |
+
+Uma regra prática para decidir: **quanto mais o dinheiro passa pela mão do operador, mais controle** (senha, aprovação do fechamento, alerta de sangria) a opção pede.
 
 !!! info "Antes de começar"
     - Mude uma coisa de cada vez e confira se o caixa funciona como você espera.
@@ -213,6 +226,13 @@ Clique em **Salvar** no rodapé.
 </div>
 
 Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações não salvas** ainda estiver lá, clique em **Salvar**.
+
+!!! tip "Boas práticas"
+    - **Mude uma opção por vez** e teste no caixa antes de mudar a próxima.
+    - **Proteja com senha** o que mexe em dinheiro: cancelamento, desconto, abertura de gaveta.
+    - **Quando o operador não é o dono**, marque **Não mostrar informações de resultados operacionais**: ele conta o dinheiro sem ver antes o valor esperado.
+    - **Confira a taxa de entrega** sempre que salvar a tela de Modos de pedidos.
+    - **Anote o que foi mudado e quando**: se o caixa começar a se comportar diferente, fica fácil voltar.
 
 ## Deu algum problema?
 

@@ -4,16 +4,28 @@ description: Crie um ponto de venda (PDV) para cada caixa da loja, com nome, imp
 codigo: "06.04"
 modulo: Ponto de venda
 tela: /dashboard/fisical-operations/points-of-sale
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar um ponto de venda
 
-<div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 6 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 O **ponto de venda (PDV)** é cada caixa da loja, o lugar onde as vendas são registradas. Se a loja tem um caixa no balcão e outro no salão, cadastre um PDV para cada um. Exemplo: "Caixa Balcão" e "Caixa Salão".
 
 Com um PDV para cada caixa, você sabe de onde saiu cada venda e confere o fechamento de cada um separado.
+
+## Entenda o conceito
+
+O cadastro do PDV junta três coisas que formam um "caixa" de verdade:
+
+| Peça | O que é | Onde aparece |
+| --- | --- | --- |
+| **O PDV** | O caixa, com nome e status. | Na abertura e no fechamento de caixa. |
+| **A gaveta** | Uma **conta do tipo Conta PDV**, criada sozinha com o mesmo nome. É para onde vai o dinheiro das vendas desse caixa. | **Finanças → Contas bancárias** (veja [Como cadastrar uma conta bancária](../financas/conta-bancaria.md)). |
+| **Os aparelhos** | A impressora e a balança ligadas a esse caixa. | Vêm de **Configurações → Periféricos**. |
+
+**PDV × configurações do PDV:** o cadastro diz **quais** caixas existem. **Como** eles funcionam (taxa de serviço, senhas, fechamento, delivery) é definido uma vez para todos em [Como configurar o terminal de vendas](configurar-terminal.md).
 
 !!! info "Antes de começar"
     A loja já vem com um ponto de venda cadastrado. Confira a lista antes de criar outro: talvez você só precise trocar o nome dele.
@@ -67,6 +79,13 @@ Nos **três pontinhos** no fim da linha do PDV você tem:
 </div>
 
 Pronto! O novo ponto de venda já aparece na lista de pontos de venda.
+
+!!! tip "Boas práticas"
+    - **Um PDV para cada caixa físico**: assim cada fechamento é conferido separado.
+    - **Nomes pelo lugar** ("Caixa Balcão", "Caixa Salão"), não pelo operador: o operador muda, o caixa fica.
+    - **Inative em vez de excluir** um caixa que parou de ser usado, para manter o histórico das vendas.
+    - **Cadastre os periféricos antes** (impressora e balança) para já ligá-los ao caixa.
+    - **Confira a conta PDV** em Contas bancárias: é ela que mostra o dinheiro de cada caixa.
 
 ## Deu algum problema?
 
