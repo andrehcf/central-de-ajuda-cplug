@@ -76,8 +76,9 @@ As categorias do sistema não podem ser editadas. Se precisar de outro motivo, c
 
 ### Quando usar e quando não usar
 
-- **Use** para o estoque inicial, compras sem nota, devoluções e correções.
+- **Use** para o estoque inicial, devoluções e correções.
 - **Não use** para compras com nota: importe o XML (veja o quadro acima).
+- **Não use** para uma compra sem XML que você vai pagar a um fornecedor: lance em **Estoque → Compras**, que registra o fornecedor e cria as contas a pagar (veja [Como lançar uma compra](lancar-compra.md)). A entrada de estoque só mexe no saldo.
 - **Não use** para levar mercadoria de um estoque para outro: use **Transferências**. O link fica logo abaixo do **Tipo de movimentação**.
 - **Não use** para corrigir a contagem inteira da loja: faça um **inventário** (veja [Como fazer um inventário](inventario.md)).
 

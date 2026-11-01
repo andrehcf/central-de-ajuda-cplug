@@ -13,6 +13,7 @@ Controle o que entra e o que sai: fornecedores, compras, notas fiscais de compra
 [<span class="cplug-codigo">04.02</span> Como fazer um inventário](inventario.md)
 [<span class="cplug-codigo">04.03</span> Como transferir mercadorias entre estoques](transferencia.md)
 [<span class="cplug-codigo">04.04</span> Como cadastrar um fornecedor](cadastrar-fornecedor.md)
+[<span class="cplug-codigo">04.05</span> Como lançar uma compra](lancar-compra.md)
 [<span class="cplug-codigo">04.07</span> Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md)
 [<span class="cplug-codigo">04.08</span> Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md)
 [<span class="cplug-codigo">04.09</span> Como cadastrar uma transportadora ou um entregador](transportadora.md)

@@ -11,7 +11,7 @@ atualizado: 2026-11-01
 
 <div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
-A tela **Transportadoras** guarda **quem leva a mercadoria**: a empresa de frete que entrega suas vendas ou leva produtos entre lojas, e também os **entregadores do delivery**, como o motoboy da casa. Cadastrar quem leva deixa a escolha pronta na transferência, no pedido e na nota, sem digitar de novo.
+A tela **Transportadoras** guarda **quem leva a mercadoria**: a empresa de frete que entrega suas vendas ou leva produtos entre lojas, e também os **entregadores do delivery**, como o motoboy da casa. Cadastrar quem leva deixa a escolha pronta na transferência, no pedido, na compra e na nota, sem digitar de novo.
 
 ## Entenda o conceito
 
@@ -25,13 +25,14 @@ O cadastro tem dois **tipos de entrega**:
 !!! note "\"Padrão\" na coluna Tipo"
     Na coluna **Tipo**, **Padrão** quer dizer só que o cadastro é do tipo **Transportadora**. Não tem relação com a **Transportadora Padrão**, o cadastro fixo do sistema.
 
-**Onde a transportadora é escolhida.** No teste, as transportadoras apareceram para escolha em três lugares:
+**Onde a transportadora é escolhida.** No teste, as transportadoras apareceram para escolha em quatro lugares:
 
 - na **transferência entre estoques**, em **Dados para transferência** (veja [Como transferir mercadorias entre estoques](transferencia.md));
 - no **pedido de venda**, na janela **Taxa de entrega**;
-- na **NF-e** emitida à mão, na parte **Transportador/volumes transportados**.
+- na **NF-e** emitida à mão, na parte **Transportador/volumes transportados**;
+- na **compra** (Estoque → Compras), na janela **Frete** (veja [Como lançar uma compra](lancar-compra.md)).
 
-Nos três lugares, a lista mostrou **todas** as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na **compra** (Estoque → Compras) não há campo de transportadora.
+Nos quatro lugares, a lista mostrou **todas** as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: no teste, o frete foi somado às parcelas do fornecedor.
 
 !!! info "Antes de começar: a Transportadora Padrão já existe"
     A **Transportadora Padrão** já vem no sistema e aparece em todas as listas de escolha, em todas as lojas. Ela não tem os três pontinhos: a dica do ⓘ diz que ela "é uma configuração fixa do sistema e não pode ser alterada". Se você só vende no balcão e não faz entregas, não precisa cadastrar outra.
@@ -137,7 +138,7 @@ A mesma parte tem campos como **Código ANTT**, **Placa do veículo**, **Quantid
     É assim que o sistema funciona hoje: no teste, as listas mostraram os dois tipos juntos. Na nota, escolha quem realmente levou a mercadoria. Na dúvida se um motoboy pode constar como transportador na nota, pergunte ao seu contador.
 
 ??? question "Não acho onde escolher a transportadora na compra"
-    A tela de compra não tem campo de transportadora. Ela é escolhida na transferência, no pedido de venda e na NF-e.
+    Na compra, ela fica dentro do **Frete**: no **Resumo financeiro**, clique em **Frete** e escolha a **Transportadora**. Veja [Como lançar uma compra](lancar-compra.md).
 
 ??? question "Os campos de inscrição sumiram"
     O **Tipo de pessoa** está como **Pessoa física**. Só a pessoa jurídica tem as informações fiscais.
