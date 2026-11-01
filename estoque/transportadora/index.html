@@ -783,6 +783,8 @@
       
         
       
+        
+      
     
     
       
@@ -901,6 +903,27 @@
   
   <span class="md-ellipsis">
     Como cadastrar um fornecedor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lancar-compra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como lançar uma compra
   </span>
   
 
@@ -1757,7 +1780,7 @@ atualizado: 2026-11-01</p>
 <div class="cplug-meta">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 8 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 6 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 01/11/2026</p>
 </div>
-<p>A tela <strong>Transportadoras</strong> guarda <strong>quem leva a mercadoria</strong>: a empresa de frete que entrega suas vendas ou leva produtos entre lojas, e também os <strong>entregadores do delivery</strong>, como o motoboy da casa. Cadastrar quem leva deixa a escolha pronta na transferência, no pedido e na nota, sem digitar de novo.</p>
+<p>A tela <strong>Transportadoras</strong> guarda <strong>quem leva a mercadoria</strong>: a empresa de frete que entrega suas vendas ou leva produtos entre lojas, e também os <strong>entregadores do delivery</strong>, como o motoboy da casa. Cadastrar quem leva deixa a escolha pronta na transferência, no pedido, na compra e na nota, sem digitar de novo.</p>
 <h2 id="entenda-o-conceito">Entenda o conceito</h2>
 <p>O cadastro tem dois <strong>tipos de entrega</strong>:</p>
 <table>
@@ -1785,13 +1808,14 @@ atualizado: 2026-11-01</p>
 <p class="admonition-title">\"Padrão\" na coluna Tipo</p>
 <p>Na coluna <strong>Tipo</strong>, <strong>Padrão</strong> quer dizer só que o cadastro é do tipo <strong>Transportadora</strong>. Não tem relação com a <strong>Transportadora Padrão</strong>, o cadastro fixo do sistema.</p>
 </div>
-<p><strong>Onde a transportadora é escolhida.</strong> No teste, as transportadoras apareceram para escolha em três lugares:</p>
+<p><strong>Onde a transportadora é escolhida.</strong> No teste, as transportadoras apareceram para escolha em quatro lugares:</p>
 <ul>
 <li>na <strong>transferência entre estoques</strong>, em <strong>Dados para transferência</strong> (veja <a href="../transferencia/">Como transferir mercadorias entre estoques</a>);</li>
 <li>no <strong>pedido de venda</strong>, na janela <strong>Taxa de entrega</strong>;</li>
-<li>na <strong>NF-e</strong> emitida à mão, na parte <strong>Transportador/volumes transportados</strong>.</li>
+<li>na <strong>NF-e</strong> emitida à mão, na parte <strong>Transportador/volumes transportados</strong>;</li>
+<li>na <strong>compra</strong> (Estoque → Compras), na janela <strong>Frete</strong> (veja <a href="../lancar-compra/">Como lançar uma compra</a>).</li>
 </ul>
-<p>Nos três lugares, a lista mostrou <strong>todas</strong> as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na <strong>compra</strong> (Estoque → Compras) não há campo de transportadora.</p>
+<p>Nos quatro lugares, a lista mostrou <strong>todas</strong> as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: no teste, o frete foi somado às parcelas do fornecedor.</p>
 <div class="admonition info">
 <p class="admonition-title">Antes de começar: a Transportadora Padrão já existe</p>
 <p>A <strong>Transportadora Padrão</strong> já vem no sistema e aparece em todas as listas de escolha, em todas as lojas. Ela não tem os três pontinhos: a dica do ⓘ diz que ela "é uma configuração fixa do sistema e não pode ser alterada". Se você só vende no balcão e não faz entregas, não precisa cadastrar outra.</p>
@@ -1882,7 +1906,7 @@ atualizado: 2026-11-01</p>
 </details>
 <details class="question">
 <summary>Não acho onde escolher a transportadora na compra</summary>
-<p>A tela de compra não tem campo de transportadora. Ela é escolhida na transferência, no pedido de venda e na NF-e.</p>
+<p>Na compra, ela fica dentro do <strong>Frete</strong>: no <strong>Resumo financeiro</strong>, clique em <strong>Frete</strong> e escolha a <strong>Transportadora</strong>. Veja <a href="../lancar-compra/">Como lançar uma compra</a>.</p>
 </details>
 <details class="question">
 <summary>Os campos de inscrição sumiram</summary>
