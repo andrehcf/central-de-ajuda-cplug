@@ -4,14 +4,26 @@ description: Cancele uma nota autorizada dentro do prazo, inutilize o número de
 codigo: "05.08"
 modulo: Vendas
 tela: /dashboard/sale/outbound-invoices
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como cancelar, inutilizar ou corrigir uma nota fiscal
 
-<div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
-São duas situações diferentes:
+## Entenda o conceito
+
+Uma nota autorizada é um **documento oficial**: a Sefaz guarda a nota e a numeração da sua empresa precisa seguir em sequência, sem buracos sem explicação. Por isso não existe "apagar nota". Existem três ferramentas, cada uma para um caso:
+
+| Situação | Ferramenta | O que ela faz |
+| --- | --- | --- |
+| A nota foi **autorizada** e a venda **não aconteceu** (ou saiu errada em valor, produto, cliente) | **Cancelar** | Anula a nota na Sefaz. Ela continua existindo, marcada como cancelada. |
+| A nota foi autorizada com um **erro só de texto** | **Carta de correção** | Acrescenta uma correção à nota, sem anular. |
+| A nota **não foi autorizada** (Falhou/Pendente) e o número não será usado | **Inutilizar** | Avisa a Sefaz que aquele **número** foi pulado de propósito. |
+
+Pergunta-chave para decidir: **a nota foi autorizada?** Se não foi, não há o que cancelar: corrija e transmita de novo (veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md)) ou inutilize o número.
+
+Entre cancelar e inutilizar, são duas situações diferentes:
 
 | | **Cancelar** | **Inutilizar** |
 | --- | --- | --- |
@@ -94,7 +106,18 @@ Uma nota cancelada continua com a **DANFE** e o **XML** disponíveis, e ganha a 
 
 ![Menu da nota cancelada com Download XML cancelado e o status Cancelado destacados](../imagens/05.08/09-xml-cancelado.png){ loading=lazy }
 
+!!! tip "Boas práticas"
+    - **Confira antes de transmitir.** Cancelar dá mais trabalho (e tem prazo) do que revisar a nota.
+    - **Cancele logo.** Se a venda foi desfeita, cancele no mesmo dia, dentro do prazo.
+    - **Escreva motivos claros**, como "Venda desfeita a pedido do cliente". Eles ficam registrados na Sefaz.
+    - **Não deixe número pulado.** Nota em Falhou que não vai ser usada: inutilize.
+    - **Na carta de correção, repita tudo.** Cada carta nova substitui a anterior.
+    - **Mande ao contador** os XMLs de cancelamento e de inutilização junto com os do mês.
+
 ## Deu algum problema?
+
+??? question "Cliquei em Cancelar e nada aconteceu"
+    No teste (em homologação), o cancelamento pela tela **NF-e de Saída** não respondeu e a nota continuou **Transmitido**, sem nenhuma mensagem. Atualize a página e confira o status. Se continuar igual, clique em **Versão Legado**, no topo da tela, e cancele pela lista de lá: foi assim que o cancelamento funcionou no teste. Se ainda assim não for, fale com o suporte.
 
 ??? question "A opção Cancelar NF-e está apagada"
     Só dá para cancelar nota **autorizada** (Transmitido). Para notas com **Falhou** ou **Pendente**, use **Inutilizar NF-e**.
