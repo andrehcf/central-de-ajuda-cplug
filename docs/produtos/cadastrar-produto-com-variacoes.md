@@ -4,14 +4,29 @@ description: Passo a passo para cadastrar um produto com tamanho, cor ou modelo,
 codigo: "03.05"
 modulo: Produtos
 tela: /dashboard/catalog/products/new
-atualizado: 2026-10-31
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar um produto com variações
 
-<div class="cplug-meta" markdown>:material-clock-outline: 6 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 10 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Use este manual para produtos que têm tamanho, cor ou modelo, como um milk-shake pequeno, médio e grande. Cada opção pode ter o seu próprio preço. No fim, o passo 8 mostra o outro formato: o produto montado, como a pizza de dois sabores.
+
+## Entenda o conceito
+
+Um produto com variações é **um cadastro só** que se desdobra em opções. Você não cadastra "Milk-shake P", "Milk-shake M" e "Milk-shake G" separados: cadastra o Milk-shake e liga a variação "Tamanho".
+
+| | **Variação em grade** | **Variação de valor composto** |
+| --- | --- | --- |
+| **Exemplo** | Milk-shake P / M / G; camiseta azul / preta | Pizza de 2 sabores; açaí montado |
+| **Cada opção é...** | uma **versão** do produto, com preço e código de barras próprios | um **ingrediente** escolhido, que soma ao preço |
+| **O cliente escolhe** | uma opção | uma ou mais, conforme as quantidades |
+| **Preço** | o da opção escolhida | preço do produto + cálculo (soma, média ou maior preço) |
+
+**Estoque e notas com grade:** como cada opção é uma versão do produto, o sistema pergunta a opção nas movimentações. Na entrada de estoque, o produto pede "as opções do produto para entrada"; na NF-e, ao escolher o produto, abre uma janela para escolher a opção (tamanho, por exemplo). E o inventário só aceita produtos com variações **depois da primeira entrada** de estoque.
+
+A variação em si (o "molde" com as opções) é cadastrada antes, em [Como cadastrar variações](cadastrar-variacoes.md).
 
 !!! info "Antes de começar"
     A variação (por exemplo, "Tamanho do milk-shake" com Pequeno, Médio e Grande) precisa estar cadastrada. Se não estiver, veja [Como cadastrar variações](cadastrar-variacoes.md).
@@ -110,6 +125,13 @@ O **+ Adicionar variação** coloca mais um grupo, como "Borda", no mesmo produt
 ![Grupo Sabor da pizza aberto, com o cálculo e as quantidades, o Cobrar a partir de e as colunas Preço e Pré-selecionado destacados](../imagens/03.05/11-valor-composto.png){ loading=lazy }
 
 </div>
+
+!!! tip "Boas práticas"
+    - **Um produto, várias opções**: não crie um cadastro para cada tamanho.
+    - **Preencha o preço de todas as opções** antes de salvar; opção com preço zerado sai de graça.
+    - **Use o código de barras de cada opção** quando a embalagem tiver; senão, gere EAN para todas de uma vez.
+    - **Dê a entrada inicial de cada opção** no estoque antes do primeiro inventário.
+    - **Grade para versões, valor composto para montagem.** Na dúvida, pense: o cliente escolhe **qual** produto (grade) ou **o que vai dentro** (valor composto)?
 
 ## Deu algum problema?
 

@@ -4,12 +4,12 @@ description: Tenha preços diferentes para o mesmo produto conforme o horário, 
 codigo: "03.06"
 modulo: Produtos
 tela: /dashboard/catalog/price-lists
-atualizado: 2026-10-31
+atualizado: 2026-11-01
 ---
 
 # Como criar uma lista de preços
 
-<div class="cplug-meta" markdown>:material-clock-outline: 10 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 14 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 A **lista de preços** permite cobrar **outro preço** pelo mesmo produto em situações específicas, sem mexer no preço normal. Exemplos:
 
@@ -19,6 +19,26 @@ A **lista de preços** permite cobrar **outro preço** pelo mesmo produto em sit
 - **Atacado:** preço menor a partir de uma quantidade.
 
 Neste manual criamos a lista **Happy Hour**, com X-Burger, Batata Frita e Refrigerante Lata mais baratos.
+
+## Entenda o conceito
+
+Pense nas listas como **etiquetas de preço** que só aparecem em certas condições. A **Lista Padrão** é a etiqueta de sempre; as outras listas "cobrem" a padrão quando todas as condições delas batem.
+
+Uma lista vale quando a venda acontece:
+
+| Condição | Onde se define | Exemplo |
+| --- | --- | --- |
+| na **loja** certa | Selecionar unidades | Só na loja do shopping |
+| no **canal** certo | Canais de Venda | Só no PDV |
+| no **modo de pedido** certo | Modos de Pedido | Só Mesas e Balcão |
+| para o **cliente** certo | Categorias de clientes | Só "Clientes VIP" |
+| no **momento** certo | Validade | Seg a sex, 17h às 19h |
+
+E só para os **produtos que estão na lista**: um produto que não foi adicionado a ela continua com o preço normal.
+
+**Quando duas listas valem ao mesmo tempo**, o sistema usa a **prioridade** (passo 8). Por isso o aviso de conflito aparece ao salvar.
+
+**Preço de atacado** é uma segunda faixa de preço dentro da lista: a partir da **Quantidade mínima atacado**, vale o **Preço atacado**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -111,6 +131,14 @@ Quando duas listas valem ao mesmo tempo, o sistema usa a ordem de prioridade. Na
 
 !!! tip "Produtos com variações"
     Para produtos com opções (como a Batata Frita P, M e G), a coluna **Opções** mostra quantas existem. O preço de cada opção pode ser diferente.
+
+!!! tip "Boas práticas"
+    - **Mexa no preço normal no produto**, não numa lista: a Lista Padrão é o preço de referência.
+    - **Uma lista por situação** (happy hour, delivery, atacado), com nome que diga quando ela vale.
+    - **Coloque só os produtos que mudam de preço**: o resto continua com o preço normal.
+    - **Use validade** em promoções, para a lista não ficar valendo depois do fim.
+    - **Resolva os conflitos na hora** com a **Priorizar**, para não haver dúvida sobre qual preço vale.
+    - **Teste uma venda** no canal e no horário da lista antes de divulgar a promoção.
 
 ## Deu algum problema?
 

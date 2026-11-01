@@ -4,14 +4,30 @@ description: Passo a passo para cadastrar um produto simples, com nome, categori
 codigo: "03.04"
 modulo: Produtos
 tela: /dashboard/catalog/products/new
-atualizado: 2026-10-31
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar um produto
 
-<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 9 passos · :material-calendar-check: Atualizado em 31/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 12 minutos · :material-format-list-numbered: 9 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Este manual mostra como cadastrar um produto simples, como uma lata de refrigerante ou um pastel. Para produtos com tamanho, cor ou sabor, veja [Como cadastrar um produto com variações](cadastrar-produto-com-variacoes.md).
+
+## Entenda o conceito
+
+O produto é o **centro** do sistema: quase tudo se liga a ele. Cada aba do cadastro responde a uma pergunta:
+
+| Pergunta | Onde se responde | Liga com |
+| --- | --- | --- |
+| **O que é e quanto custa para o cliente?** | Dados básicos: nome, categoria, preço, unidade | Caixa, cardápio, [listas de preço](lista-de-precos.md) |
+| **Que tipo de produto é?** | Tipo: Simples, Coleção (combo) ou Insumo (matéria-prima) | [Ficha técnica](ficha-tecnica.md) |
+| **Quanto eu tenho e quanto me custou?** | Aba Estoque e **Cálculo de custo** | [Entradas de estoque](../estoque/entrada-de-estoque.md): cada entrada vira um lote e forma o **custo médio** |
+| **Como sai na nota fiscal?** | [Parâmetros fiscais](parametros-fiscais.md) | NFC-e e NF-e |
+| **Onde ele aparece?** | Canais de venda e Unidades (lojas) | PDV, loja online, totem, Smart Menu |
+
+**Preço × custo:** o **Preço** é o que o cliente paga. O **custo** é o que você pagou, e normalmente vem sozinho das entradas de estoque (custo médio). A diferença entre os dois é a sua margem.
+
+**Código (SKU):** é a "identidade" do produto. É por ele que a importação por planilha e a edição em massa encontram o produto. Use códigos simples e únicos.
 
 !!! info "Antes de começar, confira se já existe"
     1. **A categoria** do produto, por exemplo "Bebidas". Se não existir, veja [Como cadastrar uma categoria](cadastrar-categoria.md).
@@ -118,6 +134,14 @@ No topo da lista, as abas **Todos**, **Com variações**, **Coleções**, **Insu
     Aparece a mensagem **Produto cadastrado com sucesso!** no canto de cima, e o produto já pode ser vendido no caixa.
 
     **Próximo passo:** [configure os dados fiscais](parametros-fiscais.md) para a nota fiscal sair sem erro.
+
+!!! tip "Boas práticas"
+    - **Procure antes de cadastrar**: produto duplicado divide o estoque e o custo em dois.
+    - **Nome igual ao que o cliente pede** no balcão; detalhes técnicos vão em **Sobre o produto**.
+    - **SKU simples e único**, em maiúsculas e sem espaços (ex.: CHA-LATA).
+    - **Código de barras da embalagem** sempre que existir: agiliza o caixa e evita erro de digitação.
+    - **Deixe o estoque controlado** (padrão) e dê a **entrada inicial** logo depois do cadastro.
+    - **Complete os dados fiscais** antes da primeira venda com nota.
 
 ## Deu algum problema?
 
