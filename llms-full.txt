@@ -218,9 +218,28 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/clientes/cadastrar-
 
 # Como cadastrar um cliente
 
-4 minutos · 8 passos · Atualizado em 30/10/2026
+8 minutos · 8 passos · Atualizado em 01/11/2026
 
 Para salvar um cliente, basta o **nome**. Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
+
+## Entenda o conceito
+
+O cadastro do cliente é usado em vários lugares do sistema. O que você preenche aqui é **copiado** para cada um deles:
+
+| Onde | O que o cadastro faz |
+| --- | --- |
+| **Nota fiscal (NF-e)** | Preenche o destinatário: documento, IE, endereço. É daqui que sai a **Indicação de IE** certa. |
+| **Venda e pedido** | Mostra o histórico de **Vendas** do cliente e as **observações** na hora de atender. |
+| **Desconto** | A **Categoria de cliente** pode dar desconto automático no caixa. |
+| **Contato** | E-mail e celular para enviar a nota e falar com o cliente. |
+
+O **Indicador de IE** é o campo que mais gera nota recusada. Ele diz à Sefaz se o cliente **paga ICMS**:
+
+- **Pessoa física** e empresas sem IE: **9 - Não contribuinte**.
+- Empresa com Inscrição Estadual: **1 - Contribuinte ICMS**, com a IE preenchida.
+
+!!! note "Por que cadastrar antes de emitir a NF-e"
+    No teste, preencher uma pessoa física direto na tela da NF-e, sem cliente cadastrado, fez a nota sair como **contribuinte** e ser recusada (Rejeição 728). Escolhendo o cliente cadastrado, a indicação veio certa. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
 
 !!! warning "Vai emitir nota fiscal (NF-e) para este cliente?"
     Preencha **todos** estes dados, senão a nota não é autorizada:
@@ -339,6 +358,13 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 
     Para mudar ou apagar um cliente, use os **três pontinhos** no fim da linha: **Editar** ou **Excluir**. Os clientes excluídos ficam na aba **Excluídos**.
 
+!!! tip "Boas práticas"
+    - **Procure antes de cadastrar**: busque pelo nome ou documento na lista para não duplicar o cliente.
+    - **Para empresas, use o cartão CNPJ** como fonte: razão social e endereço iguais aos da Receita.
+    - **Confira a IE no Sintegra** antes da primeira NF-e para uma empresa.
+    - **Use as observações** para o que ajuda no atendimento (horário de entrega, preferências), não para dados sensíveis.
+    - **Atualize o cadastro** quando o cliente mudar de endereço: a próxima nota já sai certa.
+
 ## Deu algum problema?
 
 ??? question "A nota fiscal foi recusada por causa do cliente"
@@ -348,7 +374,7 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
     - **Endereço completo**, com número e com a cidade certa.
     - Para empresa: **Indicador de IE** certo e, se for contribuinte, a **Inscrição estadual** preenchida.
 
-    Depois de corrigir, salve o cliente e emita a nota de novo.
+    Depois de corrigir, salve o cliente. Se a nota já foi salva, escolha o cliente de novo na nota (em **Editar NF-e**) antes de transmitir: corrigir o cadastro não muda uma nota já salva. Veja [Como resolver uma nota fiscal rejeitada](../vendas/nota-rejeitada.md).
 
 ??? question "O sistema não deixa salvar a empresa"
     Se o **Indicador de IE** estiver em "1 - Contribuinte ICMS", a **Inscrição estadual** é obrigatória. Preencha a IE ou troque o indicador para a opção certa.
