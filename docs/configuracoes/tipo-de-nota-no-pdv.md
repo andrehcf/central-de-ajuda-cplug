@@ -4,19 +4,28 @@ description: Escolha se o caixa (PDV) emite NFC-e (modelo 65) ou NF-e (modelo 55
 codigo: "10.09"
 modulo: Configurações
 tela: /dashboard/settings/fiscal-settings/type-invoice-pos
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como definir o tipo de nota emitida no PDV
 
-<div class="cplug-meta" markdown>:material-clock-outline: 2 minutos · :material-format-list-numbered: 3 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 5 minutos · :material-format-list-numbered: 3 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Esta configuração diz ao **caixa (PDV)** qual nota fiscal emitir em cada venda. Pela **Lei 8.846**, a nota deve ser emitida **no momento da venda**, por isso o caixa precisa saber qual modelo usar.
 
-| Modelo | Quando usar |
-| --- | --- |
-| **Modelo 65 - NFC-e** | O cupom fiscal eletrônico, para vendas ao **consumidor final** no balcão. É o mais comum em lanchonetes, restaurantes e lojas. |
-| **Modelo 55 - NF-e** | A nota fiscal eletrônica completa, usada principalmente quando a loja vende para **empresas**. |
+## Entenda o conceito
+
+As duas notas são eletrônicas e autorizadas pela Sefaz, mas foram feitas para situações diferentes:
+
+| | **Modelo 65 - NFC-e** | **Modelo 55 - NF-e** |
+| --- | --- | --- |
+| **Feita para** | Venda no balcão para **consumidor final**. | Venda para **empresas**, com entrega ou para **outro estado**. |
+| **Cliente na nota** | Opcional (o CPF pode ir, se o cliente pedir). | Obrigatório, com documento e endereço. |
+| **Outro estado** | Não serve: só vendas **dentro do estado**. | Serve. |
+| **Impresso** | Cupom com **QR Code** (usa o CSC). | DANFE. |
+| **Mais comum em** | Lanchonetes, restaurantes, lojas de varejo. | Atacado, distribuidores, vendas a empresas. |
+
+Na prática: o caixa do dia a dia emite **NFC-e**. Quando aparece uma venda que pede NF-e (empresa, outro estado), ela é emitida à parte, em **Vendas → NF-e** (veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md)).
 
 !!! warning "Confirme com o contador"
     O modelo depende do tipo de negócio e do estado. Antes de mudar, confirme com o contador. E lembre: para emitir, a configuração fiscal precisa estar completa. Veja [Como configurar a emissão de notas fiscais](emissao-de-notas.md).
@@ -44,6 +53,12 @@ Clique em **Tipo de NF emitida pelo PDV** e escolha **Modelo 65 - NFC-e** ou **M
 A opção **ICMS para Consumidor Final** ativa a tributação de ICMS nas vendas para consumidor final, incluindo o cálculo do **Difal** em vendas para outro estado. Ligue ou desligue conforme a orientação do contador.
 
 </div>
+
+!!! tip "Boas práticas"
+    - **Para balcão e consumidor final, use NFC-e**: é mais rápida e não exige os dados do cliente.
+    - **Deixe a NF-e para os casos que pedem** (empresa, outro estado, entrega) e emita pela tela de NF-e.
+    - **Configure o CSC** antes de usar NFC-e: sem ele não há QR Code (veja [Como configurar a emissão de notas fiscais](emissao-de-notas.md)).
+    - **Teste uma venda em Homologação** depois de mudar o modelo.
 
 ## Deu algum problema?
 
