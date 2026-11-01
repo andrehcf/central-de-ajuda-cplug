@@ -4,14 +4,35 @@ description: Tudo o que a empresa precisa ter configurado para emitir NFC-e e NF
 codigo: "10.04"
 modulo: Configurações
 tela: /dashboard/settings/fiscal-settings/general
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como configurar a emissão de notas fiscais
 
-<div class="cplug-meta" markdown>:material-clock-outline: 30 minutos · :material-format-list-numbered: 6 etapas · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 30 minutos · :material-format-list-numbered: 6 etapas · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Antes da primeira nota fiscal, a empresa precisa ter **seis coisas** configuradas no sistema. Se faltar qualquer uma, a nota não é emitida ou é recusada pela Sefaz.
+
+## Entenda o conceito
+
+Toda nota fiscal é montada com **três fontes de informação** e depois **conferida pela Sefaz**:
+
+| Fonte | O que entra na nota | Onde se configura |
+| --- | --- | --- |
+| **A empresa** (quem vende) | Razão social, CNPJ, endereço, IE, regime, certificado, série | Esta página (etapas 1 a 5) |
+| **O produto** (o que se vende) | NCM, origem, CFOP e os **grupos** de ICMS e PIS/COFINS | [Dados fiscais do produto](../produtos/parametros-fiscais.md) |
+| **A venda** (para quem e como) | Cliente, quantidades, valores e pagamento | No caixa ou na emissão da NF-e |
+
+A configuração da empresa é feita **uma vez** (e revista quando algo muda: certificado vencendo, mudança de regime). Os grupos de impostos (etapa 6) são a **ponte** entre a empresa e os produtos: você cria as regras uma vez e liga cada produto à regra certa.
+
+### Homologação e Produção
+
+| Ambiente | Para que serve | As notas valem? |
+| --- | --- | --- |
+| **Homologação** | Testar a configuração sem risco. Aparece um aviso vermelho na tela de NF-e. | **Não.** São só de teste. |
+| **Produção** | Vender de verdade. | **Sim.** |
+
+Comece em **Homologação**, emita algumas notas de teste e, quando forem **autorizadas**, mude para **Produção**.
 
 ## Checklist: o que é obrigatório
 
@@ -65,7 +86,7 @@ Na parte **Informações fiscais**, confira o **Ambiente de Geração (NFe)**:
 - **Homologação:** ambiente de **teste**. As notas não têm valor fiscal.
 - **Produção:** ambiente **real**. Use este para vender de verdade.
 
-![Configurações gerais com CRT, Inscrição Estadual, Isento IE e Ambiente de Geração destacados (a IE aparece borrada de propósito)](../imagens/10.04/03-configuracoes-gerais.png){ loading=lazy }
+![Configurações gerais com CRT, Inscrição Estadual, Isento IE e Ambiente de Geração destacados (a IE aparece coberta de propósito)](../imagens/10.04/03-configuracoes-gerais.png){ loading=lazy }
 
 | CRT | Quando usar |
 | --- | --- |
@@ -114,7 +135,7 @@ O **CSC** (Código de Segurança do Contribuinte) e o **ID Token** são gerados 
 3. Em **ID Token**, digite o identificador do CSC. Exemplo: 000001.
 4. Clique em **Salvar**.
 
-![Autenticação e QR Code com os campos CSC / Token e ID Token destacados (o código aparece borrado de propósito)](../imagens/10.04/07-csc.png){ loading=lazy }
+![Autenticação e QR Code com os campos CSC / Token e ID Token destacados (o código aparece coberto de propósito)](../imagens/10.04/07-csc.png){ loading=lazy }
 
 !!! warning "O CSC é um código sigiloso"
     Não envie o CSC para pessoas de fora da empresa e não poste em lugar público.
@@ -187,6 +208,14 @@ Depois de criar os grupos, configure cada produto: veja [Como configurar os dado
 
 !!! success "Como saber que deu certo"
     Com o **Ambiente de Geração** em **Produção**, faça uma **venda de teste** de valor baixo com nota. Se a nota for **autorizada**, a configuração está completa. Se for recusada, a mensagem da Sefaz diz o motivo. Veja os casos mais comuns abaixo.
+
+!!! tip "Boas práticas"
+    - **Anote o vencimento do certificado** e renove com 30 dias de folga. A tela de NF-e mostra "Renovação em X dias".
+    - **Guarde a senha do certificado** em local seguro: sem ela, o arquivo não serve.
+    - **Teste em Homologação** sempre que mudar algo importante (regime, certificado, série).
+    - **Revise com o contador uma vez por ano** os grupos de impostos e o regime.
+    - **Nunca divulgue o CSC** nem o arquivo do certificado.
+    - **Cadastre o contador em Autorizados a acessar XML**, para ele baixar as notas direto na Sefaz.
 
 ## Deu algum problema?
 
