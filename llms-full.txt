@@ -3399,9 +3399,26 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/formas-de-
 
 # Como cadastrar formas de pagamento
 
-3 minutos · 4 passos · Atualizado em 30/10/2026
+8 minutos · 4 passos · Atualizado em 01/11/2026
 
 As **formas de pagamento** são as opções que o cliente usa para pagar: dinheiro, Pix, cartão, vale-refeição... O sistema **já vem com as mais comuns**. Só crie uma nova se precisar de uma opção que não está na lista.
+
+## Entenda o conceito
+
+Cada forma de pagamento tem **três informações**, e cada uma serve a um público diferente:
+
+| Informação | Para quem | Exemplo |
+| --- | --- | --- |
+| **Nome** | Para o **caixa e os relatórios**: é o que aparece na tela de venda e no fechamento. | "Pix na maquininha" |
+| **Código na nota fiscal** | Para a **Sefaz**: diz na nota como o cliente pagou. | 17 - Pix |
+| **Permissão de parcelamento** | Para a **venda**: define se dá para dividir em parcelas. | Não permitir |
+
+Ou seja: o **nome** pode ser do jeito da sua loja, mas o **código** precisa ser o real. Duas formas diferentes ("Pix balcão" e "Pix delivery") podem usar o mesmo código 17 e aparecer separadas nos relatórios.
+
+**Formas padrão × formas criadas por você:** as padrão (PIX, Dinheiro, Cartão de Crédito...) não podem ser alteradas. Entre elas, **Boleto**, **Faturamento** e **Cartão de Crédito** já permitem parcelamento. As que você cria podem ser alteradas pelos três pontinhos.
+
+!!! note "Forma de pagamento não é conta bancária"
+    A forma diz **como** o cliente pagou; a [conta bancária](conta-bancaria.md) diz **onde** o dinheiro ficou. Um Pix e um cartão de débito podem cair na mesma conta do banco.
 
 !!! warning "A forma de pagamento vai para a nota fiscal"
     Toda forma de pagamento tem um **código** que sai na nota fiscal (NFC-e e NF-e) e informa à Sefaz **como o cliente pagou**. Escolha sempre o código que corresponde ao pagamento de verdade. Exemplo: uma forma "Pix na maquininha" usa o código **17 - Pix**, e não **01 - Dinheiro**.
@@ -3466,6 +3483,13 @@ Role a tela até o fim: a nova forma aparece em **Formas de pagamentos criadas p
 
 !!! info "Bandeiras e taxas dos cartões"
     As bandeiras aceitas (Visa, Mastercard...) e as taxas cobradas pela maquininha são cadastradas em **Finanças → Contrato de cartões e outros**. Esse manual está a caminho.
+
+!!! tip "Boas práticas"
+    - **Use as formas padrão sempre que servirem.** Crie novas só para separar nos relatórios (ex.: "Pix delivery") ou para pagamentos que não existem na lista.
+    - **Código fiscal real, sempre.** Nunca use "99 - Outros" por comodidade.
+    - **Nomes curtos e claros**: é o que o operador do caixa lê na hora da venda.
+    - **Parcelamento só onde existe parcela de verdade** (cartão de crédito, boleto, crediário).
+    - **Não crie formas repetidas**: "Pix", "PIX" e "pix" viram três linhas no relatório.
 
 ## Deu algum problema?
 
