@@ -2928,6 +2928,9 @@ Use este caminho quando o atalho **Devolver NF-e** está apagado (nota avulsa, s
 ??? question "A Sefaz recusou a nota"
     Passe o mouse sobre o status **Falhou** para ver o motivo. Veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md).
 
+??? question "Fui editar a devolução rejeitada e a chave referenciada sumiu"
+    No teste, ao abrir **Editar NF-e** (ou **Refazer NF-e**) de uma devolução, o campo **Chaves de acesso da NF-e referenciada** veio vazio. Cole a chave de novo antes de salvar e transmitir.
+
 **Relacionados:** [Como emitir uma NF-e de venda](emitir-nfe.md) · [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md)
 
 Palavras-chave: nf-e de devolução nota de devolução devolver nf-e devolução de venda devolução de compra devolução ao fornecedor cliente devolveu troca finalidade 4 devolução de mercadoria chave de acesso referenciada nota referenciada cfop 1202 2202 1411 2411 5202 6202 5411 6411 sem pagamento 90 rejeição 1194 devolução parcial devoluções entradas nota de entrada
