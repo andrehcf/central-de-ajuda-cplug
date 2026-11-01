@@ -20,6 +20,7 @@ O cadastro do fornecedor sozinho não mexe no estoque nem no financeiro. Ele é 
 | Onde | Para quê |
 | --- | --- |
 | **Cadastro do produto** (seção Fornecedores) | Ligar o produto a quem vende, com o código que o fornecedor usa e a conversão (por exemplo, caixa com 12). Veja [Como cadastrar um produto](../produtos/cadastrar-produto.md). |
+| **Nova compra** (Estoque → Compras) | Escolher de quem você comprou, no campo **Fornecedor**. |
 | **Importação da nota de compra (XML)** | A importação cadastra sozinha o fornecedor que emitiu a nota e cria a conta a pagar a ele. Veja [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md). |
 | **Inventário** | Filtrar os produtos por fornecedor, para contar o estoque por partes. Veja [Como fazer um inventário](inventario.md). |
 

@@ -90,6 +90,7 @@ nav:
       - estoque/cadastrar-fornecedor.md
       - estoque/importar-nota-de-compra.md
       - estoque/saldo-do-estoque.md
+      - estoque/transportadora.md
       - estoque/categorias-de-movimentacao.md
   - 05. Vendas:
       - vendas/index.md
