@@ -6,11 +6,23 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/primeiros-passos/tr
 
 # Como trocar de empresa ou loja
 
-1 minuto · 3 passos · Atualizado em 30/10/2026
+4 minutos · 3 passos · Atualizado em 01/11/2026
 
 Se a sua empresa tem **mais de uma loja ou filial**, cada uma tem o seu próprio estoque, os seus caixas, as suas vendas e as suas notas fiscais. Por isso, antes de lançar ou consultar qualquer coisa, confira **em qual loja você está**.
 
-Alguns cadastros, como **produtos**, **clientes** e **contas bancárias**, podem valer para mais de uma loja. No cadastro, o campo **Selecionar unidades** escolhe em quais lojas ele aparece. Por padrão, vem marcada só a loja em que você está.
+## Entenda o conceito
+
+Pense em cada loja como uma **gaveta separada** dentro do mesmo armário. A loja escolhida no topo do menu é a gaveta aberta: tudo o que você lança cai nela.
+
+| Fica **em cada loja** (separado) | Pode ser **compartilhado** entre lojas |
+| --- | --- |
+| Estoque e saldos | Produtos |
+| Vendas, caixas e pontos de venda | Clientes |
+| Notas fiscais (cada loja tem seu CNPJ, certificado e série) | Contas bancárias |
+
+Nos cadastros compartilháveis, o campo **Selecionar unidades** escolhe em quais lojas o item aparece. Por padrão, vem marcada só a loja em que você está.
+
+A loja principal aparece como **Matriz** na lista; as outras são as filiais.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
 
@@ -39,6 +51,12 @@ A tela recarrega e o nome da nova loja aparece no topo do menu. Os números do p
 !!! warning "Atenção às notas fiscais"
     Cada loja tem o seu **CNPJ**, certificado digital e configuração fiscal. Uma venda ou compra lançada na loja errada sai com os dados fiscais da loja errada. Confira sempre o nome no topo antes de lançar.
 
+!!! tip "Boas práticas"
+    - **Olhe o nome no topo antes de lançar**, principalmente compras, estoque e notas.
+    - **Cadastre uma vez e compartilhe**: produtos e clientes iguais em todas as lojas devem ser um cadastro só, com as lojas marcadas em **Selecionar unidades**.
+    - **Dê nomes claros às lojas** ("Centro", "Shopping"), para não confundir na lista.
+    - **Libere só as lojas necessárias** para cada usuário.
+
 ## Deu algum problema?
 
 ??? question "A loja que eu preciso não aparece na lista"
@@ -57,9 +75,23 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/primeiros-passos/us
 
 # Como usar o menu do sistema
 
-3 minutos · 7 passos · Atualizado em 30/10/2026
+5 minutos · 7 passos · Atualizado em 01/11/2026
 
 Este manual apresenta as partes da tela da CPlug. Depois de ler, você vai saber chegar em qualquer função do sistema.
+
+## Entenda o conceito
+
+O menu segue o **caminho do dinheiro e da mercadoria** dentro do negócio. Se você entende esse caminho, sabe onde procurar cada coisa:
+
+1. **Produtos:** o que você vende (cadastro, preço, impostos).
+2. **Estoque:** a mercadoria que entra e sai (compras, notas de entrada, inventário).
+3. **Vendas** e **Ponto de venda:** a venda acontece (caixa, pedidos, notas fiscais).
+4. **Clientes:** para quem você vende.
+5. **Finanças:** o dinheiro que entra e sai (contas a pagar e a receber, bancos).
+6. **Relatórios:** o resultado de tudo isso.
+7. **Configurações:** as regras da empresa (dados, usuários, parte fiscal).
+
+Para começar do zero, a ordem costuma ser: **Configurações → Produtos → Estoque → Ponto de venda → vender**. A tela inicial do site traz essa trilha em **Comece aqui**.
 
 Nos prints, o **quadrado vermelho** mostra a parte da tela explicada em cada passo.
 
@@ -154,6 +186,13 @@ Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apres
 
 !!! tip "Na faixa da esquerda"
     Os ícones da faixa fina à esquerda trocam de produto CPlug. O primeiro é o **ERP** (este sistema). Os outros, **Meu Delivery** e **Pagamentos**, estão marcados como **"Breve"**.
+
+!!! tip "Boas práticas"
+    - **Use o Buscar no menu** quando não lembrar onde fica uma tela: é mais rápido que procurar grupo por grupo.
+    - **Conclua o tour** uma vez: ele apresenta os menus e depois não aparece mais.
+    - **Ligue a Autenticação de Dois Fatores** em **Meu perfil**, principalmente para quem tem acesso às finanças.
+    - **Saia do sistema** em computadores compartilhados.
+    - **Anote a versão do sistema** (em **Informações**) ao abrir um chamado no suporte.
 
 ## Deu algum problema?
 
