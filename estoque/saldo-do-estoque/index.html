@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Veja quanto há de cada produto no estoque (balanço) e todas as entradas e saídas de um produto, com data, categoria e quantidade.">
+        <meta name="description" content="Veja quanto há de cada produto no estoque (balanço), filtre por saldo negativo ou sem movimentações e leia o histórico de entradas e saídas de um produto, lote por lote.">
       
       
       
@@ -936,6 +936,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-ler-uma-linha-do-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como ler uma linha do histórico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-o-balanco-do-estoque" class="md-nav__link">
     <span class="md-ellipsis">
       Abra o balanço do estoque
@@ -1521,6 +1545,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#entenda-o-conceito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entenda o conceito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entenda o conceito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-ler-uma-linha-do-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como ler uma linha do histórico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#abra-o-balanco-do-estoque" class="md-nav__link">
     <span class="md-ellipsis">
       Abra o balanço do estoque
@@ -1585,32 +1633,105 @@
 
 <h1 id="como-consultar-o-saldo-e-o-historico-do-estoque">Como consultar o saldo e o histórico do estoque</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 3 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 3 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 30/10/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 8 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 3 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 31/10/2026</p>
 </div>
 <p>O <strong>balanço</strong> mostra quanto há de cada produto no estoque agora. O <strong>histórico</strong> (movimentações) mostra <strong>de onde veio</strong> esse número: cada entrada e cada saída do produto.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>Pense no saldo como o <strong>extrato do banco</strong> de cada produto: o número final só faz sentido olhando os lançamentos. Quando o saldo "não bate", a resposta está no histórico.</p>
+<table>
+<thead>
+<tr>
+<th>Onde</th>
+<th>Responde a pergunta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Balanço</strong></td>
+<td>Quanto eu tenho de cada produto <strong>agora</strong>? Quais estão negativos? Quais nunca tiveram entrada?</td>
+</tr>
+<tr>
+<td><strong>Movimentações</strong> do produto</td>
+<td><strong>Por que</strong> o saldo é esse? Quem lançou, quando, com qual custo e por qual motivo?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="como-ler-uma-linha-do-historico">Como ler uma linha do histórico</h3>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>O que mostra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lote</strong></td>
+<td>O número do lançamento. Toda entrada vira um lote (veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>). O ícone <strong>(i)</strong> mostra quem registrou e <strong>quando foi lançado</strong> no sistema.</td>
+</tr>
+<tr>
+<td><strong>Custo unitário</strong></td>
+<td>Na entrada, o custo de cada unidade do lote. Na saída aparece <strong>Composição</strong>: clique para ver de quais lotes a saída tirou e o custo de cada parte.</td>
+</tr>
+<tr>
+<td><strong>Categoria</strong></td>
+<td>O motivo: Quant. Inicial, Compra, Ajustes de Estoque, Perda...</td>
+</tr>
+<tr>
+<td><strong>NFE</strong></td>
+<td>A nota fiscal ligada ao lançamento, quando houver (por exemplo, numa compra importada por XML).</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>A data <strong>da operação</strong>. Pode ser diferente do dia em que foi lançada.</td>
+</tr>
+<tr>
+<td><strong>Qtd.</strong></td>
+<td>Quanto entrou (seta para cima) ou saiu (seta para baixo).</td>
+</tr>
+<tr>
+<td><strong>Última coluna (i)</strong></td>
+<td>"<strong>Saldo atual de hoje</strong>". Na entrada, é <strong>quanto ainda resta daquele lote</strong> no estoque. Exemplo: entrada de 100 pães, 5 já saíram → mostra 95.</td>
+</tr>
+</tbody>
+</table>
+<p>No rodapé, <strong>Saldo total de produtos</strong> é o saldo atual do produto.</p>
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve olhar ou clicar.</p>
 <div class="passos">
 <h2 id="abra-o-balanco-do-estoque">Abra o balanço do estoque</h2>
 <p>No menu do lado esquerdo, clique em <strong>Estoque</strong> e depois em <strong>Estoque</strong>. Na linha do estoque, clique nos <strong>três pontinhos</strong> e depois em <strong>Balanço</strong>.</p>
-<p>A lista mostra o <strong>código</strong>, o <strong>nome</strong> e o <strong>Saldo</strong> de cada produto. Para achar um produto, use a <strong>busca</strong> (nome, código ou SKU). Em <strong>Saldo do estoque</strong>, filtre os produtos pelo saldo.</p>
+<p>A lista mostra o <strong>código</strong>, o <strong>nome</strong> e o <strong>Saldo</strong> de cada produto. Para achar um produto, use a <strong>busca</strong> (nome, código ou SKU).</p>
 <p><img alt="Balanço do estoque com o filtro de saldo, a busca, a coluna Saldo e os botões Zerar estoque e Nova movimentação destacados" loading="lazy" src="../../imagens/04.08/01-balanco.png" /></p>
+<p>Em <strong>Saldo do estoque</strong>, filtre a lista:</p>
+<ul>
+<li><strong>Positivo:</strong> produtos com saldo.</li>
+<li><strong>Negativo:</strong> produtos que saíram mais do que entraram. Sinal de entrada (compra) não lançada.</li>
+<li><strong>Sem movimentações:</strong> produtos que <strong>nunca tiveram nenhuma entrada ou saída</strong>. São estes que o inventário não consegue ajustar.</li>
+<li><strong>Todos.</strong></li>
+</ul>
+<p><img alt="Filtro Saldo do estoque em Sem movimentações e a lista de produtos sem movimentação destacados" loading="lazy" src="../../imagens/04.08/04-sem-movimentacoes.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Cuidado com Zerar estoque</p>
-<p>O botão vermelho <strong>Zerar estoque</strong> apaga o saldo de <strong>todos</strong> os produtos desse estoque. Só use com orientação do suporte ou do contador.</p>
+<p>O botão vermelho <strong>Zerar estoque</strong> apaga o saldo de <strong>todos</strong> os produtos desse estoque. No histórico de cada produto existe também <strong>Zerar movimentações</strong>. Só use com orientação do suporte ou do contador.</p>
 </div>
 <h2 id="abra-o-historico-de-um-produto">Abra o histórico de um produto</h2>
 <p>Na linha do produto, clique nos <strong>três pontinhos</strong>. Aparecem <strong>Registar entrada</strong>, <strong>Registar saída</strong> e <strong>Movimentações</strong>. Clique em <strong>Movimentações</strong>.</p>
 <p><img alt="Menu do produto com Registar entrada, Registar saída e Movimentações destacados" loading="lazy" src="../../imagens/04.08/02-menu-produto.png" /></p>
 <h2 id="leia-as-movimentacoes">Leia as movimentações</h2>
-<p>Cada linha é uma entrada (seta verde para cima) ou uma saída (seta vermelha para baixo), com:</p>
-<ul>
-<li><strong>Lote</strong>, <strong>Custo unitário</strong> e <strong>Categoria</strong> (Quant. Inicial, Ajustes de Estoque, Compra...);</li>
-<li><strong>Usuário</strong> que fez o lançamento e <strong>Data</strong>;</li>
-<li><strong>Qtd.</strong> movimentada e o saldo depois dela.</li>
-</ul>
-<p>No exemplo, o pão teve <strong>entrada de 100</strong> (Quant. Inicial) e <strong>saída de 5</strong> (Ajustes de Estoque, feita pelo inventário), ficando com <strong>95</strong>.</p>
+<p>Cada linha é uma entrada (seta verde para cima) ou uma saída (seta vermelha para baixo). Leia as colunas como explicado em <a href="#como-ler-uma-linha-do-historico">Como ler uma linha do histórico</a>.</p>
+<p>No exemplo, o pão teve <strong>entrada de 100</strong> (Quant. Inicial, lote 714) e <strong>saída de 5</strong> (Ajustes de Estoque, feita pelo inventário). O lote 714 mostra <strong>95</strong> na última coluna: é o que resta dele hoje. O saldo total é <strong>95</strong>.</p>
 <p><img alt="Histórico do Pão de hambúrguer com o filtro de tipo, as abas Fechadas e Canceladas, a Categoria e a Qtd. destacados (nome do usuário coberto)" loading="lazy" src="../../imagens/04.08/03-historico.png" /></p>
-<p>Use <strong>Tipo de movimentação</strong> para ver só entradas ou só saídas. A aba <strong>Canceladas</strong> mostra os lançamentos cancelados.</p>
+<p>Use <strong>Tipo de movimentação</strong> para ver só entradas ou só saídas. A aba <strong>Canceladas</strong> mostra os lançamentos excluídos, que não contam mais no saldo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Olhe o filtro Negativo toda semana.</strong> Saldo negativo quase sempre é compra que não foi lançada.</li>
+<li><strong>Antes do primeiro inventário</strong>, use <strong>Sem movimentações</strong> para achar os produtos que precisam de entrada inicial.</li>
+<li><strong>Na dúvida sobre um saldo, vá ao histórico</strong> antes de ajustar. Corrigir o lançamento errado é melhor que lançar um ajuste por cima.</li>
+<li><strong>Confira o custo das entradas</strong> no histórico: custo zerado ou com um zero a mais estraga o custo médio e o lucro.</li>
+<li><strong>Use categorias claras</strong> ao lançar entradas e saídas: o histórico fica fácil de ler meses depois.</li>
+</ul>
 </div>
 <h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
@@ -1623,10 +1744,18 @@
 </details>
 <details class="question">
 <summary>Lancei uma movimentação errada</summary>
-<p>No histórico, o <strong>ícone de lixeira</strong> no fim da linha cancela a movimentação. Ela passa para a aba <strong>Canceladas</strong>. Confira o saldo depois.</p>
+<p>No histórico, o <strong>ícone de lixeira</strong> no fim da linha exclui a movimentação. Ela passa para a aba <strong>Canceladas</strong> e deixa de contar no saldo. Excluir uma saída devolve as quantidades aos lotes; excluir uma entrada tira o custo dela do custo médio. Veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>.</p>
 </details>
-<p><strong>Relacionados:</strong> <a href="../entrada-de-estoque/">Como dar entrada no estoque</a> · <a href="../inventario/">Como fazer um inventário</a></p>
-<p><span class="palavras-chave">saldo de estoque balanço quanto tem no estoque histórico movimentações entradas e saídas kardex consultar estoque saldo negativo zerar estoque cancelar movimentação lote custo</span></p>
+<details class="question">
+<summary>A data do lançamento não é a do dia em que lancei</summary>
+<p>A coluna <strong>Data</strong> é a data <strong>da operação</strong> (por exemplo, a data de emissão da nota de compra). Para ver quando foi lançado no sistema, passe o mouse no <strong>(i)</strong> ao lado do lote.</p>
+</details>
+<details class="question">
+<summary>O que é o número da última coluna?</summary>
+<p>É o "saldo atual de hoje" daquele lançamento. Numa entrada, mostra quanto daquele lote ainda está no estoque.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../entrada-de-estoque/">Como dar entrada no estoque</a> · <a href="../inventario/">Como fazer um inventário</a> · <a href="../importar-nota-de-compra/">Como importar a nota fiscal de compra (XML)</a></p>
+<p><span class="palavras-chave">saldo de estoque balanço quanto tem no estoque histórico movimentações entradas e saídas kardex consultar estoque saldo negativo sem movimentações zerar estoque zerar movimentações cancelar movimentação canceladas lote custo composição saldo atual de hoje data da operação</span></p>
 
 
 
