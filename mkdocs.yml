@@ -86,8 +86,10 @@ nav:
       - estoque/index.md
       - estoque/entrada-de-estoque.md
       - estoque/inventario.md
+      - estoque/transferencia.md
       - estoque/importar-nota-de-compra.md
       - estoque/saldo-do-estoque.md
+      - estoque/categorias-de-movimentacao.md
   - 05. Vendas:
       - vendas/index.md
       - vendas/emitir-nfe.md
