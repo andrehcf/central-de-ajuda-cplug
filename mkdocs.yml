@@ -87,6 +87,7 @@ nav:
       - estoque/entrada-de-estoque.md
       - estoque/inventario.md
       - estoque/transferencia.md
+      - estoque/cadastrar-fornecedor.md
       - estoque/importar-nota-de-compra.md
       - estoque/saldo-do-estoque.md
       - estoque/categorias-de-movimentacao.md
