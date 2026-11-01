@@ -404,11 +404,22 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-
 
 # Como cadastrar uma categoria
 
-3 minutos · 6 passos · Atualizado em 30/10/2026
+5 minutos · 6 passos · Atualizado em 01/11/2026
 
 Categorias agrupam seus produtos, por exemplo "Bebidas", "Lanches" ou "Sobremesas". Isso deixa a busca e o caixa mais organizados. Só o **nome** é obrigatório.
 
 Uma categoria pode ter **subcategorias**. Exemplo: dentro de "Pizzas", as subcategorias "Salgadas" e "Doces".
+
+## Entenda o conceito
+
+A categoria é a **prateleira** onde o produto fica. Ela não muda preço nem imposto, mas organiza tudo o que vem depois:
+
+- **Cadastro e busca:** filtrar a lista de produtos e achar rápido o que procura.
+- **Importação por planilha:** a coluna Categoria é procurada **pelo nome**, por isso a categoria precisa existir antes e ser escrita igual (veja [Como importar produtos de uma planilha](importar-produtos.md)).
+- **Estoque:** o inventário permite filtrar os produtos por categoria para contar por partes (veja [Como fazer um inventário](../estoque/inventario.md)).
+- **Visibilidade:** inativar uma categoria **oculta todos os produtos dela**, o que é útil para itens sazonais.
+
+**Categoria ou subcategoria?** Use subcategoria só quando uma categoria fica grande demais para achar os produtos. Exemplo: "Bebidas" com dezenas de itens pode virar "Bebidas → Refrigerantes / Sucos / Cervejas".
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -470,6 +481,13 @@ Nos **três pontinhos** no fim da linha você tem:
 !!! success "Como saber que deu certo"
     Aparece a mensagem **Categoria criada com sucesso** e a categoria nova aparece na lista.
 
+!!! tip "Boas práticas"
+    - **Pense como o cliente procura**: "Lanches", "Bebidas", "Sobremesas", e não códigos internos.
+    - **Poucas categorias, bem definidas.** Muitas categorias com 1 ou 2 produtos atrapalham mais do que ajudam.
+    - **Crie as categorias antes** de cadastrar ou importar os produtos.
+    - **Não repita nomes**: o sistema aceita, mas confunde na busca e na importação.
+    - **Inative em vez de excluir** categorias sazonais (ex.: "Páscoa"): no ano seguinte, é só reativar.
+
 ## Deu algum problema?
 
 ??? question "Estou cadastrando um produto e a categoria não existe"
@@ -497,9 +515,23 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-
 
 # Como cadastrar uma unidade de medida
 
-2 minutos · 4 passos · Atualizado em 30/10/2026
+5 minutos · 4 passos · Atualizado em 01/11/2026
 
 A unidade de medida diz como o produto é vendido: por unidade, por quilo, por litro, por caixa. O sistema já vem com as mais comuns, como Unidade, Kilograma, Grama, Litros e Metro.
+
+## Entenda o conceito
+
+A unidade de medida responde à pergunta **"1 deste produto é o quê?"**. A resposta vale para tudo: para a venda, para o estoque e para a ficha técnica.
+
+| Peça | O que define | Exemplo |
+| --- | --- | --- |
+| **Nome** | Como a unidade aparece para você. | Pacote |
+| **Abreviação** | A sigla padrão da unidade, escolhida numa lista. | "Pacote (pacote)" |
+| **Precisão de medida** | Quantas casas depois da vírgula a **quantidade** aceita. | 3 casas: 1,250 kg |
+
+**Por que a precisão importa:** um produto vendido por peso precisa aceitar quantidades quebradas (0,350 kg). Um produto contado inteiro (lata, caixa) não deve aceitar, senão aparecem quantidades como "2,5 latas" no estoque.
+
+**Unidade de controle × unidade de compra:** o fornecedor pode vender em **caixa** e você controlar em **unidade**. Isso não pede duas unidades no produto: na importação da nota de compra, o **Fator de conversão** faz a conta (veja [Como importar a nota fiscal de compra (XML)](../estoque/importar-nota-de-compra.md)).
 
 !!! info "Só siga este manual se a unidade que você precisa não estiver na lista"
 
@@ -546,6 +578,12 @@ Aparece a mensagem **Unidade de medida criada com sucesso** no canto de cima.
 
     Na lista, a coluna **Precisão medida** mostra um exemplo do formato (como "0,000gramas") e a coluna **Produtos** mostra quantos produtos usam cada unidade. Nos **três pontinhos** da linha você tem **Editar** (muda nome, abreviação e precisão) e **Excluir**.
 
+!!! tip "Boas práticas"
+    - **Use as unidades que já vêm no sistema** sempre que servirem.
+    - **Escolha a unidade em que você controla o estoque**, não a do fornecedor.
+    - **Precisão zero para o que é contado**; casas decimais só para o que é pesado ou medido.
+    - **Na ficha técnica**, cadastre os insumos na unidade em que a receita usa (gramas, fatias, porções). Veja [Como montar uma ficha técnica](ficha-tecnica.md).
+
 ## Deu algum problema?
 
 ??? question "Não sei qual abreviação escolher"
@@ -570,9 +608,23 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-
 
 # Como cadastrar variações
 
-4 minutos · 4 passos · Atualizado em 30/10/2026
+8 minutos · 4 passos · Atualizado em 01/11/2026
 
 Uma variação é uma escolha que o produto tem, como **Tamanho** (P, M, G), **Cor** (Azul, Preto) ou **Sabor** (Calabresa, Frango). Você cadastra a variação uma vez só e depois usa em vários produtos.
+
+## Entenda o conceito
+
+A variação é um **molde** de escolhas. Ela fica guardada aqui e é **ligada** aos produtos depois. O mesmo molde "Tamanho P/M/G" serve para o milk-shake, o açaí e o suco.
+
+Existem dois usos bem diferentes:
+
+| Uso | O cliente escolhe... | O preço... | Configuração de cálculo |
+| --- | --- | --- | --- |
+| **Versão do produto** (tamanho, cor, voltagem) | **uma** opção | é definido em cada versão do produto | como vem: de 1 até 1, Soma total, R$ 0,00 nas opções |
+| **Composição de preço** (sabores de pizza, montagem) | uma ou **mais** opções | vem das opções escolhidas | quantidade e método de cálculo ajustados |
+
+!!! note "Variação, adicional ou opcional?"
+    **Variação** = o cliente **precisa escolher** (tamanho, sabor). **Adicional** = o cliente **pode acrescentar**, pagando a mais (queijo extra). **Opcional da ficha técnica** = o cliente **pode tirar** um ingrediente. Veja a comparação em [Como cadastrar adicionais e sugestões](adicionais-e-sugestoes.md).
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -633,6 +685,13 @@ Aparece a mensagem **Variação criada com sucesso** no canto de cima.
 
 !!! success "Como saber que deu certo"
     A variação aparece na lista, com as opções e a coluna **Produtos** (quantos produtos a usam), e já pode ser usada nos produtos. Nos **três pontinhos** da linha você tem **Editar**, **Duplicar** (cria uma cópia, útil para fazer uma variação parecida) e **Excluir**.
+
+!!! tip "Boas práticas"
+    - **Nome da variação que diga o uso**: "Tamanho do milk-shake", e não só "Tamanho", quando houver mais de uma variação de tamanho.
+    - **Reaproveite**: antes de criar, veja se já existe uma variação igual na lista.
+    - **Use Duplicar** para criar uma variação parecida sem digitar tudo de novo.
+    - **Ordem das opções**: do menor para o maior, ou do mais vendido para o menos vendido.
+    - **Pizza meio a meio**: o método **Maior preço** é o mais usado; combine com o cliente qual regra a loja segue.
 
 ## Deu algum problema?
 
