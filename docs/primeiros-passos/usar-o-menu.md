@@ -4,14 +4,28 @@ description: Conheça a tela inicial da CPlug - menu lateral, busca, troca de lo
 codigo: "01.03"
 modulo: Primeiros passos
 tela: /dashboard
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como usar o menu do sistema
 
-<div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 7 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 5 minutos · :material-format-list-numbered: 7 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Este manual apresenta as partes da tela da CPlug. Depois de ler, você vai saber chegar em qualquer função do sistema.
+
+## Entenda o conceito
+
+O menu segue o **caminho do dinheiro e da mercadoria** dentro do negócio. Se você entende esse caminho, sabe onde procurar cada coisa:
+
+1. **Produtos:** o que você vende (cadastro, preço, impostos).
+2. **Estoque:** a mercadoria que entra e sai (compras, notas de entrada, inventário).
+3. **Vendas** e **Ponto de venda:** a venda acontece (caixa, pedidos, notas fiscais).
+4. **Clientes:** para quem você vende.
+5. **Finanças:** o dinheiro que entra e sai (contas a pagar e a receber, bancos).
+6. **Relatórios:** o resultado de tudo isso.
+7. **Configurações:** as regras da empresa (dados, usuários, parte fiscal).
+
+Para começar do zero, a ordem costuma ser: **Configurações → Produtos → Estoque → Ponto de venda → vender**. A tela inicial do site traz essa trilha em **Comece aqui**.
 
 Nos prints, o **quadrado vermelho** mostra a parte da tela explicada em cada passo.
 
@@ -106,6 +120,13 @@ Ao entrar, o sistema pode mostrar o **Bem-vindo(a)!**, um tour rápido que apres
 
 !!! tip "Na faixa da esquerda"
     Os ícones da faixa fina à esquerda trocam de produto CPlug. O primeiro é o **ERP** (este sistema). Os outros, **Meu Delivery** e **Pagamentos**, estão marcados como **"Breve"**.
+
+!!! tip "Boas práticas"
+    - **Use o Buscar no menu** quando não lembrar onde fica uma tela: é mais rápido que procurar grupo por grupo.
+    - **Conclua o tour** uma vez: ele apresenta os menus e depois não aparece mais.
+    - **Ligue a Autenticação de Dois Fatores** em **Meu perfil**, principalmente para quem tem acesso às finanças.
+    - **Saia do sistema** em computadores compartilhados.
+    - **Anote a versão do sistema** (em **Informações**) ao abrir um chamado no suporte.
 
 ## Deu algum problema?
 
