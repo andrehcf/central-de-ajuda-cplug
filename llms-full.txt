@@ -714,9 +714,25 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-
 
 # Como cadastrar um produto
 
-8 minutos · 9 passos · Atualizado em 31/10/2026
+12 minutos · 9 passos · Atualizado em 01/11/2026
 
 Este manual mostra como cadastrar um produto simples, como uma lata de refrigerante ou um pastel. Para produtos com tamanho, cor ou sabor, veja [Como cadastrar um produto com variações](cadastrar-produto-com-variacoes.md).
+
+## Entenda o conceito
+
+O produto é o **centro** do sistema: quase tudo se liga a ele. Cada aba do cadastro responde a uma pergunta:
+
+| Pergunta | Onde se responde | Liga com |
+| --- | --- | --- |
+| **O que é e quanto custa para o cliente?** | Dados básicos: nome, categoria, preço, unidade | Caixa, cardápio, [listas de preço](lista-de-precos.md) |
+| **Que tipo de produto é?** | Tipo: Simples, Coleção (combo) ou Insumo (matéria-prima) | [Ficha técnica](ficha-tecnica.md) |
+| **Quanto eu tenho e quanto me custou?** | Aba Estoque e **Cálculo de custo** | [Entradas de estoque](../estoque/entrada-de-estoque.md): cada entrada vira um lote e forma o **custo médio** |
+| **Como sai na nota fiscal?** | [Parâmetros fiscais](parametros-fiscais.md) | NFC-e e NF-e |
+| **Onde ele aparece?** | Canais de venda e Unidades (lojas) | PDV, loja online, totem, Smart Menu |
+
+**Preço × custo:** o **Preço** é o que o cliente paga. O **custo** é o que você pagou, e normalmente vem sozinho das entradas de estoque (custo médio). A diferença entre os dois é a sua margem.
+
+**Código (SKU):** é a "identidade" do produto. É por ele que a importação por planilha e a edição em massa encontram o produto. Use códigos simples e únicos.
 
 !!! info "Antes de começar, confira se já existe"
     1. **A categoria** do produto, por exemplo "Bebidas". Se não existir, veja [Como cadastrar uma categoria](cadastrar-categoria.md).
@@ -824,6 +840,14 @@ No topo da lista, as abas **Todos**, **Com variações**, **Coleções**, **Insu
 
     **Próximo passo:** [configure os dados fiscais](parametros-fiscais.md) para a nota fiscal sair sem erro.
 
+!!! tip "Boas práticas"
+    - **Procure antes de cadastrar**: produto duplicado divide o estoque e o custo em dois.
+    - **Nome igual ao que o cliente pede** no balcão; detalhes técnicos vão em **Sobre o produto**.
+    - **SKU simples e único**, em maiúsculas e sem espaços (ex.: CHA-LATA).
+    - **Código de barras da embalagem** sempre que existir: agiliza o caixa e evita erro de digitação.
+    - **Deixe o estoque controlado** (padrão) e dê a **entrada inicial** logo depois do cadastro.
+    - **Complete os dados fiscais** antes da primeira venda com nota.
+
 ## Deu algum problema?
 
 ??? question "Apareceu \"Erro ao criar o produto\""
@@ -858,9 +882,24 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/cadastrar-
 
 # Como cadastrar um produto com variações
 
-6 minutos · 8 passos · Atualizado em 31/10/2026
+10 minutos · 8 passos · Atualizado em 01/11/2026
 
 Use este manual para produtos que têm tamanho, cor ou modelo, como um milk-shake pequeno, médio e grande. Cada opção pode ter o seu próprio preço. No fim, o passo 8 mostra o outro formato: o produto montado, como a pizza de dois sabores.
+
+## Entenda o conceito
+
+Um produto com variações é **um cadastro só** que se desdobra em opções. Você não cadastra "Milk-shake P", "Milk-shake M" e "Milk-shake G" separados: cadastra o Milk-shake e liga a variação "Tamanho".
+
+| | **Variação em grade** | **Variação de valor composto** |
+| --- | --- | --- |
+| **Exemplo** | Milk-shake P / M / G; camiseta azul / preta | Pizza de 2 sabores; açaí montado |
+| **Cada opção é...** | uma **versão** do produto, com preço e código de barras próprios | um **ingrediente** escolhido, que soma ao preço |
+| **O cliente escolhe** | uma opção | uma ou mais, conforme as quantidades |
+| **Preço** | o da opção escolhida | preço do produto + cálculo (soma, média ou maior preço) |
+
+**Estoque e notas com grade:** como cada opção é uma versão do produto, o sistema pergunta a opção nas movimentações. Na entrada de estoque, o produto pede "as opções do produto para entrada"; na NF-e, ao escolher o produto, abre uma janela para escolher a opção (tamanho, por exemplo). E o inventário só aceita produtos com variações **depois da primeira entrada** de estoque.
+
+A variação em si (o "molde" com as opções) é cadastrada antes, em [Como cadastrar variações](cadastrar-variacoes.md).
 
 !!! info "Antes de começar"
     A variação (por exemplo, "Tamanho do milk-shake" com Pequeno, Médio e Grande) precisa estar cadastrada. Se não estiver, veja [Como cadastrar variações](cadastrar-variacoes.md).
@@ -960,6 +999,13 @@ O **+ Adicionar variação** coloca mais um grupo, como "Borda", no mesmo produt
 
 
 
+!!! tip "Boas práticas"
+    - **Um produto, várias opções**: não crie um cadastro para cada tamanho.
+    - **Preencha o preço de todas as opções** antes de salvar; opção com preço zerado sai de graça.
+    - **Use o código de barras de cada opção** quando a embalagem tiver; senão, gere EAN para todas de uma vez.
+    - **Dê a entrada inicial de cada opção** no estoque antes do primeiro inventário.
+    - **Grade para versões, valor composto para montagem.** Na dúvida, pense: o cliente escolhe **qual** produto (grade) ou **o que vai dentro** (valor composto)?
+
 ## Deu algum problema?
 
 ??? question "A variação não aparece quando eu digito o nome"
@@ -985,7 +1031,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/produtos/lista-de-p
 
 # Como criar uma lista de preços
 
-10 minutos · 8 passos · Atualizado em 31/10/2026
+14 minutos · 8 passos · Atualizado em 01/11/2026
 
 A **lista de preços** permite cobrar **outro preço** pelo mesmo produto em situações específicas, sem mexer no preço normal. Exemplos:
 
@@ -995,6 +1041,26 @@ A **lista de preços** permite cobrar **outro preço** pelo mesmo produto em sit
 - **Atacado:** preço menor a partir de uma quantidade.
 
 Neste manual criamos a lista **Happy Hour**, com X-Burger, Batata Frita e Refrigerante Lata mais baratos.
+
+## Entenda o conceito
+
+Pense nas listas como **etiquetas de preço** que só aparecem em certas condições. A **Lista Padrão** é a etiqueta de sempre; as outras listas "cobrem" a padrão quando todas as condições delas batem.
+
+Uma lista vale quando a venda acontece:
+
+| Condição | Onde se define | Exemplo |
+| --- | --- | --- |
+| na **loja** certa | Selecionar unidades | Só na loja do shopping |
+| no **canal** certo | Canais de Venda | Só no PDV |
+| no **modo de pedido** certo | Modos de Pedido | Só Mesas e Balcão |
+| para o **cliente** certo | Categorias de clientes | Só "Clientes VIP" |
+| no **momento** certo | Validade | Seg a sex, 17h às 19h |
+
+E só para os **produtos que estão na lista**: um produto que não foi adicionado a ela continua com o preço normal.
+
+**Quando duas listas valem ao mesmo tempo**, o sistema usa a **prioridade** (passo 8). Por isso o aviso de conflito aparece ao salvar.
+
+**Preço de atacado** é uma segunda faixa de preço dentro da lista: a partir da **Quantidade mínima atacado**, vale o **Preço atacado**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -1087,6 +1153,14 @@ Quando duas listas valem ao mesmo tempo, o sistema usa a ordem de prioridade. Na
 
 !!! tip "Produtos com variações"
     Para produtos com opções (como a Batata Frita P, M e G), a coluna **Opções** mostra quantas existem. O preço de cada opção pode ser diferente.
+
+!!! tip "Boas práticas"
+    - **Mexa no preço normal no produto**, não numa lista: a Lista Padrão é o preço de referência.
+    - **Uma lista por situação** (happy hour, delivery, atacado), com nome que diga quando ela vale.
+    - **Coloque só os produtos que mudam de preço**: o resto continua com o preço normal.
+    - **Use validade** em promoções, para a lista não ficar valendo depois do fim.
+    - **Resolva os conflitos na hora** com a **Priorizar**, para não haver dúvida sobre qual preço vale.
+    - **Teste uma venda** no canal e no horário da lista antes de divulgar a promoção.
 
 ## Deu algum problema?
 
