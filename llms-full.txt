@@ -1986,7 +1986,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/importar-no
 
 # Como importar a nota fiscal de compra (XML)
 
-10 minutos · 9 passos · Atualizado em 30/10/2026
+15 minutos · 9 passos · Atualizado em 31/10/2026
 
 Quando você compra de um fornecedor, ele emite uma **nota fiscal eletrônica (NF-e)**. Junto com a nota vem um arquivo **XML**, que tem todos os dados da compra: fornecedor, produtos, quantidades, valores e impostos.
 
@@ -1996,6 +1996,30 @@ Importando esse arquivo, o sistema faz tudo de uma vez:
 - registra o **preço de custo** de cada produto;
 - cadastra o **fornecedor**;
 - cria a **compra** e a **conta a pagar**.
+
+## Entenda o conceito
+
+Lançar uma compra à mão dá trabalho e abre espaço para erro: digitar produto por produto, quantidade, custo, fornecedor, vencimento... O **XML** já tem tudo isso, escrito pelo próprio fornecedor. A importação aproveita esses dados e **liga cada informação ao lugar certo** do sistema.
+
+### O que a importação cria
+
+| Onde | O que aparece | Exemplo do teste |
+| --- | --- | --- |
+| **Estoque → Fornecedores** | O fornecedor, com os dados da nota. | O emitente da nota. |
+| **Estoque → Compras** | Uma compra com status **Recebido**, os itens, o total e o próprio arquivo XML anexado. Na observação: "Compra gerada por importação de XML". | Compra #18, R$ 1.245,00. |
+| **Histórico do produto** (estoque) | Uma **entrada** da categoria **Compra** para cada item, ligada à nota e à compra. Cada entrada vira um **lote** com o custo da nota. | 1000 embalagens a R$ 0,4525 cada. |
+| **Finanças** | A **conta a pagar** ao fornecedor, com o vencimento e a conta bancária escolhidos, na categoria **Custo dos Produtos**. | 1 parcela de R$ 1.245,00, vencimento 29/11. |
+
+!!! note "A data da entrada é a data da nota"
+    No teste, a entrada no estoque ficou com a **data de emissão da nota** (28/05), e não com o dia em que ela foi importada. Relatórios por período mostram a mercadoria no mês da nota.
+
+### Por que vincular em vez de criar
+
+Cada produto da nota pode **criar um produto novo** ou **ser vinculado** a um que você já tem. Se você cria um novo para algo que já existe, passa a ter **dois cadastros** da mesma coisa: o estoque e o custo ficam divididos entre eles, e o relatório não bate. Regra prática: **primeira compra do item → criar; compras seguintes → vincular**.
+
+### O custo que entra
+
+O **Preço de custo** de cada item vem da nota (valor do item ÷ quantidade). Ele vira o custo do **lote** e entra no **custo médio** do produto, que o sistema usa para sugerir preço e calcular lucro. Para entender lotes e custo médio, veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
 !!! info "Antes de começar"
     - **Tenha o arquivo XML da nota.** Ele termina em `.xml`. O PDF da nota (DANFE) **não serve**. O fornecedor costuma mandar o XML por e-mail junto com o PDF. Se não mandou, peça a ele ou ao seu contador.
@@ -2122,6 +2146,16 @@ Clique em **Finalizar**.
 !!! success "Pronto!"
     A mercadoria entrou no estoque, com custo e fornecedor registrados, e a conta a pagar foi criada.
 
+!!! tip "Boas práticas"
+    - **Importe a nota quando a mercadoria chegar**, depois de conferir as quantidades com a nota. Assim o estoque do sistema bate com a prateleira.
+    - **Peça o XML sempre.** Combine com cada fornecedor de mandar o XML junto com o boleto ou o PDF.
+    - **Vincule, não duplique.** Da segunda compra em diante, use **Vincular produto existente**.
+    - **Dê nomes que você reconhece** aos produtos novos. O nome do fornecedor costuma ser genérico ("EMBALAGENS PLÁSTICAS").
+    - **Confira o Fator de conversão** de quem vende em caixa, fardo ou pacote.
+    - **Use os impostos da sua empresa**, nunca os do fornecedor, nas Informações tributárias.
+    - **Preencha o vencimento certo** do boleto: é ele que aparece nas contas a pagar.
+    - **Não apague e reimporte** uma nota já importada para "corrigir": isso pode dar entrada duas vezes.
+
 ## Deu algum problema?
 
 ??? question "Apareceu \"Nota fiscal já importada\""
@@ -2139,6 +2173,12 @@ Clique em **Finalizar**.
 
 ??? question "A quantidade no estoque ficou errada"
     Confira o **Fator de conversão** do item. Se a nota vem em caixa e você controla por unidade, o fator precisa ser a quantidade de unidades da caixa.
+
+??? question "A entrada no estoque apareceu com uma data antiga"
+    A entrada fica com a **data de emissão da nota**, não com o dia em que você importou. Se a nota é de um mês anterior, a mercadoria aparece naquele mês nos relatórios.
+
+??? question "Onde fica a conta a pagar da nota?"
+    Ela é criada junto com a compra, com o vencimento e a conta bancária que você escolheu na aba **Pagamentos**, na categoria **Custo dos Produtos**. Para conferir os dados, abra a compra em **Estoque → Compras**.
 
 ??? question "Tenho só o PDF da nota"
     O PDF (DANFE) não pode ser importado. Peça o **XML** ao fornecedor ou ao seu contador.
