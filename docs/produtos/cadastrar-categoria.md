@@ -4,16 +4,27 @@ description: Passo a passo para criar uma categoria de produtos, como Bebidas ou
 codigo: "03.01"
 modulo: Produtos
 tela: /dashboard/catalog/categories
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar uma categoria
 
-<div class="cplug-meta" markdown>:material-clock-outline: 3 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 5 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Categorias agrupam seus produtos, por exemplo "Bebidas", "Lanches" ou "Sobremesas". Isso deixa a busca e o caixa mais organizados. Só o **nome** é obrigatório.
 
 Uma categoria pode ter **subcategorias**. Exemplo: dentro de "Pizzas", as subcategorias "Salgadas" e "Doces".
+
+## Entenda o conceito
+
+A categoria é a **prateleira** onde o produto fica. Ela não muda preço nem imposto, mas organiza tudo o que vem depois:
+
+- **Cadastro e busca:** filtrar a lista de produtos e achar rápido o que procura.
+- **Importação por planilha:** a coluna Categoria é procurada **pelo nome**, por isso a categoria precisa existir antes e ser escrita igual (veja [Como importar produtos de uma planilha](importar-produtos.md)).
+- **Estoque:** o inventário permite filtrar os produtos por categoria para contar por partes (veja [Como fazer um inventário](../estoque/inventario.md)).
+- **Visibilidade:** inativar uma categoria **oculta todos os produtos dela**, o que é útil para itens sazonais.
+
+**Categoria ou subcategoria?** Use subcategoria só quando uma categoria fica grande demais para achar os produtos. Exemplo: "Bebidas" com dezenas de itens pode virar "Bebidas → Refrigerantes / Sucos / Cervejas".
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -74,6 +85,13 @@ Nos **três pontinhos** no fim da linha você tem:
 
 !!! success "Como saber que deu certo"
     Aparece a mensagem **Categoria criada com sucesso** e a categoria nova aparece na lista.
+
+!!! tip "Boas práticas"
+    - **Pense como o cliente procura**: "Lanches", "Bebidas", "Sobremesas", e não códigos internos.
+    - **Poucas categorias, bem definidas.** Muitas categorias com 1 ou 2 produtos atrapalham mais do que ajudam.
+    - **Crie as categorias antes** de cadastrar ou importar os produtos.
+    - **Não repita nomes**: o sistema aceita, mas confunde na busca e na importação.
+    - **Inative em vez de excluir** categorias sazonais (ex.: "Páscoa"): no ano seguinte, é só reativar.
 
 ## Deu algum problema?
 

@@ -4,14 +4,28 @@ description: Passo a passo para criar uma unidade de medida nova, como Caixa ou 
 codigo: "03.02"
 modulo: Produtos
 tela: /dashboard/catalog/unit-of-measurement
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar uma unidade de medida
 
-<div class="cplug-meta" markdown>:material-clock-outline: 2 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 5 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 A unidade de medida diz como o produto é vendido: por unidade, por quilo, por litro, por caixa. O sistema já vem com as mais comuns, como Unidade, Kilograma, Grama, Litros e Metro.
+
+## Entenda o conceito
+
+A unidade de medida responde à pergunta **"1 deste produto é o quê?"**. A resposta vale para tudo: para a venda, para o estoque e para a ficha técnica.
+
+| Peça | O que define | Exemplo |
+| --- | --- | --- |
+| **Nome** | Como a unidade aparece para você. | Pacote |
+| **Abreviação** | A sigla padrão da unidade, escolhida numa lista. | "Pacote (pacote)" |
+| **Precisão de medida** | Quantas casas depois da vírgula a **quantidade** aceita. | 3 casas: 1,250 kg |
+
+**Por que a precisão importa:** um produto vendido por peso precisa aceitar quantidades quebradas (0,350 kg). Um produto contado inteiro (lata, caixa) não deve aceitar, senão aparecem quantidades como "2,5 latas" no estoque.
+
+**Unidade de controle × unidade de compra:** o fornecedor pode vender em **caixa** e você controlar em **unidade**. Isso não pede duas unidades no produto: na importação da nota de compra, o **Fator de conversão** faz a conta (veja [Como importar a nota fiscal de compra (XML)](../estoque/importar-nota-de-compra.md)).
 
 !!! info "Só siga este manual se a unidade que você precisa não estiver na lista"
 
@@ -57,6 +71,12 @@ Aparece a mensagem **Unidade de medida criada com sucesso** no canto de cima.
     A unidade nova aparece na lista e já pode ser escolhida no cadastro de produtos.
 
     Na lista, a coluna **Precisão medida** mostra um exemplo do formato (como "0,000gramas") e a coluna **Produtos** mostra quantos produtos usam cada unidade. Nos **três pontinhos** da linha você tem **Editar** (muda nome, abreviação e precisão) e **Excluir**.
+
+!!! tip "Boas práticas"
+    - **Use as unidades que já vêm no sistema** sempre que servirem.
+    - **Escolha a unidade em que você controla o estoque**, não a do fornecedor.
+    - **Precisão zero para o que é contado**; casas decimais só para o que é pesado ou medido.
+    - **Na ficha técnica**, cadastre os insumos na unidade em que a receita usa (gramas, fatias, porções). Veja [Como montar uma ficha técnica](ficha-tecnica.md).
 
 ## Deu algum problema?
 

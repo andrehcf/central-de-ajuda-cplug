@@ -4,14 +4,28 @@ description: Passo a passo para criar variações como Tamanho, Cor ou Sabor, qu
 codigo: "03.03"
 modulo: Produtos
 tela: /dashboard/catalog/variations-and-options
-atualizado: 2026-10-30
+atualizado: 2026-11-01
 ---
 
 # Como cadastrar variações
 
-<div class="cplug-meta" markdown>:material-clock-outline: 4 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 30/10/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
 
 Uma variação é uma escolha que o produto tem, como **Tamanho** (P, M, G), **Cor** (Azul, Preto) ou **Sabor** (Calabresa, Frango). Você cadastra a variação uma vez só e depois usa em vários produtos.
+
+## Entenda o conceito
+
+A variação é um **molde** de escolhas. Ela fica guardada aqui e é **ligada** aos produtos depois. O mesmo molde "Tamanho P/M/G" serve para o milk-shake, o açaí e o suco.
+
+Existem dois usos bem diferentes:
+
+| Uso | O cliente escolhe... | O preço... | Configuração de cálculo |
+| --- | --- | --- | --- |
+| **Versão do produto** (tamanho, cor, voltagem) | **uma** opção | é definido em cada versão do produto | como vem: de 1 até 1, Soma total, R$ 0,00 nas opções |
+| **Composição de preço** (sabores de pizza, montagem) | uma ou **mais** opções | vem das opções escolhidas | quantidade e método de cálculo ajustados |
+
+!!! note "Variação, adicional ou opcional?"
+    **Variação** = o cliente **precisa escolher** (tamanho, sabor). **Adicional** = o cliente **pode acrescentar**, pagando a mais (queijo extra). **Opcional da ficha técnica** = o cliente **pode tirar** um ingrediente. Veja a comparação em [Como cadastrar adicionais e sugestões](adicionais-e-sugestoes.md).
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -72,6 +86,13 @@ Aparece a mensagem **Variação criada com sucesso** no canto de cima.
 
 !!! success "Como saber que deu certo"
     A variação aparece na lista, com as opções e a coluna **Produtos** (quantos produtos a usam), e já pode ser usada nos produtos. Nos **três pontinhos** da linha você tem **Editar**, **Duplicar** (cria uma cópia, útil para fazer uma variação parecida) e **Excluir**.
+
+!!! tip "Boas práticas"
+    - **Nome da variação que diga o uso**: "Tamanho do milk-shake", e não só "Tamanho", quando houver mais de uma variação de tamanho.
+    - **Reaproveite**: antes de criar, veja se já existe uma variação igual na lista.
+    - **Use Duplicar** para criar uma variação parecida sem digitar tudo de novo.
+    - **Ordem das opções**: do menor para o maior, ou do mais vendido para o menos vendido.
+    - **Pizza meio a meio**: o método **Maior preço** é o mais usado; combine com o cliente qual regra a loja segue.
 
 ## Deu algum problema?
 
