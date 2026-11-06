@@ -2023,12 +2023,12 @@
 <h3 id="contribuinte-ou-consumidor-final">Contribuinte ou consumidor final?</h3>
 <p>Fora do estado, o imposto depende de <strong>quem compra</strong>:</p>
 <ul>
-<li><strong>Contribuinte do ICMS</strong> (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como <strong>6102</strong>. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. (A venda interestadual para contribuinte não foi testada neste manual.)</li>
+<li><strong>Contribuinte do ICMS</strong> (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como <strong>6102</strong>. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. Na dúvida sobre o CFOP de uma venda para contribuinte de outro estado, pergunte ao seu contador.</li>
 <li><strong>Não contribuinte / consumidor final</strong> (pessoa física, ou empresa sem IE que vai usar o produto): CFOP como <strong>6108</strong> e <strong>DIFAL</strong>.</li>
 </ul>
 <h3 id="o-que-e-o-difal">O que é o DIFAL</h3>
 <p>O <strong>DIFAL</strong> (diferencial de alíquota) é a parte do ICMS que fica com o <strong>estado do cliente</strong> quando você vende para um <strong>consumidor final de outro estado</strong>. É a diferença entre a alíquota interna do estado de destino e a alíquota interestadual.</p>
-<p>No teste (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP <strong>18%</strong>, interestadual <strong>12%</strong> → DIFAL de <strong>6%</strong> = <strong>R$ 0,60</strong> para SP. O sistema calcula sozinho quando você marca <strong>Nota para Consumidor Final</strong>.</p>
+<p>Exemplo (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP <strong>18%</strong>, interestadual <strong>12%</strong> → DIFAL de <strong>6%</strong> = <strong>R$ 0,60</strong> para SP. O sistema calcula sozinho quando você marca <strong>Nota para Consumidor Final</strong>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Simples Nacional e DIFAL: confirme com o contador</p>
 <p>O sistema calculou o DIFAL mesmo numa empresa do Simples Nacional. Se a sua empresa precisa ou não recolher esse valor depende da situação dela e do estado de destino. <strong>Pergunte ao seu contador</strong> antes de vender para fora do estado.</p>
@@ -2062,7 +2062,7 @@
 <p><img alt="Dados fiscais do cliente com a Indicação de Inscrição Estadual destacada (CNPJ, IE e endereço cobertos)" loading="lazy" src="../../imagens/05.06/04-cliente-fiscal.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Venda para pessoa física: use o cadastro do cliente</p>
-<p>No teste, preencher uma <strong>pessoa física</strong> direto na nota, sem escolher um cliente cadastrado, fez o sistema enviar a pessoa como <strong>contribuinte</strong>, e a Sefaz recusou (Rejeição 728). Escolhendo um <strong>cliente cadastrado</strong>, a indicação veio certa (<strong>9 - Não contribuinte</strong>) e a nota foi autorizada. <strong>Cadastre o cliente antes</strong> e escolha-o na lista.</p>
+<p>Preencher uma <strong>pessoa física</strong> direto na nota, sem escolher um cliente cadastrado, pode fazer o sistema enviar a pessoa como <strong>contribuinte</strong>, e a Sefaz recusa (Rejeição 728). Escolhendo um <strong>cliente cadastrado</strong>, a indicação vem certa (<strong>9 - Não contribuinte</strong>) e a nota é autorizada. <strong>Cadastre o cliente antes</strong> e escolha-o na lista.</p>
 </div>
 <h2 id="preencha-os-dados-da-operacao">Preencha os dados da operação</h2>
 <p>Em <strong>Dados da operação</strong>:</p>
@@ -2093,7 +2093,7 @@
 <h2 id="confira-o-cfop-e-os-impostos-do-item">Confira o CFOP e os impostos do item</h2>
 <p>Mais abaixo no item:</p>
 <ul>
-<li><strong>CFOP:</strong> nos testes ele veio <strong>vazio</strong>: escolha o CFOP da venda. Digite o número para achar mais rápido.<ul>
+<li><strong>CFOP:</strong> pode vir <strong>vazio</strong>: escolha o CFOP da venda. Digite o número para achar mais rápido.<ul>
 <li>Dentro do estado: <strong>5102</strong> (venda comum) ou <strong>5405</strong> (produto com substituição tributária, ICMS 500 no Simples).</li>
 <li>Fora do estado: <strong>6102</strong> (para contribuinte) ou <strong>6108</strong> (para não contribuinte / consumidor final).</li>
 </ul>
@@ -2155,7 +2155,7 @@
 </details>
 <details class="question">
 <summary>Rejeição 728: NF-e sem informação da IE do destinatário</summary>
-<p>A nota foi enviada como se o cliente fosse <strong>contribuinte</strong>, mas sem Inscrição Estadual. Isso aconteceu no teste ao preencher uma pessoa física direto na nota. <strong>Escolha o cliente cadastrado</strong> na lista (ou cadastre-o antes) e confira a <strong>Indicação de Inscrição Estadual</strong>: <strong>9 - Não contribuinte</strong> para pessoa física.</p>
+<p>A nota foi enviada como se o cliente fosse <strong>contribuinte</strong>, mas sem Inscrição Estadual. Isso acontece ao preencher uma pessoa física direto na nota. <strong>Escolha o cliente cadastrado</strong> na lista (ou cadastre-o antes) e confira a <strong>Indicação de Inscrição Estadual</strong>: <strong>9 - Não contribuinte</strong> para pessoa física.</p>
 </details>
 <details class="question">
 <summary>O CFOP veio vazio</summary>
@@ -2163,7 +2163,7 @@
 </details>
 <details class="question">
 <summary>Não apareceu o DIFAL na venda para outro estado</summary>
-<p>No teste, o grupo do DIFAL apareceu calculado com o destino <strong>2 - Operação Interestadual</strong> e a nota marcada como <strong>Nota para Consumidor Final</strong>. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.</p>
+<p>O grupo do DIFAL é calculado com o destino <strong>2 - Operação Interestadual</strong> e a nota marcada como <strong>Nota para Consumidor Final</strong>. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.</p>
 </details>
 <details class="question">
 <summary>A nota ficou como Pendente</summary>

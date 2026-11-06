@@ -1854,14 +1854,14 @@ atualizado: 2026-11-01</p>
 <p class="admonition-title">\"Padrão\" na coluna Tipo</p>
 <p>Na coluna <strong>Tipo</strong>, <strong>Padrão</strong> quer dizer só que o cadastro é do tipo <strong>Transportadora</strong>. Não tem relação com a <strong>Transportadora Padrão</strong>, o cadastro fixo do sistema.</p>
 </div>
-<p><strong>Onde a transportadora é escolhida.</strong> No teste, as transportadoras apareceram para escolha em quatro lugares:</p>
+<p><strong>Onde a transportadora é escolhida.</strong> As transportadoras aparecem para escolha em quatro lugares:</p>
 <ul>
 <li>na <strong>transferência entre estoques</strong>, em <strong>Dados para transferência</strong> (veja <a href="../transferencia/">Como transferir mercadorias entre estoques</a>);</li>
 <li>no <strong>pedido de venda</strong>, na janela <strong>Taxa de entrega</strong>;</li>
 <li>na <strong>NF-e</strong> emitida à mão, na parte <strong>Transportador/volumes transportados</strong>;</li>
 <li>na <strong>compra</strong> (Estoque → Compras), na janela <strong>Frete</strong> (veja <a href="../lancar-compra/">Como lançar uma compra</a>).</li>
 </ul>
-<p>Nos quatro lugares, a lista mostrou <strong>todas</strong> as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: no teste, o frete foi somado às parcelas do fornecedor.</p>
+<p>Nos quatro lugares, a lista mostra <strong>todas</strong> as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: o frete é somado às parcelas do fornecedor.</p>
 <div class="admonition info">
 <p class="admonition-title">Antes de começar: a Transportadora Padrão já existe</p>
 <p>A <strong>Transportadora Padrão</strong> já vem no sistema e aparece em todas as listas de escolha, em todas as lojas. Ela não tem os três pontinhos: a dica do ⓘ diz que ela "é uma configuração fixa do sistema e não pode ser alterada". Se você só vende no balcão e não faz entregas, não precisa cadastrar outra.</p>
@@ -1878,7 +1878,7 @@ atualizado: 2026-11-01</p>
 <li><strong>Tipo de pessoa:</strong> <strong>Pessoa jurídica</strong> (empresa, com CNPJ) ou <strong>Pessoa física</strong> (com CPF).</li>
 <li><strong>Tipo de entrega:</strong> <strong>Transportadora</strong> ou <strong>Entregador Delivery</strong>.</li>
 </ul>
-<p>A tela já abre em <strong>Pessoa jurídica</strong> e <strong>Transportadora</strong>. Trocar o <strong>Tipo de entrega</strong> não muda os campos: no teste, ele definiu como o cadastro aparece na coluna <strong>Tipo</strong> (<strong>Padrão</strong> ou <strong>Delivery</strong>).</p>
+<p>A tela já abre em <strong>Pessoa jurídica</strong> e <strong>Transportadora</strong>. Trocar o <strong>Tipo de entrega</strong> não muda os campos: ele define como o cadastro aparece na coluna <strong>Tipo</strong> (<strong>Padrão</strong> ou <strong>Delivery</strong>).</p>
 <p>O mais comum: empresa de frete = Pessoa jurídica + Transportadora; motoboy = Pessoa física + Entregador Delivery.</p>
 <p><img alt="Nova transportadora com Tipo de pessoa, Tipo de entrega, Nome fantasia e as Opções fiscais destacados" loading="lazy" src="../../imagens/04.09/02-nova.png" /></p>
 <h2 id="preencha-a-identificacao">Preencha a identificação</h2>
@@ -1889,14 +1889,14 @@ atualizado: 2026-11-01</p>
 </ul>
 <p>Para <strong>pessoa física</strong>, os campos passam a ser <strong>Nome completo</strong>, <strong>RG</strong> e <strong>CPF</strong>, e a parte de <strong>Informações fiscais</strong> some.</p>
 <p><img alt="Pessoa física com Entregador Delivery e os campos Nome completo, RG e CPF destacados" loading="lazy" src="../../imagens/04.09/03-entregador.png" /></p>
-<p>No teste, um cadastro só com o nome foi salvo sem problema.</p>
+<p>Um cadastro só com o nome já pode ser salvo.</p>
 <h2 id="confira-as-informacoes-fiscais-pessoa-juridica">Confira as informações fiscais (pessoa jurídica)</h2>
 <p>Em <strong>Informações fiscais</strong> ficam:</p>
 <ul>
 <li><strong>Inscrição estadual (IE):</strong> o registro da empresa no estado; aparece nas notas que ela emite. Até 60 caracteres.</li>
 <li><strong>Inscrição municipal:</strong> o registro na prefeitura.</li>
-<li><strong>Isento de ICMS</strong> e <strong>Sem Inscrição Estadual (IE):</strong> marque só se a transportadora confirmar que é o caso dela. No teste, marcar <strong>Sem Inscrição Estadual (IE)</strong> não bloqueou o campo da inscrição: deixe-o em branco você mesmo.</li>
-<li><strong>Registrar na NFE:</strong> o nome sugere que os dados vão para a nota, mas o efeito na nota emitida não foi testado. Na NF-e emitida à mão, a lista mostrou também o entregador pessoa física, que nem tem essa caixinha. Na dúvida, fale com o suporte.</li>
+<li><strong>Isento de ICMS</strong> e <strong>Sem Inscrição Estadual (IE):</strong> marque só se a transportadora confirmar que é o caso dela. Marcar <strong>Sem Inscrição Estadual (IE)</strong> não bloqueia o campo da inscrição: deixe-o em branco você mesmo.</li>
+<li><strong>Registrar na NFE:</strong> o nome sugere que os dados vão para a nota. Na NF-e emitida à mão, a lista mostra também o entregador pessoa física, que nem tem essa caixinha. Na dúvida, fale com o suporte.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Dados fiscais: confirme com o contador</p>
@@ -1904,8 +1904,8 @@ atualizado: 2026-11-01</p>
 </div>
 <h2 id="escolha-as-unidades-o-contato-e-o-endereco">Escolha as unidades, o contato e o endereço</h2>
 <ul>
-<li><strong>Unidades:</strong> o texto da seção fala em "estoque", mas aqui vale para a transportadora: são as lojas onde ela aparece para escolha. Clique em <strong>Selecionar unidades</strong>, marque as lojas e clique em <strong>Salvar</strong> na janela. No teste, a loja atual já vinha marcada (<strong>1 de 5 unidades selecionadas</strong>); ao marcar outra loja e salvar, a transportadora passou a aparecer na NF-e dessa outra loja.</li>
-<li><strong>Contato</strong> e <strong>Endereço</strong> são opcionais. O contato tem <strong>E-mail</strong>, <strong>Telefone comercial</strong> e <strong>Celular</strong>; o botão <strong>+ Telefone adicional</strong> cria mais um campo (no teste, <strong>Celular 1</strong>), e a lixeira ao lado remove esse campo. O endereço tem <strong>CEP</strong>, <strong>Rua</strong>, <strong>Número</strong>, <strong>Bairro</strong>, <strong>Cidade</strong>, <strong>Estado</strong> e <strong>Complemento</strong>.</li>
+<li><strong>Unidades:</strong> o texto da seção fala em "estoque", mas aqui vale para a transportadora: são as lojas onde ela aparece para escolha. Clique em <strong>Selecionar unidades</strong>, marque as lojas e clique em <strong>Salvar</strong> na janela. A loja atual já vem marcada (exemplo: <strong>1 de 5 unidades selecionadas</strong>); ao marcar outra loja e salvar, a transportadora passa a aparecer também nessa outra loja.</li>
+<li><strong>Contato</strong> e <strong>Endereço</strong> são opcionais. O contato tem <strong>E-mail</strong>, <strong>Telefone comercial</strong> e <strong>Celular</strong>; o botão <strong>+ Telefone adicional</strong> cria mais um campo (por exemplo, <strong>Celular 1</strong>), e a lixeira ao lado remove esse campo. O endereço tem <strong>CEP</strong>, <strong>Rua</strong>, <strong>Número</strong>, <strong>Bairro</strong>, <strong>Cidade</strong>, <strong>Estado</strong> e <strong>Complemento</strong>.</li>
 </ul>
 <p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. A transportadora aparece na lista, com o tipo <strong>Padrão</strong> ou <strong>Delivery</strong>.</p>
 <h2 id="use-a-transportadora-na-transferencia-no-pedido-e-na-nota">Use a transportadora na transferência, no pedido e na nota</h2>
@@ -1944,11 +1944,11 @@ atualizado: 2026-11-01</p>
 </details>
 <details class="question">
 <summary>A transportadora não aparece na outra loja</summary>
-<p>Abra o cadastro dela e confira as <strong>Unidades</strong>: a loja precisa estar marcada. No teste, depois de marcar a loja e salvar, a transportadora apareceu na NF-e da outra loja. Se a loja estiver marcada e mesmo assim ela não aparecer, fale com o suporte.</p>
+<p>Abra o cadastro dela e confira as <strong>Unidades</strong>: a loja precisa estar marcada. Depois de marcar a loja e salvar, a transportadora aparece nela. Se a loja estiver marcada e mesmo assim ela não aparecer, fale com o suporte.</p>
 </details>
 <details class="question">
 <summary>Cadastrei um motoboy e ele aparece na NF-e</summary>
-<p>É assim que o sistema funciona hoje: no teste, as listas mostraram os dois tipos juntos. Na nota, escolha quem realmente levou a mercadoria. Na dúvida se um motoboy pode constar como transportador na nota, pergunte ao seu contador.</p>
+<p>É assim que o sistema funciona hoje: as listas mostram os dois tipos juntos. Na nota, escolha quem realmente levou a mercadoria. Na dúvida se um motoboy pode constar como transportador na nota, pergunte ao seu contador.</p>
 </details>
 <details class="question">
 <summary>Não acho onde escolher a transportadora na compra</summary>

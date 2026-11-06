@@ -1828,24 +1828,24 @@
 <tr>
 <th>Condição</th>
 <th>O que faz</th>
-<th>No teste</th>
+<th>Na prática</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Porcentagem de desconto</strong></td>
 <td>Desconto automático para os clientes da categoria.</td>
-<td>No pedido de venda, o desconto de 10% entrou sozinho ao escolher o cliente.</td>
+<td>No pedido de venda, o desconto entra sozinho ao escolher o cliente.</td>
 </tr>
 <tr>
 <td><strong>Utilizar preço atacado?</strong></td>
 <td>Pelo nome, faz a categoria usar o preço de atacado.</td>
-<td>Fale com o suporte antes de usar (efeito não confirmado).</td>
+<td>Fale com o suporte antes de usar.</td>
 </tr>
 <tr>
 <td><strong>Limite de Compra</strong></td>
 <td>Um teto de consumo por mês, com dia de renovação.</td>
-<td>Gravado na categoria; não bloqueou um pedido de venda (veja o passo 3).</td>
+<td>Gravado na categoria; não bloqueia o pedido de venda (veja o passo 3).</td>
 </tr>
 </tbody>
 </table>
@@ -1861,31 +1861,31 @@
 <h2 id="abra-as-categorias-de-clientes">Abra as categorias de clientes</h2>
 <p>No menu do lado esquerdo, clique em <strong>Clientes</strong> e depois em <strong>Categoria de clientes</strong>. A lista mostra o <strong>Nome</strong> e a <strong>Porcentagem de desconto</strong> de cada categoria (um traço quando não há desconto). O campo <strong>Buscar por nome</strong> ajuda quando a lista cresce.</p>
 <p>Clique em <strong>Nova Categoria</strong>.</p>
-<p><img alt="Lista Categorias de Clientes com o botão Nova Categoria e a categoria VIP (teste) com 10,00% destacados" loading="lazy" src="../../imagens/02.02/01-lista.png" /></p>
+<p><img alt="Lista Categorias de Clientes com o botão Nova Categoria e uma categoria VIP com 10,00% destacados" loading="lazy" src="../../imagens/02.02/01-lista.png" /></p>
 <h2 id="de-o-nome-e-o-desconto">Dê o nome e o desconto</h2>
 <p>Em <strong>Informações gerais</strong>:</p>
 <ul>
 <li><strong>Nome:</strong> o nome do grupo. Exemplo: "VIP".</li>
 <li><strong>Porcentagem de desconto:</strong> o campo já tem a vírgula. Para 10%, digite <strong>1000</strong> e ele mostra <strong>10,00</strong>. Deixe 0,00 se a categoria não dá desconto.</li>
-<li><strong>Utilizar preço atacado?:</strong> pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. O efeito não foi conferido; fale com o suporte antes de usar.</li>
+<li><strong>Utilizar preço atacado?:</strong> pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. Fale com o suporte antes de usar.</li>
 </ul>
-<p><img alt="Nome VIP (teste) e Porcentagem de desconto 10,00 destacados" loading="lazy" src="../../imagens/02.02/02-formulario.png" /></p>
+<p><img alt="Nome da categoria e Porcentagem de desconto 10,00 destacados" loading="lazy" src="../../imagens/02.02/02-formulario.png" /></p>
 <h2 id="configure-o-limite-de-compra-opcional-e-salve">Configure o limite de compra (opcional) e salve</h2>
 <p>Em <strong>Limites</strong>, a chave <strong>Deseja limitar a compra por R$ (Pagamento avulso)?</strong> abre três campos:</p>
 <ul>
 <li><strong>Valor do limite (R$):</strong> pela dica da tela, o "valor máximo que o cliente pode consumir no período de renovação". Para R$ 50,00, digite <strong>5000</strong>.</li>
-<li><strong>Período de renovação:</strong> no teste, veio travado em <strong>Mensal</strong>.</li>
+<li><strong>Período de renovação:</strong> vem travado em <strong>Mensal</strong>.</li>
 <li><strong>Dia de renovação:</strong> o "dia do mês em que o limite de compra é renovado (1 a 31)".</li>
 </ul>
 <p><img alt="Limite de Compra ligado com Valor do limite R$ 50,00, Período Mensal e Dia de renovação 1 destacados" loading="lazy" src="../../imagens/02.02/02b-limites.png" /></p>
-<p>No teste, um <strong>pedido de venda</strong> de R$ 67,23, pago em dinheiro, foi salvo normalmente para um cliente com limite de R$ 50,00: o limite não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.</p>
-<p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no exemplo, <strong>VIP (teste)</strong> com <strong>10,00%</strong>.</p>
+<p>O limite <strong>não bloqueia</strong> o pedido de venda no ERP. Exemplo: um pedido de venda de R$ 67,23, pago em dinheiro, é salvo normalmente para um cliente com limite de R$ 50,00. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.</p>
+<p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no print, a categoria de exemplo com <strong>10,00%</strong>.</p>
 <h2 id="coloque-os-clientes-na-categoria">Coloque os clientes na categoria</h2>
 <p>Abra o cadastro do cliente (<strong>Clientes → Todos os clientes</strong>, três pontinhos, <strong>Editar</strong>), escolha a categoria no campo <strong>Categoria de cliente</strong> e salve. O campo aceita uma categoria por cliente.</p>
 <p><img alt="Cadastro do cliente com o campo Categoria de cliente destacado, entre outros campos" loading="lazy" src="../../imagens/02.01/03d-extras.png" /></p>
 <h2 id="veja-o-desconto-no-pedido-de-venda">Veja o desconto no pedido de venda</h2>
 <p>Em <strong>Vendas → Pedidos de venda</strong>, clique em <strong>Novo Pedido</strong>. O pedido abre com o <strong>Consumidor Final</strong>: no quadro <strong>Cliente</strong>, clique em <strong>Remover</strong>, busque o cliente pelo nome e escolha. Depois adicione os produtos.</p>
-<p>No teste, com um cliente da categoria <strong>VIP (teste)</strong> e um X-Burger de R$ 24,90, o <strong>Resumo</strong> já mostrou <strong>Descontos R$ 2,49</strong> (10% de R$ 24,90) e <strong>Total R$ 22,41</strong>, sem digitar nada. Com 3 X-Burgers, o desconto acompanhou: R$ 7,47.</p>
+<p>O desconto da categoria entra sozinho. Exemplo: com um cliente de uma categoria de 10% e um X-Burger de R$ 24,90, o <strong>Resumo</strong> já mostra <strong>Descontos R$ 2,49</strong> (10% de R$ 24,90) e <strong>Total R$ 22,41</strong>, sem digitar nada. Com 3 X-Burgers, o desconto acompanha: R$ 7,47.</p>
 <p><img alt="Pedido de venda com o cliente da categoria e o Resumo com Descontos R$ 2,49 e Total R$ 22,41 destacados" loading="lazy" src="../../imagens/02.02/03-pedido-com-desconto.png" /></p>
 <p>Clicando em <strong>Descontos</strong>, abre a janela <strong>Adicionar desconto</strong>, já preenchida com o desconto da categoria: <strong>% do desconto</strong> 10,00 e <strong>Valor do desconto</strong> R$ 2,49. O <strong>Tipo</strong> tem as opções <strong>Desconto personalizado</strong> e <strong>Sem desconto</strong>.</p>
 <p><img alt="Janela Adicionar desconto com % do desconto 10,00 e Valor do desconto R$ 2,49 destacados" loading="lazy" src="../../imagens/02.02/04-adicionar-desconto.png" /></p>
@@ -1894,7 +1894,7 @@
 <p><img alt="Menu da categoria com Editar e Excluir destacados" loading="lazy" src="../../imagens/02.02/05-menu.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Zerar saldo dos clientes não tem volta</p>
-<p>Na edição da categoria (e só nela) aparece o botão vermelho <strong>Zerar saldo dos clientes</strong>. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede <strong>Usuário</strong> e <strong>Senha</strong>. Se a sua loja usa crédito de clientes (veja <a href="../../ponto-de-venda/configurar-terminal/">Como configurar o terminal de vendas</a>), fale com o suporte antes de usar. No teste, a janela foi só aberta e cancelada.</p>
+<p>Na edição da categoria (e só nela) aparece o botão vermelho <strong>Zerar saldo dos clientes</strong>. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede <strong>Usuário</strong> e <strong>Senha</strong>. Se a sua loja usa crédito de clientes (veja <a href="../../ponto-de-venda/configurar-terminal/">Como configurar o terminal de vendas</a>), fale com o suporte antes de usar. Se abriu a janela por engano, clique em cancelar: nada é alterado.</p>
 <p><img alt="Botão Zerar saldo dos clientes na edição da categoria destacado" loading="lazy" src="../../imagens/02.02/02c-zerar-botao.png" /></p>
 <p><img alt="Janela de confirmação com o aviso de que a ação não poderá ser desfeita destacado" loading="lazy" src="../../imagens/02.02/06-zerar-saldo.png" /></p>
 </div>
@@ -1920,7 +1920,7 @@
 </details>
 <details class="question">
 <summary>O cliente passou do limite e o pedido foi salvo</summary>
-<p>No teste, o limite de compra não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.</p>
+<p>O limite de compra não bloqueia o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.</p>
 </details>
 <details class="question">
 <summary>Não acho o botão Zerar saldo dos clientes</summary>

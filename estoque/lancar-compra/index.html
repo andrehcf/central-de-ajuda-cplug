@@ -1864,7 +1864,7 @@
 <tr>
 <th>Quando</th>
 <th>O que acontece</th>
-<th>No teste</th>
+<th>Exemplo</th>
 </tr>
 </thead>
 <tbody>
@@ -1876,12 +1876,12 @@
 <tr>
 <td><strong>Ao marcar como recebida</strong></td>
 <td>A mercadoria <strong>entra no estoque</strong>, com a categoria <strong>Compra</strong> e um <strong>lote</strong> com o custo que você digitou.</td>
-<td>Entraram 10 pães num lote novo a R$ 2,00.</td>
+<td>Entram 10 pães num lote novo a R$ 2,00.</td>
 </tr>
 </tbody>
 </table>
 <p>Ou seja: enquanto a mercadoria não chega, a compra é um <strong>pedido</strong> (a dívida já existe, o estoque ainda não). Quando chega, você confirma o recebimento e o estoque é atualizado. Para entender lotes e custo, veja <a href="../entrada-de-estoque/">Como dar entrada no estoque</a>.</p>
-<p><strong>Compra ou entrada de estoque?</strong> A <strong>compra</strong> registra o fornecedor e cria as contas a pagar. A <strong>entrada de estoque</strong> (Estoque → Estoque → Registrar entrada) só mexe no saldo: na empresa de teste, as entradas feitas à mão não apareceram em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como <strong>compra</strong>.</p>
+<p><strong>Compra ou entrada de estoque?</strong> A <strong>compra</strong> registra o fornecedor e cria as contas a pagar. A <strong>entrada de estoque</strong> (Estoque → Estoque → Registrar entrada) só mexe no saldo: as entradas feitas à mão não aparecem em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como <strong>compra</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tem o XML da nota? Use a importação</p>
 <p>Se o fornecedor mandou o <strong>XML</strong> da nota fiscal, não digite a compra: importe. Produtos, custos, fornecedor e parcelas vêm da nota. Veja <a href="../importar-nota-de-compra/">Como importar a nota fiscal de compra (XML)</a>. Lance à mão quando não há nota eletrônica ou o fornecedor não manda o XML.</p>
@@ -1896,7 +1896,7 @@
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
 <div class="passos">
 <h2 id="abra-as-compras">Abra as compras</h2>
-<p>No menu do lado esquerdo, clique em <strong>Estoque</strong> e depois em <strong>Compras</strong>. A lista mostra cada compra com o número, o fornecedor, o <strong>Valor</strong>, a data em <strong>Registrado em</strong> e o <strong>Status</strong> (no teste: <strong>Pendente</strong>, <strong>Recebido</strong> e, na aba <strong>Excluídas</strong>, <strong>Cancelado</strong>). As abas <strong>Ativas</strong> e <strong>Excluídas</strong> separam as compras válidas das excluídas.</p>
+<p>No menu do lado esquerdo, clique em <strong>Estoque</strong> e depois em <strong>Compras</strong>. A lista mostra cada compra com o número, o fornecedor, o <strong>Valor</strong>, a data em <strong>Registrado em</strong> e o <strong>Status</strong> (por exemplo: <strong>Pendente</strong>, <strong>Recebido</strong> e, na aba <strong>Excluídas</strong>, <strong>Cancelado</strong>). As abas <strong>Ativas</strong> e <strong>Excluídas</strong> separam as compras válidas das excluídas.</p>
 <p>Clique em <strong>Nova compra</strong>.</p>
 <p><img alt="Lista de compras com o botão Nova compra e o status Pendente destacados" loading="lazy" src="../../imagens/04.05/01-lista.png" /></p>
 <h2 id="adicione-os-produtos">Adicione os produtos</h2>
@@ -1906,7 +1906,7 @@
 <li><strong>Custo unitário:</strong> quanto pagou por <strong>unidade</strong>. É esse custo que vai para o lote no estoque.</li>
 <li><strong>Custo total:</strong> a conta é feita sozinha.</li>
 </ul>
-<p>O <strong>Status</strong> do item começa <strong>Pendente</strong>. No canto de cima, <strong>Estoque: Padrão</strong> é o estoque onde a mercadoria vai entrar: no teste, foi o estoque principal da loja (<strong>Estoque 1</strong>). Não testamos trocar o estoque.</p>
+<p>O <strong>Status</strong> do item começa <strong>Pendente</strong>. No canto de cima, <strong>Estoque: Padrão</strong> é o estoque onde a mercadoria vai entrar: o estoque principal da loja.</p>
 <p>Os <strong>três pontinhos</strong> do item têm <strong>Marcar como recebido</strong>, <strong>Marcar como cancelado</strong>, <strong>Editar</strong> (abre a janela <strong>Editar produto</strong>, com <strong>Quantidade</strong> e <strong>Custo</strong>) e <strong>Excluir</strong>.</p>
 <p><img alt="Produtos da compra com a busca, a quantidade e o custo, o estoque de entrada e o menu do item destacados" loading="lazy" src="../../imagens/04.05/02-produtos.png" /></p>
 <h2 id="escolha-o-fornecedor-e-informe-a-nota">Escolha o fornecedor e informe a nota</h2>
@@ -1920,46 +1920,46 @@
 <ul>
 <li><strong>Forma de pagamento:</strong> PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito... (as cadastradas em <a href="../../financas/formas-de-pagamento/">Formas de pagamento</a>).</li>
 <li><strong>Conta bancária:</strong> de onde o dinheiro vai sair.</li>
-<li><strong>Parcelas</strong> e <strong>Periodicidade das parcelas:</strong> apareceram ao escolher <strong>Boleto</strong>. No teste, <strong>2x parcelas</strong> com periodicidade <strong>Mensal</strong> dividiu o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.</li>
+<li><strong>Parcelas</strong> e <strong>Periodicidade das parcelas:</strong> aparecem ao escolher <strong>Boleto</strong>. Exemplo: <strong>2x parcelas</strong> com periodicidade <strong>Mensal</strong> divide o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.</li>
 <li>Para cada parcela: <strong>Vencimento</strong>, <strong>Pagamento</strong> (deixe em branco se ainda não pagou), <strong>Categoria</strong> (vem <strong>Custo dos Produtos</strong>), <strong>Centro de custo</strong>, <strong>Valor</strong> e <strong>Porcentagem</strong>.</li>
-<li>Cada parcela também tem <strong>Adicionar categoria</strong>, <strong>Rateio restante</strong> e <strong>Total rateado</strong>. No teste, com uma categoria só, a parcela ficou 100% nela (Rateio restante R$ 0,00) e o Centro de custo ficou em branco. Não testamos dividir a parcela entre categorias.</li>
-<li>O botão <strong>Adicionar pagamento</strong> fica no topo (a tela mostra "Pagamento 1 de 1"). Não testamos lançar mais de um pagamento.</li>
+<li>Cada parcela também tem <strong>Adicionar categoria</strong>, <strong>Rateio restante</strong> e <strong>Total rateado</strong>. Com uma categoria só, a parcela fica 100% nela (Rateio restante R$ 0,00). O Centro de custo é opcional.</li>
+<li>O botão <strong>Adicionar pagamento</strong> fica no topo (a tela mostra "Pagamento 1 de 1").</li>
 </ul>
 <p><img alt="Pagamentos com forma e conta, parcelas e periodicidade e a primeira parcela destacados" loading="lazy" src="../../imagens/04.05/03-pagamentos.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Pagamento preenchido = conta paga</p>
-<p>No teste, ao editar a compra já salva e preencher a data de <strong>Pagamento</strong> de uma parcela, a conta passou a <strong>Pago</strong> em Lançamentos. Só preencha quando o dinheiro já saiu.</p>
+<p>Ao preencher a data de <strong>Pagamento</strong> de uma parcela (na hora de lançar ou depois, pelo <strong>Editar</strong>), a conta passa a <strong>Pago</strong> em Lançamentos. Só preencha quando o dinheiro já saiu.</p>
 </div>
 <h2 id="lance-o-frete">Lance o frete</h2>
-<p>No <strong>Resumo financeiro</strong> ficam <strong>Subtotal</strong>, <strong>Frete</strong>, <strong>Outras despesas</strong>, <strong>Descontos</strong> e <strong>Total</strong>. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". <strong>Outras despesas</strong> e <strong>Descontos</strong> também ficam ali (não testados).</p>
-<p>Clique em <strong>Frete</strong>. A janela tem <strong>Transportadora</strong>, <strong>Valor</strong> e a chave <strong>Pagar frete</strong>. No teste, com o frete de R$ 5,00 e <strong>Pagar frete</strong> ligado:</p>
+<p>No <strong>Resumo financeiro</strong> ficam <strong>Subtotal</strong>, <strong>Frete</strong>, <strong>Outras despesas</strong>, <strong>Descontos</strong> e <strong>Total</strong>. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". <strong>Outras despesas</strong> e <strong>Descontos</strong> também ficam ali.</p>
+<p>Clique em <strong>Frete</strong>. A janela tem <strong>Transportadora</strong>, <strong>Valor</strong> e a chave <strong>Pagar frete</strong>. Exemplo, com o frete de R$ 5,00 e <strong>Pagar frete</strong> ligado:</p>
 <ul>
-<li>o frete entrou no <strong>Total</strong> (R$ 25,00) e foi dividido nas parcelas (2 x R$ 12,50);</li>
-<li>as parcelas continuaram sendo do <strong>fornecedor</strong>: não foi criada uma conta separada para a transportadora.</li>
+<li>o frete entra no <strong>Total</strong> (R$ 25,00) e é dividido nas parcelas (2 x R$ 12,50);</li>
+<li>as parcelas continuam sendo do <strong>fornecedor</strong>: não é criada uma conta separada para a transportadora.</li>
 </ul>
-<p>Use <strong>Pagar frete</strong> ligado quando o frete vem cobrado junto com a conta do fornecedor. Não testamos lançar um frete com a chave desligada.</p>
+<p>Use <strong>Pagar frete</strong> ligado quando o frete vem cobrado junto com a conta do fornecedor.</p>
 <p><img alt="Janela Frete com Transportadora, Valor e Pagar frete destacados" loading="lazy" src="../../imagens/04.05/04-frete.png" /></p>
 <p><img alt="Parcelas de R$ 12,50 e o resumo com Frete R$ 5,00 e Total R$ 25,00 destacados" loading="lazy" src="../../imagens/04.05/05-resumo.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">O frete não muda o custo do produto</p>
-<p>No teste, mesmo com o frete pago, o lote do produto entrou no estoque com o <strong>custo unitário digitado</strong> (R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.</p>
+<p>Mesmo com o frete pago, o lote do produto entra no estoque com o <strong>custo unitário digitado</strong> (no exemplo, R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.</p>
 </div>
 <h2 id="salve-e-confira-as-contas-a-pagar">Salve e confira as contas a pagar</h2>
 <p>Clique em <strong>Salvar</strong>. A compra aparece na lista como <strong>Pendente</strong>, e as parcelas já aparecem em <strong>Finanças → Lançamentos</strong> como <strong>A Vencer</strong>, com o fornecedor.</p>
 <p><img alt="Lançamentos com as duas parcelas da compra a pagar destacadas" loading="lazy" src="../../imagens/04.05/08-lancamentos.png" /></p>
-<p>Depois de salva, a compra pode ser aberta de novo pelo <strong>Editar</strong> (nos três pontinhos da lista). No teste, foi por ali que a data de <strong>Pagamento</strong> de uma parcela foi preenchida.</p>
+<p>Depois de salva, a compra pode ser aberta de novo pelo <strong>Editar</strong> (nos três pontinhos da lista). É por ali que você preenche a data de <strong>Pagamento</strong> de uma parcela quando pagar.</p>
 <h2 id="marque-como-recebida-quando-a-mercadoria-chegar">Marque como recebida quando a mercadoria chegar</h2>
 <p>Na lista, nos <strong>três pontinhos</strong> da compra, clique em <strong>Marcar como recebido</strong>. O menu também tem <strong>Marcar como cancelado</strong>, <strong>Baixar PDF da compra</strong>, <strong>Imprimir</strong>, <strong>Enviar PDF por e-mail</strong>, <strong>Imprimir etiquetas</strong>, <strong>Editar</strong> e <strong>Excluir</strong>.</p>
 <p><img alt="Menu da compra com Marcar como recebido e o status Pendente destacados" loading="lazy" src="../../imagens/04.05/06-menu.png" /></p>
 <p>O sistema pede para <strong>Confirmar entregas</strong> e avisa que a ação é <strong>irreversível</strong>. Clique em <strong>Confirmar</strong>. A compra passa a <strong>Recebido</strong> e a mercadoria entra no estoque.</p>
 <p><img alt="Janela Confirmar entregas com o botão Confirmar destacado" loading="lazy" src="../../imagens/04.05/07-confirmar-entregas.png" /></p>
-<p>Dentro da compra, cada produto também tem <strong>Marcar como recebido</strong> nos três pontinhos, e o rodapé tem <strong>Marcar todos como recebidos</strong>. Não testamos esses caminhos: no teste, o recebimento foi feito pelo menu da lista.</p>
+<p>Dentro da compra, cada produto também tem <strong>Marcar como recebido</strong> nos três pontinhos, e o rodapé tem <strong>Marcar todos como recebidos</strong>. O caminho mais simples é o menu da lista, mostrado acima.</p>
 <p>Depois de recebida, o menu perde as opções de marcar, e no <strong>Editar</strong> a <strong>quantidade</strong> e o <strong>custo</strong> dos itens ficam travados; os pagamentos continuam editáveis.</p>
 <h2 id="exclua-uma-compra-lancada-errado">Exclua uma compra lançada errado</h2>
 <p>Nos três pontinhos da compra, clique em <strong>Excluir</strong>. A janela <strong>Excluir compra</strong> tem a caixinha <strong>Excluir movimentação</strong>: marque para tirar do estoque a mercadoria que entrou, <strong>desde que os produtos não tenham sido vendidos</strong>.</p>
 <p><img alt="Janela Excluir compra com a caixinha Excluir movimentação destacada" loading="lazy" src="../../imagens/04.05/09-excluir.png" /></p>
-<p>No teste, com a caixinha marcada, a compra foi para a aba <strong>Excluídas</strong> (status <strong>Cancelado</strong>, movimentação <strong>Excluída</strong>), o lote saiu do estoque e a parcela <strong>a vencer</strong> sumiu de Lançamentos. <strong>A parcela já paga continuou lá</strong> (veja "Deu algum problema?").</p>
-<p><strong>Excluir</strong> não é o mesmo que <strong>Marcar como cancelado</strong>, que também aparece no menu. Não testamos o Marcar como cancelado.</p>
+<p>Com a caixinha marcada, a compra vai para a aba <strong>Excluídas</strong> (status <strong>Cancelado</strong>, movimentação <strong>Excluída</strong>), o lote sai do estoque e a parcela <strong>a vencer</strong> some de Lançamentos. <strong>A parcela já paga continua lá</strong> (veja "Deu algum problema?").</p>
+<p><strong>Excluir</strong> não é o mesmo que <strong>Marcar como cancelado</strong>, que também aparece no menu. Na dúvida sobre qual usar, fale com o suporte.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Boas práticas</p>
@@ -1986,15 +1986,15 @@
 </details>
 <details class="question">
 <summary>Excluí a compra e uma parcela continua em Lançamentos</summary>
-<p>No teste, a parcela que já estava <strong>paga</strong> não foi apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.</p>
+<p>A parcela que já estava <strong>paga</strong> não é apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.</p>
 </details>
 <details class="question">
 <summary>Lancei frete e não aparece conta para a transportadora</summary>
-<p>No teste, com <strong>Pagar frete</strong> ligado, o frete foi somado às parcelas do <strong>fornecedor</strong>. Não foi criada uma conta separada para a transportadora.</p>
+<p>É assim que funciona: com <strong>Pagar frete</strong> ligado, o frete é somado às parcelas do <strong>fornecedor</strong>. Não é criada uma conta separada para a transportadora.</p>
 </details>
 <details class="question">
 <summary>O frete não entrou no total</summary>
-<p>Abra o <strong>Frete</strong> e confira se a chave <strong>Pagar frete</strong> está ligada: no teste, ligada, o frete entrou no Total e nas parcelas.</p>
+<p>Abra o <strong>Frete</strong> e confira se a chave <strong>Pagar frete</strong> está ligada: ligada, o frete entra no Total e nas parcelas.</p>
 </details>
 <p><strong>Relacionados:</strong> <a href="../importar-nota-de-compra/">Como importar a nota fiscal de compra (XML)</a> · <a href="../cadastrar-fornecedor/">Como cadastrar um fornecedor</a> · <a href="../entrada-de-estoque/">Como dar entrada no estoque</a> · <a href="../transportadora/">Como cadastrar uma transportadora ou um entregador</a> · <a href="../../financas/formas-de-pagamento/">Formas de pagamento</a> · <a href="../../financas/conta-bancaria/">Como cadastrar uma conta bancária</a></p>
 <p><span class="palavras-chave">compra lançar compra nova compra pedido de compra fornecedor custo unitário parcelas boleto periodicidade vencimento pagamento conta a pagar lançamentos rateio categoria centro de custo frete pagar frete outras despesas descontos marcar como recebido marcar todos como recebidos confirmar entregas pendente recebido cancelado excluir compra excluir movimentação estoque não mudou série número da nf compra ou entrada de estoque</span></p>

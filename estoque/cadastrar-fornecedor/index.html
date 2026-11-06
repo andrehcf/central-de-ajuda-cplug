@@ -1850,7 +1850,7 @@
 </tbody>
 </table>
 <p><strong>Pessoa jurídica × pessoa física:</strong> a maioria dos fornecedores é empresa (tem <strong>CNPJ</strong>). Quando você compra de uma pessoa, como um produtor rural ou um artesão, escolha <strong>Pessoa física</strong>: o cadastro passa a pedir <strong>CPF</strong> e <strong>Data de nascimento</strong> no lugar dos dados de empresa.</p>
-<p><strong>Basta o nome para começar.</strong> No teste, um fornecedor só com o nome foi salvo sem problema. Os outros dados ajudam a reconhecer o fornecedor e a ter o contato à mão. O campo de busca da lista diz <strong>Buscar por nome, CNPJ ou CPF</strong>.</p>
+<p><strong>Basta o nome para começar.</strong> Um fornecedor só com o nome já pode ser salvo. Os outros dados ajudam a reconhecer o fornecedor e a ter o contato à mão. O campo de busca da lista diz <strong>Buscar por nome, CNPJ ou CPF</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Compra com nota? Deixe o XML cadastrar</p>
 <p>Se o fornecedor emite nota fiscal, você não precisa digitar o cadastro: ao importar o XML da compra, o sistema cria o fornecedor com os dados da nota. Se mesmo assim for cadastrar à mão um fornecedor que manda nota, preencha o <strong>CNPJ</strong> igual ao da nota.</p>
@@ -1876,7 +1876,7 @@
 <p>Para <strong>pessoa jurídica</strong>:</p>
 <ul>
 <li><strong>Razão social:</strong> o nome oficial da empresa, como está no CNPJ (o "nome do fornecedor" pode ser o nome fantasia).</li>
-<li><strong>CNPJ:</strong> o sistema confere se o número é válido. No teste, um CNPJ inválido ficou em vermelho com o aviso <strong>Valor utilizado não está correto</strong>, e o cadastro não salvou.</li>
+<li><strong>CNPJ:</strong> o sistema confere se o número é válido. Um CNPJ inválido fica em vermelho com o aviso <strong>Valor utilizado não está correto</strong>, e o cadastro não salva.</li>
 <li><strong>Inscrição Estadual (IE):</strong> o registro da empresa no estado; está na nota fiscal do fornecedor. Se ele não tem IE, marque <strong>Isento</strong>: o campo é preenchido com "ISENTO". Na dúvida, pergunte ao seu contador.</li>
 <li><strong>Inscrição municipal:</strong> o registro na prefeitura, comum em prestadores de serviço. Opcional.</li>
 <li><strong>Data de fundação:</strong> opcional.</li>
@@ -1886,11 +1886,11 @@
 <p><img alt="CNPJ com o aviso Valor utilizado não está correto e a Inscrição Estadual com Isento marcado destacados" loading="lazy" src="../../imagens/04.04/03-cnpj-isento.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Trocar o tipo de pessoa muda os campos</p>
-<p>No teste, ao trocar para Pessoa física e voltar para Pessoa jurídica, a marcação <strong>Isento</strong> foi desmarcada e a <strong>Inscrição Estadual</strong> ficou em branco. Escolha o tipo <strong>antes</strong> de preencher os documentos e, se trocar, confira tudo de novo.</p>
+<p>Ao trocar para Pessoa física e voltar para Pessoa jurídica, a marcação <strong>Isento</strong> é desmarcada e a <strong>Inscrição Estadual</strong> fica em branco. Escolha o tipo <strong>antes</strong> de preencher os documentos e, se trocar, confira tudo de novo.</p>
 </div>
 <h2 id="escolha-as-unidades-e-anote-o-que-importa">Escolha as unidades e anote o que importa</h2>
 <ul>
-<li><strong>Escolha em quais unidades exibir:</strong> se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em <strong>Selecionar unidades</strong>, marque as lojas e clique em <strong>Salvar</strong> na janela. A janela tem busca, filtro por <strong>UF</strong> e <strong>Selecionar todas as lojas</strong>. No teste, a loja atual já vinha marcada (<strong>1 de 5 unidades selecionadas</strong>).</li>
+<li><strong>Escolha em quais unidades exibir:</strong> se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em <strong>Selecionar unidades</strong>, marque as lojas e clique em <strong>Salvar</strong> na janela. A janela tem busca, filtro por <strong>UF</strong> e <strong>Selecionar todas as lojas</strong>. A loja atual já vem marcada (exemplo: <strong>1 de 5 unidades selecionadas</strong>).</li>
 <li><strong>Observação sobre este fornecedor:</strong> até 600 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300."</li>
 </ul>
 <h2 id="preencha-o-contato-e-o-endereco">Preencha o contato e o endereço</h2>
@@ -1901,7 +1901,7 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Use um e-mail que exista</p>
-<p>No teste, um e-mail inventado impediu o cadastro de salvar, e a tela não mostrou nenhum aviso. Se não tiver o e-mail certo, deixe em branco.</p>
+<p>Um e-mail que não existe impede o cadastro de salvar, e a tela não mostra nenhum aviso. Se não tiver o e-mail certo, deixe em branco.</p>
 </div>
 <p>Clique em <strong>Salvar</strong>, no canto de baixo, à direita. O fornecedor aparece na lista. Enquanto não salvar, o rodapé avisa <strong>Você tem alterações não salvas</strong>; <strong>Descartar alterações</strong> desfaz o que você digitou.</p>
 <p><img alt="Endereço com o CEP, os campos preenchidos sozinhos e o botão Salvar destacados" loading="lazy" src="../../imagens/04.04/04-endereco.png" /></p>
@@ -1922,7 +1922,7 @@
 <h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
 <summary>Cliquei em Salvar e nada aconteceu</summary>
-<p>Confira o <strong>E-mail</strong>. No teste, um e-mail que não existe de verdade (um endereço de exemplo) foi recusado pelo sistema, mas <strong>a tela não mostrou nenhum aviso</strong>: o botão Salvar simplesmente não fez nada. Corrija o e-mail (ou apague, se não souber) e salve de novo. Confira também se algum campo está em vermelho, como o CNPJ.</p>
+<p>Confira o <strong>E-mail</strong>. Um e-mail que não existe de verdade é recusado pelo sistema, mas <strong>a tela não mostra nenhum aviso</strong>: o botão Salvar simplesmente não faz nada. Corrija o e-mail (ou apague, se não souber) e salve de novo. Confira também se algum campo está em vermelho, como o CNPJ.</p>
 </details>
 <details class="question">
 <summary>O CNPJ fica vermelho: Valor utilizado não está correto</summary>
@@ -1930,11 +1930,11 @@
 </details>
 <details class="question">
 <summary>Excluí um fornecedor por engano</summary>
-<p>Abra a aba <strong>Excluídos</strong> e clique nas <strong>setas circulares</strong> do fornecedor. No teste, depois de restaurar, a aba Ativos só mostrou o fornecedor depois de <strong>recarregar a página</strong> (tecla F5).</p>
+<p>Abra a aba <strong>Excluídos</strong> e clique nas <strong>setas circulares</strong> do fornecedor. Se ele não aparecer na aba Ativos, <strong>recarregue a página</strong> (tecla F5).</p>
 </details>
 <details class="question">
 <summary>Não vejo as abas Ativos e Excluídos</summary>
-<p>No teste, quando não havia nenhum fornecedor ativo, a tela mostrou só <strong>Nenhum fornecedor encontrado</strong>, sem as abas. Isso acontece, por exemplo, se você excluiu todos. Para chegar à aba <strong>Excluídos</strong> e restaurar, cadastre um fornecedor: no teste, com ele na lista, as abas voltaram.</p>
+<p>Quando não há nenhum fornecedor ativo, a tela mostra só <strong>Nenhum fornecedor encontrado</strong>, sem as abas. Isso acontece, por exemplo, se você excluiu todos. Para chegar à aba <strong>Excluídos</strong> e restaurar, cadastre um fornecedor: com ele na lista, as abas voltam.</p>
 </details>
 <details class="question">
 <summary>O fornecedor não aparece em outra loja</summary>

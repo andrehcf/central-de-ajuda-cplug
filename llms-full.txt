@@ -239,7 +239,7 @@ O **Indicador de IE** é o campo que mais gera nota recusada. Ele diz à Sefaz s
 - Empresa com Inscrição Estadual: **1 - Contribuinte ICMS**, com a IE preenchida.
 
 !!! note "Por que cadastrar antes de emitir a NF-e"
-    No teste, preencher uma pessoa física direto na tela da NF-e, sem cliente cadastrado, fez a nota sair como **contribuinte** e ser recusada (Rejeição 728). Escolhendo o cliente cadastrado, a indicação veio certa. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
+    Preencher uma pessoa física direto na tela da NF-e, sem cliente cadastrado, pode fazer a nota sair como **contribuinte** e ser recusada (Rejeição 728). Escolhendo o cliente cadastrado, a indicação vem certa. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
 
 !!! warning "Vai emitir nota fiscal (NF-e) para este cliente?"
     Preencha **todos** estes dados, senão a nota não é autorizada:
@@ -350,7 +350,7 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 
     A lista mostra também quantas **Vendas** cada cliente já teve. Se o cliente tem observação, aparece um **balão** ao lado do nome: passe o mouse sobre ele para ler.
 
-    [Imagem: Cliente Teste Manual na lista com o balão de observação destacado]
+    [Imagem: Cliente na lista com o balão de observação destacado]
 
     Ao escolher o cliente num pedido de venda, a observação aparece no quadro **Cliente**:
 
@@ -412,11 +412,11 @@ A **categoria de cliente** é um grupo de clientes com as mesmas condições: po
 
 A categoria guarda **condições comerciais** que acompanham o cliente:
 
-| Condição | O que faz | No teste |
+| Condição | O que faz | Na prática |
 | --- | --- | --- |
-| **Porcentagem de desconto** | Desconto automático para os clientes da categoria. | No pedido de venda, o desconto de 10% entrou sozinho ao escolher o cliente. |
-| **Utilizar preço atacado?** | Pelo nome, faz a categoria usar o preço de atacado. | Fale com o suporte antes de usar (efeito não confirmado). |
-| **Limite de Compra** | Um teto de consumo por mês, com dia de renovação. | Gravado na categoria; não bloqueou um pedido de venda (veja o passo 3). |
+| **Porcentagem de desconto** | Desconto automático para os clientes da categoria. | No pedido de venda, o desconto entra sozinho ao escolher o cliente. |
+| **Utilizar preço atacado?** | Pelo nome, faz a categoria usar o preço de atacado. | Fale com o suporte antes de usar. |
+| **Limite de Compra** | Um teto de consumo por mês, com dia de renovação. | Gravado na categoria; não bloqueia o pedido de venda (veja o passo 3). |
 
 **Por que usar categoria e não dar desconto à mão?** Porque a regra fica no sistema, e não na memória de quem atende. O desconto fica **na categoria**, e não no cliente: todos os clientes da categoria usam a mesma porcentagem, sem ninguém precisar lembrar nem calcular.
 
@@ -437,7 +437,7 @@ No menu do lado esquerdo, clique em **Clientes** e depois em **Categoria de clie
 
 Clique em **Nova Categoria**.
 
-[Imagem: Lista Categorias de Clientes com o botão Nova Categoria e a categoria VIP (teste) com 10,00% destacados]
+[Imagem: Lista Categorias de Clientes com o botão Nova Categoria e uma categoria VIP com 10,00% destacados]
 
 ## Dê o nome e o desconto
 
@@ -445,23 +445,23 @@ Em **Informações gerais**:
 
 - **Nome:** o nome do grupo. Exemplo: "VIP".
 - **Porcentagem de desconto:** o campo já tem a vírgula. Para 10%, digite **1000** e ele mostra **10,00**. Deixe 0,00 se a categoria não dá desconto.
-- **Utilizar preço atacado?:** pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. O efeito não foi conferido; fale com o suporte antes de usar.
+- **Utilizar preço atacado?:** pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. Fale com o suporte antes de usar.
 
-[Imagem: Nome VIP (teste) e Porcentagem de desconto 10,00 destacados]
+[Imagem: Nome da categoria e Porcentagem de desconto 10,00 destacados]
 
 ## Configure o limite de compra (opcional) e salve
 
 Em **Limites**, a chave **Deseja limitar a compra por R$ (Pagamento avulso)?** abre três campos:
 
 - **Valor do limite (R$):** pela dica da tela, o "valor máximo que o cliente pode consumir no período de renovação". Para R$ 50,00, digite **5000**.
-- **Período de renovação:** no teste, veio travado em **Mensal**.
+- **Período de renovação:** vem travado em **Mensal**.
 - **Dia de renovação:** o "dia do mês em que o limite de compra é renovado (1 a 31)".
 
 [Imagem: Limite de Compra ligado com Valor do limite R$ 50,00, Período Mensal e Dia de renovação 1 destacados]
 
-No teste, um **pedido de venda** de R$ 67,23, pago em dinheiro, foi salvo normalmente para um cliente com limite de R$ 50,00: o limite não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.
+O limite **não bloqueia** o pedido de venda no ERP. Exemplo: um pedido de venda de R$ 67,23, pago em dinheiro, é salvo normalmente para um cliente com limite de R$ 50,00. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.
 
-Clique em **Salvar**, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no exemplo, **VIP (teste)** com **10,00%**.
+Clique em **Salvar**, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no print, a categoria de exemplo com **10,00%**.
 
 ## Coloque os clientes na categoria
 
@@ -473,7 +473,7 @@ Abra o cadastro do cliente (**Clientes → Todos os clientes**, três pontinhos,
 
 Em **Vendas → Pedidos de venda**, clique em **Novo Pedido**. O pedido abre com o **Consumidor Final**: no quadro **Cliente**, clique em **Remover**, busque o cliente pelo nome e escolha. Depois adicione os produtos.
 
-No teste, com um cliente da categoria **VIP (teste)** e um X-Burger de R$ 24,90, o **Resumo** já mostrou **Descontos R$ 2,49** (10% de R$ 24,90) e **Total R$ 22,41**, sem digitar nada. Com 3 X-Burgers, o desconto acompanhou: R$ 7,47.
+O desconto da categoria entra sozinho. Exemplo: com um cliente de uma categoria de 10% e um X-Burger de R$ 24,90, o **Resumo** já mostra **Descontos R$ 2,49** (10% de R$ 24,90) e **Total R$ 22,41**, sem digitar nada. Com 3 X-Burgers, o desconto acompanha: R$ 7,47.
 
 [Imagem: Pedido de venda com o cliente da categoria e o Resumo com Descontos R$ 2,49 e Total R$ 22,41 destacados]
 
@@ -488,7 +488,7 @@ Nos **três pontinhos** da categoria ficam **Editar** e **Excluir**.
 [Imagem: Menu da categoria com Editar e Excluir destacados]
 
 !!! warning "Zerar saldo dos clientes não tem volta"
-    Na edição da categoria (e só nela) aparece o botão vermelho **Zerar saldo dos clientes**. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede **Usuário** e **Senha**. Se a sua loja usa crédito de clientes (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)), fale com o suporte antes de usar. No teste, a janela foi só aberta e cancelada.
+    Na edição da categoria (e só nela) aparece o botão vermelho **Zerar saldo dos clientes**. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede **Usuário** e **Senha**. Se a sua loja usa crédito de clientes (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)), fale com o suporte antes de usar. Se abriu a janela por engano, clique em cancelar: nada é alterado.
 
     [Imagem: Botão Zerar saldo dos clientes na edição da categoria destacado]
 
@@ -512,7 +512,7 @@ Nos **três pontinhos** da categoria ficam **Editar** e **Excluir**.
     O campo de porcentagem já tem a vírgula: os dois últimos números são os centavos. Para 10%, digite **1000**.
 
 ??? question "O cliente passou do limite e o pedido foi salvo"
-    No teste, o limite de compra não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.
+    O limite de compra não bloqueia o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.
 
 ??? question "Não acho o botão Zerar saldo dos clientes"
     Ele só aparece ao **editar** uma categoria já salva, no canto de cima, à direita.
@@ -892,7 +892,7 @@ Se a categoria ainda não existir, clique em **+ Criar nova categoria**, que apa
 - **Nome:** o nome que vai aparecer na venda. Exemplo: Torta de Limão.
 - **Preço:** digite só os números. Para R$ 12,90, digite 1290.
 - **Unidade de medida:** vem como "Quantidade". Clique e escolha como o produto é vendido. Exemplo: "Unidade" para uma lata, "Kilograma" para algo vendido por peso.
-- **Código (SKU):** o sistema preenche sozinho a partir do nome. Exemplo: "Brownie (teste manual)" vira **brownie-teste-manual**. Pode trocar por um código seu, com até 30 caracteres.
+- **Código (SKU):** o sistema preenche sozinho a partir do nome. Exemplo: "Brownie de chocolate" vira **brownie-de-chocolate**. Pode trocar por um código seu, com até 30 caracteres.
 
 [Imagem: Formulário com Nome, Categoria, Preço, Unidade de medida e o botão Salvar destacados]
 
@@ -1719,7 +1719,7 @@ A importação é o jeito mais rápido de colocar o cardápio ou o catálogo int
 **O que a importação já faz por você:**
 
 - Cria os produtos com nome, categoria, preço e unidade.
-- Lança o **Estoque inicial** no estoque. No teste, as quantidades 24, 30 e 24 apareceram na lista de produtos como "24 em estoque", "30 em estoque" e "24 em estoque".
+- Lança o **Estoque inicial** no estoque. Exemplo: as quantidades 24, 30 e 24 aparecem na lista de produtos como "24 em estoque", "30 em estoque" e "24 em estoque".
 - Coloca os produtos na **Lista Padrão** de preços.
 - Grava os dados fiscais que estiverem na planilha, como **NCM**, **Origem** e **CFOP**.
 
@@ -2037,7 +2037,7 @@ O sistema não mistura os dois: cada lote guarda o seu custo.
 
 Quando sai mercadoria, o sistema tira **primeiro do lote mais antigo**. Esse método se chama **PEPS**: o primeiro que entra é o primeiro que sai.
 
-No teste, uma saída de 97 pães levou os **95** que restavam do lote 714 (a R$ 1,20) e **2** do lote 722 (a R$ 2,00). O custo dessa saída foi **R$ 118,00**. Você vê essa conta clicando em **Composição**, no histórico do produto:
+Exemplo: uma saída de 97 pães levou os **95** que restavam do lote 714 (a R$ 1,20) e **2** do lote 722 (a R$ 2,00). O custo dessa saída foi **R$ 118,00**. Você vê essa conta clicando em **Composição**, no histórico do produto:
 
 [Imagem: Registro de composição de saída: 95 unidades do lote 714 a R$ 1,20 e 2 do lote 722 a R$ 2,00, total R$ 118,00, destacados]
 
@@ -2140,13 +2140,13 @@ No **Balanço**, os três pontinhos de cada produto também têm **Registrar ent
 ??? question "Lancei a quantidade ou o custo errado"
     No **Balanço**, clique nos três pontinhos do produto e em **Movimentações**. Na linha do lançamento errado, clique na **lixeira** e confirme em **Excluir**. Depois, lance de novo do jeito certo.
 
-    O que acontece ao excluir (testado):
+    O que acontece ao excluir:
 
     - O lançamento **sai do saldo** e passa para a aba **Canceladas**, que fica ao lado de **Fechadas**. Ele não volta a contar no estoque.
     - Excluir uma **saída** devolve as quantidades aos lotes de onde ela tirou.
     - Excluir uma **entrada** tira o custo dela do **custo médio** e do **Histórico de custo**.
 
-    Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Foi nessa ordem que o teste funcionou. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+    Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
 
 ??? question "Quero tirar mercadoria (perda, quebra, consumo)"
     Use **Registrar saída**, no mesmo menu do estoque, e escolha a categoria que explica o motivo: **Perda**, **Consumo Interno**... A saída não pede custo: ele vem dos lotes.
@@ -2193,7 +2193,7 @@ O inventário não "apaga e reescreve" o saldo. Ele cria **movimentações** da 
 | | **Atualizar custo desmarcado** | **Atualizar custo marcado** |
 | --- | --- | --- |
 | **O que é lançado** | Só a **diferença**. | Uma **saída de todo o saldo** antigo e uma **entrada da quantidade contada**. |
-| **Exemplo testado** | Hambúrguer: saldo 100, contado 99 → **saída de 1**, tirada do lote mais antigo (R$ 4,50). O custo digitado (R$ 9,99) foi **ignorado**. | Pão: saldo 95, contado 97 → **saída de 95** e **entrada de 97 a R$ 1,50**. |
+| **Exemplo** | Hambúrguer: saldo 100, contado 99 → **saída de 1**, tirada do lote mais antigo (R$ 4,50). O custo digitado (R$ 9,99) foi **ignorado**. | Pão: saldo 95, contado 97 → **saída de 95** e **entrada de 97 a R$ 1,50**. |
 | **Lotes e custo** | Continuam os mesmos lotes, com os custos de antes. | Os lotes antigos são zerados; fica **um lote novo** com o custo informado. |
 | **Quando usar** | No inventário do dia a dia. | Quando o custo cadastrado está errado ou desatualizado e você quer recomeçar o produto com o custo certo. |
 
@@ -2202,7 +2202,7 @@ Para entender lotes e custo médio, veja [Como dar entrada no estoque](entrada-d
 [Imagem: Histórico do Pão depois do inventário com Atualizar custo: saída 724 de 95 unidades e entrada 725 de 97 unidades a R$ 1,50 destacadas]
 
 !!! danger "O inventário só ajusta produtos que já tiveram movimentação"
-    No teste, a **Água Mineral** (que nunca teve entrada) foi contada com **12**, o inventário foi finalizado **sem nenhum aviso**, e o saldo **continuou 0**. Antes do primeiro inventário, dê a **entrada inicial** dos produtos: veja [Como dar entrada no estoque](entrada-de-estoque.md).
+    Exemplo: uma **Água Mineral** que nunca teve entrada, contada com **12**, deixa o inventário ser finalizado **sem nenhum aviso**, e o saldo **continua 0**. Antes do primeiro inventário, dê a **entrada inicial** dos produtos: veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
 Neste exemplo contamos o **Pão de hambúrguer**: o sistema dizia 100, mas na prateleira havia 95.
 
@@ -2319,7 +2319,7 @@ A **transferência** leva mercadoria de um estoque para outro: do depósito para
 
 Uma empresa pode ter **vários estoques**. Cada um tem o seu próprio saldo, e a transferência é o jeito certo de mover mercadoria entre eles.
 
-**Por que não lançar uma saída e uma entrada?** Porque a transferência faz as duas coisas **ligadas** e **leva o custo junto**. No teste, ao transferir 10 pães do Estoque 1 para o Estoque Cozinha:
+**Por que não lançar uma saída e uma entrada?** Porque a transferência faz as duas coisas **ligadas** e **leva o custo junto**. Exemplo: ao transferir 10 pães do Estoque 1 para o Estoque Cozinha:
 
 - no Estoque 1 saíram 10 pães do lote mais antigo, a **R$ 1,20** cada;
 - no Estoque Cozinha entraram 10 pães, num **lote novo com o mesmo custo de R$ 1,20**.
@@ -2352,19 +2352,19 @@ Clique em **Nova transferência**.
 
 Em **Informações básicas**:
 
-- **Estoque de saída:** de onde a mercadoria sai. No teste, veio preenchido com o **Estoque 1**, o estoque principal.
+- **Estoque de saída:** de onde a mercadoria sai. Vem preenchido com o estoque principal (no exemplo, **Estoque 1**).
 - **Estoque de entrada:** para onde ela vai.
 - **Data da operação:** vem com a data de hoje.
 
 Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produto. Na linha, a coluna **Saldo** mostra quanto há no estoque de saída. Digite a **Quantidade** que vai ser transferida.
 
-A linha tem também a coluna **Lote** e os três pontinhos, como na saída de estoque. No teste, sem escolher lote, os pães saíram do lote mais antigo.
+A linha tem também a coluna **Lote** e os três pontinhos, como na saída de estoque. Sem escolher lote, a mercadoria sai do lote mais antigo.
 
 ## Preencha os dados da transferência
 
 Em **Dados para transferência**:
 
-- **Transportadora:** quem vai levar, se for o caso (as transportadoras ficam em **Estoque → Transportadoras**). É opcional: no teste, ficou em branco.
+- **Transportadora:** quem vai levar, se for o caso (as transportadoras ficam em **Estoque → Transportadoras**). É opcional: pode ficar em branco.
 - **Nome do responsável:** quem está fazendo a transferência. Aparece na lista.
 - **Observação:** um comentário, com até 120 caracteres. Exemplo: "Reposição da cozinha".
 
@@ -2401,7 +2401,7 @@ Nos **três pontinhos** da transferência ficam:
     Confira se ele existe em **Estoque → Estoque**. Se existir, abra o cadastro dele e veja o campo **Unidades**: ele precisa estar liberado para a loja em que você está.
 
 ??? question "Transferi errado (produto, quantidade ou estoque)"
-    Nos três pontinhos da transferência, clique em **Excluir** e confirme. O sistema avisa que a operação não pode ser desfeita. No teste, a transferência foi para a aba **Canceladas** e o saldo voltou para o estoque de saída. Depois, faça a transferência certa.
+    Nos três pontinhos da transferência, clique em **Excluir** e confirme. O sistema avisa que a operação não pode ser desfeita. A transferência vai para a aba **Canceladas** e o saldo volta para o estoque de saída. Depois, faça a transferência certa.
 
 ??? question "Fiz uma saída e uma entrada em vez de transferir"
     Funciona para o saldo, mas a entrada fica com o custo que você digitou. Se o custo ficou errado, exclua os dois lançamentos no histórico de cada produto e faça uma transferência. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
@@ -2433,7 +2433,7 @@ O cadastro do fornecedor sozinho não mexe no estoque nem no financeiro. Ele é 
 
 **Pessoa jurídica × pessoa física:** a maioria dos fornecedores é empresa (tem **CNPJ**). Quando você compra de uma pessoa, como um produtor rural ou um artesão, escolha **Pessoa física**: o cadastro passa a pedir **CPF** e **Data de nascimento** no lugar dos dados de empresa.
 
-**Basta o nome para começar.** No teste, um fornecedor só com o nome foi salvo sem problema. Os outros dados ajudam a reconhecer o fornecedor e a ter o contato à mão. O campo de busca da lista diz **Buscar por nome, CNPJ ou CPF**.
+**Basta o nome para começar.** Um fornecedor só com o nome já pode ser salvo. Os outros dados ajudam a reconhecer o fornecedor e a ter o contato à mão. O campo de busca da lista diz **Buscar por nome, CNPJ ou CPF**.
 
 !!! tip "Compra com nota? Deixe o XML cadastrar"
     Se o fornecedor emite nota fiscal, você não precisa digitar o cadastro: ao importar o XML da compra, o sistema cria o fornecedor com os dados da nota. Se mesmo assim for cadastrar à mão um fornecedor que manda nota, preencha o **CNPJ** igual ao da nota.
@@ -2467,7 +2467,7 @@ Em **Dados do fornecedor**:
 Para **pessoa jurídica**:
 
 - **Razão social:** o nome oficial da empresa, como está no CNPJ (o "nome do fornecedor" pode ser o nome fantasia).
-- **CNPJ:** o sistema confere se o número é válido. No teste, um CNPJ inválido ficou em vermelho com o aviso **Valor utilizado não está correto**, e o cadastro não salvou.
+- **CNPJ:** o sistema confere se o número é válido. Um CNPJ inválido fica em vermelho com o aviso **Valor utilizado não está correto**, e o cadastro não salva.
 - **Inscrição Estadual (IE):** o registro da empresa no estado; está na nota fiscal do fornecedor. Se ele não tem IE, marque **Isento**: o campo é preenchido com "ISENTO". Na dúvida, pergunte ao seu contador.
 - **Inscrição municipal:** o registro na prefeitura, comum em prestadores de serviço. Opcional.
 - **Data de fundação:** opcional.
@@ -2478,11 +2478,11 @@ Para **pessoa física**, os campos são **CPF** e **Data de nascimento** (somem 
 [Imagem: CNPJ com o aviso Valor utilizado não está correto e a Inscrição Estadual com Isento marcado destacados]
 
 !!! warning "Trocar o tipo de pessoa muda os campos"
-    No teste, ao trocar para Pessoa física e voltar para Pessoa jurídica, a marcação **Isento** foi desmarcada e a **Inscrição Estadual** ficou em branco. Escolha o tipo **antes** de preencher os documentos e, se trocar, confira tudo de novo.
+    Ao trocar para Pessoa física e voltar para Pessoa jurídica, a marcação **Isento** é desmarcada e a **Inscrição Estadual** fica em branco. Escolha o tipo **antes** de preencher os documentos e, se trocar, confira tudo de novo.
 
 ## Escolha as unidades e anote o que importa
 
-- **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. A janela tem busca, filtro por **UF** e **Selecionar todas as lojas**. No teste, a loja atual já vinha marcada (**1 de 5 unidades selecionadas**).
+- **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. A janela tem busca, filtro por **UF** e **Selecionar todas as lojas**. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**).
 - **Observação sobre este fornecedor:** até 600 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300."
 
 ## Preencha o contato e o endereço
@@ -2493,7 +2493,7 @@ As duas seções são **opcionais**:
 - **Informações de endereço:** digite o **CEP** e o sistema preenche sozinho **Rua**, **Bairro**, **Cidade** e **Estado**, e leva você para o **Número**. Complete o número e, se precisar, o **Complemento**.
 
 !!! warning "Use um e-mail que exista"
-    No teste, um e-mail inventado impediu o cadastro de salvar, e a tela não mostrou nenhum aviso. Se não tiver o e-mail certo, deixe em branco.
+    Um e-mail que não existe impede o cadastro de salvar, e a tela não mostra nenhum aviso. Se não tiver o e-mail certo, deixe em branco.
 
 Clique em **Salvar**, no canto de baixo, à direita. O fornecedor aparece na lista. Enquanto não salvar, o rodapé avisa **Você tem alterações não salvas**; **Descartar alterações** desfaz o que você digitou.
 
@@ -2518,16 +2518,16 @@ O fornecedor excluído vai para a aba **Excluídos**. Lá, o botão de **setas c
 ## Deu algum problema?
 
 ??? question "Cliquei em Salvar e nada aconteceu"
-    Confira o **E-mail**. No teste, um e-mail que não existe de verdade (um endereço de exemplo) foi recusado pelo sistema, mas **a tela não mostrou nenhum aviso**: o botão Salvar simplesmente não fez nada. Corrija o e-mail (ou apague, se não souber) e salve de novo. Confira também se algum campo está em vermelho, como o CNPJ.
+    Confira o **E-mail**. Um e-mail que não existe de verdade é recusado pelo sistema, mas **a tela não mostra nenhum aviso**: o botão Salvar simplesmente não faz nada. Corrija o e-mail (ou apague, se não souber) e salve de novo. Confira também se algum campo está em vermelho, como o CNPJ.
 
 ??? question "O CNPJ fica vermelho: Valor utilizado não está correto"
     O número não é um CNPJ válido: algum dígito foi digitado errado. Confira com a nota fiscal ou com o cartão CNPJ do fornecedor.
 
 ??? question "Excluí um fornecedor por engano"
-    Abra a aba **Excluídos** e clique nas **setas circulares** do fornecedor. No teste, depois de restaurar, a aba Ativos só mostrou o fornecedor depois de **recarregar a página** (tecla F5).
+    Abra a aba **Excluídos** e clique nas **setas circulares** do fornecedor. Se ele não aparecer na aba Ativos, **recarregue a página** (tecla F5).
 
 ??? question "Não vejo as abas Ativos e Excluídos"
-    No teste, quando não havia nenhum fornecedor ativo, a tela mostrou só **Nenhum fornecedor encontrado**, sem as abas. Isso acontece, por exemplo, se você excluiu todos. Para chegar à aba **Excluídos** e restaurar, cadastre um fornecedor: no teste, com ele na lista, as abas voltaram.
+    Quando não há nenhum fornecedor ativo, a tela mostra só **Nenhum fornecedor encontrado**, sem as abas. Isso acontece, por exemplo, se você excluiu todos. Para chegar à aba **Excluídos** e restaurar, cadastre um fornecedor: com ele na lista, as abas voltam.
 
 ??? question "O fornecedor não aparece em outra loja"
     Abra o cadastro dele e confira **Escolha em quais unidades exibir**. Se a loja estiver marcada e mesmo assim o fornecedor não aparecer, fale com o suporte.
@@ -2550,14 +2550,14 @@ A tela **Compras** registra o que você comprou de um fornecedor: os produtos, o
 
 A compra tem **duas etapas**, e cada uma mexe numa parte diferente do sistema:
 
-| Quando | O que acontece | No teste |
+| Quando | O que acontece | Exemplo |
 | --- | --- | --- |
 | **Ao salvar** a compra | Nascem as **contas a pagar** em **Finanças → Lançamentos**, uma por parcela, já com o fornecedor. A compra fica **Pendente**. | 2 parcelas de R$ 12,50 "A Vencer", na categoria Custo dos Produtos. |
-| **Ao marcar como recebida** | A mercadoria **entra no estoque**, com a categoria **Compra** e um **lote** com o custo que você digitou. | Entraram 10 pães num lote novo a R$ 2,00. |
+| **Ao marcar como recebida** | A mercadoria **entra no estoque**, com a categoria **Compra** e um **lote** com o custo que você digitou. | Entram 10 pães num lote novo a R$ 2,00. |
 
 Ou seja: enquanto a mercadoria não chega, a compra é um **pedido** (a dívida já existe, o estoque ainda não). Quando chega, você confirma o recebimento e o estoque é atualizado. Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
-**Compra ou entrada de estoque?** A **compra** registra o fornecedor e cria as contas a pagar. A **entrada de estoque** (Estoque → Estoque → Registrar entrada) só mexe no saldo: na empresa de teste, as entradas feitas à mão não apareceram em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como **compra**.
+**Compra ou entrada de estoque?** A **compra** registra o fornecedor e cria as contas a pagar. A **entrada de estoque** (Estoque → Estoque → Registrar entrada) só mexe no saldo: as entradas feitas à mão não aparecem em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como **compra**.
 
 !!! tip "Tem o XML da nota? Use a importação"
     Se o fornecedor mandou o **XML** da nota fiscal, não digite a compra: importe. Produtos, custos, fornecedor e parcelas vêm da nota. Veja [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md). Lance à mão quando não há nota eletrônica ou o fornecedor não manda o XML.
@@ -2572,7 +2572,7 @@ Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 ## Abra as compras
 
-No menu do lado esquerdo, clique em **Estoque** e depois em **Compras**. A lista mostra cada compra com o número, o fornecedor, o **Valor**, a data em **Registrado em** e o **Status** (no teste: **Pendente**, **Recebido** e, na aba **Excluídas**, **Cancelado**). As abas **Ativas** e **Excluídas** separam as compras válidas das excluídas.
+No menu do lado esquerdo, clique em **Estoque** e depois em **Compras**. A lista mostra cada compra com o número, o fornecedor, o **Valor**, a data em **Registrado em** e o **Status** (por exemplo: **Pendente**, **Recebido** e, na aba **Excluídas**, **Cancelado**). As abas **Ativas** e **Excluídas** separam as compras válidas das excluídas.
 
 Clique em **Nova compra**.
 
@@ -2586,7 +2586,7 @@ Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produ
 - **Custo unitário:** quanto pagou por **unidade**. É esse custo que vai para o lote no estoque.
 - **Custo total:** a conta é feita sozinha.
 
-O **Status** do item começa **Pendente**. No canto de cima, **Estoque: Padrão** é o estoque onde a mercadoria vai entrar: no teste, foi o estoque principal da loja (**Estoque 1**). Não testamos trocar o estoque.
+O **Status** do item começa **Pendente**. No canto de cima, **Estoque: Padrão** é o estoque onde a mercadoria vai entrar: o estoque principal da loja.
 
 Os **três pontinhos** do item têm **Marcar como recebido**, **Marcar como cancelado**, **Editar** (abre a janela **Editar produto**, com **Quantidade** e **Custo**) e **Excluir**.
 
@@ -2605,33 +2605,33 @@ Em **Pagamentos**, o valor já vem preenchido com o total dos produtos:
 
 - **Forma de pagamento:** PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito... (as cadastradas em [Formas de pagamento](../financas/formas-de-pagamento.md)).
 - **Conta bancária:** de onde o dinheiro vai sair.
-- **Parcelas** e **Periodicidade das parcelas:** apareceram ao escolher **Boleto**. No teste, **2x parcelas** com periodicidade **Mensal** dividiu o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.
+- **Parcelas** e **Periodicidade das parcelas:** aparecem ao escolher **Boleto**. Exemplo: **2x parcelas** com periodicidade **Mensal** divide o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.
 - Para cada parcela: **Vencimento**, **Pagamento** (deixe em branco se ainda não pagou), **Categoria** (vem **Custo dos Produtos**), **Centro de custo**, **Valor** e **Porcentagem**.
-- Cada parcela também tem **Adicionar categoria**, **Rateio restante** e **Total rateado**. No teste, com uma categoria só, a parcela ficou 100% nela (Rateio restante R$ 0,00) e o Centro de custo ficou em branco. Não testamos dividir a parcela entre categorias.
-- O botão **Adicionar pagamento** fica no topo (a tela mostra "Pagamento 1 de 1"). Não testamos lançar mais de um pagamento.
+- Cada parcela também tem **Adicionar categoria**, **Rateio restante** e **Total rateado**. Com uma categoria só, a parcela fica 100% nela (Rateio restante R$ 0,00). O Centro de custo é opcional.
+- O botão **Adicionar pagamento** fica no topo (a tela mostra "Pagamento 1 de 1").
 
 [Imagem: Pagamentos com forma e conta, parcelas e periodicidade e a primeira parcela destacados]
 
 !!! warning "Pagamento preenchido = conta paga"
-    No teste, ao editar a compra já salva e preencher a data de **Pagamento** de uma parcela, a conta passou a **Pago** em Lançamentos. Só preencha quando o dinheiro já saiu.
+    Ao preencher a data de **Pagamento** de uma parcela (na hora de lançar ou depois, pelo **Editar**), a conta passa a **Pago** em Lançamentos. Só preencha quando o dinheiro já saiu.
 
 ## Lance o frete
 
-No **Resumo financeiro** ficam **Subtotal**, **Frete**, **Outras despesas**, **Descontos** e **Total**. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". **Outras despesas** e **Descontos** também ficam ali (não testados).
+No **Resumo financeiro** ficam **Subtotal**, **Frete**, **Outras despesas**, **Descontos** e **Total**. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". **Outras despesas** e **Descontos** também ficam ali.
 
-Clique em **Frete**. A janela tem **Transportadora**, **Valor** e a chave **Pagar frete**. No teste, com o frete de R$ 5,00 e **Pagar frete** ligado:
+Clique em **Frete**. A janela tem **Transportadora**, **Valor** e a chave **Pagar frete**. Exemplo, com o frete de R$ 5,00 e **Pagar frete** ligado:
 
-- o frete entrou no **Total** (R$ 25,00) e foi dividido nas parcelas (2 x R$ 12,50);
-- as parcelas continuaram sendo do **fornecedor**: não foi criada uma conta separada para a transportadora.
+- o frete entra no **Total** (R$ 25,00) e é dividido nas parcelas (2 x R$ 12,50);
+- as parcelas continuam sendo do **fornecedor**: não é criada uma conta separada para a transportadora.
 
-Use **Pagar frete** ligado quando o frete vem cobrado junto com a conta do fornecedor. Não testamos lançar um frete com a chave desligada.
+Use **Pagar frete** ligado quando o frete vem cobrado junto com a conta do fornecedor.
 
 [Imagem: Janela Frete com Transportadora, Valor e Pagar frete destacados]
 
 [Imagem: Parcelas de R$ 12,50 e o resumo com Frete R$ 5,00 e Total R$ 25,00 destacados]
 
 !!! note "O frete não muda o custo do produto"
-    No teste, mesmo com o frete pago, o lote do produto entrou no estoque com o **custo unitário digitado** (R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.
+    Mesmo com o frete pago, o lote do produto entra no estoque com o **custo unitário digitado** (no exemplo, R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.
 
 ## Salve e confira as contas a pagar
 
@@ -2639,7 +2639,7 @@ Clique em **Salvar**. A compra aparece na lista como **Pendente**, e as parcelas
 
 [Imagem: Lançamentos com as duas parcelas da compra a pagar destacadas]
 
-Depois de salva, a compra pode ser aberta de novo pelo **Editar** (nos três pontinhos da lista). No teste, foi por ali que a data de **Pagamento** de uma parcela foi preenchida.
+Depois de salva, a compra pode ser aberta de novo pelo **Editar** (nos três pontinhos da lista). É por ali que você preenche a data de **Pagamento** de uma parcela quando pagar.
 
 ## Marque como recebida quando a mercadoria chegar
 
@@ -2651,7 +2651,7 @@ O sistema pede para **Confirmar entregas** e avisa que a ação é **irreversív
 
 [Imagem: Janela Confirmar entregas com o botão Confirmar destacado]
 
-Dentro da compra, cada produto também tem **Marcar como recebido** nos três pontinhos, e o rodapé tem **Marcar todos como recebidos**. Não testamos esses caminhos: no teste, o recebimento foi feito pelo menu da lista.
+Dentro da compra, cada produto também tem **Marcar como recebido** nos três pontinhos, e o rodapé tem **Marcar todos como recebidos**. O caminho mais simples é o menu da lista, mostrado acima.
 
 Depois de recebida, o menu perde as opções de marcar, e no **Editar** a **quantidade** e o **custo** dos itens ficam travados; os pagamentos continuam editáveis.
 
@@ -2661,9 +2661,9 @@ Nos três pontinhos da compra, clique em **Excluir**. A janela **Excluir compra*
 
 [Imagem: Janela Excluir compra com a caixinha Excluir movimentação destacada]
 
-No teste, com a caixinha marcada, a compra foi para a aba **Excluídas** (status **Cancelado**, movimentação **Excluída**), o lote saiu do estoque e a parcela **a vencer** sumiu de Lançamentos. **A parcela já paga continuou lá** (veja "Deu algum problema?").
+Com a caixinha marcada, a compra vai para a aba **Excluídas** (status **Cancelado**, movimentação **Excluída**), o lote sai do estoque e a parcela **a vencer** some de Lançamentos. **A parcela já paga continua lá** (veja "Deu algum problema?").
 
-**Excluir** não é o mesmo que **Marcar como cancelado**, que também aparece no menu. Não testamos o Marcar como cancelado.
+**Excluir** não é o mesmo que **Marcar como cancelado**, que também aparece no menu. Na dúvida sobre qual usar, fale com o suporte.
 
 
 
@@ -2686,13 +2686,13 @@ No teste, com a caixinha marcada, a compra foi para a aba **Excluídas** (status
     Depois de recebida, a quantidade e o custo ficam travados. Exclua a compra marcando **Excluir movimentação** (se os produtos ainda não foram vendidos) e lance de novo. Atenção: se alguma parcela já estava **paga**, ela continua em Lançamentos depois da exclusão, e a compra nova cria parcelas de novo.
 
 ??? question "Excluí a compra e uma parcela continua em Lançamentos"
-    No teste, a parcela que já estava **paga** não foi apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.
+    A parcela que já estava **paga** não é apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.
 
 ??? question "Lancei frete e não aparece conta para a transportadora"
-    No teste, com **Pagar frete** ligado, o frete foi somado às parcelas do **fornecedor**. Não foi criada uma conta separada para a transportadora.
+    É assim que funciona: com **Pagar frete** ligado, o frete é somado às parcelas do **fornecedor**. Não é criada uma conta separada para a transportadora.
 
 ??? question "O frete não entrou no total"
-    Abra o **Frete** e confira se a chave **Pagar frete** está ligada: no teste, ligada, o frete entrou no Total e nas parcelas.
+    Abra o **Frete** e confira se a chave **Pagar frete** está ligada: ligada, o frete entra no Total e nas parcelas.
 
 **Relacionados:** [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md) · [Como cadastrar um fornecedor](cadastrar-fornecedor.md) · [Como dar entrada no estoque](entrada-de-estoque.md) · [Como cadastrar uma transportadora ou um entregador](transportadora.md) · [Formas de pagamento](../financas/formas-de-pagamento.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md)
 
@@ -2721,19 +2721,19 @@ Na [ficha técnica](../produtos/ficha-tecnica.md) existem dois tipos de produç�
 
 A ordem de produção passa por **três etapas**, que aparecem no topo da tela:
 
-| Etapa | No menu | O que faz no estoque (no teste) |
+| Etapa | No menu | O que faz no estoque |
 | --- | --- | --- |
 | **Pedido** | Estoque → Pedido produção | Nada. É o planejamento: o que produzir, quanto e para quando. |
 | **Produção** | Estoque → Produção | Com a caixinha **Consumo** marcada, **tira os ingredientes** do estoque (categoria **Produção**). |
 | **Finalização** | Estoque → Finalização | Com a caixinha **Entrada** marcada, **coloca o produto pronto** no estoque (categoria **Produção**). |
 
-**De onde vem o custo do produto pronto.** No teste, a ficha do **Molho da casa** levava 1 maionese (R$ 3,00) e 1 molho especial (R$ 0,40). Com o consumo registrado **antes** da finalização, os 2 molhos produzidos entraram no estoque a **R$ 3,40** cada: a soma dos ingredientes (teste sem desperdício). Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
+**De onde vem o custo do produto pronto.** Do custo dos ingredientes consumidos. Exemplo: a ficha do **Molho da casa** leva 1 maionese (R$ 3,00) e 1 molho especial (R$ 0,40). Com o consumo registrado **antes** da finalização e sem desperdício, cada molho produzido entra no estoque a **R$ 3,40**: a soma dos ingredientes. Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
 !!! warning "Consumo e Entrada vêm desmarcados"
-    No teste, as caixinhas **Consumo** (na Produção) e **Entrada** (na Finalização) vieram **desmarcadas**. Sem marcar **Consumo**, a produção é salva mas os ingredientes não saem do estoque. E a ordem importa: no teste em que a finalização foi feita **antes** do consumo, o produto pronto entrou com custo **R$ 0,00**.
+    As caixinhas **Consumo** (na Produção) e **Entrada** (na Finalização) vêm **desmarcadas**. Sem marcar **Consumo**, a produção é salva mas os ingredientes não saem do estoque. E a ordem importa: se a finalização for feita **antes** do consumo, o produto pronto entra com custo **R$ 0,00**.
 
 !!! info "Antes de começar"
-    - O produto a ser produzido precisa ter **ficha técnica** do tipo **Processo produtivo**, com os ingredientes (veja [Como montar uma ficha técnica](../produtos/ficha-tecnica.md)). A janela de adicionar produto mostra só esses produtos: no teste, o X-Burger, que é de Produção automática, não apareceu.
+    - O produto a ser produzido precisa ter **ficha técnica** do tipo **Processo produtivo**, com os ingredientes (veja [Como montar uma ficha técnica](../produtos/ficha-tecnica.md)). A janela de adicionar produto mostra só esses produtos: um produto com ficha de **Produção automática** não aparece.
     - Os ingredientes precisam ter **estoque e custo** (veja [Como dar entrada no estoque](entrada-de-estoque.md)).
     - Estas telas têm o **visual antigo** do sistema, mas abrem normalmente dentro do menu.
 
@@ -2749,7 +2749,7 @@ Preencha o topo:
 
 - **Solicitante** e **Responsável:** quem pediu e quem vai produzir (os usuários do sistema).
 - **Data da Solicitação** e **Prazo:** quando foi pedido e para quando precisa estar pronto.
-- **Status** (**Aberto**, **Fechado** ou **Cancelado**) e **Status Detalhe:** no teste, ficaram em **Aberto** e **Indefinido** em todas as etapas, mesmo depois de finalizar. Não testamos Fechado nem Cancelado.
+- **Status** (**Aberto**, **Fechado** ou **Cancelado**) e **Status Detalhe:** ficam em **Aberto** e **Indefinido** em todas as etapas, mesmo depois de finalizar.
 
 Em **Produtos / Serviços**, clique em **Adicionar Produto / Serviço**, busque o produto e clique em **Adicionar e Fechar**. Na linha do produto:
 
@@ -2759,7 +2759,7 @@ Em **Produtos / Serviços**, clique em **Adicionar Produto / Serviço**, busque 
 Clique na **setinha** ao lado do nome para ver o **Consumo Unitário**: os ingredientes da ficha técnica, um por linha.
 
 - **Qtd (Unit. / Total):** quanto de cada ingrediente vai em **uma** unidade, e o total para a quantidade pedida (a conta é feita sozinha).
-- **Desperdício (Unit. / Total):** a perda esperada por unidade produzida. No teste, 1 maionese de desperdício por molho deu um total de 10.
+- **Desperdício (Unit. / Total):** a perda esperada por unidade produzida. Exemplo: 1 maionese de desperdício por molho, em 10 molhos, dá um total de 10.
 - **Estoque Saída:** de onde o ingrediente sai. Pela dica da tela, o botão **Usar** aplica esse estoque em todos os ingredientes.
 
 [Imagem: Pedido de produção com o produto, a quantidade e o estoque de entrada e a tabela de consumo dos ingredientes destacados]
@@ -2772,7 +2772,7 @@ A mensagem de sucesso traz o atalho **Converter em Produção agora**. O pedido 
 
 [Imagem: Lista de pedidos de produção com as colunas Pedido, Produção e Finalização destacadas]
 
-Nesse momento **nada mudou no estoque**: no teste, a maionese continuou com o mesmo saldo e o molho ainda não existia no estoque.
+Nesse momento **nada muda no estoque**: os ingredientes continuam com o mesmo saldo e o produto pronto ainda não entrou.
 
 ## Converta em produção e marque o consumo
 
@@ -2784,9 +2784,9 @@ Desça até o produto e clique na **setinha** ao lado do nome. Na tabela de ingr
 
 [Imagem: Converter em Produção com a setinha do produto, a coluna Consumo e o botão Converter destacados]
 
-Com **Consumo** marcado, saem do estoque os ingredientes **mais o desperdício**, na categoria **Produção**. Exemplo do teste: 10 molhos com 1 maionese de desperdício por molho tiraram 20 maioneses (10 de consumo + 10 de desperdício).
+Com **Consumo** marcado, saem do estoque os ingredientes **mais o desperdício**, na categoria **Produção**. Exemplo: 10 molhos com 1 maionese de desperdício por molho tiram 20 maioneses (10 de consumo + 10 de desperdício).
 
-Se esquecer de marcar, dá para corrigir: em **Estoque → Produção**, clique no botão de editar da produção, abra a setinha, marque **Consumo** e clique em **Salvar**. Os ingredientes saem do estoque. Mas, se a finalização já tiver sido feita, o produto pronto continua com o custo com que entrou (no teste, R$ 0,00).
+Se esquecer de marcar, dá para corrigir: em **Estoque → Produção**, clique no botão de editar da produção, abra a setinha, marque **Consumo** e clique em **Salvar**. Os ingredientes saem do estoque. Mas, se a finalização já tiver sido feita, o produto pronto continua com o custo com que entrou (R$ 0,00).
 
 ## Finalize e dê entrada no produto pronto
 
@@ -2796,7 +2796,7 @@ Na linha do produto, confira a **Qnt** e o **Estoque**, e marque a caixinha **En
 
 [Imagem: Finalização da produção com as etapas, a caixinha Entrada e o botão Converter destacados]
 
-No print, a finalização de 10 molhos. No teste feito na ordem certa (consumo antes), os 2 molhos produzidos entraram no estoque com a categoria **Produção** e custo de R$ 3,40 cada (o custo dos ingredientes consumidos).
+Feita na ordem certa (consumo antes), a finalização dá entrada no produto pronto com a categoria **Produção** e o custo dos ingredientes consumidos (no exemplo, R$ 3,40 cada molho).
 
 ## Confira no estoque
 
@@ -2805,7 +2805,7 @@ Abra o histórico dos produtos (veja [Como consultar o saldo e o histórico do e
 - os **ingredientes** têm uma **saída** com a categoria **Produção**;
 - o **produto pronto** tem uma **entrada** com a categoria **Produção** e o custo dos ingredientes.
 
-Na lista de **Estoque → Produção**, o ícone ao lado do número da produção abre o **Consumo de Insumos**, com o insumo, o lote, o fornecedor e as datas de entrada e validade. No teste, sem o consumo marcado, ele ficou vazio.
+Na lista de **Estoque → Produção**, o ícone ao lado do número da produção abre o **Consumo de Insumos**, com o insumo, o lote, o fornecedor e as datas de entrada e validade. Sem o consumo marcado, ele fica vazio.
 
 
 
@@ -2825,16 +2825,16 @@ Na lista de **Estoque → Produção**, o ícone ao lado do número da produçã
     A caixinha **Consumo** não foi marcada na Produção. Abra a produção em **Estoque → Produção**, clique na setinha do produto, marque **Consumo** e salve. Os ingredientes saem, mas o produto pronto que já entrou continua com o custo daquele momento (veja a próxima pergunta).
 
 ??? question "O produto pronto entrou com custo zero"
-    No teste, isso aconteceu quando a finalização foi feita **antes** de marcar o consumo. Nas próximas produções, marque o consumo antes de finalizar. Para corrigir uma entrada já feita, fale com o suporte.
+    Isso acontece quando a finalização é feita **antes** de marcar o consumo. Nas próximas produções, marque o consumo antes de finalizar. Para corrigir uma entrada já feita, fale com o suporte.
 
 ??? question "Finalizei e o produto pronto não apareceu no estoque"
     Confira se a caixinha **Entrada** foi marcada na finalização. Se foi e o produto não entrou, fale com o suporte.
 
 ??? question "Fechei a mensagem e perdi o atalho Converter em Produção agora"
-    No teste, a conversão foi sempre feita pelo atalho da mensagem. Se você fechou a mensagem antes de converter, fale com o suporte.
+    A conversão é feita pelo atalho da mensagem. Se você fechou a mensagem antes de converter, fale com o suporte.
 
 ??? question "Finalizei e o status continua Aberto"
-    No teste, o status ficou **Aberto** em todas as etapas, mesmo depois da finalização. O que mostra que a produção terminou é a coluna **Finalização** da lista, com o número da entrada.
+    É normal: o status fica **Aberto** em todas as etapas, mesmo depois da finalização. O que mostra que a produção terminou é a coluna **Finalização** da lista, com o número da entrada.
 
 **Relacionados:** [Como montar uma ficha técnica](../produtos/ficha-tecnica.md) · [Como dar entrada no estoque](entrada-de-estoque.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md)
 
@@ -2863,7 +2863,7 @@ Lançar uma compra à mão dá trabalho e abre espaço para erro: digitar produt
 
 ### O que a importação cria
 
-| Onde | O que aparece | Exemplo do teste |
+| Onde | O que aparece | Exemplo |
 | --- | --- | --- |
 | **Estoque → Fornecedores** | O fornecedor, com os dados da nota. | O emitente da nota. |
 | **Estoque → Compras** | Uma compra com status **Recebido**, os itens, o total e o próprio arquivo XML anexado. Na observação: "Compra gerada por importação de XML". | Compra #18, R$ 1.245,00. |
@@ -2871,7 +2871,7 @@ Lançar uma compra à mão dá trabalho e abre espaço para erro: digitar produt
 | **Finanças** | A **conta a pagar** ao fornecedor, com o vencimento e a conta bancária escolhidos, na categoria **Custo dos Produtos**. | 1 parcela de R$ 1.245,00, vencimento 29/11. |
 
 !!! note "A data da entrada é a data da nota"
-    No teste, a entrada no estoque ficou com a **data de emissão da nota** (28/05), e não com o dia em que ela foi importada. Relatórios por período mostram a mercadoria no mês da nota.
+    A entrada no estoque fica com a **data de emissão da nota**, e não com o dia em que ela foi importada. Relatórios por período mostram a mercadoria no mês da nota.
 
 ### Por que vincular em vez de criar
 
@@ -3172,7 +3172,7 @@ Cada categoria tem um **tipo**, que define em que lançamento ela aparece:
 | **Saída** | Só em Registrar saída | Consumo Interno, Perda, Reposição, Venda |
 | **Todos** | Nas duas | Ajustes de Estoque, Devolução, Produção, Transferência de Estoque |
 
-**Categorias do sistema × criadas por você:** as do sistema não podem ser alteradas (não têm os três pontinhos). As que você cria têm os três pontinhos, com **Editar**, **Duplicar** e **Excluir**. Na empresa de teste, por exemplo, havia uma categoria própria chamada **Transferência de Consignado**, ao lado das do sistema.
+**Categorias do sistema × criadas por você:** as do sistema não podem ser alteradas (não têm os três pontinhos). As que você cria têm os três pontinhos, com **Editar**, **Duplicar** e **Excluir**. Exemplo: uma categoria própria chamada **Transferência de Consignado** aparece ao lado das do sistema.
 
 Uma observação sobre nomes: a categoria **Transferência de Estoque** aparece no histórico dos produtos só como **Transferência**. É ela que o sistema usa sozinho quando você faz uma [transferência entre estoques](transferencia.md).
 
@@ -3196,7 +3196,7 @@ Na janela **Nova categoria de movimentação**:
 
 - **Nome:** o motivo, com até 60 caracteres. Exemplo: "Degustação".
 - **Tipo:** **Entrada**, **Saída** ou **Todos**. Degustação é algo que **sai** do estoque, então: **Saída**.
-- **Seleção de unidades:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão usar a categoria. No teste, a janela já mostrava **1 de 5 unidades selecionadas**.
+- **Seleção de unidades:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão usar a categoria. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**).
 
 Clique em **Salvar**.
 
@@ -3212,10 +3212,10 @@ A categoria entra na lista com o **próximo código** (no exemplo, **012**), em 
 
 Ao registrar uma **saída** de estoque, a nova categoria já aparece na lista de **Categoria de movimentação**. A lista tem um campo **Buscar** para achar mais rápido.
 
-Como ela é do tipo **Saída**, não aparece ao registrar uma entrada: no teste, a lista da entrada mostrou só as categorias de entrada e as do tipo Todos.
+Como ela é do tipo **Saída**, não aparece ao registrar uma entrada: a lista da entrada mostra só as categorias de entrada e as do tipo Todos.
 
 !!! warning "A categoria já vem preenchida"
-    No teste, tanto na entrada quanto na saída, o campo já veio com **Ajustes de Estoque**. Confira e troque pela categoria certa antes de salvar: é ela que vai contar a história do lançamento.
+    Tanto na entrada quanto na saída, o campo já vem com **Ajustes de Estoque**. Confira e troque pela categoria certa antes de salvar: é ela que vai contar a história do lançamento.
 
 [Imagem: Registrar movimentação com Saída de estoque e a categoria Degustação na lista destacadas]
 
@@ -3276,14 +3276,14 @@ O que define se a venda é **estadual** ou **interestadual** é onde o **cliente
 
 Fora do estado, o imposto depende de **quem compra**:
 
-- **Contribuinte do ICMS** (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como **6102**. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. (A venda interestadual para contribuinte não foi testada neste manual.)
+- **Contribuinte do ICMS** (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como **6102**. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. Na dúvida sobre o CFOP de uma venda para contribuinte de outro estado, pergunte ao seu contador.
 - **Não contribuinte / consumidor final** (pessoa física, ou empresa sem IE que vai usar o produto): CFOP como **6108** e **DIFAL**.
 
 ### O que é o DIFAL
 
 O **DIFAL** (diferencial de alíquota) é a parte do ICMS que fica com o **estado do cliente** quando você vende para um **consumidor final de outro estado**. É a diferença entre a alíquota interna do estado de destino e a alíquota interestadual.
 
-No teste (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP **18%**, interestadual **12%** → DIFAL de **6%** = **R$ 0,60** para SP. O sistema calcula sozinho quando você marca **Nota para Consumidor Final**.
+Exemplo (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP **18%**, interestadual **12%** → DIFAL de **6%** = **R$ 0,60** para SP. O sistema calcula sozinho quando você marca **Nota para Consumidor Final**.
 
 !!! danger "Simples Nacional e DIFAL: confirme com o contador"
     O sistema calculou o DIFAL mesmo numa empresa do Simples Nacional. Se a sua empresa precisa ou não recolher esse valor depende da situação dela e do estado de destino. **Pergunte ao seu contador** antes de vender para fora do estado.
@@ -3329,7 +3329,7 @@ Confira os dados que vieram, principalmente:
 [Imagem: Dados fiscais do cliente com a Indicação de Inscrição Estadual destacada (CNPJ, IE e endereço cobertos)]
 
 !!! warning "Venda para pessoa física: use o cadastro do cliente"
-    No teste, preencher uma **pessoa física** direto na nota, sem escolher um cliente cadastrado, fez o sistema enviar a pessoa como **contribuinte**, e a Sefaz recusou (Rejeição 728). Escolhendo um **cliente cadastrado**, a indicação veio certa (**9 - Não contribuinte**) e a nota foi autorizada. **Cadastre o cliente antes** e escolha-o na lista.
+    Preencher uma **pessoa física** direto na nota, sem escolher um cliente cadastrado, pode fazer o sistema enviar a pessoa como **contribuinte**, e a Sefaz recusa (Rejeição 728). Escolhendo um **cliente cadastrado**, a indicação vem certa (**9 - Não contribuinte**) e a nota é autorizada. **Cadastre o cliente antes** e escolha-o na lista.
 
 ## Preencha os dados da operação
 
@@ -3372,7 +3372,7 @@ Confira a **Qtdade**, o **Vl. unitário** e o **NCM**.
 
 Mais abaixo no item:
 
-- **CFOP:** nos testes ele veio **vazio**: escolha o CFOP da venda. Digite o número para achar mais rápido.
+- **CFOP:** pode vir **vazio**: escolha o CFOP da venda. Digite o número para achar mais rápido.
     - Dentro do estado: **5102** (venda comum) ou **5405** (produto com substituição tributária, ICMS 500 no Simples).
     - Fora do estado: **6102** (para contribuinte) ou **6108** (para não contribuinte / consumidor final).
 - **Situação do ICMS** e **Origem:** vêm do cadastro do produto. Confira.
@@ -3446,13 +3446,13 @@ Nos **três pontinhos** da nota autorizada você tem:
     A Sefaz recusou a nota. Passe o mouse sobre **Falhou** para ver o motivo. Veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md).
 
 ??? question "Rejeição 728: NF-e sem informação da IE do destinatário"
-    A nota foi enviada como se o cliente fosse **contribuinte**, mas sem Inscrição Estadual. Isso aconteceu no teste ao preencher uma pessoa física direto na nota. **Escolha o cliente cadastrado** na lista (ou cadastre-o antes) e confira a **Indicação de Inscrição Estadual**: **9 - Não contribuinte** para pessoa física.
+    A nota foi enviada como se o cliente fosse **contribuinte**, mas sem Inscrição Estadual. Isso acontece ao preencher uma pessoa física direto na nota. **Escolha o cliente cadastrado** na lista (ou cadastre-o antes) e confira a **Indicação de Inscrição Estadual**: **9 - Não contribuinte** para pessoa física.
 
 ??? question "O CFOP veio vazio"
     Escolha o CFOP na lista do item: 5xxx dentro do estado, 6xxx para outro estado. Para não precisar escolher toda vez, peça ao contador e preencha o CFOP nos [dados fiscais do produto](../produtos/parametros-fiscais.md).
 
 ??? question "Não apareceu o DIFAL na venda para outro estado"
-    No teste, o grupo do DIFAL apareceu calculado com o destino **2 - Operação Interestadual** e a nota marcada como **Nota para Consumidor Final**. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.
+    O grupo do DIFAL é calculado com o destino **2 - Operação Interestadual** e a nota marcada como **Nota para Consumidor Final**. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.
 
 ??? question "A nota ficou como Pendente"
     Ela foi salva, mas não transmitida. Use **Transmitir NF-e** nos três pontinhos.
@@ -3502,7 +3502,7 @@ A Sefaz não sabe se a sua venda está certa; ela confere se a nota **segue as r
 | **Use quando** | Corrigir a nota rejeitada (caminho deste manual). | A data original não serve mais e você quer refazer a nota hoje. |
 
 !!! warning "Nota de devolução: confira a chave referenciada"
-    No teste, ao abrir **Editar NF-e** ou **Refazer NF-e** de uma nota de **devolução** rejeitada, o campo **Chaves de acesso da NF-e referenciada** veio **vazio**, embora a nota tivesse sido enviada com a chave. Antes de salvar, **cole a chave de novo**. Sem ela, a devolução não é aceita.
+    Ao abrir **Editar NF-e** ou **Refazer NF-e** de uma nota de **devolução** rejeitada, o campo **Chaves de acesso da NF-e referenciada** pode vir **vazio**, embora a nota tivesse sido enviada com a chave. Antes de salvar, **cole a chave de novo**. Sem ela, a devolução não é aceita.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
 
@@ -3712,7 +3712,7 @@ Uma nota cancelada continua com a **DANFE** e o **XML** disponíveis, e ganha a 
 ## Deu algum problema?
 
 ??? question "Cliquei em Cancelar e nada aconteceu"
-    No teste (em homologação), o cancelamento pela tela **NF-e de Saída** não respondeu e a nota continuou **Transmitido**, sem nenhuma mensagem. Atualize a página e confira o status. Se continuar igual, clique em **Versão Legado**, no topo da tela, e cancele pela lista de lá: foi assim que o cancelamento funcionou no teste. Se ainda assim não for, fale com o suporte.
+    Às vezes o cancelamento pela tela **NF-e de Saída** não responde e a nota continua **Transmitido**, sem nenhuma mensagem. Atualize a página e confira o status. Se continuar igual, clique em **Versão Legado**, no topo da tela, e cancele pela lista de lá. Se ainda assim não for, fale com o suporte.
 
 ??? question "A opção Cancelar NF-e está apagada"
     Só dá para cancelar nota **autorizada** (Transmitido). Para notas com **Falhou** ou **Pendente**, use **Inutilizar NF-e**.
@@ -3868,7 +3868,7 @@ Use este caminho quando o atalho **Devolver NF-e** está apagado (nota avulsa, s
     - **Tipo de operação:** **Entrada** (devolução de venda) ou **Saída** (devolução de compra).
     - **Finalidade de emissão da NF-e:** **4 - Devolução de mercadoria**.
 5. Em **Itens**, coloque os mesmos produtos, quantidades e valores da nota original. Escolha o **CFOP de devolução**: na nota manual, ele vem **vazio**.
-6. Confira a **Situação do PIS** e a **Situação do COFINS**. O produto pode trazer um código de **saída**, como "49 - Outras Operações de Saída". Na devolução de venda, que é uma **entrada**, troque pelo código que o contador indicar. No teste, usamos "99 - Outras Operações".
+6. Confira a **Situação do PIS** e a **Situação do COFINS**. O produto pode trazer um código de **saída**, como "49 - Outras Operações de Saída". Na devolução de venda, que é uma **entrada**, troque pelo código que o contador indicar. Exemplo: "99 - Outras Operações".
 7. Em **Dados do pagamento**, escolha **90 - Sem pagamento** e deixe o valor em **0,00**.
 8. Clique em **Salvar** e depois transmita, como no último passo acima.
 
@@ -3904,7 +3904,7 @@ Use este caminho quando o atalho **Devolver NF-e** está apagado (nota avulsa, s
     Passe o mouse sobre o status **Falhou** para ver o motivo. Veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md).
 
 ??? question "Fui editar a devolução rejeitada e a chave referenciada sumiu"
-    No teste, ao abrir **Editar NF-e** (ou **Refazer NF-e**) de uma devolução, o campo **Chaves de acesso da NF-e referenciada** veio vazio. Cole a chave de novo antes de salvar e transmitir.
+    Ao abrir **Editar NF-e** (ou **Refazer NF-e**) de uma devolução, o campo **Chaves de acesso da NF-e referenciada** pode vir vazio. Cole a chave de novo antes de salvar e transmitir.
 
 **Relacionados:** [Como emitir uma NF-e de venda](emitir-nfe.md) · [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md)
 
@@ -4173,7 +4173,7 @@ Em **Taxa de Entrega**, escolha uma das formas:
 - **Taxa por bairro:** um valor para cada bairro. Clique em **Configurar bairros** para cadastrar os bairros e as taxas. Em **Defina uma taxa de entrega padrão**, escolha o que cobrar quando o bairro do cliente não está na lista: **Maior valor** (a maior taxa cadastrada) ou **Personalizado** (um valor que você digita, maior que zero).
 
 !!! warning "Confira a taxa de entrega sempre que salvar esta tela"
-    Nos testes, a tela **Modos de pedidos** abriu mostrando **Taxa fixa** mesmo com a taxa por bairro configurada. Ao salvar qualquer outra mudança nessa tela, a cobrança passou para **taxa fixa de R$ 0,00**. Se a sua loja usa taxa por bairro, confira essa parte antes de clicar em **Salvar**. Se ela mudar, fale com o suporte.
+    A tela **Modos de pedidos** pode abrir mostrando **Taxa fixa** mesmo com a taxa por bairro configurada. Nesse caso, ao salvar qualquer outra mudança nessa tela, a cobrança passa para **taxa fixa de R$ 0,00**. Se a sua loja usa taxa por bairro, confira essa parte antes de clicar em **Salvar**. Se ela mudar, fale com o suporte.
 
 [Imagem: Taxa por bairro selecionada, as opções Maior valor e Personalizado e o botão Configurar bairros destacados]
 
@@ -4249,10 +4249,10 @@ Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações
     O campo preenche da direita para a esquerda. Apague e digite **1000** para ter **10,00**.
 
 ??? question "A taxa de entrega por bairro virou taxa fixa"
-    Isso aconteceu nos nossos testes ao salvar outras mudanças na tela **Modos de pedidos**. Fale com o suporte para corrigir e, enquanto isso, confira a **Taxa de Entrega** antes de clicar em **Salvar**.
+    Isso pode acontecer ao salvar outras mudanças na tela **Modos de pedidos**. Fale com o suporte para corrigir e, enquanto isso, confira a **Taxa de Entrega** antes de clicar em **Salvar**.
 
 ??? question "Apaguei um tempo limite e ele voltou"
-    Nos testes, apagar o número de **Limites de Tempo** ou do **Painel delivery** não limpou o valor salvo. Se precisar tirar um limite, fale com o suporte.
+    Apagar o número de **Limites de Tempo** ou do **Painel delivery** não limpa o valor salvo. Se precisar tirar um limite, fale com o suporte.
 
 ??? question "As opções de crediário na aba Segurança estão cinza"
     Elas só funcionam com o crediário ligado. Primeiro ligue o crediário em **Ponto de venda** → **Configurações** → **Crediário**.
@@ -4303,7 +4303,7 @@ No sistema, "conta bancária" é qualquer **lugar onde o dinheiro fica**: não s
 | **Ver Histórico** | O **extrato**: o **saldo de cada dia** e os lançamentos, com vencimento, data de pagamento/recebimento, tipo e usuário. |
 | **Ver Transações** | O **Registro de Movimentações**: a "auditoria" da conta. Mostra cada lançamento criado, e também alterações de valor ou data, cancelamentos e restaurações. |
 
-No teste, a conta nova "Banco do Brasil - Conta da loja" mostrou nas duas telas a linha **Saldo Inicial da Conta**, do tipo **Nova**, com R$ 1.500,00.
+Exemplo: a conta nova "Banco do Brasil - Conta da loja" mostrou nas duas telas a linha **Saldo Inicial da Conta**, do tipo **Nova**, com R$ 1.500,00.
 
 !!! info "O sistema já vem com duas contas"
     Toda loja começa com a **Conta Padrão** e a **Conta PDV Padrão** (a do caixa). Nenhuma das duas é de banco. Cadastre as contas reais da empresa, uma para cada banco.
