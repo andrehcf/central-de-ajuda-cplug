@@ -23,7 +23,11 @@ if ($shots.Count -eq 0) { Write-Warning "Nenhum print na lista para gerar."; ret
 $pen = New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(230, 220, 38, 38)), 3
 foreach ($s in $shots) {
   # Prints do Chrome (Claude in Chrome) vêm com outro prefixo: id 'chrome:<id>'.
-  if ($s[2] -like 'chrome:*') { $src = Join-Path $SrcDir ('mcp-claude-in-chrome-blob-' + $s[2].Substring(7) + '.jpg') }
+  # Captura ampliada (zoom) do Chrome sai em .png; screenshot comum, em .jpg.
+  if ($s[2] -like 'chrome:*') {
+    $src = Join-Path $SrcDir ('mcp-claude-in-chrome-blob-' + $s[2].Substring(7) + '.jpg')
+    if (-not (Test-Path $src)) { $src = [IO.Path]::ChangeExtension($src, '.png') }
+  }
   else { $src = Join-Path $SrcDir "$p$($s[2]).jpg" }
   if (-not (Test-Path $src)) { Write-Warning "Não achei $src"; continue }
   $outDir = Join-Path $OutRoot $s[0]; New-Item -ItemType Directory -Force $outDir | Out-Null

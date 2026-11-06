@@ -109,7 +109,7 @@ Clique em **Indicador de IE** e escolha a opção certa:
 
 Estes campos são opcionais, mas ajudam no dia a dia:
 
-- **Categoria de cliente:** um grupo de clientes, como Bronze, Prata e Ouro. Cada categoria pode ter uma **porcentagem de desconto**, cadastrada em **Clientes** → **Categoria de clientes**. No caixa, esse desconto segue a regra escolhida nas configurações do PDV (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)).
+- **Categoria de cliente:** um grupo de clientes, como Bronze, Prata e Ouro. Cada categoria pode ter uma **porcentagem de desconto**, cadastrada em **Clientes** → **Categoria de clientes** (veja [Como criar categorias de clientes](categorias-de-clientes.md)). No caixa, esse desconto segue a regra escolhida nas configurações do PDV (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)).
 - **+ Telefone adicional:** acrescenta mais um número (**Celular 2**). Para tirar, clique na lixeira ao lado.
 - **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão ver este cliente. Por padrão, vem marcada só a loja em que você está. Na janela, **Selecionar todas as lojas** marca todas.
 - **Observações do cliente:** anotações livres, com até 600 caracteres. Exemplo: "Prefere receber depois das 18h." A observação aparece na lista de clientes e no pedido de venda.
