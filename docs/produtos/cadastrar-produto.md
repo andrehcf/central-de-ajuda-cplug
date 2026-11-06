@@ -61,7 +61,7 @@ Se a categoria ainda não existir, clique em **+ Criar nova categoria**, que apa
 - **Nome:** o nome que vai aparecer na venda. Exemplo: Torta de Limão.
 - **Preço:** digite só os números. Para R$ 12,90, digite 1290.
 - **Unidade de medida:** vem como "Quantidade". Clique e escolha como o produto é vendido. Exemplo: "Unidade" para uma lata, "Kilograma" para algo vendido por peso.
-- **Código (SKU):** o sistema preenche sozinho a partir do nome. Exemplo: "Brownie (teste manual)" vira **brownie-teste-manual**. Pode trocar por um código seu, com até 30 caracteres.
+- **Código (SKU):** o sistema preenche sozinho a partir do nome. Exemplo: "Brownie de chocolate" vira **brownie-de-chocolate**. Pode trocar por um código seu, com até 30 caracteres.
 
 ![Formulário com Nome, Categoria, Preço, Unidade de medida e o botão Salvar destacados](../imagens/03.04/03-dados.png){ loading=lazy }
 

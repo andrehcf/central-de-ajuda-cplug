@@ -144,7 +144,7 @@ Use este caminho quando o atalho **Devolver NF-e** está apagado (nota avulsa, s
     - **Tipo de operação:** **Entrada** (devolução de venda) ou **Saída** (devolução de compra).
     - **Finalidade de emissão da NF-e:** **4 - Devolução de mercadoria**.
 5. Em **Itens**, coloque os mesmos produtos, quantidades e valores da nota original. Escolha o **CFOP de devolução**: na nota manual, ele vem **vazio**.
-6. Confira a **Situação do PIS** e a **Situação do COFINS**. O produto pode trazer um código de **saída**, como "49 - Outras Operações de Saída". Na devolução de venda, que é uma **entrada**, troque pelo código que o contador indicar. No teste, usamos "99 - Outras Operações".
+6. Confira a **Situação do PIS** e a **Situação do COFINS**. O produto pode trazer um código de **saída**, como "49 - Outras Operações de Saída". Na devolução de venda, que é uma **entrada**, troque pelo código que o contador indicar. Exemplo: "99 - Outras Operações".
 7. Em **Dados do pagamento**, escolha **90 - Sem pagamento** e deixe o valor em **0,00**.
 8. Clique em **Salvar** e depois transmita, como no último passo acima.
 
@@ -180,7 +180,7 @@ Use este caminho quando o atalho **Devolver NF-e** está apagado (nota avulsa, s
     Passe o mouse sobre o status **Falhou** para ver o motivo. Veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md).
 
 ??? question "Fui editar a devolução rejeitada e a chave referenciada sumiu"
-    No teste, ao abrir **Editar NF-e** (ou **Refazer NF-e**) de uma devolução, o campo **Chaves de acesso da NF-e referenciada** veio vazio. Cole a chave de novo antes de salvar e transmitir.
+    Ao abrir **Editar NF-e** (ou **Refazer NF-e**) de uma devolução, o campo **Chaves de acesso da NF-e referenciada** pode vir vazio. Cole a chave de novo antes de salvar e transmitir.
 
 **Relacionados:** [Como emitir uma NF-e de venda](emitir-nfe.md) · [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](cancelar-nota.md)
 

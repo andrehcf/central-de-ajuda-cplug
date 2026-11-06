@@ -26,7 +26,7 @@ Lançar uma compra à mão dá trabalho e abre espaço para erro: digitar produt
 
 ### O que a importação cria
 
-| Onde | O que aparece | Exemplo do teste |
+| Onde | O que aparece | Exemplo |
 | --- | --- | --- |
 | **Estoque → Fornecedores** | O fornecedor, com os dados da nota. | O emitente da nota. |
 | **Estoque → Compras** | Uma compra com status **Recebido**, os itens, o total e o próprio arquivo XML anexado. Na observação: "Compra gerada por importação de XML". | Compra #18, R$ 1.245,00. |
@@ -34,7 +34,7 @@ Lançar uma compra à mão dá trabalho e abre espaço para erro: digitar produt
 | **Finanças** | A **conta a pagar** ao fornecedor, com o vencimento e a conta bancária escolhidos, na categoria **Custo dos Produtos**. | 1 parcela de R$ 1.245,00, vencimento 29/11. |
 
 !!! note "A data da entrada é a data da nota"
-    No teste, a entrada no estoque ficou com a **data de emissão da nota** (28/05), e não com o dia em que ela foi importada. Relatórios por período mostram a mercadoria no mês da nota.
+    A entrada no estoque fica com a **data de emissão da nota**, e não com o dia em que ela foi importada. Relatórios por período mostram a mercadoria no mês da nota.
 
 ### Por que vincular em vez de criar
 

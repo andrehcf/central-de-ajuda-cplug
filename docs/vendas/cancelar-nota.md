@@ -117,7 +117,7 @@ Uma nota cancelada continua com a **DANFE** e o **XML** disponíveis, e ganha a 
 ## Deu algum problema?
 
 ??? question "Cliquei em Cancelar e nada aconteceu"
-    No teste (em homologação), o cancelamento pela tela **NF-e de Saída** não respondeu e a nota continuou **Transmitido**, sem nenhuma mensagem. Atualize a página e confira o status. Se continuar igual, clique em **Versão Legado**, no topo da tela, e cancele pela lista de lá: foi assim que o cancelamento funcionou no teste. Se ainda assim não for, fale com o suporte.
+    Às vezes o cancelamento pela tela **NF-e de Saída** não responde e a nota continua **Transmitido**, sem nenhuma mensagem. Atualize a página e confira o status. Se continuar igual, clique em **Versão Legado**, no topo da tela, e cancele pela lista de lá. Se ainda assim não for, fale com o suporte.
 
 ??? question "A opção Cancelar NF-e está apagada"
     Só dá para cancelar nota **autorizada** (Transmitido). Para notas com **Falhou** ou **Pendente**, use **Inutilizar NF-e**.

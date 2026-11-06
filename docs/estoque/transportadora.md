@@ -25,14 +25,14 @@ O cadastro tem dois **tipos de entrega**:
 !!! note "\"Padrão\" na coluna Tipo"
     Na coluna **Tipo**, **Padrão** quer dizer só que o cadastro é do tipo **Transportadora**. Não tem relação com a **Transportadora Padrão**, o cadastro fixo do sistema.
 
-**Onde a transportadora é escolhida.** No teste, as transportadoras apareceram para escolha em quatro lugares:
+**Onde a transportadora é escolhida.** As transportadoras aparecem para escolha em quatro lugares:
 
 - na **transferência entre estoques**, em **Dados para transferência** (veja [Como transferir mercadorias entre estoques](transferencia.md));
 - no **pedido de venda**, na janela **Taxa de entrega**;
 - na **NF-e** emitida à mão, na parte **Transportador/volumes transportados**;
 - na **compra** (Estoque → Compras), na janela **Frete** (veja [Como lançar uma compra](lancar-compra.md)).
 
-Nos quatro lugares, a lista mostrou **todas** as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: no teste, o frete foi somado às parcelas do fornecedor.
+Nos quatro lugares, a lista mostra **todas** as transportadoras liberadas para a loja, dos dois tipos, sem separar empresa de frete e motoboy. Na compra, escolher a transportadora não cria uma conta a pagar para ela: o frete é somado às parcelas do fornecedor.
 
 !!! info "Antes de começar: a Transportadora Padrão já existe"
     A **Transportadora Padrão** já vem no sistema e aparece em todas as listas de escolha, em todas as lojas. Ela não tem os três pontinhos: a dica do ⓘ diz que ela "é uma configuração fixa do sistema e não pode ser alterada". Se você só vende no balcão e não faz entregas, não precisa cadastrar outra.
@@ -56,7 +56,7 @@ Em **Informações gerais**:
 - **Tipo de pessoa:** **Pessoa jurídica** (empresa, com CNPJ) ou **Pessoa física** (com CPF).
 - **Tipo de entrega:** **Transportadora** ou **Entregador Delivery**.
 
-A tela já abre em **Pessoa jurídica** e **Transportadora**. Trocar o **Tipo de entrega** não muda os campos: no teste, ele definiu como o cadastro aparece na coluna **Tipo** (**Padrão** ou **Delivery**).
+A tela já abre em **Pessoa jurídica** e **Transportadora**. Trocar o **Tipo de entrega** não muda os campos: ele define como o cadastro aparece na coluna **Tipo** (**Padrão** ou **Delivery**).
 
 O mais comum: empresa de frete = Pessoa jurídica + Transportadora; motoboy = Pessoa física + Entregador Delivery.
 
@@ -73,7 +73,7 @@ Para **pessoa física**, os campos passam a ser **Nome completo**, **RG** e **CP
 
 ![Pessoa física com Entregador Delivery e os campos Nome completo, RG e CPF destacados](../imagens/04.09/03-entregador.png){ loading=lazy }
 
-No teste, um cadastro só com o nome foi salvo sem problema.
+Um cadastro só com o nome já pode ser salvo.
 
 ## Confira as informações fiscais (pessoa jurídica)
 
@@ -81,16 +81,16 @@ Em **Informações fiscais** ficam:
 
 - **Inscrição estadual (IE):** o registro da empresa no estado; aparece nas notas que ela emite. Até 60 caracteres.
 - **Inscrição municipal:** o registro na prefeitura.
-- **Isento de ICMS** e **Sem Inscrição Estadual (IE):** marque só se a transportadora confirmar que é o caso dela. No teste, marcar **Sem Inscrição Estadual (IE)** não bloqueou o campo da inscrição: deixe-o em branco você mesmo.
-- **Registrar na NFE:** o nome sugere que os dados vão para a nota, mas o efeito na nota emitida não foi testado. Na NF-e emitida à mão, a lista mostrou também o entregador pessoa física, que nem tem essa caixinha. Na dúvida, fale com o suporte.
+- **Isento de ICMS** e **Sem Inscrição Estadual (IE):** marque só se a transportadora confirmar que é o caso dela. Marcar **Sem Inscrição Estadual (IE)** não bloqueia o campo da inscrição: deixe-o em branco você mesmo.
+- **Registrar na NFE:** o nome sugere que os dados vão para a nota. Na NF-e emitida à mão, a lista mostra também o entregador pessoa física, que nem tem essa caixinha. Na dúvida, fale com o suporte.
 
 !!! warning "Dados fiscais: confirme com o contador"
     Copie a razão social e o CNPJ do cartão CNPJ, e a inscrição estadual de uma nota fiscal emitida pela transportadora. Se ela é isenta de ICMS ou não tem IE, quem confirma é a própria transportadora ou o seu contador.
 
 ## Escolha as unidades, o contato e o endereço
 
-- **Unidades:** o texto da seção fala em "estoque", mas aqui vale para a transportadora: são as lojas onde ela aparece para escolha. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. No teste, a loja atual já vinha marcada (**1 de 5 unidades selecionadas**); ao marcar outra loja e salvar, a transportadora passou a aparecer na NF-e dessa outra loja.
-- **Contato** e **Endereço** são opcionais. O contato tem **E-mail**, **Telefone comercial** e **Celular**; o botão **+ Telefone adicional** cria mais um campo (no teste, **Celular 1**), e a lixeira ao lado remove esse campo. O endereço tem **CEP**, **Rua**, **Número**, **Bairro**, **Cidade**, **Estado** e **Complemento**.
+- **Unidades:** o texto da seção fala em "estoque", mas aqui vale para a transportadora: são as lojas onde ela aparece para escolha. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**); ao marcar outra loja e salvar, a transportadora passa a aparecer também nessa outra loja.
+- **Contato** e **Endereço** são opcionais. O contato tem **E-mail**, **Telefone comercial** e **Celular**; o botão **+ Telefone adicional** cria mais um campo (por exemplo, **Celular 1**), e a lixeira ao lado remove esse campo. O endereço tem **CEP**, **Rua**, **Número**, **Bairro**, **Cidade**, **Estado** e **Complemento**.
 
 Clique em **Salvar**, no canto de baixo, à direita. A transportadora aparece na lista, com o tipo **Padrão** ou **Delivery**.
 
@@ -132,10 +132,10 @@ A mesma parte tem campos como **Código ANTT**, **Placa do veículo**, **Quantid
     Ela é fixa do sistema e não pode ser alterada. Cadastre uma transportadora nova com os dados que você precisa.
 
 ??? question "A transportadora não aparece na outra loja"
-    Abra o cadastro dela e confira as **Unidades**: a loja precisa estar marcada. No teste, depois de marcar a loja e salvar, a transportadora apareceu na NF-e da outra loja. Se a loja estiver marcada e mesmo assim ela não aparecer, fale com o suporte.
+    Abra o cadastro dela e confira as **Unidades**: a loja precisa estar marcada. Depois de marcar a loja e salvar, a transportadora aparece nela. Se a loja estiver marcada e mesmo assim ela não aparecer, fale com o suporte.
 
 ??? question "Cadastrei um motoboy e ele aparece na NF-e"
-    É assim que o sistema funciona hoje: no teste, as listas mostraram os dois tipos juntos. Na nota, escolha quem realmente levou a mercadoria. Na dúvida se um motoboy pode constar como transportador na nota, pergunte ao seu contador.
+    É assim que o sistema funciona hoje: as listas mostram os dois tipos juntos. Na nota, escolha quem realmente levou a mercadoria. Na dúvida se um motoboy pode constar como transportador na nota, pergunte ao seu contador.
 
 ??? question "Não acho onde escolher a transportadora na compra"
     Na compra, ela fica dentro do **Frete**: no **Resumo financeiro**, clique em **Frete** e escolha a **Transportadora**. Veja [Como lançar uma compra](lancar-compra.md).

@@ -39,7 +39,7 @@ No sistema, "conta bancária" é qualquer **lugar onde o dinheiro fica**: não s
 | **Ver Histórico** | O **extrato**: o **saldo de cada dia** e os lançamentos, com vencimento, data de pagamento/recebimento, tipo e usuário. |
 | **Ver Transações** | O **Registro de Movimentações**: a "auditoria" da conta. Mostra cada lançamento criado, e também alterações de valor ou data, cancelamentos e restaurações. |
 
-No teste, a conta nova "Banco do Brasil - Conta da loja" mostrou nas duas telas a linha **Saldo Inicial da Conta**, do tipo **Nova**, com R$ 1.500,00.
+Exemplo: a conta nova "Banco do Brasil - Conta da loja" mostrou nas duas telas a linha **Saldo Inicial da Conta**, do tipo **Nova**, com R$ 1.500,00.
 
 !!! info "O sistema já vem com duas contas"
     Toda loja começa com a **Conta Padrão** e a **Conta PDV Padrão** (a do caixa). Nenhuma das duas é de banco. Cadastre as contas reais da empresa, uma para cada banco.

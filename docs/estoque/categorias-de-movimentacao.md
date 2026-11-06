@@ -25,7 +25,7 @@ Cada categoria tem um **tipo**, que define em que lançamento ela aparece:
 | **Saída** | Só em Registrar saída | Consumo Interno, Perda, Reposição, Venda |
 | **Todos** | Nas duas | Ajustes de Estoque, Devolução, Produção, Transferência de Estoque |
 
-**Categorias do sistema × criadas por você:** as do sistema não podem ser alteradas (não têm os três pontinhos). As que você cria têm os três pontinhos, com **Editar**, **Duplicar** e **Excluir**. Na empresa de teste, por exemplo, havia uma categoria própria chamada **Transferência de Consignado**, ao lado das do sistema.
+**Categorias do sistema × criadas por você:** as do sistema não podem ser alteradas (não têm os três pontinhos). As que você cria têm os três pontinhos, com **Editar**, **Duplicar** e **Excluir**. Exemplo: uma categoria própria chamada **Transferência de Consignado** aparece ao lado das do sistema.
 
 Uma observação sobre nomes: a categoria **Transferência de Estoque** aparece no histórico dos produtos só como **Transferência**. É ela que o sistema usa sozinho quando você faz uma [transferência entre estoques](transferencia.md).
 
@@ -49,7 +49,7 @@ Na janela **Nova categoria de movimentação**:
 
 - **Nome:** o motivo, com até 60 caracteres. Exemplo: "Degustação".
 - **Tipo:** **Entrada**, **Saída** ou **Todos**. Degustação é algo que **sai** do estoque, então: **Saída**.
-- **Seleção de unidades:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão usar a categoria. No teste, a janela já mostrava **1 de 5 unidades selecionadas**.
+- **Seleção de unidades:** se a empresa tem mais de uma loja, clique em **Selecionar unidades** e marque as lojas que vão usar a categoria. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**).
 
 Clique em **Salvar**.
 
@@ -65,10 +65,10 @@ A categoria entra na lista com o **próximo código** (no exemplo, **012**), em 
 
 Ao registrar uma **saída** de estoque, a nova categoria já aparece na lista de **Categoria de movimentação**. A lista tem um campo **Buscar** para achar mais rápido.
 
-Como ela é do tipo **Saída**, não aparece ao registrar uma entrada: no teste, a lista da entrada mostrou só as categorias de entrada e as do tipo Todos.
+Como ela é do tipo **Saída**, não aparece ao registrar uma entrada: a lista da entrada mostra só as categorias de entrada e as do tipo Todos.
 
 !!! warning "A categoria já vem preenchida"
-    No teste, tanto na entrada quanto na saída, o campo já veio com **Ajustes de Estoque**. Confira e troque pela categoria certa antes de salvar: é ela que vai contar a história do lançamento.
+    Tanto na entrada quanto na saída, o campo já vem com **Ajustes de Estoque**. Confira e troque pela categoria certa antes de salvar: é ela que vai contar a história do lançamento.
 
 ![Registrar movimentação com Saída de estoque e a categoria Degustação na lista destacadas](../imagens/04.10/04-na-saida.png){ loading=lazy }
 

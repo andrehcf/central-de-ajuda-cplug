@@ -27,7 +27,7 @@ A importação é o jeito mais rápido de colocar o cardápio ou o catálogo int
 **O que a importação já faz por você:**
 
 - Cria os produtos com nome, categoria, preço e unidade.
-- Lança o **Estoque inicial** no estoque. No teste, as quantidades 24, 30 e 24 apareceram na lista de produtos como "24 em estoque", "30 em estoque" e "24 em estoque".
+- Lança o **Estoque inicial** no estoque. Exemplo: as quantidades 24, 30 e 24 aparecem na lista de produtos como "24 em estoque", "30 em estoque" e "24 em estoque".
 - Coloca os produtos na **Lista Padrão** de preços.
 - Grava os dados fiscais que estiverem na planilha, como **NCM**, **Origem** e **CFOP**.
 

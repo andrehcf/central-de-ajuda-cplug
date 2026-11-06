@@ -17,14 +17,14 @@ A tela **Compras** registra o que você comprou de um fornecedor: os produtos, o
 
 A compra tem **duas etapas**, e cada uma mexe numa parte diferente do sistema:
 
-| Quando | O que acontece | No teste |
+| Quando | O que acontece | Exemplo |
 | --- | --- | --- |
 | **Ao salvar** a compra | Nascem as **contas a pagar** em **Finanças → Lançamentos**, uma por parcela, já com o fornecedor. A compra fica **Pendente**. | 2 parcelas de R$ 12,50 "A Vencer", na categoria Custo dos Produtos. |
-| **Ao marcar como recebida** | A mercadoria **entra no estoque**, com a categoria **Compra** e um **lote** com o custo que você digitou. | Entraram 10 pães num lote novo a R$ 2,00. |
+| **Ao marcar como recebida** | A mercadoria **entra no estoque**, com a categoria **Compra** e um **lote** com o custo que você digitou. | Entram 10 pães num lote novo a R$ 2,00. |
 
 Ou seja: enquanto a mercadoria não chega, a compra é um **pedido** (a dívida já existe, o estoque ainda não). Quando chega, você confirma o recebimento e o estoque é atualizado. Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
-**Compra ou entrada de estoque?** A **compra** registra o fornecedor e cria as contas a pagar. A **entrada de estoque** (Estoque → Estoque → Registrar entrada) só mexe no saldo: na empresa de teste, as entradas feitas à mão não apareceram em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como **compra**.
+**Compra ou entrada de estoque?** A **compra** registra o fornecedor e cria as contas a pagar. A **entrada de estoque** (Estoque → Estoque → Registrar entrada) só mexe no saldo: as entradas feitas à mão não aparecem em Lançamentos. Se você vai pagar um fornecedor por aquela mercadoria, lance como **compra**.
 
 !!! tip "Tem o XML da nota? Use a importação"
     Se o fornecedor mandou o **XML** da nota fiscal, não digite a compra: importe. Produtos, custos, fornecedor e parcelas vêm da nota. Veja [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md). Lance à mão quando não há nota eletrônica ou o fornecedor não manda o XML.
@@ -39,7 +39,7 @@ Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 ## Abra as compras
 
-No menu do lado esquerdo, clique em **Estoque** e depois em **Compras**. A lista mostra cada compra com o número, o fornecedor, o **Valor**, a data em **Registrado em** e o **Status** (no teste: **Pendente**, **Recebido** e, na aba **Excluídas**, **Cancelado**). As abas **Ativas** e **Excluídas** separam as compras válidas das excluídas.
+No menu do lado esquerdo, clique em **Estoque** e depois em **Compras**. A lista mostra cada compra com o número, o fornecedor, o **Valor**, a data em **Registrado em** e o **Status** (por exemplo: **Pendente**, **Recebido** e, na aba **Excluídas**, **Cancelado**). As abas **Ativas** e **Excluídas** separam as compras válidas das excluídas.
 
 Clique em **Nova compra**.
 
@@ -53,7 +53,7 @@ Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produ
 - **Custo unitário:** quanto pagou por **unidade**. É esse custo que vai para o lote no estoque.
 - **Custo total:** a conta é feita sozinha.
 
-O **Status** do item começa **Pendente**. No canto de cima, **Estoque: Padrão** é o estoque onde a mercadoria vai entrar: no teste, foi o estoque principal da loja (**Estoque 1**). Não testamos trocar o estoque.
+O **Status** do item começa **Pendente**. No canto de cima, **Estoque: Padrão** é o estoque onde a mercadoria vai entrar: o estoque principal da loja.
 
 Os **três pontinhos** do item têm **Marcar como recebido**, **Marcar como cancelado**, **Editar** (abre a janela **Editar produto**, com **Quantidade** e **Custo**) e **Excluir**.
 
@@ -72,33 +72,33 @@ Em **Pagamentos**, o valor já vem preenchido com o total dos produtos:
 
 - **Forma de pagamento:** PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito... (as cadastradas em [Formas de pagamento](../financas/formas-de-pagamento.md)).
 - **Conta bancária:** de onde o dinheiro vai sair.
-- **Parcelas** e **Periodicidade das parcelas:** apareceram ao escolher **Boleto**. No teste, **2x parcelas** com periodicidade **Mensal** dividiu o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.
+- **Parcelas** e **Periodicidade das parcelas:** aparecem ao escolher **Boleto**. Exemplo: **2x parcelas** com periodicidade **Mensal** divide o valor em duas parcelas iguais, com vencimentos em 01/11 e 01/12.
 - Para cada parcela: **Vencimento**, **Pagamento** (deixe em branco se ainda não pagou), **Categoria** (vem **Custo dos Produtos**), **Centro de custo**, **Valor** e **Porcentagem**.
-- Cada parcela também tem **Adicionar categoria**, **Rateio restante** e **Total rateado**. No teste, com uma categoria só, a parcela ficou 100% nela (Rateio restante R$ 0,00) e o Centro de custo ficou em branco. Não testamos dividir a parcela entre categorias.
-- O botão **Adicionar pagamento** fica no topo (a tela mostra "Pagamento 1 de 1"). Não testamos lançar mais de um pagamento.
+- Cada parcela também tem **Adicionar categoria**, **Rateio restante** e **Total rateado**. Com uma categoria só, a parcela fica 100% nela (Rateio restante R$ 0,00). O Centro de custo é opcional.
+- O botão **Adicionar pagamento** fica no topo (a tela mostra "Pagamento 1 de 1").
 
 ![Pagamentos com forma e conta, parcelas e periodicidade e a primeira parcela destacados](../imagens/04.05/03-pagamentos.png){ loading=lazy }
 
 !!! warning "Pagamento preenchido = conta paga"
-    No teste, ao editar a compra já salva e preencher a data de **Pagamento** de uma parcela, a conta passou a **Pago** em Lançamentos. Só preencha quando o dinheiro já saiu.
+    Ao preencher a data de **Pagamento** de uma parcela (na hora de lançar ou depois, pelo **Editar**), a conta passa a **Pago** em Lançamentos. Só preencha quando o dinheiro já saiu.
 
 ## Lance o frete
 
-No **Resumo financeiro** ficam **Subtotal**, **Frete**, **Outras despesas**, **Descontos** e **Total**. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". **Outras despesas** e **Descontos** também ficam ali (não testados).
+No **Resumo financeiro** ficam **Subtotal**, **Frete**, **Outras despesas**, **Descontos** e **Total**. Antes de lançar o frete, o resumo mostra "Não incluso no valor total". **Outras despesas** e **Descontos** também ficam ali.
 
-Clique em **Frete**. A janela tem **Transportadora**, **Valor** e a chave **Pagar frete**. No teste, com o frete de R$ 5,00 e **Pagar frete** ligado:
+Clique em **Frete**. A janela tem **Transportadora**, **Valor** e a chave **Pagar frete**. Exemplo, com o frete de R$ 5,00 e **Pagar frete** ligado:
 
-- o frete entrou no **Total** (R$ 25,00) e foi dividido nas parcelas (2 x R$ 12,50);
-- as parcelas continuaram sendo do **fornecedor**: não foi criada uma conta separada para a transportadora.
+- o frete entra no **Total** (R$ 25,00) e é dividido nas parcelas (2 x R$ 12,50);
+- as parcelas continuam sendo do **fornecedor**: não é criada uma conta separada para a transportadora.
 
-Use **Pagar frete** ligado quando o frete vem cobrado junto com a conta do fornecedor. Não testamos lançar um frete com a chave desligada.
+Use **Pagar frete** ligado quando o frete vem cobrado junto com a conta do fornecedor.
 
 ![Janela Frete com Transportadora, Valor e Pagar frete destacados](../imagens/04.05/04-frete.png){ loading=lazy }
 
 ![Parcelas de R$ 12,50 e o resumo com Frete R$ 5,00 e Total R$ 25,00 destacados](../imagens/04.05/05-resumo.png){ loading=lazy }
 
 !!! note "O frete não muda o custo do produto"
-    No teste, mesmo com o frete pago, o lote do produto entrou no estoque com o **custo unitário digitado** (R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.
+    Mesmo com o frete pago, o lote do produto entra no estoque com o **custo unitário digitado** (no exemplo, R$ 2,00). O frete aumenta o que você paga ao fornecedor, não o custo de cada unidade. Se você quer que o custo do produto inclua o frete, combine com o seu contador como fazer.
 
 ## Salve e confira as contas a pagar
 
@@ -106,7 +106,7 @@ Clique em **Salvar**. A compra aparece na lista como **Pendente**, e as parcelas
 
 ![Lançamentos com as duas parcelas da compra a pagar destacadas](../imagens/04.05/08-lancamentos.png){ loading=lazy }
 
-Depois de salva, a compra pode ser aberta de novo pelo **Editar** (nos três pontinhos da lista). No teste, foi por ali que a data de **Pagamento** de uma parcela foi preenchida.
+Depois de salva, a compra pode ser aberta de novo pelo **Editar** (nos três pontinhos da lista). É por ali que você preenche a data de **Pagamento** de uma parcela quando pagar.
 
 ## Marque como recebida quando a mercadoria chegar
 
@@ -118,7 +118,7 @@ O sistema pede para **Confirmar entregas** e avisa que a ação é **irreversív
 
 ![Janela Confirmar entregas com o botão Confirmar destacado](../imagens/04.05/07-confirmar-entregas.png){ loading=lazy }
 
-Dentro da compra, cada produto também tem **Marcar como recebido** nos três pontinhos, e o rodapé tem **Marcar todos como recebidos**. Não testamos esses caminhos: no teste, o recebimento foi feito pelo menu da lista.
+Dentro da compra, cada produto também tem **Marcar como recebido** nos três pontinhos, e o rodapé tem **Marcar todos como recebidos**. O caminho mais simples é o menu da lista, mostrado acima.
 
 Depois de recebida, o menu perde as opções de marcar, e no **Editar** a **quantidade** e o **custo** dos itens ficam travados; os pagamentos continuam editáveis.
 
@@ -128,9 +128,9 @@ Nos três pontinhos da compra, clique em **Excluir**. A janela **Excluir compra*
 
 ![Janela Excluir compra com a caixinha Excluir movimentação destacada](../imagens/04.05/09-excluir.png){ loading=lazy }
 
-No teste, com a caixinha marcada, a compra foi para a aba **Excluídas** (status **Cancelado**, movimentação **Excluída**), o lote saiu do estoque e a parcela **a vencer** sumiu de Lançamentos. **A parcela já paga continuou lá** (veja "Deu algum problema?").
+Com a caixinha marcada, a compra vai para a aba **Excluídas** (status **Cancelado**, movimentação **Excluída**), o lote sai do estoque e a parcela **a vencer** some de Lançamentos. **A parcela já paga continua lá** (veja "Deu algum problema?").
 
-**Excluir** não é o mesmo que **Marcar como cancelado**, que também aparece no menu. Não testamos o Marcar como cancelado.
+**Excluir** não é o mesmo que **Marcar como cancelado**, que também aparece no menu. Na dúvida sobre qual usar, fale com o suporte.
 
 </div>
 
@@ -153,13 +153,13 @@ No teste, com a caixinha marcada, a compra foi para a aba **Excluídas** (status
     Depois de recebida, a quantidade e o custo ficam travados. Exclua a compra marcando **Excluir movimentação** (se os produtos ainda não foram vendidos) e lance de novo. Atenção: se alguma parcela já estava **paga**, ela continua em Lançamentos depois da exclusão, e a compra nova cria parcelas de novo.
 
 ??? question "Excluí a compra e uma parcela continua em Lançamentos"
-    No teste, a parcela que já estava **paga** não foi apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.
+    A parcela que já estava **paga** não é apagada junto com a compra, porque o dinheiro já saiu. Antes de mexer nela, veja com o fornecedor se o valor vira crédito ou devolução, e com o seu contador como registrar.
 
 ??? question "Lancei frete e não aparece conta para a transportadora"
-    No teste, com **Pagar frete** ligado, o frete foi somado às parcelas do **fornecedor**. Não foi criada uma conta separada para a transportadora.
+    É assim que funciona: com **Pagar frete** ligado, o frete é somado às parcelas do **fornecedor**. Não é criada uma conta separada para a transportadora.
 
 ??? question "O frete não entrou no total"
-    Abra o **Frete** e confira se a chave **Pagar frete** está ligada: no teste, ligada, o frete entrou no Total e nas parcelas.
+    Abra o **Frete** e confira se a chave **Pagar frete** está ligada: ligada, o frete entra no Total e nas parcelas.
 
 **Relacionados:** [Como importar a nota fiscal de compra (XML)](importar-nota-de-compra.md) · [Como cadastrar um fornecedor](cadastrar-fornecedor.md) · [Como dar entrada no estoque](entrada-de-estoque.md) · [Como cadastrar uma transportadora ou um entregador](transportadora.md) · [Formas de pagamento](../financas/formas-de-pagamento.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md)
 

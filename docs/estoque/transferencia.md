@@ -17,7 +17,7 @@ A **transferência** leva mercadoria de um estoque para outro: do depósito para
 
 Uma empresa pode ter **vários estoques**. Cada um tem o seu próprio saldo, e a transferência é o jeito certo de mover mercadoria entre eles.
 
-**Por que não lançar uma saída e uma entrada?** Porque a transferência faz as duas coisas **ligadas** e **leva o custo junto**. No teste, ao transferir 10 pães do Estoque 1 para o Estoque Cozinha:
+**Por que não lançar uma saída e uma entrada?** Porque a transferência faz as duas coisas **ligadas** e **leva o custo junto**. Exemplo: ao transferir 10 pães do Estoque 1 para o Estoque Cozinha:
 
 - no Estoque 1 saíram 10 pães do lote mais antigo, a **R$ 1,20** cada;
 - no Estoque Cozinha entraram 10 pães, num **lote novo com o mesmo custo de R$ 1,20**.
@@ -50,19 +50,19 @@ Clique em **Nova transferência**.
 
 Em **Informações básicas**:
 
-- **Estoque de saída:** de onde a mercadoria sai. No teste, veio preenchido com o **Estoque 1**, o estoque principal.
+- **Estoque de saída:** de onde a mercadoria sai. Vem preenchido com o estoque principal (no exemplo, **Estoque 1**).
 - **Estoque de entrada:** para onde ela vai.
 - **Data da operação:** vem com a data de hoje.
 
 Em **Produtos**, clique em **Pesquisar**, digite parte do nome e clique no produto. Na linha, a coluna **Saldo** mostra quanto há no estoque de saída. Digite a **Quantidade** que vai ser transferida.
 
-A linha tem também a coluna **Lote** e os três pontinhos, como na saída de estoque. No teste, sem escolher lote, os pães saíram do lote mais antigo.
+A linha tem também a coluna **Lote** e os três pontinhos, como na saída de estoque. Sem escolher lote, a mercadoria sai do lote mais antigo.
 
 ## Preencha os dados da transferência
 
 Em **Dados para transferência**:
 
-- **Transportadora:** quem vai levar, se for o caso (as transportadoras ficam em **Estoque → Transportadoras**). É opcional: no teste, ficou em branco.
+- **Transportadora:** quem vai levar, se for o caso (as transportadoras ficam em **Estoque → Transportadoras**). É opcional: pode ficar em branco.
 - **Nome do responsável:** quem está fazendo a transferência. Aparece na lista.
 - **Observação:** um comentário, com até 120 caracteres. Exemplo: "Reposição da cozinha".
 
@@ -99,7 +99,7 @@ Nos **três pontinhos** da transferência ficam:
     Confira se ele existe em **Estoque → Estoque**. Se existir, abra o cadastro dele e veja o campo **Unidades**: ele precisa estar liberado para a loja em que você está.
 
 ??? question "Transferi errado (produto, quantidade ou estoque)"
-    Nos três pontinhos da transferência, clique em **Excluir** e confirme. O sistema avisa que a operação não pode ser desfeita. No teste, a transferência foi para a aba **Canceladas** e o saldo voltou para o estoque de saída. Depois, faça a transferência certa.
+    Nos três pontinhos da transferência, clique em **Excluir** e confirme. O sistema avisa que a operação não pode ser desfeita. A transferência vai para a aba **Canceladas** e o saldo volta para o estoque de saída. Depois, faça a transferência certa.
 
 ??? question "Fiz uma saída e uma entrada em vez de transferir"
     Funciona para o saldo, mas a entrada fica com o custo que você digitou. Se o custo ficou errado, exclua os dois lançamentos no histórico de cada produto e faça uma transferência. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).

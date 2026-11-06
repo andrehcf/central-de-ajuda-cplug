@@ -45,7 +45,7 @@ O sistema não mistura os dois: cada lote guarda o seu custo.
 
 Quando sai mercadoria, o sistema tira **primeiro do lote mais antigo**. Esse método se chama **PEPS**: o primeiro que entra é o primeiro que sai.
 
-No teste, uma saída de 97 pães levou os **95** que restavam do lote 714 (a R$ 1,20) e **2** do lote 722 (a R$ 2,00). O custo dessa saída foi **R$ 118,00**. Você vê essa conta clicando em **Composição**, no histórico do produto:
+Exemplo: uma saída de 97 pães levou os **95** que restavam do lote 714 (a R$ 1,20) e **2** do lote 722 (a R$ 2,00). O custo dessa saída foi **R$ 118,00**. Você vê essa conta clicando em **Composição**, no histórico do produto:
 
 ![Registro de composição de saída: 95 unidades do lote 714 a R$ 1,20 e 2 do lote 722 a R$ 2,00, total R$ 118,00, destacados](../imagens/04.01/06-composicao-saida.png){ loading=lazy }
 
@@ -148,13 +148,13 @@ No **Balanço**, os três pontinhos de cada produto também têm **Registrar ent
 ??? question "Lancei a quantidade ou o custo errado"
     No **Balanço**, clique nos três pontinhos do produto e em **Movimentações**. Na linha do lançamento errado, clique na **lixeira** e confirme em **Excluir**. Depois, lance de novo do jeito certo.
 
-    O que acontece ao excluir (testado):
+    O que acontece ao excluir:
 
     - O lançamento **sai do saldo** e passa para a aba **Canceladas**, que fica ao lado de **Fechadas**. Ele não volta a contar no estoque.
     - Excluir uma **saída** devolve as quantidades aos lotes de onde ela tirou.
     - Excluir uma **entrada** tira o custo dela do **custo médio** e do **Histórico de custo**.
 
-    Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Foi nessa ordem que o teste funcionou. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
+    Se a entrada errada já teve saídas, exclua primeiro a saída e depois a entrada. Veja [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md).
 
 ??? question "Quero tirar mercadoria (perda, quebra, consumo)"
     Use **Registrar saída**, no mesmo menu do estoque, e escolha a categoria que explica o motivo: **Perda**, **Consumo Interno**... A saída não pede custo: ele vem dos lotes.

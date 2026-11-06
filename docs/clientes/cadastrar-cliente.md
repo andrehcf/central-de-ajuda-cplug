@@ -30,7 +30,7 @@ O **Indicador de IE** é o campo que mais gera nota recusada. Ele diz à Sefaz s
 - Empresa com Inscrição Estadual: **1 - Contribuinte ICMS**, com a IE preenchida.
 
 !!! note "Por que cadastrar antes de emitir a NF-e"
-    No teste, preencher uma pessoa física direto na tela da NF-e, sem cliente cadastrado, fez a nota sair como **contribuinte** e ser recusada (Rejeição 728). Escolhendo o cliente cadastrado, a indicação veio certa. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
+    Preencher uma pessoa física direto na tela da NF-e, sem cliente cadastrado, pode fazer a nota sair como **contribuinte** e ser recusada (Rejeição 728). Escolhendo o cliente cadastrado, a indicação vem certa. Veja [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md).
 
 !!! warning "Vai emitir nota fiscal (NF-e) para este cliente?"
     Preencha **todos** estes dados, senão a nota não é autorizada:
@@ -141,7 +141,7 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 
     A lista mostra também quantas **Vendas** cada cliente já teve. Se o cliente tem observação, aparece um **balão** ao lado do nome: passe o mouse sobre ele para ler.
 
-    ![Cliente Teste Manual na lista com o balão de observação destacado](../imagens/02.01/07-observacao-na-lista.png){ loading=lazy }
+    ![Cliente na lista com o balão de observação destacado](../imagens/02.01/07-observacao-na-lista.png){ loading=lazy }
 
     Ao escolher o cliente num pedido de venda, a observação aparece no quadro **Cliente**:
 

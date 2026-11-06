@@ -32,7 +32,7 @@ O inventário não "apaga e reescreve" o saldo. Ele cria **movimentações** da 
 | | **Atualizar custo desmarcado** | **Atualizar custo marcado** |
 | --- | --- | --- |
 | **O que é lançado** | Só a **diferença**. | Uma **saída de todo o saldo** antigo e uma **entrada da quantidade contada**. |
-| **Exemplo testado** | Hambúrguer: saldo 100, contado 99 → **saída de 1**, tirada do lote mais antigo (R$ 4,50). O custo digitado (R$ 9,99) foi **ignorado**. | Pão: saldo 95, contado 97 → **saída de 95** e **entrada de 97 a R$ 1,50**. |
+| **Exemplo** | Hambúrguer: saldo 100, contado 99 → **saída de 1**, tirada do lote mais antigo (R$ 4,50). O custo digitado (R$ 9,99) foi **ignorado**. | Pão: saldo 95, contado 97 → **saída de 95** e **entrada de 97 a R$ 1,50**. |
 | **Lotes e custo** | Continuam os mesmos lotes, com os custos de antes. | Os lotes antigos são zerados; fica **um lote novo** com o custo informado. |
 | **Quando usar** | No inventário do dia a dia. | Quando o custo cadastrado está errado ou desatualizado e você quer recomeçar o produto com o custo certo. |
 
@@ -41,7 +41,7 @@ Para entender lotes e custo médio, veja [Como dar entrada no estoque](entrada-d
 ![Histórico do Pão depois do inventário com Atualizar custo: saída 724 de 95 unidades e entrada 725 de 97 unidades a R$ 1,50 destacadas](../imagens/04.02/11-efeito-atualizar-custo.png){ loading=lazy }
 
 !!! danger "O inventário só ajusta produtos que já tiveram movimentação"
-    No teste, a **Água Mineral** (que nunca teve entrada) foi contada com **12**, o inventário foi finalizado **sem nenhum aviso**, e o saldo **continuou 0**. Antes do primeiro inventário, dê a **entrada inicial** dos produtos: veja [Como dar entrada no estoque](entrada-de-estoque.md).
+    Exemplo: uma **Água Mineral** que nunca teve entrada, contada com **12**, deixa o inventário ser finalizado **sem nenhum aviso**, e o saldo **continua 0**. Antes do primeiro inventário, dê a **entrada inicial** dos produtos: veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
 Neste exemplo contamos o **Pão de hambúrguer**: o sistema dizia 100, mas na prateleira havia 95.
 

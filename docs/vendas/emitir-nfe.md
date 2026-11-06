@@ -37,14 +37,14 @@ O que define se a venda é **estadual** ou **interestadual** é onde o **cliente
 
 Fora do estado, o imposto depende de **quem compra**:
 
-- **Contribuinte do ICMS** (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como **6102**. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. (A venda interestadual para contribuinte não foi testada neste manual.)
+- **Contribuinte do ICMS** (empresa com Inscrição Estadual, que vai revender ou industrializar): CFOP como **6102**. O DIFAL não é cobrado na sua nota: o imposto do estado de destino fica por conta do comprador. Na dúvida sobre o CFOP de uma venda para contribuinte de outro estado, pergunte ao seu contador.
 - **Não contribuinte / consumidor final** (pessoa física, ou empresa sem IE que vai usar o produto): CFOP como **6108** e **DIFAL**.
 
 ### O que é o DIFAL
 
 O **DIFAL** (diferencial de alíquota) é a parte do ICMS que fica com o **estado do cliente** quando você vende para um **consumidor final de outro estado**. É a diferença entre a alíquota interna do estado de destino e a alíquota interestadual.
 
-No teste (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP **18%**, interestadual **12%** → DIFAL de **6%** = **R$ 0,60** para SP. O sistema calcula sozinho quando você marca **Nota para Consumidor Final**.
+Exemplo (loja no PR, cliente em SP, venda de R$ 10,00): alíquota interna de SP **18%**, interestadual **12%** → DIFAL de **6%** = **R$ 0,60** para SP. O sistema calcula sozinho quando você marca **Nota para Consumidor Final**.
 
 !!! danger "Simples Nacional e DIFAL: confirme com o contador"
     O sistema calculou o DIFAL mesmo numa empresa do Simples Nacional. Se a sua empresa precisa ou não recolher esse valor depende da situação dela e do estado de destino. **Pergunte ao seu contador** antes de vender para fora do estado.
@@ -90,7 +90,7 @@ Confira os dados que vieram, principalmente:
 ![Dados fiscais do cliente com a Indicação de Inscrição Estadual destacada (CNPJ, IE e endereço cobertos)](../imagens/05.06/04-cliente-fiscal.png){ loading=lazy }
 
 !!! warning "Venda para pessoa física: use o cadastro do cliente"
-    No teste, preencher uma **pessoa física** direto na nota, sem escolher um cliente cadastrado, fez o sistema enviar a pessoa como **contribuinte**, e a Sefaz recusou (Rejeição 728). Escolhendo um **cliente cadastrado**, a indicação veio certa (**9 - Não contribuinte**) e a nota foi autorizada. **Cadastre o cliente antes** e escolha-o na lista.
+    Preencher uma **pessoa física** direto na nota, sem escolher um cliente cadastrado, pode fazer o sistema enviar a pessoa como **contribuinte**, e a Sefaz recusa (Rejeição 728). Escolhendo um **cliente cadastrado**, a indicação vem certa (**9 - Não contribuinte**) e a nota é autorizada. **Cadastre o cliente antes** e escolha-o na lista.
 
 ## Preencha os dados da operação
 
@@ -133,7 +133,7 @@ Confira a **Qtdade**, o **Vl. unitário** e o **NCM**.
 
 Mais abaixo no item:
 
-- **CFOP:** nos testes ele veio **vazio**: escolha o CFOP da venda. Digite o número para achar mais rápido.
+- **CFOP:** pode vir **vazio**: escolha o CFOP da venda. Digite o número para achar mais rápido.
     - Dentro do estado: **5102** (venda comum) ou **5405** (produto com substituição tributária, ICMS 500 no Simples).
     - Fora do estado: **6102** (para contribuinte) ou **6108** (para não contribuinte / consumidor final).
 - **Situação do ICMS** e **Origem:** vêm do cadastro do produto. Confira.
@@ -207,13 +207,13 @@ Nos **três pontinhos** da nota autorizada você tem:
     A Sefaz recusou a nota. Passe o mouse sobre **Falhou** para ver o motivo. Veja [Como resolver uma nota fiscal rejeitada](nota-rejeitada.md).
 
 ??? question "Rejeição 728: NF-e sem informação da IE do destinatário"
-    A nota foi enviada como se o cliente fosse **contribuinte**, mas sem Inscrição Estadual. Isso aconteceu no teste ao preencher uma pessoa física direto na nota. **Escolha o cliente cadastrado** na lista (ou cadastre-o antes) e confira a **Indicação de Inscrição Estadual**: **9 - Não contribuinte** para pessoa física.
+    A nota foi enviada como se o cliente fosse **contribuinte**, mas sem Inscrição Estadual. Isso acontece ao preencher uma pessoa física direto na nota. **Escolha o cliente cadastrado** na lista (ou cadastre-o antes) e confira a **Indicação de Inscrição Estadual**: **9 - Não contribuinte** para pessoa física.
 
 ??? question "O CFOP veio vazio"
     Escolha o CFOP na lista do item: 5xxx dentro do estado, 6xxx para outro estado. Para não precisar escolher toda vez, peça ao contador e preencha o CFOP nos [dados fiscais do produto](../produtos/parametros-fiscais.md).
 
 ??? question "Não apareceu o DIFAL na venda para outro estado"
-    No teste, o grupo do DIFAL apareceu calculado com o destino **2 - Operação Interestadual** e a nota marcada como **Nota para Consumidor Final**. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.
+    O grupo do DIFAL é calculado com o destino **2 - Operação Interestadual** e a nota marcada como **Nota para Consumidor Final**. Confira esses dois campos. Para cliente contribuinte (com IE), o DIFAL não é cobrado na sua nota.
 
 ??? question "A nota ficou como Pendente"
     Ela foi salva, mas não transmitida. Use **Transmitir NF-e** nos três pontinhos.

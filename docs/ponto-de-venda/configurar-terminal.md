@@ -164,7 +164,7 @@ Em **Taxa de Entrega**, escolha uma das formas:
 - **Taxa por bairro:** um valor para cada bairro. Clique em **Configurar bairros** para cadastrar os bairros e as taxas. Em **Defina uma taxa de entrega padrão**, escolha o que cobrar quando o bairro do cliente não está na lista: **Maior valor** (a maior taxa cadastrada) ou **Personalizado** (um valor que você digita, maior que zero).
 
 !!! warning "Confira a taxa de entrega sempre que salvar esta tela"
-    Nos testes, a tela **Modos de pedidos** abriu mostrando **Taxa fixa** mesmo com a taxa por bairro configurada. Ao salvar qualquer outra mudança nessa tela, a cobrança passou para **taxa fixa de R$ 0,00**. Se a sua loja usa taxa por bairro, confira essa parte antes de clicar em **Salvar**. Se ela mudar, fale com o suporte.
+    A tela **Modos de pedidos** pode abrir mostrando **Taxa fixa** mesmo com a taxa por bairro configurada. Nesse caso, ao salvar qualquer outra mudança nessa tela, a cobrança passa para **taxa fixa de R$ 0,00**. Se a sua loja usa taxa por bairro, confira essa parte antes de clicar em **Salvar**. Se ela mudar, fale com o suporte.
 
 ![Taxa por bairro selecionada, as opções Maior valor e Personalizado e o botão Configurar bairros destacados](../imagens/06.06/07-taxa-entrega.png){ loading=lazy }
 
@@ -240,10 +240,10 @@ Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações
     O campo preenche da direita para a esquerda. Apague e digite **1000** para ter **10,00**.
 
 ??? question "A taxa de entrega por bairro virou taxa fixa"
-    Isso aconteceu nos nossos testes ao salvar outras mudanças na tela **Modos de pedidos**. Fale com o suporte para corrigir e, enquanto isso, confira a **Taxa de Entrega** antes de clicar em **Salvar**.
+    Isso pode acontecer ao salvar outras mudanças na tela **Modos de pedidos**. Fale com o suporte para corrigir e, enquanto isso, confira a **Taxa de Entrega** antes de clicar em **Salvar**.
 
 ??? question "Apaguei um tempo limite e ele voltou"
-    Nos testes, apagar o número de **Limites de Tempo** ou do **Painel delivery** não limpou o valor salvo. Se precisar tirar um limite, fale com o suporte.
+    Apagar o número de **Limites de Tempo** ou do **Painel delivery** não limpa o valor salvo. Se precisar tirar um limite, fale com o suporte.
 
 ??? question "As opções de crediário na aba Segurança estão cinza"
     Elas só funcionam com o crediário ligado. Primeiro ligue o crediário em **Ponto de venda** → **Configurações** → **Crediário**.

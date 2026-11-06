@@ -41,7 +41,7 @@ A Sefaz não sabe se a sua venda está certa; ela confere se a nota **segue as r
 | **Use quando** | Corrigir a nota rejeitada (caminho deste manual). | A data original não serve mais e você quer refazer a nota hoje. |
 
 !!! warning "Nota de devolução: confira a chave referenciada"
-    No teste, ao abrir **Editar NF-e** ou **Refazer NF-e** de uma nota de **devolução** rejeitada, o campo **Chaves de acesso da NF-e referenciada** veio **vazio**, embora a nota tivesse sido enviada com a chave. Antes de salvar, **cole a chave de novo**. Sem ela, a devolução não é aceita.
+    Ao abrir **Editar NF-e** ou **Refazer NF-e** de uma nota de **devolução** rejeitada, o campo **Chaves de acesso da NF-e referenciada** pode vir **vazio**, embora a nota tivesse sido enviada com a chave. Antes de salvar, **cole a chave de novo**. Sem ela, a devolução não é aceita.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar.
 

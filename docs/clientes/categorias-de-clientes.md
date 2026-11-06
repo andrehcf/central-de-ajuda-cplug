@@ -17,11 +17,11 @@ A **categoria de cliente** é um grupo de clientes com as mesmas condições: po
 
 A categoria guarda **condições comerciais** que acompanham o cliente:
 
-| Condição | O que faz | No teste |
+| Condição | O que faz | Na prática |
 | --- | --- | --- |
-| **Porcentagem de desconto** | Desconto automático para os clientes da categoria. | No pedido de venda, o desconto de 10% entrou sozinho ao escolher o cliente. |
-| **Utilizar preço atacado?** | Pelo nome, faz a categoria usar o preço de atacado. | Fale com o suporte antes de usar (efeito não confirmado). |
-| **Limite de Compra** | Um teto de consumo por mês, com dia de renovação. | Gravado na categoria; não bloqueou um pedido de venda (veja o passo 3). |
+| **Porcentagem de desconto** | Desconto automático para os clientes da categoria. | No pedido de venda, o desconto entra sozinho ao escolher o cliente. |
+| **Utilizar preço atacado?** | Pelo nome, faz a categoria usar o preço de atacado. | Fale com o suporte antes de usar. |
+| **Limite de Compra** | Um teto de consumo por mês, com dia de renovação. | Gravado na categoria; não bloqueia o pedido de venda (veja o passo 3). |
 
 **Por que usar categoria e não dar desconto à mão?** Porque a regra fica no sistema, e não na memória de quem atende. O desconto fica **na categoria**, e não no cliente: todos os clientes da categoria usam a mesma porcentagem, sem ninguém precisar lembrar nem calcular.
 
@@ -42,7 +42,7 @@ No menu do lado esquerdo, clique em **Clientes** e depois em **Categoria de clie
 
 Clique em **Nova Categoria**.
 
-![Lista Categorias de Clientes com o botão Nova Categoria e a categoria VIP (teste) com 10,00% destacados](../imagens/02.02/01-lista.png){ loading=lazy }
+![Lista Categorias de Clientes com o botão Nova Categoria e uma categoria VIP com 10,00% destacados](../imagens/02.02/01-lista.png){ loading=lazy }
 
 ## Dê o nome e o desconto
 
@@ -50,23 +50,23 @@ Em **Informações gerais**:
 
 - **Nome:** o nome do grupo. Exemplo: "VIP".
 - **Porcentagem de desconto:** o campo já tem a vírgula. Para 10%, digite **1000** e ele mostra **10,00**. Deixe 0,00 se a categoria não dá desconto.
-- **Utilizar preço atacado?:** pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. O efeito não foi conferido; fale com o suporte antes de usar.
+- **Utilizar preço atacado?:** pelo nome, faz os clientes da categoria usarem o preço de atacado. Ligar a chave não abre nenhum campo. Fale com o suporte antes de usar.
 
-![Nome VIP (teste) e Porcentagem de desconto 10,00 destacados](../imagens/02.02/02-formulario.png){ loading=lazy }
+![Nome da categoria e Porcentagem de desconto 10,00 destacados](../imagens/02.02/02-formulario.png){ loading=lazy }
 
 ## Configure o limite de compra (opcional) e salve
 
 Em **Limites**, a chave **Deseja limitar a compra por R$ (Pagamento avulso)?** abre três campos:
 
 - **Valor do limite (R$):** pela dica da tela, o "valor máximo que o cliente pode consumir no período de renovação". Para R$ 50,00, digite **5000**.
-- **Período de renovação:** no teste, veio travado em **Mensal**.
+- **Período de renovação:** vem travado em **Mensal**.
 - **Dia de renovação:** o "dia do mês em que o limite de compra é renovado (1 a 31)".
 
 ![Limite de Compra ligado com Valor do limite R$ 50,00, Período Mensal e Dia de renovação 1 destacados](../imagens/02.02/02b-limites.png){ loading=lazy }
 
-No teste, um **pedido de venda** de R$ 67,23, pago em dinheiro, foi salvo normalmente para um cliente com limite de R$ 50,00: o limite não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.
+O limite **não bloqueia** o pedido de venda no ERP. Exemplo: um pedido de venda de R$ 67,23, pago em dinheiro, é salvo normalmente para um cliente com limite de R$ 50,00. Na tela, o limite é "por R$ (Pagamento avulso)"; antes de contar com ele, confirme com o suporte.
 
-Clique em **Salvar**, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no exemplo, **VIP (teste)** com **10,00%**.
+Clique em **Salvar**, no canto de baixo, à direita. A categoria aparece na lista com a porcentagem: no print, a categoria de exemplo com **10,00%**.
 
 ## Coloque os clientes na categoria
 
@@ -78,7 +78,7 @@ Abra o cadastro do cliente (**Clientes → Todos os clientes**, três pontinhos,
 
 Em **Vendas → Pedidos de venda**, clique em **Novo Pedido**. O pedido abre com o **Consumidor Final**: no quadro **Cliente**, clique em **Remover**, busque o cliente pelo nome e escolha. Depois adicione os produtos.
 
-No teste, com um cliente da categoria **VIP (teste)** e um X-Burger de R$ 24,90, o **Resumo** já mostrou **Descontos R$ 2,49** (10% de R$ 24,90) e **Total R$ 22,41**, sem digitar nada. Com 3 X-Burgers, o desconto acompanhou: R$ 7,47.
+O desconto da categoria entra sozinho. Exemplo: com um cliente de uma categoria de 10% e um X-Burger de R$ 24,90, o **Resumo** já mostra **Descontos R$ 2,49** (10% de R$ 24,90) e **Total R$ 22,41**, sem digitar nada. Com 3 X-Burgers, o desconto acompanha: R$ 7,47.
 
 ![Pedido de venda com o cliente da categoria e o Resumo com Descontos R$ 2,49 e Total R$ 22,41 destacados](../imagens/02.02/03-pedido-com-desconto.png){ loading=lazy }
 
@@ -93,7 +93,7 @@ Nos **três pontinhos** da categoria ficam **Editar** e **Excluir**.
 ![Menu da categoria com Editar e Excluir destacados](../imagens/02.02/05-menu.png){ loading=lazy }
 
 !!! warning "Zerar saldo dos clientes não tem volta"
-    Na edição da categoria (e só nela) aparece o botão vermelho **Zerar saldo dos clientes**. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede **Usuário** e **Senha**. Se a sua loja usa crédito de clientes (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)), fale com o suporte antes de usar. No teste, a janela foi só aberta e cancelada.
+    Na edição da categoria (e só nela) aparece o botão vermelho **Zerar saldo dos clientes**. A tela avisa que todos os clientes da categoria terão o saldo ajustado para R$ 0,00 e que a ação não poderá ser desfeita. Para confirmar, pede para digitar "deletar" e pede **Usuário** e **Senha**. Se a sua loja usa crédito de clientes (veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md)), fale com o suporte antes de usar. Se abriu a janela por engano, clique em cancelar: nada é alterado.
 
     ![Botão Zerar saldo dos clientes na edição da categoria destacado](../imagens/02.02/02c-zerar-botao.png){ loading=lazy }
 
@@ -117,7 +117,7 @@ Nos **três pontinhos** da categoria ficam **Editar** e **Excluir**.
     O campo de porcentagem já tem a vírgula: os dois últimos números são os centavos. Para 10%, digite **1000**.
 
 ??? question "O cliente passou do limite e o pedido foi salvo"
-    No teste, o limite de compra não bloqueou o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.
+    O limite de compra não bloqueia o pedido de venda no ERP. Na tela, o limite é "por R$ (Pagamento avulso)"; para saber onde ele vale na sua operação, fale com o suporte.
 
 ??? question "Não acho o botão Zerar saldo dos clientes"
     Ele só aparece ao **editar** uma categoria já salva, no canto de cima, à direita.

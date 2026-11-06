@@ -26,19 +26,19 @@ Na [ficha técnica](../produtos/ficha-tecnica.md) existem dois tipos de produç�
 
 A ordem de produção passa por **três etapas**, que aparecem no topo da tela:
 
-| Etapa | No menu | O que faz no estoque (no teste) |
+| Etapa | No menu | O que faz no estoque |
 | --- | --- | --- |
 | **Pedido** | Estoque → Pedido produção | Nada. É o planejamento: o que produzir, quanto e para quando. |
 | **Produção** | Estoque → Produção | Com a caixinha **Consumo** marcada, **tira os ingredientes** do estoque (categoria **Produção**). |
 | **Finalização** | Estoque → Finalização | Com a caixinha **Entrada** marcada, **coloca o produto pronto** no estoque (categoria **Produção**). |
 
-**De onde vem o custo do produto pronto.** No teste, a ficha do **Molho da casa** levava 1 maionese (R$ 3,00) e 1 molho especial (R$ 0,40). Com o consumo registrado **antes** da finalização, os 2 molhos produzidos entraram no estoque a **R$ 3,40** cada: a soma dos ingredientes (teste sem desperdício). Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
+**De onde vem o custo do produto pronto.** Do custo dos ingredientes consumidos. Exemplo: a ficha do **Molho da casa** leva 1 maionese (R$ 3,00) e 1 molho especial (R$ 0,40). Com o consumo registrado **antes** da finalização e sem desperdício, cada molho produzido entra no estoque a **R$ 3,40**: a soma dos ingredientes. Para entender lotes e custo, veja [Como dar entrada no estoque](entrada-de-estoque.md).
 
 !!! warning "Consumo e Entrada vêm desmarcados"
-    No teste, as caixinhas **Consumo** (na Produção) e **Entrada** (na Finalização) vieram **desmarcadas**. Sem marcar **Consumo**, a produção é salva mas os ingredientes não saem do estoque. E a ordem importa: no teste em que a finalização foi feita **antes** do consumo, o produto pronto entrou com custo **R$ 0,00**.
+    As caixinhas **Consumo** (na Produção) e **Entrada** (na Finalização) vêm **desmarcadas**. Sem marcar **Consumo**, a produção é salva mas os ingredientes não saem do estoque. E a ordem importa: se a finalização for feita **antes** do consumo, o produto pronto entra com custo **R$ 0,00**.
 
 !!! info "Antes de começar"
-    - O produto a ser produzido precisa ter **ficha técnica** do tipo **Processo produtivo**, com os ingredientes (veja [Como montar uma ficha técnica](../produtos/ficha-tecnica.md)). A janela de adicionar produto mostra só esses produtos: no teste, o X-Burger, que é de Produção automática, não apareceu.
+    - O produto a ser produzido precisa ter **ficha técnica** do tipo **Processo produtivo**, com os ingredientes (veja [Como montar uma ficha técnica](../produtos/ficha-tecnica.md)). A janela de adicionar produto mostra só esses produtos: um produto com ficha de **Produção automática** não aparece.
     - Os ingredientes precisam ter **estoque e custo** (veja [Como dar entrada no estoque](entrada-de-estoque.md)).
     - Estas telas têm o **visual antigo** do sistema, mas abrem normalmente dentro do menu.
 
@@ -54,7 +54,7 @@ Preencha o topo:
 
 - **Solicitante** e **Responsável:** quem pediu e quem vai produzir (os usuários do sistema).
 - **Data da Solicitação** e **Prazo:** quando foi pedido e para quando precisa estar pronto.
-- **Status** (**Aberto**, **Fechado** ou **Cancelado**) e **Status Detalhe:** no teste, ficaram em **Aberto** e **Indefinido** em todas as etapas, mesmo depois de finalizar. Não testamos Fechado nem Cancelado.
+- **Status** (**Aberto**, **Fechado** ou **Cancelado**) e **Status Detalhe:** ficam em **Aberto** e **Indefinido** em todas as etapas, mesmo depois de finalizar.
 
 Em **Produtos / Serviços**, clique em **Adicionar Produto / Serviço**, busque o produto e clique em **Adicionar e Fechar**. Na linha do produto:
 
@@ -64,7 +64,7 @@ Em **Produtos / Serviços**, clique em **Adicionar Produto / Serviço**, busque 
 Clique na **setinha** ao lado do nome para ver o **Consumo Unitário**: os ingredientes da ficha técnica, um por linha.
 
 - **Qtd (Unit. / Total):** quanto de cada ingrediente vai em **uma** unidade, e o total para a quantidade pedida (a conta é feita sozinha).
-- **Desperdício (Unit. / Total):** a perda esperada por unidade produzida. No teste, 1 maionese de desperdício por molho deu um total de 10.
+- **Desperdício (Unit. / Total):** a perda esperada por unidade produzida. Exemplo: 1 maionese de desperdício por molho, em 10 molhos, dá um total de 10.
 - **Estoque Saída:** de onde o ingrediente sai. Pela dica da tela, o botão **Usar** aplica esse estoque em todos os ingredientes.
 
 ![Pedido de produção com o produto, a quantidade e o estoque de entrada e a tabela de consumo dos ingredientes destacados](../imagens/04.06/01-pedido.png){ loading=lazy }
@@ -77,7 +77,7 @@ A mensagem de sucesso traz o atalho **Converter em Produção agora**. O pedido 
 
 ![Lista de pedidos de produção com as colunas Pedido, Produção e Finalização destacadas](../imagens/04.06/02-lista-pedido.png){ loading=lazy }
 
-Nesse momento **nada mudou no estoque**: no teste, a maionese continuou com o mesmo saldo e o molho ainda não existia no estoque.
+Nesse momento **nada muda no estoque**: os ingredientes continuam com o mesmo saldo e o produto pronto ainda não entrou.
 
 ## Converta em produção e marque o consumo
 
@@ -89,9 +89,9 @@ Desça até o produto e clique na **setinha** ao lado do nome. Na tabela de ingr
 
 ![Converter em Produção com a setinha do produto, a coluna Consumo e o botão Converter destacados](../imagens/04.06/03-producao-consumo.png){ loading=lazy }
 
-Com **Consumo** marcado, saem do estoque os ingredientes **mais o desperdício**, na categoria **Produção**. Exemplo do teste: 10 molhos com 1 maionese de desperdício por molho tiraram 20 maioneses (10 de consumo + 10 de desperdício).
+Com **Consumo** marcado, saem do estoque os ingredientes **mais o desperdício**, na categoria **Produção**. Exemplo: 10 molhos com 1 maionese de desperdício por molho tiram 20 maioneses (10 de consumo + 10 de desperdício).
 
-Se esquecer de marcar, dá para corrigir: em **Estoque → Produção**, clique no botão de editar da produção, abra a setinha, marque **Consumo** e clique em **Salvar**. Os ingredientes saem do estoque. Mas, se a finalização já tiver sido feita, o produto pronto continua com o custo com que entrou (no teste, R$ 0,00).
+Se esquecer de marcar, dá para corrigir: em **Estoque → Produção**, clique no botão de editar da produção, abra a setinha, marque **Consumo** e clique em **Salvar**. Os ingredientes saem do estoque. Mas, se a finalização já tiver sido feita, o produto pronto continua com o custo com que entrou (R$ 0,00).
 
 ## Finalize e dê entrada no produto pronto
 
@@ -101,7 +101,7 @@ Na linha do produto, confira a **Qnt** e o **Estoque**, e marque a caixinha **En
 
 ![Finalização da produção com as etapas, a caixinha Entrada e o botão Converter destacados](../imagens/04.06/04-finalizacao.png){ loading=lazy }
 
-No print, a finalização de 10 molhos. No teste feito na ordem certa (consumo antes), os 2 molhos produzidos entraram no estoque com a categoria **Produção** e custo de R$ 3,40 cada (o custo dos ingredientes consumidos).
+Feita na ordem certa (consumo antes), a finalização dá entrada no produto pronto com a categoria **Produção** e o custo dos ingredientes consumidos (no exemplo, R$ 3,40 cada molho).
 
 ## Confira no estoque
 
@@ -110,7 +110,7 @@ Abra o histórico dos produtos (veja [Como consultar o saldo e o histórico do e
 - os **ingredientes** têm uma **saída** com a categoria **Produção**;
 - o **produto pronto** tem uma **entrada** com a categoria **Produção** e o custo dos ingredientes.
 
-Na lista de **Estoque → Produção**, o ícone ao lado do número da produção abre o **Consumo de Insumos**, com o insumo, o lote, o fornecedor e as datas de entrada e validade. No teste, sem o consumo marcado, ele ficou vazio.
+Na lista de **Estoque → Produção**, o ícone ao lado do número da produção abre o **Consumo de Insumos**, com o insumo, o lote, o fornecedor e as datas de entrada e validade. Sem o consumo marcado, ele fica vazio.
 
 </div>
 
@@ -130,16 +130,16 @@ Na lista de **Estoque → Produção**, o ícone ao lado do número da produçã
     A caixinha **Consumo** não foi marcada na Produção. Abra a produção em **Estoque → Produção**, clique na setinha do produto, marque **Consumo** e salve. Os ingredientes saem, mas o produto pronto que já entrou continua com o custo daquele momento (veja a próxima pergunta).
 
 ??? question "O produto pronto entrou com custo zero"
-    No teste, isso aconteceu quando a finalização foi feita **antes** de marcar o consumo. Nas próximas produções, marque o consumo antes de finalizar. Para corrigir uma entrada já feita, fale com o suporte.
+    Isso acontece quando a finalização é feita **antes** de marcar o consumo. Nas próximas produções, marque o consumo antes de finalizar. Para corrigir uma entrada já feita, fale com o suporte.
 
 ??? question "Finalizei e o produto pronto não apareceu no estoque"
     Confira se a caixinha **Entrada** foi marcada na finalização. Se foi e o produto não entrou, fale com o suporte.
 
 ??? question "Fechei a mensagem e perdi o atalho Converter em Produção agora"
-    No teste, a conversão foi sempre feita pelo atalho da mensagem. Se você fechou a mensagem antes de converter, fale com o suporte.
+    A conversão é feita pelo atalho da mensagem. Se você fechou a mensagem antes de converter, fale com o suporte.
 
 ??? question "Finalizei e o status continua Aberto"
-    No teste, o status ficou **Aberto** em todas as etapas, mesmo depois da finalização. O que mostra que a produção terminou é a coluna **Finalização** da lista, com o número da entrada.
+    É normal: o status fica **Aberto** em todas as etapas, mesmo depois da finalização. O que mostra que a produção terminou é a coluna **Finalização** da lista, com o número da entrada.
 
 **Relacionados:** [Como montar uma ficha técnica](../produtos/ficha-tecnica.md) · [Como dar entrada no estoque](entrada-de-estoque.md) · [Como consultar o saldo e o histórico do estoque](saldo-do-estoque.md)
 
