@@ -26,7 +26,7 @@ Uma empresa pode ter lucro no mês e pouco dinheiro na conta (vendeu a prazo) ou
 
 **Como o relatório é montado**
 
-- **Grupos:** as linhas em destaque, como **Receitas operacionais (+)**, **Custos Operacionais (-)** e **Despesas Operacionais (-)**. Os grupos vêm de **Finanças → Grupo Financeiro**. O **(+)** ou **(-)** no nome mostra o que o grupo costuma fazer; o que vale é o sinal do valor: valor com o sinal de menos diminui o resultado, valor sem sinal aumenta.
+- **Grupos:** as linhas em destaque, como **Receitas operacionais (+)**, **Custos Operacionais (-)** e **Despesas Operacionais (-)**. Os grupos vêm de **Finanças → Grupo Financeiro** (veja [Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md)). O **(+)** ou **(-)** no nome mostra o que o grupo costuma fazer; o que vale é o sinal do valor: valor com o sinal de menos diminui o resultado, valor sem sinal aumenta.
 - **Categorias:** embaixo de cada grupo, como **Faturamento com vendas de produtos** ou **Despesas Administrativas**. São as categorias do **Plano de contas**, que você escolhe em cada lançamento (veja [Como lançar uma conta a pagar ou a receber](contas-a-pagar-e-receber.md)).
 - **Descontos/Taxas** e **Juros/Multa:** linhas automáticas, que somam os campos **Taxas/Despesas** e **Multas/Juros** dos lançamentos, separadas em "de Receitas" e "de Despesas". Por isso **Juros/Multa (-)** aparece positivo quando a empresa recebeu juros de um cliente atrasado: esse dinheiro aumenta o resultado.
 - **Resultado operacional:** a soma de tudo. Positivo é lucro; negativo (com o sinal de menos) é prejuízo.
@@ -137,9 +137,12 @@ Atenção: em **Últimos trimestre**, o arquivo vem só com o mês atual. Para e
 ??? question "Exportei o trimestre e o arquivo veio com um mês só"
     O PDF e o Excel trazem o período do **Resultado do período**, que no trimestre é só o mês atual. Use **Período personalizado** com o período todo, clique em **Filtrar** e gere o arquivo de novo. Para ter cada mês separado, exporte um mês de cada vez.
 
-??? question "Um grupo que cadastrei não aparece no relatório"
-    Nem todo grupo cadastrado em **Grupo Financeiro** aparece no relatório. Se precisar dele, fale com o suporte.
+??? question "Fiz uma mudança e o relatório não mudou"
+    O relatório guarda o cálculo de cada período por alguns minutos. Confira a hora em **Consultas realizadas em**, espere alguns minutos e abra o relatório de novo.
 
-**Relacionados:** [Como lançar uma conta a pagar ou a receber](contas-a-pagar-e-receber.md) · [Como consultar o extrato](extrato.md) · [Como fazer a conciliação bancária](conciliacao-bancaria.md) · [Como cadastrar as taxas do cartão](taxas-do-cartao.md)
+??? question "Um grupo que cadastrei não aparece no relatório"
+    Um grupo novo aparece depois dos grupos que já existiam, mas pode levar alguns minutos (veja o problema acima). Se mesmo assim ele não aparecer, fale com o suporte: alguns grupos antigos não aparecem no relatório. Para organizar grupos e categorias, veja [Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md).
+
+**Relacionados:** [Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md) · [Como lançar uma conta a pagar ou a receber](contas-a-pagar-e-receber.md) · [Como consultar o extrato](extrato.md) · [Como fazer a conciliação bancária](conciliacao-bancaria.md) · [Como cadastrar as taxas do cartão](taxas-do-cartao.md)
 
 <span class="palavras-chave">relatório de resultados dre demonstração do resultado demonstração do resultado do exercício demonstrativo de resultado lucro prejuízo resultado operacional receitas custos despesas competência data de competência regime de competência grupo financeiro categoria plano de contas descontos taxas juros multa trimestre mês atual período personalizado gerar pdf gerar excel exportar planilha agrupado parcela parcelado ajuste de caixa</span>

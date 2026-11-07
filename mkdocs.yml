@@ -114,6 +114,7 @@ nav:
       - financas/conciliacao-bancaria.md
       - financas/extrato.md
       - financas/relatorio-de-resultados.md
+      - financas/plano-de-contas.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/emissao-de-notas.md

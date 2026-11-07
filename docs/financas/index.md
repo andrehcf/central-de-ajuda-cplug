@@ -16,4 +16,5 @@ Organize o dinheiro da empresa: contas, formas de pagamento, lançamentos e rela
 [<span class="cplug-codigo">07.05</span> Como fazer a conciliação bancária](conciliacao-bancaria.md)
 [<span class="cplug-codigo">07.06</span> Como consultar o extrato](extrato.md)
 [<span class="cplug-codigo">07.07</span> Como ler o relatório de resultados (DRE)](relatorio-de-resultados.md)
+[<span class="cplug-codigo">07.08</span> Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md)
 </div>
