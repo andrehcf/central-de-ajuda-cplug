@@ -2084,7 +2084,7 @@ No menu do lado esquerdo, clique em **Estoque** e depois em **Estoque**. Na linh
 
 [Imagem: Lista de estoques com o menu aberto e a opção Registrar entrada destacada]
 
-No mesmo menu ficam **Registrar saída**, **Balanço** (o saldo de cada produto) e **Inventários** (a contagem).
+No mesmo menu ficam **Registrar saída**, **Balanço** (o saldo de cada produto) e **Inventários** (a contagem). O atalho **Estoque → Movimentações**, no menu do lado esquerdo, abre a mesma tela **Registrar movimentação**.
 
 ## Escolha o tipo, a categoria e a data
 
@@ -5501,6 +5501,230 @@ A lista mostra só os lançamentos daquele centro, e aparece a etiqueta **Centro
 **Relacionados:** [Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md) · [Como lançar uma conta a pagar ou a receber](contas-a-pagar-e-receber.md) · [Como consultar o extrato](extrato.md) · [Como ler o relatório de resultados (DRE)](relatorio-de-resultados.md)
 
 Palavras-chave: centro de custo centros de custo novo centro de custo setor área departamento projeto delivery salão cozinha filtrar por centro de custo rateio categoria e anexos excluir centro de custo editar centro de custo análise de despesas buscar por nome do centro de custo centro de custo excluído filtro centro de custo extrato lançamentos
+
+---
+Código: 07.10 | Módulo: Finanças | Tela no sistema: /dashboard/finance/accountings
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/contabilidade/
+
+# Como enviar os documentos fiscais para a contabilidade
+
+6 minutos · 5 passos · Atualizado em 07/11/2026
+
+Todo mês, o contador precisa dos arquivos das notas fiscais que a empresa emitiu para fazer a escrituração e calcular os impostos. Em **Finanças → Contabilidade** (a tela se chama **Histórico de Contabilidade**), você vê as notas emitidas num período, baixa os arquivos de cada uma e envia para o e-mail do contador um link para baixar os documentos do período.
+
+## Entenda o conceito
+
+**XML ou PDF?**
+
+| Arquivo | O que é | Quem usa |
+| --- | --- | --- |
+| **XML** | O arquivo oficial da nota, com todos os dados que foram para a Sefaz. | O contador. É ele que vale para a escrituração. |
+| **PDF** | O DANFE: a versão para imprimir e mostrar ao cliente. | O cliente e a loja. Não substitui o XML. |
+
+**Os status das notas**
+
+| Status | O que quer dizer | O que baixar |
+| --- | --- | --- |
+| **Transmitida** | Nota autorizada pela Sefaz. | **Download XML** e **Download PDF**. |
+| **Cancelada** | Nota autorizada e depois cancelada (veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](../vendas/cancelar-nota.md)). | **Download XML**, **Download PDF** e **Download XML • Cancelado** (o arquivo do cancelamento). |
+| **Inutilizada** | Número de nota que foi pulado e inutilizado na Sefaz. | **Download XML** (o único arquivo disponível). |
+
+O contador precisa de **todas**, inclusive as canceladas e as inutilizadas: as canceladas mostram as notas que perderam a validade, e as inutilizadas explicam os números pulados na sequência.
+
+!!! info "Antes de começar"
+    A tela mostra as notas **emitidas pela empresa** no sistema. Confira com o seu contador quais arquivos ele quer receber e com que frequência. Em geral é todo mês, logo no começo do mês seguinte.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra a contabilidade
+
+No menu do lado esquerdo, clique em **Finanças** e depois em **Contabilidade**. A tela abre com o período do primeiro dia do mês até hoje. A lista mostra, para cada nota, **Nota** (o número), **Série**, **Venda** (o número da venda, quando a nota veio de uma venda), **Data**, **Valor** e **Status**.
+
+[Imagem: Tela Histórico de Contabilidade com o menu Contabilidade, as datas e o botão Pesquisar, o botão Enviar link de Download por e-mail e o Histórico de Envios destacados]
+
+## Escolha o período e pesquise
+
+Ajuste as duas datas (início e fim) e clique em **Pesquisar**. Para o fechamento do mês, use do primeiro ao último dia do mês anterior. Se não houver notas no período, aparece **Nenhuma nota encontrada**.
+
+## Baixe os arquivos de uma nota
+
+Clique nos **três pontinhos** da nota. As opções dependem do status:
+
+- **Download XML** e **Download PDF**, nas notas transmitidas;
+- também **Download XML • Cancelado**, nas canceladas;
+- só **Download XML**, nas inutilizadas.
+
+O navegador baixa o arquivo, normalmente na pasta **Downloads** do computador. O nome do arquivo usa um código interno do sistema (exemplo: **nfe-23.xml**), e não o número da nota. Se for juntar vários arquivos, renomeie ou guarde numa pasta por mês.
+
+[Imagem: Menu de uma nota cancelada com as opções Download XML, Download PDF e Download XML • Cancelado destacadas]
+
+## Envie o link para o contador
+
+Para mandar os documentos do período de uma vez, clique em **Enviar link de Download por e-mail**. Abre uma janela com:
+
+- **Período selecionado:** o mesmo período da tela. Não dá para mudar aqui: se precisar de outro período, cancele, ajuste as datas da tela e clique em **Pesquisar** antes.
+- **Email:** o e-mail que vai receber o link dos documentos. Exemplo: o e-mail do seu contador.
+
+Clique em **Enviar**. Depois, confira o envio no passo seguinte.
+
+[Imagem: Janela Enviar link de Download por e-mail com o campo Email e o botão Enviar destacados]
+
+## Confira o histórico de envios
+
+Depois de pesquisar um período com notas, aparece **Histórico de Envios**, no alto da tela, à direita. Clique nele: abre um painel lateral com os envios já feitos. Se nenhum envio foi feito ainda, aparece **Nenhum resultado encontrado**.
+
+
+
+!!! tip "Boas práticas"
+    - **Combine uma data fixa** com o contador, por exemplo até o dia 5 de cada mês, e envie sempre o mês anterior completo. Para o envio sair sozinho todo mês, use o **Agendar envio** do [Facilita NF-e](facilita-nfe.md).
+    - **Envie todas as notas do período**, inclusive as canceladas e as inutilizadas.
+    - **Confira o e-mail antes de enviar.** Um e-mail digitado errado manda os documentos da empresa para outra pessoa.
+    - **Guarde os XML** pelo prazo que o seu contador indicar (são anos, não meses). O XML é o documento que vale.
+    - **Dúvidas fiscais são com o contador.** Ele diz o que precisa receber e como.
+
+## Deu algum problema?
+
+??? question "Nenhuma nota encontrada"
+    Confira o período: a tela abre só com o mês atual. Aumente o período e clique em **Pesquisar**. Confira também se você está na empresa certa, no seletor do alto do menu: cada empresa tem as suas notas.
+
+??? question "Não acho o arquivo que baixei"
+    O navegador baixa o arquivo, normalmente na pasta **Downloads** do computador, com um nome como **nfe-23.xml**: o número do nome é um código interno, não o número da nota.
+
+??? question "A nota inutilizada não tem PDF"
+    É o esperado. Uma nota inutilizada nunca foi autorizada pela Sefaz, então não existe DANFE. O arquivo dela é só o XML.
+
+??? question "Quero enviar outro período por e-mail"
+    O período da janela de envio vem da tela. Cancele, ajuste as datas, clique em **Pesquisar** e abra a janela de novo. Se você já digitou o e-mail, o sistema mostra **Alterações não salvas**: clique em **Descartar** para fechar a janela.
+
+??? question "O contador não recebeu o e-mail"
+    Confira em **Histórico de Envios** se o envio aparece. Peça ao contador para olhar também a caixa de spam. Se precisar, confira o e-mail digitado e envie de novo.
+
+??? question "Não aparece o Histórico de Envios"
+    Ele aparece no alto da tela depois que você pesquisa um período com notas. Ajuste as datas e clique em **Pesquisar**.
+
+**Relacionados:** [Como usar o Facilita NF-e](facilita-nfe.md) · [Como emitir uma NF-e de venda (dentro e fora do estado)](../vendas/emitir-nfe.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](../vendas/cancelar-nota.md) · [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md)
+
+Palavras-chave: contabilidade contador histórico de contabilidade enviar notas para o contador xml pdf danfe download xml download pdf xml cancelado nota cancelada nota inutilizada nota transmitida enviar link de download por e-mail histórico de envios fechamento do mês escrituração documentos fiscais nf-e mandar notas para o contador xml das notas baixar xml baixar danfe link de download
+
+---
+Código: 07.11 | Módulo: Finanças | Tela no sistema: /dashboard/finance/nfe
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/facilita-nfe/
+
+# Como usar o Facilita NF-e
+
+8 minutos · 6 passos · Atualizado em 07/11/2026
+
+O **Facilita NF-e** reúne as notas fiscais da empresa numa tela só: as que os fornecedores emitiram para você (**Recebido**) e as que a sua empresa emitiu (**Emitido**). Dali você importa uma nota de compra para o estoque, baixa os arquivos XML e programa o envio automático dos documentos do mês anterior para o seu contador.
+
+## Entenda o conceito
+
+**As três abas**
+
+| Aba | O que mostra |
+| --- | --- |
+| **Recebido** | Notas emitidas por fornecedores para o CNPJ da sua empresa, com **Emitente**, **Valor**, **Número**, **Série**, **Modelo**, **Origem** e se já foi **Importado** para o sistema. |
+| **Emitido** | Notas que a sua empresa emitiu: NF-e (modelo **55**) e NFC-e (modelo **65**), com o **Cliente** de cada uma. |
+| **Histórico de Envios** | Os envios de documentos por e-mail já feitos, com **Solicitante**, **Período**, **E-mail**, **Status** e **Arquivos**. |
+
+**Os cartões do alto** contam as notas recebidas: **Total**, **Autorizadas**, **Canceladas**, **Manifestações finais** e **Não manifestadas**. A **manifestação do destinatário** é a resposta que a empresa dá à Sefaz sobre uma nota recebida (por exemplo, confirmando que a compra aconteceu). Os dois últimos cartões mostram quantas notas já têm essa resposta final e quantas ainda não. Esta tela mostra as contagens, mas não faz a manifestação. Se tiver dúvida sobre manifestar uma nota, fale com o seu contador.
+
+**Precisa do certificado digital.** As notas recebidas chegam da Sefaz pelo certificado digital da empresa. Sem o certificado configurado, a busca das notas recebidas não funciona (veja [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md)).
+
+!!! info "Antes de começar"
+    O Facilita NF-e aparece em dois lugares do menu: **Estoque → Facilita NF-e** e **Finanças → Facilita NF-e**. É a mesma tela. As notas recebidas só aparecem se o certificado digital da empresa estiver configurado (veja [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md)). Confira se você está na empresa certa, no seletor do alto do menu: cada empresa tem as suas notas.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra o Facilita NF-e
+
+No menu do lado esquerdo, clique em **Estoque** (ou **Finanças**) e depois em **Facilita NF-e**. A tela abre na aba **Recebido**, com os cartões no alto e a lista das notas embaixo.
+
+[Imagem: Tela Facilita NFE com o menu Facilita NF-e, as abas, os cartões e a busca destacados]
+
+## Encontre uma nota recebida
+
+No campo **Buscar por**, digite parte do nome do **emitente** (o fornecedor). Exemplo: o nome da distribuidora. A busca não procura pelo valor.
+
+Para filtrar, clique no ícone do **funil**. No painel **Filtrar**, escolha:
+
+- **Período:** **Últimos 30 dias**, **Últimas 2 semanas**, **Últimos 7 dias**, **Ontem**, **Hoje** ou **Personalizado**;
+- **Status de Importação:** **Importado** ou **Não importado**. Use **Não importado** para achar as notas que ainda não foram importadas para o sistema;
+- **Faixa de Preço:** valor **De** e **Até**.
+
+Clique em **Aplicar filtros**.
+
+## Importe ou baixe uma nota recebida
+
+Antes de importar, olhe a coluna **Importado**: se está **Sim**, a nota já foi lançada; não importe de novo. Clique nos **três pontinhos** da nota:
+
+- **Importar XML:** abre, numa aba nova do navegador, a tela **Importação de XML**, com as etapas **Fornecedor**, **Produtos** e **Pagamentos**. É a mesma importação da nota de compra: siga [Como importar a nota fiscal de compra (XML)](../estoque/importar-nota-de-compra.md).
+- **Download XML:** baixa o arquivo XML da nota.
+
+[Imagem: Menu de uma nota recebida com as opções Importar XML e Download XML destacado]
+
+Na coluna **Importado**, **Sim** quer dizer que a nota já entrou no sistema. A coluna **Origem** mostra de onde a nota veio, por exemplo **Manual**.
+
+## Consulte as notas emitidas
+
+Clique na aba **Emitido**. A lista mostra as notas emitidas pela empresa, com **Data de emissão**, **Status** (**Transmitido**, **Cancelado**, **Inutilizado**, **Pendente**), **Cliente**, **Valor**, **Número**, **Série** e **Modelo**. O que cada status quer dizer está em [Como enviar os documentos fiscais para a contabilidade](contabilidade.md).
+
+As opções dos **três pontinhos** dependem do status. Na nota cancelada aparecem **Download XML**, **Download PDF** e **Download XML • Cancelado**. O filtro desta aba tem **Período** e **Faixa de Preço**.
+
+[Imagem: Aba Emitido com os botões Agendar envio e Enviar por e-mail destacados]
+
+## Agende o envio automático para o contador
+
+Na aba **Emitido**, clique em **Agendar envio**. Abre a janela **Agendar envio automático de documentos**. Como a própria janela explica, os e-mails cadastrados ali recebem automaticamente, **uma vez por mês, todos os documentos emitidos no mês anterior**.
+
+1. Em **E-mail**, digite o e-mail do contador.
+2. Em **Dia de envio**, escolha o dia do mês (de **01** a **31**).
+3. Clique em **Adicionar**.
+
+A tabela embaixo lista os e-mails agendados, com **Data de criação**, **Requerente**, **Dia de envio** e **Email**. Enquanto não houver nenhum, aparece **Sem dados no momento**.
+
+[Imagem: Janela Agendar envio automático de documentos com os campos E-mail e Dia de envio e o botão Adicionar destacados]
+
+## Envie agora e confira o histórico
+
+Para mandar agora, por e-mail, um link para baixar os documentos, clique em **Enviar por e-mail**. Abre a janela **Enviar link de download por e-mail**, que só pede o **Email**: digite e clique em **Salvar**. Essa janela não deixa escolher o período. Se o contador precisar de um período específico, use **Finanças → Contabilidade** (veja [Como enviar os documentos fiscais para a contabilidade](contabilidade.md)).
+
+Depois, abra a aba **Histórico de Envios** para conferir os envios feitos, com o **Período**, o **E-mail** e o **Status** de cada um.
+
+
+
+!!! tip "Boas práticas"
+    - **Agende o envio uma vez.** Combine o dia com o contador (por exemplo, dia **05**): todo mês ele recebe os documentos do mês anterior. De vez em quando, confirme com ele se está chegando.
+    - **Confira o e-mail antes de adicionar ou enviar.** Um e-mail errado manda os documentos da empresa para outra pessoa.
+    - **Olhe a aba Recebido toda semana**, com o filtro **Não importado**, para não esquecer de importar as notas de compra.
+    - **Manifestação e dúvidas fiscais são com o contador.** Ele orienta o que fazer com cada nota recebida.
+
+## Deu algum problema?
+
+??? question "A aba Recebido está vazia"
+    As notas recebidas chegam pela Sefaz usando o certificado digital da empresa. Confira com o suporte se o certificado está configurado. Confira também se você está na empresa certa e se o filtro de **Período** ou de **Status de Importação** não está escondendo as notas: clique em **Limpar** no painel **Filtrar**.
+
+??? question "Busquei pelo valor da nota e não achei"
+    A busca procura pelo nome do emitente. Para procurar por valor, use o filtro **Faixa de Preço**.
+
+??? question "Cliquei em Importar XML e não aconteceu nada"
+    A importação abre numa **aba nova** do navegador. Veja as abas no alto da janela. Se o navegador bloqueou a abertura, permita janelas (pop-ups) para o site do sistema.
+
+??? question "Os cartões não mudam quando vou para a aba Emitido"
+    É o esperado: os cartões contam as notas **recebidas**.
+
+??? question "Agendei o envio e quero parar"
+    Para tirar um e-mail do envio automático, fale com o suporte.
+
+??? question "Onde eu manifesto a nota?"
+    O Facilita NF-e mostra quantas notas estão manifestadas, mas a manifestação não é feita nesta tela. Fale com o seu contador sobre se e como manifestar cada nota.
+
+**Relacionados:** [Como enviar os documentos fiscais para a contabilidade](contabilidade.md) · [Como importar a nota fiscal de compra (XML)](../estoque/importar-nota-de-compra.md) · [Como configurar a emissão de notas fiscais](../configuracoes/emissao-de-notas.md)
+
+Palavras-chave: facilita nf-e facilita nfe notas recebidas notas emitidas nota de fornecedor importar xml download xml download pdf manifestação do destinatário manifestações finais não manifestadas agendar envio envio automático contador enviar por e-mail histórico de envios nfc-e nf-e modelo 55 modelo 65 importado não importado faixa de preço certificado digital
 
 ---
 Código: 10.04 | Módulo: Configurações | Tela no sistema: /dashboard/settings/fiscal-settings/general
