@@ -206,10 +206,10 @@
     <div class="md-grid">
       <p class="cplug-ola">Olá! Bem-vindo à ajuda da CPlug</p>
       <h1>Como podemos <span class="cplug-gradiente-texto">ajudar?</span></h1>
-      <p class="cplug-sub">Passo a passo com imagens para usar o sistema, do primeiro cadastro ao fechamento do caixa.</p>
+      <p class="cplug-sub">Passo a passo com imagens para usar o sistema, do primeiro cadastro ao fechamento do mês.</p>
       <label class="cplug-busca" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        <span>Digite sua dúvida. Ex.: cadastrar produto</span>
+        <span>Digite sua dúvida ou o código do manual (ex.: 07.05)</span>
       </label>
     </div>
   </section>
@@ -1828,53 +1828,90 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <section class="cplug-bloco">
-    <h2>Comece aqui</h2>
-    <p class="cplug-desc">Cliente novo? Siga esta ordem e você já sai vendendo.</p>
-    <div class="cplug-trilha">
-      <a class="cplug-etapa" href="produtos/cadastrar-categoria/"><span class="cplug-num cplug-gradiente-texto">01.</span><strong>Crie as categorias</strong><span>Bebidas, Lanches, Sobremesas…</span></a>
-      <a class="cplug-etapa" href="produtos/cadastrar-produto/"><span class="cplug-num cplug-gradiente-texto">02.</span><strong>Cadastre os produtos</strong><span>Nome, preço e categoria.</span></a>
-      <a class="cplug-etapa" href="clientes/cadastrar-cliente/"><span class="cplug-num cplug-gradiente-texto">03.</span><strong>Cadastre os clientes</strong><span>Nome e celular já bastam.</span></a>
-      <span class="cplug-etapa cplug-breve"><span class="cplug-num cplug-gradiente-texto">04.</span><strong>Abra o caixa e venda</strong><span>Manual em breve.</span></span>
-    </div>
-  </section>
+  <div class="cplug-caminhos">
+    <section class="cplug-caminho">
+      <span class="cplug-selo">estou começando</span>
+      <h2>Monte sua loja em 6 passos</h2>
+      <p class="cplug-desc">Siga a ordem: cada passo usa o que você cadastrou no anterior. Leva cerca de 45 minutos.</p>
+      <ol class="cplug-passos-home">
+        <li><a href="produtos/cadastrar-categoria/"><span class="cplug-num cplug-gradiente-texto">01.</span><strong>Crie as categorias</strong><em>5 min</em></a></li>
+        <li><a href="produtos/cadastrar-produto/"><span class="cplug-num cplug-gradiente-texto">02.</span><strong>Cadastre os produtos</strong><em>12 min</em></a></li>
+        <li><a href="estoque/entrada-de-estoque/"><span class="cplug-num cplug-gradiente-texto">03.</span><strong>Dê entrada no estoque</strong><em>10 min</em></a></li>
+        <li><a href="clientes/cadastrar-cliente/"><span class="cplug-num cplug-gradiente-texto">04.</span><strong>Cadastre os clientes</strong><em>8 min</em></a></li>
+        <li><a href="financas/conta-bancaria/"><span class="cplug-num cplug-gradiente-texto">05.</span><strong>Cadastre a conta bancária</strong><em>8 min</em></a></li>
+        <li class="cplug-breve"><span><span class="cplug-num cplug-gradiente-texto">06.</span><strong>Abra o caixa e venda</strong><em>em breve</em></span></li>
+      </ol>
+      <a class="md-button md-button--primary" href="produtos/cadastrar-categoria/">Começar pelo passo 1</a>
+    </section>
+
+    <section class="cplug-caminho">
+      <span class="cplug-selo cplug-selo--azul">já uso o sistema</span>
+      <h2>Vá direto ao assunto</h2>
+      <p class="cplug-desc">Os temas seguem a ordem do menu da CPlug. Cada manual tem um código: busque por ele.</p>
+      <div class="cplug-modulos-mini">
+        <a href="primeiros-passos/"><strong>01. Primeiros passos</strong><span>2 manuais</span></a>
+        <a href="clientes/"><strong>02. Clientes</strong><span>2 manuais</span></a>
+        <a href="produtos/"><strong>03. Produtos</strong><span>10 manuais</span></a>
+        <a href="estoque/"><strong>04. Estoque</strong><span>10 manuais</span></a>
+        <a href="vendas/"><strong>05. Vendas</strong><span>4 manuais</span></a>
+        <a href="ponto-de-venda/"><strong>06. Ponto de venda</strong><span>2 manuais</span></a>
+        <a href="financas/"><strong>07. Finanças</strong><span>11 manuais</span></a>
+        <a href="configuracoes/"><strong>10. Configurações</strong><span>3 manuais</span></a>
+      </div>
+      <div class="cplug-recentes">
+        <h3>Atualizados recentemente</h3>
+        <a href="financas/facilita-nfe/"><span class="cplug-codigo">07.11</span> Como usar o Facilita NF-e</a>
+        <a href="financas/contabilidade/"><span class="cplug-codigo">07.10</span> Como enviar os documentos fiscais para a contabilidade</a>
+        <a href="financas/centro-de-custo/"><span class="cplug-codigo">07.09</span> Como usar centros de custo</a>
+      </div>
+    </section>
+  </div>
 
   <section class="cplug-bloco">
-    <h2>Navegue pelo sistema</h2>
-    <p class="cplug-desc">Os temas seguem a mesma ordem do menu da CPlug.</p>
-    <div class="cplug-modulos">
-      <a class="cplug-modulo" href="primeiros-passos/">
-        <span class="cplug-num cplug-gradiente-texto">01.</span><span class="cplug-barra"></span>
-        <span><strong>Primeiros passos</strong><span>O menu do sistema e a troca de loja</span><em>2 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="clientes/">
-        <span class="cplug-num cplug-gradiente-texto">02.</span><span class="cplug-barra"></span>
-        <span><strong>Clientes</strong><span>Cadastro e categorias de clientes</span><em>2 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="produtos/">
-        <span class="cplug-num cplug-gradiente-texto">03.</span><span class="cplug-barra"></span>
-        <span><strong>Produtos</strong><span>Categorias, variações, produtos, importação por planilha, listas de preço, fichas técnicas, adicionais e dados fiscais</span><em>10 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="estoque/">
-        <span class="cplug-num cplug-gradiente-texto">04.</span><span class="cplug-barra"></span>
-        <span><strong>Estoque</strong><span>Entrada, inventário, transferências, fornecedores, compras, produção, transportadoras, saldo, nota fiscal de compra (XML) e categorias de movimentação</span><em>10 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="vendas/">
-        <span class="cplug-num cplug-gradiente-texto">05.</span><span class="cplug-barra"></span>
-        <span><strong>Vendas</strong><span>NF-e de venda e de devolução: emitir, corrigir rejeição, cancelar e inutilizar</span><em>4 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="ponto-de-venda/">
-        <span class="cplug-num cplug-gradiente-texto">06.</span><span class="cplug-barra"></span>
-        <span><strong>Ponto de venda</strong><span>Cadastro dos caixas e configurações do terminal de vendas</span><em>2 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="financas/">
-        <span class="cplug-num cplug-gradiente-texto">07.</span><span class="cplug-barra"></span>
-        <span><strong>Finanças</strong><span>Contas, lançamentos, formas de pagamento, taxas do cartão, conciliação bancária, extrato, relatório de resultados (DRE), plano de contas, centros de custo, contabilidade e Facilita NF-e</span><em>11 manuais</em></span>
-      </a>
-      <a class="cplug-modulo" href="configuracoes/">
-        <span class="cplug-num cplug-gradiente-texto">10.</span><span class="cplug-barra"></span>
-        <span><strong>Configurações</strong><span>Emissão de notas, natureza de operação e nota do PDV</span><em>3 manuais</em></span>
-      </a>
+    <h2>O que você quer fazer?</h2>
+    <p class="cplug-desc">As tarefas mais comuns do dia a dia, separadas por assunto.</p>
+    <div class="cplug-objetivos">
+      <article class="cplug-objetivo">
+        <h3>Vender</h3>
+        <a href="vendas/emitir-nfe/">Emitir uma NF-e de venda</a>
+        <a href="vendas/nota-rejeitada/">Resolver uma nota rejeitada</a>
+        <a href="vendas/cancelar-nota/">Cancelar, inutilizar ou corrigir uma nota</a>
+        <a class="cplug-ver-tudo" href="vendas/">Ver tudo sobre vendas →</a>
+      </article>
+      <article class="cplug-objetivo">
+        <h3>Controlar o estoque</h3>
+        <a href="estoque/entrada-de-estoque/">Dar entrada no estoque</a>
+        <a href="estoque/importar-nota-de-compra/">Importar a nota de compra (XML)</a>
+        <a href="estoque/inventario/">Fazer um inventário</a>
+        <a class="cplug-ver-tudo" href="estoque/">Ver tudo sobre estoque →</a>
+      </article>
+      <article class="cplug-objetivo">
+        <h3>Cuidar do dinheiro</h3>
+        <a href="financas/contas-a-pagar-e-receber/">Lançar uma conta a pagar ou a receber</a>
+        <a href="financas/conciliacao-bancaria/">Fazer a conciliação bancária</a>
+        <a href="financas/relatorio-de-resultados/">Ler o relatório de resultados (DRE)</a>
+        <a class="cplug-ver-tudo" href="financas/">Ver tudo sobre finanças →</a>
+      </article>
+      <article class="cplug-objetivo">
+        <h3>Organizar os produtos</h3>
+        <a href="produtos/cadastrar-produto-com-variacoes/">Cadastrar um produto com variações</a>
+        <a href="produtos/lista-de-precos/">Criar uma lista de preços</a>
+        <a href="produtos/importar-produtos/">Importar produtos de uma planilha</a>
+        <a class="cplug-ver-tudo" href="produtos/">Ver tudo sobre produtos →</a>
+      </article>
+      <article class="cplug-objetivo">
+        <h3>Falar com o contador</h3>
+        <a href="financas/contabilidade/">Enviar os documentos fiscais</a>
+        <a href="financas/facilita-nfe/">Agendar o envio automático</a>
+        <a href="produtos/parametros-fiscais/">Configurar os dados fiscais do produto</a>
+      </article>
+      <article class="cplug-objetivo">
+        <h3>Configurar a loja</h3>
+        <a href="configuracoes/emissao-de-notas/">Configurar a emissão de notas</a>
+        <a href="ponto-de-venda/cadastrar-ponto-de-venda/">Cadastrar um ponto de venda</a>
+        <a href="ponto-de-venda/configurar-terminal/">Configurar o terminal de vendas</a>
+        <a class="cplug-ver-tudo" href="configuracoes/">Ver tudo sobre configurações →</a>
+      </article>
     </div>
     <p class="cplug-desc cplug-em-breve">Em breve: Dispositivos e Relatórios.</p>
   </section>
