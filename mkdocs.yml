@@ -108,6 +108,7 @@ nav:
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
+      - financas/contas-a-pagar-e-receber.md
       - financas/formas-de-pagamento.md
   - 10. Configurações:
       - configuracoes/index.md
