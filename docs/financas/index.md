@@ -14,4 +14,5 @@ Organize o dinheiro da empresa: contas, formas de pagamento, lançamentos e rela
 [<span class="cplug-codigo">07.03</span> Como cadastrar formas de pagamento](formas-de-pagamento.md)
 [<span class="cplug-codigo">07.04</span> Como cadastrar as taxas do cartão](taxas-do-cartao.md)
 [<span class="cplug-codigo">07.05</span> Como fazer a conciliação bancária](conciliacao-bancaria.md)
+[<span class="cplug-codigo">07.06</span> Como consultar o extrato](extrato.md)
 </div>
