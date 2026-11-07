@@ -32,6 +32,22 @@ A estrutura é sempre esta: introdução curta, "Antes de começar" (quando houv
 
 Regras de escrita: títulos começam com "Como…", uma ação por passo, frases curtas, sem termos técnicos, e todo print com texto alternativo descrevendo o que está marcado.
 
+## Ao publicar um manual novo
+
+Além do arquivo do manual e dos prints, atualize sempre:
+
+1. **`mkdocs.yml`**: o manual no `nav`, na ordem do código.
+2. **`docs/<módulo>/index.md`**: a linha do manual na lista do módulo.
+3. **`overrides/home.html`** (página inicial), em três pontos:
+    - **a contagem do módulo** no bloco "Já uso o sistema" (`.cplug-modulos-mini`, ex.: "11 manuais");
+    - **a lista "Atualizados recentemente"**: o manual novo entra no topo e a lista fica sempre com os 3 mais recentes;
+    - **o passo 06 do roteiro "Monte sua loja em 6 passos"**: quando sair o manual de abrir o caixa, troque o "em breve" por um link para ele.
+
+    Se o manual for uma tarefa comum do dia a dia, avalie também colocá-lo num dos cartões de "O que você quer fazer?".
+4. **Planilha "Índice dos manuais"**: status, endereço, tela, data e observação.
+
+Antes de enviar, rode o build estrito (`.venv\Scripts\mkdocs build --strict`): ele acusa link quebrado e página fora do menu.
+
 ## Ver o site no computador
 
 ```bash
