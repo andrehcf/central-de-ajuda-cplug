@@ -92,7 +92,7 @@ Role a tela até o fim: a nova forma aparece em **Formas de pagamentos criadas p
 </div>
 
 !!! info "Bandeiras e taxas dos cartões"
-    As bandeiras aceitas (Visa, Mastercard...) e as taxas cobradas pela maquininha são cadastradas em **Finanças → Contrato de cartões e outros**. Esse manual está a caminho.
+    As bandeiras aceitas (Visa, Mastercard...) e as taxas cobradas pela maquininha são cadastradas em **Finanças → Contrato de cartões e Outros**. Veja [Como cadastrar as taxas do cartão](taxas-do-cartao.md).
 
 !!! tip "Boas práticas"
     - **Use as formas padrão sempre que servirem.** Crie novas só para separar nos relatórios (ex.: "Pix delivery") ou para pagamentos que não existem na lista.

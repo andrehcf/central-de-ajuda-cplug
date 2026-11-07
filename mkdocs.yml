@@ -110,6 +110,7 @@ nav:
       - financas/conta-bancaria.md
       - financas/contas-a-pagar-e-receber.md
       - financas/formas-de-pagamento.md
+      - financas/taxas-do-cartao.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/emissao-de-notas.md
