@@ -92,7 +92,7 @@ No menu do lado esquerdo, clique em **Estoque** e depois em **Estoque**. Na linh
 
 ![Lista de estoques com o menu aberto e a opção Registrar entrada destacada](../imagens/04.01/01-menu-estoque.png){ loading=lazy }
 
-No mesmo menu ficam **Registrar saída**, **Balanço** (o saldo de cada produto) e **Inventários** (a contagem).
+No mesmo menu ficam **Registrar saída**, **Balanço** (o saldo de cada produto) e **Inventários** (a contagem). O atalho **Estoque → Movimentações**, no menu do lado esquerdo, abre a mesma tela **Registrar movimentação**.
 
 ## Escolha o tipo, a categoria e a data
 

@@ -18,4 +18,6 @@ Organize o dinheiro da empresa: contas, formas de pagamento, lançamentos e rela
 [<span class="cplug-codigo">07.07</span> Como ler o relatório de resultados (DRE)](relatorio-de-resultados.md)
 [<span class="cplug-codigo">07.08</span> Como organizar o plano de contas e os grupos financeiros](plano-de-contas.md)
 [<span class="cplug-codigo">07.09</span> Como usar centros de custo](centro-de-custo.md)
+[<span class="cplug-codigo">07.10</span> Como enviar os documentos fiscais para a contabilidade](contabilidade.md)
+[<span class="cplug-codigo">07.11</span> Como usar o Facilita NF-e](facilita-nfe.md)
 </div>
