@@ -218,9 +218,9 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/clientes/cadastrar-
 
 # Como cadastrar um cliente
 
-8 minutos · 8 passos · Atualizado em 01/11/2026
+8 minutos · 8 passos · Atualizado em 11/11/2026
 
-Para salvar um cliente, basta o **nome**. Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
+Para salvar um cliente, o sistema pede só o **nome**, a menos que a sua empresa tenha marcado outros campos como obrigatórios (veja "O sistema pede CPF ou outro campo para salvar", no fim da página). Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
 
 ## Entenda o conceito
 
@@ -378,6 +378,9 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 
 ??? question "O sistema não deixa salvar a empresa"
     Se o **Indicador de IE** estiver em "1 - Contribuinte ICMS", a **Inscrição estadual** é obrigatória. Preencha a IE ou troque o indicador para a opção certa.
+
+??? question "O sistema pede CPF ou outro campo para salvar"
+    A sua empresa pode ter marcado campos como obrigatórios. Isso fica em **Configurações → Preferências do sistema → Clientes**, no bloco **Dados de cadastro**: em **Editar**, escolha **Pessoa física** ou **Pessoa jurídica** e marque cada campo (CPF, E-mail, Endereço...) como **Opcional** ou **Obrigatório**. Se não tiver acesso a essa tela, peça a quem administra o sistema.
 
 ??? question "O endereço não apareceu sozinho"
     Confira se o CEP tem 8 números. Se mesmo assim não aparecer, digite rua, bairro, cidade e estado você mesmo.
@@ -2416,7 +2419,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/estoque/cadastrar-f
 
 # Como cadastrar um fornecedor
 
-7 minutos · 6 passos · Atualizado em 01/11/2026
+7 minutos · 6 passos · Atualizado em 11/11/2026
 
 O **fornecedor** é quem vende para você: a distribuidora de bebidas, o hortifrúti, a padaria que entrega o pão. Ter cada um cadastrado deixa o sistema ligar as suas compras e os seus produtos a quem vendeu.
 
@@ -2483,7 +2486,7 @@ Para **pessoa física**, os campos são **CPF** e **Data de nascimento** (somem 
 ## Escolha as unidades e anote o que importa
 
 - **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. A janela tem busca, filtro por **UF** e **Selecionar todas as lojas**. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**).
-- **Observação sobre este fornecedor:** até 600 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300."
+- **Observação sobre este fornecedor:** até 500 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300." O contador do campo vai até 600, mas o sistema só salva até 500: com mais que isso, o fornecedor não é salvo.
 
 ## Preencha o contato e o endereço
 
@@ -4593,7 +4596,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/formas-de-
 
 # Como cadastrar formas de pagamento
 
-8 minutos · 4 passos · Atualizado em 01/11/2026
+8 minutos · 4 passos · Atualizado em 11/11/2026
 
 As **formas de pagamento** são as opções que o cliente usa para pagar: dinheiro, Pix, cartão, vale-refeição... O sistema **já vem com as mais comuns**. Só crie uma nova se precisar de uma opção que não está na lista.
 
@@ -4625,7 +4628,7 @@ Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 No menu do lado esquerdo, clique em **Configurações** e depois em **Formas de pagamento**.
 
-A lista mostra as formas que já vêm prontas: **PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito, Pagseguro, Débito em Conta, Vale Alimentação, Vale Refeição, Vale Presente, Crédito em Loja, Cartão de Crédito, Pontos de Fidelidade** e **Cartão de Débito**.
+A lista mostra as formas que já vêm prontas: **PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito, Pagseguro, Débito em Conta, Vale Alimentação, Vale Refeição, Vale Presente, Crédito em Loja, Cartão de Crédito, Pontos de Fidelidade** e **Cartão de Débito**. As formas que a sua empresa criou (por exemplo, iFood) aparecem na mesma lista.
 
 Se a forma que você precisa já está na lista, não precisa criar nada.
 
@@ -5268,7 +5271,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/financas/plano-de-c
 
 # Como organizar o plano de contas e os grupos financeiros
 
-8 minutos · 7 passos · Atualizado em 07/11/2026
+8 minutos · 7 passos · Atualizado em 11/11/2026
 
 O **plano de contas** é a lista de **categorias** que você usa para classificar cada receita e cada despesa: aluguel, energia, venda de produtos, salários... Cada categoria fica dentro de um **grupo financeiro**. É essa organização que monta o [relatório de resultados (DRE)](relatorio-de-resultados.md): os grupos viram as linhas principais do relatório, e as categorias, as linhas de baixo.
 
@@ -5349,7 +5352,7 @@ Clique em **Salvar**. A categoria já pode ser escolhida nos lançamentos desta 
 
 ## Libere a categoria para o PDV
 
-A coluna **Disponível para PDV** diz se a categoria pode ser usada no PDV (o caixa da loja). As categorias que vêm prontas já estão como **Disponível:**; uma categoria nova vem como **Indisponível**. Para mudar, clique nos **três pontinhos** da categoria e em **Marcar como disponível para PDV**: o selo muda para **Disponível:** e aparece "Salvo com sucesso". Para voltar, use **Marcar como indisponível para PDV**.
+A coluna **Disponível para PDV** diz se a categoria pode ser usada no PDV (o caixa da loja). Nas categorias que vêm prontas, o selo pode ser **Disponível:** ou **Indisponível**, conforme a empresa (as de faturamento, por exemplo, podem vir indisponíveis); como são padrão do sistema, não mudam por aqui. Uma categoria nova vem como **Indisponível**. Para mudar, clique nos **três pontinhos** da categoria e em **Marcar como disponível para PDV**: o selo muda para **Disponível:** e aparece "Salvo com sucesso". Para voltar, use **Marcar como indisponível para PDV**.
 
 Deixe disponíveis só as categorias que a sua equipe usa no caixa. Na dúvida sobre quais liberar, fale com o suporte.
 

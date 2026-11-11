@@ -2061,9 +2061,9 @@
 
 <h1 id="como-cadastrar-um-cliente">Como cadastrar um cliente</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 8 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 8 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 01/11/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 8 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 8 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 11/11/2026</p>
 </div>
-<p>Para salvar um cliente, basta o <strong>nome</strong>. Mas, se você vai <strong>emitir nota fiscal</strong> para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.</p>
+<p>Para salvar um cliente, o sistema pede só o <strong>nome</strong>, a menos que a sua empresa tenha marcado outros campos como obrigatórios (veja "O sistema pede CPF ou outro campo para salvar", no fim da página). Mas, se você vai <strong>emitir nota fiscal</strong> para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.</p>
 <h2 id="entenda-o-conceito">Entenda o conceito</h2>
 <p>O cadastro do cliente é usado em vários lugares do sistema. O que você preenche aqui é <strong>copiado</strong> para cada um deles:</p>
 <table>
@@ -2249,6 +2249,10 @@
 <details class="question">
 <summary>O sistema não deixa salvar a empresa</summary>
 <p>Se o <strong>Indicador de IE</strong> estiver em "1 - Contribuinte ICMS", a <strong>Inscrição estadual</strong> é obrigatória. Preencha a IE ou troque o indicador para a opção certa.</p>
+</details>
+<details class="question">
+<summary>O sistema pede CPF ou outro campo para salvar</summary>
+<p>A sua empresa pode ter marcado campos como obrigatórios. Isso fica em <strong>Configurações → Preferências do sistema → Clientes</strong>, no bloco <strong>Dados de cadastro</strong>: em <strong>Editar</strong>, escolha <strong>Pessoa física</strong> ou <strong>Pessoa jurídica</strong> e marque cada campo (CPF, E-mail, Endereço...) como <strong>Opcional</strong> ou <strong>Obrigatório</strong>. Se não tiver acesso a essa tela, peça a quem administra o sistema.</p>
 </details>
 <details class="question">
 <summary>O endereço não apareceu sozinho</summary>
