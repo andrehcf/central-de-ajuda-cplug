@@ -4,12 +4,12 @@ description: Crie e organize os grupos financeiros e as categorias (plano de con
 codigo: "07.08"
 modulo: Finanças
 tela: /dashboard/finance/account-plans
-atualizado: 2026-11-07
+atualizado: 2026-11-11
 ---
 
 # Como organizar o plano de contas e os grupos financeiros
 
-<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 7 passos · :material-calendar-check: Atualizado em 07/11/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 7 passos · :material-calendar-check: Atualizado em 11/11/2026</div>
 
 O **plano de contas** é a lista de **categorias** que você usa para classificar cada receita e cada despesa: aluguel, energia, venda de produtos, salários... Cada categoria fica dentro de um **grupo financeiro**. É essa organização que monta o [relatório de resultados (DRE)](relatorio-de-resultados.md): os grupos viram as linhas principais do relatório, e as categorias, as linhas de baixo.
 
@@ -90,7 +90,7 @@ Clique em **Salvar**. A categoria já pode ser escolhida nos lançamentos desta 
 
 ## Libere a categoria para o PDV
 
-A coluna **Disponível para PDV** diz se a categoria pode ser usada no PDV (o caixa da loja). As categorias que vêm prontas já estão como **Disponível:**; uma categoria nova vem como **Indisponível**. Para mudar, clique nos **três pontinhos** da categoria e em **Marcar como disponível para PDV**: o selo muda para **Disponível:** e aparece "Salvo com sucesso". Para voltar, use **Marcar como indisponível para PDV**.
+A coluna **Disponível para PDV** diz se a categoria pode ser usada no PDV (o caixa da loja). Nas categorias que vêm prontas, o selo pode ser **Disponível:** ou **Indisponível**, conforme a empresa (as de faturamento, por exemplo, podem vir indisponíveis); como são padrão do sistema, não mudam por aqui. Uma categoria nova vem como **Indisponível**. Para mudar, clique nos **três pontinhos** da categoria e em **Marcar como disponível para PDV**: o selo muda para **Disponível:** e aparece "Salvo com sucesso". Para voltar, use **Marcar como indisponível para PDV**.
 
 Deixe disponíveis só as categorias que a sua equipe usa no caixa. Na dúvida sobre quais liberar, fale com o suporte.
 

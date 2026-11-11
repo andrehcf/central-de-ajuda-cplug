@@ -4,12 +4,12 @@ description: Cadastre quem vende mercadoria para você (empresa ou pessoa), com 
 codigo: "04.04"
 modulo: Estoque
 tela: /dashboard/stock/suppliers
-atualizado: 2026-11-01
+atualizado: 2026-11-11
 ---
 
 # Como cadastrar um fornecedor
 
-<div class="cplug-meta" markdown>:material-clock-outline: 7 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 7 minutos · :material-format-list-numbered: 6 passos · :material-calendar-check: Atualizado em 11/11/2026</div>
 
 O **fornecedor** é quem vende para você: a distribuidora de bebidas, o hortifrúti, a padaria que entrega o pão. Ter cada um cadastrado deixa o sistema ligar as suas compras e os seus produtos a quem vendeu.
 
@@ -76,7 +76,7 @@ Para **pessoa física**, os campos são **CPF** e **Data de nascimento** (somem 
 ## Escolha as unidades e anote o que importa
 
 - **Escolha em quais unidades exibir:** se a empresa tem mais de uma loja, é aqui que você escolhe em quais lojas o fornecedor fica disponível. Clique em **Selecionar unidades**, marque as lojas e clique em **Salvar** na janela. A janela tem busca, filtro por **UF** e **Selecionar todas as lojas**. A loja atual já vem marcada (exemplo: **1 de 5 unidades selecionadas**).
-- **Observação sobre este fornecedor:** até 600 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300."
+- **Observação sobre este fornecedor:** até 500 caracteres. Exemplo: "Entrega às terças. Pedido mínimo R$ 300." O contador do campo vai até 600, mas o sistema só salva até 500: com mais que isso, o fornecedor não é salvo.
 
 ## Preencha o contato e o endereço
 

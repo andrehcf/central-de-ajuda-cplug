@@ -4,14 +4,14 @@ description: Passo a passo para cadastrar um cliente pessoa física ou jurídica
 codigo: "02.01"
 modulo: Clientes
 tela: /dashboard/customers/new
-atualizado: 2026-11-01
+atualizado: 2026-11-11
 ---
 
 # Como cadastrar um cliente
 
-<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 8 passos · :material-calendar-check: Atualizado em 11/11/2026</div>
 
-Para salvar um cliente, basta o **nome**. Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
+Para salvar um cliente, o sistema pede só o **nome**, a menos que a sua empresa tenha marcado outros campos como obrigatórios (veja "O sistema pede CPF ou outro campo para salvar", no fim da página). Mas, se você vai **emitir nota fiscal** para ele, o cadastro precisa estar completo. Sem CPF ou CNPJ e sem endereço completo, a nota é recusada pela Sefaz.
 
 ## Entenda o conceito
 
@@ -169,6 +169,9 @@ No canto de baixo, à direita, clique no botão verde **Salvar**.
 
 ??? question "O sistema não deixa salvar a empresa"
     Se o **Indicador de IE** estiver em "1 - Contribuinte ICMS", a **Inscrição estadual** é obrigatória. Preencha a IE ou troque o indicador para a opção certa.
+
+??? question "O sistema pede CPF ou outro campo para salvar"
+    A sua empresa pode ter marcado campos como obrigatórios. Isso fica em **Configurações → Preferências do sistema → Clientes**, no bloco **Dados de cadastro**: em **Editar**, escolha **Pessoa física** ou **Pessoa jurídica** e marque cada campo (CPF, E-mail, Endereço...) como **Opcional** ou **Obrigatório**. Se não tiver acesso a essa tela, peça a quem administra o sistema.
 
 ??? question "O endereço não apareceu sozinho"
     Confira se o CEP tem 8 números. Se mesmo assim não aparecer, digite rua, bairro, cidade e estado você mesmo.

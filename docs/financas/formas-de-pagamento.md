@@ -4,12 +4,12 @@ description: Veja as formas de pagamento que já vêm no sistema e crie novas, c
 codigo: "07.03"
 modulo: Finanças
 tela: /dashboard/payments
-atualizado: 2026-11-01
+atualizado: 2026-11-11
 ---
 
 # Como cadastrar formas de pagamento
 
-<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 01/11/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 8 minutos · :material-format-list-numbered: 4 passos · :material-calendar-check: Atualizado em 11/11/2026</div>
 
 As **formas de pagamento** são as opções que o cliente usa para pagar: dinheiro, Pix, cartão, vale-refeição... O sistema **já vem com as mais comuns**. Só crie uma nova se precisar de uma opção que não está na lista.
 
@@ -41,7 +41,7 @@ Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
 No menu do lado esquerdo, clique em **Configurações** e depois em **Formas de pagamento**.
 
-A lista mostra as formas que já vêm prontas: **PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito, Pagseguro, Débito em Conta, Vale Alimentação, Vale Refeição, Vale Presente, Crédito em Loja, Cartão de Crédito, Pontos de Fidelidade** e **Cartão de Débito**.
+A lista mostra as formas que já vêm prontas: **PIX, Dinheiro, Boleto, Cheque, Faturamento, Depósito, Pagseguro, Débito em Conta, Vale Alimentação, Vale Refeição, Vale Presente, Crédito em Loja, Cartão de Crédito, Pontos de Fidelidade** e **Cartão de Débito**. As formas que a sua empresa criou (por exemplo, iFood) aparecem na mesma lista.
 
 Se a forma que você precisa já está na lista, não precisa criar nada.
 
