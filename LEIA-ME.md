@@ -28,9 +28,7 @@ atualizado: 2026-10-29
 ---
 ```
 
-A estrutura é sempre esta: introdução curta, "Antes de começar" (quando houver), passos dentro de `<div class="passos" markdown>` (cada `##` vira um passo numerado), "Como saber que deu certo", "Deu algum problema?" e, no fim, uma linha `palavras-chave` com as palavras que o cliente usa no dia a dia, para a busca achar.
-
-Regras de escrita: títulos começam com "Como…", uma ação por passo, frases curtas, sem termos técnicos, e todo print com texto alternativo descrevendo o que está marcado.
+A estrutura completa do corpo, as regras de escrita, como testar no ERP, os prints e a revisão estão no **[`GUIA-DOS-MANUAIS.md`](GUIA-DOS-MANUAIS.md)**. Leia antes de escrever o primeiro manual.
 
 ## Ao publicar um manual novo
 
