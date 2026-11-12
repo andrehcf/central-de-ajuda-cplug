@@ -20,7 +20,7 @@ atualizado: 2026-11-12
 1. No ERP, vá em **Ponto de Venda > Gerência** e expanda a linha do caixa **Aberto**.
 2. Pressione **F12**, abra a aba **Console**, digite `showBtnPosForceClosure();` e pressione **Enter**. Feche o F12 e clique no botão **Forçar Fechamento do Caixa** que apareceu na página.
 3. Vá em **Ponto de Venda > Cadastro** e abra o primeiro PDV.
-4. Pressione **F12**, abra o **Console**, digite `editServerPos();` e pressione **Enter**. Feche o F12, limpe o campo do servidor (removendo o servidor offline) e clique em **Salvar**. Repita em todos os PDVs.
+4. Pressione **F12**, abra o **Console**, digite `editServerPos();` e pressione **Enter**. Feche o F12, limpe o campo **Applicativo Offline**, que aparece no formulário (removendo o servidor offline), e clique em **Salvar**. Repita em todos os PDVs.
 
 ## Parte 2: desinstalação na máquina antiga
 
@@ -31,8 +31,8 @@ atualizado: 2026-11-12
 
 ## Parte 3: novo ambiente no ERP
 
-1. Vá em **Ponto de Venda > Aplicativos**. Exclua o servidor antigo e clique em **Criar Novo Servidor**.
-2. Clique no ícone verde de chave na linha do novo servidor para gerar o PIN. Crie também o novo terminal (PDV) e guarde o PIN dele.
+1. Vá em **Ponto de Venda > Aplicativos**. Exclua o servidor antigo e clique em **Cadastrar novo aplicativo > Novo Servidor**.
+2. Na linha do novo servidor, clique no ícone verde de seta (**Gerar Pin para acessar o aplicativo**). Crie também o novo terminal em **Cadastrar novo aplicativo > Novo Terminal** e gere o PIN dele do mesmo jeito.
 
 ## Parte 4: instalação e vinculação na máquina nova
 
@@ -40,7 +40,7 @@ atualizado: 2026-11-12
     - CPlug Server (no servidor): [CPServerInstall-2.12.8](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.8.exe)
     - CPlug PDV (nos terminais): [CPlugPdv2Install-2.12.8](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.8.exe)
 2. Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.
-3. No ERP, vá em **Ponto de Venda > Cadastro**, edite cada PDV, vincule o novo servidor e salve.
+3. No ERP, vá em **Ponto de Venda > Cadastro** e edite cada PDV. O campo **Applicativo Offline** fica escondido: abra o **Console** (F12), digite `editServerPos();` e pressione **Enter**, como na Parte 1. Selecione o novo servidor e salve.
 
 ## Resultado esperado
 

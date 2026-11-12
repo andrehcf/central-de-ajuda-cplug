@@ -26,19 +26,20 @@ atualizado: 2026-11-12
 ## Parte 2: Servidor CPrint no ERP 1
 
 1. No ERP 1, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Defina o **Endereço IP** conforme o cenário:
+2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (só o PDV local imprime):** use `127.0.0.1`.
     - **Cenário B (aplicativo de mesas/comandas):** o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: `10.0.0.108`).
 3. Mantenha a porta `8081`, marque a versão **2.0** e salve.
 
 ## Parte 3: ponto de impressão
 
-1. Abra a aba **Pontos de Impressão** e clique em **Editar** na impressora.
-2. Em **Porta ou IP da Impressora**, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
-3. Em **Porta da Impressora de Rede**, informe `9100`.
-4. Em **Tipo de Comunicação**, selecione **Acesso Direto** (obrigatório).
-5. Em **Servidor CPrint**, escolha o servidor da Parte 2 (Local ou o IP do computador do spooler, conforme o cenário).
-6. Selecione **Fabricante** e **Modelo** e clique em **Salvar**.
+1. Abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Cozinha) e, em **Impressora**, informe o nome da impressora no computador.
+3. Em **Porta ou IP da Impressora**, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
+4. Em **Porta da Impressora de Rede**, informe `9100`.
+5. Em **Tipo de Comunicação**, selecione **Acesso Direto** (obrigatório).
+6. Em **Servidor CPrint**, escolha o servidor da Parte 2 (Local ou o IP do computador do spooler, conforme o cenário).
+7. Selecione **Fabricante** e **Modelo** e clique em **Salvar**.
 
 ## Resultado esperado
 

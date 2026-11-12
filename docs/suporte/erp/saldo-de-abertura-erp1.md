@@ -18,9 +18,9 @@ atualizado: 2026-11-12
 ## Passo a passo
 
 1. No ERP 1, clique na **engrenagem (Configurações)**.
-2. Vá em **Configurações do PDV > Configurações do PDV**.
+2. Vá em **Configurações do PDV** e abra a aba **Configurações do PDV**.
 3. Role até a seção **Fechamento**.
-4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo e ajuste as demais regras de fechamento.
+4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo. Na mesma seção ficam **Transferência automática ao fechar**, **Conta de destino** e **Exigir aprovação do fech. de caixa?**.
 5. Clique em **Salvar**.
 
 ## Regras importantes

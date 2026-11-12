@@ -22,19 +22,20 @@ atualizado: 2026-11-12
 ## Parte 1: Servidor CPrint local
 
 1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Cadastre ou selecione o servidor **Local**.
+2. Clique em **Novo Servidor CPrint** ou, se o servidor **Local** já existir, no ícone de editar dele.
 3. Confira o **Endereço IP** `127.0.0.1` e a porta `8081`.
 4. Deixe a versão **2.0** e clique em **Salvar**.
 
 ## Parte 2: ponto de impressão
 
 1. Na mesma tela, abra a aba **Pontos de Impressão**.
-2. Clique em **Editar** (ou cadastre) a impressora.
-3. Em **Porta ou IP da Impressora**, informe só o IP fixo da impressora (ex.: `192.168.15.200`), **sem** as barras invertidas usadas no modelo USB.
-4. Em **Porta da Impressora de Rede**, informe `9100`.
-5. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
-6. Em **Servidor CPrint**, selecione **Local**.
-7. Preencha **Fabricante** e **Modelo** e clique em **Salvar**.
+2. Clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+3. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Cozinha).
+4. Em **Porta ou IP da Impressora**, informe só o IP fixo da impressora (ex.: `192.168.15.200`), **sem** as barras invertidas usadas no modelo USB.
+5. Em **Porta da Impressora de Rede**, informe `9100`.
+6. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+7. Em **Servidor CPrint**, selecione **Local**.
+8. Preencha **Fabricante** e **Modelo** e clique em **Salvar**.
 
 ## Resultado esperado
 

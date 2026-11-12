@@ -23,10 +23,10 @@ atualizado: 2026-11-12
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Localize o terminal e abra para editar.
-3. Desça até **Configurações da SITEF (Opcional)**.
-4. **Correção do ID da Empresa:** o campo **ID** pode vir com 9 dígitos (causa falha). Clique com o botão direito **em cima do campo ID** e selecione **Inspecionar**.
+3. Desça até **Configurações da SITEF (Opcional)** e clique para expandir.
+4. **Correção do ID da Empresa:** o campo **ID** aceita 8 dígitos, mas pode vir preenchido com 9 (causa falha). Clique com o botão direito **em cima do campo ID** e selecione **Inspecionar**.
 5. O DevTools abre na linha do campo. Dê dois cliques no valor do atributo `value="XXXXXXXXX"`, **apague um zero excedente** para ficar com 8 dígitos e pressione **Enter**.
-6. Em **Configurações da VPN**, clique em **Cadastrar Terminal** (o botão só aparece com o módulo TEF ativo no plano).
+6. Em **Configurações da VPN**, clique em **Cadastrar Terminal**. O botão só aparece com licença de TEF disponível no plano: sem ela, a tela mostra "Você atingiu o limite de TEF utilizadas" e só o campo **Terminal (VPN)**, para escolher um terminal já cadastrado.
 7. Na janela **CRIAR NOVO TERMINAL (GSURF)**, o CNPJ do cliente vem preenchido. Em **Descrição**, digite uma identificação (ex.: "PDV 1", "Caixa Comanda").
 8. Clique em **Confirmar** e depois em **Salvar**, no canto inferior esquerdo.
 

@@ -26,20 +26,24 @@ atualizado: 2026-11-12
 ## Parte 2: Servidor CPrint no ERP 1
 
 1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Adicione ou edite o servidor e defina o **Endereço IP** conforme o cenário:
+2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1`.
     - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
 3. Em **Porta**, informe `8081`.
 4. Em **Versão**, marque **2.0** e clique em **Salvar**.
 
+!!! tip "Aplicativo Servidor CPrint"
+    A tela de edição do servidor tem o botão de download do aplicativo **Servidor CPrint**, que precisa estar instalado no computador onde a impressora está ligada.
+
 ## Parte 3: ponto de impressão no ERP 1
 
-1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Editar** (ou cadastre) a impressora.
-2. Em **Porta ou IP da Impressora**, monte o caminho com o IP local e o nome de compartilhamento da Parte 1: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
-3. Em **Porta da Impressora de Rede**, informe `9100`.
-4. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
-5. Em **Servidor CPrint**, selecione o servidor criado na Parte 2.
-6. Preencha **Fabricante** (ex.: ELGIN) e **Modelo** (ex.: I9) e clique em **Salvar**.
+1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Caixa) e, em **Impressora**, informe o nome da impressora no computador.
+3. Em **Porta ou IP da Impressora**, monte o caminho com o IP local e o nome de compartilhamento da Parte 1: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
+4. Em **Porta da Impressora de Rede**, informe `9100`.
+5. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+6. Em **Servidor CPrint**, selecione o servidor criado na Parte 2.
+7. Preencha **Fabricante** (ex.: ELGIN) e **Modelo** (ex.: I9) e clique em **Salvar**.
 
 ## Resultado esperado
 
