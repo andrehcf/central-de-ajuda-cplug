@@ -6,7 +6,7 @@ hide:
 
 # Suporte técnico
 
-Procedimentos do time de suporte e implantação: instalação, rede, periféricos, TEF e correções. São 34 procedimentos, cada um com um código (PDV-001, PER-005...). Para achar um, digite o código na busca.
+Procedimentos do time de suporte e implantação: instalação, rede, periféricos, TEF e correções. São 35 procedimentos, cada um com um código (PDV-001, PER-005...). Para achar um, digite o código na busca.
 
 !!! info "Para quem é esta seção"
     Estes procedimentos são técnicos e mexem em pastas, processos e configurações do Windows e do servidor local. Se você é cliente e não tem certeza do que fazer, fale com o suporte antes.
@@ -64,6 +64,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 [<span class="cplug-codigo">PER-005</span> Impressora USB no ERP 2.0](perifericos/impressora-usb-erp2.md)
 [<span class="cplug-codigo">PER-006</span> Impressora de rede com spooler/driver do Windows no ERP 2.0](perifericos/impressora-spooler-erp2.md)
 [<span class="cplug-codigo">PER-007</span> Impressora de rede direta (Ethernet) no ERP 2.0](perifericos/impressora-rede-erp2.md)
+[<span class="cplug-codigo">PER-008</span> Configuração e problemas de etiquetas (Elgin e Argox)](perifericos/etiquetas-elgin-argox.md)
 </div>
 
 ## [Financeiro](financeiro/index.md)

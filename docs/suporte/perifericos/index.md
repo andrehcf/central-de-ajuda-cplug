@@ -6,7 +6,7 @@ hide:
 
 # Periféricos
 
-Impressoras USB, de rede e com spooler, no ERP Legado e no ERP 2.0.
+Impressoras USB, de rede e com spooler, no ERP Legado e no ERP 2.0, e etiquetadoras Elgin e Argox.
 
 <div class="cplug-lista" markdown>
 [<span class="cplug-codigo">PER-001</span> Impressora não imprime a página de teste do Windows](impressora-sem-pagina-de-teste.md)
@@ -16,4 +16,5 @@ Impressoras USB, de rede e com spooler, no ERP Legado e no ERP 2.0.
 [<span class="cplug-codigo">PER-005</span> Impressora USB no ERP 2.0](impressora-usb-erp2.md)
 [<span class="cplug-codigo">PER-006</span> Impressora de rede com spooler/driver do Windows no ERP 2.0](impressora-spooler-erp2.md)
 [<span class="cplug-codigo">PER-007</span> Impressora de rede direta (Ethernet) no ERP 2.0](impressora-rede-erp2.md)
+[<span class="cplug-codigo">PER-008</span> Configuração e problemas de etiquetas (Elgin e Argox)](etiquetas-elgin-argox.md)
 </div>
