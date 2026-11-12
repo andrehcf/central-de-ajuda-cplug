@@ -6609,11 +6609,11 @@ Crie ou altere o contrato de cartões com o provedor TEF correspondente, como em
 
 No computador onde o PDV roda:
 
-1. Faça a **sincronização** manual do **CPServer** e depois do aplicativo do **PDV**.
+1. Faça a **sincronização** manual do **CPServer** e depois do aplicativo do **PDV** (no PDV: menu de três barras > **Sincronizar**, atalho **Ctrl + S**).
 2. Clique no menu (três barras) no **canto superior esquerdo**.
-3. Selecione **Área Administrativa** e entre com usuário e senha de gerente/administrador.
+3. Selecione **Área administrativa** (atalho **F11**) e entre com usuário e senha de gerente/administrador.
 4. No menu da esquerda, abra **Operações TEF > Instalação**.
-5. Confira os dados vindos do ERP: Gateway **SITEF**, ID da Empresa correto, IP do servidor local `127.0.0.1`.
+5. Confira os dados vindos do ERP: em **Selecione o gateway**, **SITEF** marcado; **ID da Empresa** com 8 dígitos; **Servidor** `127.0.0.1`. A tela também mostra **CPF/CNPJ**, **OTP**, **Ponto de Captura**, **Porta** e **Porta USB (opcional)**.
 6. Clique no botão azul **INSTALAR**, no rodapé.
 7. Aguarde a mensagem de instalação concluída.
 
@@ -6943,7 +6943,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrut
 
 # PDV offline em rede local (IP fixo)
 
-Configuração · Arquitetura · PDV · Rede · Operação offline · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Configuração · Arquitetura · PDV · Rede · Operação offline · PDV desktop · Atualizado em 12/11/2026
 
 **Necessidade:** operar os PDVs na rede local mesmo sem internet.
 
@@ -6959,10 +6959,10 @@ Configuração · Arquitetura · PDV · Rede · Operação offline · PDV deskto
 
 1. **No PDV servidor (máquina principal):** a aplicação conecta localmente por `localhost`. Nada a mudar.
 2. **Nos PDVs secundários:**
-    1. Abra a tela de conexão com o servidor no PDV.
-    2. No campo **IP do servidor**, troque `localhost` pelo **IP fixo da máquina servidora** (ex.: `192.168.1.100`).
+    1. Na barra superior do PDV, clique no ícone **Status do servidor** (ao lado do sino). Abre a tela de conexão, com os campos **IP do servidor** e **Porta**.
+    2. No campo **IP do servidor**, troque `localhost` pelo **IP fixo da máquina servidora** (ex.: `192.168.1.100`). Se os campos estiverem bloqueados para edição, fale com o suporte.
     3. Mantenha a **Porta** padrão `12000`.
-    4. Salve/volte ao início e confira a mensagem **Você está conectado ao servidor**.
+    4. Confira a mensagem **Você está conectado ao servidor** e clique em **VOLTAR AO INÍCIO**.
 
 ## Resultado esperado
 
@@ -6974,7 +6974,7 @@ Configuração · Arquitetura · PDV · Rede · Operação offline · PDV deskto
 
 **Relacionados:** [Fechamento de caixa com vários PDVs](../pdv/fechamento-com-varios-pdvs.md)
 
-Palavras-chave: pdv offline sem internet rede local ip do servidor localhost porta 12000 pdv secundário contingência você está conectado ao servidor
+Palavras-chave: pdv offline sem internet rede local ip do servidor status do servidor localhost porta 12000 pdv secundário contingência você está conectado ao servidor
 
 ---
 Código: INFRA-002 | Módulo: Suporte técnico | Tela no sistema: 
@@ -7060,7 +7060,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/falha-a
 
 # Falha na aproximação de cartão no PINPAD (SiTef)
 
-Erro · PDV · TEF · Periféricos · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Erro · PDV · TEF · Periféricos · PDV desktop · Atualizado em 12/11/2026
 
 **Sintoma:** ao pagar por aproximação no PDV, o PINPAD não lê o cartão ou mostra erro de comunicação.
 
@@ -7073,9 +7073,9 @@ Erro · PDV · TEF · Periféricos · PDV desktop · versão do ERP não confirm
 3. Localize a pasta **CliSiTef** e renomeie para `CliSiTef.old`.
 4. Abra o Gerenciador de Tarefas (**Ctrl + Shift + Esc**).
 5. Na aba **Detalhes**, localize o processo do Java (`java.exe` ou `javaw.exe`), clique com o botão direito e selecione **Finalizar árvore de processos**.
-6. Volte para a tela do PDV. O ícone do CPServer na barra superior fica vermelho, porque o Java foi finalizado.
-7. Clique no ícone do CPServer para reiniciá-lo e aguarde até ele ficar verde.
-8. Abra uma venda, inicie um pagamento em **Débito** ou **Crédito** e aguarde o PINPAD terminar a carga de registros.
+6. Volte para a tela do PDV. O ícone **Status do servidor** (o CPServer), na barra superior, ao lado do sino, fica vermelho, porque o Java foi finalizado.
+7. Clique no ícone **Status do servidor**: o PDV abre a tela de conexão e procura o servidor de novo. Aguarde até o ícone ficar verde e a tela mostrar **Você está conectado ao servidor**; depois clique em **VOLTAR AO INÍCIO**.
+8. Abra uma venda, inicie um pagamento em **Cartão de Débito** ou **Cartão de Crédito** e aguarde o PINPAD terminar a carga de registros.
 
 ## Resultado esperado
 
@@ -7092,7 +7092,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/vincula
 
 # Vinculação do Smart TEF ao PDV
 
-Configuração · PDV · TEF · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Configuração · PDV · TEF · PDV desktop · Atualizado em 12/11/2026
 
 **Objetivo:** vincular a maquininha Smart TEF (POS) ao frente de caixa (PDV) pelo aplicativo Smart TEF e associar o contrato de cartões.
 
@@ -7102,18 +7102,18 @@ Configuração · PDV · TEF · PDV desktop · versão do ERP não confirmada ·
 
 ## Etapa 1: ativação na maquininha
 
-1. Na maquininha Smart TEF, abra o aplicativo **Smart TEF**.
-2. Na tela inicial, toque em **Ler QR Code**. A câmera do aparelho abre.
+1. Na maquininha Smart TEF, abra o aplicativo **CPlug Pay** (é o aplicativo que o PDV pede para ler o QR Code).
+2. Use a opção de ler QR Code do aplicativo. A câmera do aparelho abre.
 
 ## Etapa 2: vinculação no frente de caixa
 
-1. No computador do PDV, abra a **Área Administrativa**.
-2. Vá em **Operações TEF > Cplug Pay**.
-3. O PDV mostra um QR Code. Aponte a câmera da maquininha para ele para sincronizar.
+1. No computador do PDV, clique no menu (três barras), no canto superior esquerdo, e selecione **Área administrativa** (atalho **F11**). Entre com usuário e senha de gerente/administrador.
+2. No menu da esquerda, abra **Operações TEF > CPlug Pay**.
+3. O PDV mostra um QR Code com a mensagem "Realize a leitura do QRCode pelo aplicativo CPlug Pay". Aponte a câmera da maquininha para ele para sincronizar.
 
 ## Etapa 3: vínculo do contrato de cartões
 
-1. Ainda na Área Administrativa do PDV, abra **Habilitar/Desabilitar**.
+1. Ainda na Área administrativa do PDV, abra **Operações TEF > Habilitar / Desabilitar**. Se a tela mostrar só a mensagem **TEF não instalado.**, a instalação do TEF ainda não foi feita no PDV: fale com o suporte.
 2. No campo de TEF correspondente, vincule o contrato de cartões configurado no ERP.
 3. Clique em **Salvar**.
 
@@ -7123,7 +7123,7 @@ Configuração · PDV · TEF · PDV desktop · versão do ERP não confirmada ·
 
 **Relacionados:** [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md) · [Falha na aproximação de cartão no PINPAD](falha-aproximacao-pinpad.md)
 
-Palavras-chave: smart tef pos maquininha qr code cplug pay operações tef área administrativa habilitar desabilitar contrato de cartões vincular
+Palavras-chave: smart tef pos maquininha qr code cplug pay operações tef área administrativa habilitar desabilitar tef não instalado contrato de cartões vincular
 
 ---
 Código: PDV-003 | Módulo: Suporte técnico | Tela no sistema: 
@@ -7131,18 +7131,20 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/corrigi
 
 # Correção de lançamento incorreto em saldo de cliente
 
-Erro operacional · Dúvida · PDV · Saldo de cliente · Fluxo de caixa · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Erro operacional · Dúvida · PDV · Saldo de cliente · Fluxo de caixa · PDV desktop · Atualizado em 12/11/2026
 
-**Cenário:** uma **Adição de crédito** (saldo do cliente) foi feita com a forma de pagamento errada (exemplo: lançada em PIX, mas o cliente pagou em dinheiro) e o operador tentou corrigir com a função **Remover**.
+**Cenário:** uma adição de crédito (saldo do cliente) foi feita com a forma de pagamento errada (exemplo: lançada em PIX, mas o cliente pagou em dinheiro) e o operador tentou corrigir com a função **REMOVER**.
 
-O sistema não tem cancelamento direto e toda **Remoção de saldo** gera uma saída automática em **Dinheiro**. Por isso o caixa fica com divergência entre as formas de pagamento no fechamento, embora o total final esteja correto.
+No PDV, o crédito fica em **CRÉDITO DOS CLIENTES (C)**, na tela inicial: escolha o cliente e use as abas **ADICIONAR (F3)** e **REMOVER (F4)**, com o campo **Método de Pagamento** e o botão **CONFIRMAR**. O lado direito mostra o **Histórico** do cliente.
+
+O sistema não tem cancelamento direto e toda remoção de crédito gera uma saída em **Dinheiro**: na aba **REMOVER**, o **Método de Pagamento** fica travado em Dinheiro. Por isso o caixa fica com divergência entre as formas de pagamento no fechamento, embora o total final esteja correto.
 
 ## Passo 1: ajuste no cadastro do cliente
 
-1. Para o cliente não sair prejudicado e o histórico ficar correto, confira se o histórico dele tem estes lançamentos:
-    - a primeira **Adição de crédito**: o lançamento errado (ex.: PIX);
-    - a **Remoção de crédito**: a tentativa de correção do operador (sai como Dinheiro);
-    - a nova **Adição de crédito**: o lançamento certo, com a forma que o cliente usou de verdade (ex.: Dinheiro).
+1. Para o cliente não sair prejudicado e o histórico ficar correto, confira se o **Histórico** dele tem estes lançamentos:
+    - a primeira adição de crédito: o lançamento errado (ex.: PIX);
+    - a remoção de crédito: a tentativa de correção do operador (sai como Dinheiro);
+    - a nova adição de crédito (aba **ADICIONAR**): o lançamento certo, com a forma que o cliente usou de verdade (ex.: Dinheiro).
 2. O saldo final do cliente fica correto e pronto para uso. O histórico mostra o erro e a correção, para auditoria.
 
 ## Passo 2: no caixa, não faça reforço
@@ -7158,15 +7160,15 @@ No fim do expediente, a divergência aparece só nas modalidades:
 
 No campo de observação/justificativa do fechamento, o operador usa este texto padrão:
 
-> "Divergência de valor entre as modalidades Dinheiro (Sobra) e PIX (Falta) devido a erro de lançamento manual na Adição de Saldo do cliente [Nome do Cliente]. O saldo do cliente e o valor total bruto do caixa físico encontram-se corretos."
+> "Divergência de valor entre as modalidades Dinheiro (Sobra) e PIX (Falta) devido a erro de lançamento manual na adição de crédito do cliente [Nome do Cliente]. O saldo do cliente e o valor total bruto do caixa físico encontram-se corretos."
 
 !!! tip "Como evitar"
-    - Conferir a forma de pagamento na tela de **Adição de crédito** antes de clicar em **Confirmar**.
+    - Conferir o campo **Método de Pagamento** da aba **ADICIONAR** antes de clicar em **CONFIRMAR**.
     - Se o erro for percebido antes de qualquer outra ação, avisar o gerente na hora para anotar a justificativa, em vez de tentar remover (a remoção gera saída em dinheiro).
 
 **Relacionados:** [Como configurar o terminal de vendas](../../ponto-de-venda/configurar-terminal.md) · [Fechamento de caixa com vários PDVs](fechamento-com-varios-pdvs.md)
 
-Palavras-chave: saldo do cliente crédito de cliente adição de crédito remover saldo forma de pagamento errada pix dinheiro sobra falta fechamento de caixa justificativa
+Palavras-chave: saldo do cliente crédito de cliente crédito dos clientes adição de crédito adicionar remover saldo forma de pagamento errada pix dinheiro sobra falta fechamento de caixa justificativa
 
 ---
 Código: PDV-004 | Módulo: Suporte técnico | Tela no sistema: 
@@ -7174,18 +7176,18 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/atalhos
 
 # Atalhos numéricos na tela de pagamento do PDV
 
-Configuração · PDV · Tela de pagamento · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Configuração · PDV · Tela de pagamento · PDV desktop · Atualizado em 12/11/2026
 
 **Objetivo:** fazer a tela de pagamento do PDV mostrar um número ao lado de cada forma de pagamento, para o operador escolher pelo teclado (1 a 9).
 
 ## Passo a passo
 
-1. Na tela de finalização da venda, olhe o canto superior direito.
-2. Clique na **engrenagem (Configurações)**, na barra superior, ao lado do menu principal.
-3. Na janela **Configurações de pagamento**, localize o primeiro campo: **Método de pagamento padrão**.
+1. No **Balcão**, com um produto no carrinho, clique em **PAGAMENTO (F2)** para abrir a tela de pagamento. Não é preciso receber nem finalizar a venda.
+2. Clique na **engrenagem** (**Configurações de pagamento**), o último ícone da barra superior, no canto direito.
+3. Na janela **Configurações de pagamento**, localize o primeiro campo: **Método de pagamento padrão** (na tela aparece "Metodo de pagamento padrão"). Ele mostra a forma que já vem selecionada na tela de pagamento (ex.: Dinheiro).
 4. Clique no **X** dentro do campo para limpar. Nenhum método pode ficar selecionado.
-5. Clique no botão verde **SALVAR (ENTER)**, no rodapé da janela.
-6. Volte para a tela anterior (balcão/venda) e avance de novo para a tela de pagamento, para o PDV montar o novo layout.
+5. Clique no botão verde **SALVAR (ENTER)**, no rodapé da janela. Os campos de contrato padrão logo abaixo (**Cartão de Crédito**, **Cartão de Débito**, **PIX**) não precisam ser mexidos.
+6. Clique em **VOLTAR (SHIFT + ESC)** para voltar ao Balcão e clique de novo em **PAGAMENTO (F2)**, para o PDV montar o novo layout.
 
 ## Resultado esperado
 
@@ -7200,7 +7202,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/fechame
 
 # Fechamento de caixa com vários PDVs (mesas, comandas e delivery)
 
-Dúvida · PDV · Fluxo de caixa · Operação · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
+Dúvida · PDV · Fluxo de caixa · Operação · PDV desktop · Atualizado em 12/11/2026
 
 **Dúvida:** como funciona o fechamento de caixa com mais de um terminal e como mesas, comandas e delivery se comportam entre as telas.
 
