@@ -6161,7 +6161,7 @@ Erro · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2026
 
 - A impressora passa a aparecer na lista da impressão parcial de mesas.
 
-**Relacionados:** [Impressora USB no ERP 2](../perifericos/impressora-usb-erp2.md) · [Impressora de rede direta no ERP 2](../perifericos/impressora-rede-erp2.md)
+**Relacionados:** [Impressora USB no ERP 2.0](../perifericos/impressora-usb-erp2.md) · [Impressora de rede direta no ERP 2.0](../perifericos/impressora-rede-erp2.md)
 
 Palavras-chave: impressão parcial mesas impressora não aparece periféricos informações do servidor porta 8081 conta parcial
 
@@ -6230,7 +6230,7 @@ Erro · Infraestrutura · ERP 2.0 · Banco de dados · Atualizado em 12/11/2026
     4. Renomeie a pasta do PDV adicionando `.old` (ex.: `ConnectPlug PDV.loja_antiga.old`). O aplicativo do caixa passa a pedir um novo PIN.
     5. Entre no ERP da **nova conta** do cliente, gere os PINs de Servidor e PDV e informe nos sistemas locais.
 
-**Relacionados:** [Migração e troca de servidor local (ERP 1.0)](trocar-servidor-erp1.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+**Relacionados:** [Migração e troca de servidor local (ERP Legado)](trocar-servidor-erp1.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
 
 Palavras-chave: trocar servidor migração cplug server cpserver mongodb banco corrompido revogar licença pin pdv desktop formatar computador novo appdata pasta data
 
@@ -6238,11 +6238,11 @@ Palavras-chave: trocar servidor migração cplug server cpserver mongodb banco c
 Código: ERP-003 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/trocar-servidor-erp1/
 
-# Migração e troca de servidor local (ERP 1.0 / CPlug Server)
+# Migração e troca de servidor local (ERP Legado / CPlug Server)
 
-Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12/11/2026
+Erro · Infraestrutura · ERP Legado · Banco de dados · Atualizado em 12/11/2026
 
-**Quando usar:** falha no servidor local da versão 1.0, troca de máquina ou banco MongoDB corrompido, exigindo encerramento forçado pelo Console e nova implantação.
+**Quando usar:** falha no servidor local do ERP Legado, troca de máquina ou banco MongoDB corrompido, exigindo encerramento forçado pelo Console e nova implantação.
 
 !!! danger "Alerta crítico"
     O cliente **não pode** ter mesas, comandas ou entregas abertas, e todos os caixas devem estar fechados. Se o PDV local estiver parado por falha física, force o fechamento pela nuvem nos passos abaixo.
@@ -6268,7 +6268,7 @@ Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12
 
 ## Parte 4: instalação e vinculação na máquina nova
 
-1. Baixe e instale os pacotes da versão 1.0:
+1. Baixe e instale os pacotes do ERP Legado:
     - CPlug Server (no servidor): [CPServerInstall-2.12.8](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.8.exe)
     - CPlug PDV (nos terminais): [CPlugPdv2Install-2.12.8](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.8.exe)
 2. Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.
@@ -6288,15 +6288,15 @@ Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12
 
 **Relacionados:** [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md)
 
-Palavras-chave: trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos
+Palavras-chave: trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos erp legado
 
 ---
 Código: ERP-004 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/contrato-de-cartoes-legado/
 
-# Configuração de contrato de cartões (ERP legado)
+# Configuração de contrato de cartões (ERP Legado)
 
-Configuração · ERP 1.0 (legado) · Financeiro · Atualizado em 12/11/2026
+Configuração · ERP Legado · Financeiro · Atualizado em 12/11/2026
 
 **Objetivo:** preencher o contrato de cartões e os métodos de pagamento (PIX, cartões) para a conciliação bancária e o vínculo com o PDV/TEF.
 
@@ -6305,7 +6305,7 @@ Configuração · ERP 1.0 (legado) · Financeiro · Atualizado em 12/11/2026
 
 ## Etapa 1: acesso ao menu
 
-1. No ERP legado, acesse **Financeiro > Contrato de Cartões**.
+1. No ERP Legado, acesse **Financeiro > Contrato de Cartões**.
 2. **Edite** um contrato que já existe ou clique para **criar** um novo.
 
 ## Etapa 2: dados gerais do contrato
@@ -6336,26 +6336,26 @@ Configuração · ERP 1.0 (legado) · Financeiro · Atualizado em 12/11/2026
 
 - As formas de pagamento respeitam as baixas automáticas e a conciliação de taxas no financeiro do ERP.
 
-**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP 1](tef-erp1.md)
+**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP Legado](tef-erp1.md)
 
-Palavras-chave: contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos
+Palavras-chave: contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos erp legado
 
 ---
 Código: ERP-005 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/saldo-de-abertura-erp1/
 
-# Saldo de abertura do PDV (ERP 1)
+# Saldo de abertura do PDV (ERP Legado)
 
-Configuração · ERP 1.0 (legado) · PDV · Fechamento · Atualizado em 12/11/2026
+Configuração · ERP Legado · PDV · Fechamento · Atualizado em 12/11/2026
 
-**Objetivo:** configurar o valor fixo de abertura de caixa no ERP 1 e entender como o sistema transporta o saldo.
+**Objetivo:** configurar o valor fixo de abertura de caixa no ERP Legado e entender como o sistema transporta o saldo.
 
 !!! info "No ERP 2.0"
     Em **Ponto de venda > Configurações > Geral**, a aba **Fechamento de caixa** não tem o campo "Valor que deve permanecer no caixa". Lá ficam *Exigir aprovação*, *Modelo de fechamento*, *Transferir valores automaticamente* e opções de segurança.
 
 ## Passo a passo
 
-1. No ERP 1, clique na **engrenagem (Configurações)**.
+1. No ERP Legado, clique na **engrenagem (Configurações)**.
 2. Vá em **Configurações do PDV** e abra a aba **Configurações do PDV**.
 3. Role até a seção **Fechamento**.
 4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo. Na mesma seção ficam **Transferência automática ao fechar**, **Conta de destino** e **Exigir aprovação do fech. de caixa?**.
@@ -6371,7 +6371,7 @@ Configuração · ERP 1.0 (legado) · PDV · Fechamento · Atualizado em 12/11/2
 
 - O sistema passa a usar o valor configurado como saldo inicial nos relatórios e no fechamento.
 
-Palavras-chave: saldo de abertura fundo de caixa troco valor que deve permanecer no caixa fechamento reforço suprimento sangria erp 1
+Palavras-chave: saldo de abertura fundo de caixa troco valor que deve permanecer no caixa fechamento reforço suprimento sangria erp 1 erp legado
 
 ---
 Código: ERP-006 | Módulo: Suporte técnico | Tela no sistema: 
@@ -6379,7 +6379,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/impress
 
 # Impressão de atributos fracionada ou agrupada
 
-Configuração · ERP 1.0 e ERP 2.0 · Impressão · Atualizado em 12/11/2026
+Configuração · ERP Legado e ERP 2.0 · Impressão · Atualizado em 12/11/2026
 
 **Objetivo:** escolher como atributos múltiplos (adicionais, sabores, observações) saem no cupom de produção. A impressão **fracionada** serve para produtos divididos (pizzarias). A **agrupada** evita confusão na cozinha, mostrando os itens inteiros.
 
@@ -6389,7 +6389,7 @@ Configuração · ERP 1.0 e ERP 2.0 · Impressão · Atualizado em 12/11/2026
 2. Abra **Recibos e notas impressas**.
 3. Role até a seção **Impressão fracionada**.
 
-## Onde fica no ERP 1.0
+## Onde fica no ERP Legado
 
 1. Clique na **engrenagem (Configurações)**.
 2. Abra **Configuração do PDV > Configuração do PDV**.
@@ -6423,7 +6423,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/restrin
 
 # Gerenciamento e restrição de impressões no PDV
 
-Configuração · ERP 1.0 e ERP 2.0 · PDV · Impressão · Atualizado em 12/11/2026
+Configuração · ERP Legado e ERP 2.0 · PDV · Impressão · Atualizado em 12/11/2026
 
 **Objetivo:** definir pelo ERP quais comprovantes e relatórios o PDV imprime.
 
@@ -6441,7 +6441,7 @@ Configuração · ERP 1.0 e ERP 2.0 · PDV · Impressão · Atualizado em 12/11/
 4. Na mesma tela ficam também **Customização**, **QR Code de engajamento**, **Fichas de consumo** e a [impressão fracionada](impressao-de-atributos.md).
 5. Salve.
 
-## No ERP 1.0 (legado)
+## No ERP Legado
 
 1. Clique na **engrenagem > Configurações do PDV > Configurações do PDV** e localize o bloco de impressão.
 2. Marque ou desmarque conforme a operação:
@@ -6472,14 +6472,14 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/metodos
 
 # Métodos de pagamento na POS (PDV PRO e Atendimento PRO)
 
-Configuração · ERP 1.0 e ERP 2.0 · Dispositivos · Meios de pagamento · Atualizado em 12/11/2026
+Configuração · ERP Legado e ERP 2.0 · Dispositivos · Meios de pagamento · Atualizado em 12/11/2026
 
 **Sintoma:** ao finalizar a venda na POS pelo aplicativo (PDV PRO ou Atendimento PRO), o aparelho não pede a aproximação, inserção ou leitura do cartão.
 
 **Causa:** as formas de pagamento e bandeiras não estão vinculadas ao dispositivo no ERP. Sem o vínculo, o aplicativo não reconhece o método e não aciona o leitor.
 
 !!! warning "Pré-requisito"
-    O contrato de cartões e as bandeiras de débito e crédito precisam estar criados. Veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md) ou, no ERP 2.0, [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+    O contrato de cartões e as bandeiras de débito e crédito precisam estar criados. Veja [Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md) ou, no ERP 2.0, [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
 
 ## No ERP 2.0
 
@@ -6490,7 +6490,7 @@ Configuração · ERP 1.0 e ERP 2.0 · Dispositivos · Meios de pagamento · Atu
 5. Ligue as formas de pagamento que a POS vai aceitar (PIX, Dinheiro, Cartão de Crédito, Cartão de Débito e as criadas pela loja). Na mesma tela fica a seção **Configurações TEF**.
 6. Salve.
 
-## No ERP 1.0 (legado)
+## No ERP Legado
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Na **Listagem dos Aplicativos**, localize a POS.
@@ -6577,20 +6577,20 @@ Palavras-chave: chopp barril caneca copo litros ml insumo produção automática
 Código: ERP-010 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/tef-erp1/
 
-# Configuração e instalação da integração TEF (ERP 1)
+# Configuração e instalação da integração TEF (ERP Legado)
 
-Configuração · Integração · ERP 1.0 (legado) · TEF · Atualizado em 12/11/2026
+Configuração · Integração · ERP Legado · TEF · Atualizado em 12/11/2026
 
 **Objetivo:** instalar a VPN SiTef no ERP, corrigir o ID da empresa, vincular o contrato e instalar o TEF no PDV.
 
-**Por que dá problema:** o terminal precisa estar provisionado na VPN da operadora (GSurf/SiTef) pelo ERP. Além disso, o campo **ID da Empresa** no ERP 1 tem limite de caracteres errado, e sem o instalador interno do PDV as requisições não chegam ao Pinpad.
+**Por que dá problema:** o terminal precisa estar provisionado na VPN da operadora (GSurf/SiTef) pelo ERP. Além disso, o campo **ID da Empresa** no ERP Legado tem limite de caracteres errado, e sem o instalador interno do PDV as requisições não chegam ao Pinpad.
 
 !!! info "Antes de começar"
     - Módulo de TEF contratado e ativo no plano (uma licença para cada terminal TEF físico).
     - Pinpad ligado via USB, com os drivers do fabricante instalados e funcionando no Windows.
-    - Contrato de cartões criado: veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md).
+    - Contrato de cartões criado: veja [Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md).
 
-## Parte 1: VPN e ID SiTef no ERP 1
+## Parte 1: VPN e ID SiTef no ERP Legado
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Localize o terminal e abra para editar.
@@ -6624,7 +6624,7 @@ No computador onde o PDV roda:
 
 **Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
 
-Palavras-chave: tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado
+Palavras-chave: tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado erp legado
 
 ---
 Código: ERP-10 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
@@ -6688,7 +6688,7 @@ No computador onde o PDV está instalado:
 - **Pinpad:** o PDV se comunica com o Pinpad, que emite o sinal sonoro e/ou mostra a mensagem de pronto.
 - **Venda:** numa venda com forma de pagamento de cartão integrado (TEF), a tela do TEF abre pedindo a inserção, aproximação ou leitura do cartão/QR Code.
 
-**Relacionados:** [Configuração e instalação da integração TEF (ERP 1)](tef-erp1.md) · [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
+**Relacionados:** [Configuração e instalação da integração TEF (ERP Legado)](tef-erp1.md) · [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
 
 Palavras-chave: tef erp 2 sitef vpn nome da vpn otp configurações tef gerenciar métodos de pagamento contrato de cartões pinpad operações tef instalação credenciamento
 
@@ -6698,7 +6698,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/financeiro/
 
 # Importação de planilha de contas a pagar e a receber
 
-Processo operacional · ERP 1.0 e ERP 2.0 · Financeiro · Importação · Atualizado em 12/11/2026
+Processo operacional · ERP Legado e ERP 2.0 · Financeiro · Importação · Atualizado em 12/11/2026
 
 **Cenário:** baixar o modelo oficial de planilha, preencher e importar lançamentos financeiros. A estrutura do modelo não pode mudar: não exclua nem altere colunas.
 
@@ -6706,12 +6706,12 @@ Processo operacional · ERP 1.0 e ERP 2.0 · Financeiro · Importação · Atual
 
 - **Campos livres:** Valor Original, Descontos/Taxas, Juros/Multa, Vencimento, Data da Competência, Data de Pagamento, Observações e Pago.
 - **Campos vinculados:** **Conta**, **Método de Pagamento** e **Categoria** dependem de cadastros do ERP. O nome na planilha precisa ser **idêntico** ao cadastrado (letras, espaços e acentos), senão a importação dá erro.
-- **Status pago:** para importar como pago, a coluna **Pago** deve ter exatamente **SIM**. No ERP legado, se o layout não fizer a baixa automática, selecione e baixe os lançamentos depois da importação.
+- **Status pago:** para importar como pago, a coluna **Pago** deve ter exatamente **SIM**. No ERP Legado, se o layout não fizer a baixa automática, selecione e baixe os lançamentos depois da importação.
 
 ## Etapa 1: baixar o modelo
 
 - **ERP 2.0:** acesse **Finanças > Lançamentos**, clique em **Mais ações** e escolha **Importar recebimentos** ou **Importar despesas**. No painel **Importar Planilha**, baixe a planilha modelo (XLSX, até 10.000 linhas ou 5 MB).
-- **ERP 1.0 (legado):** acesse **Financeiro > Contas a Pagar** (ou Contas a Receber) > **Importar** e clique no link azul **Modelo de planilha**.
+- **ERP Legado:** acesse **Financeiro > Contas a Pagar** (ou Contas a Receber) > **Importar** e clique no link azul **Modelo de planilha**.
 
 ## Etapa 2: preencher
 
@@ -6809,7 +6809,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/natu
 
 # Natureza de operação (De/Para fiscal)
 
-Configuração · Cadastro fiscal · ERP 1.0 e ERP 2.0 · Faturamento · Atualizado em 12/11/2026
+Configuração · Cadastro fiscal · ERP Legado e ERP 2.0 · Faturamento · Atualizado em 12/11/2026
 
 **Cenário:** criar regras automáticas de troca fiscal ("De/Para" de CFOP, ICMS e PIS/COFINS) na natureza de operação e aplicar na emissão de notas a partir de vendas. As duas versões do ERP têm os mesmos recursos nessa tela; muda o caminho.
 
@@ -6820,7 +6820,7 @@ Configuração · Cadastro fiscal · ERP 1.0 e ERP 2.0 · Faturamento · Atualiz
 
 1. Acesse a tela de cadastro:
     - **ERP 2.0:** **Configurações > Fiscal > Natureza de Operações**;
-    - **ERP 1.0:** **engrenagem > Configurações Fiscais > Natureza da Operação**.
+    - **ERP Legado:** **engrenagem > Configurações Fiscais > Natureza da Operação**.
 2. Crie ou edite uma natureza.
 3. Preencha o **Nome** e, se quiser, a **Descrição**.
 4. Na seção **CFOP**, defina a troca:
@@ -6943,7 +6943,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrut
 
 # PDV offline em rede local (IP fixo)
 
-Configuração · Arquitetura · PDV · Rede · Operação offline · Atualizado em 12/11/2026
+Configuração · Arquitetura · PDV · Rede · Operação offline · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Necessidade:** operar os PDVs na rede local mesmo sem internet.
 
@@ -6982,7 +6982,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrut
 
 # Configuração de IP fixo no Windows (servidor e PDVs)
 
-Infraestrutura · Rede · PDV · Servidor · Atualizado em 12/11/2026
+Infraestrutura · Rede · PDV · Servidor · Windows · vale para ERP Legado e ERP 2.0 · Atualizado em 12/11/2026
 
 **Necessidade:** fixar o IP da máquina (servidor ou PDV) para a comunicação na rede local não cair quando o roteador reinicia.
 
@@ -7029,7 +7029,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrut
 
 # Desativação do firewall do Windows (servidor e PDVs)
 
-Infraestrutura · Segurança · Rede · PDV · Firewall · Atualizado em 12/11/2026
+Infraestrutura · Segurança · Rede · PDV · Firewall · Windows · vale para ERP Legado e ERP 2.0 · Atualizado em 12/11/2026
 
 **Necessidade:** liberar a comunicação na rede local entre servidor e PDVs secundários, sem bloqueio na porta de comunicação (ex.: `12000`).
 
@@ -7060,7 +7060,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/falha-a
 
 # Falha na aproximação de cartão no PINPAD (SiTef)
 
-Erro · PDV · TEF · Periféricos · Atualizado em 12/11/2026
+Erro · PDV · TEF · Periféricos · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Sintoma:** ao pagar por aproximação no PDV, o PINPAD não lê o cartão ou mostra erro de comunicação.
 
@@ -7092,7 +7092,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/vincula
 
 # Vinculação do Smart TEF ao PDV
 
-Configuração · PDV · TEF · Atualizado em 12/11/2026
+Configuração · PDV · TEF · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Objetivo:** vincular a maquininha Smart TEF (POS) ao frente de caixa (PDV) pelo aplicativo Smart TEF e associar o contrato de cartões.
 
@@ -7131,7 +7131,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/corrigi
 
 # Correção de lançamento incorreto em saldo de cliente
 
-Erro operacional · Dúvida · PDV · Saldo de cliente · Fluxo de caixa · Atualizado em 12/11/2026
+Erro operacional · Dúvida · PDV · Saldo de cliente · Fluxo de caixa · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Cenário:** uma **Adição de crédito** (saldo do cliente) foi feita com a forma de pagamento errada (exemplo: lançada em PIX, mas o cliente pagou em dinheiro) e o operador tentou corrigir com a função **Remover**.
 
@@ -7174,7 +7174,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/atalhos
 
 # Atalhos numéricos na tela de pagamento do PDV
 
-Configuração · PDV · Tela de pagamento · Atualizado em 12/11/2026
+Configuração · PDV · Tela de pagamento · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Objetivo:** fazer a tela de pagamento do PDV mostrar um número ao lado de cada forma de pagamento, para o operador escolher pelo teclado (1 a 9).
 
@@ -7200,7 +7200,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/fechame
 
 # Fechamento de caixa com vários PDVs (mesas, comandas e delivery)
 
-Dúvida · PDV · Fluxo de caixa · Operação · Atualizado em 12/11/2026
+Dúvida · PDV · Fluxo de caixa · Operação · PDV desktop · versão do ERP não confirmada · Atualizado em 12/11/2026
 
 **Dúvida:** como funciona o fechamento de caixa com mais de um terminal e como mesas, comandas e delivery se comportam entre as telas.
 
@@ -7228,7 +7228,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos
 
 # Impressora não imprime a página de teste do Windows
 
-Erro · Periféricos · Impressão · Hardware · Atualizado em 12/11/2026
+Erro · Periféricos · Impressão · Hardware · Windows · vale para ERP Legado e ERP 2.0 · Atualizado em 12/11/2026
 
 **Sintoma:** a impressora térmica USB não imprime a página de teste do Windows, e nada sai pelo PDV ou pelo ERP.
 
@@ -7288,7 +7288,7 @@ Se continuar sem responder, nesta ordem:
 !!! warning "Defeito de hardware"
     Se o **FEED** não avança o papel, ou se a página de teste continua falhando mesmo trocando cabos e computador, é defeito físico. Oriente o cliente a acionar a garantia ou levar a uma assistência técnica.
 
-**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora USB no ERP 1](impressora-usb-erp1.md)
+**Relacionados:** [Impressora USB no ERP 2.0](impressora-usb-erp2.md) · [Impressora USB no ERP Legado](impressora-usb-erp1.md)
 
 Palavras-chave: impressora não imprime página de teste térmica usb porta com usb001 regedit comdb com name arbiter gerenciador de dispositivos driver bobina feed
 
@@ -7296,11 +7296,11 @@ Palavras-chave: impressora não imprime página de teste térmica usb porta com 
 Código: PER-002 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-usb-erp1/
 
-# Impressora USB no ERP 1
+# Impressora USB no ERP Legado
 
-Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado em 12/11/2026
+Configuração · ERP Legado · Periféricos · Impressão · Atualizado em 12/11/2026
 
-**Objetivo:** criar o Servidor CPrint e configurar o ponto de impressão no ERP 1, mapeando a impressora USB pelo compartilhamento do Windows.
+**Objetivo:** criar o Servidor CPrint e configurar o ponto de impressão no ERP Legado, mapeando a impressora USB pelo compartilhamento do Windows.
 
 !!! info "Antes de começar"
     A página de teste do Windows precisa sair normalmente. Veja [Impressora não imprime a página de teste do Windows](impressora-sem-pagina-de-teste.md).
@@ -7313,9 +7313,9 @@ Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado e
 4. Deixe marcada a caixa **Compartilhar esta impressora**.
 5. Copie exatamente o texto do campo **Nome de compartilhamento** (ex.: `caixa`).
 
-## Parte 2: Servidor CPrint no ERP 1
+## Parte 2: Servidor CPrint no ERP Legado
 
-1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1`.
     - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
@@ -7325,7 +7325,7 @@ Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado e
 !!! tip "Aplicativo Servidor CPrint"
     A tela de edição do servidor tem o botão de download do aplicativo **Servidor CPrint**, que precisa estar instalado no computador onde a impressora está ligada.
 
-## Parte 3: ponto de impressão no ERP 1
+## Parte 3: ponto de impressão no ERP Legado
 
 1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
 2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Caixa) e, em **Impressora**, informe o nome da impressora no computador.
@@ -7339,19 +7339,19 @@ Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado e
 
 - O CPrint faz a ponte entre o ERP e a fila do Windows. Ao enviar uma venda ou pedido, a impressão térmica sai na hora pelo caminho configurado.
 
-**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora de rede no ERP 1](impressora-rede-erp1.md)
+**Relacionados:** [Impressora USB no ERP 2.0](impressora-usb-erp2.md) · [Impressora de rede no ERP Legado](impressora-rede-erp1.md)
 
-Palavras-chave: impressora usb erp 1 legado cprint servidor cprint ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto
+Palavras-chave: impressora usb erp 1 legado cprint servidor cprint ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto erp legado
 
 ---
 Código: PER-003 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-rede-erp1/
 
-# Impressora de rede (Ethernet) no ERP 1
+# Impressora de rede (Ethernet) no ERP Legado
 
-Configuração · ERP 1.0 (legado) · Periféricos · Rede · Atualizado em 12/11/2026
+Configuração · ERP Legado · Periféricos · Rede · Atualizado em 12/11/2026
 
-**Objetivo:** configurar o ponto de impressão no ERP 1 para impressoras térmicas que se comunicam direto pelo cabo de rede, sem compartilhamento do Windows.
+**Objetivo:** configurar o ponto de impressão no ERP Legado para impressoras térmicas que se comunicam direto pelo cabo de rede, sem compartilhamento do Windows.
 
 !!! info "Antes de começar"
     - A impressora está ligada pelo cabo de rede no mesmo roteador/switch do computador do PDV.
@@ -7362,7 +7362,7 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede · Atualizado em 12/1
 
 ## Parte 1: Servidor CPrint local
 
-1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** ou, se o servidor **Local** já existir, no ícone de editar dele.
 3. Confira o **Endereço IP** `127.0.0.1` e a porta `8081`.
 4. Deixe a versão **2.0** e clique em **Salvar**.
@@ -7380,21 +7380,21 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede · Atualizado em 12/1
 
 ## Resultado esperado
 
-- O CPrint local recebe a requisição do ERP 1 e envia os dados por TCP/IP direto para o IP da impressora na porta 9100, sem passar pela fila do Windows.
+- O CPrint local recebe a requisição do ERP Legado e envia os dados por TCP/IP direto para o IP da impressora na porta 9100, sem passar pela fila do Windows.
 
-**Relacionados:** [Impressora de rede direta no ERP 2](impressora-rede-erp2.md) · [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md)
+**Relacionados:** [Impressora de rede direta no ERP 2.0](impressora-rede-erp2.md) · [Impressora de rede com spooler no ERP Legado](impressora-spooler-erp1.md)
 
-Palavras-chave: impressora de rede ethernet cabo de rede ip fixo erp 1 legado cprint local 9100 acesso direto mesma sub-rede
+Palavras-chave: impressora de rede ethernet cabo de rede ip fixo erp 1 legado cprint local 9100 acesso direto mesma sub-rede erp legado
 
 ---
 Código: PER-004 | Módulo: Suporte técnico | Tela no sistema: 
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-spooler-erp1/
 
-# Impressora de rede com spooler/driver do Windows no ERP 1
+# Impressora de rede com spooler/driver do Windows no ERP Legado
 
-Configuração · ERP 1.0 (legado) · Periféricos · Rede com driver · Atualizado em 12/11/2026
+Configuração · ERP Legado · Periféricos · Rede com driver · Atualizado em 12/11/2026
 
-**Objetivo:** configurar no ERP 1 impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o CPrint.
+**Objetivo:** configurar no ERP Legado impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o CPrint.
 
 !!! info "Antes de começar"
     - Driver da impressora instalado no Windows, com a porta configurada para o IP da impressora (ex.: `192.168.15.200`).
@@ -7407,9 +7407,9 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede com driver · Atualiz
 3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
 4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
 
-## Parte 2: Servidor CPrint no ERP 1
+## Parte 2: Servidor CPrint no ERP Legado
 
-1. No ERP 1, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (só o PDV local imprime):** use `127.0.0.1`.
     - **Cenário B (aplicativo de mesas/comandas):** o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: `10.0.0.108`).
@@ -7427,17 +7427,17 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede com driver · Atualiz
 
 ## Resultado esperado
 
-- Ao imprimir (pelo PDV ou pelo aplicativo de mesas), o ERP 1 aciona o CPrint pelo IP configurado. O CPrint joga o documento na fila do Windows, e o Windows envia pela rede para a impressora.
+- Ao imprimir (pelo PDV ou pelo aplicativo de mesas), o ERP Legado aciona o CPrint pelo IP configurado. O CPrint joga o documento na fila do Windows, e o Windows envia pela rede para a impressora.
 
-**Relacionados:** [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md)
+**Relacionados:** [Impressora de rede com spooler no ERP 2.0](impressora-spooler-erp2.md) · [Impressora de rede (Ethernet) no ERP Legado](impressora-rede-erp1.md)
 
-Palavras-chave: impressora de rede driver spooler windows erp 1 legado compartilhamento cprint aplicativo de mesas comandas 127.0.0.1 9100 8081
+Palavras-chave: impressora de rede driver spooler windows erp 1 legado compartilhamento cprint aplicativo de mesas comandas 127.0.0.1 9100 8081 erp legado
 
 ---
 Código: PER-005 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-usb-erp2/
 
-# Impressora USB no ERP 2
+# Impressora USB no ERP 2.0
 
 Configuração · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2026
 
@@ -7454,7 +7454,7 @@ Configuração · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2
 4. Deixe marcada a caixa **Compartilhar esta impressora**.
 5. Copie exatamente o **Nome de compartilhamento** (ex.: `caixa`).
 
-## Parte 2: cadastro do periférico no ERP 2
+## Parte 2: cadastro do periférico no ERP 2.0
 
 1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
@@ -7476,9 +7476,9 @@ Configuração · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2
 
 ## Resultado esperado
 
-- O ERP 2 envia as impressões ao serviço local na porta 8081, que faz a ponte com a fila do Windows pelo caminho `\\127.0.0.1\<nome_do_compartilhamento>`, e a impressão térmica sai na hora.
+- O ERP 2.0 envia as impressões ao serviço local na porta 8081, que faz a ponte com a fila do Windows pelo caminho `\\127.0.0.1\<nome_do_compartilhamento>`, e a impressão térmica sai na hora.
 
-**Relacionados:** [Impressora USB no ERP 1](impressora-usb-erp1.md) · [Impressora não aparece na impressão parcial de mesas](../erp/impressora-impressao-parcial.md)
+**Relacionados:** [Impressora USB no ERP Legado](impressora-usb-erp1.md) · [Impressora não aparece na impressão parcial de mesas](../erp/impressora-impressao-parcial.md)
 
 Palavras-chave: impressora usb erp 2 periféricos novo periférico novo ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto informações do servidor
 
@@ -7486,7 +7486,7 @@ Palavras-chave: impressora usb erp 2 periféricos novo periférico novo ponto de
 Código: PER-006 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-spooler-erp2/
 
-# Impressora de rede com spooler/driver do Windows no ERP 2
+# Impressora de rede com spooler/driver do Windows no ERP 2.0
 
 Configuração · ERP 2.0 · Periféricos · Rede com driver · Atualizado em 12/11/2026
 
@@ -7503,7 +7503,7 @@ Configuração · ERP 2.0 · Periféricos · Rede com driver · Atualizado em 12
 3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
 4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
 
-## Parte 2: cadastro do periférico no ERP 2
+## Parte 2: cadastro do periférico no ERP 2.0
 
 1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
@@ -7525,9 +7525,9 @@ Configuração · ERP 2.0 · Periféricos · Rede com driver · Atualizado em 12
 
 ## Resultado esperado
 
-- Ao emitir um pedido ou comanda, o ERP 2 chama o serviço de impressão na porta 8081, que joga o documento na fila do Windows pelo caminho `\\127.0.0.1\cozinha`, e o driver envia para a impressora de rede.
+- Ao emitir um pedido ou comanda, o ERP 2.0 chama o serviço de impressão na porta 8081, que joga o documento na fila do Windows pelo caminho `\\127.0.0.1\cozinha`, e o driver envia para a impressora de rede.
 
-**Relacionados:** [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md) · [Impressora de rede direta no ERP 2](impressora-rede-erp2.md)
+**Relacionados:** [Impressora de rede com spooler no ERP Legado](impressora-spooler-erp1.md) · [Impressora de rede direta no ERP 2.0](impressora-rede-erp2.md)
 
 Palavras-chave: impressora de rede driver spooler windows erp 2 periféricos novo ponto de impressão compartilhamento aplicativo de mesas 127.0.0.1 9100 8081
 
@@ -7535,7 +7535,7 @@ Palavras-chave: impressora de rede driver spooler windows erp 2 periféricos nov
 Código: PER-007 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-rede-erp2/
 
-# Impressora de rede direta (Ethernet) no ERP 2
+# Impressora de rede direta (Ethernet) no ERP 2.0
 
 Configuração · ERP 2.0 · Periféricos · Rede · Atualizado em 12/11/2026
 
@@ -7561,9 +7561,9 @@ Configuração · ERP 2.0 · Periféricos · Rede · Atualizado em 12/11/2026
 
 ## Resultado esperado
 
-- Ao imprimir, o ERP 2 aciona o serviço local em `127.0.0.1:8081`, que envia os dados por TCP na porta 9100 direto para o IP da impressora, sem driver no Windows.
+- Ao imprimir, o ERP 2.0 aciona o serviço local em `127.0.0.1:8081`, que envia os dados por TCP na porta 9100 direto para o IP da impressora, sem driver no Windows.
 
-**Relacionados:** [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md) · [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+**Relacionados:** [Impressora de rede (Ethernet) no ERP Legado](impressora-rede-erp1.md) · [Impressora de rede com spooler no ERP 2.0](impressora-spooler-erp2.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
 
 Palavras-chave: impressora de rede ethernet cabo de rede ip fixo erp 2 periféricos novo ponto de impressão 9100 8081 127.0.0.1 acesso direto sem driver
 
@@ -7573,14 +7573,14 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/totem/reset
 
 # Reset e reconfiguração do aplicativo do totem
 
-Erro · ERP 1.0 (legado) · Totem · TEF · Sincronização · Atualizado em 12/11/2026
+Erro · ERP Legado · Totem · TEF · Sincronização · Atualizado em 12/11/2026
 
 **Sintoma:** falha no pagamento pelo TEF, falha na sincronização (produtos, imagens, preços) ou necessidade de resetar a comunicação do terminal de autoatendimento.
 
 **Causa:** cache corrompido no Android do totem ou dessincronização da licença e da VPN GSurf/SiTef no ERP.
 
 !!! info "Antes de começar"
-    - **Senha de administrador dos aplicativos:** no ERP legado, em **Configurações > Dados da Empresa**, bloco **Aplicativos**, campo **Senha de Administrador** (no ERP 2.0 a tela se chama **Dados do negócio**).
+    - **Senha de administrador dos aplicativos:** no ERP Legado, em **Configurações > Dados da Empresa**, bloco **Aplicativos**, campo **Senha de Administrador** (no ERP 2.0 a tela se chama **Dados do negócio**).
     - **Usuário administrador do ERP:** para revogar a licença.
     - **Totem V2:** código da empresa, usuário e senha do terminal.
 
@@ -7623,6 +7623,6 @@ Abra o aplicativo no totem e siga conforme a versão:
 
 - O aplicativo faz uma carga completa do servidor, volta a se comunicar com o TEF/SiTef e atualiza imagens, preços e nomes dos produtos.
 
-**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP 1)](../erp/tef-erp1.md)
+**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP Legado)](../erp/tef-erp1.md)
 
 Palavras-chave: totem autoatendimento reset limpar dados android cancelar terminal revogar licença vpn gsurf sitef tef não sincroniza imagens preços totem v1 v2 pin
