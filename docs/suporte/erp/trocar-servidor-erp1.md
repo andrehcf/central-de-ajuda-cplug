@@ -1,16 +1,16 @@
 ---
-title: Migração e troca de servidor local (ERP 1.0 / CPlug Server)
-description: Trocar o servidor local no ERP 1.0, com fechamento forçado do caixa pelo Console e nova implantação.
+title: Migração e troca de servidor local (ERP Legado / CPlug Server)
+description: Trocar o servidor local no ERP Legado, com fechamento forçado do caixa pelo Console e nova implantação.
 codigo: "ERP-003"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Migração e troca de servidor local (ERP 1.0 / CPlug Server)
+# Migração e troca de servidor local (ERP Legado / CPlug Server)
 
-<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · Infraestrutura · :material-tag-outline: ERP 1.0 (legado) · Banco de dados · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · Infraestrutura · :material-tag-outline: ERP Legado · Banco de dados · :material-calendar-check: Atualizado em 12/11/2026</div>
 
-**Quando usar:** falha no servidor local da versão 1.0, troca de máquina ou banco MongoDB corrompido, exigindo encerramento forçado pelo Console e nova implantação.
+**Quando usar:** falha no servidor local do ERP Legado, troca de máquina ou banco MongoDB corrompido, exigindo encerramento forçado pelo Console e nova implantação.
 
 !!! danger "Alerta crítico"
     O cliente **não pode** ter mesas, comandas ou entregas abertas, e todos os caixas devem estar fechados. Se o PDV local estiver parado por falha física, force o fechamento pela nuvem nos passos abaixo.
@@ -36,7 +36,7 @@ atualizado: 2026-11-12
 
 ## Parte 4: instalação e vinculação na máquina nova
 
-1. Baixe e instale os pacotes da versão 1.0:
+1. Baixe e instale os pacotes do ERP Legado:
     - CPlug Server (no servidor): [CPServerInstall-2.12.8](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.8.exe)
     - CPlug PDV (nos terminais): [CPlugPdv2Install-2.12.8](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.8.exe)
 2. Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.
@@ -56,4 +56,4 @@ atualizado: 2026-11-12
 
 **Relacionados:** [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md)
 
-<span class="palavras-chave">trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos</span>
+<span class="palavras-chave">trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos erp legado</span>

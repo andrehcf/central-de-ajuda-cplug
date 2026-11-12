@@ -1,14 +1,14 @@
 ---
-title: Configuração de contrato de cartões (ERP legado)
-description: Preencher o contrato de cartões e métodos de pagamento no ERP legado para conciliação e vínculo com PDV, TEF e POS.
+title: Configuração de contrato de cartões (ERP Legado)
+description: Preencher o contrato de cartões e métodos de pagamento no ERP Legado para conciliação e vínculo com PDV, TEF e POS.
 codigo: "ERP-004"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Configuração de contrato de cartões (ERP legado)
+# Configuração de contrato de cartões (ERP Legado)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 (legado) · Financeiro · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado · Financeiro · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** preencher o contrato de cartões e os métodos de pagamento (PIX, cartões) para a conciliação bancária e o vínculo com o PDV/TEF.
 
@@ -17,7 +17,7 @@ atualizado: 2026-11-12
 
 ## Etapa 1: acesso ao menu
 
-1. No ERP legado, acesse **Financeiro > Contrato de Cartões**.
+1. No ERP Legado, acesse **Financeiro > Contrato de Cartões**.
 2. **Edite** um contrato que já existe ou clique para **criar** um novo.
 
 ## Etapa 2: dados gerais do contrato
@@ -48,6 +48,6 @@ atualizado: 2026-11-12
 
 - As formas de pagamento respeitam as baixas automáticas e a conciliação de taxas no financeiro do ERP.
 
-**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP 1](tef-erp1.md)
+**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP Legado](tef-erp1.md)
 
-<span class="palavras-chave">contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos</span>
+<span class="palavras-chave">contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos erp legado</span>

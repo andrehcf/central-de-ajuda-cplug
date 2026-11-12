@@ -9,7 +9,7 @@ atualizado: 2026-11-12
 
 # Importação de planilha de contas a pagar e a receber
 
-<div class="cplug-meta" markdown>:material-help-circle-outline: Processo operacional · :material-tag-outline: ERP 1.0 e ERP 2.0 · Financeiro · Importação · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-help-circle-outline: Processo operacional · :material-tag-outline: ERP Legado e ERP 2.0 · Financeiro · Importação · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Cenário:** baixar o modelo oficial de planilha, preencher e importar lançamentos financeiros. A estrutura do modelo não pode mudar: não exclua nem altere colunas.
 
@@ -17,12 +17,12 @@ atualizado: 2026-11-12
 
 - **Campos livres:** Valor Original, Descontos/Taxas, Juros/Multa, Vencimento, Data da Competência, Data de Pagamento, Observações e Pago.
 - **Campos vinculados:** **Conta**, **Método de Pagamento** e **Categoria** dependem de cadastros do ERP. O nome na planilha precisa ser **idêntico** ao cadastrado (letras, espaços e acentos), senão a importação dá erro.
-- **Status pago:** para importar como pago, a coluna **Pago** deve ter exatamente **SIM**. No ERP legado, se o layout não fizer a baixa automática, selecione e baixe os lançamentos depois da importação.
+- **Status pago:** para importar como pago, a coluna **Pago** deve ter exatamente **SIM**. No ERP Legado, se o layout não fizer a baixa automática, selecione e baixe os lançamentos depois da importação.
 
 ## Etapa 1: baixar o modelo
 
 - **ERP 2.0:** acesse **Finanças > Lançamentos**, clique em **Mais ações** e escolha **Importar recebimentos** ou **Importar despesas**. No painel **Importar Planilha**, baixe a planilha modelo (XLSX, até 10.000 linhas ou 5 MB).
-- **ERP 1.0 (legado):** acesse **Financeiro > Contas a Pagar** (ou Contas a Receber) > **Importar** e clique no link azul **Modelo de planilha**.
+- **ERP Legado:** acesse **Financeiro > Contas a Pagar** (ou Contas a Receber) > **Importar** e clique no link azul **Modelo de planilha**.
 
 ## Etapa 2: preencher
 

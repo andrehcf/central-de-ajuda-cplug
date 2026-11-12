@@ -1,5 +1,5 @@
 ---
-title: Impressora de rede direta (Ethernet) no ERP 2
+title: Impressora de rede direta (Ethernet) no ERP 2.0
 description: Cadastrar em Periféricos no ERP 2.0 a impressora térmica ligada direto no cabo de rede, sem driver do Windows.
 codigo: "PER-007"
 modulo: Suporte técnico
@@ -7,7 +7,7 @@ tela: /dashboard/app/peripherals
 atualizado: 2026-11-12
 ---
 
-# Impressora de rede direta (Ethernet) no ERP 2
+# Impressora de rede direta (Ethernet) no ERP 2.0
 
 <div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 2.0 · Periféricos · Rede · :material-calendar-check: Atualizado em 12/11/2026</div>
 
@@ -33,8 +33,8 @@ atualizado: 2026-11-12
 
 ## Resultado esperado
 
-- Ao imprimir, o ERP 2 aciona o serviço local em `127.0.0.1:8081`, que envia os dados por TCP na porta 9100 direto para o IP da impressora, sem driver no Windows.
+- Ao imprimir, o ERP 2.0 aciona o serviço local em `127.0.0.1:8081`, que envia os dados por TCP na porta 9100 direto para o IP da impressora, sem driver no Windows.
 
-**Relacionados:** [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md) · [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+**Relacionados:** [Impressora de rede (Ethernet) no ERP Legado](impressora-rede-erp1.md) · [Impressora de rede com spooler no ERP 2.0](impressora-spooler-erp2.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
 
 <span class="palavras-chave">impressora de rede ethernet cabo de rede ip fixo erp 2 periféricos novo ponto de impressão 9100 8081 127.0.0.1 acesso direto sem driver</span>

@@ -29,6 +29,6 @@ atualizado: 2026-11-12
 
 - A impressora passa a aparecer na lista da impressão parcial de mesas.
 
-**Relacionados:** [Impressora USB no ERP 2](../perifericos/impressora-usb-erp2.md) · [Impressora de rede direta no ERP 2](../perifericos/impressora-rede-erp2.md)
+**Relacionados:** [Impressora USB no ERP 2.0](../perifericos/impressora-usb-erp2.md) · [Impressora de rede direta no ERP 2.0](../perifericos/impressora-rede-erp2.md)
 
 <span class="palavras-chave">impressão parcial mesas impressora não aparece periféricos informações do servidor porta 8081 conta parcial</span>

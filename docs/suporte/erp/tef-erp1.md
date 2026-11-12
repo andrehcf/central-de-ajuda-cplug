@@ -1,25 +1,25 @@
 ---
-title: Configuração e instalação da integração TEF (ERP 1)
-description: VPN SiTef, correção do ID da empresa pelo DevTools, contrato e instalação do TEF no PDV, no ERP 1.
+title: Configuração e instalação da integração TEF (ERP Legado)
+description: VPN SiTef, correção do ID da empresa pelo DevTools, contrato e instalação do TEF no PDV, no ERP Legado.
 codigo: "ERP-010"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Configuração e instalação da integração TEF (ERP 1)
+# Configuração e instalação da integração TEF (ERP Legado)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Integração · :material-tag-outline: ERP 1.0 (legado) · TEF · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Integração · :material-tag-outline: ERP Legado · TEF · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** instalar a VPN SiTef no ERP, corrigir o ID da empresa, vincular o contrato e instalar o TEF no PDV.
 
-**Por que dá problema:** o terminal precisa estar provisionado na VPN da operadora (GSurf/SiTef) pelo ERP. Além disso, o campo **ID da Empresa** no ERP 1 tem limite de caracteres errado, e sem o instalador interno do PDV as requisições não chegam ao Pinpad.
+**Por que dá problema:** o terminal precisa estar provisionado na VPN da operadora (GSurf/SiTef) pelo ERP. Além disso, o campo **ID da Empresa** no ERP Legado tem limite de caracteres errado, e sem o instalador interno do PDV as requisições não chegam ao Pinpad.
 
 !!! info "Antes de começar"
     - Módulo de TEF contratado e ativo no plano (uma licença para cada terminal TEF físico).
     - Pinpad ligado via USB, com os drivers do fabricante instalados e funcionando no Windows.
-    - Contrato de cartões criado: veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md).
+    - Contrato de cartões criado: veja [Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md).
 
-## Parte 1: VPN e ID SiTef no ERP 1
+## Parte 1: VPN e ID SiTef no ERP Legado
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Localize o terminal e abra para editar.
@@ -53,4 +53,4 @@ No computador onde o PDV roda:
 
 **Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
 
-<span class="palavras-chave">tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado</span>
+<span class="palavras-chave">tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado erp legado</span>

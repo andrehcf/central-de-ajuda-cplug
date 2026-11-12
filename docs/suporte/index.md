@@ -26,14 +26,14 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 <div class="cplug-lista" markdown>
 [<span class="cplug-codigo">ERP-001</span> Impressora não aparece na impressão parcial de mesas](erp/impressora-impressao-parcial.md)
 [<span class="cplug-codigo">ERP-002</span> Migração e troca de servidor local (ERP 2.0 / CPlug Server)](erp/trocar-servidor-erp2.md)
-[<span class="cplug-codigo">ERP-003</span> Migração e troca de servidor local (ERP 1.0 / CPlug Server)](erp/trocar-servidor-erp1.md)
-[<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP legado)](erp/contrato-de-cartoes-legado.md)
-[<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP 1)](erp/saldo-de-abertura-erp1.md)
+[<span class="cplug-codigo">ERP-003</span> Migração e troca de servidor local (ERP Legado / CPlug Server)](erp/trocar-servidor-erp1.md)
+[<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP Legado)](erp/contrato-de-cartoes-legado.md)
+[<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP Legado)](erp/saldo-de-abertura-erp1.md)
 [<span class="cplug-codigo">ERP-006</span> Impressão de atributos fracionada ou agrupada](erp/impressao-de-atributos.md)
 [<span class="cplug-codigo">ERP-007</span> Gerenciamento e restrição de impressões no PDV](erp/restringir-impressoes.md)
 [<span class="cplug-codigo">ERP-008</span> Métodos de pagamento na POS (PDV PRO e Atendimento PRO)](erp/metodos-de-pagamento-na-pos.md)
 [<span class="cplug-codigo">ERP-009</span> Cadastro de chopp (estoque e ficha técnica)](erp/cadastro-de-chopp.md)
-[<span class="cplug-codigo">ERP-010</span> Configuração e instalação da integração TEF (ERP 1)](erp/tef-erp1.md)
+[<span class="cplug-codigo">ERP-010</span> Configuração e instalação da integração TEF (ERP Legado)](erp/tef-erp1.md)
 [<span class="cplug-codigo">ERP-10</span> Configuração e instalação do TEF (ERP 2.0)](erp/tef-erp2.md)
 </div>
 
@@ -58,12 +58,12 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 
 <div class="cplug-lista" markdown>
 [<span class="cplug-codigo">PER-001</span> Impressora não imprime a página de teste do Windows](perifericos/impressora-sem-pagina-de-teste.md)
-[<span class="cplug-codigo">PER-002</span> Impressora USB no ERP 1](perifericos/impressora-usb-erp1.md)
-[<span class="cplug-codigo">PER-003</span> Impressora de rede (Ethernet) no ERP 1](perifericos/impressora-rede-erp1.md)
-[<span class="cplug-codigo">PER-004</span> Impressora de rede com spooler/driver do Windows no ERP 1](perifericos/impressora-spooler-erp1.md)
-[<span class="cplug-codigo">PER-005</span> Impressora USB no ERP 2](perifericos/impressora-usb-erp2.md)
-[<span class="cplug-codigo">PER-006</span> Impressora de rede com spooler/driver do Windows no ERP 2](perifericos/impressora-spooler-erp2.md)
-[<span class="cplug-codigo">PER-007</span> Impressora de rede direta (Ethernet) no ERP 2](perifericos/impressora-rede-erp2.md)
+[<span class="cplug-codigo">PER-002</span> Impressora USB no ERP Legado](perifericos/impressora-usb-erp1.md)
+[<span class="cplug-codigo">PER-003</span> Impressora de rede (Ethernet) no ERP Legado](perifericos/impressora-rede-erp1.md)
+[<span class="cplug-codigo">PER-004</span> Impressora de rede com spooler/driver do Windows no ERP Legado](perifericos/impressora-spooler-erp1.md)
+[<span class="cplug-codigo">PER-005</span> Impressora USB no ERP 2.0](perifericos/impressora-usb-erp2.md)
+[<span class="cplug-codigo">PER-006</span> Impressora de rede com spooler/driver do Windows no ERP 2.0](perifericos/impressora-spooler-erp2.md)
+[<span class="cplug-codigo">PER-007</span> Impressora de rede direta (Ethernet) no ERP 2.0](perifericos/impressora-rede-erp2.md)
 </div>
 
 ## [Financeiro](financeiro/index.md)

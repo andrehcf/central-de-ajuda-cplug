@@ -1,5 +1,5 @@
 ---
-title: Impressora de rede com spooler/driver do Windows no ERP 2
+title: Impressora de rede com spooler/driver do Windows no ERP 2.0
 description: Impressora de rede com driver instalado no Windows, cadastrada em Periféricos no ERP 2.0 pelo compartilhamento local.
 codigo: "PER-006"
 modulo: Suporte técnico
@@ -7,7 +7,7 @@ tela: /dashboard/app/peripherals
 atualizado: 2026-11-12
 ---
 
-# Impressora de rede com spooler/driver do Windows no ERP 2
+# Impressora de rede com spooler/driver do Windows no ERP 2.0
 
 <div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 2.0 · Periféricos · Rede com driver · :material-calendar-check: Atualizado em 12/11/2026</div>
 
@@ -24,7 +24,7 @@ atualizado: 2026-11-12
 3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
 4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
 
-## Parte 2: cadastro do periférico no ERP 2
+## Parte 2: cadastro do periférico no ERP 2.0
 
 1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
@@ -46,8 +46,8 @@ atualizado: 2026-11-12
 
 ## Resultado esperado
 
-- Ao emitir um pedido ou comanda, o ERP 2 chama o serviço de impressão na porta 8081, que joga o documento na fila do Windows pelo caminho `\\127.0.0.1\cozinha`, e o driver envia para a impressora de rede.
+- Ao emitir um pedido ou comanda, o ERP 2.0 chama o serviço de impressão na porta 8081, que joga o documento na fila do Windows pelo caminho `\\127.0.0.1\cozinha`, e o driver envia para a impressora de rede.
 
-**Relacionados:** [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md) · [Impressora de rede direta no ERP 2](impressora-rede-erp2.md)
+**Relacionados:** [Impressora de rede com spooler no ERP Legado](impressora-spooler-erp1.md) · [Impressora de rede direta no ERP 2.0](impressora-rede-erp2.md)
 
 <span class="palavras-chave">impressora de rede driver spooler windows erp 2 periféricos novo ponto de impressão compartilhamento aplicativo de mesas 127.0.0.1 9100 8081</span>

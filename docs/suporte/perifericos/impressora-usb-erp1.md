@@ -1,16 +1,16 @@
 ---
-title: Impressora USB no ERP 1
-description: Servidor CPrint e ponto de impressão no ERP 1 para impressora USB, via compartilhamento do Windows.
+title: Impressora USB no ERP Legado
+description: Servidor CPrint e ponto de impressão no ERP Legado para impressora USB, via compartilhamento do Windows.
 codigo: "PER-002"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Impressora USB no ERP 1
+# Impressora USB no ERP Legado
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 (legado) · Periféricos · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado · Periféricos · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
 
-**Objetivo:** criar o Servidor CPrint e configurar o ponto de impressão no ERP 1, mapeando a impressora USB pelo compartilhamento do Windows.
+**Objetivo:** criar o Servidor CPrint e configurar o ponto de impressão no ERP Legado, mapeando a impressora USB pelo compartilhamento do Windows.
 
 !!! info "Antes de começar"
     A página de teste do Windows precisa sair normalmente. Veja [Impressora não imprime a página de teste do Windows](impressora-sem-pagina-de-teste.md).
@@ -23,9 +23,9 @@ atualizado: 2026-11-12
 4. Deixe marcada a caixa **Compartilhar esta impressora**.
 5. Copie exatamente o texto do campo **Nome de compartilhamento** (ex.: `caixa`).
 
-## Parte 2: Servidor CPrint no ERP 1
+## Parte 2: Servidor CPrint no ERP Legado
 
-1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1`.
     - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
@@ -35,7 +35,7 @@ atualizado: 2026-11-12
 !!! tip "Aplicativo Servidor CPrint"
     A tela de edição do servidor tem o botão de download do aplicativo **Servidor CPrint**, que precisa estar instalado no computador onde a impressora está ligada.
 
-## Parte 3: ponto de impressão no ERP 1
+## Parte 3: ponto de impressão no ERP Legado
 
 1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
 2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Caixa) e, em **Impressora**, informe o nome da impressora no computador.
@@ -49,6 +49,6 @@ atualizado: 2026-11-12
 
 - O CPrint faz a ponte entre o ERP e a fila do Windows. Ao enviar uma venda ou pedido, a impressão térmica sai na hora pelo caminho configurado.
 
-**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora de rede no ERP 1](impressora-rede-erp1.md)
+**Relacionados:** [Impressora USB no ERP 2.0](impressora-usb-erp2.md) · [Impressora de rede no ERP Legado](impressora-rede-erp1.md)
 
-<span class="palavras-chave">impressora usb erp 1 legado cprint servidor cprint ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto</span>
+<span class="palavras-chave">impressora usb erp 1 legado cprint servidor cprint ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto erp legado</span>

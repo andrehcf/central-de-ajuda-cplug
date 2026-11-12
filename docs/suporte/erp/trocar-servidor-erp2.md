@@ -68,6 +68,6 @@ atualizado: 2026-11-12
     4. Renomeie a pasta do PDV adicionando `.old` (ex.: `ConnectPlug PDV.loja_antiga.old`). O aplicativo do caixa passa a pedir um novo PIN.
     5. Entre no ERP da **nova conta** do cliente, gere os PINs de Servidor e PDV e informe nos sistemas locais.
 
-**Relacionados:** [Migração e troca de servidor local (ERP 1.0)](trocar-servidor-erp1.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+**Relacionados:** [Migração e troca de servidor local (ERP Legado)](trocar-servidor-erp1.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
 
 <span class="palavras-chave">trocar servidor migração cplug server cpserver mongodb banco corrompido revogar licença pin pdv desktop formatar computador novo appdata pasta data</span>

@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Vinculação do Smart TEF ao PDV
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · TEF · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · TEF · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** vincular a maquininha Smart TEF (POS) ao frente de caixa (PDV) pelo aplicativo Smart TEF e associar o contrato de cartões.
 

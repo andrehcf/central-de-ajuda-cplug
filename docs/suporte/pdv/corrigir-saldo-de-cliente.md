@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Correção de lançamento incorreto em saldo de cliente
 
-<div class="cplug-meta" markdown>:material-help-circle-outline: Erro operacional · Dúvida · :material-cash-register: PDV · Saldo de cliente · Fluxo de caixa · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-help-circle-outline: Erro operacional · Dúvida · :material-cash-register: PDV · Saldo de cliente · Fluxo de caixa · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Cenário:** uma **Adição de crédito** (saldo do cliente) foi feita com a forma de pagamento errada (exemplo: lançada em PIX, mas o cliente pagou em dinheiro) e o operador tentou corrigir com a função **Remover**.
 

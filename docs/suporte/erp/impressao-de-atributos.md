@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Impressão de atributos fracionada ou agrupada
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 e ERP 2.0 · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado e ERP 2.0 · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** escolher como atributos múltiplos (adicionais, sabores, observações) saem no cupom de produção. A impressão **fracionada** serve para produtos divididos (pizzarias). A **agrupada** evita confusão na cozinha, mostrando os itens inteiros.
 
@@ -18,7 +18,7 @@ atualizado: 2026-11-12
 2. Abra **Recibos e notas impressas**.
 3. Role até a seção **Impressão fracionada**.
 
-## Onde fica no ERP 1.0
+## Onde fica no ERP Legado
 
 1. Clique na **engrenagem (Configurações)**.
 2. Abra **Configuração do PDV > Configuração do PDV**.

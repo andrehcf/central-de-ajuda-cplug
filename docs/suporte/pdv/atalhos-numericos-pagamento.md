@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Atalhos numéricos na tela de pagamento do PDV
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · Tela de pagamento · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · Tela de pagamento · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** fazer a tela de pagamento do PDV mostrar um número ao lado de cada forma de pagamento, para o operador escolher pelo teclado (1 a 9).
 

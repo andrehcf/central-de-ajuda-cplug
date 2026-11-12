@@ -1,16 +1,16 @@
 ---
-title: Impressora de rede (Ethernet) no ERP 1
-description: Ponto de impressão no ERP 1 para impressora térmica ligada direto no cabo de rede, sem compartilhamento do Windows.
+title: Impressora de rede (Ethernet) no ERP Legado
+description: Ponto de impressão no ERP Legado para impressora térmica ligada direto no cabo de rede, sem compartilhamento do Windows.
 codigo: "PER-003"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Impressora de rede (Ethernet) no ERP 1
+# Impressora de rede (Ethernet) no ERP Legado
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 (legado) · Periféricos · Rede · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado · Periféricos · Rede · :material-calendar-check: Atualizado em 12/11/2026</div>
 
-**Objetivo:** configurar o ponto de impressão no ERP 1 para impressoras térmicas que se comunicam direto pelo cabo de rede, sem compartilhamento do Windows.
+**Objetivo:** configurar o ponto de impressão no ERP Legado para impressoras térmicas que se comunicam direto pelo cabo de rede, sem compartilhamento do Windows.
 
 !!! info "Antes de começar"
     - A impressora está ligada pelo cabo de rede no mesmo roteador/switch do computador do PDV.
@@ -21,7 +21,7 @@ atualizado: 2026-11-12
 
 ## Parte 1: Servidor CPrint local
 
-1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** ou, se o servidor **Local** já existir, no ícone de editar dele.
 3. Confira o **Endereço IP** `127.0.0.1` e a porta `8081`.
 4. Deixe a versão **2.0** e clique em **Salvar**.
@@ -39,8 +39,8 @@ atualizado: 2026-11-12
 
 ## Resultado esperado
 
-- O CPrint local recebe a requisição do ERP 1 e envia os dados por TCP/IP direto para o IP da impressora na porta 9100, sem passar pela fila do Windows.
+- O CPrint local recebe a requisição do ERP Legado e envia os dados por TCP/IP direto para o IP da impressora na porta 9100, sem passar pela fila do Windows.
 
-**Relacionados:** [Impressora de rede direta no ERP 2](impressora-rede-erp2.md) · [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md)
+**Relacionados:** [Impressora de rede direta no ERP 2.0](impressora-rede-erp2.md) · [Impressora de rede com spooler no ERP Legado](impressora-spooler-erp1.md)
 
-<span class="palavras-chave">impressora de rede ethernet cabo de rede ip fixo erp 1 legado cprint local 9100 acesso direto mesma sub-rede</span>
+<span class="palavras-chave">impressora de rede ethernet cabo de rede ip fixo erp 1 legado cprint local 9100 acesso direto mesma sub-rede erp legado</span>

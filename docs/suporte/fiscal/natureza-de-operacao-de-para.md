@@ -9,7 +9,7 @@ atualizado: 2026-11-12
 
 # Natureza de operação (De/Para fiscal)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Cadastro fiscal · :material-tag-outline: ERP 1.0 e ERP 2.0 · Faturamento · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Cadastro fiscal · :material-tag-outline: ERP Legado e ERP 2.0 · Faturamento · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Cenário:** criar regras automáticas de troca fiscal ("De/Para" de CFOP, ICMS e PIS/COFINS) na natureza de operação e aplicar na emissão de notas a partir de vendas. As duas versões do ERP têm os mesmos recursos nessa tela; muda o caminho.
 
@@ -20,7 +20,7 @@ atualizado: 2026-11-12
 
 1. Acesse a tela de cadastro:
     - **ERP 2.0:** **Configurações > Fiscal > Natureza de Operações**;
-    - **ERP 1.0:** **engrenagem > Configurações Fiscais > Natureza da Operação**.
+    - **ERP Legado:** **engrenagem > Configurações Fiscais > Natureza da Operação**.
 2. Crie ou edite uma natureza.
 3. Preencha o **Nome** e, se quiser, a **Descrição**.
 4. Na seção **CFOP**, defina a troca:

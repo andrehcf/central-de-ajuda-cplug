@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Gerenciamento e restrição de impressões no PDV
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 e ERP 2.0 · PDV · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado e ERP 2.0 · PDV · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** definir pelo ERP quais comprovantes e relatórios o PDV imprime.
 
@@ -26,7 +26,7 @@ atualizado: 2026-11-12
 4. Na mesma tela ficam também **Customização**, **QR Code de engajamento**, **Fichas de consumo** e a [impressão fracionada](impressao-de-atributos.md).
 5. Salve.
 
-## No ERP 1.0 (legado)
+## No ERP Legado
 
 1. Clique na **engrenagem > Configurações do PDV > Configurações do PDV** e localize o bloco de impressão.
 2. Marque ou desmarque conforme a operação:

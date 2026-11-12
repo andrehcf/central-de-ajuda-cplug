@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # PDV offline em rede local (IP fixo)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Arquitetura · :material-lan: PDV · Rede · Operação offline · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Arquitetura · :material-lan: PDV · Rede · Operação offline · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Necessidade:** operar os PDVs na rede local mesmo sem internet.
 

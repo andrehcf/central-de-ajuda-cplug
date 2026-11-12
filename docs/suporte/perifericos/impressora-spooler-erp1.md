@@ -1,16 +1,16 @@
 ---
-title: Impressora de rede com spooler/driver do Windows no ERP 1
-description: Impressora de rede com driver instalado no Windows, configurada no ERP 1 pelo compartilhamento local e CPrint.
+title: Impressora de rede com spooler/driver do Windows no ERP Legado
+description: Impressora de rede com driver instalado no Windows, configurada no ERP Legado pelo compartilhamento local e CPrint.
 codigo: "PER-004"
 modulo: Suporte técnico
 atualizado: 2026-11-12
 ---
 
-# Impressora de rede com spooler/driver do Windows no ERP 1
+# Impressora de rede com spooler/driver do Windows no ERP Legado
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 (legado) · Periféricos · Rede com driver · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado · Periféricos · Rede com driver · :material-calendar-check: Atualizado em 12/11/2026</div>
 
-**Objetivo:** configurar no ERP 1 impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o CPrint.
+**Objetivo:** configurar no ERP Legado impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o CPrint.
 
 !!! info "Antes de começar"
     - Driver da impressora instalado no Windows, com a porta configurada para o IP da impressora (ex.: `192.168.15.200`).
@@ -23,9 +23,9 @@ atualizado: 2026-11-12
 3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
 4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
 
-## Parte 2: Servidor CPrint no ERP 1
+## Parte 2: Servidor CPrint no ERP Legado
 
-1. No ERP 1, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
+1. No ERP Legado, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
 2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (só o PDV local imprime):** use `127.0.0.1`.
     - **Cenário B (aplicativo de mesas/comandas):** o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: `10.0.0.108`).
@@ -43,8 +43,8 @@ atualizado: 2026-11-12
 
 ## Resultado esperado
 
-- Ao imprimir (pelo PDV ou pelo aplicativo de mesas), o ERP 1 aciona o CPrint pelo IP configurado. O CPrint joga o documento na fila do Windows, e o Windows envia pela rede para a impressora.
+- Ao imprimir (pelo PDV ou pelo aplicativo de mesas), o ERP Legado aciona o CPrint pelo IP configurado. O CPrint joga o documento na fila do Windows, e o Windows envia pela rede para a impressora.
 
-**Relacionados:** [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md)
+**Relacionados:** [Impressora de rede com spooler no ERP 2.0](impressora-spooler-erp2.md) · [Impressora de rede (Ethernet) no ERP Legado](impressora-rede-erp1.md)
 
-<span class="palavras-chave">impressora de rede driver spooler windows erp 1 legado compartilhamento cprint aplicativo de mesas comandas 127.0.0.1 9100 8081</span>
+<span class="palavras-chave">impressora de rede driver spooler windows erp 1 legado compartilhamento cprint aplicativo de mesas comandas 127.0.0.1 9100 8081 erp legado</span>

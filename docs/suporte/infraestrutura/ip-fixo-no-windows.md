@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Configuração de IP fixo no Windows (servidor e PDVs)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Infraestrutura · :material-lan: Rede · PDV · Servidor · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Infraestrutura · :material-lan: Rede · PDV · Servidor · :material-tag-outline: Windows · vale para ERP Legado e ERP 2.0 · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Necessidade:** fixar o IP da máquina (servidor ou PDV) para a comunicação na rede local não cair quando o roteador reinicia.
 

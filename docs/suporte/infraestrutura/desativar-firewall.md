@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Desativação do firewall do Windows (servidor e PDVs)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Infraestrutura · Segurança · :material-lan: Rede · PDV · Firewall · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Infraestrutura · Segurança · :material-lan: Rede · PDV · Firewall · :material-tag-outline: Windows · vale para ERP Legado e ERP 2.0 · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Necessidade:** liberar a comunicação na rede local entre servidor e PDVs secundários, sem bloqueio na porta de comunicação (ex.: `12000`).
 

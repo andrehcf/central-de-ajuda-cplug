@@ -1,5 +1,5 @@
 ---
-title: Impressora USB no ERP 2
+title: Impressora USB no ERP 2.0
 description: Cadastrar impressora térmica USB em Periféricos no ERP 2.0, pelo compartilhamento do Windows e servidor de impressão.
 codigo: "PER-005"
 modulo: Suporte técnico
@@ -7,7 +7,7 @@ tela: /dashboard/app/peripherals
 atualizado: 2026-11-12
 ---
 
-# Impressora USB no ERP 2
+# Impressora USB no ERP 2.0
 
 <div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 2.0 · Periféricos · Impressão · :material-calendar-check: Atualizado em 12/11/2026</div>
 
@@ -24,7 +24,7 @@ atualizado: 2026-11-12
 4. Deixe marcada a caixa **Compartilhar esta impressora**.
 5. Copie exatamente o **Nome de compartilhamento** (ex.: `caixa`).
 
-## Parte 2: cadastro do periférico no ERP 2
+## Parte 2: cadastro do periférico no ERP 2.0
 
 1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
@@ -46,8 +46,8 @@ atualizado: 2026-11-12
 
 ## Resultado esperado
 
-- O ERP 2 envia as impressões ao serviço local na porta 8081, que faz a ponte com a fila do Windows pelo caminho `\\127.0.0.1\<nome_do_compartilhamento>`, e a impressão térmica sai na hora.
+- O ERP 2.0 envia as impressões ao serviço local na porta 8081, que faz a ponte com a fila do Windows pelo caminho `\\127.0.0.1\<nome_do_compartilhamento>`, e a impressão térmica sai na hora.
 
-**Relacionados:** [Impressora USB no ERP 1](impressora-usb-erp1.md) · [Impressora não aparece na impressão parcial de mesas](../erp/impressora-impressao-parcial.md)
+**Relacionados:** [Impressora USB no ERP Legado](impressora-usb-erp1.md) · [Impressora não aparece na impressão parcial de mesas](../erp/impressora-impressao-parcial.md)
 
 <span class="palavras-chave">impressora usb erp 2 periféricos novo periférico novo ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto informações do servidor</span>

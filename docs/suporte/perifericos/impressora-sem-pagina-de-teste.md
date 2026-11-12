@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Impressora não imprime a página de teste do Windows
 
-<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-printer-outline: Periféricos · Impressão · Hardware · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-printer-outline: Periféricos · Impressão · Hardware · :material-tag-outline: Windows · vale para ERP Legado e ERP 2.0 · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Sintoma:** a impressora térmica USB não imprime a página de teste do Windows, e nada sai pelo PDV ou pelo ERP.
 
@@ -68,6 +68,6 @@ Se continuar sem responder, nesta ordem:
 !!! warning "Defeito de hardware"
     Se o **FEED** não avança o papel, ou se a página de teste continua falhando mesmo trocando cabos e computador, é defeito físico. Oriente o cliente a acionar a garantia ou levar a uma assistência técnica.
 
-**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora USB no ERP 1](impressora-usb-erp1.md)
+**Relacionados:** [Impressora USB no ERP 2.0](impressora-usb-erp2.md) · [Impressora USB no ERP Legado](impressora-usb-erp1.md)
 
 <span class="palavras-chave">impressora não imprime página de teste térmica usb porta com usb001 regedit comdb com name arbiter gerenciador de dispositivos driver bobina feed</span>

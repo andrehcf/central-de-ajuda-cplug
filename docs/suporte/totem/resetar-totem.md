@@ -8,14 +8,14 @@ atualizado: 2026-11-12
 
 # Reset e reconfiguração do aplicativo do totem
 
-<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-tag-outline: ERP 1.0 (legado) · Totem · TEF · Sincronização · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-tag-outline: ERP Legado · Totem · TEF · Sincronização · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Sintoma:** falha no pagamento pelo TEF, falha na sincronização (produtos, imagens, preços) ou necessidade de resetar a comunicação do terminal de autoatendimento.
 
 **Causa:** cache corrompido no Android do totem ou dessincronização da licença e da VPN GSurf/SiTef no ERP.
 
 !!! info "Antes de começar"
-    - **Senha de administrador dos aplicativos:** no ERP legado, em **Configurações > Dados da Empresa**, bloco **Aplicativos**, campo **Senha de Administrador** (no ERP 2.0 a tela se chama **Dados do negócio**).
+    - **Senha de administrador dos aplicativos:** no ERP Legado, em **Configurações > Dados da Empresa**, bloco **Aplicativos**, campo **Senha de Administrador** (no ERP 2.0 a tela se chama **Dados do negócio**).
     - **Usuário administrador do ERP:** para revogar a licença.
     - **Totem V2:** código da empresa, usuário e senha do terminal.
 
@@ -58,6 +58,6 @@ Abra o aplicativo no totem e siga conforme a versão:
 
 - O aplicativo faz uma carga completa do servidor, volta a se comunicar com o TEF/SiTef e atualiza imagens, preços e nomes dos produtos.
 
-**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP 1)](../erp/tef-erp1.md)
+**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP Legado)](../erp/tef-erp1.md)
 
 <span class="palavras-chave">totem autoatendimento reset limpar dados android cancelar terminal revogar licença vpn gsurf sitef tef não sincroniza imagens preços totem v1 v2 pin</span>

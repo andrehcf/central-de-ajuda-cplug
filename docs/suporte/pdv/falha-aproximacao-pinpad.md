@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Falha na aproximação de cartão no PINPAD (SiTef)
 
-<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-cash-register: PDV · TEF · Periféricos · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-cash-register: PDV · TEF · Periféricos · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Sintoma:** ao pagar por aproximação no PDV, o PINPAD não lê o cartão ou mostra erro de comunicação.
 

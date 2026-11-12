@@ -9,14 +9,14 @@ atualizado: 2026-11-12
 
 # Métodos de pagamento na POS (PDV PRO e Atendimento PRO)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP 1.0 e ERP 2.0 · Dispositivos · Meios de pagamento · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-tag-outline: ERP Legado e ERP 2.0 · Dispositivos · Meios de pagamento · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Sintoma:** ao finalizar a venda na POS pelo aplicativo (PDV PRO ou Atendimento PRO), o aparelho não pede a aproximação, inserção ou leitura do cartão.
 
 **Causa:** as formas de pagamento e bandeiras não estão vinculadas ao dispositivo no ERP. Sem o vínculo, o aplicativo não reconhece o método e não aciona o leitor.
 
 !!! warning "Pré-requisito"
-    O contrato de cartões e as bandeiras de débito e crédito precisam estar criados. Veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md) ou, no ERP 2.0, [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+    O contrato de cartões e as bandeiras de débito e crédito precisam estar criados. Veja [Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md) ou, no ERP 2.0, [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
 
 ## No ERP 2.0
 
@@ -27,7 +27,7 @@ atualizado: 2026-11-12
 5. Ligue as formas de pagamento que a POS vai aceitar (PIX, Dinheiro, Cartão de Crédito, Cartão de Débito e as criadas pela loja). Na mesma tela fica a seção **Configurações TEF**.
 6. Salve.
 
-## No ERP 1.0 (legado)
+## No ERP Legado
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Na **Listagem dos Aplicativos**, localize a POS.
