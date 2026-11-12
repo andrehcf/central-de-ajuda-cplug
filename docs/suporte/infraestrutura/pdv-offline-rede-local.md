@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # PDV offline em rede local (IP fixo)
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Arquitetura · :material-lan: PDV · Rede · Operação offline · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Arquitetura · :material-lan: PDV · Rede · Operação offline · :material-tag-outline: PDV desktop · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Necessidade:** operar os PDVs na rede local mesmo sem internet.
 
@@ -24,10 +24,10 @@ atualizado: 2026-11-12
 
 1. **No PDV servidor (máquina principal):** a aplicação conecta localmente por `localhost`. Nada a mudar.
 2. **Nos PDVs secundários:**
-    1. Abra a tela de conexão com o servidor no PDV.
-    2. No campo **IP do servidor**, troque `localhost` pelo **IP fixo da máquina servidora** (ex.: `192.168.1.100`).
+    1. Na barra superior do PDV, clique no ícone **Status do servidor** (ao lado do sino). Abre a tela de conexão, com os campos **IP do servidor** e **Porta**.
+    2. No campo **IP do servidor**, troque `localhost` pelo **IP fixo da máquina servidora** (ex.: `192.168.1.100`). Se os campos estiverem bloqueados para edição, fale com o suporte.
     3. Mantenha a **Porta** padrão `12000`.
-    4. Salve/volte ao início e confira a mensagem **Você está conectado ao servidor**.
+    4. Confira a mensagem **Você está conectado ao servidor** e clique em **VOLTAR AO INÍCIO**.
 
 ## Resultado esperado
 
@@ -39,4 +39,4 @@ atualizado: 2026-11-12
 
 **Relacionados:** [Fechamento de caixa com vários PDVs](../pdv/fechamento-com-varios-pdvs.md)
 
-<span class="palavras-chave">pdv offline sem internet rede local ip do servidor localhost porta 12000 pdv secundário contingência você está conectado ao servidor</span>
+<span class="palavras-chave">pdv offline sem internet rede local ip do servidor status do servidor localhost porta 12000 pdv secundário contingência você está conectado ao servidor</span>

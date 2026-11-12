@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Falha na aproximação de cartão no PINPAD (SiTef)
 
-<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-cash-register: PDV · TEF · Periféricos · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-alert-circle-outline: Erro · :material-cash-register: PDV · TEF · Periféricos · :material-tag-outline: PDV desktop · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Sintoma:** ao pagar por aproximação no PDV, o PINPAD não lê o cartão ou mostra erro de comunicação.
 
@@ -21,9 +21,9 @@ atualizado: 2026-11-12
 3. Localize a pasta **CliSiTef** e renomeie para `CliSiTef.old`.
 4. Abra o Gerenciador de Tarefas (**Ctrl + Shift + Esc**).
 5. Na aba **Detalhes**, localize o processo do Java (`java.exe` ou `javaw.exe`), clique com o botão direito e selecione **Finalizar árvore de processos**.
-6. Volte para a tela do PDV. O ícone do CPServer na barra superior fica vermelho, porque o Java foi finalizado.
-7. Clique no ícone do CPServer para reiniciá-lo e aguarde até ele ficar verde.
-8. Abra uma venda, inicie um pagamento em **Débito** ou **Crédito** e aguarde o PINPAD terminar a carga de registros.
+6. Volte para a tela do PDV. O ícone **Status do servidor** (o CPServer), na barra superior, ao lado do sino, fica vermelho, porque o Java foi finalizado.
+7. Clique no ícone **Status do servidor**: o PDV abre a tela de conexão e procura o servidor de novo. Aguarde até o ícone ficar verde e a tela mostrar **Você está conectado ao servidor**; depois clique em **VOLTAR AO INÍCIO**.
+8. Abra uma venda, inicie um pagamento em **Cartão de Débito** ou **Cartão de Crédito** e aguarde o PINPAD terminar a carga de registros.
 
 ## Resultado esperado
 

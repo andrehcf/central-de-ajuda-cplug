@@ -8,7 +8,7 @@ atualizado: 2026-11-12
 
 # Fechamento de caixa com vários PDVs (mesas, comandas e delivery)
 
-<div class="cplug-meta" markdown>:material-help-circle-outline: Dúvida · :material-cash-register: PDV · Fluxo de caixa · Operação · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-help-circle-outline: Dúvida · :material-cash-register: PDV · Fluxo de caixa · Operação · :material-tag-outline: PDV desktop · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Dúvida:** como funciona o fechamento de caixa com mais de um terminal e como mesas, comandas e delivery se comportam entre as telas.
 

@@ -38,11 +38,11 @@ Crie ou altere o contrato de cartões com o provedor TEF correspondente, como em
 
 No computador onde o PDV roda:
 
-1. Faça a **sincronização** manual do **CPServer** e depois do aplicativo do **PDV**.
+1. Faça a **sincronização** manual do **CPServer** e depois do aplicativo do **PDV** (no PDV: menu de três barras > **Sincronizar**, atalho **Ctrl + S**).
 2. Clique no menu (três barras) no **canto superior esquerdo**.
-3. Selecione **Área Administrativa** e entre com usuário e senha de gerente/administrador.
+3. Selecione **Área administrativa** (atalho **F11**) e entre com usuário e senha de gerente/administrador.
 4. No menu da esquerda, abra **Operações TEF > Instalação**.
-5. Confira os dados vindos do ERP: Gateway **SITEF**, ID da Empresa correto, IP do servidor local `127.0.0.1`.
+5. Confira os dados vindos do ERP: em **Selecione o gateway**, **SITEF** marcado; **ID da Empresa** com 8 dígitos; **Servidor** `127.0.0.1`. A tela também mostra **CPF/CNPJ**, **OTP**, **Ponto de Captura**, **Porta** e **Porta USB (opcional)**.
 6. Clique no botão azul **INSTALAR**, no rodapé.
 7. Aguarde a mensagem de instalação concluída.
 

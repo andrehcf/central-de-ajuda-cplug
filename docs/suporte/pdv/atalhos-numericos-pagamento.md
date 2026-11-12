@@ -8,18 +8,18 @@ atualizado: 2026-11-12
 
 # Atalhos numéricos na tela de pagamento do PDV
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · Tela de pagamento · :material-tag-outline: PDV desktop · versão do ERP não confirmada · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-cog-outline: Configuração · :material-cash-register: PDV · Tela de pagamento · :material-tag-outline: PDV desktop · :material-calendar-check: Atualizado em 12/11/2026</div>
 
 **Objetivo:** fazer a tela de pagamento do PDV mostrar um número ao lado de cada forma de pagamento, para o operador escolher pelo teclado (1 a 9).
 
 ## Passo a passo
 
-1. Na tela de finalização da venda, olhe o canto superior direito.
-2. Clique na **engrenagem (Configurações)**, na barra superior, ao lado do menu principal.
-3. Na janela **Configurações de pagamento**, localize o primeiro campo: **Método de pagamento padrão**.
+1. No **Balcão**, com um produto no carrinho, clique em **PAGAMENTO (F2)** para abrir a tela de pagamento. Não é preciso receber nem finalizar a venda.
+2. Clique na **engrenagem** (**Configurações de pagamento**), o último ícone da barra superior, no canto direito.
+3. Na janela **Configurações de pagamento**, localize o primeiro campo: **Método de pagamento padrão** (na tela aparece "Metodo de pagamento padrão"). Ele mostra a forma que já vem selecionada na tela de pagamento (ex.: Dinheiro).
 4. Clique no **X** dentro do campo para limpar. Nenhum método pode ficar selecionado.
-5. Clique no botão verde **SALVAR (ENTER)**, no rodapé da janela.
-6. Volte para a tela anterior (balcão/venda) e avance de novo para a tela de pagamento, para o PDV montar o novo layout.
+5. Clique no botão verde **SALVAR (ENTER)**, no rodapé da janela. Os campos de contrato padrão logo abaixo (**Cartão de Crédito**, **Cartão de Débito**, **PIX**) não precisam ser mexidos.
+6. Clique em **VOLTAR (SHIFT + ESC)** para voltar ao Balcão e clique de novo em **PAGAMENTO (F2)**, para o PDV montar o novo layout.
 
 ## Resultado esperado
 
