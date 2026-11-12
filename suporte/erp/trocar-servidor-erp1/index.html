@@ -3289,7 +3289,7 @@
 <li>No ERP, vá em <strong>Ponto de Venda &gt; Gerência</strong> e expanda a linha do caixa <strong>Aberto</strong>.</li>
 <li>Pressione <strong>F12</strong>, abra a aba <strong>Console</strong>, digite <code>showBtnPosForceClosure();</code> e pressione <strong>Enter</strong>. Feche o F12 e clique no botão <strong>Forçar Fechamento do Caixa</strong> que apareceu na página.</li>
 <li>Vá em <strong>Ponto de Venda &gt; Cadastro</strong> e abra o primeiro PDV.</li>
-<li>Pressione <strong>F12</strong>, abra o <strong>Console</strong>, digite <code>editServerPos();</code> e pressione <strong>Enter</strong>. Feche o F12, limpe o campo do servidor (removendo o servidor offline) e clique em <strong>Salvar</strong>. Repita em todos os PDVs.</li>
+<li>Pressione <strong>F12</strong>, abra o <strong>Console</strong>, digite <code>editServerPos();</code> e pressione <strong>Enter</strong>. Feche o F12, limpe o campo <strong>Applicativo Offline</strong>, que aparece no formulário (removendo o servidor offline), e clique em <strong>Salvar</strong>. Repita em todos os PDVs.</li>
 </ol>
 <h2 id="parte-2-desinstalacao-na-maquina-antiga">Parte 2: desinstalação na máquina antiga</h2>
 <ol>
@@ -3300,8 +3300,8 @@
 </ol>
 <h2 id="parte-3-novo-ambiente-no-erp">Parte 3: novo ambiente no ERP</h2>
 <ol>
-<li>Vá em <strong>Ponto de Venda &gt; Aplicativos</strong>. Exclua o servidor antigo e clique em <strong>Criar Novo Servidor</strong>.</li>
-<li>Clique no ícone verde de chave na linha do novo servidor para gerar o PIN. Crie também o novo terminal (PDV) e guarde o PIN dele.</li>
+<li>Vá em <strong>Ponto de Venda &gt; Aplicativos</strong>. Exclua o servidor antigo e clique em <strong>Cadastrar novo aplicativo &gt; Novo Servidor</strong>.</li>
+<li>Na linha do novo servidor, clique no ícone verde de seta (<strong>Gerar Pin para acessar o aplicativo</strong>). Crie também o novo terminal em <strong>Cadastrar novo aplicativo &gt; Novo Terminal</strong> e gere o PIN dele do mesmo jeito.</li>
 </ol>
 <h2 id="parte-4-instalacao-e-vinculacao-na-maquina-nova">Parte 4: instalação e vinculação na máquina nova</h2>
 <ol>
@@ -3311,7 +3311,7 @@
 </ul>
 </li>
 <li>Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.</li>
-<li>No ERP, vá em <strong>Ponto de Venda &gt; Cadastro</strong>, edite cada PDV, vincule o novo servidor e salve.</li>
+<li>No ERP, vá em <strong>Ponto de Venda &gt; Cadastro</strong> e edite cada PDV. O campo <strong>Applicativo Offline</strong> fica escondido: abra o <strong>Console</strong> (F12), digite <code>editServerPos();</code> e pressione <strong>Enter</strong>, como na Parte 1. Selecione o novo servidor e salve.</li>
 </ol>
 <h2 id="resultado-esperado">Resultado esperado</h2>
 <ul>

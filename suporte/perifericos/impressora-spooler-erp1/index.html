@@ -3261,7 +3261,7 @@
 <h2 id="parte-2-servidor-cprint-no-erp-1">Parte 2: Servidor CPrint no ERP 1</h2>
 <ol>
 <li>No ERP 1, acesse <strong>engrenagem &gt; Configurações do PDV &gt; Servidores CPrint</strong>.</li>
-<li>Defina o <strong>Endereço IP</strong> conforme o cenário:<ul>
+<li>Clique em <strong>Novo Servidor CPrint</strong> (ou no ícone de editar do servidor) e defina o <strong>Endereço IP</strong> conforme o cenário:<ul>
 <li><strong>Cenário A (só o PDV local imprime):</strong> use <code>127.0.0.1</code>.</li>
 <li><strong>Cenário B (aplicativo de mesas/comandas):</strong> o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: <code>10.0.0.108</code>).</li>
 </ul>
@@ -3270,7 +3270,8 @@
 </ol>
 <h2 id="parte-3-ponto-de-impressao">Parte 3: ponto de impressão</h2>
 <ol>
-<li>Abra a aba <strong>Pontos de Impressão</strong> e clique em <strong>Editar</strong> na impressora.</li>
+<li>Abra a aba <strong>Pontos de Impressão</strong> e clique em <strong>Novo Ponto de Impressão</strong> (ou no ícone de editar da impressora).</li>
+<li>Em <strong>Nome/Descrição</strong>, dê um nome ao ponto (ex.: Cozinha) e, em <strong>Impressora</strong>, informe o nome da impressora no computador.</li>
 <li>Em <strong>Porta ou IP da Impressora</strong>, use o caminho de compartilhamento: <code>\\127.0.0.1\&lt;nome_do_compartilhamento&gt;</code> (ex.: <code>\\127.0.0.1\cozinha</code>).</li>
 <li>Em <strong>Porta da Impressora de Rede</strong>, informe <code>9100</code>.</li>
 <li>Em <strong>Tipo de Comunicação</strong>, selecione <strong>Acesso Direto</strong> (obrigatório).</li>

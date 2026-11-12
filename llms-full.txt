@@ -6252,7 +6252,7 @@ Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12
 1. No ERP, vá em **Ponto de Venda > Gerência** e expanda a linha do caixa **Aberto**.
 2. Pressione **F12**, abra a aba **Console**, digite `showBtnPosForceClosure();` e pressione **Enter**. Feche o F12 e clique no botão **Forçar Fechamento do Caixa** que apareceu na página.
 3. Vá em **Ponto de Venda > Cadastro** e abra o primeiro PDV.
-4. Pressione **F12**, abra o **Console**, digite `editServerPos();` e pressione **Enter**. Feche o F12, limpe o campo do servidor (removendo o servidor offline) e clique em **Salvar**. Repita em todos os PDVs.
+4. Pressione **F12**, abra o **Console**, digite `editServerPos();` e pressione **Enter**. Feche o F12, limpe o campo **Applicativo Offline**, que aparece no formulário (removendo o servidor offline), e clique em **Salvar**. Repita em todos os PDVs.
 
 ## Parte 2: desinstalação na máquina antiga
 
@@ -6263,8 +6263,8 @@ Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12
 
 ## Parte 3: novo ambiente no ERP
 
-1. Vá em **Ponto de Venda > Aplicativos**. Exclua o servidor antigo e clique em **Criar Novo Servidor**.
-2. Clique no ícone verde de chave na linha do novo servidor para gerar o PIN. Crie também o novo terminal (PDV) e guarde o PIN dele.
+1. Vá em **Ponto de Venda > Aplicativos**. Exclua o servidor antigo e clique em **Cadastrar novo aplicativo > Novo Servidor**.
+2. Na linha do novo servidor, clique no ícone verde de seta (**Gerar Pin para acessar o aplicativo**). Crie também o novo terminal em **Cadastrar novo aplicativo > Novo Terminal** e gere o PIN dele do mesmo jeito.
 
 ## Parte 4: instalação e vinculação na máquina nova
 
@@ -6272,7 +6272,7 @@ Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12
     - CPlug Server (no servidor): [CPServerInstall-2.12.8](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.8.exe)
     - CPlug PDV (nos terminais): [CPlugPdv2Install-2.12.8](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.8.exe)
 2. Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.
-3. No ERP, vá em **Ponto de Venda > Cadastro**, edite cada PDV, vincule o novo servidor e salve.
+3. No ERP, vá em **Ponto de Venda > Cadastro** e edite cada PDV. O campo **Applicativo Offline** fica escondido: abra o **Console** (F12), digite `editServerPos();` e pressione **Enter**, como na Parte 1. Selecione o novo servidor e salve.
 
 ## Resultado esperado
 
@@ -6356,9 +6356,9 @@ Configuração · ERP 1.0 (legado) · PDV · Fechamento · Atualizado em 12/11/2
 ## Passo a passo
 
 1. No ERP 1, clique na **engrenagem (Configurações)**.
-2. Vá em **Configurações do PDV > Configurações do PDV**.
+2. Vá em **Configurações do PDV** e abra a aba **Configurações do PDV**.
 3. Role até a seção **Fechamento**.
-4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo e ajuste as demais regras de fechamento.
+4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo. Na mesma seção ficam **Transferência automática ao fechar**, **Conta de destino** e **Exigir aprovação do fech. de caixa?**.
 5. Clique em **Salvar**.
 
 ## Regras importantes
@@ -6594,10 +6594,10 @@ Configuração · Integração · ERP 1.0 (legado) · TEF · Atualizado em 12/11
 
 1. Acesse **Ponto de Venda > Aplicativos**.
 2. Localize o terminal e abra para editar.
-3. Desça até **Configurações da SITEF (Opcional)**.
-4. **Correção do ID da Empresa:** o campo **ID** pode vir com 9 dígitos (causa falha). Clique com o botão direito **em cima do campo ID** e selecione **Inspecionar**.
+3. Desça até **Configurações da SITEF (Opcional)** e clique para expandir.
+4. **Correção do ID da Empresa:** o campo **ID** aceita 8 dígitos, mas pode vir preenchido com 9 (causa falha). Clique com o botão direito **em cima do campo ID** e selecione **Inspecionar**.
 5. O DevTools abre na linha do campo. Dê dois cliques no valor do atributo `value="XXXXXXXXX"`, **apague um zero excedente** para ficar com 8 dígitos e pressione **Enter**.
-6. Em **Configurações da VPN**, clique em **Cadastrar Terminal** (o botão só aparece com o módulo TEF ativo no plano).
+6. Em **Configurações da VPN**, clique em **Cadastrar Terminal**. O botão só aparece com licença de TEF disponível no plano: sem ela, a tela mostra "Você atingiu o limite de TEF utilizadas" e só o campo **Terminal (VPN)**, para escolher um terminal já cadastrado.
 7. Na janela **CRIAR NOVO TERMINAL (GSURF)**, o CNPJ do cliente vem preenchido. Em **Descrição**, digite uma identificação (ex.: "PDV 1", "Caixa Comanda").
 8. Clique em **Confirmar** e depois em **Salvar**, no canto inferior esquerdo.
 
@@ -7316,20 +7316,24 @@ Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado e
 ## Parte 2: Servidor CPrint no ERP 1
 
 1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Adicione ou edite o servidor e defina o **Endereço IP** conforme o cenário:
+2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1`.
     - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
 3. Em **Porta**, informe `8081`.
 4. Em **Versão**, marque **2.0** e clique em **Salvar**.
 
+!!! tip "Aplicativo Servidor CPrint"
+    A tela de edição do servidor tem o botão de download do aplicativo **Servidor CPrint**, que precisa estar instalado no computador onde a impressora está ligada.
+
 ## Parte 3: ponto de impressão no ERP 1
 
-1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Editar** (ou cadastre) a impressora.
-2. Em **Porta ou IP da Impressora**, monte o caminho com o IP local e o nome de compartilhamento da Parte 1: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
-3. Em **Porta da Impressora de Rede**, informe `9100`.
-4. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
-5. Em **Servidor CPrint**, selecione o servidor criado na Parte 2.
-6. Preencha **Fabricante** (ex.: ELGIN) e **Modelo** (ex.: I9) e clique em **Salvar**.
+1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Caixa) e, em **Impressora**, informe o nome da impressora no computador.
+3. Em **Porta ou IP da Impressora**, monte o caminho com o IP local e o nome de compartilhamento da Parte 1: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
+4. Em **Porta da Impressora de Rede**, informe `9100`.
+5. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+6. Em **Servidor CPrint**, selecione o servidor criado na Parte 2.
+7. Preencha **Fabricante** (ex.: ELGIN) e **Modelo** (ex.: I9) e clique em **Salvar**.
 
 ## Resultado esperado
 
@@ -7359,19 +7363,20 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede · Atualizado em 12/1
 ## Parte 1: Servidor CPrint local
 
 1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Cadastre ou selecione o servidor **Local**.
+2. Clique em **Novo Servidor CPrint** ou, se o servidor **Local** já existir, no ícone de editar dele.
 3. Confira o **Endereço IP** `127.0.0.1` e a porta `8081`.
 4. Deixe a versão **2.0** e clique em **Salvar**.
 
 ## Parte 2: ponto de impressão
 
 1. Na mesma tela, abra a aba **Pontos de Impressão**.
-2. Clique em **Editar** (ou cadastre) a impressora.
-3. Em **Porta ou IP da Impressora**, informe só o IP fixo da impressora (ex.: `192.168.15.200`), **sem** as barras invertidas usadas no modelo USB.
-4. Em **Porta da Impressora de Rede**, informe `9100`.
-5. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
-6. Em **Servidor CPrint**, selecione **Local**.
-7. Preencha **Fabricante** e **Modelo** e clique em **Salvar**.
+2. Clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+3. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Cozinha).
+4. Em **Porta ou IP da Impressora**, informe só o IP fixo da impressora (ex.: `192.168.15.200`), **sem** as barras invertidas usadas no modelo USB.
+5. Em **Porta da Impressora de Rede**, informe `9100`.
+6. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+7. Em **Servidor CPrint**, selecione **Local**.
+8. Preencha **Fabricante** e **Modelo** e clique em **Salvar**.
 
 ## Resultado esperado
 
@@ -7405,19 +7410,20 @@ Configuração · ERP 1.0 (legado) · Periféricos · Rede com driver · Atualiz
 ## Parte 2: Servidor CPrint no ERP 1
 
 1. No ERP 1, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
-2. Defina o **Endereço IP** conforme o cenário:
+2. Clique em **Novo Servidor CPrint** (ou no ícone de editar do servidor) e defina o **Endereço IP** conforme o cenário:
     - **Cenário A (só o PDV local imprime):** use `127.0.0.1`.
     - **Cenário B (aplicativo de mesas/comandas):** o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: `10.0.0.108`).
 3. Mantenha a porta `8081`, marque a versão **2.0** e salve.
 
 ## Parte 3: ponto de impressão
 
-1. Abra a aba **Pontos de Impressão** e clique em **Editar** na impressora.
-2. Em **Porta ou IP da Impressora**, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
-3. Em **Porta da Impressora de Rede**, informe `9100`.
-4. Em **Tipo de Comunicação**, selecione **Acesso Direto** (obrigatório).
-5. Em **Servidor CPrint**, escolha o servidor da Parte 2 (Local ou o IP do computador do spooler, conforme o cenário).
-6. Selecione **Fabricante** e **Modelo** e clique em **Salvar**.
+1. Abra a aba **Pontos de Impressão** e clique em **Novo Ponto de Impressão** (ou no ícone de editar da impressora).
+2. Em **Nome/Descrição**, dê um nome ao ponto (ex.: Cozinha) e, em **Impressora**, informe o nome da impressora no computador.
+3. Em **Porta ou IP da Impressora**, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
+4. Em **Porta da Impressora de Rede**, informe `9100`.
+5. Em **Tipo de Comunicação**, selecione **Acesso Direto** (obrigatório).
+6. Em **Servidor CPrint**, escolha o servidor da Parte 2 (Local ou o IP do computador do spooler, conforme o cenário).
+7. Selecione **Fabricante** e **Modelo** e clique em **Salvar**.
 
 ## Resultado esperado
 
