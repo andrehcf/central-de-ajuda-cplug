@@ -123,3 +123,53 @@ nav:
       - configuracoes/emissao-de-notas.md
       - configuracoes/natureza-de-operacao.md
       - configuracoes/tipo-de-nota-no-pdv.md
+  - Suporte técnico:
+      - suporte/index.md
+      - PDV:
+          - suporte/pdv/index.md
+          - suporte/pdv/falha-aproximacao-pinpad.md
+          - suporte/pdv/vincular-smart-tef.md
+          - suporte/pdv/corrigir-saldo-de-cliente.md
+          - suporte/pdv/atalhos-numericos-pagamento.md
+          - suporte/pdv/fechamento-com-varios-pdvs.md
+      - ERP:
+          - suporte/erp/index.md
+          - suporte/erp/impressora-impressao-parcial.md
+          - suporte/erp/trocar-servidor-erp2.md
+          - suporte/erp/trocar-servidor-erp1.md
+          - suporte/erp/contrato-de-cartoes-legado.md
+          - suporte/erp/saldo-de-abertura-erp1.md
+          - suporte/erp/impressao-de-atributos.md
+          - suporte/erp/restringir-impressoes.md
+          - suporte/erp/metodos-de-pagamento-na-pos.md
+          - suporte/erp/cadastro-de-chopp.md
+          - suporte/erp/tef-erp1.md
+          - suporte/erp/tef-erp2.md
+      - Fiscal:
+          - suporte/fiscal/index.md
+          - suporte/fiscal/emitir-nfce-pelo-historico.md
+          - suporte/fiscal/devolucao-de-ativo.md
+          - suporte/fiscal/nfe-referenciando-nfce.md
+          - suporte/fiscal/natureza-de-operacao-de-para.md
+          - suporte/fiscal/nfe-de-devolucao-manual.md
+          - suporte/fiscal/inutilizacao-e-transmissao.md
+      - Totem:
+          - suporte/totem/index.md
+          - suporte/totem/resetar-totem.md
+      - Periféricos:
+          - suporte/perifericos/index.md
+          - suporte/perifericos/impressora-sem-pagina-de-teste.md
+          - suporte/perifericos/impressora-usb-erp1.md
+          - suporte/perifericos/impressora-rede-erp1.md
+          - suporte/perifericos/impressora-spooler-erp1.md
+          - suporte/perifericos/impressora-usb-erp2.md
+          - suporte/perifericos/impressora-spooler-erp2.md
+          - suporte/perifericos/impressora-rede-erp2.md
+      - Financeiro:
+          - suporte/financeiro/index.md
+          - suporte/financeiro/importar-planilha-de-lancamentos.md
+      - Infraestrutura:
+          - suporte/infraestrutura/index.md
+          - suporte/infraestrutura/pdv-offline-rede-local.md
+          - suporte/infraestrutura/ip-fixo-no-windows.md
+          - suporte/infraestrutura/desativar-firewall.md
