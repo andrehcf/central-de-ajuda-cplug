@@ -6134,3 +6134,1489 @@ A opção **ICMS para Consumidor Final** ativa a tributação de ICMS nas vendas
 **Relacionados:** [Como configurar a emissão de notas fiscais](emissao-de-notas.md) · [Como emitir uma NF-e de venda](../vendas/emitir-nfe.md)
 
 Palavras-chave: tipo de nota pdv caixa nfc-e modelo 65 nf-e modelo 55 cupom fiscal nota no caixa lei 8846 icms consumidor final difal configuração fiscal
+
+---
+Código: ERP-001 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/impressora-impressao-parcial/
+
+# Impressora não aparece na impressão parcial de mesas
+
+Erro · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2026
+
+**Sintoma:** ao incluir uma impressora para a impressão parcial do atendimento de mesas, a impressora já configurada em **Periféricos** não aparece na lista.
+
+**Causa:** a **Porta** nas **Informações do Servidor** do cadastro da impressora está errada ou em branco, e o ERP não localiza o periférico para essa função.
+
+## Passo a passo
+
+1. No menu, acesse **Configurações > Periféricos**.
+2. Localize a impressora usada na impressão parcial.
+3. Clique nos **três pontos** ao lado do nome da impressora.
+4. Selecione **Editar**.
+5. Role até a seção **Informações do Servidor**.
+6. No campo **Porta**, informe `8081` (é o valor que já vem num cadastro novo).
+7. Salve e confira a lista na tela de atendimento de mesas.
+
+## Resultado esperado
+
+- A impressora passa a aparecer na lista da impressão parcial de mesas.
+
+**Relacionados:** [Impressora USB no ERP 2](../perifericos/impressora-usb-erp2.md) · [Impressora de rede direta no ERP 2](../perifericos/impressora-rede-erp2.md)
+
+Palavras-chave: impressão parcial mesas impressora não aparece periféricos informações do servidor porta 8081 conta parcial
+
+---
+Código: ERP-002 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/trocar-servidor-erp2/
+
+# Migração e troca de servidor local (ERP 2.0 / CPlug Server)
+
+Erro · Infraestrutura · ERP 2.0 · Banco de dados · Atualizado em 12/11/2026
+
+**Quando usar:** o computador servidor da loja precisa ser substituído por falha de hardware, lentidão extrema ou banco MongoDB corrompido, exigindo migração completa.
+
+!!! danger "Alerta crítico"
+    Confirme com a loja se há **mesas, comandas ou entregas (delivery) abertas**. Se houver, esses dados locais serão **perdidos permanentemente**. Só comece depois de finalizar todas as movimentações.
+
+## Parte 1: desinstalar o servidor atual (máquina antiga)
+
+1. Na máquina servidora antiga, pressione **Ctrl + Shift + Esc** para abrir o Gerenciador de Tarefas.
+2. Na aba **Detalhes**, localize o processo `CPServer.exe`, clique com o botão direito e selecione **Finalizar árvore de processos**.
+3. Vá em **Painel de Controle > Desinstalar um programa**, localize o **MongoDB** e desinstale.
+4. No Explorador de Arquivos, abra o disco `C:` e renomeie a pasta `data` para `data.old`.
+
+## Parte 2: limpar o cache do PDV Desktop
+
+1. Pressione **Windows + R**, digite `%appdata%` e pressione **Enter**.
+2. Localize a pasta do PDV (**ConnectPlug PDV**) e renomeie adicionando `.old` ao final (de `ConnectPlug PDV` para `ConnectPlug PDV.old`).
+
+## Parte 3: reset dos dispositivos no ERP
+
+1. No navegador, acesse o ERP do cliente e vá em **Dispositivos > Terminais & Dispositivos**.
+2. Abra o dispositivo **Servidor**. Na página **Computador servidor**, clique em **Revogar licença** (no topo da página).
+3. Volte à lista, abra os **três pontos** do **PDV Desktop** antigo, clique em **Excluir** e depois crie um novo **PDV Desktop** em **Novo Dispositivo**.
+
+## Parte 4: instalação e nova vinculação (máquina nova)
+
+1. Na máquina nova, baixe os instaladores oficiais:
+    - [CPlug Server 2.12.10](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.10.exe)
+    - [CPlug PDV 2.12.10](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.10.exe)
+
+    !!! tip "Versão mais recente"
+        Os links acima são da versão 2.12.10. A versão atual sempre fica no ERP, em **Dispositivos > Baixar aplicativos**.
+
+2. Execute os instaladores com as configurações padrão.
+3. No ERP, pegue os novos PINs gerados. Informe o PIN do servidor no painel do novo servidor local e o PIN do PDV no aplicativo do caixa.
+
+## Resultado esperado
+
+- O novo servidor local faz uma carga limpa e sincronizada a partir da nuvem, e o PDV Desktop abre sem registros presos ou corrompidos do servidor anterior.
+
+## Cenários especiais
+
+??? question "A máquina antiga queimou ou está inacessível"
+    Pule as Partes 1 e 2 e comece pelo ERP:
+
+    1. Em **Dispositivos > Terminais & Dispositivos**, abra o **Servidor** e clique em **Revogar licença**. Isso desvincula o ID da placa-mãe antiga.
+    2. Exclua o **PDV Desktop** antigo e crie um novo.
+    3. Siga a Parte 4 na máquina nova.
+
+??? question "A máquina veio de outra loja (outra conta no mesmo hardware)"
+    O computador tem arquivos da conta anterior que precisam ser limpos:
+
+    1. No Gerenciador de Tarefas (**Ctrl + Shift + Esc**) > **Detalhes**, finalize a árvore de processos do `CPServer.exe`.
+    2. Em `C:\`, renomeie a pasta `data` com a identificação da loja antiga (ex.: `data.loja_antiga.old`). O MongoDB cria um banco 100% limpo.
+    3. Pressione **Windows + R**, digite `%appdata%` e pressione **Enter**.
+    4. Renomeie a pasta do PDV adicionando `.old` (ex.: `ConnectPlug PDV.loja_antiga.old`). O aplicativo do caixa passa a pedir um novo PIN.
+    5. Entre no ERP da **nova conta** do cliente, gere os PINs de Servidor e PDV e informe nos sistemas locais.
+
+**Relacionados:** [Migração e troca de servidor local (ERP 1.0)](trocar-servidor-erp1.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+
+Palavras-chave: trocar servidor migração cplug server cpserver mongodb banco corrompido revogar licença pin pdv desktop formatar computador novo appdata pasta data
+
+---
+Código: ERP-003 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/trocar-servidor-erp1/
+
+# Migração e troca de servidor local (ERP 1.0 / CPlug Server)
+
+Erro · Infraestrutura · ERP 1.0 (legado) · Banco de dados · Atualizado em 12/11/2026
+
+**Quando usar:** falha no servidor local da versão 1.0, troca de máquina ou banco MongoDB corrompido, exigindo encerramento forçado pelo Console e nova implantação.
+
+!!! danger "Alerta crítico"
+    O cliente **não pode** ter mesas, comandas ou entregas abertas, e todos os caixas devem estar fechados. Se o PDV local estiver parado por falha física, force o fechamento pela nuvem nos passos abaixo.
+
+## Parte 1: processos obrigatórios no ERP (nuvem)
+
+1. No ERP, vá em **Ponto de Venda > Gerência** e expanda a linha do caixa **Aberto**.
+2. Pressione **F12**, abra a aba **Console**, digite `showBtnPosForceClosure();` e pressione **Enter**. Feche o F12 e clique no botão **Forçar Fechamento do Caixa** que apareceu na página.
+3. Vá em **Ponto de Venda > Cadastro** e abra o primeiro PDV.
+4. Pressione **F12**, abra o **Console**, digite `editServerPos();` e pressione **Enter**. Feche o F12, limpe o campo do servidor (removendo o servidor offline) e clique em **Salvar**. Repita em todos os PDVs.
+
+## Parte 2: desinstalação na máquina antiga
+
+1. No Gerenciador de Tarefas (**Ctrl + Shift + Esc**) > aba **Detalhes**, finalize a árvore de processos do `CPServer.exe`.
+2. No Painel de Controle, desinstale o **MongoDB**.
+3. Em `C:\`, renomeie a pasta `data` para `data.old`.
+4. Pressione **Windows + R**, digite `%appdata%` e renomeie a pasta do PDV adicionando `.old` ao final.
+
+## Parte 3: novo ambiente no ERP
+
+1. Vá em **Ponto de Venda > Aplicativos**. Exclua o servidor antigo e clique em **Criar Novo Servidor**.
+2. Clique no ícone verde de chave na linha do novo servidor para gerar o PIN. Crie também o novo terminal (PDV) e guarde o PIN dele.
+
+## Parte 4: instalação e vinculação na máquina nova
+
+1. Baixe e instale os pacotes da versão 1.0:
+    - CPlug Server (no servidor): [CPServerInstall-2.12.8](https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.8.exe)
+    - CPlug PDV (nos terminais): [CPlugPdv2Install-2.12.8](https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.8.exe)
+2. Abra o CPServer na máquina servidora e informe o PIN do servidor. Abra o PDV Desktop e informe o PIN do terminal.
+3. No ERP, vá em **Ponto de Venda > Cadastro**, edite cada PDV, vincule o novo servidor e salve.
+
+## Resultado esperado
+
+- O MongoDB local é recriado do zero. Ao abrir o PDV, o sistema baixa uma sincronização completa da nuvem e mostra os caixas prontos para novas aberturas.
+
+## Cenários especiais
+
+??? question "A máquina antiga queimou ou está inacessível"
+    Pule a Parte 2. Faça a Parte 1 (fechamento forçado e limpeza do servidor em cada PDV), depois a Parte 3 e a Parte 4 na máquina nova.
+
+??? question "A máquina veio de outra loja (outra conta no mesmo hardware)"
+    Veja o mesmo cenário em [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md): a limpeza local (`CPServer.exe`, pasta `data`, pasta do PDV em `%appdata%`) é igual nas duas versões.
+
+**Relacionados:** [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md)
+
+Palavras-chave: trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos
+
+---
+Código: ERP-004 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/contrato-de-cartoes-legado/
+
+# Configuração de contrato de cartões (ERP legado)
+
+Configuração · ERP 1.0 (legado) · Financeiro · Atualizado em 12/11/2026
+
+**Objetivo:** preencher o contrato de cartões e os métodos de pagamento (PIX, cartões) para a conciliação bancária e o vínculo com o PDV/TEF.
+
+!!! info "No ERP 2.0"
+    O contrato fica em **Finanças > Contrato de cartões e outros**, com nomes de campo diferentes. Veja o manual [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+
+## Etapa 1: acesso ao menu
+
+1. No ERP legado, acesse **Financeiro > Contrato de Cartões**.
+2. **Edite** um contrato que já existe ou clique para **criar** um novo.
+
+## Etapa 2: dados gerais do contrato
+
+1. **Título:** nome para identificação (ex.: PIX, Stone).
+2. **Provedor:** a operadora/provedora correta.
+3. **Conta para Crédito:** a conta bancária onde os valores caem (ex.: Itaú).
+4. Deixe a caixa **Ativo** marcada.
+
+## Etapa 3: regras de recebimento (parcelas)
+
+1. **Agrupamentos:** marque *Agrupamento automático* ou *Agrupar por bandeira* para unificar os lançamentos.
+2. **Fluxo de caixa:** ative *Definir como pago todas as entradas nesse método* para baixa automática.
+3. **Calendário comercial:** se o contrato prever, marque *Deposita pagamento apenas em dias úteis* e/ou *Vencimento apenas em dias úteis*.
+4. **Feriados:** em *Dias úteis considerando feriados*, marque Municipais, Estaduais, Nacionais e/ou Internacionais, conforme a praça do cliente.
+
+## Etapa 4: modos de captura
+
+1. No fim da página, use os botões azuis para as regras de cada bandeira:
+    - **+ Configuração Débito:** método, bandeira, taxa %, tarifa em R$ e dias para o 1º pagamento. Repita para todas as bandeiras de débito aceitas.
+    - **+ Configuração Crédito:** bandeira e taxas das parcelas. Repita para todas as bandeiras de crédito aceitas.
+2. Clique em **Salvar**.
+
+!!! warning "Uso em POS (PDV PRO e Atendimento PRO)"
+    Para receber direto na maquininha POS, é **obrigatório** configurar **cada bandeira** que a loja vai aceitar. Bandeira não configurada e ativada aqui faz o aplicativo da POS não pedir a aproximação/inserção do cartão.
+
+## Resultado esperado
+
+- As formas de pagamento respeitam as baixas automáticas e a conciliação de taxas no financeiro do ERP.
+
+**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP 1](tef-erp1.md)
+
+Palavras-chave: contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos
+
+---
+Código: ERP-005 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/saldo-de-abertura-erp1/
+
+# Saldo de abertura do PDV (ERP 1)
+
+Configuração · ERP 1.0 (legado) · PDV · Fechamento · Atualizado em 12/11/2026
+
+**Objetivo:** configurar o valor fixo de abertura de caixa no ERP 1 e entender como o sistema transporta o saldo.
+
+!!! info "No ERP 2.0"
+    Em **Ponto de venda > Configurações > Geral**, a aba **Fechamento de caixa** não tem o campo "Valor que deve permanecer no caixa". Lá ficam *Exigir aprovação*, *Modelo de fechamento*, *Transferir valores automaticamente* e opções de segurança.
+
+## Passo a passo
+
+1. No ERP 1, clique na **engrenagem (Configurações)**.
+2. Vá em **Configurações do PDV > Configurações do PDV**.
+3. Role até a seção **Fechamento**.
+4. No campo **Valor que deve permanecer no caixa**, informe o saldo fixo e ajuste as demais regras de fechamento.
+5. Clique em **Salvar**.
+
+## Regras importantes
+
+- **Relatório de fechamento:** o valor aparece fixo no campo **Valor de Abertura**.
+- **Fundo de caixa variável:** se o cliente muda o fundo todo dia, deixe o campo em `0,00` e oriente o operador a fazer um **Reforço de Caixa (Suprimento)** com o valor do dia logo depois de abrir o PDV.
+- **Só dinheiro conta:** o sistema usa apenas as vendas em **dinheiro** para compor o valor que fica. Se o caixa não atingir o valor em espécie (poucas vendas em dinheiro ou muitas sangrias), o PDV abre no dia seguinte com o valor real que sobrou.
+
+## Resultado esperado
+
+- O sistema passa a usar o valor configurado como saldo inicial nos relatórios e no fechamento.
+
+Palavras-chave: saldo de abertura fundo de caixa troco valor que deve permanecer no caixa fechamento reforço suprimento sangria erp 1
+
+---
+Código: ERP-006 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/impressao-de-atributos/
+
+# Impressão de atributos fracionada ou agrupada
+
+Configuração · ERP 1.0 e ERP 2.0 · Impressão · Atualizado em 12/11/2026
+
+**Objetivo:** escolher como atributos múltiplos (adicionais, sabores, observações) saem no cupom de produção. A impressão **fracionada** serve para produtos divididos (pizzarias). A **agrupada** evita confusão na cozinha, mostrando os itens inteiros.
+
+## Onde fica no ERP 2.0
+
+1. No menu lateral, acesse **Ponto de venda > Configurações**.
+2. Abra **Recibos e notas impressas**.
+3. Role até a seção **Impressão fracionada**.
+
+## Onde fica no ERP 1.0
+
+1. Clique na **engrenagem (Configurações)**.
+2. Abra **Configuração do PDV > Configuração do PDV**.
+3. Role até a seção **Impressão**.
+
+## Escolha o layout
+
+| Opção | Use para | No cupom |
+| --- | --- | --- |
+| **Imprimir atributos múltiplos de forma fracionada** | Pizzarias e produtos fracionados | Sai dividido: "1/3 COM QUEIJO" |
+| **Imprimir atributos múltiplos de forma agrupada** | Hamburguerias, restaurantes | O adicional sai inteiro, por produto |
+| **Imprimir atributos múltiplos dependendo da configuração do atributo** (ERP 2.0) | Lojas com os dois tipos de produto | Segue o que cada atributo define (proporcional ou completo) |
+
+Depois de escolher:
+
+1. Clique em **Salvar**, no fim da página.
+2. Peça ao operador para **sincronizar** o PDV, para aplicar a nova regra.
+
+## Resultado esperado
+
+- Depois da sincronização, o PDV imprime os cupons de pedido no modelo escolhido.
+- No modo agrupado, as frações ("1/3") deixam de aparecer e a equipe de preparo lê os adicionais inteiros.
+
+**Relacionados:** [Gerenciamento e restrição de impressões no PDV](restringir-impressoes.md) · [Como cadastrar adicionais e sugestões](../../produtos/adicionais-e-sugestoes.md)
+
+Palavras-chave: impressão fracionada agrupada atributos adicionais sabores pizza meio a meio 1/3 cupom de produção cozinha recibos e notas impressas
+
+---
+Código: ERP-007 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/restringir-impressoes/
+
+# Gerenciamento e restrição de impressões no PDV
+
+Configuração · ERP 1.0 e ERP 2.0 · PDV · Impressão · Atualizado em 12/11/2026
+
+**Objetivo:** definir pelo ERP quais comprovantes e relatórios o PDV imprime.
+
+!!! info "Antes de começar"
+    Acesso ao ERP com permissão de administrador.
+
+## No ERP 2.0
+
+1. Acesse **Ponto de venda > Configurações > Recibos e notas impressas**.
+2. No bloco **Impressão automática**, ligue **Imprimir automaticamente** e marque o que deve sair sozinho:
+    - **Relatório de fechamento de caixa** (desmarque se o cliente quer poupar papel no fechamento);
+    - **DANFE ao transmitir a nota fiscal**;
+    - **Relatório gerencial ao finalizar uma venda**.
+3. Em **Tipo de impressão de pedido**, escolha **Todos os produtos** ou **Apenas produtos com impressora**.
+4. Na mesma tela ficam também **Customização**, **QR Code de engajamento**, **Fichas de consumo** e a [impressão fracionada](impressao-de-atributos.md).
+5. Salve.
+
+## No ERP 1.0 (legado)
+
+1. Clique na **engrenagem > Configurações do PDV > Configurações do PDV** e localize o bloco de impressão.
+2. Marque ou desmarque conforme a operação:
+    - Impressão de Relatório Gerencial;
+    - Impressão da NFC-e;
+    - Impressão de Relatório de fechamento de caixa;
+    - Impressão de Cupom de Pedido;
+    - Impressão de Cupom de Crédito de Cliente / Crediário;
+    - Configurar impressão dos atributos;
+    - demais cupons da tela.
+3. Salve.
+
+## Sincronize o PDV
+
+No frente de caixa, faça a **sincronização** para aplicar as novas regras na hora.
+
+## Resultado esperado
+
+- O PDV passa a imprimir automaticamente só o que ficou ativo no ERP.
+
+**Relacionados:** [Impressão de atributos fracionada ou agrupada](impressao-de-atributos.md) · [Como configurar o terminal de vendas](../../ponto-de-venda/configurar-terminal.md)
+
+Palavras-chave: impressão automática não imprimir relatório de fechamento danfe relatório gerencial cupom de pedido poupar papel recibos e notas impressas
+
+---
+Código: ERP-008 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/metodos-de-pagamento-na-pos/
+
+# Métodos de pagamento na POS (PDV PRO e Atendimento PRO)
+
+Configuração · ERP 1.0 e ERP 2.0 · Dispositivos · Meios de pagamento · Atualizado em 12/11/2026
+
+**Sintoma:** ao finalizar a venda na POS pelo aplicativo (PDV PRO ou Atendimento PRO), o aparelho não pede a aproximação, inserção ou leitura do cartão.
+
+**Causa:** as formas de pagamento e bandeiras não estão vinculadas ao dispositivo no ERP. Sem o vínculo, o aplicativo não reconhece o método e não aciona o leitor.
+
+!!! warning "Pré-requisito"
+    O contrato de cartões e as bandeiras de débito e crédito precisam estar criados. Veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md) ou, no ERP 2.0, [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+
+## No ERP 2.0
+
+1. No menu lateral, acesse **Dispositivos > Terminais & Dispositivos**.
+2. Localize a POS do cliente.
+3. Clique nos **três pontos** no fim da linha do dispositivo.
+4. Selecione **Gerenciar métodos de pagamento**.
+5. Ligue as formas de pagamento que a POS vai aceitar (PIX, Dinheiro, Cartão de Crédito, Cartão de Débito e as criadas pela loja). Na mesma tela fica a seção **Configurações TEF**.
+6. Salve.
+
+## No ERP 1.0 (legado)
+
+1. Acesse **Ponto de Venda > Aplicativos**.
+2. Na **Listagem dos Aplicativos**, localize a POS.
+3. Na coluna **Ações**, clique no ícone de **cartão com lupa**.
+4. Inclua os métodos de pagamento e as bandeiras do contrato de cartões.
+5. Salve.
+
+## Resultado esperado
+
+- Depois do vínculo e da sincronização do aplicativo na POS, ao escolher cartão no fechamento da venda o aparelho pede a aproximação/inserção do cartão.
+
+**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md) · [Como cadastrar formas de pagamento](../../financas/formas-de-pagamento.md)
+
+Palavras-chave: pos pdv pro atendimento pro não pede cartão aproximação gerenciar métodos de pagamento bandeiras terminais e dispositivos maquininha
+
+---
+Código: ERP-009 | Módulo: Suporte técnico | Tela no sistema: /dashboard/catalog/products/new
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/cadastro-de-chopp/
+
+# Cadastro de chopp (estoque e ficha técnica)
+
+Configuração · ERP 2.0 · Estoque · Produtos · Ficha técnica · Atualizado em 12/11/2026
+
+**Objetivo:** cadastrar o chopp vendido em copos/canecas para que o sistema dê baixa automática dos litros do barril (insumo) e calcule o custo real.
+
+Sem essa relação entre o volume comprado (barril) e a fração vendida (caneca), não há baixa automática do insumo e os relatórios de custo ficam zerados. São duas partes obrigatórias.
+
+## Parte 1: barril de chopp (insumo)
+
+Este cadastro serve só para estoque e entrada de notas de compra. Não aparece no cardápio do PDV.
+
+1. No menu, acesse **Produtos** e clique em **Novo produto**.
+2. Preencha:
+    - **Nome:** identificação clara (ex.: Barril de Chopp 30L).
+    - **Tipo:** **Insumo**.
+    - **Unidade de medida:** **L (Litros)**.
+3. Salve.
+4. Na entrada de estoque (importação de XML ou compra manual), lance:
+    - **Quantidade:** total em litros (barril de 30 litros = `30,00`).
+    - **Custo unitário (por litro):** valor do barril ÷ litros (R$ 400,00 ÷ 30 = `13,33`).
+    - O custo total é calculado sozinho (cerca de R$ 399,90).
+
+## Parte 2: chopp para venda (produção automática)
+
+Este é o produto que o atendente seleciona no PDV ou nos aplicativos.
+
+1. Em **Produtos > Novo produto**, preencha:
+    - **Nome:** nome comercial (ex.: Chopp - Caneca 500ml).
+    - **Unidade de medida:** **UN (Unidade)** ou **CP (Copo)**.
+
+    !!! warning "Unidade de venda"
+        Nunca use mL ou L como unidade de venda aqui: causa divergências e quebras visuais nos relatórios de vendas.
+
+2. Em **Tipo**, escolha **Produção automática**. Isso libera a seção de componentes.
+3. Clique em **Adicionar componentes**, pesquise o barril criado na Parte 1 e selecione.
+4. Na linha do componente, em **Quantidade**, informe os litros de uma unidade de venda: caneca de 500 ml = `0,50`.
+
+    !!! tip "Perda de colarinho/espuma"
+        O ERP 2.0 não tem campo de desperdício. Para considerar a perda, some na quantidade (ex.: `0,52` para 20 ml de perda por caneca).
+
+5. Para o custo, use **Recalcular custo** nos **três pontos** da linha do componente. O **Custo total** do produto é preenchido (no exemplo, R$ 6,67).
+6. Para o preço, informe a **Porcentagem** de lucro (ex.: `200,00`). O sistema mostra o **Preço sugerido** (ex.: R$ 20,01). Clique em **Aplicar preço** e em **Confirmar**.
+7. Confira e salve.
+
+## Resultado esperado
+
+- O "Chopp - Caneca 500ml" fica disponível para venda no PDV e nos aplicativos.
+- A cada caneca vendida, o sistema baixa 0,50 L (ou a quantidade com perda) do saldo do barril no estoque.
+
+## Lucro nos relatórios
+
+O sistema calcula o lucro com base no custo informado **na entrada do item no estoque**. Como o custo e a nota entram só no barril, o relatório de vendas mostra o custo do chopp zerado (R$ 0,00) e o lucro parece ser de 100%.
+
+**Contorno manual:** no cadastro do chopp (ex.: Chopp 500 ml), aba **Estoque**, ative **Custo com valor fixo** e informe em **Valor do custo** o custo da fração (ex.: `6,67`).
+
+!!! warning "Processo manual"
+    O valor fixo não se atualiza sozinho. A cada compra de barril com preço diferente, o custo precisa ser recalculado e alterado no cadastro do chopp.
+
+**Relacionados:** [Como montar a ficha técnica](../../produtos/ficha-tecnica.md) · [Como cadastrar um produto](../../produtos/cadastrar-produto.md) · [Como dar entrada no estoque](../../estoque/entrada-de-estoque.md)
+
+Palavras-chave: chopp barril caneca copo litros ml insumo produção automática ficha técnica componentes baixa de estoque custo fixo lucro zerado bebida fracionada
+
+---
+Código: ERP-010 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/tef-erp1/
+
+# Configuração e instalação da integração TEF (ERP 1)
+
+Configuração · Integração · ERP 1.0 (legado) · TEF · Atualizado em 12/11/2026
+
+**Objetivo:** instalar a VPN SiTef no ERP, corrigir o ID da empresa, vincular o contrato e instalar o TEF no PDV.
+
+**Por que dá problema:** o terminal precisa estar provisionado na VPN da operadora (GSurf/SiTef) pelo ERP. Além disso, o campo **ID da Empresa** no ERP 1 tem limite de caracteres errado, e sem o instalador interno do PDV as requisições não chegam ao Pinpad.
+
+!!! info "Antes de começar"
+    - Módulo de TEF contratado e ativo no plano (uma licença para cada terminal TEF físico).
+    - Pinpad ligado via USB, com os drivers do fabricante instalados e funcionando no Windows.
+    - Contrato de cartões criado: veja [Configuração de contrato de cartões (ERP legado)](contrato-de-cartoes-legado.md).
+
+## Parte 1: VPN e ID SiTef no ERP 1
+
+1. Acesse **Ponto de Venda > Aplicativos**.
+2. Localize o terminal e abra para editar.
+3. Desça até **Configurações da SITEF (Opcional)**.
+4. **Correção do ID da Empresa:** o campo **ID** pode vir com 9 dígitos (causa falha). Clique com o botão direito **em cima do campo ID** e selecione **Inspecionar**.
+5. O DevTools abre na linha do campo. Dê dois cliques no valor do atributo `value="XXXXXXXXX"`, **apague um zero excedente** para ficar com 8 dígitos e pressione **Enter**.
+6. Em **Configurações da VPN**, clique em **Cadastrar Terminal** (o botão só aparece com o módulo TEF ativo no plano).
+7. Na janela **CRIAR NOVO TERMINAL (GSURF)**, o CNPJ do cliente vem preenchido. Em **Descrição**, digite uma identificação (ex.: "PDV 1", "Caixa Comanda").
+8. Clique em **Confirmar** e depois em **Salvar**, no canto inferior esquerdo.
+
+## Parte 2: contrato de cartão
+
+Crie ou altere o contrato de cartões com o provedor TEF correspondente, como em [ERP-004](contrato-de-cartoes-legado.md).
+
+## Parte 3: instalação no PDV (frente de caixa)
+
+No computador onde o PDV roda:
+
+1. Faça a **sincronização** manual do **CPServer** e depois do aplicativo do **PDV**.
+2. Clique no menu (três barras) no **canto superior esquerdo**.
+3. Selecione **Área Administrativa** e entre com usuário e senha de gerente/administrador.
+4. No menu da esquerda, abra **Operações TEF > Instalação**.
+5. Confira os dados vindos do ERP: Gateway **SITEF**, ID da Empresa correto, IP do servidor local `127.0.0.1`.
+6. Clique no botão azul **INSTALAR**, no rodapé.
+7. Aguarde a mensagem de instalação concluída.
+
+## Resultado esperado
+
+- O PDV se comunica com o Pinpad, que emite o sinal sonoro ou a mensagem de pronto.
+- Numa venda com forma de pagamento de cartão integrado, a tela do TEF abre pedindo a inserção ou aproximação do cartão.
+
+**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
+
+Palavras-chave: tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado
+
+---
+Código: ERP-10 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/tef-erp2/
+
+# Configuração e instalação do TEF (ERP 2.0)
+
+Configuração · Integração · ERP 2.0 · TEF · PDV · Finanças · Atualizado em 12/11/2026
+
+**Objetivo:** credenciar, configurar no ERP e ativar o TEF no PDV (frente de caixa).
+
+!!! info "Antes de começar"
+    1. **Credenciamento:** o cliente pediu o credenciamento de **TEF** e de **PIX** pelo chat do suporte (são duas solicitações).
+    2. **Plano:** módulo **TEF** e **Contrato de cartões** ativos no plano.
+    3. **Acessos:** permissão de administrador no ERP e usuário e senha da **Área Administrativa do PDV** (gerente/administrador).
+    4. **Hardware:** Pinpad ligado e funcionando no computador do PDV.
+
+## Parte 1: terminal e VPN no ERP
+
+1. Acesse **Dispositivos > Terminais & Dispositivos**.
+2. Localize o terminal que vai receber o TEF.
+3. Clique nos **três pontos** no fim da linha.
+4. Selecione **Gerenciar métodos de pagamento**.
+5. No fim da tela, em **Configurações TEF**, clique em **Configurações de VPN**.
+6. Na janela, preencha **Nome da VPN** com a identificação física do terminal (ex.: PDV 1, TOTEM).
+7. Clique em **Salvar**.
+
+!!! warning "OTP"
+    A janela avisa que reinstalar ou cancelar a VPN muda a OTP do TEF. Depois de mexer na VPN, refaça a instalação da Parte 3.
+
+## Parte 2: contrato de cartões
+
+1. Acesse **Finanças > Contrato de cartões e outros**.
+2. Crie um contrato novo ou edite um sem uso e preencha:
+    - **Descrição:** nome claro (ex.: PIX, Stone, Cielo).
+    - **Provedor:** a operadora/provedora.
+    - **Conta para crédito:** a conta bancária onde as vendas caem.
+3. Ajuste as regras de recebimento:
+    - **Agrupar por:** Método de pagamento, Bandeira de cartão ou Sem agrupamento.
+    - **Definir todas as entradas como pagas neste contrato:** para baixa automática.
+    - **Pagamentos são depositados apenas em dias úteis** e/ou **Habilitar vencimento apenas em dias úteis**, se o contrato prever, com os feriados da praça do cliente.
+4. Cadastre as **taxas de cada bandeira** de débito e crédito aceita, como no manual [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+
+## Parte 3: instalação no PDV (frente de caixa)
+
+No computador onde o PDV está instalado:
+
+1. Faça a **sincronização manual do CPServer** e depois do aplicativo do **PDV**.
+2. Abra a **Área Administrativa do PDV**: menu (três barras) no canto superior esquerdo > **Área Administrativa** > credenciais de gerente/administrador.
+3. No menu da esquerda, abra **Operações TEF > Instalação**.
+4. Confira os dados vindos do ERP:
+    - **Gateway:** SITEF
+    - **OTP:** vem automaticamente depois de criar a VPN no ERP
+    - **ID da Empresa:** conforme o cadastro
+    - **IP do Servidor Local:** `127.0.0.1`
+5. Clique no botão azul **INSTALAR**, no rodapé.
+6. Aguarde a mensagem de instalação concluída.
+
+## Resultado esperado
+
+- **Pinpad:** o PDV se comunica com o Pinpad, que emite o sinal sonoro e/ou mostra a mensagem de pronto.
+- **Venda:** numa venda com forma de pagamento de cartão integrado (TEF), a tela do TEF abre pedindo a inserção, aproximação ou leitura do cartão/QR Code.
+
+**Relacionados:** [Configuração e instalação da integração TEF (ERP 1)](tef-erp1.md) · [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
+
+Palavras-chave: tef erp 2 sitef vpn nome da vpn otp configurações tef gerenciar métodos de pagamento contrato de cartões pinpad operações tef instalação credenciamento
+
+---
+Código: FINAN-001 | Módulo: Suporte técnico | Tela no sistema: /dashboard/finance/financial-transaction
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/financeiro/importar-planilha-de-lancamentos/
+
+# Importação de planilha de contas a pagar e a receber
+
+Processo operacional · ERP 1.0 e ERP 2.0 · Financeiro · Importação · Atualizado em 12/11/2026
+
+**Cenário:** baixar o modelo oficial de planilha, preencher e importar lançamentos financeiros. A estrutura do modelo não pode mudar: não exclua nem altere colunas.
+
+## Regras de preenchimento
+
+- **Campos livres:** Valor Original, Descontos/Taxas, Juros/Multa, Vencimento, Data da Competência, Data de Pagamento, Observações e Pago.
+- **Campos vinculados:** **Conta**, **Método de Pagamento** e **Categoria** dependem de cadastros do ERP. O nome na planilha precisa ser **idêntico** ao cadastrado (letras, espaços e acentos), senão a importação dá erro.
+- **Status pago:** para importar como pago, a coluna **Pago** deve ter exatamente **SIM**. No ERP legado, se o layout não fizer a baixa automática, selecione e baixe os lançamentos depois da importação.
+
+## Etapa 1: baixar o modelo
+
+- **ERP 2.0:** acesse **Finanças > Lançamentos**, clique em **Mais ações** e escolha **Importar recebimentos** ou **Importar despesas**. No painel **Importar Planilha**, baixe a planilha modelo (XLSX, até 10.000 linhas ou 5 MB).
+- **ERP 1.0 (legado):** acesse **Financeiro > Contas a Pagar** (ou Contas a Receber) > **Importar** e clique no link azul **Modelo de planilha**.
+
+## Etapa 2: preencher
+
+1. Abra a planilha e preencha os lançamentos, uma linha por lançamento.
+2. Preencha **Conta**, **Método de Pagamento** e **Categoria** com a grafia idêntica aos cadastros do ERP.
+3. Nos títulos já quitados, digite **SIM** na coluna **Pago** e informe a data retroativa em **Data de Pagamento**.
+4. Salve o arquivo sem mudar as colunas.
+
+## Etapa 3: importar
+
+1. Volte à tela onde baixou o modelo.
+2. Envie o arquivo preenchido e clique em **Importar**.
+
+## Resultado esperado
+
+- Linhas com **Pago = SIM** entram já como pagas, com a data da coluna **Data de Pagamento** (e não a data de hoje).
+- Os lançamentos caem nas contas, categorias e métodos certos, desde que os nomes batam com os cadastros ativos.
+
+**Relacionados:** [Como lançar uma conta a pagar ou a receber](../../financas/contas-a-pagar-e-receber.md) · [Como organizar o plano de contas](../../financas/plano-de-contas.md)
+
+Palavras-chave: importar planilha contas a pagar contas a receber importar despesas importar recebimentos modelo xlsx pago sim data de pagamento retroativa lançamentos em massa
+
+---
+Código: FISCAL-001 | Módulo: Suporte técnico | Tela no sistema: /dashboard/sale/sales
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/emitir-nfce-pelo-historico/
+
+# Emissão manual de NFC-e pelo histórico de vendas
+
+Processo operacional · ERP 2.0 · Faturamento · Fiscal · Atualizado em 12/11/2026
+
+**Objetivo:** emitir a NFC-e de uma venda que não gerou o documento fiscal no fechamento, por instabilidade de rede ou rejeição da Sefaz.
+
+!!! info "Limite do histórico no PDV"
+    O PDV Desktop mostra no histórico no máximo as **200 últimas vendas**. No ERP 2.0 esse número é configurável em **Ponto de venda > Configurações > Geral**, no campo **Limitar exibição de vendas no histórico do PDV** (até 200). Se a venda não aparece mais no caixa, emita pelo ERP, como abaixo.
+
+## Passo a passo
+
+1. No ERP, acesse **Vendas > Vendas**.
+2. Localize a venda pela data, valor ou número do cupom.
+3. Confirme que a venda tem um traço (**-**) na coluna **Nº Nota Fiscal**: sinal de que não tem nota.
+4. Clique nos **três pontos** da linha e escolha **Gerar nota fiscal > Gerar NFC-e**.
+5. Na janela **Dados complementares**, abaixo dos campos de CFOP, marque **Nota para Consumidor Final?** e clique em **Salvar**.
+6. Na tela com o espelho da nota, role até o rodapé e clique em **Salvar** de novo para gravar a nota.
+7. Na lista de notas, localize a nota e **transmita** para a Sefaz.
+8. Com o status **Autorizada**, gere o DANFE pelas ações da linha e imprima ou salve.
+
+## Resultado esperado
+
+- O traço (-) some da lista de vendas e dá lugar ao número da nota autorizada, regularizando a venda.
+
+**Relacionados:** [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md) · [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)
+
+Palavras-chave: nfc-e não emitida venda sem nota emitir nota depois histórico de vendas gerar nota fiscal gerar nfc-e traço 200 vendas contingência rejeição
+
+---
+Código: FISCAL-003 | Módulo: Suporte técnico | Tela no sistema: /dashboard/sale/sales
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/nfe-referenciando-nfce/
+
+# NF-e referenciando NFC-e (CFOP 5929/6929)
+
+Faturamento · ERP 2.0 · Fiscal · Notas referenciadas · Atualizado em 12/11/2026
+
+**Objetivo:** emitir uma NF-e (modelo 55) referenciando uma ou mais NFC-e (modelo 65) já emitidas, para faturamento de cupons ou transporte.
+
+!!! info "Antes de começar"
+    - Cadastro do destinatário completo: CNPJ/CPF, inscrição estadual, endereço e e-mail.
+    - Chave de acesso (44 dígitos) da NFC-e da venda.
+    - O CFOP correto é definido pelo **contador** do cliente.
+
+## Passo a passo
+
+1. Acesse **Vendas > Vendas**.
+2. Localize a venda do cupom já emitido. Abra para editar, vincule o cliente com cadastro completo e clique em **Salvar**.
+3. Nos **três pontos** da linha da venda, escolha **Gerar nota fiscal > Gerar NF-e**.
+4. Na janela **Dados complementares**:
+    - **CFOP:** `5929` (cliente do mesmo estado) ou `6929` (cliente de outro estado);
+    - marque **Utilizar este CFOP para todos os produtos.**;
+    - marque **Cliente contribuinte do ICMS?** e **Nota para Consumidor Final?** conforme o cliente;
+    - clique em **Salvar**.
+5. No espelho da nota, role até a seção de **documentos referenciados**.
+6. Informe a **chave de acesso de 44 dígitos** da NFC-e emitida no PDV.
+7. Confira os valores e **transmita** para a Sefaz.
+
+## Resultado esperado
+
+- O XML sai com a tag `<NFref>` preenchida com a chave da NFC-e, indicando ao fisco que o imposto foi recolhido na NFC-e de origem e que a NF-e serve para transporte ou faturamento.
+
+**Relacionados:** [Como emitir uma NF-e de venda](../../vendas/emitir-nfe.md) · [Natureza de operação (De/Para fiscal)](natureza-de-operacao-de-para.md)
+
+Palavras-chave: nf-e referenciada nfc-e para nf-e cupom para nota cfop 5929 6929 nfref chave de acesso faturamento transporte gerar nf-e
+
+---
+Código: FISCAL-004 | Módulo: Suporte técnico | Tela no sistema: /dashboard/settings/fiscal-settings/nature-operations
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/natureza-de-operacao-de-para/
+
+# Natureza de operação (De/Para fiscal)
+
+Configuração · Cadastro fiscal · ERP 1.0 e ERP 2.0 · Faturamento · Atualizado em 12/11/2026
+
+**Cenário:** criar regras automáticas de troca fiscal ("De/Para" de CFOP, ICMS e PIS/COFINS) na natureza de operação e aplicar na emissão de notas a partir de vendas. As duas versões do ERP têm os mesmos recursos nessa tela; muda o caminho.
+
+!!! warning "Só funciona em nota gerada a partir de venda"
+    As regras da natureza de operação valem **apenas para notas geradas a partir de uma venda**. Na nota 100% manual (sem venda), não há seleção automática: os dados fiscais são digitados item por item.
+
+## Etapa 1: criar a natureza de operação
+
+1. Acesse a tela de cadastro:
+    - **ERP 2.0:** **Configurações > Fiscal > Natureza de Operações**;
+    - **ERP 1.0:** **engrenagem > Configurações Fiscais > Natureza da Operação**.
+2. Crie ou edite uma natureza.
+3. Preencha o **Nome** e, se quiser, a **Descrição**.
+4. Na seção **CFOP**, defina a troca:
+    - **De:** o CFOP padrão do produto;
+    - **Para:** o CFOP que a nota deve usar com esta natureza.
+5. Se precisar trocar grupos tributários, use **Grupo de ICMS** e **Grupo de PIS/COFINS** com a mesma lógica De/Para.
+6. Clique em **Salvar**.
+
+## Etapa 2: aplicar na emissão
+
+1. Acesse **Vendas > Vendas**.
+2. Localize a venda e comece a gerar a nota (**três pontos > Gerar nota fiscal**).
+3. Na janela **Dados complementares**, selecione a natureza de operação criada.
+4. Conclua e transmita a nota.
+
+## Resultado esperado
+
+- Com a natureza selecionada, o sistema aplica o De/Para e troca as informações fiscais (CFOP, tributação) de todos os produtos que batem com as regras, sem alteração manual item por item.
+
+**Relacionados:** [Como cadastrar naturezas de operação](../../configuracoes/natureza-de-operacao.md) · [NF-e referenciando NFC-e](nfe-referenciando-nfce.md)
+
+Palavras-chave: natureza de operação de para cfop grupo de icms pis cofins substituição regra fiscal dados complementares nota a partir da venda
+
+---
+Código: FISCAL-005 | Módulo: Suporte técnico | Tela no sistema: /dashboard/sale/outbound-invoices
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/nfe-de-devolucao-manual/
+
+# NF-e de devolução (emissão manual)
+
+Emissão fiscal · ERP 2.0 · Vendas · Fiscal · Atualizado em 12/11/2026
+
+**Cenário:** emitir uma nota de devolução 100% manual, sem partir de uma venda.
+
+!!! info "Campos obrigatórios"
+    Na devolução, a Sefaz exige a identificação do documento original: sem a **chave de acesso** da nota de origem, a nota não é transmitida. Os dados financeiros ficam zerados, para não gerar cobrança.
+
+## Etapa 1: abrir a tela e identificar o cliente
+
+1. Acesse **Vendas > NF-e > Emitir NF-e**.
+2. Em **Chaves de acesso da NF-e referenciada**, informe os 44 dígitos da nota que deu origem à devolução.
+3. Em **Dados do cliente**:
+    - **Cliente cadastrado:** digite o nome no campo **Cliente** e selecione. O resto é preenchido.
+    - **Cliente sem cadastro:** deixe **Cliente** em branco e preencha nome, tipo de pessoa, endereço completo e documentos.
+4. Documentos: **CPF** (pessoa física) ou **CNPJ** e **Inscrição estadual** (pessoa jurídica).
+5. Se o destinatário não tem inscrição estadual, escolha o indicador **2 - Contribuinte isento** ou **9 - Não contribuinte**.
+
+## Etapa 2: dados da operação
+
+1. **Natureza da operação:** DEVOLUÇÃO.
+2. **Tipo de operação:** depende de quem devolve:
+    - **Entrada:** o cliente devolveu uma mercadoria que a loja vendeu;
+    - **Saída:** a loja devolve ao fornecedor uma mercadoria que comprou.
+3. **Finalidade de emissão:** **4 - Devolução de mercadoria**.
+4. **Destino da operação:** 1 - Operação interna (ou conforme o estado do cliente). **Presença do comprador:** 1 - Operação presencial.
+
+## Etapa 3: produtos e dados fiscais
+
+1. Em **Itens**, pesquise o produto ou preencha código, descrição, quantidade, unidade, valor unitário e NCM. Tudo **idêntico** à nota de origem.
+2. **Origem:** 0 - Nacional.
+3. Preencha situação tributária, alíquotas e o **CFOP de devolução** informados pelo **contador**, para a nota não ser rejeitada.
+
+## Etapa 4: pagamento e salvar
+
+1. **Forma de pagamento:** 0 - À vista.
+2. **Meio de pagamento:** **90 - Sem pagamento**.
+3. **Valor do pagamento:** exatamente **0,00**. Qualquer outro valor faz a Sefaz rejeitar a nota.
+4. Salve a nota.
+
+## Etapa 5: transmitir
+
+1. O sistema volta para a lista de notas.
+2. Localize a nota nova, com status **Pendente**.
+3. Nos **três pontos** da linha, clique em **Transmitir NF-e**.
+
+## Resultado esperado
+
+- A Sefaz valida a devolução (finalidade 4) referenciando a chave informada, gera XML e DANFE e nenhum lançamento financeiro é criado.
+
+**Relacionados:** [Como emitir NF-e de devolução](../../vendas/nfe-de-devolucao.md) · [NF-e de devolução de ativo em comodato](devolucao-de-ativo.md) · [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md)
+
+Palavras-chave: nota de devolução manual nf-e devolução sem venda finalidade 4 chave referenciada entrada saída sem pagamento 90 valor zerado transmitir
+
+---
+Código: FISCAL-006 | Módulo: Suporte técnico | Tela no sistema: /dashboard/sale/outbound-invoices
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/inutilizacao-e-transmissao/
+
+# Inutilização e transmissão de notas
+
+Dúvida · ERP 2.0 · Faturamento · Fiscal · Atualizado em 12/11/2026
+
+Números de nota pulados ou diferença entre o relatório de vendas e o da contabilidade costumam aparecer em dois cenários.
+
+## Cenário 1: o sistema pulou um número (sem venda)
+
+Por instabilidade na internet ou na comunicação com a Sefaz, o sistema pode pular um número da sequência (ex.: emitir a nota 100 e depois a 102). Como não existe venda real no número 101, o suporte associa uma venda antiga do histórico a esse número só para fazer o processo técnico de inutilização.
+
+- **O que é inutilizar:** avisar formalmente à Sefaz que aquele número foi pulado por falha técnica e **nunca existiu**, para não deixar "buraco" na sequência fiscal.
+
+## Cenário 2: a venda foi feita, mas a nota deu erro
+
+Costuma aparecer quando o contador avisa que **o total das vendas não bate com o total das notas autorizadas**. A venda foi faturada, mas a nota ficou presa num erro e não foi transmitida.
+
+## Nota antiga com erro: transmitir ou inutilizar?
+
+A decisão é do **contador**:
+
+- **Transmitir agora:** a nota é autorizada, mas entra na **competência atual** (mês vigente), o que pode afetar os impostos do mês.
+- **Inutilizar:** o número é descartado na Sefaz, e o contador orienta como regularizar a venda passada na escrituração.
+
+!!! tip "Evite surpresas no fim do mês"
+    Uma vez por semana (e sempre alguns dias antes do fechamento do mês), confira em **Vendas > NF-e** as notas com status **Pendente** ou **Falhou**. Corrigir dentro do mês da venda evita divergência com o contador.
+
+**Relacionados:** [Como cancelar, inutilizar ou corrigir uma nota](../../vendas/cancelar-nota.md) · [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md) · [Emissão manual de NFC-e pelo histórico](emitir-nfce-pelo-historico.md)
+
+Palavras-chave: inutilizar inutilização número pulado sequência de notas buraco nota com erro pendente falhou competência contador transmitir nota antiga
+
+---
+Código: INFRA-001 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrutura/pdv-offline-rede-local/
+
+# PDV offline em rede local (IP fixo)
+
+Configuração · Arquitetura · PDV · Rede · Operação offline · Atualizado em 12/11/2026
+
+**Necessidade:** operar os PDVs na rede local mesmo sem internet.
+
+**Como funciona:** o PDV opera sem internet pela rede local, desde que os computadores estejam no mesmo roteador, com **IP fixo** na mesma faixa e a porta liberada no **firewall**. Sem internet, **não há sincronização com o ERP na nuvem** e as notas saem em **contingência**.
+
+!!! info "Pré-requisitos"
+    - **Roteador/modem ligado:** é ele que faz a comunicação local entre as máquinas.
+    - **Mesma rede:** servidor e PDVs secundários na mesma rede local, com **IP fixo na mesma faixa** (ex.: `192.168.1.X`). Veja [Configuração de IP fixo no Windows](ip-fixo-no-windows.md).
+    - **Firewall do Windows:** desligado, ou com a porta `12000` liberada. Veja [Desativação do firewall do Windows](desativar-firewall.md).
+    - **Contingência fiscal:** emissão em contingência configurada no PDV para emitir NFC-e sem internet.
+
+## Passo a passo
+
+1. **No PDV servidor (máquina principal):** a aplicação conecta localmente por `localhost`. Nada a mudar.
+2. **Nos PDVs secundários:**
+    1. Abra a tela de conexão com o servidor no PDV.
+    2. No campo **IP do servidor**, troque `localhost` pelo **IP fixo da máquina servidora** (ex.: `192.168.1.100`).
+    3. Mantenha a **Porta** padrão `12000`.
+    4. Salve/volte ao início e confira a mensagem **Você está conectado ao servidor**.
+
+## Resultado esperado
+
+- Os PDVs secundários falam com o servidor e vendem normalmente, mesmo com a internet da loja fora.
+- Sem internet, as notas saem em **contingência** e o ERP só sincroniza quando a conexão voltar.
+
+??? question "Os PDVs secundários não conectam"
+    Confira se o modem está ligado, se o firewall do servidor não bloqueou a porta `12000` e se o IP fixo do servidor não mudou.
+
+**Relacionados:** [Fechamento de caixa com vários PDVs](../pdv/fechamento-com-varios-pdvs.md)
+
+Palavras-chave: pdv offline sem internet rede local ip do servidor localhost porta 12000 pdv secundário contingência você está conectado ao servidor
+
+---
+Código: INFRA-002 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrutura/ip-fixo-no-windows/
+
+# Configuração de IP fixo no Windows (servidor e PDVs)
+
+Infraestrutura · Rede · PDV · Servidor · Atualizado em 12/11/2026
+
+**Necessidade:** fixar o IP da máquina (servidor ou PDV) para a comunicação na rede local não cair quando o roteador reinicia.
+
+**Por que:** o roteador distribui IPs dinâmicos (DHCP). O IP do servidor pode mudar com o tempo e quebrar a conexão dos PDVs secundários. Com **IP fixo**, o endereço não muda.
+
+## Etapa 1: descobrir o IP atual e o gateway
+
+1. Pressione **Windows + R**.
+2. Digite `cmd` e pressione **Enter**.
+3. No Prompt de Comando, digite `ipconfig` e pressione **Enter**.
+4. Anote:
+    - **Endereço IPv4** (ex.: `192.168.1.50`)
+    - **Máscara de Sub-rede** (ex.: `255.255.255.0`)
+    - **Gateway Padrão** (ex.: `192.168.1.1`)
+
+## Etapa 2: aplicar o IP fixo
+
+1. Pressione **Windows + R**, digite `ncpa.cpl` e pressione **Enter**. Abre **Conexões de Rede**.
+2. Clique com o botão direito na conexão (normalmente **Ethernet** ou **Wi-Fi**) e selecione **Propriedades**.
+3. Dê dois cliques em **Protocolo IP Versão 4 (TCP/IPv4)**.
+4. Marque **Usar o seguinte endereço IP**.
+5. Preencha com os dados da Etapa 1:
+    - **Endereço IP:** o IP desejado (ex.: `192.168.1.100` no servidor);
+    - **Máscara de sub-rede:** preenche sozinha ao clicar (normalmente `255.255.255.0`);
+    - **Gateway padrão:** o IP do roteador (ex.: `192.168.1.1`).
+6. Em **DNS**, use os DNS do Google:
+    - **Servidor DNS preferencial:** `8.8.8.8`
+    - **Servidor DNS alternativo:** `8.8.4.4`
+7. Marque **Validar configurações na saída** e clique em **OK** nas duas janelas.
+
+## Resultado esperado
+
+- O computador mantém o mesmo IP local, mesmo com o modem desligado ou reiniciado.
+- Os PDVs secundários apontam sempre para o IP fixo do servidor, sem perder a conexão.
+- A internet continua funcionando se gateway e DNS estiverem corretos.
+
+**Relacionados:** [PDV offline em rede local](pdv-offline-rede-local.md) · [Desativação do firewall do Windows](desativar-firewall.md)
+
+Palavras-chave: ip fixo ip estático windows ipconfig ncpa.cpl tcp/ipv4 gateway máscara dns 8.8.8.8 dhcp servidor pdv rede local
+
+---
+Código: INFRA-003 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/infraestrutura/desativar-firewall/
+
+# Desativação do firewall do Windows (servidor e PDVs)
+
+Infraestrutura · Segurança · Rede · PDV · Firewall · Atualizado em 12/11/2026
+
+**Necessidade:** liberar a comunicação na rede local entre servidor e PDVs secundários, sem bloqueio na porta de comunicação (ex.: `12000`).
+
+**Por que:** o firewall do Windows filtra conexões. Com as regras padrão, costuma bloquear conexões vindas de outros computadores da rede, e o PDV secundário não encontra o servidor.
+
+## Passo a passo (pelo Executar)
+
+1. Pressione **Windows + R**.
+2. Digite `firewall.cpl` e pressione **Enter**.
+3. Na janela do **Firewall do Windows Defender**, clique, à esquerda, em **Ativar ou desativar o Firewall do Windows Defender**.
+4. Em **Configurações de rede privada**, marque **Desativar o Firewall do Windows Defender (não recomendado)**.
+5. Em **Configurações de rede pública**, marque **Desativar o Firewall do Windows Defender (não recomendado)**.
+6. Clique em **OK**.
+
+## Resultado esperado
+
+- As portas locais ficam liberadas entre os computadores da loja.
+- Os PDVs secundários conectam ao IP do servidor sem erro de conexão recusada ou timeout.
+- O Windows pode mostrar um aviso de firewall desativado na área de notificação. É normal.
+
+**Relacionados:** [PDV offline em rede local](pdv-offline-rede-local.md) · [Configuração de IP fixo no Windows](ip-fixo-no-windows.md)
+
+Palavras-chave: firewall windows defender desativar firewall.cpl porta 12000 bloqueio conexão recusada timeout pdv secundário servidor rede local
+
+---
+Código: PDV-001 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/falha-aproximacao-pinpad/
+
+# Falha na aproximação de cartão no PINPAD (SiTef)
+
+Erro · PDV · TEF · Periféricos · Atualizado em 12/11/2026
+
+**Sintoma:** ao pagar por aproximação no PDV, o PINPAD não lê o cartão ou mostra erro de comunicação.
+
+**Causa:** arquivos de carga de tabelas ou temporários corrompidos na pasta local do SiTef. É preciso resetar a pasta e reiniciar o CPServer para forçar uma nova carga.
+
+## Passo a passo
+
+1. No computador do caixa, pressione **Windows + E** para abrir o Explorador de Arquivos.
+2. Vá em **Este Computador** e abra o **Disco Local (C:)**.
+3. Localize a pasta **CliSiTef** e renomeie para `CliSiTef.old`.
+4. Abra o Gerenciador de Tarefas (**Ctrl + Shift + Esc**).
+5. Na aba **Detalhes**, localize o processo do Java (`java.exe` ou `javaw.exe`), clique com o botão direito e selecione **Finalizar árvore de processos**.
+6. Volte para a tela do PDV. O ícone do CPServer na barra superior fica vermelho, porque o Java foi finalizado.
+7. Clique no ícone do CPServer para reiniciá-lo e aguarde até ele ficar verde.
+8. Abra uma venda, inicie um pagamento em **Débito** ou **Crédito** e aguarde o PINPAD terminar a carga de registros.
+
+## Resultado esperado
+
+- A pasta **CliSiTef** é recriada automaticamente em `C:\`, limpa.
+- Ao iniciar a transação, o PINPAD mostra a mensagem de atualização/carga de tabelas e volta a aceitar pagamentos por aproximação.
+
+**Relacionados:** [Vinculação do Smart TEF ao PDV](vincular-smart-tef.md) · [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md)
+
+Palavras-chave: pinpad sitef clisitef aproximação nfc cartão não lê erro de comunicação cpserver java carga de tabelas tef
+
+---
+Código: PDV-002 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/vincular-smart-tef/
+
+# Vinculação do Smart TEF ao PDV
+
+Configuração · PDV · TEF · Atualizado em 12/11/2026
+
+**Objetivo:** vincular a maquininha Smart TEF (POS) ao frente de caixa (PDV) pelo aplicativo Smart TEF e associar o contrato de cartões.
+
+!!! info "Antes de começar"
+    - Contrato de cartões configurado e ativo no ERP (no ERP 2.0: **Finanças > Contrato de cartões e outros**).
+    - Maquininha Smart TEF (POS) de modelo homologado.
+
+## Etapa 1: ativação na maquininha
+
+1. Na maquininha Smart TEF, abra o aplicativo **Smart TEF**.
+2. Na tela inicial, toque em **Ler QR Code**. A câmera do aparelho abre.
+
+## Etapa 2: vinculação no frente de caixa
+
+1. No computador do PDV, abra a **Área Administrativa**.
+2. Vá em **Operações TEF > Cplug Pay**.
+3. O PDV mostra um QR Code. Aponte a câmera da maquininha para ele para sincronizar.
+
+## Etapa 3: vínculo do contrato de cartões
+
+1. Ainda na Área Administrativa do PDV, abra **Habilitar/Desabilitar**.
+2. No campo de TEF correspondente, vincule o contrato de cartões configurado no ERP.
+3. Clique em **Salvar**.
+
+## Resultado esperado
+
+- A maquininha mostra o status de conectada e sincronizada com o caixa e fica pronta para vender.
+
+**Relacionados:** [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md) · [Falha na aproximação de cartão no PINPAD](falha-aproximacao-pinpad.md)
+
+Palavras-chave: smart tef pos maquininha qr code cplug pay operações tef área administrativa habilitar desabilitar contrato de cartões vincular
+
+---
+Código: PDV-003 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/corrigir-saldo-de-cliente/
+
+# Correção de lançamento incorreto em saldo de cliente
+
+Erro operacional · Dúvida · PDV · Saldo de cliente · Fluxo de caixa · Atualizado em 12/11/2026
+
+**Cenário:** uma **Adição de crédito** (saldo do cliente) foi feita com a forma de pagamento errada (exemplo: lançada em PIX, mas o cliente pagou em dinheiro) e o operador tentou corrigir com a função **Remover**.
+
+O sistema não tem cancelamento direto e toda **Remoção de saldo** gera uma saída automática em **Dinheiro**. Por isso o caixa fica com divergência entre as formas de pagamento no fechamento, embora o total final esteja correto.
+
+## Passo 1: ajuste no cadastro do cliente
+
+1. Para o cliente não sair prejudicado e o histórico ficar correto, confira se o histórico dele tem estes lançamentos:
+    - a primeira **Adição de crédito**: o lançamento errado (ex.: PIX);
+    - a **Remoção de crédito**: a tentativa de correção do operador (sai como Dinheiro);
+    - a nova **Adição de crédito**: o lançamento certo, com a forma que o cliente usou de verdade (ex.: Dinheiro).
+2. O saldo final do cliente fica correto e pronto para uso. O histórico mostra o erro e a correção, para auditoria.
+
+## Passo 2: no caixa, não faça reforço
+
+Não é preciso fazer **Reforço** ou **Suprimento** no caixa. A nova entrada em Dinheiro e a remoção automática em Dinheiro se anulam no sistema. O dinheiro físico do cliente já está na gaveta, então o total do caixa físico está correto.
+
+## Como fazer o fechamento do caixa
+
+No fim do expediente, a divergência aparece só nas modalidades:
+
+- **Dinheiro:** **sobra** física (mais dinheiro na gaveta do que o sistema indica).
+- **PIX (ou a modalidade errada):** **falta** (o sistema indica o recebimento, mas o valor não está na conta).
+
+No campo de observação/justificativa do fechamento, o operador usa este texto padrão:
+
+> "Divergência de valor entre as modalidades Dinheiro (Sobra) e PIX (Falta) devido a erro de lançamento manual na Adição de Saldo do cliente [Nome do Cliente]. O saldo do cliente e o valor total bruto do caixa físico encontram-se corretos."
+
+!!! tip "Como evitar"
+    - Conferir a forma de pagamento na tela de **Adição de crédito** antes de clicar em **Confirmar**.
+    - Se o erro for percebido antes de qualquer outra ação, avisar o gerente na hora para anotar a justificativa, em vez de tentar remover (a remoção gera saída em dinheiro).
+
+**Relacionados:** [Como configurar o terminal de vendas](../../ponto-de-venda/configurar-terminal.md) · [Fechamento de caixa com vários PDVs](fechamento-com-varios-pdvs.md)
+
+Palavras-chave: saldo do cliente crédito de cliente adição de crédito remover saldo forma de pagamento errada pix dinheiro sobra falta fechamento de caixa justificativa
+
+---
+Código: PDV-004 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/atalhos-numericos-pagamento/
+
+# Atalhos numéricos na tela de pagamento do PDV
+
+Configuração · PDV · Tela de pagamento · Atualizado em 12/11/2026
+
+**Objetivo:** fazer a tela de pagamento do PDV mostrar um número ao lado de cada forma de pagamento, para o operador escolher pelo teclado (1 a 9).
+
+## Passo a passo
+
+1. Na tela de finalização da venda, olhe o canto superior direito.
+2. Clique na **engrenagem (Configurações)**, na barra superior, ao lado do menu principal.
+3. Na janela **Configurações de pagamento**, localize o primeiro campo: **Método de pagamento padrão**.
+4. Clique no **X** dentro do campo para limpar. Nenhum método pode ficar selecionado.
+5. Clique no botão verde **SALVAR (ENTER)**, no rodapé da janela.
+6. Volte para a tela anterior (balcão/venda) e avance de novo para a tela de pagamento, para o PDV montar o novo layout.
+
+## Resultado esperado
+
+- A tela de pagamento mostra os números ao lado das formas (ex.: [1] Dinheiro, [2] Cartão).
+- O operador escolhe a forma pela tecla numérica, sem usar o mouse.
+
+Palavras-chave: atalho teclado números tela de pagamento método de pagamento padrão engrenagem configurações de pagamento pdv sem mouse
+
+---
+Código: PDV-005 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/pdv/fechamento-com-varios-pdvs/
+
+# Fechamento de caixa com vários PDVs (mesas, comandas e delivery)
+
+Dúvida · PDV · Fluxo de caixa · Operação · Atualizado em 12/11/2026
+
+**Dúvida:** como funciona o fechamento de caixa com mais de um terminal e como mesas, comandas e delivery se comportam entre as telas.
+
+O sistema não tem uma configuração para juntar dois caixas automaticamente: cada terminal que finaliza uma venda é tratado de forma independente. Mas dá para centralizar a operação assim:
+
+## Como funciona
+
+1. **Módulos compartilhados (mesas, comandas e delivery):** abertura de mesa, lançamento em comanda e recebimento de delivery (por integração ou lançamento manual) ficam na mesma base. Uma mesa aberta ou um delivery recebido aparece em todos os PDVs ativos da loja.
+2. **Centralizar o fechamento:** para fechar em um único computador, padronize que **todas as finalizações de pagamento** (mesas, comandas e entregas) sejam feitas em um PDV eleito como **principal**. A venda entra no caixa do computador que finalizou/emitiu o cupom.
+3. **Balcão não é compartilhado:** toda venda iniciada e encerrada no **Balcão** do PDV 1 fica no caixa do PDV 1; o mesmo vale para o PDV 2. Se os dois usarem o Balcão, haverá obrigatoriamente dois fechamentos de caixa.
+
+## Resultado esperado
+
+- Produtos lançados em mesas e comandas e novos pedidos de delivery feitos no PDV 2 aparecem na hora no PDV 1.
+- Se o PDV 1 receber e encerrar essas mesas e entregas, o valor entra só no relatório do PDV 1, e o fechamento fica centralizado.
+- O relatório mostra separadas as vendas de Balcão de cada terminal, se houver.
+
+**Relacionados:** [Correção de lançamento incorreto em saldo de cliente](corrigir-saldo-de-cliente.md) · [PDV offline em rede local](../infraestrutura/pdv-offline-rede-local.md)
+
+Palavras-chave: dois caixas vários pdvs fechamento de caixa unificar centralizar mesas comandas delivery balcão pdv principal
+
+---
+Código: PER-001 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-sem-pagina-de-teste/
+
+# Impressora não imprime a página de teste do Windows
+
+Erro · Periféricos · Impressão · Hardware · Atualizado em 12/11/2026
+
+**Sintoma:** a impressora térmica USB não imprime a página de teste do Windows, e nada sai pelo PDV ou pelo ERP.
+
+**Causa:** travamento do USB na placa da impressora, portas COM virtuais ocultas congestionadas no Windows, falta de bobina ou falha física no cabo ou no equipamento.
+
+## Parte 1: testar pelo painel de impressoras
+
+1. Pressione **Windows + R**.
+2. Digite `control printers` e pressione **Enter**.
+3. Em **Dispositivos e Impressoras**, localize a impressora térmica.
+4. Clique com o botão direito e selecione **Propriedades da Impressora** (não o "Propriedades" do fim da lista).
+5. Clique com o botão direito de novo e selecione **Ver o que está sendo impresso**. Deixe as duas janelas lado a lado.
+6. Na aba **Geral**, clique em **Imprimir Página de Teste**. Se o papel não sair, siga para a Parte 2.
+
+## Parte 2: identificar a porta (COM ou USB)
+
+1. Em **Propriedades da Impressora**, abra a aba **Portas**.
+2. Veja qual linha está marcada e anote se é porta virtual (ex.: `USB001`) ou de comunicação (ex.: `COM3`).
+3. Pressione **Windows + R**, digite `devmgmt.msc` e pressione **Enter**.
+4. Expanda **Portas (COM e LPT)** ou **Controladores USB**. Veja se a impressora ou um "USB Serial Port" aparece com a porta. Um triângulo amarelo com exclamação indica conflito de driver.
+
+## Parte 3: limpar portas COM presas no Regedit
+
+1. Pressione **Windows + R**, digite `regedit` e pressione **Enter**. Clique em **Sim** na autorização.
+2. Na barra de endereço do Editor do Registro, cole o caminho abaixo e pressione **Enter**:
+
+    ```
+    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\COM Name Arbiter
+    ```
+
+3. À direita, localize o valor **ComDB**.
+4. Clique com o botão direito em **ComDB**, selecione **Excluir** e confirme. O Windows recria o valor limpo ao reiniciar.
+5. Feche o Editor do Registro, desconecte o cabo da impressora e conecte de novo.
+
+## Parte 4: ciclo de energia e reset físico
+
+Se continuar sem responder, nesta ordem:
+
+1. Desligue a impressora no botão.
+2. Desconecte todos os cabos da traseira (energia e USB).
+3. Aguarde 10 segundos.
+4. Conecte os cabos de volta, firmes.
+5. Ligue a impressora e troque o cabo USB para outra porta do computador (de preferência as traseiras, da placa-mãe).
+
+## Parte 5: últimas tentativas e diagnóstico
+
+1. Desinstale o driver do fabricante pelo Painel de Controle e instale de novo.
+2. Confira o básico no equipamento:
+    - a bobina térmica no lado certo (o lado brilhante, sensível ao calor, virado para frente);
+    - a tampa fechada até o clique;
+    - o botão **FEED (Avanço)**: se o papel avança, guilhotina e motor funcionam.
+
+## Resultado esperado
+
+- Depois da limpeza do Regedit e da troca de porta USB, o Windows associa a impressora a uma porta limpa (geralmente COM1 ou COM2), libera a fila e imprime a página de teste.
+
+!!! warning "Defeito de hardware"
+    Se o **FEED** não avança o papel, ou se a página de teste continua falhando mesmo trocando cabos e computador, é defeito físico. Oriente o cliente a acionar a garantia ou levar a uma assistência técnica.
+
+**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora USB no ERP 1](impressora-usb-erp1.md)
+
+Palavras-chave: impressora não imprime página de teste térmica usb porta com usb001 regedit comdb com name arbiter gerenciador de dispositivos driver bobina feed
+
+---
+Código: PER-002 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-usb-erp1/
+
+# Impressora USB no ERP 1
+
+Configuração · ERP 1.0 (legado) · Periféricos · Impressão · Atualizado em 12/11/2026
+
+**Objetivo:** criar o Servidor CPrint e configurar o ponto de impressão no ERP 1, mapeando a impressora USB pelo compartilhamento do Windows.
+
+!!! info "Antes de começar"
+    A página de teste do Windows precisa sair normalmente. Veja [Impressora não imprime a página de teste do Windows](impressora-sem-pagina-de-teste.md).
+
+## Parte 1: nome de compartilhamento no Windows
+
+1. Pressione **Windows + R**, digite `control printers` e pressione **Enter**.
+2. Clique com o botão direito na impressora térmica e selecione **Propriedades da Impressora**.
+3. Abra a aba **Compartilhamento**.
+4. Deixe marcada a caixa **Compartilhar esta impressora**.
+5. Copie exatamente o texto do campo **Nome de compartilhamento** (ex.: `caixa`).
+
+## Parte 2: Servidor CPrint no ERP 1
+
+1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+2. Adicione ou edite o servidor e defina o **Endereço IP** conforme o cenário:
+    - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1`.
+    - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
+3. Em **Porta**, informe `8081`.
+4. Em **Versão**, marque **2.0** e clique em **Salvar**.
+
+## Parte 3: ponto de impressão no ERP 1
+
+1. Na mesma tela, abra a aba **Pontos de Impressão** e clique em **Editar** (ou cadastre) a impressora.
+2. Em **Porta ou IP da Impressora**, monte o caminho com o IP local e o nome de compartilhamento da Parte 1: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
+3. Em **Porta da Impressora de Rede**, informe `9100`.
+4. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+5. Em **Servidor CPrint**, selecione o servidor criado na Parte 2.
+6. Preencha **Fabricante** (ex.: ELGIN) e **Modelo** (ex.: I9) e clique em **Salvar**.
+
+## Resultado esperado
+
+- O CPrint faz a ponte entre o ERP e a fila do Windows. Ao enviar uma venda ou pedido, a impressão térmica sai na hora pelo caminho configurado.
+
+**Relacionados:** [Impressora USB no ERP 2](impressora-usb-erp2.md) · [Impressora de rede no ERP 1](impressora-rede-erp1.md)
+
+Palavras-chave: impressora usb erp 1 legado cprint servidor cprint ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto
+
+---
+Código: PER-003 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-rede-erp1/
+
+# Impressora de rede (Ethernet) no ERP 1
+
+Configuração · ERP 1.0 (legado) · Periféricos · Rede · Atualizado em 12/11/2026
+
+**Objetivo:** configurar o ponto de impressão no ERP 1 para impressoras térmicas que se comunicam direto pelo cabo de rede, sem compartilhamento do Windows.
+
+!!! info "Antes de começar"
+    - A impressora está ligada pelo cabo de rede no mesmo roteador/switch do computador do PDV.
+    - Impressora e PDV na **mesma sub-rede** (ex.: PC em `192.168.15.50`, impressora em `192.168.15.200`).
+
+!!! tip "Um Servidor CPrint basta"
+    Com várias impressoras de rede, não crie um Servidor CPrint para cada uma. O mesmo servidor **Local** (`127.0.0.1`) serve para todas. Se o cliente já tem o CPrint criado, não crie outro.
+
+## Parte 1: Servidor CPrint local
+
+1. No ERP 1, clique na **engrenagem > Configurações do PDV > Servidores CPrint**.
+2. Cadastre ou selecione o servidor **Local**.
+3. Confira o **Endereço IP** `127.0.0.1` e a porta `8081`.
+4. Deixe a versão **2.0** e clique em **Salvar**.
+
+## Parte 2: ponto de impressão
+
+1. Na mesma tela, abra a aba **Pontos de Impressão**.
+2. Clique em **Editar** (ou cadastre) a impressora.
+3. Em **Porta ou IP da Impressora**, informe só o IP fixo da impressora (ex.: `192.168.15.200`), **sem** as barras invertidas usadas no modelo USB.
+4. Em **Porta da Impressora de Rede**, informe `9100`.
+5. Em **Tipo de Comunicação**, selecione **Acesso Direto**.
+6. Em **Servidor CPrint**, selecione **Local**.
+7. Preencha **Fabricante** e **Modelo** e clique em **Salvar**.
+
+## Resultado esperado
+
+- O CPrint local recebe a requisição do ERP 1 e envia os dados por TCP/IP direto para o IP da impressora na porta 9100, sem passar pela fila do Windows.
+
+**Relacionados:** [Impressora de rede direta no ERP 2](impressora-rede-erp2.md) · [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md)
+
+Palavras-chave: impressora de rede ethernet cabo de rede ip fixo erp 1 legado cprint local 9100 acesso direto mesma sub-rede
+
+---
+Código: PER-004 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-spooler-erp1/
+
+# Impressora de rede com spooler/driver do Windows no ERP 1
+
+Configuração · ERP 1.0 (legado) · Periféricos · Rede com driver · Atualizado em 12/11/2026
+
+**Objetivo:** configurar no ERP 1 impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o CPrint.
+
+!!! info "Antes de começar"
+    - Driver da impressora instalado no Windows, com a porta configurada para o IP da impressora (ex.: `192.168.15.200`).
+    - A página de teste do Windows sai normalmente pelo Painel de Controle (`control printers`).
+
+## Parte 1: compartilhamento no Windows
+
+1. Pressione **Windows + R**, digite `control printers` e pressione **Enter**.
+2. Clique com o botão direito na impressora de rede e selecione **Propriedades da Impressora**.
+3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
+4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
+
+## Parte 2: Servidor CPrint no ERP 1
+
+1. No ERP 1, acesse **engrenagem > Configurações do PDV > Servidores CPrint**.
+2. Defina o **Endereço IP** conforme o cenário:
+    - **Cenário A (só o PDV local imprime):** use `127.0.0.1`.
+    - **Cenário B (aplicativo de mesas/comandas):** o aplicativo manda a ordem para a nuvem, que precisa achar o computador com o spooler. Use o IP fixo de rede desse computador (ex.: `10.0.0.108`).
+3. Mantenha a porta `8081`, marque a versão **2.0** e salve.
+
+## Parte 3: ponto de impressão
+
+1. Abra a aba **Pontos de Impressão** e clique em **Editar** na impressora.
+2. Em **Porta ou IP da Impressora**, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
+3. Em **Porta da Impressora de Rede**, informe `9100`.
+4. Em **Tipo de Comunicação**, selecione **Acesso Direto** (obrigatório).
+5. Em **Servidor CPrint**, escolha o servidor da Parte 2 (Local ou o IP do computador do spooler, conforme o cenário).
+6. Selecione **Fabricante** e **Modelo** e clique em **Salvar**.
+
+## Resultado esperado
+
+- Ao imprimir (pelo PDV ou pelo aplicativo de mesas), o ERP 1 aciona o CPrint pelo IP configurado. O CPrint joga o documento na fila do Windows, e o Windows envia pela rede para a impressora.
+
+**Relacionados:** [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md)
+
+Palavras-chave: impressora de rede driver spooler windows erp 1 legado compartilhamento cprint aplicativo de mesas comandas 127.0.0.1 9100 8081
+
+---
+Código: PER-005 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-usb-erp2/
+
+# Impressora USB no ERP 2
+
+Configuração · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2026
+
+**Objetivo:** configurar uma impressora térmica USB no ERP 2.0, mapeando pelo compartilhamento do Windows e direcionando os dados ao servidor de impressão.
+
+!!! info "Antes de começar"
+    A página de teste do Windows precisa sair normalmente. Veja [Impressora não imprime a página de teste do Windows](impressora-sem-pagina-de-teste.md).
+
+## Parte 1: nome de compartilhamento no Windows
+
+1. Pressione **Windows + R**, digite `control printers` e pressione **Enter**.
+2. Clique com o botão direito na impressora térmica e selecione **Propriedades da Impressora**.
+3. Abra a aba **Compartilhamento**.
+4. Deixe marcada a caixa **Compartilhar esta impressora**.
+5. Copie exatamente o **Nome de compartilhamento** (ex.: `caixa`).
+
+## Parte 2: cadastro do periférico no ERP 2
+
+1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
+2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
+3. Preencha:
+    - **Nome:** conforme o uso (ex.: Bar, Cozinha, Caixa, Parcial).
+    - **Descrição:** opcional, para observações internas.
+    - **Fabricante** e **Modelo:** os do equipamento.
+    - **Tipo de comunicação:** **Acesso direto**.
+4. No campo do endereço do periférico, monte o caminho com o IP local e o nome de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
+5. Em **Porta do periférico na rede**, confira `9100` (já vem preenchido).
+6. Em **Informações do Servidor**, defina o **IP** conforme o cenário:
+    - **Cenário A (impressão em um único PDV):** a impressora só imprime no computador onde está ligada. Use `127.0.0.1` (já vem preenchido).
+    - **Cenário B (atendimento de mesas ou outro computador):** a impressora recebe do aplicativo de mesas ou de outro caixa. Use o IP de rede da máquina onde ela está ligada via USB (ex.: `192.168.18.200`).
+7. Em **Porta** (do servidor), confira `8081` (já vem preenchido).
+8. Salve, no rodapé da página.
+
+!!! note "Tipo de comunicação"
+    O campo tem as opções **Acesso direto**, **DLL**, **Serial**, **Spooler** e **USB**. Para o caminho de compartilhamento `\\127.0.0.1\...`, use **Acesso direto**.
+
+## Resultado esperado
+
+- O ERP 2 envia as impressões ao serviço local na porta 8081, que faz a ponte com a fila do Windows pelo caminho `\\127.0.0.1\<nome_do_compartilhamento>`, e a impressão térmica sai na hora.
+
+**Relacionados:** [Impressora USB no ERP 1](impressora-usb-erp1.md) · [Impressora não aparece na impressão parcial de mesas](../erp/impressora-impressao-parcial.md)
+
+Palavras-chave: impressora usb erp 2 periféricos novo periférico novo ponto de impressão compartilhamento 127.0.0.1 9100 8081 acesso direto informações do servidor
+
+---
+Código: PER-006 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-spooler-erp2/
+
+# Impressora de rede com spooler/driver do Windows no ERP 2
+
+Configuração · ERP 2.0 · Periféricos · Rede com driver · Atualizado em 12/11/2026
+
+**Objetivo:** configurar no ERP 2.0 impressoras de rede cujo driver/spooler está instalado no Windows (apontando para uma porta IP), usando o compartilhamento local para falar com o servidor de impressão.
+
+!!! info "Antes de começar"
+    - Driver da impressora instalado no Windows, com a porta configurada para o IP da impressora (ex.: `192.168.15.200`).
+    - A página de teste do Windows sai normalmente pelo Painel de Controle (`control printers`).
+
+## Parte 1: compartilhamento no Windows
+
+1. Pressione **Windows + R**, digite `control printers` e pressione **Enter**.
+2. Clique com o botão direito na impressora de rede e selecione **Propriedades da Impressora**.
+3. Na aba **Compartilhamento**, marque **Compartilhar esta impressora**.
+4. Copie exatamente o **Nome de compartilhamento** (ex.: `cozinha`).
+
+## Parte 2: cadastro do periférico no ERP 2
+
+1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
+2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
+3. Preencha:
+    - **Nome:** conforme o uso (ex.: Cozinha, Bar, Caixa).
+    - **Descrição:** opcional.
+    - **Fabricante** e **Modelo:** os do equipamento.
+    - **Tipo de comunicação:** **Acesso direto**.
+4. No campo do endereço do periférico, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
+5. Em **Porta do periférico na rede**, confira `9100` (já vem preenchido).
+6. Em **Informações do Servidor**, defina o **IP** conforme o cenário:
+    - **Cenário A (só o PDV local imprime):** use `127.0.0.1` (já vem preenchido).
+    - **Cenário B (aplicativo de mesas ou outro computador):** use o IP de rede do computador onde o driver/spooler está instalado (ex.: `192.168.18.200`).
+7. Em **Porta** (do servidor), mantenha `8081`.
+8. Salve, no rodapé da página.
+
+!!! note "Tipo de comunicação"
+    O campo também tem a opção **Spooler**. O padrão deste procedimento é **Acesso direto** com o caminho de compartilhamento.
+
+## Resultado esperado
+
+- Ao emitir um pedido ou comanda, o ERP 2 chama o serviço de impressão na porta 8081, que joga o documento na fila do Windows pelo caminho `\\127.0.0.1\cozinha`, e o driver envia para a impressora de rede.
+
+**Relacionados:** [Impressora de rede com spooler no ERP 1](impressora-spooler-erp1.md) · [Impressora de rede direta no ERP 2](impressora-rede-erp2.md)
+
+Palavras-chave: impressora de rede driver spooler windows erp 2 periféricos novo ponto de impressão compartilhamento aplicativo de mesas 127.0.0.1 9100 8081
+
+---
+Código: PER-007 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/perifericos/impressora-rede-erp2/
+
+# Impressora de rede direta (Ethernet) no ERP 2
+
+Configuração · ERP 2.0 · Periféricos · Rede · Atualizado em 12/11/2026
+
+**Objetivo:** configurar no ERP 2.0 impressoras térmicas que se comunicam direto pelo cabo de rede, sem driver nem compartilhamento do Windows.
+
+!!! info "Antes de começar"
+    - A impressora está ligada pelo cabo de rede no mesmo roteador/switch do computador do PDV.
+    - Impressora e PDV na **mesma sub-rede** (ex.: PC em `192.168.15.50`, impressora em `192.168.15.200`).
+
+## Passo a passo
+
+1. No menu lateral, acesse **Configurações > Periféricos** e clique em **Novo periférico**.
+2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
+3. Preencha:
+    - **Nome:** conforme o uso (ex.: Cozinha, Bar, Parcial).
+    - **Descrição:** opcional.
+    - **Fabricante** e **Modelo:** os do equipamento.
+    - **Tipo de comunicação:** **Acesso direto**.
+4. No campo do endereço do periférico, informe o **IP fixo da impressora** (ex.: `192.168.15.200`).
+5. Em **Porta do periférico na rede**, confira `9100` (já vem preenchido).
+6. Em **Informações do Servidor**, mantenha **IP** `127.0.0.1` e **Porta** `8081` (já vêm preenchidos). Como a impressora fala direto pela rede, o servidor é o local.
+7. Salve, no rodapé da página.
+
+## Resultado esperado
+
+- Ao imprimir, o ERP 2 aciona o serviço local em `127.0.0.1:8081`, que envia os dados por TCP na porta 9100 direto para o IP da impressora, sem driver no Windows.
+
+**Relacionados:** [Impressora de rede (Ethernet) no ERP 1](impressora-rede-erp1.md) · [Impressora de rede com spooler no ERP 2](impressora-spooler-erp2.md) · [Configuração de IP fixo no Windows](../infraestrutura/ip-fixo-no-windows.md)
+
+Palavras-chave: impressora de rede ethernet cabo de rede ip fixo erp 2 periféricos novo ponto de impressão 9100 8081 127.0.0.1 acesso direto sem driver
+
+---
+Código: TOTEM-001 | Módulo: Suporte técnico | Tela no sistema: 
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/totem/resetar-totem/
+
+# Reset e reconfiguração do aplicativo do totem
+
+Erro · ERP 1.0 (legado) · Totem · TEF · Sincronização · Atualizado em 12/11/2026
+
+**Sintoma:** falha no pagamento pelo TEF, falha na sincronização (produtos, imagens, preços) ou necessidade de resetar a comunicação do terminal de autoatendimento.
+
+**Causa:** cache corrompido no Android do totem ou dessincronização da licença e da VPN GSurf/SiTef no ERP.
+
+!!! info "Antes de começar"
+    - **Senha de administrador dos aplicativos:** no ERP legado, em **Configurações > Dados da Empresa**, bloco **Aplicativos**, campo **Senha de Administrador** (no ERP 2.0 a tela se chama **Dados do negócio**).
+    - **Usuário administrador do ERP:** para revogar a licença.
+    - **Totem V2:** código da empresa, usuário e senha do terminal.
+
+!!! note "No ERP 2.0"
+    Os aplicativos ficam em **Dispositivos > Terminais & Dispositivos**, e a VPN em **três pontos > Gerenciar métodos de pagamento > Configurações TEF**. Veja [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md).
+
+## Parte 1: fechar o aplicativo e limpar os dados no totem
+
+1. Na tela principal de vendas do totem, toque no logotipo da CPlug, no rodapé.
+2. Informe a **senha de administrador dos aplicativos**.
+3. Na área administrativa, toque em **Fechar Aplicativo** para voltar à tela inicial do Android.
+4. Abra as **Configurações** do Android.
+5. Vá em **Aplicativos** (ou Apps e notificações).
+6. Selecione o aplicativo do **Totem**.
+7. Toque em **Armazenamento** (ou Armazenamento e cache).
+8. Toque em **Limpar dados** (ou Limpar armazenamento) e confirme. Isso apaga o cache e as conexões antigas.
+
+## Parte 2: reset do terminal no ERP
+
+1. No computador da loja, acesse o ERP e vá em **Ponto de Venda > Aplicativos**.
+2. Abra o cadastro do aplicativo do totem.
+3. Expanda **Configurações da SITEF**.
+4. Em **Configurações da VPN**, clique no botão vermelho **Cancelar Terminal**.
+5. No rodapé, à direita, clique em **Revogar licença**.
+6. Na janela, digite `revogar`, selecione o usuário administrador do ERP, informe a senha e confirme em **Revogar licença**.
+7. Role até o fim e clique no botão verde **Salvar**.
+8. Volte a **Ponto de Venda > Aplicativos** e abra de novo o cadastro do totem.
+9. Expanda **Configurações da SITEF** e, em **Configurações da VPN**, clique em **Cadastrar Terminal**.
+10. Na janela **CRIAR NOVO TERMINAL (GSURF)**, em **Descrição**, digite `totem` e clique em **Confirmar**.
+11. Role até o fim e clique em **Salvar**.
+
+## Parte 3: nova vinculação no totem
+
+Abra o aplicativo no totem e siga conforme a versão:
+
+- **Totem V1:** no ERP, na linha do aplicativo, clique no ícone verde para gerar as credenciais. Informe o **PIN** e o **Código de Login** na tela inicial do totem.
+- **Totem V2:** na tela inicial do totem, entre com o código da empresa, o usuário e a senha do terminal.
+
+## Resultado esperado
+
+- O aplicativo faz uma carga completa do servidor, volta a se comunicar com o TEF/SiTef e atualiza imagens, preços e nomes dos produtos.
+
+**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP 1)](../erp/tef-erp1.md)
+
+Palavras-chave: totem autoatendimento reset limpar dados android cancelar terminal revogar licença vpn gsurf sitef tef não sincroniza imagens preços totem v1 v2 pin
