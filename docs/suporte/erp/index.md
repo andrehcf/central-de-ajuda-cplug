@@ -14,7 +14,7 @@ Retaguarda: servidor local, contratos de cartão, impressão, chopp e TEF.
 [<span class="cplug-codigo">ERP-003</span> Migração e troca de servidor local (ERP Legado / CPlug Server)](trocar-servidor-erp1.md)
 [<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md)
 [<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP Legado)](saldo-de-abertura-erp1.md)
-[<span class="cplug-codigo">ERP-006</span> Impressão de atributos fracionada ou agrupada](impressao-de-atributos.md)
+[<span class="cplug-codigo">ERP-006</span> Como escolher a impressão fracionada ou agrupada dos atributos](impressao-de-atributos.md)
 [<span class="cplug-codigo">ERP-007</span> Gerenciamento e restrição de impressões no PDV](restringir-impressoes.md)
 [<span class="cplug-codigo">ERP-008</span> Métodos de pagamento na POS (PDV PRO e Atendimento PRO)](metodos-de-pagamento-na-pos.md)
 [<span class="cplug-codigo">ERP-009</span> Como cadastrar o chopp com baixa em litros do barril](cadastro-de-chopp.md)
