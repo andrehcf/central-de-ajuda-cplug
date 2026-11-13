@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Criar regras De/Para de CFOP, ICMS e PIS/COFINS na natureza de operação e aplicar na nota gerada a partir da venda.">
+        <meta name="description" content="Crie a regra De/Para de CFOP e grupos de impostos na natureza de operação e escolha a natureza ao gerar a NF-e de uma venda, para o sistema trocar o CFOP dos itens sozinho.">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Natureza de operação (De/Para fiscal) - Central de Ajuda CPlug</title>
+        <title>Como usar a natureza de operação na NF-e gerada a partir da venda - Central de Ajuda CPlug</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#natureza-de-operacao-depara-fiscal" class="md-skip">
+        <a href="#como-usar-a-natureza-de-operacao-na-nf-e-gerada-a-partir-da-venda" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Natureza de operação (De/Para fiscal)
+              Como usar a natureza de operação na NF-e gerada a partir da venda
             
           </span>
         </div>
@@ -2492,7 +2492,7 @@
           
   
   <span class="md-ellipsis">
-    Natureza de operação (De/Para fiscal)
+    Como usar a natureza de operação na NF-e gerada a partir da venda
   </span>
   
 
@@ -2503,7 +2503,7 @@
         
   
   <span class="md-ellipsis">
-    Natureza de operação (De/Para fiscal)
+    Como usar a natureza de operação na NF-e gerada a partir da venda
   </span>
   
 
@@ -2527,27 +2527,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etapa-1-criar-a-natureza-de-operacao" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Etapa 1: criar a natureza de operação
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etapa-2-aplicar-na-emissao" class="md-nav__link">
+  <a href="#abra-o-cadastro-de-naturezas" class="md-nav__link">
     <span class="md-ellipsis">
-      Etapa 2: aplicar na emissão
+      Abra o cadastro de naturezas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#crie-a-regra-de-troca" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Crie a regra de troca
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-natureza-na-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a natureza na lista
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gere-a-nf-e-e-escolha-a-natureza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gere a NF-e e escolha a natureza
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-nota-antes-de-transmitir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a nota antes de transmitir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3191,27 +3227,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etapa-1-criar-a-natureza-de-operacao" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Etapa 1: criar a natureza de operação
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etapa-2-aplicar-na-emissao" class="md-nav__link">
+  <a href="#abra-o-cadastro-de-naturezas" class="md-nav__link">
     <span class="md-ellipsis">
-      Etapa 2: aplicar na emissão
+      Abra o cadastro de naturezas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#crie-a-regra-de-troca" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Crie a regra de troca
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-natureza-na-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a natureza na lista
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gere-a-nf-e-e-escolha-a-natureza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gere a NF-e e escolha a natureza
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-nota-antes-de-transmitir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a nota antes de transmitir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3244,45 +3316,116 @@
   
 
 
-<h1 id="natureza-de-operacao-depara-fiscal">Natureza de operação (De/Para fiscal)</h1>
+<h1 id="como-usar-a-natureza-de-operacao-na-nf-e-gerada-a-partir-da-venda">Como usar a natureza de operação na NF-e gerada a partir da venda</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1-.07 1 2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56.75 1.3 2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04.75-1.3-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55-.75-1.3-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z"/></svg></span> Configuração · Cadastro fiscal · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP Legado e ERP 2.0 · Faturamento · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 12/11/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 6 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 5 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP 2.0 · Faturamento · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 13/11/2026</p>
 </div>
-<p><strong>Cenário:</strong> criar regras automáticas de troca fiscal ("De/Para" de CFOP, ICMS e PIS/COFINS) na natureza de operação e aplicar na emissão de notas a partir de vendas. As duas versões do ERP têm os mesmos recursos nessa tela; muda o caminho.</p>
+<p>Quando uma venda precisa sair numa NF-e com outro CFOP, você não precisa trocar o código item por item. A <strong>natureza de operação</strong> guarda a regra de troca, e você só a escolhe ao gerar a nota. Exemplo: a loja vende para uma empresa de outro estado; os produtos usam o CFOP <strong>5102</strong> (venda dentro do estado), e a natureza "Venda para outro estado" troca o 5102 por <strong>6102</strong> na nota. Confirme os códigos da sua operação com o contador.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>O cadastro do produto guarda os códigos fiscais da operação mais comum da loja. A natureza de operação funciona como uma <strong>tabela de tradução</strong> que só entra em ação na nota em que você a escolhe:</p>
+<table>
+<thead>
+<tr>
+<th>Peça</th>
+<th>Onde fica</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Natureza de operação</strong></td>
+<td><strong>Configurações &gt; Fiscal &gt; Natureza de Operações</strong></td>
+<td>Guarda o nome da operação e as regras de troca. Ganha um código (ex.: 002).</td>
+</tr>
+<tr>
+<td><strong>Regra De → Para</strong></td>
+<td>Seções <strong>CFOP</strong>, <strong>Grupo de ICMS</strong> e <strong>Grupo de PIS/COFINS</strong> da natureza</td>
+<td>"Onde estiver <strong>este</strong> código no produto, use <strong>aquele</strong> na nota."</td>
+</tr>
+<tr>
+<td><strong>Configuração de CFOP, ICMS, PIS, COFINS e IBS/CBS</strong></td>
+<td>Último campo da janela <strong>DADOS COMPLEMENTARES</strong>, ao gerar a NF-e</td>
+<td>É onde você escolhe a natureza para aquela nota. O nome cita IBS/CBS, mas o cadastro da natureza tem regras só de CFOP, Grupo de ICMS e Grupo de PIS/COFINS.</td>
+</tr>
+</tbody>
+</table>
+<p>Os detalhes de cada campo do cadastro estão em <a href="../../../configuracoes/natureza-de-operacao/">Como configurar a natureza de operação</a>. O CFOP e os grupos que a regra <strong>De</strong> procura são os do cadastro do produto: veja <a href="../../../produtos/parametros-fiscais/">Como configurar os dados fiscais de um produto</a>.</p>
+<p><strong>Quando não usar:</strong> se a venda segue a operação de sempre (o mesmo CFOP do cadastro dos produtos), deixe o campo da natureza em branco. Ele é opcional.</p>
 <div class="admonition warning">
-<p class="admonition-title">Só funciona em nota gerada a partir de venda</p>
-<p>As regras da natureza de operação valem <strong>apenas para notas geradas a partir de uma venda</strong>. Na nota 100% manual (sem venda), não há seleção automática: os dados fiscais são digitados item por item.</p>
-</div>
-<h2 id="etapa-1-criar-a-natureza-de-operacao">Etapa 1: criar a natureza de operação</h2>
-<ol>
-<li>Acesse a tela de cadastro:<ul>
-<li><strong>ERP 2.0:</strong> <strong>Configurações &gt; Fiscal &gt; Natureza de Operações</strong>;</li>
-<li><strong>ERP Legado:</strong> <strong>engrenagem &gt; Configurações Fiscais &gt; Natureza da Operação</strong>.</li>
-</ul>
-</li>
-<li>Crie ou edite uma natureza.</li>
-<li>Preencha o <strong>Nome</strong> e, se quiser, a <strong>Descrição</strong>.</li>
-<li>Na seção <strong>CFOP</strong>, defina a troca:<ul>
-<li><strong>De:</strong> o CFOP padrão do produto;</li>
-<li><strong>Para:</strong> o CFOP que a nota deve usar com esta natureza.</li>
-</ul>
-</li>
-<li>Se precisar trocar grupos tributários, use <strong>Grupo de ICMS</strong> e <strong>Grupo de PIS/COFINS</strong> com a mesma lógica De/Para.</li>
-<li>Clique em <strong>Salvar</strong>.</li>
-</ol>
-<h2 id="etapa-2-aplicar-na-emissao">Etapa 2: aplicar na emissão</h2>
-<ol>
-<li>Acesse <strong>Vendas &gt; Vendas</strong>.</li>
-<li>Localize a venda e comece a gerar a nota (<strong>três pontos &gt; Gerar nota fiscal</strong>).</li>
-<li>Na janela <strong>Dados complementares</strong>, selecione a natureza de operação criada.</li>
-<li>Conclua e transmita a nota.</li>
-</ol>
-<h2 id="resultado-esperado">Resultado esperado</h2>
+<p class="admonition-title">Antes de começar</p>
 <ul>
-<li>Com a natureza selecionada, o sistema aplica o De/Para e troca as informações fiscais (CFOP, tributação) de todos os produtos que batem com as regras, sem alteração manual item por item.</li>
+<li>Quais naturezas criar e quais códigos usar é decisão do <strong>contador</strong>. Este manual mostra <strong>onde</strong> cadastrar e <strong>como</strong> aplicar.</li>
+<li>A empresa precisa estar pronta para emitir NF-e: dados da empresa e do cliente, certificado digital, série fiscal e dados fiscais dos produtos. Se faltar algo, a tela da nota mostra avisos em vermelho com o botão <strong>Corrigir agora</strong>, e a janela <strong>DADOS COMPLEMENTARES</strong> não abre.</li>
+<li>Numa venda para outro estado, a venda precisa estar com o cliente certo, cadastrado com o endereço completo.</li>
 </ul>
-<p><strong>Relacionados:</strong> <a href="../../../configuracoes/natureza-de-operacao/">Como cadastrar naturezas de operação</a> · <a href="../nfe-referenciando-nfce/">NF-e referenciando NFC-e</a></p>
-<p><span class="palavras-chave">natureza de operação de para cfop grupo de icms pis cofins substituição regra fiscal dados complementares nota a partir da venda</span></p>
+</div>
+<p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
+<div class="passos">
+<h2 id="abra-o-cadastro-de-naturezas">Abra o cadastro de naturezas</h2>
+<p>No menu do lado esquerdo, clique em <strong>Configurações</strong>, depois em <strong>Fiscal</strong> e em <strong>Natureza de Operações</strong>. Se a loja ainda não tiver nenhuma, a tela mostra "Nenhuma Natureza de Operação foi criada". Clique em <strong>Nova natureza de operações</strong>.</p>
+<p><img alt="Tela Naturezas de operações vazia com o botão Nova natureza de operações destacado" loading="lazy" src="../../../imagens/FISCAL-004/01-naturezas-vazia.png" /></p>
+<h2 id="crie-a-regra-de-troca">Crie a regra de troca</h2>
+<p>Em <strong>Informações gerais</strong>, preencha o <strong>Nome</strong> (ex.: "Venda para outro estado") e, se quiser, a <strong>Descrição</strong>. Deixe <strong>Manter Código de Benefício Fiscal na UF nos produtos?</strong> em <strong>Não</strong>, a não ser que o contador oriente outra coisa.</p>
+<p>Em <strong>CFOP</strong>, monte a troca:</p>
+<ul>
+<li><strong>De:</strong> o CFOP que está no cadastro dos produtos. Exemplo: <strong>5102</strong>.</li>
+<li><strong>Para:</strong> o CFOP que a nota deve usar. Exemplo: <strong>6102</strong>.</li>
+<li><strong>ICMS Livre:</strong> <strong>Ambos</strong>, <strong>Não</strong> ou <strong>Sim</strong>, conforme o contador. No exemplo, <strong>Ambos</strong>.</li>
+</ul>
+<p>Para mais uma troca, clique em <strong>Adicionar campo</strong>. As seções <strong>Grupo de ICMS</strong> e <strong>Grupo de PIS/COFINS</strong> têm os mesmos campos <strong>De</strong> e <strong>Para</strong>: preencha só se a operação também mudar os impostos. Clique em <strong>Salvar</strong>, no canto de baixo, à direita.</p>
+<p><img alt="Seção CFOP com De 5102, Para 6102, ICMS Livre Ambos e o botão Salvar destacados" loading="lazy" src="../../../imagens/FISCAL-004/02-regra-cfop.png" /></p>
+<h2 id="confira-a-natureza-na-lista">Confira a natureza na lista</h2>
+<p>Depois de salvar, a natureza aparece na lista com o <strong>código</strong>, o nome e a descrição. Pelos <strong>três pontos</strong> da linha você pode <strong>Editar</strong> a natureza depois.</p>
+<p><img alt="Lista de naturezas com a natureza 002 Venda para outro estado destacada" loading="lazy" src="../../../imagens/FISCAL-004/03-lista-naturezas.png" /></p>
+<h2 id="gere-a-nf-e-e-escolha-a-natureza">Gere a NF-e e escolha a natureza</h2>
+<p>No menu, clique em <strong>Vendas</strong> e depois em <strong>Vendas</strong>. Na linha da venda, clique nos <strong>três pontos</strong>, em <strong>Gerar nota fiscal</strong> e em <strong>Gerar NFe</strong>. A tela <strong>Nova NFe</strong> abre com a janela <strong>DADOS COMPLEMENTARES</strong> por cima. Nela:</p>
+<ul>
+<li><strong>CFOP:</strong> escolha um CFOP pelos atalhos ou pela lista <strong>Selecione</strong>. Exemplo: <strong>5102</strong>, o mesmo CFOP do campo <strong>De</strong> da regra. O campo é obrigatório: sem ele, aparece "Selecione um item da lista".</li>
+<li>Deixe marcada a opção que já vem, <strong>Utilizar a configuração fiscal dos produtos e preencher com este CFOP onde não possuir configuração</strong>. Assim, cada produto usa o CFOP do próprio cadastro, e o CFOP escolhido aqui só entra nos produtos sem configuração fiscal.</li>
+<li><strong>Configuração de CFOP, ICMS, PIS, COFINS e IBS/CBS (opcional):</strong> no fim da janela, escolha a natureza. Exemplo: <strong>Venda para outro estado</strong>.</li>
+</ul>
+<p>Clique em <strong>Salvar</strong>, no rodapé da janela.</p>
+<p><img alt="Janela Dados complementares com a natureza Venda para outro estado escolhida e o botão Salvar destacados" loading="lazy" src="../../../imagens/FISCAL-004/04-dados-complementares.png" /></p>
+<h2 id="confira-a-nota-antes-de-transmitir">Confira a nota antes de transmitir</h2>
+<p>A nota abre preenchida. Confira três pontos:</p>
+<ul>
+<li>O campo <strong>Natureza de operação</strong> mostra o nome da natureza escolhida.</li>
+</ul>
+<p><img alt="Campo Natureza de operação da NF-e preenchido com Venda para outro estado" loading="lazy" src="../../../imagens/FISCAL-004/05-natureza-na-nota.png" /></p>
+<ul>
+<li>O <strong>Destino da operação</strong>, logo abaixo, não muda sozinho com a natureza. No exemplo, continuou <strong>Operação Interna</strong>. Numa venda para outro estado, ajuste esse campo como explica <a href="../../../vendas/emitir-nfe/">Como emitir uma NF-e de venda</a>.</li>
+<li>Em <strong>ITENS</strong>, o <strong>CFOP</strong> dos produtos que estão na regra <strong>De</strong> já vem trocado. No exemplo, <strong>6102 - Venda de mercadoria adquirida ou recebida de terceiros</strong>.</li>
+</ul>
+<p><img alt="CFOP do item da NF-e preenchido com 6102" loading="lazy" src="../../../imagens/FISCAL-004/06-cfop-do-item.png" /></p>
+<p>Com tudo certo, siga a emissão como em <a href="../../../vendas/emitir-nfe/">Como emitir uma NF-e de venda</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Peça ao contador a lista de operações</strong> da loja e crie uma natureza para cada uma, com nomes que dizem a operação.</li>
+<li><strong>Cubra todos os CFOPs dos seus produtos:</strong> se uns usam 5102 e outros 5405, crie uma regra para cada um com <strong>Adicionar campo</strong>.</li>
+<li><strong>Confira a primeira nota com o contador</strong> antes de transmitir, sempre que criar uma natureza nova.</li>
+</ul>
+</div>
+<h2 id="deu-algum-problema">Deu algum problema?</h2>
+<details class="question">
+<summary>O campo da natureza não aparece na janela Dados complementares</summary>
+<p>O campo <strong>Configuração de CFOP, ICMS, PIS, COFINS e IBS/CBS</strong> só aparece quando a empresa tem pelo menos uma natureza cadastrada. Confira em <strong>Configurações &gt; Fiscal &gt; Natureza de Operações</strong> se você está na empresa certa e cadastre a natureza (passos 1 a 3).</p>
+</details>
+<details class="question">
+<summary>Apareceu \"Selecione um item da lista\" ao salvar a janela</summary>
+<p>O <strong>CFOP</strong> do topo da janela é obrigatório, mesmo escolhendo uma natureza. Escolha um CFOP pelos atalhos ou pela lista e salve de novo.</p>
+</details>
+<details class="question">
+<summary>A janela Dados complementares não abriu e apareceram avisos vermelhos</summary>
+<p>Falta algum dado para emitir NF-e (empresa, cliente, certificado, produtos ou série). Clique em <strong>Corrigir agora</strong> em cada aviso. Se não souber o que preencher, fale com o suporte ou com o contador.</p>
+</details>
+<details class="question">
+<summary>A nota abriu com o CFOP do cadastro, sem a troca</summary>
+<p>Confira se a natureza foi escolhida na janela <strong>DADOS COMPLEMENTARES</strong>, se a regra <strong>De</strong> tem o mesmo CFOP do cadastro do produto e se o CFOP escolhido no topo da janela é o mesmo do campo <strong>De</strong>. Se o produto usa outro CFOP, crie mais uma regra com <strong>Adicionar campo</strong>.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../../../configuracoes/natureza-de-operacao/">Como configurar a natureza de operação</a> · <a href="../../../produtos/parametros-fiscais/">Como configurar os dados fiscais de um produto</a> · <a href="../../../vendas/emitir-nfe/">Como emitir uma NF-e de venda</a> · <a href="../nfe-referenciando-nfce/">NF-e referenciando NFC-e (CFOP 5929/6929)</a></p>
+<p><span class="palavras-chave">natureza de operação de para cfop 5102 6102 venda para outro estado interestadual grupo de icms pis cofins ibs cbs dados complementares gerar nfe nota a partir da venda troca de cfop destino da operação</span></p>
 
 
 
