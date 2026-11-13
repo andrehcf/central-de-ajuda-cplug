@@ -6374,48 +6374,72 @@ Configuração · ERP Legado · PDV · Fechamento · Atualizado em 12/11/2026
 Palavras-chave: saldo de abertura fundo de caixa troco valor que deve permanecer no caixa fechamento reforço suprimento sangria erp 1 erp legado
 
 ---
-Código: ERP-006 | Módulo: Suporte técnico | Tela no sistema: 
+Código: ERP-006 | Módulo: Suporte técnico | Tela no sistema: /dashboard/fisical-operations/terminal/receipts-and-printed-notes
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/impressao-de-atributos/
 
-# Impressão de atributos fracionada ou agrupada
+# Como escolher a impressão fracionada ou agrupada dos atributos
 
-Configuração · ERP Legado e ERP 2.0 · Impressão · Atualizado em 12/11/2026
+3 minutos · 3 passos · ERP 2.0 e ERP Legado · Atualizado em 13/11/2026
 
-**Objetivo:** escolher como atributos múltiplos (adicionais, sabores, observações) saem no cupom de produção. A impressão **fracionada** serve para produtos divididos (pizzarias). A **agrupada** evita confusão na cozinha, mostrando os itens inteiros.
+Quando o cliente escolhe mais de uma opção no mesmo produto, como dois sabores numa pizza ou vários adicionais num lanche, o pedido impresso pode mostrar cada parte com a sua fração ou mostrar tudo consolidado. Exemplo: numa pizza meio calabresa, meio frango, a pizzaria quer ver as frações; numa hamburgueria, a cozinha prefere os adicionais inteiros.
 
-## Onde fica no ERP 2.0
+## Entenda o conceito
 
-1. No menu lateral, acesse **Ponto de venda > Configurações**.
-2. Abra **Recibos e notas impressas**.
-3. Role até a seção **Impressão fracionada**.
+**Atributos múltiplos** são as opções escolhidas num mesmo item, como sabores e adicionais. No ERP 2.0, eles são as **variações** cadastradas em **Produtos > Variações e opções** (ex.: Sabor da pizza). A configuração **Impressão fracionada** decide como eles aparecem no pedido impresso:
 
-## Onde fica no ERP Legado
-
-1. Clique na **engrenagem (Configurações)**.
-2. Abra **Configuração do PDV > Configuração do PDV**.
-3. Role até a seção **Impressão**.
-
-## Escolha o layout
-
-| Opção | Use para | No cupom |
+| Opção na tela | O que a tela diz | Quando usar |
 | --- | --- | --- |
-| **Imprimir atributos múltiplos de forma fracionada** | Pizzarias e produtos fracionados | Sai dividido: "1/3 COM QUEIJO" |
-| **Imprimir atributos múltiplos de forma agrupada** | Hamburguerias, restaurantes | O adicional sai inteiro, por produto |
-| **Imprimir atributos múltiplos dependendo da configuração do atributo** (ERP 2.0) | Lojas com os dois tipos de produto | Segue o que cada atributo define (proporcional ou completo) |
+| **Imprimir atributos múltiplos de forma fracionada** | "Exibe as variações junto com a quantidade total selecionada e suas respectivas frações, detalhando como cada parte compõe o total." | Pizzarias e produtos divididos em partes |
+| **Imprimir atributos múltiplos de forma agrupada** | "Exibe as variações e suas quantidades de forma consolidada." | Hamburguerias e restaurantes, quando a fração confunde a cozinha |
+| **Imprimir atributos múltiplos dependendo da configuração do atributo.** | "A regra de impressão será baseada na configuração de consumo dentro de cada atributo (Proporcional ou completo)." | Só com orientação do suporte |
 
-Depois de escolher:
+**Quando não mexer:** se a cozinha já lê bem os pedidos como saem hoje, deixe como está. Sem orientação do suporte, escolha uma das duas primeiras opções.
 
-1. Clique em **Salvar**, no fim da página.
-2. Peça ao operador para **sincronizar** o PDV, para aplicar a nova regra.
+!!! info "Antes de começar"
+    - É preciso ter acesso às configurações do ponto de venda.
+    - A terceira opção depende de uma configuração de consumo em cada atributo. Antes de usá-la, fale com o suporte para conferir como os atributos da loja estão configurados.
 
-## Resultado esperado
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
-- Depois da sincronização, o PDV imprime os cupons de pedido no modelo escolhido.
-- No modo agrupado, as frações ("1/3") deixam de aparecer e a equipe de preparo lê os adicionais inteiros.
 
-**Relacionados:** [Gerenciamento e restrição de impressões no PDV](restringir-impressoes.md) · [Como cadastrar adicionais e sugestões](../../produtos/adicionais-e-sugestoes.md)
 
-Palavras-chave: impressão fracionada agrupada atributos adicionais sabores pizza meio a meio 1/3 cupom de produção cozinha recibos e notas impressas
+## Abra Recibos e notas impressas
+
+No menu do lado esquerdo, clique em **Ponto de venda**, depois em **Configurações** e em **Recibos e notas impressas**. Role a tela até a seção **Impressão fracionada** ("Configure o modo de impressão dos seus produtos").
+
+## Escolha o modo de impressão
+
+Marque uma das três opções, conforme a tabela acima. Assim que você muda a opção, o rodapé avisa **Você tem alterações não salvas**.
+
+[Imagem: Seção Impressão fracionada com as três opções e o botão Salvar destacados]
+
+## Salve a alteração
+
+Clique em **Salvar**, no canto de baixo, à direita. **Descartar alterações** volta para a opção anterior. Se o PDV continuar imprimindo do jeito antigo, fale com o suporte.
+
+
+
+!!! note "No ERP Legado"
+    A mesma configuração fica na **engrenagem** > **Configurações do PDV** > aba **Configurações do PDV**, no grupo **IMPRESSÃO**, em **Impressão fracionada**. As três opções são as mesmas do ERP 2.0.
+
+!!! tip "Boas práticas"
+    - **Pergunte a quem prepara os pedidos** antes de trocar: é a cozinha que lê o pedido impresso.
+    - **Depois de trocar, confira o primeiro pedido impresso** antes do movimento começar.
+
+## Deu algum problema?
+
+??? question "Troquei a opção, mas o pedido continua saindo do jeito antigo"
+    Confira se clicou em **Salvar**. Se continuar, fale com o suporte.
+
+??? question "Não sei qual opção a loja usa hoje"
+    Abra **Recibos e notas impressas** e veja qual opção está marcada em **Impressão fracionada**. Só olhar não muda nada; se mexer sem querer, clique em **Descartar alterações**.
+
+??? question "Onde configuro o consumo Proporcional ou completo do atributo?"
+    Fale com o suporte antes de usar a terceira opção. Ele confere como os atributos da loja estão configurados.
+
+**Relacionados:** [Gerenciamento e restrição de impressões no PDV](restringir-impressoes.md) · [Como cadastrar um produto com variações](../../produtos/cadastrar-produto-com-variacoes.md) · [Como cadastrar variações](../../produtos/cadastrar-variacoes.md)
+
+Palavras-chave: impressão fracionada agrupada atributos múltiplos adicionais sabores pizza meio a meio frações cupom de pedido cozinha recibos e notas impressas configuração de consumo proporcional completo
 
 ---
 Código: ERP-007 | Módulo: Suporte técnico | Tela no sistema: 
