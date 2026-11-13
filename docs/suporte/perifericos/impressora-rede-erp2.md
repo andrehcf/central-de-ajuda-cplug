@@ -60,7 +60,7 @@ Abre a janela **Novo periférico**, com os tipos **Impressora**, **SAT** e **Eti
 Abre a tela **Novo ponto de impressão**. Em **Informações gerais**:
 
 - **Nome:** como a equipe chama a impressora, com até 60 caracteres. Exemplo: **Cozinha**.
-- **Descrição:** opcional, com até 100 caracteres. Exemplo: "Impressora de rede da cozinha". O número no canto do campo mostra quantos caracteres ainda cabem.
+- **Descrição:** obrigatória, com até 100 caracteres. Exemplo: "Impressora de rede da cozinha". O número no canto do campo mostra quantos caracteres ainda cabem. Se ficar em branco, ao salvar aparece **O preenchimento é obrigatório**.
 - **Fabricante:** a marca do equipamento. A lista traz, por exemplo, Bematech, Daruma, Elgin, Epson, Gertec, Jetway e POS (58mm).
 - **Modelo:** só fica disponível depois de escolher o fabricante. Exemplo: com **Epson**, aparece **TMT20**. Se o modelo exato não estiver na lista, fale com o suporte.
 - **Tipo de comunicação:** **Acesso direto**.

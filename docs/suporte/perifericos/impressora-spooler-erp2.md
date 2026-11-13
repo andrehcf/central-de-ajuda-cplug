@@ -30,7 +30,7 @@ atualizado: 2026-11-12
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
 3. Preencha:
     - **Nome:** conforme o uso (ex.: Cozinha, Bar, Caixa).
-    - **Descrição:** opcional.
+    - **Descrição:** obrigatória (ex.: "Impressora da cozinha").
     - **Fabricante** e **Modelo:** os do equipamento.
     - **Tipo de comunicação:** **Acesso direto**.
 4. No campo do endereço do periférico, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
