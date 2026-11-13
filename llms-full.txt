@@ -7462,7 +7462,7 @@ Configuração · ERP 2.0 · Periféricos · Impressão · Atualizado em 12/11/2
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
 3. Preencha:
     - **Nome:** conforme o uso (ex.: Bar, Cozinha, Caixa, Parcial).
-    - **Descrição:** opcional, para observações internas.
+    - **Descrição:** obrigatória (ex.: "Impressora USB do caixa").
     - **Fabricante** e **Modelo:** os do equipamento.
     - **Tipo de comunicação:** **Acesso direto**.
 4. No campo do endereço do periférico, monte o caminho com o IP local e o nome de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\caixa`).
@@ -7511,7 +7511,7 @@ Configuração · ERP 2.0 · Periféricos · Rede com driver · Atualizado em 12
 2. Escolha o tipo **Impressora** e clique em **Avançar**. Abre a tela **Novo ponto de impressão**.
 3. Preencha:
     - **Nome:** conforme o uso (ex.: Cozinha, Bar, Caixa).
-    - **Descrição:** opcional.
+    - **Descrição:** obrigatória (ex.: "Impressora da cozinha").
     - **Fabricante** e **Modelo:** os do equipamento.
     - **Tipo de comunicação:** **Acesso direto**.
 4. No campo do endereço do periférico, use o caminho de compartilhamento: `\\127.0.0.1\<nome_do_compartilhamento>` (ex.: `\\127.0.0.1\cozinha`).
@@ -7590,7 +7590,7 @@ Abre a janela **Novo periférico**, com os tipos **Impressora**, **SAT** e **Eti
 Abre a tela **Novo ponto de impressão**. Em **Informações gerais**:
 
 - **Nome:** como a equipe chama a impressora, com até 60 caracteres. Exemplo: **Cozinha**.
-- **Descrição:** opcional, com até 100 caracteres. Exemplo: "Impressora de rede da cozinha". O número no canto do campo mostra quantos caracteres ainda cabem.
+- **Descrição:** obrigatória, com até 100 caracteres. Exemplo: "Impressora de rede da cozinha". O número no canto do campo mostra quantos caracteres ainda cabem. Se ficar em branco, ao salvar aparece **O preenchimento é obrigatório**.
 - **Fabricante:** a marca do equipamento. A lista traz, por exemplo, Bematech, Daruma, Elgin, Epson, Gertec, Jetway e POS (58mm).
 - **Modelo:** só fica disponível depois de escolher o fabricante. Exemplo: com **Epson**, aparece **TMT20**. Se o modelo exato não estiver na lista, fale com o suporte.
 - **Tipo de comunicação:** **Acesso direto**.
