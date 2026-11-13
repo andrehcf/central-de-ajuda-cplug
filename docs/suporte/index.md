@@ -63,7 +63,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 [<span class="cplug-codigo">PER-004</span> Impressora de rede com spooler/driver do Windows no ERP Legado](perifericos/impressora-spooler-erp1.md)
 [<span class="cplug-codigo">PER-005</span> Impressora USB no ERP 2.0](perifericos/impressora-usb-erp2.md)
 [<span class="cplug-codigo">PER-006</span> Impressora de rede com spooler/driver do Windows no ERP 2.0](perifericos/impressora-spooler-erp2.md)
-[<span class="cplug-codigo">PER-007</span> Impressora de rede direta (Ethernet) no ERP 2.0](perifericos/impressora-rede-erp2.md)
+[<span class="cplug-codigo">PER-007</span> Como cadastrar uma impressora de rede direta no ERP 2.0](perifericos/impressora-rede-erp2.md)
 [<span class="cplug-codigo">PER-008</span> Configuração e problemas de etiquetas (Elgin e Argox)](perifericos/etiquetas-elgin-argox.md)
 </div>
 
