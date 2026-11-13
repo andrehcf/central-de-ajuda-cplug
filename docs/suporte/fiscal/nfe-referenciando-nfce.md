@@ -36,6 +36,6 @@ atualizado: 2026-11-12
 
 - O XML sai com a tag `<NFref>` preenchida com a chave da NFC-e, indicando ao fisco que o imposto foi recolhido na NFC-e de origem e que a NF-e serve para transporte ou faturamento.
 
-**Relacionados:** [Como emitir uma NF-e de venda](../../vendas/emitir-nfe.md) · [Natureza de operação (De/Para fiscal)](natureza-de-operacao-de-para.md)
+**Relacionados:** [Como emitir uma NF-e de venda](../../vendas/emitir-nfe.md) · [Como usar a natureza de operação na NF-e gerada a partir da venda](natureza-de-operacao-de-para.md)
 
 <span class="palavras-chave">nf-e referenciada nfc-e para nf-e cupom para nota cfop 5929 6929 nfref chave de acesso faturamento transporte gerar nf-e</span>
