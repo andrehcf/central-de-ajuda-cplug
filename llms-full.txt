@@ -3631,7 +3631,7 @@ Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/vendas/criar-promoc
 
 8 minutos · 6 passos · Atualizado em 14/11/2026
 
-Promoção é a regra que dá vantagem ao cliente quando ele compra de um certo jeito: levar mais unidades, gastar acima de um valor ou usar um cupom. Exemplo: na segunda quinzena do mês, quem leva 3 Cookies de Chocolate (R$ 6,50 cada) paga só 2, ou seja, R$ 13,00 em vez de R$ 19,50. Você cadastra a regra uma vez, com início e fim, para os canais de venda em que a promoção vale (veja o aviso mais abaixo).
+Promoção é a regra que dá vantagem ao cliente quando ele compra de um certo jeito: levar mais unidades, gastar acima de um valor ou usar um cupom. Exemplo: na segunda quinzena do mês, quem leva 3 Cookies de Chocolate (R$ 6,50 cada) paga só 2, ou seja, R$ 13,00 em vez de R$ 19,50. Você cadastra a regra uma vez, com início e fim, e o desconto entra nas vendas feitas no **PDV** (o caixa).
 
 ## Entenda o conceito
 
@@ -3656,8 +3656,8 @@ Este manual mostra o passo a passo completo com o tipo **Leve Mais, Pague Menos*
 !!! info "Antes de começar"
     Os produtos da promoção precisam estar cadastrados (veja [Como cadastrar um produto](../produtos/cadastrar-produto.md)). Confira também em que loja você está: a promoção já vem marcada para ela.
 
-!!! warning "Onde a promoção não entra"
-    A promoção **não é aplicada** nas telas **Vendas → Vendas → Nova Venda** e **Vendas → Pedidos de venda → Novo Pedido**, do ERP: nelas, 3 Cookies de Chocolate continuam custando R$ 19,50 mesmo com a promoção ativa. Antes de divulgar uma promoção, faça uma venda de teste no canal em que o cliente vai comprar (por exemplo, o caixa) e confira se o desconto aparece. Se não aparecer, fale com o suporte.
+!!! warning "A promoção vale só no PDV"
+    As promoções são aplicadas **apenas nas vendas feitas no PDV** (o caixa). Nas telas do ERP, **Vendas → Vendas → Nova Venda** e **Vendas → Pedidos de venda → Novo Pedido**, a promoção não entra: nelas, 3 Cookies de Chocolate continuam custando R$ 19,50 mesmo com a promoção ativa. Para o PDV, veja [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md).
 
 Nos prints, o **quadrado vermelho** mostra onde você deve olhar ou clicar.
 
@@ -3687,7 +3687,7 @@ Na etapa **Informações Gerais**, preencha o quadro **Dados da Promoção**:
 - **Descrição (opcional)** (até 255 caracteres): a regra explicada em uma frase.
 - **Data de início** e **Data de término**: clique no campo e escolha o dia no calendário. O calendário também tem **Hora** e **Minuto**: a promoção vale entre a data e a hora de início e a data e a hora de término. No exemplo, de **14/11/2026 18:29** até **30/11/2026 23:59**. Para a promoção valer o dia inteiro do término, use 23:59.
 
-Logo abaixo ficam quatro opções. Deixe todas desmarcadas se não tiver certeza e, se marcar alguma, faça uma venda de teste no caixa antes de divulgar a promoção:
+Logo abaixo ficam quatro opções. Deixe todas desmarcadas se não tiver certeza e, se marcar alguma, faça uma venda de teste no PDV antes de divulgar a promoção:
 
 - **Campanha acumulativa:** permite que outras promoções sejam ativadas na mesma venda.
 - **Campanha opcional:** o vendedor escolhe se aplica ou não a promoção.
@@ -3736,7 +3736,8 @@ Nos **três pontinhos** (⋮) da promoção ficam **Editar** e **Excluir**. Em *
 
 
 !!! tip "Boas práticas"
-    - **Teste antes de divulgar:** faça uma venda de teste no canal em que o cliente vai comprar e confira o desconto.
+    - **Teste antes de divulgar:** faça uma venda de teste no PDV e confira o desconto.
+    - **Venda pelo PDV:** a promoção só vale no caixa. Vendas lançadas pelo ERP (Nova Venda ou pedido de venda) saem sem o desconto da promoção.
     - **Sempre com data de término:** promoção esquecida no ar vira prejuízo. Defina o fim já no cadastro.
     - **Nome claro:** use um nome que diga a regra ("Leve 3, pague 2 nos cookies"), para a equipe entender sem abrir o cadastro.
     - **Cuidado com promoções somadas:** a **Campanha acumulativa** permite mais de uma promoção na mesma venda. Só marque se a margem aguentar.
@@ -3745,7 +3746,7 @@ Nos **três pontinhos** (⋮) da promoção ficam **Editar** e **Excluir**. Em *
 ## Deu algum problema?
 
 ??? question "Criei a promoção, mas o desconto não aparece na venda"
-    Confira primeiro onde você está vendendo: a promoção não é aplicada nas telas **Nova Venda** e **Novo Pedido** do ERP. Depois confira o período (a promoção só vale entre a data e a hora de início e de término), a loja (campo **Escolha em quais unidades exibir essa promoção**), as restrições (dias da semana, aniversário, cliente identificado) e a quantidade da regra. Se tudo estiver certo e o desconto não aparecer, fale com o suporte.
+    Confira primeiro onde você está vendendo: a promoção vale só nas vendas do **PDV**. Nas telas **Nova Venda** e **Novo Pedido** do ERP ela não é aplicada. Depois confira o período (a promoção só vale entre a data e a hora de início e de término), a loja (campo **Escolha em quais unidades exibir essa promoção**), as restrições (dias da semana, aniversário, cliente identificado) e a quantidade da regra. Se tudo estiver certo e o desconto não aparecer, fale com o suporte.
 
 ??? question "Escolhi o tipo errado. Dá para trocar?"
     Não. O tipo não pode ser alterado depois do cadastro. Exclua a promoção e crie outra com o tipo certo.
@@ -3758,7 +3759,7 @@ Nos **três pontinhos** (⋮) da promoção ficam **Editar** e **Excluir**. Em *
 
 **Relacionados:** [Como criar uma lista de preços](../produtos/lista-de-precos.md) · [Como criar um pedido de venda](pedido-de-venda.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md)
 
-Palavras-chave: promoção criar promoção leve mais pague menos leve 3 pague 2 desconto progressivo cupom de desconto desconto por valor brinde por valor desconto por quantidade brinde por quantidade campanha acumulativa campanha opcional clientes fidelizados aniversário do cliente dias da semana aplicação múltipla período da promoção
+Palavras-chave: promoção criar promoção leve mais pague menos leve 3 pague 2 desconto progressivo cupom de desconto desconto por valor brinde por valor desconto por quantidade brinde por quantidade campanha acumulativa campanha opcional clientes fidelizados aniversário do cliente dias da semana aplicação múltipla período da promoção pdv caixa promoção não aparece na venda
 
 ---
 Código: 05.06 | Módulo: Vendas | Tela no sistema: /dashboard/sale/outbound-invoices
