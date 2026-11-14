@@ -6717,7 +6717,7 @@ No computador onde o PDV roda:
 Palavras-chave: tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado erp legado
 
 ---
-Código: ERP-10 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
+Código: ERP-011 | Módulo: Suporte técnico | Tela no sistema: /dashboard/apps
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/erp/tef-erp2/
 
 # Configuração e instalação do TEF (ERP 2.0)
