@@ -86,7 +86,7 @@ Na linha da venda, clique nos **três pontinhos** (⋮). O menu tem as ações d
 | **Baixar PDF** | Baixa o pedido em PDF, **sem preço** ou **com preço**. O arquivo vem com o código da venda no nome (exemplo: **venda-214.pdf**). |
 | **Recebimento financeiro** | Mostra os recebimentos da venda (próximo passo). |
 | **Editar** | Abre a venda para alteração. Para só consultar os detalhes, veja o último passo. |
-| **Excluir** | Exclui a venda. Não faz parte da consulta: cuidado para não clicar por engano. |
+| **Excluir** | Exclui (cancela) a venda. Não faz parte da consulta: cuidado para não clicar por engano. Veja [Como cancelar uma venda](cancelar-venda.md). |
 
 **Sem preço ou com preço?** Escolha **sem preço** quando o documento for para quem só precisa conferir os itens, como a separação, a entrega ou a cozinha, e **com preço** quando for para o cliente.
 
