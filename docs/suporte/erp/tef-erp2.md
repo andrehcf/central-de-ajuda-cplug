@@ -1,7 +1,7 @@
 ---
 title: Configuração e instalação do TEF (ERP 2.0)
 description: Credenciamento, VPN do terminal, contrato de cartões e instalação do TEF no PDV, no ERP 2.0.
-codigo: "ERP-10"
+codigo: "ERP-011"
 modulo: Suporte técnico
 tela: /dashboard/apps
 atualizado: 2026-11-12
