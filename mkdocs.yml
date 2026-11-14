@@ -99,6 +99,7 @@ nav:
       - vendas/index.md
       - vendas/consultar-venda.md
       - vendas/cancelar-venda.md
+      - vendas/pedido-de-venda.md
       - vendas/emitir-nfe.md
       - vendas/nota-rejeitada.md
       - vendas/cancelar-nota.md
