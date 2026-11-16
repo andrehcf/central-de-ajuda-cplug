@@ -67,6 +67,6 @@ Clique em **Salvar**, no canto de baixo, à direita. **Descartar alterações** 
 ??? question "Onde configuro o consumo Proporcional ou completo do atributo?"
     Fale com o suporte antes de usar a terceira opção. Ele confere como os atributos da loja estão configurados.
 
-**Relacionados:** [Gerenciamento e restrição de impressões no PDV](restringir-impressoes.md) · [Como cadastrar um produto com variações](../../produtos/cadastrar-produto-com-variacoes.md) · [Como cadastrar variações](../../produtos/cadastrar-variacoes.md)
+**Relacionados:** [Como escolher o que o PDV imprime automaticamente](restringir-impressoes.md) · [Como cadastrar um produto com variações](../../produtos/cadastrar-produto-com-variacoes.md) · [Como cadastrar variações](../../produtos/cadastrar-variacoes.md)
 
 <span class="palavras-chave">impressão fracionada agrupada atributos múltiplos adicionais sabores pizza meio a meio frações cupom de pedido cozinha recibos e notas impressas configuração de consumo proporcional completo</span>

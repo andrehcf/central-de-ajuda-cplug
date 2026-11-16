@@ -30,7 +30,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 [<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP Legado)](erp/contrato-de-cartoes-legado.md)
 [<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP Legado)](erp/saldo-de-abertura-erp1.md)
 [<span class="cplug-codigo">ERP-006</span> Como escolher a impressão fracionada ou agrupada dos atributos](erp/impressao-de-atributos.md)
-[<span class="cplug-codigo">ERP-007</span> Gerenciamento e restrição de impressões no PDV](erp/restringir-impressoes.md)
+[<span class="cplug-codigo">ERP-007</span> Como escolher o que o PDV imprime automaticamente](erp/restringir-impressoes.md)
 [<span class="cplug-codigo">ERP-008</span> Métodos de pagamento na POS (PDV PRO e Atendimento PRO)](erp/metodos-de-pagamento-na-pos.md)
 [<span class="cplug-codigo">ERP-009</span> Como cadastrar o chopp com baixa em litros do barril](erp/cadastro-de-chopp.md)
 [<span class="cplug-codigo">ERP-010</span> Configuração e instalação da integração TEF (ERP Legado)](erp/tef-erp1.md)
