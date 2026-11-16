@@ -48,6 +48,6 @@ atualizado: 2026-11-12
 
 - As formas de pagamento respeitam as baixas automáticas e a conciliação de taxas no financeiro do ERP.
 
-**Relacionados:** [Métodos de pagamento na POS](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP Legado](tef-erp1.md)
+**Relacionados:** [Como escolher as formas de pagamento de cada aparelho](metodos-de-pagamento-na-pos.md) · [Integração TEF no ERP Legado](tef-erp1.md)
 
 <span class="palavras-chave">contrato de cartões legado erp 1 provedor conta para crédito agrupamento bandeira taxa débito crédito dias úteis feriados pos erp legado</span>
