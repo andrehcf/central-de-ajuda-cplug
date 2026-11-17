@@ -7563,7 +7563,7 @@ O DANFE é a versão impressa da nota fiscal.
 
 !!! warning "Antes de começar"
     - Confira se a venda está mesmo sem nota (traço na coluna **Nº Nota Fiscal**), para não emitir a nota duas vezes.
-    - Qual **CFOP** usar e se vale emitir a nota de uma venda de outro mês é decisão do **contador**. Uma nota transmitida agora entra no mês atual (veja [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)).
+    - Qual **CFOP** usar e se vale emitir a nota de uma venda de outro mês é decisão do **contador** (veja [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md)).
     - Venda feita no PDV desktop que não aparece mais no histórico do caixa também pode ser emitida pelo ERP, como abaixo. O tamanho desse histórico fica em **Ponto de venda > Configurações > Geral**: a caixa **Limitar exibição de vendas no histórico do PDV** limita o histórico ao número do campo **Número de vendas no histórico do PDV (até 200)**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
@@ -7625,12 +7625,12 @@ Os **três pontos** da nota reúnem as ações: **Transmitir NFC-e**, para envia
     No passo 2, escolha **Gerar NFe** no lugar de **Gerar NFCe** e siga [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md).
 
 ??? question "Não sei se a venda é deste mês ou de um mês já fechado"
-    Veja a coluna **Criado em**, na lista de vendas. Se for de um mês já fechado, fale com o contador antes de emitir (veja [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)).
+    Veja a coluna **Criado em**, na lista de vendas. Se for de um mês já fechado, fale com o contador antes de emitir (veja [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md)).
 
 ??? question "Não encontro a opção Gerar NFCe ou a nota não fica certa"
     Fale com o suporte e informe o número da venda.
 
-**Relacionados:** [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md) · [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md) · [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md)
+**Relacionados:** [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md) · [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md) · [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md)
 
 Palavras-chave: nfc-e não emitida venda sem nota emitir nota depois nota do consumidor cupom fiscal histórico de vendas gerar nota fiscal gerar nfce traço nº nota fiscal dados complementares cfop 5102 nota para consumidor final validações ok transmitir nfc-e pendente transmitido danfe visualizar danfe download danfe limitar exibição de vendas no histórico do pdv 200 vendas competência contador
 
@@ -7845,35 +7845,96 @@ Palavras-chave: nota de devolução manual nf-e devolução sem venda finalidade
 Código: FISCAL-006 | Módulo: Suporte técnico | Tela no sistema: /dashboard/sale/outbound-invoices
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/suporte/fiscal/inutilizacao-e-transmissao/
 
-# Inutilização e transmissão de notas
+# Como transmitir ou inutilizar uma nota que ficou pendente
 
-Dúvida · ERP 2.0 · Faturamento · Fiscal · Atualizado em 12/11/2026
+4 minutos · 4 passos · ERP 2.0 · Faturamento · Fiscal · Atualizado em 17/11/2026
 
-Números de nota pulados ou diferença entre o relatório de vendas e o da contabilidade costumam aparecer em dois cenários.
+Às vezes uma nota fica parada sem autorização da Sefaz, com o status **Pendente**. Ela precisa de uma decisão: transmitir ou inutilizar. Exemplo: o contador avisa que o total das vendas não bate com o total das notas autorizadas; você procura as notas pendentes, vê de que mês elas são e, com o contador, decide o que fazer com cada uma.
 
-## Cenário 1: o sistema pulou um número (sem venda)
+## Entenda o conceito
 
-Por instabilidade na internet ou na comunicação com a Sefaz, o sistema pode pular um número da sequência (ex.: emitir a nota 100 e depois a 102). Como não existe venda real no número 101, o suporte associa uma venda antiga do histórico a esse número só para fazer o processo técnico de inutilização.
+As notas ficam em **Vendas > NF-e** (tela **NF-e de Saída**), com o **Status** de cada uma. Dois status mostram nota que não foi autorizada:
 
-- **O que é inutilizar:** avisar formalmente à Sefaz que aquele número foi pulado por falha técnica e **nunca existiu**, para não deixar "buraco" na sequência fiscal.
+- **Pendente:** a nota foi salva, mas ainda não foi enviada à Sefaz. É dela que este manual trata.
+- **Falhou:** a nota foi enviada e a Sefaz recusou. Veja o motivo e o que fazer em [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md).
 
-## Cenário 2: a venda foi feita, mas a nota deu erro
+Para uma nota **Pendente**, há dois caminhos:
 
-Costuma aparecer quando o contador avisa que **o total das vendas não bate com o total das notas autorizadas**. A venda foi faturada, mas a nota ficou presa num erro e não foi transmitida.
+| Caminho | O que acontece | Quando costuma ser usado |
+| --- | --- | --- |
+| **Transmitir** | A nota é enviada à Sefaz. | A venda aconteceu e precisa da nota. |
+| **Inutilizar** | Pelo aviso do próprio ERP, a nota "não poderá ser utilizada ou reemitida" e a ação "é permanente". | A nota não vai ser usada, por exemplo porque outra nota foi emitida no lugar. |
 
-## Nota antiga com erro: transmitir ou inutilizar?
+Numa nota de um mês já fechado, a decisão é do **contador**: ele diz se a nota ainda deve ser transmitida ou se deve ser inutilizada, e como registrar essa venda na contabilidade.
 
-A decisão é do **contador**:
+Também pode acontecer de a sequência pular um número sem que exista nota nele (ex.: a nota 100 e depois a 102). Esse número também precisa ser inutilizado, mas isso não é feito pela lista de notas: fale com o suporte e informe o número e a série.
 
-- **Transmitir agora:** a nota é autorizada, mas entra na **competência atual** (mês vigente), o que pode afetar os impostos do mês.
-- **Inutilizar:** o número é descartado na Sefaz, e o contador orienta como regularizar a venda passada na escrituração.
+**Quando usar:** sempre que aparecer nota com status **Pendente** na lista.
 
-!!! tip "Evite surpresas no fim do mês"
-    Uma vez por semana (e sempre alguns dias antes do fechamento do mês), confira em **Vendas > NF-e** as notas com status **Pendente** ou **Falhou**. Corrigir dentro do mês da venda evita divergência com o contador.
+**Quando não usar:** nota com status **Transmitido** já foi autorizada. Para anulá-la, o caminho é o cancelamento (veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md)).
 
-**Relacionados:** [Como cancelar, inutilizar ou corrigir uma nota](../../vendas/cancelar-nota.md) · [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md) · [Como emitir a NFC-e de uma venda que ficou sem nota](emitir-nfce-pelo-historico.md)
+!!! warning "Antes de começar"
+    - Fale com o **contador** antes de transmitir ou inutilizar uma nota de um mês já fechado.
+    - Confira o número da nota antes de inutilizar: depois de inutilizada, ela não pode ser usada nem emitida de novo.
 
-Palavras-chave: inutilizar inutilização número pulado sequência de notas buraco nota com erro pendente falhou competência contador transmitir nota antiga
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Encontre as notas pendentes
+
+No menu do lado esquerdo, clique em **Vendas** e depois em **NF-e**. Clique no ícone de **funil**, à direita do campo **Número da nota ou venda**. No painel **Filtrar**, escolha em **Status** a opção **Pendente** e clique em **Aplicar filtros**, no fim do painel. Deixe o **Período** sem escolher, para ver as notas de todos os meses.
+
+[Imagem: Campo Status com a opção Pendente destacado no painel Filtrar]
+
+O campo **Status** aceita um status por vez. Para ver as notas recusadas, repita com **Falhou**. Para voltar à lista completa, clique em **Limpar filtros**.
+
+## Veja de que mês é cada nota
+
+Na lista filtrada, a coluna **Data/ Hora** mostra a data da nota. Anote o número (coluna **Nota**) e a data das notas de meses já fechados e leve ao contador antes de seguir.
+
+## Escolha a ação no menu da nota
+
+Clique nos **três pontos** no fim da linha da nota:
+
+- **Transmitir NF-e** envia a nota à Sefaz. Depois, confira a coluna **Status** na lista. Se a nota for recusada, siga [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md).
+- **Inutilizar NF-e** abre a janela de inutilização (próximo passo).
+
+[Imagem: Três pontos da nota Pendente e as opções Transmitir NF-e e Inutilizar NF-e destacados]
+
+O menu também tem **Editar NF-e** e **Refazer NF-e**, para corrigir a nota antes de transmitir (veja [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md)). As ações que não valem para uma nota pendente, como **Cancelar NF-e** e **Visualizar DANFE**, aparecem apagadas.
+
+## Inutilize a nota com o motivo
+
+Abre a janela **Inutilizar esta nota fiscal**. Em **Motivo da inutilização**, escreva o motivo, com no mínimo 15 e no máximo 255 caracteres. Exemplo: "Venda emitida em outra nota, número não utilizado". Clique em **Inutilizar nota**. Se mudou de ideia, clique em **Cancelar**: a nota continua como estava.
+
+[Imagem: Campo Motivo da inutilização e o botão Inutilizar nota destacados]
+
+Depois de inutilizada, a nota passa para o status **Inutilizado** (veja também [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md)).
+
+
+
+!!! tip "Boas práticas"
+    - **Confira as notas Pendente e Falhou uma vez por semana**, pelo filtro de **Status**, e sempre alguns dias antes do fim do mês. Resolver dentro do mês da venda evita diferença com o contador.
+    - **Mande ao contador os arquivos das notas inutilizadas** junto com os do mês (veja [Como enviar os documentos fiscais para a contabilidade](../../financas/contabilidade.md)).
+
+## Deu algum problema?
+
+??? question "A sequência das notas pulou um número"
+    Se não existe nota com aquele número na lista, não há menu para inutilizar. Fale com o suporte e informe o número que falta e a série.
+
+??? question "Transmiti e a nota foi recusada"
+    Veja o motivo e siga [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md).
+
+??? question "Não encontro a opção Inutilizar NF-e"
+    A opção **Inutilizar NF-e** aparece ativa nas notas **Pendente**. Se a nota está **Transmitido**, ela já foi autorizada: o caminho é o cancelamento (veja [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md)). Em outro status, fale com o suporte.
+
+??? question "A nota está com um status que não conheço"
+    Além de **Pendente** e **Falhou**, o filtro de **Status** tem opções como **Contingência**, **Em processamento**, **Pendente - SEFAZ** e **Uso Denegado**. **Pendente - SEFAZ** é diferente de **Pendente**. Se uma nota ficar parada num desses status, fale com o suporte e informe o número da nota.
+
+**Relacionados:** [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md) · [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md) · [Como emitir a NFC-e de uma venda que ficou sem nota](emitir-nfce-pelo-historico.md) · [Como enviar os documentos fiscais para a contabilidade](../../financas/contabilidade.md)
+
+Palavras-chave: inutilizar inutilização inutilizar nf-e inutilizar nota motivo da inutilização número pulado sequência de notas buraco nota pendente nota parada nota não transmitida nota com erro falhou transmitir nf-e transmitir nota antiga mês fechado contador total das vendas não bate nf-e de saída filtro status pendente sefaz uso denegado contingência
 
 ---
 Código: INFRA-001 | Módulo: Suporte técnico | Tela no sistema: 
