@@ -33,6 +33,6 @@ A decisão é do **contador**:
 !!! tip "Evite surpresas no fim do mês"
     Uma vez por semana (e sempre alguns dias antes do fechamento do mês), confira em **Vendas > NF-e** as notas com status **Pendente** ou **Falhou**. Corrigir dentro do mês da venda evita divergência com o contador.
 
-**Relacionados:** [Como cancelar, inutilizar ou corrigir uma nota](../../vendas/cancelar-nota.md) · [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md) · [Emissão manual de NFC-e pelo histórico](emitir-nfce-pelo-historico.md)
+**Relacionados:** [Como cancelar, inutilizar ou corrigir uma nota](../../vendas/cancelar-nota.md) · [Como resolver uma nota rejeitada](../../vendas/nota-rejeitada.md) · [Como emitir a NFC-e de uma venda que ficou sem nota](emitir-nfce-pelo-historico.md)
 
 <span class="palavras-chave">inutilizar inutilização número pulado sequência de notas buraco nota com erro pendente falhou competência contador transmitir nota antiga</span>

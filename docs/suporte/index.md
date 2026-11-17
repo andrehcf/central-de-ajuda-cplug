@@ -40,7 +40,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 ## [Fiscal](fiscal/index.md)
 
 <div class="cplug-lista" markdown>
-[<span class="cplug-codigo">FISCAL-001</span> Emissão manual de NFC-e pelo histórico de vendas](fiscal/emitir-nfce-pelo-historico.md)
+[<span class="cplug-codigo">FISCAL-001</span> Como emitir a NFC-e de uma venda que ficou sem nota](fiscal/emitir-nfce-pelo-historico.md)
 [<span class="cplug-codigo">FISCAL-002</span> NF-e de devolução de ativo em comodato (ex.: freezer)](fiscal/devolucao-de-ativo.md)
 [<span class="cplug-codigo">FISCAL-003</span> NF-e referenciando NFC-e (CFOP 5929/6929)](fiscal/nfe-referenciando-nfce.md)
 [<span class="cplug-codigo">FISCAL-004</span> Como usar a natureza de operação na NF-e gerada a partir da venda](fiscal/natureza-de-operacao-de-para.md)
