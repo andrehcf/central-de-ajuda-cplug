@@ -51,6 +51,6 @@ No computador onde o PDV roda:
 - O PDV se comunica com o Pinpad, que emite o sinal sonoro ou a mensagem de pronto.
 - Numa venda com forma de pagamento de cartão integrado, a tela do TEF abre pedindo a inserção ou aproximação do cartão.
 
-**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
+**Relacionados:** [Como configurar o TEF no ERP 2.0 e instalar no PDV](tef-erp2.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
 
 <span class="palavras-chave">tef sitef gsurf vpn cadastrar terminal id da empresa 8 dígitos inspecionar devtools pinpad operações tef instalação erp 1 legado erp legado</span>

@@ -26,7 +26,7 @@ A opção do menu se chama **Gerenciar métodos de pagamento** e mostra as forma
 
 À direita de cada forma fica uma **chave**, o botão de ligar e desligar. A chave grava assim que você clica: aparece o aviso "Atualizando pagamento..." no canto de cima, à direita, e não há botão **Salvar**.
 
-Na mesma tela fica a seção **Configurações TEF**, com o botão **Configurações de VPN** (veja [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md)).
+Na mesma tela fica a seção **Configurações TEF**, com o botão **Configurações de VPN** (veja [Como configurar o TEF no ERP 2.0 e instalar no PDV](tef-erp2.md)).
 
 **Quando mexer:** quando quiser mudar as formas de pagamento de um aparelho. Se está tudo certo, deixe como está.
 
@@ -70,6 +70,6 @@ A tela abre com o nome do aparelho no topo. Role até o fim do primeiro grupo, o
 ??? question "A forma de pagamento que a loja criou não aparece"
     Confira se ela está cadastrada, como em [Como cadastrar formas de pagamento](../../financas/formas-de-pagamento.md). Se estiver e não aparecer, fale com o suporte.
 
-**Relacionados:** [Como cadastrar formas de pagamento](../../financas/formas-de-pagamento.md) · [Configuração e instalação do TEF (ERP 2.0)](tef-erp2.md)
+**Relacionados:** [Como cadastrar formas de pagamento](../../financas/formas-de-pagamento.md) · [Como configurar o TEF no ERP 2.0 e instalar no PDV](tef-erp2.md)
 
 <span class="palavras-chave">pos maquininha pdv móvel atendimento mobile pdv desktop não pede cartão não pede aproximação cartão de débito cartão de crédito gerenciar métodos de pagamento formas de pagamento do aparelho terminais e dispositivos chave ligar desligar sincronizar aplicativo</span>

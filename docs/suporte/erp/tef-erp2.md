@@ -1,70 +1,94 @@
 ---
-title: Configuração e instalação do TEF (ERP 2.0)
-description: Credenciamento, VPN do terminal, contrato de cartões e instalação do TEF no PDV, no ERP 2.0.
+title: Como configurar o TEF no ERP 2.0 e instalar no PDV
+description: Crie a VPN do terminal em Configurações TEF, no ERP 2.0, e instale o TEF no PDV, para o caixa passar o cartão pelo Pinpad.
 codigo: "ERP-011"
 modulo: Suporte técnico
 tela: /dashboard/apps
-atualizado: 2026-11-12
+atualizado: 2026-11-17
 ---
 
-# Configuração e instalação do TEF (ERP 2.0)
+# Como configurar o TEF no ERP 2.0 e instalar no PDV
 
-<div class="cplug-meta" markdown>:material-cog-outline: Configuração · Integração · :material-tag-outline: ERP 2.0 · TEF · PDV · Finanças · :material-calendar-check: Atualizado em 12/11/2026</div>
+<div class="cplug-meta" markdown>:material-clock-outline: 6 minutos · :material-format-list-numbered: 6 passos · :material-tag-outline: ERP 2.0 · TEF · PDV · :material-calendar-check: Atualizado em 17/11/2026</div>
 
-**Objetivo:** credenciar, configurar no ERP e ativar o TEF no PDV (frente de caixa).
+Com o **TEF**, o PDV (o caixa no computador) trabalha junto com o **Pinpad**, o aparelho do cartão ligado ao computador. A configuração tem uma parte no ERP e outra no computador do caixa, e costuma ser feita com o suporte acompanhando. Exemplo: a loja contratou o TEF para o caixa 1; com o suporte, você cria a VPN do terminal no ERP e depois faz a instalação do TEF no PDV.
 
-!!! info "Antes de começar"
-    1. **Credenciamento:** o cliente pediu o credenciamento de **TEF** e de **PIX** pelo chat do suporte (são duas solicitações).
-    2. **Plano:** módulo **TEF** e **Contrato de cartões** ativos no plano.
-    3. **Acessos:** permissão de administrador no ERP e usuário e senha da **Área Administrativa do PDV** (gerente/administrador).
-    4. **Hardware:** Pinpad ligado e funcionando no computador do PDV.
+## Entenda o conceito
 
-## Parte 1: terminal e VPN no ERP
+| Parte | Onde fica | O que tem |
+| --- | --- | --- |
+| **VPN** | **Dispositivos > Terminais & Dispositivos** > três pontos do terminal > **Gerenciar métodos de pagamento** > seção **Configurações TEF** | O botão **Configurações de VPN**, que abre a janela onde se dá o **Nome da VPN**. |
+| **Instalação do TEF** | No PDV: **Área administrativa > Operações TEF > Instalação** | O gateway (**SITEF** ou **SMARTTEF**), os dados do TEF (como **OTP** e **ID da Empresa**) e o botão **INSTALAR**. |
 
-1. Acesse **Dispositivos > Terminais & Dispositivos**.
-2. Localize o terminal que vai receber o TEF.
-3. Clique nos **três pontos** no fim da linha.
-4. Selecione **Gerenciar métodos de pagamento**.
-5. No fim da tela, em **Configurações TEF**, clique em **Configurações de VPN**.
-6. Na janela, preencha **Nome da VPN** com a identificação física do terminal (ex.: PDV 1, TOTEM).
-7. Clique em **Salvar**.
+A janela da VPN fala em **OTP**, um código do TEF que também aparece na tela de instalação do PDV. Pelo aviso da própria janela, reinstalar ou cancelar a OTP "fará o TEF do seu terminal parar de funcionar" e a janela deve ser usada "somente se recomendado pelo suporte especializado".
 
-!!! warning "OTP"
-    A janela avisa que reinstalar ou cancelar a VPN muda a OTP do TEF. Depois de mexer na VPN, refaça a instalação da Parte 3.
+**Quando usar:** na primeira configuração do TEF de um terminal, com o suporte acompanhando. **Quando não usar:** se o TEF do terminal já funciona, não salve a VPN de novo sem orientação do suporte.
 
-## Parte 2: contrato de cartões
+!!! warning "Antes de começar"
+    - O TEF precisa estar contratado e liberado para a loja. Se ainda não está, fale com o suporte antes de começar.
+    - Tenha o contrato da operadora cadastrado em **Finanças**, com a taxa de cada bandeira, como em [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+    - Tenha um usuário de gerente ou administrador do PDV, para entrar na **Área administrativa**.
+    - Deixe o **Pinpad** ligado no computador do caixa.
 
-1. Acesse **Finanças > Contrato de cartões e outros**.
-2. Crie um contrato novo ou edite um sem uso e preencha:
-    - **Descrição:** nome claro (ex.: PIX, Stone, Cielo).
-    - **Provedor:** a operadora/provedora.
-    - **Conta para crédito:** a conta bancária onde as vendas caem.
-3. Ajuste as regras de recebimento:
-    - **Agrupar por:** Método de pagamento, Bandeira de cartão ou Sem agrupamento.
-    - **Definir todas as entradas como pagas neste contrato:** para baixa automática.
-    - **Pagamentos são depositados apenas em dias úteis** e/ou **Habilitar vencimento apenas em dias úteis**, se o contrato prever, com os feriados da praça do cliente.
-4. Cadastre as **taxas de cada bandeira** de débito e crédito aceita, como no manual [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md).
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
-## Parte 3: instalação no PDV (frente de caixa)
+<div class="passos" markdown>
 
-No computador onde o PDV está instalado:
+## Abra os métodos de pagamento do terminal
 
-1. Faça a **sincronização manual do CPServer** e depois do aplicativo do **PDV**.
-2. Abra a **Área Administrativa do PDV**: menu (três barras) no canto superior esquerdo > **Área Administrativa** > credenciais de gerente/administrador.
-3. No menu da esquerda, abra **Operações TEF > Instalação**.
-4. Confira os dados vindos do ERP:
-    - **Gateway:** SITEF
-    - **OTP:** vem automaticamente depois de criar a VPN no ERP
-    - **ID da Empresa:** conforme o cadastro
-    - **IP do Servidor Local:** `127.0.0.1`
-5. Clique no botão azul **INSTALAR**, no rodapé.
-6. Aguarde a mensagem de instalação concluída.
+No ERP, no menu do lado esquerdo, clique em **Dispositivos** e depois em **Terminais & Dispositivos**. Encontre o terminal do caixa pelo nome (a coluna **Categoria** mostra **PDV Desktop**), clique nos **três pontos** no fim da linha e em **Gerenciar métodos de pagamento**.
 
-## Resultado esperado
+![Três pontos do terminal e a opção Gerenciar métodos de pagamento destacados](../../imagens/ERP-011/01-gerenciar-metodos.png){ loading=lazy }
 
-- **Pinpad:** o PDV se comunica com o Pinpad, que emite o sinal sonoro e/ou mostra a mensagem de pronto.
-- **Venda:** numa venda com forma de pagamento de cartão integrado (TEF), a tela do TEF abre pedindo a inserção, aproximação ou leitura do cartão/QR Code.
+## Abra as Configurações de VPN
 
-**Relacionados:** [Configuração e instalação da integração TEF (ERP Legado)](tef-erp1.md) · [Como escolher as formas de pagamento de cada aparelho](metodos-de-pagamento-na-pos.md) · [Falha na aproximação de cartão no PINPAD](../pdv/falha-aproximacao-pinpad.md)
+A tela abre com o nome do terminal no topo e as formas de pagamento dele (veja [Como escolher as formas de pagamento de cada aparelho](metodos-de-pagamento-na-pos.md)). Role até o fim, até **Configurações TEF**. Sem VPN criada, aparece "Nenhuma configuração de VPN foi encontrada para este cliente". Clique em **Configurações de VPN**.
 
-<span class="palavras-chave">tef erp 2 sitef vpn nome da vpn otp configurações tef gerenciar métodos de pagamento contrato de cartões pinpad operações tef instalação credenciamento</span>
+![Botão Configurações de VPN destacado na seção Configurações TEF](../../imagens/ERP-011/02-configuracoes-tef.png){ loading=lazy }
+
+## Dê o nome da VPN e salve
+
+Faça este passo só com o suporte acompanhando, como pede o aviso da janela. Em **Nome da VPN**, digite um nome que identifique o caixa na loja. Exemplo: "PDV 1" ou "Caixa Balcão". Clique em **Salvar**. Se aparecer alguma mensagem de erro, anote o texto e fale com o suporte.
+
+Se abriu a janela por engano, clique em **Cancelar**: nada é gravado.
+
+![Campo Nome da VPN preenchido com PDV 1 e o botão Salvar destacados](../../imagens/ERP-011/03-nome-da-vpn.png){ loading=lazy }
+
+## Sincronize o PDV
+
+No computador do caixa, com o PDV aberto, clique no menu de três barras, no canto de cima, à esquerda, e em **Sincronizar** (atalho **Ctrl + S**). Se a loja tem um **Computador Servidor** (o CPServer), o suporte orienta a sincronizá-lo antes.
+
+## Abra a instalação do TEF
+
+No mesmo menu de três barras, clique em **Área administrativa** (atalho **F11**) e entre com o usuário de gerente ou administrador. No menu da esquerda, abra **Operações TEF** e depois **Instalação**.
+
+## Confira os dados e instale
+
+Em **Selecione o gateway**, deixe marcado o gateway que o suporte indicar (a tela oferece **SITEF** e **SMARTTEF**). Confira se o **Servidor** é `127.0.0.1`. A tela também mostra **CPF/CNPJ**, **OTP**, **Ponto de Captura**, **ID da Empresa**, **Porta** e **Porta USB (opcional)**. Se **CPF/CNPJ**, **OTP**, **Ponto de Captura** ou **ID da Empresa** estiverem vazios, fale com o suporte antes de seguir. Não altere esses campos por conta própria.
+
+Clique no botão azul **INSTALAR**, no rodapé, e aguarde. Se aparecer uma mensagem de erro, anote o texto e fale com o suporte.
+
+</div>
+
+!!! note "No ERP Legado"
+    A VPN fica em outro lugar, em **Ponto de Venda > Aplicativos**. Veja [Configuração e instalação da integração TEF (ERP Legado)](tef-erp1.md).
+
+!!! tip "Boas práticas"
+    - **Use um nome de VPN que diga qual é o caixa** (ex.: "PDV 1", "Caixa Balcão"), para o suporte achar o terminal certo.
+    - **Faça a primeira venda no cartão com o suporte acompanhando**, logo depois da instalação.
+    - **Não salve a VPN de um terminal que já funciona** sem o suporte pedir.
+
+## Deu algum problema?
+
+??? question "O TEF parou depois de mexer na VPN"
+    O aviso da janela diz que reinstalar ou cancelar a OTP faz o TEF do terminal parar. Fale com o suporte e informe o nome do terminal.
+
+??? question "O PDV não pede o cartão no Pinpad"
+    Confira se o Pinpad está ligado ao computador. Se a aproximação falhar, veja [Falha na aproximação de cartão no PINPAD (SiTef)](../pdv/falha-aproximacao-pinpad.md). Se continuar, fale com o suporte e informe o nome do terminal.
+
+??? question "Não encontro Operações TEF no PDV"
+    Confira se entrou na **Área administrativa** com um usuário de gerente ou administrador. Se a opção não aparecer, fale com o suporte.
+
+**Relacionados:** [Como escolher as formas de pagamento de cada aparelho](metodos-de-pagamento-na-pos.md) · [Como cadastrar as taxas do cartão](../../financas/taxas-do-cartao.md) · [Configuração e instalação da integração TEF (ERP Legado)](tef-erp1.md) · [Falha na aproximação de cartão no PINPAD (SiTef)](../pdv/falha-aproximacao-pinpad.md)
+
+<span class="palavras-chave">tef erp 2 erp 2.0 sitef smarttef pinpad cartão integrado vpn nome da vpn configurações de vpn configurações tef otp gerenciar métodos de pagamento terminais e dispositivos contrato de cartões operações tef instalação instalar área administrativa f11 sincronizar ctrl s cpserver credenciamento caixa não pede cartão</span>

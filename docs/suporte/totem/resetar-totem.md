@@ -20,7 +20,7 @@ atualizado: 2026-11-12
     - **Totem V2:** código da empresa, usuário e senha do terminal.
 
 !!! note "No ERP 2.0"
-    Os aplicativos ficam em **Dispositivos > Terminais & Dispositivos**, e a VPN em **três pontos > Gerenciar métodos de pagamento > Configurações TEF**. Veja [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md).
+    Os aplicativos ficam em **Dispositivos > Terminais & Dispositivos**, e a VPN em **três pontos > Gerenciar métodos de pagamento > Configurações TEF**. Veja [Como configurar o TEF no ERP 2.0 e instalar no PDV](../erp/tef-erp2.md).
 
 ## Parte 1: fechar o aplicativo e limpar os dados no totem
 
@@ -58,6 +58,6 @@ Abra o aplicativo no totem e siga conforme a versão:
 
 - O aplicativo faz uma carga completa do servidor, volta a se comunicar com o TEF/SiTef e atualiza imagens, preços e nomes dos produtos.
 
-**Relacionados:** [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP Legado)](../erp/tef-erp1.md)
+**Relacionados:** [Como configurar o TEF no ERP 2.0 e instalar no PDV](../erp/tef-erp2.md) · [Configuração e instalação da integração TEF (ERP Legado)](../erp/tef-erp1.md)
 
 <span class="palavras-chave">totem autoatendimento reset limpar dados android cancelar terminal revogar licença vpn gsurf sitef tef não sincroniza imagens preços totem v1 v2 pin</span>

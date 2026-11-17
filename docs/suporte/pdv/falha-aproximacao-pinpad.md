@@ -30,6 +30,6 @@ atualizado: 2026-11-12
 - A pasta **CliSiTef** é recriada automaticamente em `C:\`, limpa.
 - Ao iniciar a transação, o PINPAD mostra a mensagem de atualização/carga de tabelas e volta a aceitar pagamentos por aproximação.
 
-**Relacionados:** [Vinculação do Smart TEF ao PDV](vincular-smart-tef.md) · [Configuração e instalação do TEF (ERP 2.0)](../erp/tef-erp2.md)
+**Relacionados:** [Vinculação do Smart TEF ao PDV](vincular-smart-tef.md) · [Como configurar o TEF no ERP 2.0 e instalar no PDV](../erp/tef-erp2.md)
 
 <span class="palavras-chave">pinpad sitef clisitef aproximação nfc cartão não lê erro de comunicação cpserver java carga de tabelas tef</span>
