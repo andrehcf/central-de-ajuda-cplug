@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Emitir pelo ERP a NFC-e de uma venda que ficou sem nota no fechamento (rede instável ou rejeição da Sefaz).">
+        <meta name="description" content="Gere pelo ERP 2.0 a NFC-e de uma venda que não tem nota fiscal, a partir da lista de vendas, e acompanhe a nota em Vendas > NF-e.">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Emissão manual de NFC-e pelo histórico de vendas - Central de Ajuda CPlug</title>
+        <title>Como emitir a NFC-e de uma venda que ficou sem nota - Central de Ajuda CPlug</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#emissao-manual-de-nfc-e-pelo-historico-de-vendas" class="md-skip">
+        <a href="#como-emitir-a-nfc-e-de-uma-venda-que-ficou-sem-nota" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Emissão manual de NFC-e pelo histórico de vendas
+              Como emitir a NFC-e de uma venda que ficou sem nota
             
           </span>
         </div>
@@ -2544,7 +2544,7 @@
           
   
   <span class="md-ellipsis">
-    Emissão manual de NFC-e pelo histórico de vendas
+    Como emitir a NFC-e de uma venda que ficou sem nota
   </span>
   
 
@@ -2555,7 +2555,7 @@
         
   
   <span class="md-ellipsis">
-    Emissão manual de NFC-e pelo histórico de vendas
+    Como emitir a NFC-e de uma venda que ficou sem nota
   </span>
   
 
@@ -2579,18 +2579,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#passo-a-passo" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Passo a passo
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#encontre-a-venda-sem-nota" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Encontre a venda sem nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gere-a-nfc-e-da-venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gere a NFC-e da venda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preencha-os-dados-complementares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preencha os dados complementares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-e-salve-a-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira e salve a nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acompanhe-a-nota-em-vendas-nf-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acompanhe a nota em Vendas &gt; NF-e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3297,18 +3342,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#passo-a-passo" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Passo a passo
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#encontre-a-venda-sem-nota" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Encontre a venda sem nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gere-a-nfc-e-da-venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gere a NFC-e da venda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preencha-os-dados-complementares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preencha os dados complementares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-e-salve-a-nota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira e salve a nota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acompanhe-a-nota-em-vendas-nf-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acompanhe a nota em Vendas &gt; NF-e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3341,32 +3431,93 @@
   
 
 
-<h1 id="emissao-manual-de-nfc-e-pelo-historico-de-vendas">Emissão manual de NFC-e pelo histórico de vendas</h1>
+<h1 id="como-emitir-a-nfc-e-de-uma-venda-que-ficou-sem-nota">Como emitir a NFC-e de uma venda que ficou sem nota</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 18h2v-2h-2zm1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14a4 4 0 0 0-4 4h2a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4"/></svg></span> Processo operacional · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP 2.0 · Faturamento · Fiscal · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 12/11/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 4 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 5 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP 2.0 · Faturamento · Fiscal · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 17/11/2026</p>
 </div>
-<p><strong>Objetivo:</strong> emitir a NFC-e de uma venda que não gerou o documento fiscal no fechamento, por instabilidade de rede ou rejeição da Sefaz.</p>
-<div class="admonition info">
-<p class="admonition-title">Limite do histórico no PDV</p>
-<p>O PDV Desktop mostra no histórico no máximo as <strong>200 últimas vendas</strong>. No ERP 2.0 esse número é configurável em <strong>Ponto de venda &gt; Configurações &gt; Geral</strong>, no campo <strong>Limitar exibição de vendas no histórico do PDV</strong> (até 200). Se a venda não aparece mais no caixa, emita pelo ERP, como abaixo.</p>
-</div>
-<h2 id="passo-a-passo">Passo a passo</h2>
-<ol>
-<li>No ERP, acesse <strong>Vendas &gt; Vendas</strong>.</li>
-<li>Localize a venda pela data, valor ou número do cupom.</li>
-<li>Confirme que a venda tem um traço (<strong>-</strong>) na coluna <strong>Nº Nota Fiscal</strong>: sinal de que não tem nota.</li>
-<li>Clique nos <strong>três pontos</strong> da linha e escolha <strong>Gerar nota fiscal &gt; Gerar NFC-e</strong>.</li>
-<li>Na janela <strong>Dados complementares</strong>, abaixo dos campos de CFOP, marque <strong>Nota para Consumidor Final?</strong> e clique em <strong>Salvar</strong>.</li>
-<li>Na tela com o espelho da nota, role até o rodapé e clique em <strong>Salvar</strong> de novo para gravar a nota.</li>
-<li>Na lista de notas, localize a nota e <strong>transmita</strong> para a Sefaz.</li>
-<li>Com o status <strong>Autorizada</strong>, gere o DANFE pelas ações da linha e imprima ou salve.</li>
-</ol>
-<h2 id="resultado-esperado">Resultado esperado</h2>
+<p>Às vezes uma venda fica sem a NFC-e (a nota fiscal do consumidor). Você pode gerar essa nota depois, pelo ERP, a partir da própria venda. Exemplo: o contador avisa que uma venda não tem nota; você encontra a venda na lista, gera a NFC-e e acompanha a nota na lista de notas.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>O caminho passa por duas telas do ERP:</p>
+<table>
+<thead>
+<tr>
+<th>Tela</th>
+<th>Onde fica</th>
+<th>Para que serve aqui</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendas</strong></td>
+<td><strong>Vendas &gt; Vendas</strong></td>
+<td>Encontrar a venda sem nota e gerar a NFC-e dela. A coluna <strong>Nº Nota Fiscal</strong> mostra o número das notas da venda, ou um traço (<strong>-</strong>) quando ela não tem nota.</td>
+</tr>
+<tr>
+<td><strong>NF-e de Saída</strong></td>
+<td><strong>Vendas &gt; NF-e</strong></td>
+<td>Lista as notas, NF-e e NFC-e (coluna <strong>Tipo</strong>), com o número da venda (coluna <strong>Venda</strong>) e o <strong>Status</strong> de cada uma: <strong>Transmitido</strong>, <strong>Pendente</strong>, <strong>Cancelado</strong> ou <strong>Inutilizado</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>O DANFE é a versão impressa da nota fiscal.</p>
+<p><strong>Quando usar:</strong> quando a venda já existe no ERP e ficou sem NFC-e. Se a coluna <strong>Nº Nota Fiscal</strong> da venda mostra um número, ela já tem nota: não gere outra, veja a nota em <strong>Vendas &gt; NF-e</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Antes de começar</p>
 <ul>
-<li>O traço (-) some da lista de vendas e dá lugar ao número da nota autorizada, regularizando a venda.</li>
+<li>Confira se a venda está mesmo sem nota (traço na coluna <strong>Nº Nota Fiscal</strong>), para não emitir a nota duas vezes.</li>
+<li>Qual <strong>CFOP</strong> usar e se vale emitir a nota de uma venda de outro mês é decisão do <strong>contador</strong>. Uma nota transmitida agora entra no mês atual (veja <a href="../inutilizacao-e-transmissao/">Inutilização e transmissão de notas</a>).</li>
+<li>Venda feita no PDV desktop que não aparece mais no histórico do caixa também pode ser emitida pelo ERP, como abaixo. O tamanho desse histórico fica em <strong>Ponto de venda &gt; Configurações &gt; Geral</strong>: a caixa <strong>Limitar exibição de vendas no histórico do PDV</strong> limita o histórico ao número do campo <strong>Número de vendas no histórico do PDV (até 200)</strong>.</li>
 </ul>
-<p><strong>Relacionados:</strong> <a href="../../../vendas/nota-rejeitada/">Como resolver uma nota rejeitada</a> · <a href="../inutilizacao-e-transmissao/">Inutilização e transmissão de notas</a></p>
-<p><span class="palavras-chave">nfc-e não emitida venda sem nota emitir nota depois histórico de vendas gerar nota fiscal gerar nfc-e traço 200 vendas contingência rejeição</span></p>
+</div>
+<p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
+<div class="passos">
+<h2 id="encontre-a-venda-sem-nota">Encontre a venda sem nota</h2>
+<p>No menu do lado esquerdo, clique em <strong>Vendas</strong> e depois em <strong>Vendas</strong>. Se a lista for longa, use a busca do topo: ela aceita código da venda, nome do cliente, código do pedido ou nota fiscal. Confira se a coluna <strong>Nº Nota Fiscal</strong> da venda mostra um traço (<strong>-</strong>) e clique nos <strong>três pontos</strong> no fim da linha.</p>
+<p><img alt="Três pontos da venda sem nota destacados na lista de vendas" loading="lazy" src="../../../imagens/FISCAL-001/01-venda-sem-nota.png" /></p>
+<h2 id="gere-a-nfc-e-da-venda">Gere a NFC-e da venda</h2>
+<p>No menu da venda, clique em <strong>Gerar nota fiscal</strong> e depois em <strong>Gerar NFCe</strong>. Abre a tela <strong>Nova NFCe</strong>, com a janela <strong>DADOS COMPLEMENTARES</strong> por cima.</p>
+<p><img alt="Gerar nota fiscal e Gerar NFCe destacados no menu da venda" loading="lazy" src="../../../imagens/FISCAL-001/02-gerar-nfce.png" /></p>
+<h2 id="preencha-os-dados-complementares">Preencha os dados complementares</h2>
+<p>No topo da janela, escolha o <strong>CFOP</strong> pelos atalhos (por exemplo, <strong>5102</strong>) ou pela lista <strong>Selecione</strong>. Deixe marcada a opção que já vem, <strong>Utilizar a configuração fiscal dos produtos e preencher com este CFOP onde não possuir configuração</strong>: cada produto usa o CFOP do próprio cadastro, e o CFOP escolhido aqui só entra nos produtos sem configuração fiscal.</p>
+<p><img alt="Campo CFOP preenchido com 5102 destacado na janela Dados complementares" loading="lazy" src="../../../imagens/FISCAL-001/03-cfop.png" /></p>
+<p>Role a janela até o fim. As demais opções (<strong>IPI</strong>, <strong>ICMS</strong>, <strong>Nota para Consumidor Final?</strong>, <strong>Presença do Comprador no estabelecimento</strong> e a configuração opcional) já vêm preenchidas: mude só se o contador orientar. Clique em <strong>Salvar</strong>.</p>
+<p><img alt="Botão Salvar da janela Dados complementares destacado" loading="lazy" src="../../../imagens/FISCAL-001/04-salvar-janela.png" /></p>
+<h2 id="confira-e-salve-a-nota">Confira e salve a nota</h2>
+<p>A tela <strong>Nova NFCe</strong> mostra a nota preenchida com os dados da venda: cliente, itens, totais e pagamento. No topo, em <strong>VALIDAÇÕES DA NOTA FISCAL ELETRÔNICA</strong>, aparece a mensagem <strong>Dados estão corretos, validações OK</strong>.</p>
+<p><img alt="Validações da nota com a mensagem Dados estão corretos, validações OK" loading="lazy" src="../../../imagens/FISCAL-001/05-validacoes.png" /></p>
+<p>Confira os dados, role até o fim da tela e clique no botão verde <strong>Salvar</strong> para gravar a nota.</p>
+<p><img alt="Botão Salvar no fim da tela Nova NFCe destacado" loading="lazy" src="../../../imagens/FISCAL-001/06-salvar-nota.png" /></p>
+<h2 id="acompanhe-a-nota-em-vendas-nf-e">Acompanhe a nota em Vendas &gt; NF-e</h2>
+<p>No menu, clique em <strong>Vendas</strong> e depois em <strong>NF-e</strong>. Encontre a nota pelo número da venda, na coluna <strong>Venda</strong> (a busca <strong>Número da nota ou venda</strong> ajuda), e confira o <strong>Status</strong>.</p>
+<p>Os <strong>três pontos</strong> da nota reúnem as ações: <strong>Transmitir NFC-e</strong>, para enviar a nota, e, com a nota <strong>Transmitido</strong>, <strong>Visualizar DANFE</strong> e <strong>Download DANFE</strong>. As ações que não valem para o status da nota aparecem apagadas.</p>
+<p><img alt="Três pontos de uma NFC-e transmitida e as opções Visualizar DANFE e Download DANFE destacados" loading="lazy" src="../../../imagens/FISCAL-001/07-danfe.png" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<ul>
+<li><strong>Confira a lista de vendas toda semana</strong> e procure vendas com traço (<strong>-</strong>) na coluna <strong>Nº Nota Fiscal</strong>. Resolver dentro do mês da venda evita diferença com o contador.</li>
+<li><strong>Antes de gerar uma nota nova, procure a venda em Vendas &gt; NF-e</strong> (coluna <strong>Venda</strong>): se já existir uma nota dela, fale com o suporte antes de gerar outra.</li>
+</ul>
+</div>
+<h2 id="deu-algum-problema">Deu algum problema?</h2>
+<details class="question">
+<summary>A nota foi rejeitada ao transmitir</summary>
+<p>Veja o motivo da rejeição e siga <a href="../../../vendas/nota-rejeitada/">Como resolver uma nota fiscal rejeitada</a>.</p>
+</details>
+<details class="question">
+<summary>A venda precisa de NF-e, não de NFC-e</summary>
+<p>No passo 2, escolha <strong>Gerar NFe</strong> no lugar de <strong>Gerar NFCe</strong> e siga <a href="../../../vendas/emitir-nfe/">Como emitir uma NF-e de venda (dentro e fora do estado)</a>.</p>
+</details>
+<details class="question">
+<summary>Não sei se a venda é deste mês ou de um mês já fechado</summary>
+<p>Veja a coluna <strong>Criado em</strong>, na lista de vendas. Se for de um mês já fechado, fale com o contador antes de emitir (veja <a href="../inutilizacao-e-transmissao/">Inutilização e transmissão de notas</a>).</p>
+</details>
+<details class="question">
+<summary>Não encontro a opção Gerar NFCe ou a nota não fica certa</summary>
+<p>Fale com o suporte e informe o número da venda.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../inutilizacao-e-transmissao/">Inutilização e transmissão de notas</a> · <a href="../../../vendas/nota-rejeitada/">Como resolver uma nota fiscal rejeitada</a> · <a href="../../../vendas/cancelar-nota/">Como cancelar, inutilizar ou corrigir uma nota fiscal</a> · <a href="../../../vendas/emitir-nfe/">Como emitir uma NF-e de venda (dentro e fora do estado)</a></p>
+<p><span class="palavras-chave">nfc-e não emitida venda sem nota emitir nota depois nota do consumidor cupom fiscal histórico de vendas gerar nota fiscal gerar nfce traço nº nota fiscal dados complementares cfop 5102 nota para consumidor final validações ok transmitir nfc-e pendente transmitido danfe visualizar danfe download danfe limitar exibição de vendas no histórico do pdv 200 vendas competência contador</span></p>
 
 
 
