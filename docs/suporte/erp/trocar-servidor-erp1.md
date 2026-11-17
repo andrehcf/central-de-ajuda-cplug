@@ -52,8 +52,8 @@ atualizado: 2026-11-12
     Pule a Parte 2. Faça a Parte 1 (fechamento forçado e limpeza do servidor em cada PDV), depois a Parte 3 e a Parte 4 na máquina nova.
 
 ??? question "A máquina veio de outra loja (outra conta no mesmo hardware)"
-    Veja o mesmo cenário em [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md): a limpeza local (`CPServer.exe`, pasta `data`, pasta do PDV em `%appdata%`) é igual nas duas versões.
+    Veja o mesmo cenário em [Como trocar o computador servidor da loja no ERP 2.0](trocar-servidor-erp2.md): a limpeza local (servidor, pasta `data` e pasta do PDV em `%appdata%`) é parecida nas duas versões.
 
-**Relacionados:** [Migração e troca de servidor local (ERP 2.0)](trocar-servidor-erp2.md)
+**Relacionados:** [Como trocar o computador servidor da loja no ERP 2.0](trocar-servidor-erp2.md)
 
 <span class="palavras-chave">trocar servidor erp 1 legado migração cpserver mongodb forçar fechamento do caixa console f12 showbtnposforceclosure editserverpos pin aplicativos erp legado</span>

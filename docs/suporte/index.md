@@ -25,7 +25,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 
 <div class="cplug-lista" markdown>
 [<span class="cplug-codigo">ERP-001</span> Impressora não aparece na impressão parcial de mesas](erp/impressora-impressao-parcial.md)
-[<span class="cplug-codigo">ERP-002</span> Migração e troca de servidor local (ERP 2.0 / CPlug Server)](erp/trocar-servidor-erp2.md)
+[<span class="cplug-codigo">ERP-002</span> Como trocar o computador servidor da loja no ERP 2.0](erp/trocar-servidor-erp2.md)
 [<span class="cplug-codigo">ERP-003</span> Migração e troca de servidor local (ERP Legado / CPlug Server)](erp/trocar-servidor-erp1.md)
 [<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP Legado)](erp/contrato-de-cartoes-legado.md)
 [<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP Legado)](erp/saldo-de-abertura-erp1.md)

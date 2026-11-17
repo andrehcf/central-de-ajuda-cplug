@@ -10,7 +10,7 @@ Retaguarda: servidor local, contratos de cartão, impressão, chopp e TEF.
 
 <div class="cplug-lista" markdown>
 [<span class="cplug-codigo">ERP-001</span> Impressora não aparece na impressão parcial de mesas](impressora-impressao-parcial.md)
-[<span class="cplug-codigo">ERP-002</span> Migração e troca de servidor local (ERP 2.0 / CPlug Server)](trocar-servidor-erp2.md)
+[<span class="cplug-codigo">ERP-002</span> Como trocar o computador servidor da loja no ERP 2.0](trocar-servidor-erp2.md)
 [<span class="cplug-codigo">ERP-003</span> Migração e troca de servidor local (ERP Legado / CPlug Server)](trocar-servidor-erp1.md)
 [<span class="cplug-codigo">ERP-004</span> Configuração de contrato de cartões (ERP Legado)](contrato-de-cartoes-legado.md)
 [<span class="cplug-codigo">ERP-005</span> Saldo de abertura do PDV (ERP Legado)](saldo-de-abertura-erp1.md)
