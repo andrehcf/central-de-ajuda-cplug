@@ -14,5 +14,5 @@ Emissões manuais, devoluções, notas referenciadas, natureza de operação e i
 [<span class="cplug-codigo">FISCAL-003</span> NF-e referenciando NFC-e (CFOP 5929/6929)](nfe-referenciando-nfce.md)
 [<span class="cplug-codigo">FISCAL-004</span> Como usar a natureza de operação na NF-e gerada a partir da venda](natureza-de-operacao-de-para.md)
 [<span class="cplug-codigo">FISCAL-005</span> NF-e de devolução (emissão manual)](nfe-de-devolucao-manual.md)
-[<span class="cplug-codigo">FISCAL-006</span> Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)
+[<span class="cplug-codigo">FISCAL-006</span> Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md)
 </div>

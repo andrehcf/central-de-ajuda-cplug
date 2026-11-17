@@ -45,7 +45,7 @@ Procedimentos do time de suporte e implantação: instalação, rede, periféric
 [<span class="cplug-codigo">FISCAL-003</span> NF-e referenciando NFC-e (CFOP 5929/6929)](fiscal/nfe-referenciando-nfce.md)
 [<span class="cplug-codigo">FISCAL-004</span> Como usar a natureza de operação na NF-e gerada a partir da venda](fiscal/natureza-de-operacao-de-para.md)
 [<span class="cplug-codigo">FISCAL-005</span> NF-e de devolução (emissão manual)](fiscal/nfe-de-devolucao-manual.md)
-[<span class="cplug-codigo">FISCAL-006</span> Inutilização e transmissão de notas](fiscal/inutilizacao-e-transmissao.md)
+[<span class="cplug-codigo">FISCAL-006</span> Como transmitir ou inutilizar uma nota que ficou pendente](fiscal/inutilizacao-e-transmissao.md)
 </div>
 
 ## [Totem](totem/index.md)

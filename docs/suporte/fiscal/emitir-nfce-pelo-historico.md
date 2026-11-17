@@ -28,7 +28,7 @@ O DANFE é a versão impressa da nota fiscal.
 
 !!! warning "Antes de começar"
     - Confira se a venda está mesmo sem nota (traço na coluna **Nº Nota Fiscal**), para não emitir a nota duas vezes.
-    - Qual **CFOP** usar e se vale emitir a nota de uma venda de outro mês é decisão do **contador**. Uma nota transmitida agora entra no mês atual (veja [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)).
+    - Qual **CFOP** usar e se vale emitir a nota de uma venda de outro mês é decisão do **contador** (veja [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md)).
     - Venda feita no PDV desktop que não aparece mais no histórico do caixa também pode ser emitida pelo ERP, como abaixo. O tamanho desse histórico fica em **Ponto de venda > Configurações > Geral**: a caixa **Limitar exibição de vendas no histórico do PDV** limita o histórico ao número do campo **Número de vendas no histórico do PDV (até 200)**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
@@ -90,11 +90,11 @@ Os **três pontos** da nota reúnem as ações: **Transmitir NFC-e**, para envia
     No passo 2, escolha **Gerar NFe** no lugar de **Gerar NFCe** e siga [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md).
 
 ??? question "Não sei se a venda é deste mês ou de um mês já fechado"
-    Veja a coluna **Criado em**, na lista de vendas. Se for de um mês já fechado, fale com o contador antes de emitir (veja [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md)).
+    Veja a coluna **Criado em**, na lista de vendas. Se for de um mês já fechado, fale com o contador antes de emitir (veja [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md)).
 
 ??? question "Não encontro a opção Gerar NFCe ou a nota não fica certa"
     Fale com o suporte e informe o número da venda.
 
-**Relacionados:** [Inutilização e transmissão de notas](inutilizacao-e-transmissao.md) · [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md) · [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md)
+**Relacionados:** [Como transmitir ou inutilizar uma nota que ficou pendente](inutilizacao-e-transmissao.md) · [Como resolver uma nota fiscal rejeitada](../../vendas/nota-rejeitada.md) · [Como cancelar, inutilizar ou corrigir uma nota fiscal](../../vendas/cancelar-nota.md) · [Como emitir uma NF-e de venda (dentro e fora do estado)](../../vendas/emitir-nfe.md)
 
 <span class="palavras-chave">nfc-e não emitida venda sem nota emitir nota depois nota do consumidor cupom fiscal histórico de vendas gerar nota fiscal gerar nfce traço nº nota fiscal dados complementares cfop 5102 nota para consumidor final validações ok transmitir nfc-e pendente transmitido danfe visualizar danfe download danfe limitar exibição de vendas no histórico do pdv 200 vendas competência contador</span>
