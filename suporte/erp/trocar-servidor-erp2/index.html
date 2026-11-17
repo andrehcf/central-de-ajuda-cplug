@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Trocar o computador servidor da loja no ERP 2.0, com MongoDB, revogação de licença e nova vinculação por PIN.">
+        <meta name="description" content="Troque o computador servidor da loja (CPServer e MongoDB) no ERP 2.0, limpando a máquina antiga, revogando a licença, refazendo o PDV Desktop e instalando os aplicativos na máquina nova.">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Migração e troca de servidor local (ERP 2.0 / CPlug Server) - Central de Ajuda CPlug</title>
+        <title>Como trocar o computador servidor da loja no ERP 2.0 - Central de Ajuda CPlug</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migracao-e-troca-de-servidor-local-erp-20-cplug-server" class="md-skip">
+        <a href="#como-trocar-o-computador-servidor-da-loja-no-erp-20" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migração e troca de servidor local (ERP 2.0 / CPlug Server)
+              Como trocar o computador servidor da loja no ERP 2.0
             
           </span>
         </div>
@@ -2261,7 +2261,7 @@
           
   
   <span class="md-ellipsis">
-    Migração e troca de servidor local (ERP 2.0 / CPlug Server)
+    Como trocar o computador servidor da loja no ERP 2.0
   </span>
   
 
@@ -2272,7 +2272,7 @@
         
   
   <span class="md-ellipsis">
-    Migração e troca de servidor local (ERP 2.0 / CPlug Server)
+    Como trocar o computador servidor da loja no ERP 2.0
   </span>
   
 
@@ -2296,54 +2296,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parte-1-desinstalar-o-servidor-atual-maquina-antiga" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 1: desinstalar o servidor atual (máquina antiga)
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-2-limpar-o-cache-do-pdv-desktop" class="md-nav__link">
+  <a href="#pare-o-servidor-e-o-banco-na-maquina-antiga" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 2: limpar o cache do PDV Desktop
+      Pare o servidor e o banco na máquina antiga
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-3-reset-dos-dispositivos-no-erp" class="md-nav__link">
+  <a href="#desinstale-o-mongodb-da-maquina-antiga" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 3: reset dos dispositivos no ERP
+      Desinstale o MongoDB da máquina antiga
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-4-instalacao-e-nova-vinculacao-maquina-nova" class="md-nav__link">
+  <a href="#renomeie-as-pastas-antigas" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 4: instalação e nova vinculação (máquina nova)
+      Renomeie as pastas antigas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#revogue-a-licenca-do-servidor-no-erp" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Revogue a licença do servidor no ERP
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cenarios-especiais" class="md-nav__link">
+  <a href="#exclua-o-pdv-desktop-antigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Cenários especiais
+      Exclua o PDV Desktop antigo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadastre-o-novo-pdv-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadastre o novo PDV Desktop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instale-os-aplicativos-na-maquina-nova" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instale os aplicativos na máquina nova
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vincule-o-servidor-e-o-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vincule o servidor e o caixa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3333,54 +3378,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parte-1-desinstalar-o-servidor-atual-maquina-antiga" class="md-nav__link">
+  <a href="#entenda-o-conceito" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 1: desinstalar o servidor atual (máquina antiga)
+      Entenda o conceito
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-2-limpar-o-cache-do-pdv-desktop" class="md-nav__link">
+  <a href="#pare-o-servidor-e-o-banco-na-maquina-antiga" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 2: limpar o cache do PDV Desktop
+      Pare o servidor e o banco na máquina antiga
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-3-reset-dos-dispositivos-no-erp" class="md-nav__link">
+  <a href="#desinstale-o-mongodb-da-maquina-antiga" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 3: reset dos dispositivos no ERP
+      Desinstale o MongoDB da máquina antiga
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-4-instalacao-e-nova-vinculacao-maquina-nova" class="md-nav__link">
+  <a href="#renomeie-as-pastas-antigas" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 4: instalação e nova vinculação (máquina nova)
+      Renomeie as pastas antigas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#revogue-a-licenca-do-servidor-no-erp" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado esperado
+      Revogue a licença do servidor no ERP
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cenarios-especiais" class="md-nav__link">
+  <a href="#exclua-o-pdv-desktop-antigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Cenários especiais
+      Exclua o PDV Desktop antigo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadastre-o-novo-pdv-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadastre o novo PDV Desktop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instale-os-aplicativos-na-maquina-nova" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instale os aplicativos na máquina nova
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confira-a-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confira a instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vincule-o-servidor-e-o-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vincule o servidor e o caixa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deu-algum-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deu algum problema?
     </span>
   </a>
   
@@ -3413,78 +3503,121 @@
   
 
 
-<h1 id="migracao-e-troca-de-servidor-local-erp-20-cplug-server">Migração e troca de servidor local (ERP 2.0 / CPlug Server)</h1>
+<h1 id="como-trocar-o-computador-servidor-da-loja-no-erp-20">Como trocar o computador servidor da loja no ERP 2.0</h1>
 <div class="cplug-meta">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8"/></svg></span> Erro · Infraestrutura · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP 2.0 · Banco de dados · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 12/11/2026</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> 40 minutos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> 9 passos · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg></span> ERP 2.0 · Infraestrutura · Banco de dados · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m0-5h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-2.47 8.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17z"/></svg></span> Atualizado em 17/11/2026</p>
 </div>
-<p><strong>Quando usar:</strong> o computador servidor da loja precisa ser substituído por falha de hardware, lentidão extrema ou banco MongoDB corrompido, exigindo migração completa.</p>
+<p>Quando o computador servidor da loja precisa ser trocado, o servidor novo começa do zero: a máquina antiga é limpa, a licença dela é revogada no ERP e os aplicativos são instalados e vinculados de novo na máquina nova. Exemplo: o servidor da loja queimou a placa ou ficou lento demais, e um computador novo vai assumir o lugar dele.</p>
+<h2 id="entenda-o-conceito">Entenda o conceito</h2>
+<p>O <strong>computador servidor</strong> é o computador da loja que guarda os dados locais e conversa com os caixas. Nele ficam:</p>
+<table>
+<thead>
+<tr>
+<th>Peça</th>
+<th>O que é</th>
+<th>Onde aparece no computador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPServer</strong></td>
+<td>O aplicativo <strong>Servidor</strong> da CPlug.</td>
+<td>Roda como o serviço do Windows <strong>CPServerService</strong>.</td>
+</tr>
+<tr>
+<td><strong>MongoDB</strong></td>
+<td>O banco de dados local do servidor.</td>
+<td>Programa instalado (ex.: <strong>MongoDB 3.2.22</strong>) que roda como o serviço <strong>MongoDB</strong>, com os dados na pasta <code>C:\data</code>.</td>
+</tr>
+<tr>
+<td><strong>PDV Desktop</strong></td>
+<td>O aplicativo do caixa.</td>
+<td>No computador onde o caixa está instalado, a pasta <code>ConnectPlug PDV</code>, dentro de <code>%appdata%</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>No ERP, cada um aparece em <strong>Dispositivos &gt; Terminais &amp; Dispositivos</strong>: o servidor com a categoria <strong>Computador Servidor</strong> e o caixa com a categoria <strong>PDV Desktop</strong>.</p>
+<p><strong>Quando usar:</strong> quando o servidor vai ser trocado por outro computador (defeito, lentidão extrema ou banco corrompido). <strong>Quando não usar:</strong> se o problema é só um caixa travado, fale com o suporte antes: esta troca refaz tudo.</p>
 <div class="admonition danger">
-<p class="admonition-title">Alerta crítico</p>
-<p>Confirme com a loja se há <strong>mesas, comandas ou entregas (delivery) abertas</strong>. Se houver, esses dados locais serão <strong>perdidos permanentemente</strong>. Só comece depois de finalizar todas as movimentações.</p>
-</div>
-<h2 id="parte-1-desinstalar-o-servidor-atual-maquina-antiga">Parte 1: desinstalar o servidor atual (máquina antiga)</h2>
-<ol>
-<li>Na máquina servidora antiga, pressione <strong>Ctrl + Shift + Esc</strong> para abrir o Gerenciador de Tarefas.</li>
-<li>Na aba <strong>Detalhes</strong>, localize o processo <code>CPServer.exe</code>, clique com o botão direito e selecione <strong>Finalizar árvore de processos</strong>.</li>
-<li>Vá em <strong>Painel de Controle &gt; Desinstalar um programa</strong>, localize o <strong>MongoDB</strong> e desinstale.</li>
-<li>No Explorador de Arquivos, abra o disco <code>C:</code> e renomeie a pasta <code>data</code> para <code>data.old</code>.</li>
-</ol>
-<h2 id="parte-2-limpar-o-cache-do-pdv-desktop">Parte 2: limpar o cache do PDV Desktop</h2>
-<ol>
-<li>Pressione <strong>Windows + R</strong>, digite <code>%appdata%</code> e pressione <strong>Enter</strong>.</li>
-<li>Localize a pasta do PDV (<strong>ConnectPlug PDV</strong>) e renomeie adicionando <code>.old</code> ao final (de <code>ConnectPlug PDV</code> para <code>ConnectPlug PDV.old</code>).</li>
-</ol>
-<h2 id="parte-3-reset-dos-dispositivos-no-erp">Parte 3: reset dos dispositivos no ERP</h2>
-<ol>
-<li>No navegador, acesse o ERP do cliente e vá em <strong>Dispositivos &gt; Terminais &amp; Dispositivos</strong>.</li>
-<li>Abra o dispositivo <strong>Servidor</strong>. Na página <strong>Computador servidor</strong>, clique em <strong>Revogar licença</strong> (no topo da página).</li>
-<li>Volte à lista, abra os <strong>três pontos</strong> do <strong>PDV Desktop</strong> antigo, clique em <strong>Excluir</strong> e depois crie um novo <strong>PDV Desktop</strong> em <strong>Novo Dispositivo</strong>.</li>
-</ol>
-<h2 id="parte-4-instalacao-e-nova-vinculacao-maquina-nova">Parte 4: instalação e nova vinculação (máquina nova)</h2>
-<ol>
-<li>
-<p>Na máquina nova, baixe os instaladores oficiais:</p>
+<p class="admonition-title">Antes de começar</p>
 <ul>
-<li><a href="https://cdn.connectplug.com.br/cplugserver/CPServerInstall-2.12.10.exe">CPlug Server 2.12.10</a></li>
-<li><a href="https://cdn.connectplug.com.br/pos2/CPlugPdv2Install-2.12.10.exe">CPlug PDV 2.12.10</a></li>
+<li>Confirme com a loja se há <strong>mesas, comandas ou entregas (delivery) abertas</strong>. Esses dados ficam no servidor local e <strong>se perdem</strong> na troca. Só comece depois de fechar todas as movimentações.</li>
+<li>Faça a troca com o suporte acompanhando. <strong>Revogar licença</strong> e <strong>Excluir</strong> não têm volta pela tela.</li>
+<li>Tenha um usuário de administrador no Windows dos dois computadores.</li>
+<li>Se a loja tem mais de um caixa, combine com o suporte: cada caixa precisa ser refeito.</li>
+<li>Se a máquina antiga queimou ou não liga, pule os passos 1 a 3 (veja <strong>Deu algum problema?</strong>).</li>
 </ul>
+</div>
+<p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
+<div class="passos">
+<h2 id="pare-o-servidor-e-o-banco-na-maquina-antiga">Pare o servidor e o banco na máquina antiga</h2>
+<p>Na máquina servidora antiga, feche o PDV. Pressione <strong>Windows + R</strong>, digite <code>services.msc</code> e pressione <strong>Enter</strong>. Na lista de serviços, clique com o botão direito em <strong>CPServerService</strong> e em <strong>Parar</strong>. Faça o mesmo no serviço <strong>MongoDB</strong>.</p>
+<h2 id="desinstale-o-mongodb-da-maquina-antiga">Desinstale o MongoDB da máquina antiga</h2>
+<p>Abra o <strong>Painel de Controle</strong> &gt; <strong>Programas</strong> &gt; <strong>Desinstalar um programa</strong>. Encontre o <strong>MongoDB</strong> na lista (o nome tem a versão, como <strong>MongoDB 3.2.22</strong>) e desinstale.</p>
+<h2 id="renomeie-as-pastas-antigas">Renomeie as pastas antigas</h2>
+<p>No Explorador de Arquivos, abra o disco <code>C:</code> e renomeie a pasta <code>data</code> para <code>data.old</code>.</p>
+<p>Depois, entre no Windows com o mesmo usuário que usa o caixa, pressione <strong>Windows + R</strong>, digite <code>%appdata%</code> e pressione <strong>Enter</strong>. Renomeie a pasta <code>ConnectPlug PDV</code> para <code>ConnectPlug PDV.old</code>. Renomear, em vez de apagar, guarda uma cópia caso o suporte precise dela.</p>
+<h2 id="revogue-a-licenca-do-servidor-no-erp">Revogue a licença do servidor no ERP</h2>
+<p>No ERP, no menu do lado esquerdo, clique em <strong>Dispositivos</strong> e depois em <strong>Terminais &amp; Dispositivos</strong>. Clique no nome do servidor (categoria <strong>Computador Servidor</strong>). Na página <strong>Computador servidor</strong>, clique em <strong>Revogar licença</strong>, no canto de cima, à direita. Se aparecer uma mensagem de confirmação, leia e confirme.</p>
+<p><img alt="Botão Revogar licença destacado na página Computador servidor" loading="lazy" src="../../../imagens/ERP-002/01-revogar-licenca.png" /></p>
+<p>Na mesma página fica o campo <strong>Endereço IP</strong> do servidor. Como a máquina nova terá outro IP, confira esse campo com o suporte.</p>
+<h2 id="exclua-o-pdv-desktop-antigo">Exclua o PDV Desktop antigo</h2>
+<p>Antes de excluir, abra o PDV Desktop antigo (clique no nome dele) e anote o <strong>Nome</strong>, os <strong>Módulos habilitados</strong> e as <strong>Configurações do destino de impressão</strong>. Anote também as formas de pagamento ligadas (três pontos &gt; <strong>Gerenciar métodos de pagamento</strong>).</p>
+<p>Volte para <strong>Terminais &amp; Dispositivos</strong>. Na linha do <strong>PDV Desktop</strong> antigo, clique nos <strong>três pontos</strong> e em <strong>Excluir</strong>. Se aparecer uma mensagem de confirmação, leia e confirme.</p>
+<p><img alt="Três pontos do PDV Desktop e a opção Excluir destacados" loading="lazy" src="../../../imagens/ERP-002/02-excluir-pdv.png" /></p>
+<h2 id="cadastre-o-novo-pdv-desktop">Cadastre o novo PDV Desktop</h2>
+<p>Clique em <strong>Novo Dispositivo</strong>, no canto de cima, à direita. No painel <strong>Cadastrar Terminais e Aplicativos</strong>, escolha <strong>Novo PDV Desktop</strong>.</p>
+<p><img alt="Opção Novo PDV Desktop destacada no painel Cadastrar Terminais e Aplicativos" loading="lazy" src="../../../imagens/ERP-002/03-novo-pdv-desktop.png" /></p>
+<p>Na tela <strong>PDV Desktop</strong>, preencha com o que você anotou:</p>
+<ul>
+<li><strong>Nome:</strong> o nome do caixa. Exemplo: "Caixa 1".</li>
+<li><strong>Módulos habilitados:</strong> marque os mesmos do caixa antigo. A tela oferece <strong>Atendimento de mesa</strong>, <strong>Balcão</strong>, <strong>Painel de Senhas</strong>, <strong>KDS</strong> e <strong>Meu Delivery</strong>.</li>
+<li><strong>Configurações do destino de impressão:</strong> ligue <strong>Ativar alteração de Impressão de pedidos</strong> só se estava ligado no caixa antigo.</li>
+<li><strong>Caixa Servidor:</strong> o computador servidor da loja (ex.: <strong>Servidor Padrão</strong>).</li>
+</ul>
+<p>Clique em <strong>Salvar</strong>, no rodapé.</p>
+<p><img alt="Campos Nome, Módulos habilitados e Caixa Servidor destacados na tela PDV Desktop" loading="lazy" src="../../../imagens/ERP-002/04-pdv-desktop.png" /></p>
+<p>Depois, ligue de novo as formas de pagamento do caixa (veja <a href="../metodos-de-pagamento-na-pos/">Como escolher as formas de pagamento de cada aparelho</a>). Se o caixa usa TEF, fale com o suporte (veja <a href="../tef-erp2/">Como configurar o TEF no ERP 2.0 e instalar no PDV</a>).</p>
+<h2 id="instale-os-aplicativos-na-maquina-nova">Instale os aplicativos na máquina nova</h2>
+<p>Na máquina nova, entre no ERP e clique em <strong>Dispositivos</strong> e depois em <strong>Baixar aplicativos</strong>. Baixe o instalador do <strong>Servidor</strong> e o do <strong>PDV Desktop</strong> pelo ícone do <strong>Windows</strong> de cada linha. Assim você sempre pega a versão mais recente.</p>
+<p><img alt="Ícones do Windows nas linhas PDV Desktop e Servidor destacados em Baixar aplicativos" loading="lazy" src="../../../imagens/ERP-002/05-baixar-aplicativos.png" /></p>
+<h2 id="confira-a-instalacao">Confira a instalação</h2>
+<p>Instale os dois na máquina nova. Se tiver dúvida em alguma tela do instalador, ou se o <strong>MongoDB</strong> não aparecer em <strong>Programas instalados</strong> depois, fale com o suporte.</p>
+<h2 id="vincule-o-servidor-e-o-caixa">Vincule o servidor e o caixa</h2>
+<p>Em <strong>Terminais &amp; Dispositivos</strong>, clique nos <strong>três pontos</strong> do servidor e em <strong>Vincular aplicativo</strong>. Siga as instruções da tela com o suporte acompanhando. Depois, faça o mesmo no PDV Desktop novo.</p>
+<p><img alt="Três pontos do Computador Servidor e a opção Vincular aplicativo destacados" loading="lazy" src="../../../imagens/ERP-002/06-vincular-servidor.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">No ERP Legado</p>
+<p>Os cadastros do servidor e do caixa ficam em <strong>Ponto de Venda &gt; Aplicativos</strong>. Veja <a href="../trocar-servidor-erp1/">Migração e troca de servidor local (ERP Legado / CPlug Server)</a>.</p>
+</div>
 <div class="admonition tip">
-<p class="admonition-title">Versão mais recente</p>
-<p>Os links acima são da versão 2.12.10. A versão atual sempre fica no ERP, em <strong>Dispositivos &gt; Baixar aplicativos</strong>.</p>
-</div>
-</li>
-<li>
-<p>Execute os instaladores com as configurações padrão.</p>
-</li>
-<li>No ERP, pegue os novos PINs gerados. Informe o PIN do servidor no painel do novo servidor local e o PIN do PDV no aplicativo do caixa.</li>
-</ol>
-<h2 id="resultado-esperado">Resultado esperado</h2>
+<p class="admonition-title">Boas práticas</p>
 <ul>
-<li>O novo servidor local faz uma carga limpa e sincronizada a partir da nuvem, e o PDV Desktop abre sem registros presos ou corrompidos do servidor anterior.</li>
+<li><strong>Combine a troca para um horário sem movimento</strong>, com todas as mesas, comandas e entregas fechadas.</li>
+<li><strong>Dê um IP fixo ao servidor novo</strong> (veja <a href="../../infraestrutura/ip-fixo-no-windows/">Configuração de IP fixo no Windows (servidor e PDVs)</a>).</li>
+<li><strong>Guarde as pastas <code>.old</code></strong> por alguns dias, até confirmar que está tudo certo.</li>
 </ul>
-<h2 id="cenarios-especiais">Cenários especiais</h2>
+</div>
+<h2 id="deu-algum-problema">Deu algum problema?</h2>
 <details class="question">
-<summary>A máquina antiga queimou ou está inacessível</summary>
-<p>Pule as Partes 1 e 2 e comece pelo ERP:</p>
-<ol>
-<li>Em <strong>Dispositivos &gt; Terminais &amp; Dispositivos</strong>, abra o <strong>Servidor</strong> e clique em <strong>Revogar licença</strong>. Isso desvincula o ID da placa-mãe antiga.</li>
-<li>Exclua o <strong>PDV Desktop</strong> antigo e crie um novo.</li>
-<li>Siga a Parte 4 na máquina nova.</li>
-</ol>
+<summary>A máquina antiga queimou ou não liga</summary>
+<p>Pule os passos 1 a 3. Comece pelo ERP: revogue a licença do servidor (passo 4), refaça o PDV Desktop (passos 5 e 6) e siga para a máquina nova (passos 7 a 9).</p>
 </details>
 <details class="question">
-<summary>A máquina veio de outra loja (outra conta no mesmo hardware)</summary>
-<p>O computador tem arquivos da conta anterior que precisam ser limpos:</p>
-<ol>
-<li>No Gerenciador de Tarefas (<strong>Ctrl + Shift + Esc</strong>) &gt; <strong>Detalhes</strong>, finalize a árvore de processos do <code>CPServer.exe</code>.</li>
-<li>Em <code>C:\</code>, renomeie a pasta <code>data</code> com a identificação da loja antiga (ex.: <code>data.loja_antiga.old</code>). O MongoDB cria um banco 100% limpo.</li>
-<li>Pressione <strong>Windows + R</strong>, digite <code>%appdata%</code> e pressione <strong>Enter</strong>.</li>
-<li>Renomeie a pasta do PDV adicionando <code>.old</code> (ex.: <code>ConnectPlug PDV.loja_antiga.old</code>). O aplicativo do caixa passa a pedir um novo PIN.</li>
-<li>Entre no ERP da <strong>nova conta</strong> do cliente, gere os PINs de Servidor e PDV e informe nos sistemas locais.</li>
-</ol>
+<summary>A máquina nova veio de outra loja (outra conta no mesmo computador)</summary>
+<p>O computador tem arquivos da conta anterior. Com o suporte acompanhando, pare o servidor e o MongoDB (passo 1) e renomeie as pastas (passo 3) com o nome da loja antiga (ex.: <code>data.loja_antiga.old</code> e <code>ConnectPlug PDV.loja_antiga.old</code>). Depois, entre no ERP da <strong>nova conta</strong> e faça os passos 4 a 9.</p>
 </details>
-<p><strong>Relacionados:</strong> <a href="../trocar-servidor-erp1/">Migração e troca de servidor local (ERP Legado)</a> · <a href="../../infraestrutura/ip-fixo-no-windows/">Configuração de IP fixo no Windows</a></p>
-<p><span class="palavras-chave">trocar servidor migração cplug server cpserver mongodb banco corrompido revogar licença pin pdv desktop formatar computador novo appdata pasta data</span></p>
+<details class="question">
+<summary>Não consigo renomear uma pasta</summary>
+<p>A pasta está em uso. Para a pasta <code>data</code>, confira se os serviços <strong>CPServerService</strong> e <strong>MongoDB</strong> foram parados (passo 1). Para a pasta <code>ConnectPlug PDV</code>, feche o PDV. Se continuar, fale com o suporte.</p>
+</details>
+<details class="question">
+<summary>O caixa não conecta no servidor novo</summary>
+<p>Confira se os dois aplicativos foram vinculados (passo 9) e se o servidor tem IP fixo. Se continuar, fale com o suporte e informe o nome do servidor e do caixa.</p>
+</details>
+<p><strong>Relacionados:</strong> <a href="../trocar-servidor-erp1/">Migração e troca de servidor local (ERP Legado / CPlug Server)</a> · <a href="../../infraestrutura/ip-fixo-no-windows/">Configuração de IP fixo no Windows (servidor e PDVs)</a> · <a href="../metodos-de-pagamento-na-pos/">Como escolher as formas de pagamento de cada aparelho</a> · <a href="../tef-erp2/">Como configurar o TEF no ERP 2.0 e instalar no PDV</a></p>
+<p><span class="palavras-chave">trocar servidor migração computador servidor computador novo formatar cplug server cpserver cpserverservice services.msc parar serviço mongodb banco corrompido pasta data appdata connectplug pdv revogar licença excluir pdv desktop novo dispositivo novo pdv desktop módulos habilitados caixa servidor baixar aplicativos instalador vincular aplicativo endereço ip mesas comandas delivery perdidos</span></p>
 
 
 
