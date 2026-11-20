@@ -137,6 +137,7 @@ nav:
       - configuracoes/index.md
       - configuracoes/perfis-de-acesso.md
       - configuracoes/emissao-de-notas.md
+      - configuracoes/integracoes.md
       - configuracoes/natureza-de-operacao.md
       - configuracoes/tipo-de-nota-no-pdv.md
       - configuracoes/preferencias-do-sistema.md
