@@ -110,6 +110,7 @@ nav:
       - ponto-de-venda/index.md
       - ponto-de-venda/cadastrar-ponto-de-venda.md
       - ponto-de-venda/configurar-terminal.md
+      - ponto-de-venda/recibos-e-notas.md
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
