@@ -87,6 +87,6 @@ Se a série já estiver em uso no caixa, fale com o suporte antes de mudar ou ex
 ??? question "Como abro e fecho uma comanda no caixa?"
     Este manual prepara o sistema. Para dúvidas sobre abrir, lançar e fechar comandas no caixa, fale com o suporte.
 
-**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como configurar recibos e notas impressas](recibos-e-notas.md)
+**Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como configurar recibos e notas impressas](recibos-e-notas.md) · [Como cadastrar mesas e setores](../dispositivos/mesas.md)
 
 <span class="palavras-chave">comanda comandas série de comandas cadastrar nova série de comandas intervalo de numeração início fim nome da série cartão de consumo bar restaurante salão varanda mesas e comandas numeração repetida editar série excluir série</span>

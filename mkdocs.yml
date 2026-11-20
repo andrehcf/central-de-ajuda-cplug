@@ -131,6 +131,7 @@ nav:
       - financas/facilita-nfe.md
   - 08. Dispositivos:
       - dispositivos/index.md
+      - dispositivos/mesas.md
       - dispositivos/baixar-aplicativos.md
   - 10. Configurações:
       - configuracoes/index.md
