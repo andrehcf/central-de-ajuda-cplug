@@ -129,6 +129,9 @@ nav:
       - financas/centro-de-custo.md
       - financas/contabilidade.md
       - financas/facilita-nfe.md
+  - 08. Dispositivos:
+      - dispositivos/index.md
+      - dispositivos/baixar-aplicativos.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/emissao-de-notas.md
