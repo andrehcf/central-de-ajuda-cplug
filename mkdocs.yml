@@ -139,6 +139,7 @@ nav:
       - configuracoes/emissao-de-notas.md
       - configuracoes/natureza-de-operacao.md
       - configuracoes/tipo-de-nota-no-pdv.md
+      - configuracoes/preferencias-do-sistema.md
   - Suporte técnico:
       - suporte/index.md
       - PDV:
