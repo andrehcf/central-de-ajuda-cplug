@@ -113,6 +113,7 @@ nav:
       - ponto-de-venda/recibos-e-notas.md
       - ponto-de-venda/troca-e-devolucao.md
       - ponto-de-venda/crediario.md
+      - ponto-de-venda/consignado.md
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
