@@ -140,6 +140,7 @@ nav:
       - configuracoes/integracoes.md
       - configuracoes/natureza-de-operacao.md
       - configuracoes/tipo-de-nota-no-pdv.md
+      - configuracoes/informacoes-adicionais.md
       - configuracoes/preferencias-do-sistema.md
   - Suporte técnico:
       - suporte/index.md
