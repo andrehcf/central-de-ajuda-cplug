@@ -12,4 +12,5 @@ Prepare os caixas da loja: cadastro dos pontos de venda, gerência dos caixas e 
 [<span class="cplug-codigo">06.04</span> Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md)
 [<span class="cplug-codigo">06.06</span> Como configurar o terminal de vendas](configurar-terminal.md)
 [<span class="cplug-codigo">06.07</span> Como configurar recibos e notas impressas](recibos-e-notas.md)
+[<span class="cplug-codigo">06.08</span> Como configurar troca e devolução](troca-e-devolucao.md)
 </div>
