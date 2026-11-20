@@ -115,6 +115,7 @@ nav:
       - ponto-de-venda/crediario.md
       - ponto-de-venda/consignado.md
       - ponto-de-venda/comandas.md
+      - ponto-de-venda/painel-de-senhas.md
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
