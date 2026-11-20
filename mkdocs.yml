@@ -112,6 +112,7 @@ nav:
       - ponto-de-venda/configurar-terminal.md
       - ponto-de-venda/recibos-e-notas.md
       - ponto-de-venda/troca-e-devolucao.md
+      - ponto-de-venda/crediario.md
   - 07. Finanças:
       - financas/index.md
       - financas/conta-bancaria.md
