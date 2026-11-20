@@ -15,4 +15,5 @@ Prepare os caixas da loja: cadastro dos pontos de venda, gerência dos caixas e 
 [<span class="cplug-codigo">06.08</span> Como configurar troca e devolução](troca-e-devolucao.md)
 [<span class="cplug-codigo">06.09</span> Como vender no crediário](crediario.md)
 [<span class="cplug-codigo">06.10</span> Como vender em consignado](consignado.md)
+[<span class="cplug-codigo">06.11</span> Como usar comandas](comandas.md)
 </div>
