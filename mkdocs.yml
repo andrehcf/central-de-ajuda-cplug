@@ -133,6 +133,7 @@ nav:
       - dispositivos/index.md
       - dispositivos/impressora.md
       - dispositivos/kds.md
+      - dispositivos/totem.md
       - dispositivos/mesas.md
       - dispositivos/etiquetas.md
       - dispositivos/cadastrar-terminal.md
