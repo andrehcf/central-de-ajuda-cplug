@@ -132,6 +132,7 @@ nav:
   - 08. Dispositivos:
       - dispositivos/index.md
       - dispositivos/impressora.md
+      - dispositivos/kds.md
       - dispositivos/mesas.md
       - dispositivos/cadastrar-terminal.md
       - dispositivos/baixar-aplicativos.md
