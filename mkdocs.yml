@@ -134,6 +134,7 @@ nav:
       - dispositivos/impressora.md
       - dispositivos/kds.md
       - dispositivos/mesas.md
+      - dispositivos/etiquetas.md
       - dispositivos/cadastrar-terminal.md
       - dispositivos/baixar-aplicativos.md
   - 10. Configurações:
