@@ -138,6 +138,7 @@ nav:
       - dispositivos/etiquetas.md
       - dispositivos/cadastrar-terminal.md
       - dispositivos/baixar-aplicativos.md
+      - dispositivos/smart-menu.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md

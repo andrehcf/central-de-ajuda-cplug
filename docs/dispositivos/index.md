@@ -16,4 +16,5 @@ Cadastre as mesas e os aparelhos da loja e baixe os aplicativos da CPlug: caixa,
 [<span class="cplug-codigo">08.05</span> Como imprimir etiquetas](etiquetas.md)
 [<span class="cplug-codigo">08.06</span> Como cadastrar um terminal ou dispositivo](cadastrar-terminal.md)
 [<span class="cplug-codigo">08.07</span> Como baixar os aplicativos da CPlug](baixar-aplicativos.md)
+[<span class="cplug-codigo">08.08</span> Como configurar o Smart Menu (QR Code e cardápio digital)](smart-menu.md)
 </div>
