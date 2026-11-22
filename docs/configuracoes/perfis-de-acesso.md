@@ -122,6 +122,6 @@ Clique em **Confirmar**. Aparece **Descontos por perfil salvos com sucesso**.
 ??? question "Posso excluir um perfil que já está em uso?"
     Por segurança, antes de excluir, troque o perfil dos usuários que o usam, para ninguém ficar sem acesso. Se tiver dúvida, fale com o suporte.
 
-**Relacionados:** [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md) · [Como vender no crediário](../ponto-de-venda/crediario.md) · [Como vender em consignado](../ponto-de-venda/consignado.md) · [Como configurar o painel de senhas](../ponto-de-venda/painel-de-senhas.md)
+**Relacionados:** [Como cadastrar um usuário](cadastrar-usuario.md) · [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md) · [Como vender no crediário](../ponto-de-venda/crediario.md) · [Como vender em consignado](../ponto-de-venda/consignado.md) · [Como configurar o painel de senhas](../ponto-de-venda/painel-de-senhas.md)
 
 <span class="palavras-chave">perfil de acesso perfis de acesso permissões permissão novo perfil gerenciar perfis e permissões usuários e permissões restringir acesso bloquear acesso acessos erp acessos pdv visualizar criar atualizar deletar excluir administrador caixa vendedor contador gerente estoquista compartilhar com todas as filiais desconto por perfil desconto máximo limite de desconto tipo de desconto produto venda sangria cancelamento de venda</span>

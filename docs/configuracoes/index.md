@@ -9,6 +9,7 @@ hide:
 Ajustes da empresa que valem para todo o sistema, como os perfis de acesso da equipe e a emissão de notas fiscais.
 
 <div class="cplug-lista" markdown>
+[<span class="cplug-codigo">10.01</span> Como cadastrar um usuário](cadastrar-usuario.md)
 [<span class="cplug-codigo">10.02</span> Como criar perfis de acesso](perfis-de-acesso.md)
 [<span class="cplug-codigo">10.04</span> Como configurar a emissão de notas fiscais](emissao-de-notas.md)
 [<span class="cplug-codigo">10.07</span> Como ativar integrações](integracoes.md)

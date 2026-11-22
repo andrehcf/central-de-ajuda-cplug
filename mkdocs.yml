@@ -135,6 +135,7 @@ nav:
       - dispositivos/baixar-aplicativos.md
   - 10. Configurações:
       - configuracoes/index.md
+      - configuracoes/cadastrar-usuario.md
       - configuracoes/perfis-de-acesso.md
       - configuracoes/emissao-de-notas.md
       - configuracoes/integracoes.md
