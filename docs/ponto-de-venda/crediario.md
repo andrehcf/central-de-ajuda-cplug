@@ -36,7 +36,7 @@ Como a tela explica, se o limite do cliente não for preenchido, valem os limite
 
 !!! info "Antes de começar"
     - Defina com a gerência o limite padrão e o máximo de parcelas, e confirme com o contador a multa e os juros por atraso.
-    - Para imprimir cupons e carnês, o caixa precisa de uma impressora cadastrada em **Dispositivos** (veja os [manuais de periféricos](../suporte/perifericos/index.md)).
+    - Para imprimir cupons e carnês, o caixa precisa de uma impressora cadastrada em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](../dispositivos/impressora.md)).
     - Ao mudar qualquer opção, aparece no rodapé **Você tem alterações não salvas**, com **Descartar alterações** e **Salvar**. Ao salvar, aparece **Configurações do PDV atualizadas com sucesso**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.

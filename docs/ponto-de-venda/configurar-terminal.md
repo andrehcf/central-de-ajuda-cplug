@@ -252,7 +252,7 @@ Pronto! Antes de sair, confira o rodapé: se a mensagem **Você tem alterações
     Se ainda não salvou, clique em **Descartar alterações** no rodapé. Se já salvou, mude a opção de volta e clique em **Salvar** de novo.
 
 ??? question "A lista de impressoras está vazia"
-    Nenhuma impressora foi cadastrada ainda. Cadastre a impressora em **Dispositivos** e volte a esta tela.
+    Nenhuma impressora foi cadastrada ainda. Cadastre a impressora em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](../dispositivos/impressora.md)) e volte a esta tela.
 
 **Relacionados:** [Como cadastrar um ponto de venda](cadastrar-ponto-de-venda.md) · [Como cadastrar uma conta bancária](../financas/conta-bancaria.md) · [Como cadastrar formas de pagamento](../financas/formas-de-pagamento.md) · [Como definir o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md)
 

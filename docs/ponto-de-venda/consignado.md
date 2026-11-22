@@ -24,7 +24,7 @@ Na venda em **consignado**, o cliente leva os produtos antes de decidir: fica co
 **As mudanças valem no caixa.** Esta tela só guarda a configuração. Se o caixa estiver aberto, faça a **sincronização** no PDV para aplicar as mudanças na hora.
 
 !!! info "Antes de começar"
-    - Para imprimir o pedido de consignado, cadastre antes a impressora em **Dispositivos** (veja os [manuais de periféricos](../suporte/perifericos/index.md)).
+    - Para imprimir o pedido de consignado, cadastre antes a impressora em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](../dispositivos/impressora.md)).
     - Ao mudar qualquer opção, aparece no rodapé **Você tem alterações não salvas**, com **Descartar alterações** e **Salvar**. Ao salvar, aparece **Configurações do PDV atualizadas com sucesso**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.

@@ -32,7 +32,7 @@ Cada uma tem a sua chave, e você pode ligar uma, a outra ou as duas. Ligue só 
 
 !!! info "Antes de começar"
     - Defina com a equipe a política de trocas da loja (prazo, condições) antes de ligar as opções. O prazo pode ir nas observações do comprovante (passo 2).
-    - Para imprimir os recibos e comprovantes, o caixa precisa de uma impressora cadastrada em **Dispositivos** (veja os [manuais de periféricos](../suporte/perifericos/index.md)).
+    - Para imprimir os recibos e comprovantes, o caixa precisa de uma impressora cadastrada em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](../dispositivos/impressora.md)).
     - Ao mudar qualquer opção, aparece no rodapé **Você tem alterações não salvas**, com **Descartar alterações** e **Salvar**. Ao salvar, aparece **Configurações do PDV atualizadas com sucesso**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.

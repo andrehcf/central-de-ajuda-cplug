@@ -29,7 +29,7 @@ A tela tem quatro blocos, e cada um responde a uma pergunta:
 **As mudanças valem no caixa.** Esta tela só guarda a configuração; o efeito aparece nas impressões do PDV. Se o caixa estiver aberto, faça a **sincronização** no PDV para aplicar as mudanças na hora. Depois, confira o papel nas próximas impressões.
 
 !!! info "Antes de começar"
-    - Para imprimir, o caixa precisa de uma impressora cadastrada em **Dispositivos** (veja os [manuais de periféricos](../suporte/perifericos/index.md)).
+    - Para imprimir, o caixa precisa de uma impressora cadastrada em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](../dispositivos/impressora.md)).
     - Ao mudar qualquer opção, aparece no rodapé **Você tem alterações não salvas**, com **Descartar alterações** e **Salvar**. Ao salvar, aparece **Configurações do PDV atualizadas com sucesso**.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
@@ -109,7 +109,7 @@ Pronto! Clique em **Salvar**, no rodapé. Se a mensagem **Você tem alterações
     Confira se o comprovante certo está marcado (**NFCe** ou **Relatório Gerencial**) e se esse comprovante está sendo impresso (bloco **Impressão automática**). Confira também se o PDV Desktop está atualizado: a função exige uma versão mínima. Se não souber qual versão o seu PDV tem, fale com o suporte.
 
 ??? question "O caixa parou de imprimir o comprovante da venda ou a nota"
-    Confira se **Relatório gerencial ao finalizar uma venda** e **DANFE ao transmitir a nota fiscal** continuam marcados e se a impressora do caixa está funcionando (veja os [manuais de periféricos](../suporte/perifericos/index.md)).
+    Confira se **Relatório gerencial ao finalizar uma venda** e **DANFE ao transmitir a nota fiscal** continuam marcados e se a impressora do caixa está funcionando (veja [Como configurar uma impressora](../dispositivos/impressora.md)).
 
 **Relacionados:** [Como configurar o terminal de vendas](configurar-terminal.md) · [Como escolher a impressão fracionada ou agrupada dos atributos](../suporte/erp/impressao-de-atributos.md) · [Como cadastrar variações](../produtos/cadastrar-variacoes.md) · [Como definir o tipo de nota emitida no PDV](../configuracoes/tipo-de-nota-no-pdv.md) · [Como criar um pedido de venda](../vendas/pedido-de-venda.md)
 

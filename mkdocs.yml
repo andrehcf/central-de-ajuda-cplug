@@ -131,6 +131,7 @@ nav:
       - financas/facilita-nfe.md
   - 08. Dispositivos:
       - dispositivos/index.md
+      - dispositivos/impressora.md
       - dispositivos/mesas.md
       - dispositivos/cadastrar-terminal.md
       - dispositivos/baixar-aplicativos.md

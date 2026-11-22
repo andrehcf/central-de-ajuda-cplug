@@ -25,7 +25,7 @@ Em restaurantes, bares e lanchonetes com atendimento na mesa, cada mesa precisa 
 O setor diz **onde imprimir** o que é das mesas dele:
 
 - **Resumo da Conta:** a impressora de fechamento do setor, onde sai o resumo da conta das mesas dele.
-- **Rota de Impressão:** um desvio de impressora para os pedidos. Cada produto tem a sua impressora de pedidos, definida no cadastro do produto (por exemplo, o lanche sai na cozinha). A rota de impressão troca essa impressora para as mesas do setor: quando um pedido sairia na impressora de origem, o setor manda para outra. Use quando uma área tem impressora própria, por exemplo um deck afastado com impressora perto do bar.
+- **Rota de Impressão:** um desvio de impressora para os pedidos. Cada produto tem a sua impressora de pedidos, definida em **Configurações** → **Periféricos**, na opção **Vincular produtos** da impressora (por exemplo, o lanche sai na cozinha; veja [Como configurar uma impressora](impressora.md)). A rota de impressão troca essa impressora para as mesas do setor: quando um pedido sairia na impressora de origem, o setor manda para outra. Use quando uma área tem impressora própria, por exemplo um deck afastado com impressora perto do bar.
 
 **Quando usar:** atendimento na mesa, em que a conta fica aberta e é fechada no fim. **Quando não usar:** venda só no balcão, paga na hora. Se a loja usa cartões numerados por cliente, veja também [Como usar comandas](../ponto-de-venda/comandas.md).
 
@@ -33,7 +33,7 @@ O setor diz **onde imprimir** o que é das mesas dele:
 
 !!! info "Antes de começar"
     - Conte as mesas da loja e decida como dividir em setores (salão, varanda, deck).
-    - As impressoras que aparecem no setor são as cadastradas em **Dispositivos** (veja os [manuais de periféricos](../suporte/perifericos/index.md)). Cadastre antes as impressoras que vai usar.
+    - As impressoras que aparecem no setor são as cadastradas em **Configurações** → **Periféricos** (veja [Como configurar uma impressora](impressora.md)). Cadastre antes as impressoras que vai usar.
 
 Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
 
@@ -90,7 +90,7 @@ Em **Gerenciar Setores**, clique na seta do quadro **Simulador de impressão** (
 
 1. **Selecione a mesa** (a lista mostra o setor de cada uma, por exemplo **Mesa 2 [Setor: Salão (Ativo)]**).
 2. **Selecione um produto** do cardápio.
-3. **Selecione o tipo de evento:** **Lançar Pedido** (a impressão do pedido) ou **Resumo da Conta**. Para simular **Lançar Pedido**, o produto precisa ter impressora de pedidos no cadastro dele.
+3. **Selecione o tipo de evento:** **Lançar Pedido** (a impressão do pedido) ou **Resumo da Conta**. Para simular **Lançar Pedido**, o produto precisa estar ligado a uma impressora (veja [Como configurar uma impressora](impressora.md)).
 
 Clique em **Simular**. O sistema mostra **CÁLCULO DE ROTA CONCLUÍDO** e em qual impressora a impressão vai sair. No exemplo, o resumo da conta da Mesa 2 sai na **Cozinha**, a impressora de fechamento do setor Salão.
 
@@ -126,10 +126,10 @@ Para trazer de volta uma mesa excluída, abra a aba **Excluídas**, clique nos *
     Já existe uma mesa com esse nome. Use outro nome ou número.
 
 ??? question "O simulador diz que o produto não possui impressora padrão configurada"
-    Ao simular **Lançar Pedido**, o sistema avisa quando o produto não tem impressora de pedidos ("Configure a impressora de pedidos no cadastro do produto e tente novamente"). Defina a impressora no cadastro do produto. Se não souber onde, fale com o suporte.
+    Ao simular **Lançar Pedido**, o sistema avisa quando o produto não tem impressora de pedidos ("Configure a impressora de pedidos no cadastro do produto e tente novamente"). Apesar da mensagem, a impressora não fica no cadastro do produto: ligue o produto à impressora em **Configurações** → **Periféricos**, nos **três pontinhos** (⋮) da impressora, em **Vincular produtos** (veja [Como configurar uma impressora](impressora.md)).
 
 ??? question "A impressora que eu quero não aparece na lista do setor"
-    O setor mostra as impressoras cadastradas em **Dispositivos**. Confira se ela está cadastrada. Se estiver e continuar sem aparecer, fale com o suporte.
+    O setor mostra as impressoras cadastradas em **Configurações** → **Periféricos**. Confira se ela está cadastrada (veja [Como configurar uma impressora](impressora.md)). Se estiver e continuar sem aparecer, fale com o suporte.
 
 ??? question "Como gero o QR Code das mesas?"
     O QR Code com o cardápio digital fica no **Smart Menu**, um tipo de dispositivo: em **Dispositivos** → **Terminais & Dispositivos** → **Novo Dispositivo** → **Novo Smart Menu** ("Cadastro de Smart Menu com QR Code e menu digital"). Para configurar, fale com o suporte.

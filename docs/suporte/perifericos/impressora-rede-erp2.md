@@ -51,7 +51,7 @@ No menu do lado esquerdo, clique em **Configurações** e depois em **Periféric
 
 ## Escolha o tipo Impressora
 
-Abre a janela **Novo periférico**, com os tipos **Impressora**, **SAT** e **Etiquetadora**. Clique em **Impressora** ("Cadastre uma impressora térmica para impressão de documentos fiscais e gerenciais gerados nos pontos de venda") e depois em **Avançar**.
+Abre a janela **Novo periférico**, com os tipos **Impressora**, **SAT**, **Etiquetadora** e **Balança**. Clique em **Impressora** ("Cadastre uma impressora térmica para impressão de documentos fiscais e gerenciais gerados nos pontos de venda") e depois em **Avançar**.
 
 ![Janela Novo periférico com o tipo Impressora e o botão Avançar destacados](../../imagens/PER-007/02-tipo-impressora.png){ loading=lazy }
 
