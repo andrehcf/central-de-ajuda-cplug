@@ -72,7 +72,7 @@ Na linha do aplicativo, clique no ícone **preto** do sistema: **Windows**, **An
     Fale com o suporte antes de instalar: ele indica os aplicativos de acordo com o jeito que a sua loja atende.
 
 ??? question "Instalei o aplicativo, e agora?"
-    Os aparelhos da loja aparecem em **Dispositivos** → **Terminais & Dispositivos**. Para ligar um aparelho novo à sua loja, fale com o suporte.
+    Os aparelhos da loja aparecem em **Dispositivos** → **Terminais & Dispositivos**. Para cadastrar o aparelho e ligar o aplicativo a ele, veja [Como cadastrar um terminal ou dispositivo](cadastrar-terminal.md).
 
 **Relacionados:** [Como cadastrar um ponto de venda](../ponto-de-venda/cadastrar-ponto-de-venda.md) · [Como configurar o terminal de vendas](../ponto-de-venda/configurar-terminal.md) · [Como configurar recibos e notas impressas](../ponto-de-venda/recibos-e-notas.md)
 
