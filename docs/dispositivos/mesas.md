@@ -132,7 +132,7 @@ Para trazer de volta uma mesa excluída, abra a aba **Excluídas**, clique nos *
     O setor mostra as impressoras cadastradas em **Configurações** → **Periféricos**. Confira se ela está cadastrada (veja [Como configurar uma impressora](impressora.md)). Se estiver e continuar sem aparecer, fale com o suporte.
 
 ??? question "Como gero o QR Code das mesas?"
-    O QR Code com o cardápio digital fica no **Smart Menu**, um tipo de dispositivo: em **Dispositivos** → **Terminais & Dispositivos** → **Novo Dispositivo** → **Novo Smart Menu** ("Cadastro de Smart Menu com QR Code e menu digital"). Para configurar, fale com o suporte.
+    O QR Code com o cardápio digital fica no **Smart Menu**, um tipo de dispositivo: em **Dispositivos** → **Terminais & Dispositivos** → **Novo Dispositivo** → **Novo Smart Menu** ("Cadastro de Smart Menu com QR Code e menu digital"). Veja [Como configurar o Smart Menu (QR Code e cardápio digital)](smart-menu.md).
 
 ??? question "Como excluo um setor?"
     O setor tem um ícone de **lixeira** em **Setores Cadastrados**. Antes de excluir um setor com mesas, fale com o suporte.
