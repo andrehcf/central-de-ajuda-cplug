@@ -138,6 +138,7 @@ nav:
       - configuracoes/cadastrar-usuario.md
       - configuracoes/perfis-de-acesso.md
       - configuracoes/emissao-de-notas.md
+      - configuracoes/dados-do-negocio.md
       - configuracoes/integracoes.md
       - configuracoes/natureza-de-operacao.md
       - configuracoes/tipo-de-nota-no-pdv.md

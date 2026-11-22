@@ -12,6 +12,7 @@ Ajustes da empresa que valem para todo o sistema, como os perfis de acesso da eq
 [<span class="cplug-codigo">10.01</span> Como cadastrar um usuário](cadastrar-usuario.md)
 [<span class="cplug-codigo">10.02</span> Como criar perfis de acesso](perfis-de-acesso.md)
 [<span class="cplug-codigo">10.04</span> Como configurar a emissão de notas fiscais](emissao-de-notas.md)
+[<span class="cplug-codigo">10.05</span> Como configurar os dados do negócio](dados-do-negocio.md)
 [<span class="cplug-codigo">10.07</span> Como ativar integrações](integracoes.md)
 [<span class="cplug-codigo">10.08</span> Como configurar a natureza de operação](natureza-de-operacao.md)
 [<span class="cplug-codigo">10.09</span> Como definir o tipo de nota emitida no PDV](tipo-de-nota-no-pdv.md)
