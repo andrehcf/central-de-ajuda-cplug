@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://andrehcf.github.io/central-de-ajuda-cplug/dispositivos/mesas/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../impressora/">
       
       
         <link rel="next" href="../cadastrar-terminal/">
@@ -1922,6 +1922,8 @@
       
         
       
+        
+      
     
     
       
@@ -1963,6 +1965,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impressora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como configurar uma impressora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3914,7 +3937,7 @@
 <p>O setor diz <strong>onde imprimir</strong> o que é das mesas dele:</p>
 <ul>
 <li><strong>Resumo da Conta:</strong> a impressora de fechamento do setor, onde sai o resumo da conta das mesas dele.</li>
-<li><strong>Rota de Impressão:</strong> um desvio de impressora para os pedidos. Cada produto tem a sua impressora de pedidos, definida no cadastro do produto (por exemplo, o lanche sai na cozinha). A rota de impressão troca essa impressora para as mesas do setor: quando um pedido sairia na impressora de origem, o setor manda para outra. Use quando uma área tem impressora própria, por exemplo um deck afastado com impressora perto do bar.</li>
+<li><strong>Rota de Impressão:</strong> um desvio de impressora para os pedidos. Cada produto tem a sua impressora de pedidos, definida em <strong>Configurações</strong> → <strong>Periféricos</strong>, na opção <strong>Vincular produtos</strong> da impressora (por exemplo, o lanche sai na cozinha; veja <a href="../impressora/">Como configurar uma impressora</a>). A rota de impressão troca essa impressora para as mesas do setor: quando um pedido sairia na impressora de origem, o setor manda para outra. Use quando uma área tem impressora própria, por exemplo um deck afastado com impressora perto do bar.</li>
 </ul>
 <p><strong>Quando usar:</strong> atendimento na mesa, em que a conta fica aberta e é fechada no fim. <strong>Quando não usar:</strong> venda só no balcão, paga na hora. Se a loja usa cartões numerados por cliente, veja também <a href="../../ponto-de-venda/comandas/">Como usar comandas</a>.</p>
 <p><strong>Mesas no caixa.</strong> Para atender as mesas pelo caixa, ligue a chave <strong>Ponto de Venda oferece atendimento de mesa e comandas</strong>, no atendimento <strong>No estabelecimento</strong>, em <strong>Ponto de venda</strong> → <strong>Configurações</strong> → <strong>Modos de pedidos</strong> (veja <a href="../../ponto-de-venda/configurar-terminal/">Como configurar o terminal de vendas</a>).</p>
@@ -3922,7 +3945,7 @@
 <p class="admonition-title">Antes de começar</p>
 <ul>
 <li>Conte as mesas da loja e decida como dividir em setores (salão, varanda, deck).</li>
-<li>As impressoras que aparecem no setor são as cadastradas em <strong>Dispositivos</strong> (veja os <a href="../../suporte/perifericos/">manuais de periféricos</a>). Cadastre antes as impressoras que vai usar.</li>
+<li>As impressoras que aparecem no setor são as cadastradas em <strong>Configurações</strong> → <strong>Periféricos</strong> (veja <a href="../impressora/">Como configurar uma impressora</a>). Cadastre antes as impressoras que vai usar.</li>
 </ul>
 </div>
 <p>Nos prints, o <strong>quadrado vermelho</strong> mostra onde você deve clicar ou digitar.</p>
@@ -3964,7 +3987,7 @@
 <ol>
 <li><strong>Selecione a mesa</strong> (a lista mostra o setor de cada uma, por exemplo <strong>Mesa 2 [Setor: Salão (Ativo)]</strong>).</li>
 <li><strong>Selecione um produto</strong> do cardápio.</li>
-<li><strong>Selecione o tipo de evento:</strong> <strong>Lançar Pedido</strong> (a impressão do pedido) ou <strong>Resumo da Conta</strong>. Para simular <strong>Lançar Pedido</strong>, o produto precisa ter impressora de pedidos no cadastro dele.</li>
+<li><strong>Selecione o tipo de evento:</strong> <strong>Lançar Pedido</strong> (a impressão do pedido) ou <strong>Resumo da Conta</strong>. Para simular <strong>Lançar Pedido</strong>, o produto precisa estar ligado a uma impressora (veja <a href="../impressora/">Como configurar uma impressora</a>).</li>
 </ol>
 <p>Clique em <strong>Simular</strong>. O sistema mostra <strong>CÁLCULO DE ROTA CONCLUÍDO</strong> e em qual impressora a impressão vai sair. No exemplo, o resumo da conta da Mesa 2 sai na <strong>Cozinha</strong>, a impressora de fechamento do setor Salão.</p>
 <p><img alt="Simulador com a Mesa 2, o produto X-Burger, o evento Resumo da Conta e o resultado: impressão na Cozinha, setor Salão" loading="lazy" src="../../imagens/08.04/05-simulador.png" /></p>
@@ -4001,11 +4024,11 @@
 </details>
 <details class="question">
 <summary>O simulador diz que o produto não possui impressora padrão configurada</summary>
-<p>Ao simular <strong>Lançar Pedido</strong>, o sistema avisa quando o produto não tem impressora de pedidos ("Configure a impressora de pedidos no cadastro do produto e tente novamente"). Defina a impressora no cadastro do produto. Se não souber onde, fale com o suporte.</p>
+<p>Ao simular <strong>Lançar Pedido</strong>, o sistema avisa quando o produto não tem impressora de pedidos ("Configure a impressora de pedidos no cadastro do produto e tente novamente"). Apesar da mensagem, a impressora não fica no cadastro do produto: ligue o produto à impressora em <strong>Configurações</strong> → <strong>Periféricos</strong>, nos <strong>três pontinhos</strong> (⋮) da impressora, em <strong>Vincular produtos</strong> (veja <a href="../impressora/">Como configurar uma impressora</a>).</p>
 </details>
 <details class="question">
 <summary>A impressora que eu quero não aparece na lista do setor</summary>
-<p>O setor mostra as impressoras cadastradas em <strong>Dispositivos</strong>. Confira se ela está cadastrada. Se estiver e continuar sem aparecer, fale com o suporte.</p>
+<p>O setor mostra as impressoras cadastradas em <strong>Configurações</strong> → <strong>Periféricos</strong>. Confira se ela está cadastrada (veja <a href="../impressora/">Como configurar uma impressora</a>). Se estiver e continuar sem aparecer, fale com o suporte.</p>
 </details>
 <details class="question">
 <summary>Como gero o QR Code das mesas?</summary>
@@ -4060,7 +4083,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Dispositivos">
+          <a href="../impressora/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Como configurar uma impressora">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4070,7 +4093,7 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Dispositivos
+                Como configurar uma impressora
               </div>
             </div>
           </a>
