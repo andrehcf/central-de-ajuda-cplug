@@ -143,6 +143,7 @@ nav:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md
       - configuracoes/perfis-de-acesso.md
+      - configuracoes/horario-de-funcionamento.md
       - configuracoes/emissao-de-notas.md
       - configuracoes/dados-do-negocio.md
       - configuracoes/unidades-e-filiais.md
@@ -152,6 +153,7 @@ nav:
       - configuracoes/informacoes-adicionais.md
       - configuracoes/issqn.md
       - configuracoes/preferencias-do-sistema.md
+      - configuracoes/autoatendimento.md
   - Suporte técnico:
       - suporte/index.md
       - PDV:

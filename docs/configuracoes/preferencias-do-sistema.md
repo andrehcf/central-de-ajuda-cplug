@@ -24,7 +24,7 @@ As preferências ficam em páginas separadas por assunto:
 | **Estoque** | O valor e o custo nas entradas, o controle de estoque zerado, a situação das compras e a disponibilidade de fornecedores e entregadores. |
 | **Clientes** | A disponibilidade de clientes nas unidades e os campos obrigatórios do cadastro de clientes. |
 
-A página **Autoatendimento** também fica em Preferências do sistema. Para configurá-la, fale com o suporte.
+A página **Autoatendimento** também fica em Preferências do sistema: veja [Como configurar o autoatendimento](autoatendimento.md) e [Como configurar o horário de funcionamento](horario-de-funcionamento.md).
 
 **Quase tudo vale para a empresa toda.** Por exemplo, o CPF obrigatório vale para todo mundo que cadastrar cliente. Por isso, combine com a equipe antes de mudar e confira o efeito logo depois.
 
