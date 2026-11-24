@@ -143,6 +143,7 @@ nav:
       - relatorios/index.md
       - relatorios/vendas.md
       - relatorios/relatorio-dinamico.md
+      - relatorios/visao-geral.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md
