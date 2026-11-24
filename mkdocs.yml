@@ -139,6 +139,9 @@ nav:
       - dispositivos/cadastrar-terminal.md
       - dispositivos/baixar-aplicativos.md
       - dispositivos/smart-menu.md
+  - 09. Relatórios:
+      - relatorios/index.md
+      - relatorios/vendas.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md
