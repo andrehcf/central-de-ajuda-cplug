@@ -8167,6 +8167,85 @@ Clique em **Confirmar**. Aparece **Descontos por perfil salvos com sucesso**.
 Palavras-chave: perfil de acesso perfis de acesso permissões permissão novo perfil gerenciar perfis e permissões usuários e permissões restringir acesso bloquear acesso acessos erp acessos pdv visualizar criar atualizar deletar excluir administrador caixa vendedor contador gerente estoquista compartilhar com todas as filiais desconto por perfil desconto máximo limite de desconto tipo de desconto produto venda sangria cancelamento de venda
 
 ---
+Código: 10.03 | Módulo: Configurações | Tela no sistema: /dashboard/settings/self-service
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/horario-de-funcionamento/
+
+# Como configurar o horário de funcionamento
+
+4 minutos · 4 passos · Atualizado em 24/11/2026
+
+O **horário de funcionamento** registra os dias e os horários de funcionamento da loja no sistema. Exemplo: a lanchonete não abre no domingo e, na segunda, funciona das 11:00 às 22:00. Ela tira o domingo da lista e ajusta o horário de segunda.
+
+## Entenda o conceito
+
+**Onde fica.** Os horários ficam no fim da tela **Preferências de autoatendimento**, em **Configurações** → **Preferências do sistema** → **Autoatendimento**, no bloco **Horários de funcionamento** (veja também [Como configurar o autoatendimento](autoatendimento.md)). Na versão anterior do sistema, os mesmos horários aparecem em **Horários de Funcionamento**. Para saber em quais canais da sua loja esse horário vale, fale com o suporte.
+
+**Como a tela funciona:**
+
+- **Letras dos dias** (**D S T Q Q S S**, de domingo a sábado): letra azul é dia em que a loja abre. Clique na letra para tirar o dia: a letra fica cinza e o dia some da lista. Clique de novo para ele voltar.
+- **Horários:** cada dia tem o horário de abertura e o de fechamento (depois de **até**), no formato de 24 horas (22:00 = 10 da noite). Vem **00:00 até 23:59**, o dia inteiro.
+- **⊗:** zera o horário do dia (fica **00:00 até 00:00**), para digitar de novo. Para fechar a loja num dia, use a letra do dia, não o ⊗.
+- **+:** cria um segundo horário no mesmo dia (por exemplo, almoço e jantar). A **lixeira** ao lado do segundo horário tira esse horário.
+
+**Quando usar:** ao começar a usar o sistema ou quando o horário da loja mudar. **Quando não usar:** para os horários de atendimento de um aplicativo específico, como entrega ou cardápio, fale com o suporte.
+
+!!! info "Antes de começar"
+    - Tenha em mãos os dias e horários da loja.
+    - As mudanças só valem depois de clicar em **Salvar**, no rodapé.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra os horários de funcionamento
+
+No menu do lado esquerdo, clique em **Configurações** → **Preferências do sistema** → **Autoatendimento**. Desça até o bloco **Horários de funcionamento**.
+
+## Tire os dias em que a loja não abre
+
+Clique na letra de cada dia em que a loja **não** abre (no exemplo, o **D** de domingo). A letra fica cinza e o dia some da lista abaixo.
+
+## Ajuste os horários
+
+Em cada dia, clique na parte da hora do horário de abertura e digite os dois números; depois, clique nos minutos e digite. Faça o mesmo no horário depois de **até**. No exemplo, **Segunda-feira** ficou das **11:00** às **22:00**.
+
+Se a loja fecha no meio do dia, clique no **+** do dia: aparece uma segunda linha. Ajuste a primeira para o primeiro turno (por exemplo, 11:00 até 15:00) e a segunda para o outro (por exemplo, 18:00 até 23:00). A **lixeira** tira a segunda linha.
+
+[Imagem: Horários de funcionamento com as letras dos dias, o horário de segunda das 11:00 às 22:00, o botão + e o Salvar destacados]
+
+## Salve
+
+Clique em **Salvar**, no rodapé. Aparece **Preferências de autoatendimento atualizadas com sucesso**. Enquanto não salvar, o rodapé avisa **Você tem alterações não salvas**; **Descartar alterações** desfaz o que foi mudado.
+
+
+
+!!! tip "Boas práticas"
+    - **Confira depois de salvar:** reabra a tela e veja se os dias e os horários ficaram certos.
+    - **Use o formato de 24 horas:** 22:00 é 10 da noite.
+    - **Mantenha em dia:** quando o horário da loja mudar, atualize aqui.
+
+## Deu algum problema?
+
+??? question "Não encontro o horário de funcionamento no menu"
+    Ele fica dentro de **Configurações** → **Preferências do sistema** → **Autoatendimento**, no fim da tela.
+
+??? question "Cliquei no ⊗ e o horário ficou 00:00 até 00:00"
+    O **⊗** zera o horário do dia. Digite de novo os horários ou, se ainda não salvou, clique em **Descartar alterações**.
+
+??? question "Digitei o horário e ele não mudou"
+    Clique primeiro na parte da hora, digite os dois números, e depois na parte dos minutos. Se continuar, fale com o suporte.
+
+??? question "A loja funciona depois da meia-noite"
+    Para horários que passam da meia-noite (por exemplo, das 18:00 às 02:00), fale com o suporte.
+
+??? question "Onde esse horário é usado?"
+    Para saber em quais canais e aplicativos o horário vale na sua loja, fale com o suporte.
+
+**Relacionados:** [Como configurar o autoatendimento](autoatendimento.md) · [Como configurar o totem de autoatendimento](../dispositivos/totem.md) · [Como ajustar as preferências do sistema](preferencias-do-sistema.md)
+
+Palavras-chave: horário de funcionamento horários de funcionamento horário da loja dias de funcionamento abrir fechar loja fechada domingo feriado almoço jantar dois horários intervalo 24 horas preferências de autoatendimento
+
+---
 Código: 10.04 | Módulo: Configurações | Tela no sistema: /dashboard/settings/fiscal-settings/general
 Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/emissao-de-notas/
 
@@ -9081,7 +9160,7 @@ As preferências ficam em páginas separadas por assunto:
 | **Estoque** | O valor e o custo nas entradas, o controle de estoque zerado, a situação das compras e a disponibilidade de fornecedores e entregadores. |
 | **Clientes** | A disponibilidade de clientes nas unidades e os campos obrigatórios do cadastro de clientes. |
 
-A página **Autoatendimento** também fica em Preferências do sistema. Para configurá-la, fale com o suporte.
+A página **Autoatendimento** também fica em Preferências do sistema: veja [Como configurar o autoatendimento](autoatendimento.md) e [Como configurar o horário de funcionamento](horario-de-funcionamento.md).
 
 **Quase tudo vale para a empresa toda.** Por exemplo, o CPF obrigatório vale para todo mundo que cadastrar cliente. Por isso, combine com a equipe antes de mudar e confira o efeito logo depois.
 
@@ -9179,6 +9258,90 @@ Depois de salvar, abra a tela que a preferência afeta e faça um teste rápido.
 **Relacionados:** [Como criar perfis de acesso](perfis-de-acesso.md) · [Como configurar recibos e notas impressas](../ponto-de-venda/recibos-e-notas.md) · [Como cadastrar um cliente](../clientes/cadastrar-cliente.md) · [Como cadastrar um produto](../produtos/cadastrar-produto.md) · [Como dar entrada no estoque](../estoque/entrada-de-estoque.md)
 
 Palavras-chave: preferências do sistema preferências configurações gerais interface tema modo escuro modo claro automático acessos simultâneos chave de integração observação padrão nova observação preferências de produtos categoria obrigatória valor de venda ficha de consumo validade preferências de estoque acatar custo custo fixo situação de compra estoque zerado estoque negativo bloquear venda fornecedores entregadores transportadoras coletor de dados preferências de clientes campos obrigatórios cpf obrigatório dados de cadastro unidades tema escuro dark mode categoria obrigatória produto campos obrigatórios cliente documento obrigatório situação do pedido de compra
+
+---
+Código: 10.13 | Módulo: Configurações | Tela no sistema: /dashboard/settings/self-service
+Endereço: https://andrehcf.github.io/central-de-ajuda-cplug/configuracoes/autoatendimento/
+
+# Como configurar o autoatendimento
+
+6 minutos · 4 passos · Atualizado em 24/11/2026
+
+A tela **Preferências de autoatendimento** reúne ajustes gerais do autoatendimento da loja, em **Configurações**. Exemplo: a lanchonete quer uma mensagem de confirmação antes de finalizar a venda e um texto nas impressões dos produtos. Ela marca a opção, escreve o texto e salva.
+
+## Entenda o conceito
+
+**Preferências × cadastro do totem.** Cada totem tem o seu cadastro, com nome, impressora, mensagens da tela e cardápio (veja [Como configurar o totem de autoatendimento](../dispositivos/totem.md)). Esta tela fica em **Configurações** e reúne as preferências gerais do autoatendimento. Na dúvida sobre o alcance de alguma opção na sua loja, fale com o suporte.
+
+**Não confunda as mensagens.** A **mensagem de confirmação** desta tela aparece *antes* de finalizar a venda ("Exibir mensagem de confirmação antes de finalizar a venda"). A **Mensagem exibida após a finalização** é outra: fica no cadastro de cada totem.
+
+A tela tem quatro blocos:
+
+| Bloco | O que tem |
+| --- | --- |
+| **Geral** | **Ativar atualização automática dos totens de autoatendimento**, **Mostrar carrinho no rodapé do menu** e **Exibir mensagem de confirmação antes de finalizar a venda**. |
+| **Impressões de produtos** | **Informação adicional**: como diz a dica da tela, um "Texto de informações adicionais para as impressões dos produtos". E **Mostrar valor do produto nas impressões dos produtos?** |
+| **Relatório gerencial** | **Informação adicional**, um texto para as impressões do relatório gerencial, e **Ativar relatório gerencial no autoatendimento.** |
+| **Horários de funcionamento** | Os dias e horários de funcionamento (veja [Como configurar o horário de funcionamento](horario-de-funcionamento.md)). |
+
+**Quando usar:** ao começar a usar o autoatendimento ou ao mudar o jeito como ele funciona. **Quando não usar:** para mudar um totem específico (nome, impressora, cardápio), use o cadastro dele.
+
+!!! info "Antes de começar"
+    - As mudanças só valem depois de clicar em **Salvar**, no rodapé.
+    - Antes de ligar uma opção com a loja aberta, confirme com o suporte o efeito dela no seu autoatendimento.
+
+Nos prints, o **quadrado vermelho** mostra onde você deve clicar ou digitar.
+
+
+
+## Abra as preferências de autoatendimento
+
+No menu do lado esquerdo, clique em **Configurações** → **Preferências do sistema** → **Autoatendimento**. Abre a tela **Preferências de autoatendimento**.
+
+## Ajuste o bloco Geral
+
+As três opções vêm desmarcadas. Pelos nomes:
+
+- **Ativar atualização automática dos totens de autoatendimento:** sobre a atualização dos totens.
+- **Mostrar carrinho no rodapé do menu:** sobre mostrar o carrinho do cliente no rodapé do menu.
+- **Exibir mensagem de confirmação antes de finalizar a venda:** mostra uma mensagem de confirmação antes de finalizar (no exemplo, marcada).
+
+Antes de marcar as duas primeiras, confirme com o suporte o efeito delas na sua loja.
+
+[Imagem: Preferências de autoatendimento com a mensagem de confirmação marcada, a informação adicional das impressões e o botão Salvar destacados]
+
+## Escreva os textos das impressões e do relatório gerencial
+
+- **Impressões de produtos → Informação adicional:** um texto de até 300 caracteres para as impressões dos produtos (no exemplo, "Obrigado pela preferência!"). O número no canto do campo mostra quantos caracteres ainda cabem. Abaixo fica **Mostrar valor do produto nas impressões dos produtos?**; pelo nome, inclui o valor do produto nessas impressões.
+- **Relatório gerencial → Informação adicional:** um texto de até 300 caracteres para as impressões do relatório gerencial, e a opção **Ativar relatório gerencial no autoatendimento.** No exemplo, esse bloco ficou como veio.
+
+Para saber em quais impressões cada texto sai na sua loja, fale com o suporte.
+
+## Salve
+
+Clique em **Salvar**, no rodapé. Aparece **Preferências de autoatendimento atualizadas com sucesso**. Enquanto não salvar, o rodapé avisa **Você tem alterações não salvas**; **Descartar alterações** desfaz o que foi mudado.
+
+
+
+!!! tip "Boas práticas"
+    - **Textos curtos:** nas impressões, poucas palavras bastam.
+    - **Mude fora do movimento:** mude com a loja vazia e confira no autoatendimento antes de abrir.
+    - **Uma mudança por vez:** fica mais fácil ver o efeito de cada opção.
+
+## Deu algum problema?
+
+??? question "Mudei a preferência e o totem não mudou"
+    Confira se clicou em **Salvar** e se apareceu **Preferências de autoatendimento atualizadas com sucesso**. Se continuar, fale com o suporte. No cadastro do totem, nos **três pontinhos** (⋮), existe a opção **Sincronizar aplicativo**; use com orientação do suporte.
+
+??? question "Qual a diferença entre esta tela e o cadastro do totem?"
+    Esta tela reúne preferências gerais do autoatendimento. O cadastro de cada totem (nome, impressora, mensagens da tela, cores e cardápio) fica em **Dispositivos** → **Terminais & Dispositivos** (veja [Como configurar o totem de autoatendimento](../dispositivos/totem.md)).
+
+??? question "O texto não cabe no campo"
+    Cada campo aceita até 300 caracteres. O número no canto mostra quantos ainda cabem.
+
+**Relacionados:** [Como configurar o totem de autoatendimento](../dispositivos/totem.md) · [Como configurar o horário de funcionamento](horario-de-funcionamento.md) · [Como ajustar as preferências do sistema](preferencias-do-sistema.md)
+
+Palavras-chave: autoatendimento preferências de autoatendimento totem atualização automática dos totens carrinho no rodapé mensagem de confirmação finalizar a venda impressões de produtos informação adicional mostrar valor do produto relatório gerencial horários de funcionamento
 
 ---
 Código: ERP-001 | Módulo: Suporte técnico | Tela no sistema: /dashboard/app/peripherals
