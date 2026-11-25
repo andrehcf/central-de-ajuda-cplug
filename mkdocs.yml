@@ -146,6 +146,7 @@ nav:
       - relatorios/visao-geral.md
       - relatorios/fechamento-de-caixa.md
       - relatorios/fluxo-de-caixa.md
+      - relatorios/lucro-e-despesas.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md

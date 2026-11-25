@@ -14,4 +14,5 @@ Veja os números da loja: vendas, caixa, lucro, despesas, estoque e outros relat
 [<span class="cplug-codigo">09.04</span> Como usar o painel Visão geral](visao-geral.md)
 [<span class="cplug-codigo">09.06</span> Como ver o fechamento de caixa](fechamento-de-caixa.md)
 [<span class="cplug-codigo">09.07</span> Como ver o fluxo de caixa](fluxo-de-caixa.md)
+[<span class="cplug-codigo">09.08</span> Como ver o lucro e as despesas](lucro-e-despesas.md)
 </div>
