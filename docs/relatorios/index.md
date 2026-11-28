@@ -19,4 +19,5 @@ Veja os números da loja: vendas, caixa, lucro, despesas, estoque e outros relat
 [<span class="cplug-codigo">09.09</span> Como ver o relatório de estoque](estoque.md)
 [<span class="cplug-codigo">09.10</span> Como ver os logs de segurança e o abandono de vendas](seguranca.md)
 [<span class="cplug-codigo">09.11</span> Como usar a análise de portfólio (Curva ABC e Matriz BCG)](analise-de-portfolio.md)
+[<span class="cplug-codigo">09.12</span> Como ver o relatório de compras](compras.md)
 </div>

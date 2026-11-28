@@ -151,6 +151,7 @@ nav:
       - relatorios/estoque.md
       - relatorios/seguranca.md
       - relatorios/analise-de-portfolio.md
+      - relatorios/compras.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md
