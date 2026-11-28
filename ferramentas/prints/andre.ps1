@@ -1,6 +1,7 @@
 ﻿# Lista de prints do André. Acrescente as linhas novas no topo.
 # Formato: veja o cabeçalho de ferramentas\anotar-prints.ps1.
 $shots = @(
+  @('09.05', '01-menu-relatorios.png', 's0905-menu', @(,@(40, 44, 226, 300)), @(), @(0, 0, 268, 415)),
   @('09.10', '01-logs.png', 's0910-logs', @(@(6, 174, 476, 32), @(868, 110, 46, 42), @(540, 272, 74, 262)), @(,@(282, 272, 250, 262)), @(0, 0, 935, 545)),
   @('09.10', '02-detalhes-do-log.png', 's0910-logs', @(,@(22, 552, 896, 362)), @(,@(282, 500, 250, 34)), @(0, 500, 935, 435)),
   @('09.10', '03-abandono.png', 's0910-abandono', @(@(6, 148, 922, 48), @(868, 86, 46, 42)), @(), @(0, 0, 935, 260)),

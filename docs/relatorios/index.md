@@ -12,6 +12,7 @@ Veja os números da loja: vendas, caixa, lucro, despesas, estoque e outros relat
 [<span class="cplug-codigo">09.01</span> Como ver o relatório de vendas](vendas.md)
 [<span class="cplug-codigo">09.02</span> Como criar um relatório dinâmico](relatorio-dinamico.md)
 [<span class="cplug-codigo">09.04</span> Como usar o painel Visão geral](visao-geral.md)
+[<span class="cplug-codigo">09.05</span> Guia dos relatórios: o que cada um mostra](guia-dos-relatorios.md)
 [<span class="cplug-codigo">09.06</span> Como ver o fechamento de caixa](fechamento-de-caixa.md)
 [<span class="cplug-codigo">09.07</span> Como ver o fluxo de caixa](fluxo-de-caixa.md)
 [<span class="cplug-codigo">09.08</span> Como ver o lucro e as despesas](lucro-e-despesas.md)
