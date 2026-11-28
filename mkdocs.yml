@@ -147,6 +147,7 @@ nav:
       - relatorios/fechamento-de-caixa.md
       - relatorios/fluxo-de-caixa.md
       - relatorios/lucro-e-despesas.md
+      - relatorios/estoque.md
   - 10. Configurações:
       - configuracoes/index.md
       - configuracoes/cadastrar-usuario.md
